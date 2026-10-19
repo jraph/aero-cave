@@ -138,6 +138,8 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 | DME ground range | Ground NM = √(DME² − height NM²). DME 5 NM, height 6076 ft → √24 ≈4.90 NM. DME speed/time meaningful toward/away from station; unreliable for along-track speed on an arc. |
 | 30° closing time | For a 30° GROUND-track intercept: closing speed = GS × sin30 = GS/2. Time(min)=120 × lateral NM/GS. 2 NM off at 120 kt → 2 min. Wind-correct heading to obtain that ground track. |
 ***
+- `M VOR checks:` **4–6–4** = ground/VOT ±4° (FAA reference), airborne ±6°, dual receivers ≤4° total difference. Receiver accuracy ≠ tracking allowance. See [VOR receiver checks and Canadian source scope](10_inrat_knowledge_core_av_cave_v0_3.md#vor-receiver-checks--464).
+***
 #### 1-in-60 rule
 
 - `F:` `track error° ≈ offtrack × 60 / distance flown`.
