@@ -1,5 +1,7 @@
 # Content review — 19 October 2026
 
+Current editing workflow: edit Markdown directly; update matching HTML/cards in the same change. The earlier JSON/build experiment described below has been removed. Study content and reader features are retained.
+
 ## Completed in this review
 
 - Added 22 bilingual navigation entries: RB/MH/BTS/BFS arithmetic and wraparound, ADF cards/RMI, needle movement, homing/tracking, VOR radials and flags, 30° inbound/outbound intercepts, wind assumptions, lateral displacement, VOR scale, DME slant range and closing time.
@@ -16,8 +18,8 @@
 
 | Content | Maintained source | Views |
 |---|---|---|
-| Bilingual formulas, quick recall, navigation, ETE | data/formulas.json | CPAER_Formulas_Recall_EN_FR.md + HTML; navigation/ETE also generated in 06 |
-| Additional calculations and IFR reminders in 06 | Non-generated sections of 06 MD | 06 MD |
+| Bilingual formulas, quick recall, navigation, ETE | CPAER_Formulas_Recall_EN_FR.md | CPAER_Formulas_Recall_EN_FR.md + HTML; navigation/ETE also present in 06 |
+| Additional calculations and IFR reminders in 06 | 06 MD | 06 MD |
 | MANAB terminology | MANAB_CFS_Essential_EN_FR.md and existing reader | Still a manually maintained pair |
 | Subject-specific cards 01–16 | Their existing Markdown files | Subject-specific review sheets |
 | Older formulas | archive/CPAER_CAVE_Formulas.md | Historical only |
@@ -46,3 +48,8 @@ Added 57 bilingual rows (230 total, 11 reminders): oxygen supply versus use; pas
 The shared JSON now generates oxygen, weights, fatigue and water sections in card 04, and fluid/HOT content in card 05, in addition to the reader MD/HTML. Prior short oxygen/survival blocks and duplicate flight-time table were replaced. These targeted subjects supersede the corresponding pending-review status above; unrelated regulatory sections remain pending.
 
 Validation: reproducible outputs across reader MD/HTML and cards 04/05/06; total rows, topic/control markup, LOUT and raft examples. Browser interaction/layout was not tested in this update.
+
+
+## Reader-first organization
+
+README now opens with GitHub-readable notes and HTML reader links, followed by descriptive subject links. Bilingual Markdown topics use headings for GitHub navigation. JSON, build scripts and the unused renderer template were removed; their history remains in git. No study rows were removed. Future edits must update overlapping Markdown/HTML content together.

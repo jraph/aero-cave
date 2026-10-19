@@ -233,7 +233,6 @@
 - weather scan `SYNOPTIC-GFA-HAZARDS-TERMINALS-PIREP-WINDS-RUNWAY-TREND` | METAR now / TAF terminal future / GFA regional | METAR cloud AGL; GFA heights ASL unless stated | ceiling=BKN/OVC/VV | `FM` permanent exact | `BECMG` gradual | `TEMPO <1h each/≤half` | alternate BECMG improve=end/deteriorate=start | TEMPO≥alt min / PROB≥landing min | FZ liquid=red | visible moisture+subzero surface=ice | TS avoid | XW 30°=.5/45°=.7/60°=.87 | observations worse than forecast=confidence↓ | many amber=red.
 
 ***
-<!-- BEGIN GENERATED icingfluids -->
 #### De-/anti-icing · FPD · HOT / Dégivrage · antigivrage
 
 | Memory | Rule / example |
@@ -247,6 +246,5 @@
 | HOT judgement | HOT is an estimate, not assured protection. Fluid failure or changed conditions can end protection earlier. Expired HOT: approved inspection/re-treatment procedure; never automatic extra minutes. |
 | Snow / Neige | Use TC snowfall-intensity/visibility table, including day/night and temperature. METAR −SN alone does not resolve very-light versus light HOT categories. |
 | Annual tables | Use current winter 2026–27 HOT guidance and exact fluid table. No universal duration per type. Allowance-time rules for ice pellets/small hail differ from HOT. |
-<!-- END GENERATED icingfluids -->
 
-Shared additions reviewed 19 October 2026: [source editions and scope](../CONTENT_REVIEW.md#operational-additions--19-october-2026). Edit `data/formulas.json` and run `python3 scripts/build_all.py` for marked blocks.
+Shared additions reviewed 19 October 2026: [source editions and scope](../CONTENT_REVIEW.md#operational-additions--19-october-2026).

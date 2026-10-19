@@ -115,7 +115,6 @@
 - Verify registration, battery/inspection status, antenna and remote switch.
 - `T:` ELT requirement has detailed aircraft/operation exceptions; do not memorize “always” without checking 605.38.
 ***
-<!-- BEGIN GENERATED water -->
 #### Over water · survival / Survol de l’eau · survie
 
 | Memory | Rule / example |
@@ -130,9 +129,7 @@
 | 703 seaplane | 703.83: inflatable flotation worn on/above water; COM procedures and PIC instruction. Exception: person on stretcher, incubator or similar device. Not a blanket rule for every private landplane. |
 | Land survival / Survie terre | 602.61: FIRE + SHELTER + WATER + SIGNAL, for everyone and climate. 25-NM exception requires staying within 25 NM of departure aerodrome AND surface-station radio capability throughout. Other listed exceptions exist. |
 | Planning / Préparation | Recommendation: wear suitable inflatable flotation, brief evacuation and inflate only outside; assess cold-water exposure and rescue delay. Equipment carriage alone does not make a crossing safe. |
-<!-- END GENERATED water -->
 ***
-<!-- BEGIN GENERATED oxygen -->
 #### Oxygen / Oxygène — CAR 605.31–32
 
 | Memory | Rule / example |
@@ -143,7 +140,6 @@
 | Boundaries / Seuils | Exactly 13,000 ft remains in the 30-min band. At 13,100 ft, no 30-min grace. Cabin pressure altitude, not height AGL. |
 | Pressurized / Pressurisé | Size emergency supply for worst-point decompression, descent profile and suitable landing aerodrome: use 605.31(2) table and notes; do not reuse unpressurized quantities. |
 | Pilot mask / Masque | Pilot at controls: mask required at/above FL250 without quick-donning masks; above FL410 with quick-donning masks. |
-<!-- END GENERATED oxygen -->
 ***
 #### Pre-flight information
 
@@ -333,7 +329,6 @@ The shared flight/duty section below contains current limits and applicability.
 - Sources: [604.03](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-604.03.html), [604.98](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-604.98.html), [700.27](https://laws-lois.justice.gc.ca/eng/regulations/sor-96-433/page-83.html), [404.04](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-404.04.html).
 
 ***
-<!-- BEGIN GENERATED pax -->
 #### Passenger weights / Masse des passagers — AIM 2026-1 RAC 3.4.7
 
 | Memory | Rule / example |
@@ -350,9 +345,7 @@ The shared flight/duty section below contains current limits and applicability.
 | Segment 12–16 | 12–16 certificated passenger seats: summer M/X 227, F 190 lb; winter M/X 233, F 196 lb. |
 | Segment 17–25 | 17–25 certificated passenger seats: summer M/X 223, F 187 lb; winter M/X 229, F 193 lb. |
 | Actual wins / Réel | If a group is heavier than the assumed average, account for actual weights. Never hide infant, baggage or unusual load in a blanket average. |
-<!-- END GENERATED pax -->
 ***
-<!-- BEGIN GENERATED fatigue -->
 #### Flight time · FDT · FDP / Temps de vol · service
 
 | Memory | Rule / example |
@@ -377,6 +370,5 @@ The shared flight/duty section below contains current limits and applicability.
 | Work / Travail 700.29 | 60 h/7 d or qualifying 70 h/7 d option; 192 h/28 d; 2200 h/365 d. Each option has its own time-off conditions. |
 | Rest / Repos 700.40 | Home: 12 h OR 11 h + travel to/from rest OR 10 h in operator-provided suitable accommodation. Away: 10 h in suitable accommodation. Special schedules may require more. |
 | Fatigue trap | Being under a numeric limit does not establish fitness. Acclimatization, reserve/standby, split duty, extensions and augmented crews require their specific rules. |
-<!-- END GENERATED fatigue -->
 
-Shared additions reviewed 19 October 2026: [source editions and scope](../CONTENT_REVIEW.md#operational-additions--19-october-2026). Edit `data/formulas.json` and run `python3 scripts/build_all.py` for marked blocks.
+Shared additions reviewed 19 October 2026: [source editions and scope](../CONTENT_REVIEW.md#operational-additions--19-october-2026).

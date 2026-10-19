@@ -1,10 +1,12 @@
 # CPAER · Formulas & quick recall / Formules et rappels
 
+[Open CAVE reader](https://jraph.github.io/aero-cave/readers/CPAER_Formulas_Recall_EN_FR.html) · [All study cards](../README.md)
+
 Navigation and operational additions reviewed 19 Oct 2026; source editions and scope in review record. / Ajouts navigation et exploitation revus le 19 oct. 2026; éditions et portée dans le compte rendu.
 
 ***
 
-**Time · fuel / Temps · carburant**
+## Time · fuel / Temps · carburant
 
 | Label | English | Français |
 |---|---|---|
@@ -15,7 +17,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Specific range | GS/fuel flow = NM per fuel unit | Vitesse sol/débit = NM par unité de carburant |
 ***
 
-**Wind · navigation / Vent · navigation**
+## Wind · navigation / Vent · navigation
 
 | Label | English | Français |
 |---|---|---|
@@ -28,7 +30,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Correction | TE + CA towards track; small-angle approximation | Erreur + convergence vers la route; approximation pour petits angles |
 ***
 
-**ADF · VOR · DME · intercepts / Interceptions**
+## ADF · VOR · DME · intercepts / Interceptions
 
 | Label | English | Français |
 |---|---|---|
@@ -56,7 +58,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | 30° closing time | For a 30° GROUND-track intercept: closing speed = GS × sin30 = GS/2. Time(min)=120 × lateral NM/GS. 2 NM off at 120 kt → 2 min. Wind-correct heading to obtain that ground track. | Interception à 30° de ROUTE SOL : vitesse de rapprochement = GS/2. Temps(min)=120 × écart NM/GS. Écart 2 NM à 120 kt → 2 min. Corriger le cap pour obtenir cette route sol. |
 ***
 
-**Weight · balance / Masse · centrage**
+## Weight · balance / Masse · centrage
 
 | Label | English | Français |
 |---|---|---|
@@ -68,7 +70,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | % MAC / CMA | 100(CG − LEMAC)/MAC; common datum and units | 100(CG − bord d’attaque CMA)/CMA; même référence et unités |
 ***
 
-**Altitude · weather / Altitude · météo**
+## Altitude · weather / Altitude · météo
 
 | Label | English | Français |
 |---|---|---|
@@ -84,7 +86,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Freezing level | Height change ft = 1000 × T/lapse rate(°C/1000 ft); use actual profile | Dénivelé pi = 1000 × T/gradient(°C/1000 pi); utiliser le profil réel |
 ***
 
-**Stall · airspeed / Décrochage · vitesse**
+## Stall · airspeed / Décrochage · vitesse
 
 | Label | English | Français |
 |---|---|---|
@@ -97,7 +99,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | 30° / 45° / 60° | n: 1.15 / 1.41 / 2; Vs factors: 1.07 / 1.19 / 1.41 | n : 1,15 / 1,41 / 2; facteurs Vs : 1,07 / 1,19 / 1,41 |
 ***
 
-**Climb · descent / Montée · descente**
+## Climb · descent / Montée · descente
 
 | Label | English | Français |
 |---|---|---|
@@ -113,7 +115,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Wind / Vent | Same climb rate: headwind improves ground gradient; tailwind reduces it | Même taux de montée : vent de face améliore la pente sol; vent arrière la réduit |
 ***
 
-**Turns / Virages**
+## Turns / Virages
 
 | Label | English | Français |
 |---|---|---|
@@ -125,7 +127,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Assumptions | Coordinated level turn; TAS; air-relative geometry; wind alters ground track | Virage coordonné en palier; TAS; géométrie dans l’air; vent modifie trajectoire sol |
 ***
 
-**Radio · runway / Radio · piste**
+## Radio · runway / Radio · piste
 
 | Label | English | Français |
 |---|---|---|
@@ -136,7 +138,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | 126.7 | Generally not monitored by FIC at dedicated FISE RCOs; broadcasts may occur | Généralement non veillée par FIC aux RCO FISE dédiés; diffusions possibles |
 ***
 
-**Conversions**
+## Conversions
 
 | Label | English | Français |
 |---|---|---|
@@ -146,7 +148,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Earth / Terre | 15° longitude/hour; 4min/degree; 1′ latitude ≈ 1NM | 15° longitude/heure; 4min/degré; 1′ latitude ≈ 1NM |
 ***
 
-**Timing shortcuts / Estimation du temps**
+## Timing shortcuts / Estimation du temps
 
 | Label | English | Français |
 |---|---|---|
@@ -160,7 +162,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | 180 kt | ETE = distance × ⅓ → ÷3; 30 NM = 10 min | ETE = distance × ⅓ → ÷3; 30 NM = 10 min |
 ***
 
-**CFS servicing / Services CFS**
+## CFS servicing / Services CFS
 
 | Label | English | Français |
 |---|---|---|
@@ -173,7 +175,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | 7 | Pick-up/drop-off only; no extended parking | Embarquement/débarquement seulement; aucun stationnement prolongé |
 ***
 
-**Communications · weather / Communications · météo**
+## Communications · weather / Communications · météo
 
 | Label | English | Français |
 |---|---|---|
@@ -208,7 +210,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | D-VOLMET | Weather via data link; D = data link | Météo par liaison de données; D = données |
 ***
 
-**FIR · FIC**
+## FIR · FIC
 
 | Label | English | Français |
 |---|---|---|
@@ -218,7 +220,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Five areas | Course shorthand: Pacific, Edmonton, Ontario, Québec, Atlantic; London serves Ontario + Atlantic. These are not the seven FIRs. | Raccourci pédagogique : Pacifique, Edmonton, Ontario, Québec, Atlantique; London dessert Ontario + Atlantique. Ce ne sont pas les sept FIR. |
 ***
 
-**NOTAM · header & Q-line / En-tête et ligne Q**
+## NOTAM · header & Q-line / En-tête et ligne Q
 
 | Label | English | Français |
 |---|---|---|
@@ -235,7 +237,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | D / E / F / G | D schedule; E operational text; F/G lower/upper limits when applicable | D horaire; E texte opérationnel; F/G limites inférieure/supérieure si applicables |
 ***
 
-**Common NOTAM codes / Codes NOTAM courants**
+## Common NOTAM codes / Codes NOTAM courants
 
 | Label | English | Français |
 |---|---|---|
@@ -253,7 +255,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | QOLAS | Obstacle lights unserviceable | Feux d’obstacle hors service |
 ***
 
-**Twilight · time zones · DST / Crépuscule · fuseaux · heure avancée**
+## Twilight · time zones · DST / Crépuscule · fuseaux · heure avancée
 
 | Label | English | Français |
 |---|---|---|
@@ -279,7 +281,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Exceptions | Civil time is jurisdiction-specific. Use current CFS REF and authoritative local rules; standard/daylight pairs are not a claim that every region changes clocks. | Heure civile propre à la juridiction. Utiliser REF CFS courant et règles locales; les paires normale/avancée ne signifient pas que toutes les régions changent d’heure. |
 ***
 
-**Oxygen / Oxygène — CAR 605.31–32**
+## Oxygen / Oxygène — CAR 605.31–32
 
 | Label | English | Français |
 |---|---|---|
@@ -291,7 +293,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Pilot mask / Masque | Pilot at controls: mask required at/above FL250 without quick-donning masks; above FL410 with quick-donning masks. | Pilote aux commandes : masque à FL250 ou plus sans masque à pose rapide; au-dessus FL410 avec masque à pose rapide. |
 ***
 
-**Passenger weights / Masse des passagers — AIM 2026-1 RAC 3.4.7**
+## Passenger weights / Masse des passagers — AIM 2026-1 RAC 3.4.7
 
 | Label | English | Français |
 |---|---|---|
@@ -309,7 +311,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Actual wins / Réel | If a group is heavier than the assumed average, account for actual weights. Never hide infant, baggage or unusual load in a blanket average. | Si groupe plus lourd que moyenne supposée, tenir compte des masses réelles. Ne pas masquer bébé, bagages ou charge inhabituelle dans moyenne générale. |
 ***
 
-**Flight time · FDT · FDP / Temps de vol · service**
+## Flight time · FDT · FDP / Temps de vol · service
 
 | Label | English | Français |
 |---|---|---|
@@ -335,7 +337,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Fatigue trap | Being under a numeric limit does not establish fitness. Acclimatization, reserve/standby, split duty, extensions and augmented crews require their specific rules. | Respecter limite numérique ne prouve pas aptitude. Acclimatation, réserve/attente, service fractionné, prolongations et équipage renforcé : règles spécifiques. |
 ***
 
-**De-/anti-icing · FPD · HOT / Dégivrage · antigivrage**
+## De-/anti-icing · FPD · HOT / Dégivrage · antigivrage
 
 | Label | English | Français |
 |---|---|---|
@@ -350,7 +352,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | Annual tables | Use current winter 2026–27 HOT guidance and exact fluid table. No universal duration per type. Allowance-time rules for ice pellets/small hail differ from HOT. | Utiliser guide HOT hiver 2026–27 et tableau produit exact. Aucune durée universelle par type. Délais granulés de glace/petite grêle distincts des HOT. |
 ***
 
-**Over water · survival / Survol de l’eau · survie**
+## Over water · survival / Survol de l’eau · survie
 
 | Label | English | Français |
 |---|---|---|
@@ -367,7 +369,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 
 ***
 
-**Memory traps & examples / Pièges et exemples**
+## Memory traps & examples / Pièges et exemples
 
 **60 ≠ 60** · Rate/gradient: 60 converts hours→minutes. 1-in-60: rounded radians→degrees. / Taux/pente : conversion heures→minutes. 1 sur 60 : radians→degrés arrondis.
 

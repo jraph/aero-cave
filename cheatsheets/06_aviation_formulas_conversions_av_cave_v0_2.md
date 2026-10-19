@@ -1,7 +1,7 @@
 ### AVIATION FORMULAS / CONVERSIONS — AV-CAVE v0.2
 Navigation calculations reviewed 2026-10-19. Other sections retain their review dates; see [review status](../CONTENT_REVIEW.md).
 `F` formula | `M` memory | `T` trap | `?` verify | Canada PPL/CPL/INRAT/IR mental math
-`RELEASE:` `DERIVED/STUDY-REF PROVISIONAL` | Navigation and ETE blocks generated from `data/formulas.json` | `NOT FLIGHT AUTHORITY`
+`RELEASE:` `DERIVED/STUDY-REF PROVISIONAL` | `NOT FLIGHT AUTHORITY`
 ***
 #### Units / constants
 
@@ -31,7 +31,6 @@ Navigation calculations reviewed 2026-10-19. Other sections retain their review 
 - `M:` `120 kt = 2 NM/min`; `90 kt = 1.5 NM/min`; `60 kt = 1 NM/min`.
 - `T:` navigation timing uses `GS`, not IAS/TAS.
 ***
-<!-- BEGIN GENERATED ETE -->
 #### Quick ETE table
 
 Distance in NM × fraction = ETE in minutes. Use GS, including wind.
@@ -47,7 +46,6 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 | 180 kt | ×1/3 | ÷3 ×1 | 3 min 20 s | 10 min | 20 min |
 
 90 kt: two-thirds of the NM gives minutes. Decimal minutes are not minutes:seconds.
-<!-- END GENERATED ETE -->
 ***
 #### Fuel
 
@@ -113,7 +111,6 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - `M:` TVMDC = True Virgins Make Dull Company; reverse = Can Dead Men Vote Twice.
 - `T:` track/course/heading/bearing are different. Track = ground path; heading = nose.
 ***
-<!-- BEGIN GENERATED NAV -->
 #### Navigation aids — ADF / VOR / DME / intercepts
 
 | Memory | Calculation / example |
@@ -140,7 +137,6 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 | DME geometry | Slant NM = √(ground NM² + height NM²); height NM = height above station(ft)/6076. Over station at 6076 ft above it → about 1 DME, not zero. |
 | DME ground range | Ground NM = √(DME² − height NM²). DME 5 NM, height 6076 ft → √24 ≈4.90 NM. DME speed/time meaningful toward/away from station; unreliable for along-track speed on an arc. |
 | 30° closing time | For a 30° GROUND-track intercept: closing speed = GS × sin30 = GS/2. Time(min)=120 × lateral NM/GS. 2 NM off at 120 kt → 2 min. Wind-correct heading to obtain that ground track. |
-<!-- END GENERATED NAV -->
 ***
 #### 1-in-60 rule
 
