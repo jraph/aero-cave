@@ -33,13 +33,20 @@
 ***
 #### Quick ETE table
 
-| GS | NM/min | 10 NM | 30 NM | 60 NM |
-|---:|---:|---:|---:|---:|
-| `60 kt` | `1.0` | `10 min` | `30 min` | `60 min` |
-| `90 kt` | `1.5` | `6.7 min` | `20 min` | `40 min` |
-| `100 kt` | `1.67` | `6 min` | `18 min` | `36 min` |
-| `120 kt` | `2.0` | `5 min` | `15 min` | `30 min` |
-| `150 kt` | `2.5` | `4 min` | `12 min` | `24 min` |
+`F:` ETE (minutes) = distance (NM) × fraction below. Use **GS**, including wind.
+
+| GS | NM/min | ETE fraction of NM | Mental calculation | 10 NM | 30 NM | 60 NM |
+|---:|---:|---:|---|---:|---:|---:|
+| `60 kt` | `1` | `×1` | same number | `10 min` | `30 min` | `60 min` |
+| `75 kt` | `1¼` | `×⅘` | `÷5 ×4` | `8 min` | `24 min` | `48 min` |
+| `90 kt` | `1½` | `×⅔` | `÷3 ×2` | `6 min 40 s` | `20 min` | `40 min` |
+| `100 kt` | `1⅔` | `×⅗` | `÷5 ×3` | `6 min` | `18 min` | `36 min` |
+| `120 kt` | `2` | `×½` | `÷2` | `5 min` | `15 min` | `30 min` |
+| `150 kt` | `2½` | `×⅖` | `÷5 ×2` | `4 min` | `12 min` | `24 min` |
+| `180 kt` | `3` | `×⅓` | `÷3` | `3 min 20 s` | `10 min` | `20 min` |
+
+- `M:` `90 kt`: two-thirds of the NM gives minutes; `30 NM ÷3 ×2 = 20 min`.
+- `T:` `6.7 min` is approximately `6 min 42 s`, not `6 min 7 s`; exact 10 NM at 90 kt is `6 min 40 s`.
 ***
 #### Fuel
 
@@ -234,7 +241,9 @@
 - Divide by 60: `NM at 60 kt = minutes`.
 - `GS 90`: minutes ≈ `NM × 2/3`.
 - `GS 120`: minutes ≈ `NM / 2`.
-- `GS 150`: minutes ≈ `NM × 0.4`.
+- `GS 100`: minutes = `NM × ⅗` (`÷5 ×3`).
+- `GS 150`: minutes = `NM × ⅖` (`÷5 ×2`).
+- `GS 180`: minutes = `NM × ⅓` (`÷3`).
 - `6 gph`: `1 gal/10 min`; `9 gph`: `1.5 gal/10 min`; `12 gph`: `2 gal/10 min`.
 ***
 #### Pebble
