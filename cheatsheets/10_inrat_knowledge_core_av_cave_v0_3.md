@@ -279,7 +279,24 @@
 ***
 #### Navigation aid checks
 
-- VOR: identify Morse/voice, correct freq/course/TO-FROM, service volume and NOTAM. Dual-receiver comparison difference `>4°` means one may be beyond acceptable tolerance; investigate before IFR. Airborne landmark/published-radial check error `>±6°` ⇒ do not use for IFR navigation. `[AIM 2026-1 COM 4.5.1–4.5.2]`
+- VOR: identify Morse/voice, correct frequency/course/TO-FROM, service volume and NOTAM.
+
+##### VOR receiver checks — 4–6–4
+
+| Check | Maximum acceptable error / difference |
+|---|---|
+| VOT / designated ground checkpoint | **±4°** from the reference indication (FAA AIM reference; see Canadian scope below) |
+| Airborne landmark / published-radial check | **±6°** from the published radial |
+| Dual independent VOR receivers, same station | **4° total difference** between indicated bearings |
+
+- `M:` **4 ground — 6 airborne — 4 between receivers.**
+- `P VOT:` with CDI centred, reference indication is **000° FROM** or **180° TO**; apply ±4°. A designated ground checkpoint uses its published radial instead.
+- `T dual:` NAV1 030° / NAV2 034° = at the limit; 030° / 035° = exceeds tolerance. This is **4° between receivers**, not ±4° each. Compare using the same TO/FROM sense.
+- `T airborne:` ±6° is a **receiver-check tolerance**, not permission to track 6° off course.
+- **Canadian scope:** TC AIM 2026-1 COM 4.5.1–4.5.2 specifies the dual comparison and airborne check: difference greater than 4° requires investigation/correction before IFR use; airborne error greater than 6° means the equipment should not be used for IFR navigation. The ground/VOT ±4° and VOT indications above are explicitly sourced to the FAA AIM; do not infer U.S. checking intervals or recordkeeping requirements for Canada.
+- **Sources:** [TC AIM 2026-1, COM 4.5.1–4.5.2](https://tc.canada.ca/sites/default/files/2026-03/aim-2026-1_access_en.pdf); [FAA AIM 1-1-4, VOR Receiver Check](https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap1_section_1.html). Reviewed 2026-10-19.
+
+
 - ILS: identify LOC; set front course; GS alive from below; marker/DME/fixes per plate.
 - NDB: identify; station passage/needle swing; ADF errors near TS/coast/night/mountain.
 - GNSS: current DB, RAIM/WAAS, correct mode, CDI scaling, annunciations.
