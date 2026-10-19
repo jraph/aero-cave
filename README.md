@@ -6,10 +6,14 @@ Compact aviation memory cards and offline bilingual EN/FR readers for Canadian C
 
 | Reader | Contents |
 |---|---|
-| [CPAER formulas and quick recall](readers/CPAER_Formulas_Recall_EN_FR.html) | Formulas, time/distance, climb/descent/turns, hydroplaning, CFS services, communications, NOTAMs, twilight and time zones |
-| [MANAB / CFS bilingual reader](readers/MANAB_CFS_EN_FR_Reader.html) | Aviation abbreviations and terminology with memory reminders |
+| [CPAER formulas and quick recall](https://jraph.github.io/aero-cave/readers/CPAER_Formulas_Recall_EN_FR.html) | Formulas, time/distance, climb/descent/turns, hydroplaning, CFS services, communications, NOTAMs, twilight and time zones |
+| [MANAB / CFS bilingual reader](https://jraph.github.io/aero-cave/readers/MANAB_CFS_EN_FR_Reader.html) | Aviation abbreviations and terminology with memory reminders |
 
-Download an HTML file and open it in a browser. Readers are self-contained and work offline, with search, topic filters, CAVE/light themes, font controls and print support. GitHub's file view displays HTML source; it does not run the reader. No GitHub Pages deployment is configured.
+Use the reader links above to open the rendered HTML after GitHub Pages is enabled. Readers are self-contained and also work offline when downloaded, with search, topic filters, CAVE/light themes, font controls and print support.
+
+### Enable GitHub Pages (one-time setup)
+
+In [Settings → Pages](https://github.com/jraph/aero-cave/settings/pages), select **Deploy from a branch**, choose **main** and **/ (root)**, then **Save**. Once deployment completes, the [reader home page](https://jraph.github.io/aero-cave/) and reader links above become available. Subsequent commits to main update the published files automatically.
 
 ## Study cards
 
