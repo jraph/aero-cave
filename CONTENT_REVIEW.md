@@ -31,3 +31,18 @@ This is a targeted navigation/formula and structure review, not a completed line
 Sources: [TC TP 975](https://tc.canada.ca/en/aviation/publications/flight-instructor-guide-aeroplane-tp-975), [FAA Instrument Flying Handbook](https://www.faa.gov/sites/faa.gov/files/pilots/FAA-H-8083-15B.pdf). New geometric examples are independently derived. No new legal requirements are asserted.
 
 Validation: build reproducibility, preserved-entry coverage, generated-block synchronization, arithmetic and HTML structural checks. Browser rendering/interaction has not been tested in this review.
+
+
+## Operational additions — 19 October 2026
+
+Added 57 bilingual rows (230 total, 11 reminders): oxygen supply versus use; passenger standard and segmented weights; flight time/FDT/FDP, baseline 700.28 tables and rest; de-/anti-icing types, FPD, LOUT and HOT; over-water flotation, rafts and land survival.
+
+- Oxygen: CAR 605.31–32 live text, consolidation current to 30 September 2026. Pressurized emergency quantities are referred to the full table rather than reduced to a misleading universal number.
+- Passenger weights: supplied AIM 2026-1, RAC 3.4.7 Tables 3.1–3.3 (printed p.213), cross-checked against live AC 700-022. Adult female values are 172/178 lb, not older or conflicting search-result values. Segmented figures transcribed from the supplied AIM. This is an explicit edition reference, not a claim that the latest AIM edition was fully reviewed.
+- Fatigue: live CAR 604.98, 700.28 and 700.40; TC prescriptive summary for 700.27/29. Baseline table is included with its three flight-duration/count groupings and day-VFR exception. Special extensions, reserve, acclimatization and FRMS require their complete provisions; this is not a complete roster-compliance calculator.
+- Fluids: TP 14052 March 2026, plus TC's current HOT landing page identifying winter 2026–27. No product-specific holdover minutes were invented or copied from an older winter. Current seasonal fluid tables must be consulted for an actual HOT.
+- Water: live CAR 602.61–63 and 703.83. Aeroplane thresholds are covered; helicopter-specific raft/suit rules are outside this CPAER table. Recommendation rows are distinguished from legal requirements.
+
+The shared JSON now generates oxygen, weights, fatigue and water sections in card 04, and fluid/HOT content in card 05, in addition to the reader MD/HTML. Prior short oxygen/survival blocks and duplicate flight-time table were replaced. These targeted subjects supersede the corresponding pending-review status above; unrelated regulatory sections remain pending.
+
+Validation: reproducible outputs across reader MD/HTML and cards 04/05/06; total rows, topic/control markup, LOUT and raft examples. Browser interaction/layout was not tested in this update.

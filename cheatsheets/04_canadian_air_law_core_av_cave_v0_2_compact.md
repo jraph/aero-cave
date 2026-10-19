@@ -115,18 +115,35 @@
 - Verify registration, battery/inspection status, antenna and remote switch.
 - `T:` ELT requirement has detailed aircraft/operation exceptions; do not memorize “always” without checking 605.38.
 ***
-#### Survival / flotation
+<!-- BEGIN GENERATED water -->
+#### Over water · survival / Survol de l’eau · survie
 
-- Over land: equipment for each person and geography/season/climate—fire, shelter, water/purification, visual signalling; specified exceptions include some flights within `25 NM`. `[CAR 602.61]`
-- Overwater: flotation/raft requirements depend on shore distance and engine-out reachability. `[CAR 602.62–602.63]`
-- `T:` legal exception≠prudent remote/winter preparation; gliding-distance and fixed-NM tests differ.
+| Memory | Rule / example |
+|---|---|
+| Flotation trigger | Water takeoff/landing OR unable to reach shore after engine failure: one life preserver, individual flotation device or PFD per person. [602.62(1)] |
+| 50 NM / Shore | Landplane >50 NM from shore: LIFE PRESERVER for each person, even if engine-out shore reach is possible. Accessible while seated. [602.62(2),(4)] |
+| Raft / Radeau — SE | Single engine, or multi unable to maintain flight with any engine failed: rafts beyond lesser of 100 NM or 30 min at FILED cruise speed from suitable emergency landing site. [602.63(1)] |
+| Raft / Radeau — ME | Multi able to maintain flight with any engine failed: lesser of 200 NM/60 min. Transport-category aeroplane exception: up to lesser of 400 NM/120 min. [602.63(2)–(3)] |
+| Calculation / Calcul | SE threshold = min(100, filed kt ×0.5) NM. Filed 120 kt →60 NM; 180 kt →90 NM; 240 kt →100 NM. Beyond threshold triggers raft carriage. |
+| Capacity / Capacité | Total raft rated capacity covers everyone. Stow accessible, visibly marked near exit; attached kit: shelter, water/purification, visual distress signals, suited to area/season. [602.63(6)] |
+| Shore ≠ landing site | Flotation test uses shore reach/distance; raft test uses a SUITABLE EMERGENCY LANDING SITE. Crossing width is not automatically distance from that site. |
+| 703 seaplane | 703.83: inflatable flotation worn on/above water; COM procedures and PIC instruction. Exception: person on stretcher, incubator or similar device. Not a blanket rule for every private landplane. |
+| Land survival / Survie terre | 602.61: FIRE + SHELTER + WATER + SIGNAL, for everyone and climate. 25-NM exception requires staying within 25 NM of departure aerodrome AND surface-station radio capability throughout. Other listed exceptions exist. |
+| Planning / Préparation | Recommendation: wear suitable inflatable flotation, brief evacuation and inflate only outside; assess cold-water exposure and rescue delay. Equipment carriage alone does not make a crossing safe. |
+<!-- END GENERATED water -->
 ***
-#### Oxygen
+<!-- BEGIN GENERATED oxygen -->
+#### Oxygen / Oxygène — CAR 605.31–32
 
-- Cabin-pressure altitude `>10,000 to ≤13,000 ASL`: each crew member uses oxygen for the portion exceeding `30 min`. `[CAR 605.32]`
-- Above `13,000 ASL`: every person uses oxygen for the entire period. `[CAR 605.32]`
-- Supply requirements under 605.31 include crew/passenger quantities.
-- `T:` night vision and performance degrade below legal thresholds; legal minimum ≠ physiological optimum.
+| Memory | Rule / example |
+|---|---|
+| 10–13 / 30 | Cabin-pressure altitude >10,000 to ≤13,000 ft: crew USE oxygen after 30 min. |
+| Supply / Réserve | Unpressurized: supply for ALL crew +10% passengers (at least 1 passenger), for time beyond 30 min in that band. |
+| Above / Au-dessus 13,000 | All aboard USE oxygen throughout. Unpressurized supply: all aboard, entire time; air transport service minimum 1 hour. |
+| Boundaries / Seuils | Exactly 13,000 ft remains in the 30-min band. At 13,100 ft, no 30-min grace. Cabin pressure altitude, not height AGL. |
+| Pressurized / Pressurisé | Size emergency supply for worst-point decompression, descent profile and suitable landing aerodrome: use 605.31(2) table and notes; do not reuse unpressurized quantities. |
+| Pilot mask / Masque | Pilot at controls: mask required at/above FL250 without quick-donning masks; above FL410 with quick-donning masks. |
+<!-- END GENERATED oxygen -->
 ***
 #### Pre-flight information
 
@@ -311,11 +328,55 @@
 - PORD: CAR 604.03 covers transport of passengers/goods in specified Canadian aircraft: large aeroplane, turbojet, or pressurized turbine aeroplane certificated for more than six passenger seats, subject to its exceptions. No fare payment is needed to trigger this test.
 - Ordinary private C150 flying does not automatically become Subpart 604 operation.
 
-| Applicable rule | Flight-time limits | Single-pilot qualifier |
-|---|---|---|
-| `604.98` private operator | `120 h/30 d`; `300 h/90 d`; `1200 h/12 consecutive months` | `8 h/24 h` for single-pilot IFR assignment |
-| `700.27` when Division III applies | `112 h/28 d`; `300 h/90 d`; `1000 h/365 d` | `8 h/24 h` single-pilot operation |
+The shared flight/duty section below contains current limits and applicability.
 
-- Flight time, flight duty period, hours of work and rest are different limits. Under 604.98 count the stated 604/Part IV/Part VII flying; 700.27 also includes other flight operations and the full flight time of augmented-crew flights.
-- First identify the operation and applicable division. Aerial work has `702.92+`; medical evacuation has `700.100+`. Do not apply 700.27 to every Part VII scenario.
 - Sources: [604.03](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-604.03.html), [604.98](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-604.98.html), [700.27](https://laws-lois.justice.gc.ca/eng/regulations/sor-96-433/page-83.html), [404.04](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-404.04.html).
+
+***
+<!-- BEGIN GENERATED pax -->
+#### Passenger weights / Masse des passagers — AIM 2026-1 RAC 3.4.7
+
+| Memory | Rule / example |
+|---|---|
+| Scope / Portée | Standard averages require the applicable approved W&B method. 703 uses actual/volunteered/estimated or approved segmented/survey methods; do not apply airline averages to a small private aircraft. |
+| Adult M / X ≥12 | Summer 206 lb (93.4 kg); winter 212 lb (96.2 kg). |
+| Adult F ≥12 | Summer 172 lb (78.1 kg); winter 178 lb (80.7 kg). Adult winter increment =6 lb. |
+| Children / Enfants | Age 2–11: 75 lb (34 kg), both seasons. Infant <2: 30 lb (13.6 kg); standard-method infant allowance note applies when infant count exceeds 10% of adults. |
+| Baggage / Bagages | Standard adult weights include clothing/carry-on. No carry-on: permitted reduction 13 lb (5.9 kg). Checked baggage and cargo: actual weights. |
+| Small sample / Petit groupe | 1–4 maximum certificated passenger seats: actual, volunteered or estimated weights. Segmented weights depend on certificated capacity, not passengers aboard. |
+| Segment 5 | 5 certificated passenger seats: summer M/X 243, F 204 lb; winter M/X 249, F 210 lb. |
+| Segment 6–8 | 6–8 certificated passenger seats: summer M/X 238, F 200 lb; winter M/X 244, F 206 lb. |
+| Segment 9–11 | 9–11 certificated passenger seats: summer M/X 230, F 193 lb; winter M/X 236, F 199 lb. |
+| Segment 12–16 | 12–16 certificated passenger seats: summer M/X 227, F 190 lb; winter M/X 233, F 196 lb. |
+| Segment 17–25 | 17–25 certificated passenger seats: summer M/X 223, F 187 lb; winter M/X 229, F 193 lb. |
+| Actual wins / Réel | If a group is heavier than the assumed average, account for actual weights. Never hide infant, baggage or unusual load in a blanket average. |
+<!-- END GENERATED pax -->
+***
+<!-- BEGIN GENERATED fatigue -->
+#### Flight time · FDT · FDP / Temps de vol · service
+
+| Memory | Rule / example |
+|---|---|
+| Terms / Termes | FDT = flight/duty time (general shorthand). FDP = flight duty period; flight time, FDP, work and rest are separate clocks. FPD = freezing-point depressant (fluid). |
+| Applicability / Portée | 700 Division III: applicable commercial operations. 604 private operators have separate limits; ordinary private PPL/CPL flying is not automatically 604. 702 aerial work and 700 Division IV medevac differ. |
+| 700.27 flight time | 112 h/28 days; 300 h/90 days; 1000 h/365 days. Single-pilot: 8 h/24 consecutive hours. |
+| 604.98 flight time | 120 h/30 days; 300 h/90 days; 1200 h/12 consecutive months. Single-pilot IFR: 8 h/24 h. |
+| FDP table key | 700.28: select average scheduled flight duration, number of flights, and applicable start-time reference. No universal 14-hour limit. Tables below are baseline, before special adjustments. |
+| Columns A / B / C | Average <30 min: A=1–11 flights, B=12–17, C=18+. Average 30–<50: A=1–7, B=8–11, C=12+. Average ≥50: A=1–4, B=5–6, C=7+. |
+| 00:00–03:59 | FDP maximum A / B / C = 9 / 9 / 9 hours. |
+| 04:00–04:59 | FDP maximum A / B / C = 10 / 9 / 9 hours. |
+| 05:00–05:59 | FDP maximum A / B / C = 11 / 10 / 9 hours. |
+| 06:00–06:59 | FDP maximum A / B / C = 12 / 11 / 10 hours. |
+| 07:00–12:59 | FDP maximum A / B / C = 13 / 12 / 11 hours. |
+| 13:00–16:59 | FDP maximum A / B / C = 12.5 / 11.5 / 10.5 hours. |
+| 17:00–21:59 | FDP maximum A / B / C = 12 / 11 / 10 hours. |
+| 22:00–22:59 | FDP maximum A / B / C = 11 / 10 / 9 hours. |
+| 23:00–23:59 | FDP maximum A / B / C = 10 / 9 / 9 hours. |
+| Day VFR / VFR jour | All flights day VFR: 700.28(9) uses column A values irrespective of flight count. Positioning is not a flight for table count. |
+| Example / Exemple | Start 08:00, five 60-min flights → column B →12 h FDP (baseline). All day VFR →13 h. Flight time is 5 h, not 12 h. |
+| Work / Travail 700.29 | 60 h/7 d or qualifying 70 h/7 d option; 192 h/28 d; 2200 h/365 d. Each option has its own time-off conditions. |
+| Rest / Repos 700.40 | Home: 12 h OR 11 h + travel to/from rest OR 10 h in operator-provided suitable accommodation. Away: 10 h in suitable accommodation. Special schedules may require more. |
+| Fatigue trap | Being under a numeric limit does not establish fitness. Acclimatization, reserve/standby, split duty, extensions and augmented crews require their specific rules. |
+<!-- END GENERATED fatigue -->
+
+Shared additions reviewed 19 October 2026: [source editions and scope](../CONTENT_REVIEW.md#operational-additions--19-october-2026). Edit `data/formulas.json` and run `python3 scripts/build_all.py` for marked blocks.

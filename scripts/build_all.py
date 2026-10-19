@@ -29,3 +29,13 @@ for key,title,rows in [('NAV','Navigation aids — ADF / VOR / DME / intercepts'
  assert len(re.findall(pattern,s,re.S))==1, f'Missing or duplicate {key} block'
  s=re.sub(pattern,lambda _:block,s,flags=re.S)
 p.write_text(s)
+# Shared operational content also belongs in its subject card.
+for filename,ids in [('04_canadian_air_law_core_av_cave_v0_2_compact.md',['oxygen','pax','fatigue','water']),('05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md',['icingfluids'])]:
+ p=ROOT/'cheatsheets'/filename;s=p.read_text()
+ for key in ids:
+  g=next(g for g in d['groups'] if g.get('id')==key)
+  block=f'<!-- BEGIN GENERATED {key} -->\n#### '+g['title']+'\n\n| Memory | Rule / example |\n|---|---|\n'+''.join('| '+row[0].replace('|',r'\|')+' | '+row[1].replace('|',r'\|')+' |\n' for row in g['rows'])+f'<!-- END GENERATED {key} -->'
+  pattern=rf'<!-- BEGIN GENERATED {key} -->.*?<!-- END GENERATED {key} -->'
+  assert len(re.findall(pattern,s,re.S))==1,f'Missing/duplicate {key} block'
+  s=re.sub(pattern,lambda _:block,s,flags=re.S)
+ p.write_text(s)

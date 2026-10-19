@@ -6,7 +6,7 @@ Compact aviation memory cards and offline bilingual EN/FR readers for Canadian C
 
 | Reader | Contents |
 |---|---|
-| [CPAER formulas and quick recall](https://jraph.github.io/aero-cave/readers/CPAER_Formulas_Recall_EN_FR.html) | ADF/VOR/DME, bearings and intercepts, formulas, time/distance, climb/descent/turns, hydroplaning, CFS services, communications, NOTAMs, twilight and time zones |
+| [CPAER formulas and quick recall](https://jraph.github.io/aero-cave/readers/CPAER_Formulas_Recall_EN_FR.html) | ADF/VOR/DME, bearings and intercepts, formulas, time/distance, climb/descent/turns, hydroplaning, CFS services, communications, NOTAMs, twilight/time zones, oxygen, passenger weights, flight/duty limits, de-icing and over-water equipment |
 | [MANAB / CFS bilingual reader](https://jraph.github.io/aero-cave/readers/MANAB_CFS_EN_FR_Reader.html) | Aviation abbreviations and terminology with memory reminders |
 
 Use the reader links above to open the rendered HTML after GitHub Pages is enabled. Readers are self-contained and also work offline when downloaded, with search, topic filters, CAVE/light themes, font controls and print support.
@@ -63,7 +63,7 @@ For the formula reader, edit `data/formulas.json`, then run:
 python3 scripts/build_all.py
 ```
 
-This builds the bilingual Markdown and HTML together and refreshes the navigation/ETE blocks in `06`. Do not hand-edit generated outputs or marked blocks. Other sections of `06` and other subject cards remain editable Markdown. The MANAB reader is still maintained separately.
+This builds the bilingual Markdown and HTML together and refreshes the navigation/ETE blocks in `06`, oxygen/weights/fatigue/water blocks in `04`, and fluid/HOT block in `05`. Do not hand-edit generated outputs or marked blocks. Other sections of `06` and other subject cards remain editable Markdown. The MANAB reader is still maintained separately.
 
 Run `python3 scripts/check_formulas.py` before committing. Record sources and review scope in [CONTENT_REVIEW.md](CONTENT_REVIEW.md). Preserve units, approximation signs, EN/FR meaning and the compact reader controls.
 
