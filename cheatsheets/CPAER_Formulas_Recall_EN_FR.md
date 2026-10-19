@@ -120,14 +120,16 @@ Condensed offline study reader · Formulas, navigation, CFS communications and N
 
 **Timing shortcuts / Estimation du temps**
 
-| Label | English | Français |
+Distance in NM → ETE in minutes; use groundspeed. / Distance en NM → ETE en minutes; utiliser la vitesse sol.
+
+| GS | English | Français |
 |---|---|---|
-| 60 kt | 1 NM/min · 10 NM = 10.00 min | 1 NM/min · 10 NM = 10.00 min |
-| 90 kt | 1.5 NM/min · 10 NM = 6.67 min | 1.5 NM/min · 10 NM = 6.67 min |
-| 100 kt | 1.66667 NM/min · 10 NM = 6.00 min | 1.66667 NM/min · 10 NM = 6.00 min |
-| 120 kt | 2 NM/min · 10 NM = 5.00 min | 2 NM/min · 10 NM = 5.00 min |
-| 150 kt | 2.5 NM/min · 10 NM = 4.00 min | 2.5 NM/min · 10 NM = 4.00 min |
-| 180 kt | 3 NM/min · 10 NM = 3.33 min | 3 NM/min · 10 NM = 3.33 min |
+| 60 kt | ETE = distance × 1 → same number; 30 NM = 30 min | ETE = distance × 1 → même nombre; 30 NM = 30 min |
+| 90 kt | ETE = distance × ⅔ → ÷3 then ×2; 30 NM = 20 min | ETE = distance × ⅔ → ÷3 puis ×2; 30 NM = 20 min |
+| 100 kt | ETE = distance × ⅗ → ÷5 then ×3; 30 NM = 18 min | ETE = distance × ⅗ → ÷5 puis ×3; 30 NM = 18 min |
+| 120 kt | ETE = distance × ½ → ÷2; 30 NM = 15 min | ETE = distance × ½ → ÷2; 30 NM = 15 min |
+| 150 kt | ETE = distance × ⅖ → ÷5 then ×2; 30 NM = 12 min | ETE = distance × ⅖ → ÷5 puis ×2; 30 NM = 12 min |
+| 180 kt | ETE = distance × ⅓ → ÷3; 30 NM = 10 min | ETE = distance × ⅓ → ÷3; 30 NM = 10 min |
 ***
 
 **CFS servicing / Services CFS**
