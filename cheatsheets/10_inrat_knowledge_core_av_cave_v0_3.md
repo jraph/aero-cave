@@ -294,7 +294,7 @@
 - `T dual:` NAV1 030° / NAV2 034° = at the limit; 030° / 035° = exceeds tolerance. This is **4° between receivers**, not ±4° each. Compare using the same TO/FROM sense.
 - `T airborne:` ±6° is a **receiver-check tolerance**, not permission to track 6° off course.
 - **Canadian scope:** TC AIM 2026-1 COM 4.5.1–4.5.2 specifies the dual comparison and airborne check: difference greater than 4° requires investigation/correction before IFR use; airborne error greater than 6° means the equipment should not be used for IFR navigation. The ground/VOT ±4° and VOT indications above are explicitly sourced to the FAA AIM; do not infer U.S. checking intervals or recordkeeping requirements for Canada.
-- **Sources:** [TC AIM 2026-1, COM 4.5.1–4.5.2](https://tc.canada.ca/sites/default/files/2026-03/aim-2026-1_access_en.pdf); [FAA AIM 1-1-4, VOR Receiver Check](https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap1_section_1.html). Reviewed 2026-10-19.
+- **Sources:** [TC AIM 2026-1, COM 4.5.1–4.5.2](https://tc.canada.ca/en/aviation/publications/transport-canada-aeronautical-information-manual-tc-aim-tp-14371); [FAA AIM 1-1-4, VOR Receiver Check](https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap1_section_1.html). Reviewed 2026-10-19.
 
 
 - ILS: identify LOC; set front course; GS alive from below; marker/DME/fixes per plate.
