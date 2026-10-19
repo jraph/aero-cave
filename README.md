@@ -6,7 +6,7 @@ Compact aviation memory cards and offline bilingual EN/FR readers for Canadian C
 
 | Reader | Contents |
 |---|---|
-| [CPAER formulas and quick recall](https://jraph.github.io/aero-cave/readers/CPAER_Formulas_Recall_EN_FR.html) | Formulas, time/distance, climb/descent/turns, hydroplaning, CFS services, communications, NOTAMs, twilight and time zones |
+| [CPAER formulas and quick recall](https://jraph.github.io/aero-cave/readers/CPAER_Formulas_Recall_EN_FR.html) | ADF/VOR/DME, bearings and intercepts, formulas, time/distance, climb/descent/turns, hydroplaning, CFS services, communications, NOTAMs, twilight and time zones |
 | [MANAB / CFS bilingual reader](https://jraph.github.io/aero-cave/readers/MANAB_CFS_EN_FR_Reader.html) | Aviation abbreviations and terminology with memory reminders |
 
 Use the reader links above to open the rendered HTML after GitHub Pages is enabled. Readers are self-contained and also work offline when downloaded, with search, topic filters, CAVE/light themes, font controls and print support.
@@ -28,7 +28,6 @@ Use the reader links above to open the rendered HTML after GitHub Pages is enabl
 - [12_ifr_procedures_qrc_av_cave_v0_2.md](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md)
 - [13_multi_engine_knowledge_core_av_cave_v0_1.md](cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md)
 - [16_weather_knowledge_core_av_cave_v0_1.md](cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md)
-- [CPAER_CAVE_Formulas.md](cheatsheets/CPAER_CAVE_Formulas.md)
 - [CPAER_Formulas_Recall_EN_FR.md](cheatsheets/CPAER_Formulas_Recall_EN_FR.md)
 - [MANAB_CFS_Essential_EN_FR.md](cheatsheets/MANAB_CFS_Essential_EN_FR.md)
 
@@ -38,7 +37,7 @@ Use the reader links above to open the rendered HTML after GitHub Pages is enabl
 - `readers/`: offline HTML study readers.
 - `archive/`: historical source-validation and NAV CANADA cycle notes, retained for context. They do not establish current validity.
 
-Original filenames are retained for traceability. Overlapping formula cards are separate historical artifacts; the bilingual CPAER reader includes the latest time-zone and twilight additions from 19 October 2026. Individual cards have different review dates and coverage.
+The older formula card is archived; its original link points to the active cards. See [content review and remaining overlap](CONTENT_REVIEW.md) for ownership and review scope. Individual cards have different review dates and coverage.
 
 ## Essential cautions
 
@@ -58,6 +57,14 @@ Historical documents may reference release notes or source files not included in
 
 ## Updating
 
-Edit the relevant Markdown card and, when applicable, its HTML reader. Preserve compact layout, EN/FR meaning, search and topic coverage, and zoom reflow. Record the authoritative source and effective date for substantive corrections. Check calculations, units, examples and hyperlinks before committing. Do not silently turn a training approximation into an operational limit.
+For the formula reader, edit `data/formulas.json`, then run:
+
+```sh
+python3 scripts/build_all.py
+```
+
+This builds the bilingual Markdown and HTML together and refreshes the navigation/ETE blocks in `06`. Do not hand-edit generated outputs or marked blocks. Other sections of `06` and other subject cards remain editable Markdown. The MANAB reader is still maintained separately.
+
+Run `python3 scripts/check_formulas.py` before committing. Record sources and review scope in [CONTENT_REVIEW.md](CONTENT_REVIEW.md). Preserve units, approximation signs, EN/FR meaning and the compact reader controls.
 
 Initial collection imported 19 October 2026.

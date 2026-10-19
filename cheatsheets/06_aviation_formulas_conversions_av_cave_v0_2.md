@@ -1,7 +1,7 @@
 ### AVIATION FORMULAS / CONVERSIONS — AV-CAVE v0.2
-`TARGETED CPAER REVIEW: 2026-09-06` | see `00_CPAER_REVIEW_NOTES.md` for scope and remaining gaps
+Navigation calculations reviewed 2026-10-19. Other sections retain their review dates; see [review status](../CONTENT_REVIEW.md).
 `F` formula | `M` memory | `T` trap | `?` verify | Canada PPL/CPL/INRAT/IR mental math
-`RELEASE:` `DERIVED/STUDY-REF PROVISIONAL` | `CANONICAL SOURCE:` `aviation_formulas_conversions_av_cave_v0_2.md` | `NOT FLIGHT AUTHORITY`
+`RELEASE:` `DERIVED/STUDY-REF PROVISIONAL` | Navigation and ETE blocks generated from `data/formulas.json` | `NOT FLIGHT AUTHORITY`
 ***
 #### Units / constants
 
@@ -31,22 +31,23 @@
 - `M:` `120 kt = 2 NM/min`; `90 kt = 1.5 NM/min`; `60 kt = 1 NM/min`.
 - `T:` navigation timing uses `GS`, not IAS/TAS.
 ***
+<!-- BEGIN GENERATED ETE -->
 #### Quick ETE table
 
-`F:` ETE (minutes) = distance (NM) × fraction below. Use **GS**, including wind.
+Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 
-| GS | NM/min | ETE fraction of NM | Mental calculation | 10 NM | 30 NM | 60 NM |
-|---:|---:|---:|---|---:|---:|---:|
-| `60 kt` | `1` | `×1` | same number | `10 min` | `30 min` | `60 min` |
-| `75 kt` | `1¼` | `×⅘` | `÷5 ×4` | `8 min` | `24 min` | `48 min` |
-| `90 kt` | `1½` | `×⅔` | `÷3 ×2` | `6 min 40 s` | `20 min` | `40 min` |
-| `100 kt` | `1⅔` | `×⅗` | `÷5 ×3` | `6 min` | `18 min` | `36 min` |
-| `120 kt` | `2` | `×½` | `÷2` | `5 min` | `15 min` | `30 min` |
-| `150 kt` | `2½` | `×⅖` | `÷5 ×2` | `4 min` | `12 min` | `24 min` |
-| `180 kt` | `3` | `×⅓` | `÷3` | `3 min 20 s` | `10 min` | `20 min` |
+| GS | ETE fraction | Mental calculation | 10 NM | 30 NM | 60 NM |
+|---:|---:|---|---:|---:|---:|
+| 60 kt | ×1 | same number | 10 min | 30 min | 60 min |
+| 75 kt | ×4/5 | ÷5 ×4 | 8 min | 24 min | 48 min |
+| 90 kt | ×2/3 | ÷3 ×2 | 6 min 40 s | 20 min | 40 min |
+| 100 kt | ×3/5 | ÷5 ×3 | 6 min | 18 min | 36 min |
+| 120 kt | ×1/2 | ÷2 ×1 | 5 min | 15 min | 30 min |
+| 150 kt | ×2/5 | ÷5 ×2 | 4 min | 12 min | 24 min |
+| 180 kt | ×1/3 | ÷3 ×1 | 3 min 20 s | 10 min | 20 min |
 
-- `M:` `90 kt`: two-thirds of the NM gives minutes; `30 NM ÷3 ×2 = 20 min`.
-- `T:` `6.7 min` is approximately `6 min 42 s`, not `6 min 7 s`; exact 10 NM at 90 kt is `6 min 40 s`.
+90 kt: two-thirds of the NM gives minutes. Decimal minutes are not minutes:seconds.
+<!-- END GENERATED ETE -->
 ***
 #### Fuel
 
@@ -112,6 +113,35 @@
 - `M:` TVMDC = True Virgins Make Dull Company; reverse = Can Dead Men Vote Twice.
 - `T:` track/course/heading/bearing are different. Track = ground path; heading = nose.
 ***
+<!-- BEGIN GENERATED NAV -->
+#### Navigation aids — ADF / VOR / DME / intercepts
+
+| Memory | Calculation / example |
+|---|---|
+| Conventions | MH = magnetic heading; RB = clockwise relative bearing from nose; BTS/BFS = bearing TO/FROM station. Use one north reference throughout. |
+| Wrap / Normaliser | wrap(x) = x modulo 360; add/subtract 360 until 0–359°. North may be written 000° or 360°. |
+| BTS = MH + RB | BTS = wrap(MH + RB). MH 350°, RB 040° → BTS 030°. |
+| BFS = BTS ±180 | BFS = wrap(BTS +180°). BTS 030° → BFS 210°: aircraft southwest of station. |
+| RB = BTS − MH | RB = wrap(BTS − MH). BTS 020°, MH 080° → RB 300° (60° left of nose). |
+| MH = BTS − RB | MH = wrap(BTS − RB). BTS 100°, RB 250° → MH 210°. |
+| ADF card / Rose | Fixed card: read RB. Movable card: set current MH under index to read magnetic BTS. RMI: correctly referenced needle head = BTS, tail = BFS. |
+| Turn / Virage | At essentially unchanged position, right turn +30° → RB decreases 30°; left turn → RB increases. BTS stays nearly unchanged. |
+| Homing ≠ tracking | RB 000° points the nose at the station. In crosswind, holding RB 000° gives a curved homing path. Tracking needs wind correction. |
+| VOR radial | Radial = bearing FROM station. On R-090: outbound course 090°; inbound course 270°. Identify aid and north reference (true-reference exceptions exist in Canada). |
+| TO / FROM | With CDI centred: selected course toward station → TO; reciprocal → FROM. Flag describes selected-course geometry, not aircraft heading or actual travel. |
+| 30° intercept setup | C = desired direction of travel, NOT always radial. Choose H = C ±30° toward the course line. Sketch station, current BFS and target line first; heading alone cannot select the side. No-wind examples below. |
+| Capture: inbound | At capture BTS = C; RB = wrap(C − H). H=C+30 → RB330; H=C−30 → RB030. Start rollout with appropriate lead. |
+| Capture: outbound | At capture BTS = wrap(C+180); RB = wrap(C+180−H). H=C+30 → RB150; H=C−30 → RB210. |
+| Inbound example | Aircraft west-northwest of NDB (BFS285), intercept C090 inbound: H120 toward line. At capture BTS090, RB330. Turn left toward 090, then correct wind. |
+| Outbound example | Aircraft northeast (BFS045), intercept C090 outbound: H120. At capture BFS090, BTS270, RB150. Turn left toward 090, then correct wind. |
+| Wind trap / Vent | 30° is a chosen training intercept, not a universal rule. Wind changes the ground intercept angle. Always compute capture RB from actual heading; after capture fly the wind-corrected heading. |
+| Cross-track distance | Lateral offset = ground range × sin(angular error); small angle ≈ range × error°/60. At 30 NM, 4° → about 2 NM. |
+| VOR dots | Conventional VOR CDI: normally 2° per dot, ±10° full scale. Two dots at 30 NM ≈ 2 NM. LOC and GNSS scales differ; check equipment/mode. |
+| DME geometry | Slant NM = √(ground NM² + height NM²); height NM = height above station(ft)/6076. Over station at 6076 ft above it → about 1 DME, not zero. |
+| DME ground range | Ground NM = √(DME² − height NM²). DME 5 NM, height 6076 ft → √24 ≈4.90 NM. DME speed/time meaningful toward/away from station; unreliable for along-track speed on an arc. |
+| 30° closing time | For a 30° GROUND-track intercept: closing speed = GS × sin30 = GS/2. Time(min)=120 × lateral NM/GS. 2 NM off at 120 kt → 2 min. Wind-correct heading to obtain that ground track. |
+<!-- END GENERATED NAV -->
+***
 #### 1-in-60 rule
 
 - `F:` `track error° ≈ offtrack × 60 / distance flown`.
@@ -143,13 +173,6 @@
 - `F:` time to descend = distance/GS×60.
 - `M:` `90 kt` on 3° ⇒ `450 fpm`; `100 kt` ⇒ `500 fpm`; `120 kt` ⇒ `600 fpm`.
 - `T:` add level-offs, stepdowns, tailwind, config, ATC restrictions.
-***
-#### Top of descent
-
-- `F:` `TOD distance ≈ altitude to lose / 300` for 3°.
-- `F:` `altitude to lose = current altitude - target altitude`.
-- `M:` lose `6000 ft` ⇒ start about `20 NM` out on 3°.
-- `T:` terrain/MEA/stepdowns/CAP profile can override simple 3° TOD.
 ***
 #### Holding
 
@@ -236,16 +259,6 @@
 - `F:` decimal hours = minutes/60.
 - `T:` flight time / air time / block time / night time / instrument time are different records.
 ***
-#### Mental math shortcuts
-
-- Divide by 60: `NM at 60 kt = minutes`.
-- `GS 90`: minutes ≈ `NM × 2/3`.
-- `GS 120`: minutes ≈ `NM / 2`.
-- `GS 100`: minutes = `NM × ⅗` (`÷5 ×3`).
-- `GS 150`: minutes = `NM × ⅖` (`÷5 ×2`).
-- `GS 180`: minutes = `NM × ⅓` (`÷3`).
-- `6 gph`: `1 gal/10 min`; `9 gph`: `1.5 gal/10 min`; `12 gph`: `2 gal/10 min`.
-***
 #### Pebble
 
 - `D=GS×t` | `t=min=D/GS×60` | `fuel=t×burn` | `CG=ΣM/ΣW` | `PA=elev+(29.92-alt)×1000` | `DA≈PA+120(OAT-ISA)` | `1-in-60: err=off×60/flown` | `WCA≈60×XW/TAS` | `ROC=GS×ft/NM/60` | `3° ROD=GS×5` | `TOD=alt lose/300` | `n=1/cosφ` | `Vsφ=Vs√n` | `+10%V=+21%E` | `1°lat=60NM` | `0.1h=6min`.
@@ -257,3 +270,5 @@
 - General approach ban: CAR `602.129`, live consolidation checked `2026-07-10`.
 - C150M glide: provided `1977 Model 150M POH`, Figure 3-1.
 - Turn-radius and glide-ratio equations: derived unit-consistent formulas; POH/chart data wins.
+
+- Navigation: TC TP 975, Exercise 24 (September 2004 edition), checked 19 October 2026; FAA Instrument Flying Handbook Ch. 9 (2012). Intercept, lateral-distance and DME examples are derived geometry, not operational clearances.

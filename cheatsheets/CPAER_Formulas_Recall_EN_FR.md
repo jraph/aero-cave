@@ -1,6 +1,6 @@
 # CPAER · Formulas & quick recall / Formules et rappels
 
-Condensed offline study reader · Formulas, navigation, CFS communications and NOTAMs · Reviewed 13 Oct 2026 / Révision 13 oct. 2026
+Navigation calculations reviewed 19 Oct 2026; other sections retain their source dates. / Calculs de navigation revus le 19 oct. 2026; autres rubriques selon leurs sources.
 
 ***
 
@@ -26,6 +26,34 @@ Condensed offline study reader · Formulas, navigation, CFS communications and N
 | Track error | TE° ≈ 60 × off-track/distance flown | Erreur de route ≈ 60 × écart latéral/distance parcourue |
 | Closing angle | CA° ≈ 60 × off-track/distance remaining | Angle de convergence ≈ 60 × écart latéral/distance restante |
 | Correction | TE + CA towards track; small-angle approximation | Erreur + convergence vers la route; approximation pour petits angles |
+***
+
+**ADF · VOR · DME · intercepts / Interceptions**
+
+| Label | English | Français |
+|---|---|---|
+| Conventions | MH = magnetic heading; RB = clockwise relative bearing from nose; BTS/BFS = bearing TO/FROM station. Use one north reference throughout. | MH = cap magnétique; RB = gisement horaire depuis le nez; BTS/BFS = relèvement VERS/DEPUIS la station. Même référence nord pour tous les angles. |
+| Wrap / Normaliser | wrap(x) = x modulo 360; add/subtract 360 until 0–359°. North may be written 000° or 360°. | wrap(x) = x modulo 360; ajouter/soustraire 360 pour obtenir 0–359°. Nord : 000° ou 360°. |
+| BTS = MH + RB | BTS = wrap(MH + RB). MH 350°, RB 040° → BTS 030°. | BTS = wrap(MH + RB). MH 350°, RB 040° → BTS 030°. |
+| BFS = BTS ±180 | BFS = wrap(BTS +180°). BTS 030° → BFS 210°: aircraft southwest of station. | BFS = wrap(BTS +180°). BTS 030° → BFS 210° : avion au sud-ouest de la station. |
+| RB = BTS − MH | RB = wrap(BTS − MH). BTS 020°, MH 080° → RB 300° (60° left of nose). | RB = wrap(BTS − MH). BTS 020°, MH 080° → RB 300° (60° à gauche du nez). |
+| MH = BTS − RB | MH = wrap(BTS − RB). BTS 100°, RB 250° → MH 210°. | MH = wrap(BTS − RB). BTS 100°, RB 250° → MH 210°. |
+| ADF card / Rose | Fixed card: read RB. Movable card: set current MH under index to read magnetic BTS. RMI: correctly referenced needle head = BTS, tail = BFS. | Rose fixe : lire RB. Rose mobile : afficher MH à l’index pour lire BTS magnétique. RMI correctement référencé : pointe = BTS, queue = BFS. |
+| Turn / Virage | At essentially unchanged position, right turn +30° → RB decreases 30°; left turn → RB increases. BTS stays nearly unchanged. | À position pratiquement constante, virage droite +30° → RB diminue de 30°; gauche → RB augmente. BTS reste presque constant. |
+| Homing ≠ tracking | RB 000° points the nose at the station. In crosswind, holding RB 000° gives a curved homing path. Tracking needs wind correction. | RB 000° pointe le nez vers la station. Par vent traversier, maintenir RB 000° produit une trajectoire courbe. Suivre une route exige une correction de dérive. |
+| VOR radial | Radial = bearing FROM station. On R-090: outbound course 090°; inbound course 270°. Identify aid and north reference (true-reference exceptions exist in Canada). | Radiale = relèvement DEPUIS station. Sur R-090 : route éloignement 090°; rapprochement 270°. Identifier aide et référence nord (exceptions au nord vrai au Canada). |
+| TO / FROM | With CDI centred: selected course toward station → TO; reciprocal → FROM. Flag describes selected-course geometry, not aircraft heading or actual travel. | CDI centré : route sélectionnée vers station → TO; réciproque → FROM. Le drapeau décrit la géométrie sélectionnée, pas le cap ni le déplacement réel. |
+| 30° intercept setup | C = desired direction of travel, NOT always radial. Choose H = C ±30° toward the course line. Sketch station, current BFS and target line first; heading alone cannot select the side. No-wind examples below. | C = route désirée, PAS toujours radiale. Choisir H = C ±30° vers la ligne. Dessiner station, BFS actuel et ligne cible; le cap seul ne donne pas le côté. Exemples sans vent ci-dessous. |
+| Capture: inbound | At capture BTS = C; RB = wrap(C − H). H=C+30 → RB330; H=C−30 → RB030. Start rollout with appropriate lead. | À l’interception BTS = C; RB = wrap(C − H). H=C+30 → RB330; H=C−30 → RB030. Anticiper la sortie du virage. |
+| Capture: outbound | At capture BTS = wrap(C+180); RB = wrap(C+180−H). H=C+30 → RB150; H=C−30 → RB210. | À l’interception BTS = wrap(C+180); RB = wrap(C+180−H). H=C+30 → RB150; H=C−30 → RB210. |
+| Inbound example | Aircraft west-northwest of NDB (BFS285), intercept C090 inbound: H120 toward line. At capture BTS090, RB330. Turn left toward 090, then correct wind. | Avion au ouest-nord-ouest du NDB (BFS285), intercepter C090 en rapprochement : H120 vers ligne. À l’interception BTS090, RB330. Virer gauche vers 090, puis corriger le vent. |
+| Outbound example | Aircraft northeast (BFS045), intercept C090 outbound: H120. At capture BFS090, BTS270, RB150. Turn left toward 090, then correct wind. | Avion au nord-est (BFS045), intercepter C090 en éloignement : H120. À l’interception BFS090, BTS270, RB150. Virer gauche vers 090, puis corriger le vent. |
+| Wind trap / Vent | 30° is a chosen training intercept, not a universal rule. Wind changes the ground intercept angle. Always compute capture RB from actual heading; after capture fly the wind-corrected heading. | 30° est un choix pédagogique, pas une règle universelle. Le vent modifie l’angle au sol. Calculer RB à partir du cap réel; après interception appliquer la correction de dérive. |
+| Cross-track distance | Lateral offset = ground range × sin(angular error); small angle ≈ range × error°/60. At 30 NM, 4° → about 2 NM. | Écart latéral = distance horizontale × sin(erreur angulaire); petit angle ≈ distance × erreur°/60. À 30 NM, 4° → environ 2 NM. |
+| VOR dots | Conventional VOR CDI: normally 2° per dot, ±10° full scale. Two dots at 30 NM ≈ 2 NM. LOC and GNSS scales differ; check equipment/mode. | CDI VOR classique : normalement 2° par point, ±10° pleine échelle. Deux points à 30 NM ≈ 2 NM. Échelles LOC/GNSS différentes; vérifier équipement/mode. |
+| DME geometry | Slant NM = √(ground NM² + height NM²); height NM = height above station(ft)/6076. Over station at 6076 ft above it → about 1 DME, not zero. | Distance oblique NM = √(distance horizontale NM² + hauteur NM²); hauteur NM = pieds au-dessus station/6076. À la verticale à 6076 ft au-dessus → environ 1 DME, pas zéro. |
+| DME ground range | Ground NM = √(DME² − height NM²). DME 5 NM, height 6076 ft → √24 ≈4.90 NM. DME speed/time meaningful toward/away from station; unreliable for along-track speed on an arc. | Distance horizontale NM = √(DME² − hauteur NM²). DME 5 NM, hauteur 6076 ft → √24 ≈4,90 NM. Vitesse/temps DME pertinents vers/depuis station; pas la vitesse le long d’un arc. |
+| 30° closing time | For a 30° GROUND-track intercept: closing speed = GS × sin30 = GS/2. Time(min)=120 × lateral NM/GS. 2 NM off at 120 kt → 2 min. Wind-correct heading to obtain that ground track. | Interception à 30° de ROUTE SOL : vitesse de rapprochement = GS/2. Temps(min)=120 × écart NM/GS. Écart 2 NM à 120 kt → 2 min. Corriger le cap pour obtenir cette route sol. |
 ***
 
 **Weight · balance / Masse · centrage**
@@ -120,11 +148,11 @@ Condensed offline study reader · Formulas, navigation, CFS communications and N
 
 **Timing shortcuts / Estimation du temps**
 
-Distance in NM → ETE in minutes; use groundspeed. / Distance en NM → ETE en minutes; utiliser la vitesse sol.
-
-| GS | English | Français |
+| Label | English | Français |
 |---|---|---|
+| Units / Unités | Distance in NM × fraction = ETE in MINUTES; use groundspeed, including wind. | Distance en NM × fraction = ETE en MINUTES; utiliser la vitesse sol, vent compris. |
 | 60 kt | ETE = distance × 1 → same number; 30 NM = 30 min | ETE = distance × 1 → même nombre; 30 NM = 30 min |
+| 75 kt | ETE = distance × ⅘ → ÷5 then ×4; 30 NM = 24 min | ETE = distance × ⅘ → ÷5 puis ×4; 30 NM = 24 min |
 | 90 kt | ETE = distance × ⅔ → ÷3 then ×2; 30 NM = 20 min | ETE = distance × ⅔ → ÷3 puis ×2; 30 NM = 20 min |
 | 100 kt | ETE = distance × ⅗ → ÷5 then ×3; 30 NM = 18 min | ETE = distance × ⅗ → ÷5 puis ×3; 30 NM = 18 min |
 | 120 kt | ETE = distance × ½ → ÷2; 30 NM = 15 min | ETE = distance × ½ → ÷2; 30 NM = 15 min |
@@ -223,33 +251,6 @@ Distance in NM → ETE in minutes; use groundspeed. / Distance en NM → ETE en 
 | QCAAS | Air-ground communications unserviceable | Communications air-sol hors service |
 | QOBCE | Obstacle erected | Obstacle érigé |
 | QOLAS | Obstacle lights unserviceable | Feux d’obstacle hors service |
-
-***
-
-**Memory traps & examples / Pièges et exemples**
-
-**60 ≠ 60** · Rate/gradient: 60 converts hours→minutes. 1-in-60: rounded radians→degrees. / Taux/pente : conversion heures→minutes. 1 sur 60 : radians→degrés arrondis.
-
-**GS vs TAS** · Timing and ground gradient use GS; turn geometry uses TAS. / Temps et pente sol : vitesse sol; géométrie du virage : TAS.
-
-**9 / 7.7** · Rolling tyre 9√psi; non-rotating 7.7√psi. Not a safe braking-speed guarantee. / Rotation 9√psi; sans rotation 7,7√psi. Pas une garantie de freinage.
-
-**3° ≠ 3%** · 3° = about 5.24%, 318 ft/NM. / 3° = environ 5,24%, 318 pi/NM.
-
-**DA ≠ weight** · Weight worsens performance but does not increase density altitude. / La masse dégrade les performances sans augmenter l’altitude-densité.
-
-**True altitude** · Use height above setting source, not mountain elevation; temperature shortcut assumes column conditions. / Hauteur au-dessus de la source du calage, pas du sommet; hypothèses sur température de la colonne.
-
-**Radio / ATC** · RCO links flight service; PAL links ATC. / RCO : service de vol; PAL : ATC.
-
-**NOTAM** · N purpose ≠ NOTAMN new; radius ≠ diameter; E is operational detail. / N objet ≠ NOTAMN nouveau; rayon ≠ diamètre; détails en E.
-
-**CFS S** · 1 store; 2–3 repair; 4 park; 5 tie; 6 plug; 7 drop/go. / 1 entreposer; 2–3 réparer; 4 stationner; 5 amarrer; 6 brancher; 7 déposer/repartir.
-
-**Examples** · Training examples only; POH, published procedures and current NOTAMs govern. / Exemples pédagogiques; manuel de vol, procédures publiées et NOTAM courants prioritaires.
-
-[TC CPAER TP12881](https://tc.canada.ca/en/aviation/publications/study-reference-guide-written-examinations-commercial-pilot-licence-aeroplane-tp-12881) · [NAV CANADA CNOP v12 · 14 May 2026](https://www.navcanada.ca/en/comms/_localized-assets/guides/cnop/cnop-v12-04172026.pdf) · [NAV CANADA pilot briefings](https://www.navcanada.ca/en/flight-planning/flight-planning-and-reporting.aspx) · [TSB A02C0072 · 7.7√psi](https://tsb.gc.ca/eng/rapports-reports/aviation/2002/a02c0072/a02c0072.html) · [TC radio reception approximation](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-724-commuter-operations-helicopters-canadian-aviation-regulations-cars)
-
 ***
 
 **Twilight · time zones · DST / Crépuscule · fuseaux · heure avancée**
@@ -277,4 +278,30 @@ Distance in NM → ETE in minutes; use groundspeed. / Distance en NM → ETE en 
 | Night / Nuit | Canadian night: end of evening civil twilight to beginning of morning civil twilight. Not simply sunset→sunrise. | Nuit canadienne : fin du crépuscule civil du soir au début du crépuscule civil du matin. Pas simplement coucher→lever du Soleil. |
 | Exceptions | Civil time is jurisdiction-specific. Use current CFS REF and authoritative local rules; standard/daylight pairs are not a claim that every region changes clocks. | Heure civile propre à la juridiction. Utiliser REF CFS courant et règles locales; les paires normale/avancée ne signifient pas que toutes les régions changent d’heure. |
 
-Source: CFS General 3 Sep 2026, Time Zone Factor / Times of Operation; https://nrc.canada.ca/en/research-development/products-services/software-applications/interpreting-results-sunrisesunset-calculator · additions verified 19 Oct 2026.
+***
+
+**Memory traps & examples / Pièges et exemples**
+
+**60 ≠ 60** · Rate/gradient: 60 converts hours→minutes. 1-in-60: rounded radians→degrees. / Taux/pente : conversion heures→minutes. 1 sur 60 : radians→degrés arrondis.
+
+**GS vs TAS** · Timing and ground gradient use GS; turn geometry uses TAS. / Temps et pente sol : vitesse sol; géométrie du virage : TAS.
+
+**9 / 7.7** · Rolling tyre 9√psi; non-rotating 7.7√psi. Not a safe braking-speed guarantee. / Rotation 9√psi; sans rotation 7,7√psi. Pas une garantie de freinage.
+
+**3° ≠ 3%** · 3° = about 5.24%, 318 ft/NM. / 3° = environ 5,24%, 318 pi/NM.
+
+**DA ≠ weight** · Weight worsens performance but does not increase density altitude. / La masse dégrade les performances sans augmenter l’altitude-densité.
+
+**True altitude** · Use height above setting source, not mountain elevation; temperature shortcut assumes column conditions. / Hauteur au-dessus de la source du calage, pas du sommet; hypothèses sur température de la colonne.
+
+**Radio / ATC** · RCO links flight service; PAL links ATC. / RCO : service de vol; PAL : ATC.
+
+**NOTAM** · N purpose ≠ NOTAMN new; radius ≠ diameter; E is operational detail. / N objet ≠ NOTAMN nouveau; rayon ≠ diamètre; détails en E.
+
+**CFS S** · 1 store; 2–3 repair; 4 park; 5 tie; 6 plug; 7 drop/go. / 1 entreposer; 2–3 réparer; 4 stationner; 5 amarrer; 6 brancher; 7 déposer/repartir.
+
+**Examples** · Training examples only; POH, published procedures and current NOTAMs govern. / Exemples pédagogiques; manuel de vol, procédures publiées et NOTAM courants prioritaires.
+
+**ADF pebble / Repère** · HEAD + RELATIVE = TO; TO ±180 = FROM. Inbound capture: 330/030; outbound: 150/210 for H=C+30/C−30, no wind. / CAP + GISEMENT = VERS; VERS ±180 = DEPUIS. Interception sans vent : rapprochement 330/030; éloignement 150/210 pour H=C+30/C−30.
+
+[TC CPAER TP12881](https://tc.canada.ca/en/aviation/publications/study-reference-guide-written-examinations-commercial-pilot-licence-aeroplane-tp-12881) · [NAV CANADA CNOP v12 · 14 May 2026](https://www.navcanada.ca/en/comms/_localized-assets/guides/cnop/cnop-v12-04172026.pdf) · [NAV CANADA pilot briefings](https://www.navcanada.ca/en/flight-planning/flight-planning-and-reporting.aspx) · [TSB A02C0072 · 7.7√psi](https://tsb.gc.ca/eng/rapports-reports/aviation/2002/a02c0072/a02c0072.html) · [TC radio reception approximation](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-724-commuter-operations-helicopters-canadian-aviation-regulations-cars) · [NRC twilight; time section checked 19 Oct 2026](https://nrc.canada.ca/en/research-development/products-services/software-applications/interpreting-results-sunrisesunset-calculator) · [TC TP 975, Exercise 24; navigation review 19 Oct 2026](https://tc.canada.ca/en/aviation/publications/flight-instructor-guide-aeroplane-tp-975) · [FAA Instrument Flying Handbook, Ch. 9 (2012), navigation geometry](https://www.faa.gov/sites/faa.gov/files/pilots/FAA-H-8083-15B.pdf)
