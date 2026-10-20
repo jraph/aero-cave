@@ -2,6 +2,16 @@
 
 Current editing workflow: edit Markdown directly; update matching HTML/cards in the same change. The earlier JSON/build experiment described below has been removed. Study content and reader features are retained.
 
+## VREF and CFS PF additions — 20 October 2026
+
+Added the landing reference speed definition, the `1.3 VSO` fallback with a worked example, and the square-root-of-weight adjustment to card 06 and both bilingual reader editions. The text distinguishes published POH/AFM VREF from a fallback calculation, approach-category speed at maximum certificated landing weight, and an operational wind/gust additive. Sources checked: TC AIM 2026-1 RAC 9.21 and AWM Chapters 500/525.
+
+Expanded the CFS servicing block with the separate `PF` public-facilities legend: location letters A–D, facility numbers 1–8, and a decoding example. Source: supplied CFS General (12 June–7 August 2025), consistent with the existing MANAB/CFS card; use the current CFS for flight. The bilingual formulas reader now contains 236 rows and 11 reminders.
+
+## VFR airspace separation matrix — 20 October 2026
+
+Added a Class A–G VFR entry and ATC-service matrix to card 04 and linked it from card 01. It distinguishes formal separation, traffic information and conflict resolution; covers the Class C/D-to-E change outside ATC operating hours; and separates runway separation from airborne VFR separation. Checked against TC AIM 2026-2 RAC 2.8.1–2.8.7 and Standard 821.01. The TC AIM 2026-2 explanation of changes lists no change to RAC 2.8 from 2026-1.
+
 ## Completed in this review
 
 - Added 22 bilingual navigation entries: RB/MH/BTS/BFS arithmetic and wraparound, ADF cards/RMI, needle movement, homing/tracking, VOR radials and flags, 30° inbound/outbound intercepts, wind assumptions, lateral displacement, VOR scale, DME slant range and closing time.

@@ -195,6 +195,14 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - `M:` `45°` bank ≈ `1.41g`, stall ×`1.19`; `60°` bank = `2g`, stall ×`1.41`.
 - `T:` accelerated stall depends load factor/AoA, not just bank; POH chart wins.
 ***
+#### VREF / landing reference speed
+
+- `Definition:` `VREF` is the landing reference speed. Use the POH/AFM value for the specified landing configuration; certification bases differ. In landing-distance certification it is maintained to the `50 ft` screen height.
+- `F fallback:` when `VREF` is not specified, use `VREF = 1.3 × VSO`. Example: `VSO 50 KIAS → VREF 65 KIAS`.
+- `F weight:` for the same configuration and speed basis, `VREF₂ ≈ VREF₁ × √(W₂/W₁)`. Use POH/AFM landing-weight data when published.
+- `Approach category:` use published `VREF`, or `1.3 VSO` if none is specified, at **maximum certificated landing weight**. Do not lower the category because today’s landing weight is lower. `[TC AIM 2026-1 RAC 9.21]`
+- `T:` a wind/gust additive changes the operational approach target (`VAPP`), not the underlying `VREF`. Aircraft procedures and limitations govern.
+***
 #### Glide
 
 - `F:` glide distance `NM = height AGL(ft) × glide ratio / 6076`.
@@ -259,7 +267,7 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 ***
 #### Pebble
 
-- `D=GS×t` | `t=min=D/GS×60` | `fuel=t×burn` | `CG=ΣM/ΣW` | `PA=elev+(29.92-alt)×1000` | `DA≈PA+120(OAT-ISA)` | `1-in-60: err=off×60/flown` | `WCA≈60×XW/TAS` | `ROC=GS×ft/NM/60` | `3° ROD=GS×5` | `TOD=alt lose/300` | `n=1/cosφ` | `Vsφ=Vs√n` | `+10%V=+21%E` | `1°lat=60NM` | `0.1h=6min`.
+- `D=GS×t` | `t=min=D/GS×60` | `fuel=t×burn` | `CG=ΣM/ΣW` | `PA=elev+(29.92-alt)×1000` | `DA≈PA+120(OAT-ISA)` | `1-in-60: err=off×60/flown` | `WCA≈60×XW/TAS` | `ROC=GS×ft/NM/60` | `3° ROD=GS×5` | `TOD=alt lose/300` | `n=1/cosφ` | `Vsφ=Vs√n` | `VREF=1.3VSO` if unpublished | `+10%V=+21%E` | `1°lat=60NM` | `0.1h=6min`.
 
 ***
 #### Sources & review status

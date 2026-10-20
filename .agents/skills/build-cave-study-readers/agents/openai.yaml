@@ -1,0 +1,14 @@
+interface:
+  display_name: Cave Study Readers
+  short_description: Compact bilingual study sheets with zoom reflow
+  default_prompt: Use $build-cave-study-readers to create or update a compact bilingual
+    HTML study reader.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

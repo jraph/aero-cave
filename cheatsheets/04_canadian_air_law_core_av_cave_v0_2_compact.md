@@ -284,6 +284,24 @@
 
 - Check current chart/CFS for floor, ceiling, transponder and communication requirements.
 ***
+#### VFR separation / conflict resolution by class
+
+| Class | VFR entry | Airborne ATC service |
+|---|---|---|
+| A | prohibited | IFR only; `SEP ALL` |
+| B | clearance; `CVFR` | `SEP ALL`, incl VFR–VFR |
+| C | clearance | `SEP` IFR–IFR; `CR` IFR–VFR as needed; `TFC` all; VFR–VFR `CR O/R` after TFC |
+| D | 2-way comm | `SEP` IFR–IFR only; `TFC` all; workload/equipment permitting: IFR–VFR `CR`, VFR–VFR `CR O/R` |
+| E | none generally; MF/XPDR rules may apply | `SEP` IFR–IFR only; VFR `TFC O/R` workload/equipment permitting; may stop without notice |
+| F | obey `CYR/CYA/CYD` | surrounding class unless specified; may be controlled, uncontrolled or both |
+| G | none | no ATC control/`SEP`; see-and-avoid + CARs |
+
+- `SEP` formal separation | `CR` conflict resolution for identified aircraft in ATC comm | `TFC` traffic information | `O/R` on request.
+- `C/D → E` when ATC unit closed: check published hours + NOTAM.
+- `C/D runway:` `SEP ALL`; this does **not** mean airborne VFR–VFR separation.
+- `T:` clearance/TFC/flight following ≠ collision-avoidance transfer. Lookout + right-of-way remain.
+- Sources: [TC AIM 2026-2 RAC 2.8.1–2.8.7](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_rac_en.pdf) · [Standard 821.01 definitions](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/sor-96-433/standards/standard-821-canadian-domestic-air-traffic-control-separation-standards-canadian-aviation-regulations-cars)
+***
 #### Transponder emergency codes
 
 - `1200` VFR at/below `12,500 ASL`; `1400` VFR above `12,500`, unless assigned otherwise.
@@ -324,6 +342,7 @@
 - uncontrolled high `1D/3N-2000/500`
 - uncontrolled low aeroplane `2D/3N-clear`
 - SVFR `request+ATC / 1SM / COC / surface`
+- airspace `B SEP all | C SEP IFR–IFR + CR IFR–VFR + VFR–VFR O/R | D SEP IFR–IFR; CR workload/O/R | E SEP IFR–IFR only | G none`
 - `current CAR/CFS/CAP/NOTAM wins`.
 
 ***

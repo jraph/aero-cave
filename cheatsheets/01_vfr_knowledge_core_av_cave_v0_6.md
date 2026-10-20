@@ -49,6 +49,7 @@
 | G | uncontrolled |
 
 - `T:` chart/CFS floor/ceiling wins. class rules≠weather minima.
+- See the [VFR separation / conflict-resolution matrix](04_canadian_air_law_core_av_cave_v0_2_compact.md#vfr-separation--conflict-resolution-by-class) for who ATC separates in Classes B–E.
 ***
 #### VFR minima / cruise altitude
 
