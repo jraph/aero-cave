@@ -115,6 +115,39 @@
 - `M cold:` `fast-steep-convective`.
 - `M warm:` `slow-wide-layered`.
 ***
+#### CF — before / passing / after
+
+- `K:` surface passage at one location; typical NH mid-latitude low, south of centre. Wind = FROM; directions illustrative.
+
+| Element | Before | Passing | After |
+|---|---|---|---|
+| Pressure | ↓ | minimum → sharp ↑ | ↑, then levels |
+| T / Td | warm / relatively high | T↓; Td usually↓ | colder / usually drier |
+| Wind | S–SW; may strengthen | veers W–NW; gusts/squalls | W–NW; often gusty, later eases |
+| Cloud | CU/TCU; CB if unstable | TCU/CB band; low ragged cloud | CU/SC; clearing trend |
+| Precip | SH/TS may precede | brief heavy SH ± TS/hail | showers, then easing |
+| CIG / VIS | deteriorate near band | low CIG / poor in precip | improve between showers |
+| `!` | prefrontal squall line possible | turbulence / shear / icing / TS | gusts / turbulence; snow squalls possible |
+
+- `M:` CF = `T↓ Td↓ P↑ WIND VEERS`.
+- `T:` stable/slow CF may give layered cloud + prolonged precip; passage ≠ instant clearing.
+***
+#### WF — before / passing / after
+
+| Element | Before | Passing | After |
+|---|---|---|---|
+| Pressure | steady ↓ | fall slows → levels | ~steady / slight ↑; may ↓ toward next low/CF |
+| T / Td | cool / Td tends ↑ | T↑; Td steady→↑ | warmer / moist, Td higher |
+| Wind | E–SE | veers toward S; variable near boundary | S–SW; speed varies |
+| Cloud | Ci → Cs → As → Ns; St/fog below | low St / fog | St/SC; may lift/break; CB if unstable |
+| Precip | widespread steady RA/SN; PL/FZRA possible | RA/DZ; may ease | often eases; DZ/SH may persist |
+| CIG / VIS | progressively ↓ | often low / poor | usually improve; low cloud/haze/fog may persist |
+| `!` | icing / embedded CB; FZRA if warm layer over subzero surface | low CIG / fog / shear | warm-sector low cloud / fog; possible TS |
+
+- `M:` WF = `LAYERS LOWER → T↑ Td↑ WIND VEERS; P FALL STOPS`.
+- `T:` tendencies, not guarantees: track/terrain/stability/season modify sequence. Both fronts can have CB; WF ≠ guaranteed clearing or strong P rise.
+- `SRC:` [FAA PHAK — Weather Theory, Fronts (NWS-hosted)](https://www.weather.gov/media/zhu/ZHU_Training_Page/Met_Tutorials/Weather_Theory.pdf); [NWS — frontal analysis / pressure tendencies](https://www.weather.gov/media/zhu/ZHU_Training_Page/Met_Tutorials/AF-Trainee.pdf).
+***
 #### Typical warm-front sequence
 
 - `Ci → Cs → As → Ns → St/fog`, ceilings lower and precip increases approaching front.
