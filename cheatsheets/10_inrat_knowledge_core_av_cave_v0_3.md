@@ -11,6 +11,14 @@
 - Trigger NOTAM = notice that source material changed; retrieve the referenced amendment/Supplement. It may expire while the underlying AIP SUP remains active.
 - `[NAV CANADA publication schedule; AIC 009/2026]`
 ***
+#### Instrument-rating recency
+
+- `24 months:` qualifying instrument flight test, IPC or other accepted test/check under CAR 401.05(3).
+- `Six approaches / six months:` following the first day of the seventh month after that test/check, complete six instrument approaches within the six months before the flight, in accordance with the procedure's specified minima.
+- Aircraft: actual or simulated IMC. Other options: Level B/C/D full-flight simulator of the same instrument-rating group, or an FTD under a person qualified under Standard 425.21(9).
+- `T:` no separate six-hour instrument-time requirement. The old 12-month grace period and `6–6–6` memory rule are outdated. Retain recency records for three years.
+- `M:` **24-month check; after six months, six approaches in six months.** [CAR 401.05(3)–(3.2)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-401.05.html)
+***
 #### Source / exam frame
 
 - `SRC:` TP 691E topic anchor; CARs/STD 421 legal req; TC AIM + current CAP/CFS/AIP SUP/NOTAM for procedures.
