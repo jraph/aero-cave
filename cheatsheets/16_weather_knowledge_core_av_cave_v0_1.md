@@ -108,6 +108,8 @@
 ***
 #### Fronts
 
+[CF / WF · bilingual CAVE reader](../readers/Weather_Fronts_EN_FR.html) · [EN/FR study card](Weather_Fronts_EN_FR.md)
+
 - **Cold:** cold undercuts warm; steeper/narrower; CU/CB, showers, gusts, turbulence, fast wind shift.
 - **Warm:** warm overruns cold; broad layered cloud; lowering ceilings, steady precip, icing/FZRA risk.
 - **Stationary:** little movement; prolonged cloud/precip.
