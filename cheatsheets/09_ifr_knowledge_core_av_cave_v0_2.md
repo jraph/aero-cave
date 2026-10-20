@@ -126,8 +126,6 @@
 - clearance CRAFT | lost comm 7600/listen/relay/phone | VMC land practicable | IMC route A-V-E-F | altitude highest A-M-E | descent latest ETA/EAT/EFC | hold direct/teardrop/parallel | brief plate-wx-nav-alt-min-MAP-missed-rwy-threats | DA/MDA needs visual refs | missed after MAP no assured OC | alternate 400-1 / 600-2 / 800-2 | BECMG end/start, TEMPO alt-min, PROB landing-min | current CAP/NOTAM wins.
 
 ***
-#### Current-source notes — v0.2
+#### Sources & review status
 
-- CAP/CFS/AIP cycle validated effective `2026-07-09` to `2026-09-03`.
-- Trigger-NOTAM workflow validated against AIC `009/2026`.
-- PFAF depiction transition dated from AIC `013/2026`; first implementation `2026-10-29`.
+See the [separate review record](../CONTENT_REVIEW.md#historical-source-review-notes) for source editions, check dates and earlier validation notes.

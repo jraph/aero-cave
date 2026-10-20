@@ -262,11 +262,6 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - `D=GS×t` | `t=min=D/GS×60` | `fuel=t×burn` | `CG=ΣM/ΣW` | `PA=elev+(29.92-alt)×1000` | `DA≈PA+120(OAT-ISA)` | `1-in-60: err=off×60/flown` | `WCA≈60×XW/TAS` | `ROC=GS×ft/NM/60` | `3° ROD=GS×5` | `TOD=alt lose/300` | `n=1/cosφ` | `Vsφ=Vs√n` | `+10%V=+21%E` | `1°lat=60NM` | `0.1h=6min`.
 
 ***
-#### Validated-source notes — v0.2
+#### Sources & review status
 
-- Holding timing: TC AIM `2026-1`, RAC 10.3/10.6.
-- General approach ban: CAR `602.129`, live consolidation checked `2026-07-10`.
-- C150M glide: provided `1977 Model 150M POH`, Figure 3-1.
-- Turn-radius and glide-ratio equations: derived unit-consistent formulas; POH/chart data wins.
-
-- Navigation: TC TP 975, Exercise 24 (September 2004 edition), checked 19 October 2026; FAA Instrument Flying Handbook Ch. 9 (2012). Intercept, lateral-distance and DME examples are derived geometry, not operational clearances.
+See the [separate review record](../CONTENT_REVIEW.md#historical-source-review-notes) for source editions, check dates and earlier validation notes.

@@ -53,3 +53,64 @@ Validation: reproducible outputs across reader MD/HTML and cards 04/05/06; total
 ## Reader-first organization
 
 README now opens with GitHub-readable notes and HTML reader links, followed by descriptive subject links. Bilingual Markdown topics use headings for GitHub navigation. JSON, build scripts and the unused renderer template were removed; their history remains in git. No study rows were removed. Future edits must update overlapping Markdown/HTML content together.
+
+## Historical source review notes
+
+Moved from the study cards on 19 October 2026. These are historical review records; moving them does not revalidate the content or update its source dates.
+
+### [10_inrat_knowledge_core_av_cave_v0_3.md](cheatsheets/10_inrat_knowledge_core_av_cave_v0_3.md)
+
+##### Validated-source notes — v0.2
+
+- Takeoff visibility precedence: CAR `602.126`, live consolidation checked `2026-07-10`.
+- General non-Part VII approach ban: CAR `602.129`, live consolidation checked `2026-07-10`.
+- Holding timing: TC AIM `2026-1`, RAC 10.3/10.6.
+- VOR checks: TC AIM `2026-1`, COM 4.5.1–4.5.2.
+
+***
+##### Current-source notes — v0.3
+
+- Current publication cycle and 56/14-day update cadence validated against NAV CANADA.
+- Trigger NOTAM logic validated against AIC `009/2026`.
+- PFAF depiction timing validated against AIC `013/2026`.
+
+### [09_ifr_knowledge_core_av_cave_v0_2.md](cheatsheets/09_ifr_knowledge_core_av_cave_v0_2.md)
+
+##### Current-source notes — v0.2
+
+- CAP/CFS/AIP cycle validated effective `2026-07-09` to `2026-09-03`.
+- Trigger-NOTAM workflow validated against AIC `009/2026`.
+- PFAF depiction transition dated from AIC `013/2026`; first implementation `2026-10-29`.
+
+### [12_ifr_procedures_qrc_av_cave_v0_2.md](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md)
+
+##### Current-source notes — v0.2
+
+- Current CAP/CFS cycle validated `2026-07-09` to `2026-09-03`.
+- NOTAM + AIP SUP check added because Trigger NOTAMs may expire while SUP remains active.
+
+### [01_vfr_knowledge_core_av_cave_v0_6.md](cheatsheets/01_vfr_knowledge_core_av_cave_v0_6.md)
+
+##### Current-source notes — v0.6
+
+- Cycle status and product scope checked against NAV CANADA current pages on `2026-07-10`.
+- Stable legal minima remain mapped to live CARs; airport/airspace details must come from current CFS/chart/NOTAM.
+
+### [06_aviation_formulas_conversions_av_cave_v0_2.md](cheatsheets/06_aviation_formulas_conversions_av_cave_v0_2.md)
+
+##### Validated-source notes — v0.2
+
+- Holding timing: TC AIM `2026-1`, RAC 10.3/10.6.
+- General approach ban: CAR `602.129`, live consolidation checked `2026-07-10`.
+- C150M glide: provided `1977 Model 150M POH`, Figure 3-1.
+- Turn-radius and glide-ratio equations: derived unit-consistent formulas; POH/chart data wins.
+
+- Navigation: TC TP 975, Exercise 24 (September 2004 edition), checked 19 October 2026; FAA Instrument Flying Handbook Ch. 9 (2012). Intercept, lateral-distance and DME examples are derived geometry, not operational clearances.
+
+### [11_cap_plate_reading_qrc_av_cave_v0_2.md](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md)
+
+##### Current-source notes — v0.2
+
+- Current CAP/eCAPGEN cycle and product limitations checked `2026-07-10`.
+- Trigger NOTAM/AIP SUP workflow: AIC `009/2026`.
+- Future PFAF/lightning-bolt depiction: AIC `013/2026`, implementation begins `2026-10-29`.

@@ -97,7 +97,6 @@
 - docs-current | close plan | 1200/1400/7600/7700/7500 | A/B/C/D/E/F/G | CTRL 3-1-500 | unctl high 1/3+2000/500 | unctl low 2/3 COC | track≠hdg | hot-high-heavy bad | high→low/cold below | W×arm | T±V=M±D=C | 1:60 | lost C5 | aviate first.
 
 ***
-#### Current-source notes — v0.6
+#### Sources & review status
 
-- Cycle status and product scope checked against NAV CANADA current pages on `2026-07-10`.
-- Stable legal minima remain mapped to live CARs; airport/airspace details must come from current CFS/chart/NOTAM.
+See the [separate review record](../CONTENT_REVIEW.md#historical-source-review-notes) for source editions, check dates and earlier validation notes.

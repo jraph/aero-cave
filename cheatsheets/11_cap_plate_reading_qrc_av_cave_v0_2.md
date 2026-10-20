@@ -235,8 +235,6 @@
 - scan `TITLE-NAV-PLAN-PROFILE-MIN-MISSED-NOTES-RWY` | current CAP/NOTAM wins | category first | note block can kill approach | DA/MDA require visual refs | RASS add to altitudes / may force circling | cold temp protects obstacle clearance | brief missed before FAF | MAP timing uses GS | LPV≠ILS | LOC line≠ILS line | wrong CDI source kills | circling lost visual→missed | legal approach≠landing distance OK.
 
 ***
-#### Current-source notes — v0.2
+#### Sources & review status
 
-- Current CAP/eCAPGEN cycle and product limitations checked `2026-07-10`.
-- Trigger NOTAM/AIP SUP workflow: AIC `009/2026`.
-- Future PFAF/lightning-bolt depiction: AIC `013/2026`, implementation begins `2026-10-29`.
+See the [separate review record](../CONTENT_REVIEW.md#historical-source-review-notes) for source editions, check dates and earlier validation notes.

@@ -331,16 +331,6 @@
 - INRAT `50/3h/70` | TP guide≠law | IR G1/G2/G3/G4 | fuel prop alt: dest app+missed→alt land→45 | no alt: dest app+missed→45 | route `A-V-E-F` | alt highest `A-M-E` | descent latest `ETA/EAT/EFC` | RASS add to intermediate/final/missed | MDA no below; DA missed | missed after MAP no assured OC | alt mins `400-1 / 600-2 / 800-2` | BECMG improve=end/deteriorate=start | TEMPO ≥alt mins | PROB ≥landing mins | RVR/advisory/ground vis are different | GS not IAS for timing/gradient.
 
 ***
-#### Validated-source notes — v0.2
+#### Sources & review status
 
-- Takeoff visibility precedence: CAR `602.126`, live consolidation checked `2026-07-10`.
-- General non-Part VII approach ban: CAR `602.129`, live consolidation checked `2026-07-10`.
-- Holding timing: TC AIM `2026-1`, RAC 10.3/10.6.
-- VOR checks: TC AIM `2026-1`, COM 4.5.1–4.5.2.
-
-***
-#### Current-source notes — v0.3
-
-- Current publication cycle and 56/14-day update cadence validated against NAV CANADA.
-- Trigger NOTAM logic validated against AIC `009/2026`.
-- PFAF depiction timing validated against AIC `013/2026`.
+See the [separate review record](../CONTENT_REVIEW.md#historical-source-review-notes) for source editions, check dates and earlier validation notes.

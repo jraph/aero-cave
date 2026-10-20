@@ -39,3 +39,5 @@ Personal study aids. Use current official publications and the applicable aircra
 Edit the Markdown directly on GitHub. When a topic appears in an HTML reader or another card, update those copies in the same change. Markdown is the editorial source; HTML is the reading edition. No JSON, build step or script is required.
 
 Keep the compact layout, bilingual meaning, units and source dates. Original paths are retained so saved links continue to work. Earlier material is in [archive](archive/).
+
+Record future changes in descriptive commit messages. Keep historical review notes in [CONTENT_REVIEW.md](CONTENT_REVIEW.md), and keep study cards and readers focused on study content and source references.

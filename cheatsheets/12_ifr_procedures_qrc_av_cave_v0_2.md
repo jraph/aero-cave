@@ -271,7 +271,6 @@
 - preflight `legal-equipped-current-fuel-performance-options` | clearance `CRAFT+` | dep brief `RWY-PATH-ALT-FREQ-GRAD-THREATS-FAIL` | gate source/course/alt/freq/squawk | hold `F-D-C-L-A-E` | approach `PROC-NAV-ALT-MIN-MAP-MISSED-RWY-THREATS` | before FAF source-mode-alt-min-missed | stable guide `1000 IMC/500 VMC` | NPA CDFA but never below MDA | missed `POWER-ATT-CONFIG-TRACK-NAV-TALK` | lost comm `7600 + AVEF + highest AME` | partial panel reliable instruments + ATC help | icing exit now | unable early.
 
 ***
-#### Current-source notes — v0.2
+#### Sources & review status
 
-- Current CAP/CFS cycle validated `2026-07-09` to `2026-09-03`.
-- NOTAM + AIP SUP check added because Trigger NOTAMs may expire while SUP remains active.
+See the [separate review record](../CONTENT_REVIEW.md#historical-source-review-notes) for source editions, check dates and earlier validation notes.
