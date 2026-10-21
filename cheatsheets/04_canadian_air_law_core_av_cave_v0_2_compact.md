@@ -69,13 +69,18 @@
 | `R` AME | Aircraft Maintenance Engineer = licensed person; maintenance-release privileges depend on licence, rating, work and CAR 571 authority. [CAR 403](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-403.01.html) · [571.11](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-571.11.html) |
 | `R` AMO | Approved Maintenance Organization = TC-approved organization/scope; **not required for every private-ACFT inspection**. [CAR 573](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-573.02.html) |
 | `R` abnormal occurrence | Hard/overweight LDG, prop strike, excessive loads/turbulence, lightning, wind/jet blast suspected damage → applicable inspection per MFR + STD 625 App G **before return to service**; release by appropriately authorized person/org. [STD 625 App G](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-625-aircraft-equipment-maintenance-canadian-aviation-regulations-cars) |
+| `R` PRM | **Person Responsible for Maintenance** → AMO appoints; oversees QA/SMS corrective actions; accountable even when management functions assigned. [573.03](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-573.03.html) · [573.04](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-573.04.html) |
+| `R` PRM QUAL | MAINT performance/direct supervision **≥6 yr**, incl. **≥6 mo in preceding 2 yr**; CAR open-book **≥70%** (AME licence/legacy exemptions for test; limited AMO rating/risk-assessment exception for experience). [STD 573.04(1)](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-573-approved-maintenance-organizations-canadian-aviation-regulations-cars) · [573.03(4)–(5)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-573.03.html) |
+| `R` PRM ACK | Sign acceptance to TC **≤30 days** after appointment; delegation of specified functions in **MPM ≠ transfer of responsibility**. [573.04(1),(4)–(6)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-573.04.html) |
+| `R` PRMCS | **Person Responsible for Maintenance Control System** → AOC holder appoints employee; **≥70% open-book** unless AME licence or legacy exemption; ensures MAINT control / removes unsafe or non-compliant ACFT from operation. [706.03](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-706.03.html) |
+| `T` PRM/PRMCS | **AMO→PRM · Air operator→PRMCS**; if same holder holds **AOC + AMO**, **same person** fills both roles [706.03(7)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-706.03.html). PRM/PRMCS appointment **≠ AME MAINT-release privileges**. |
 | `R` MPM | Maintenance Policy Manual → AMO procedures. [573.10](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-573.10.html) |
 | `R` MCM | Maintenance Control Manual → applicable air-operator maintenance-control procedures. [706.08](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-706.08.html) |
 | `R` MSA | Maintenance Schedule Approval → where required, approved schedule/intervals; **not universal to every private ACFT**. [605.86](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.86.html) |
 | `R` DML | Deferred Maintenance List → defect tracking (where used); **DML ≠ MEL authority**. [605.09–.10](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.10.html) |
 | `T` | AME≠AMO · INSP requirement≠mandatory AMO · defect entry≠maintenance release. |
 
-`M:` **AME person | AMO org | MPM AMO | MCM operator | MSA intervals | DML defects | App G → applicable INSP**.
+`M:` **AME=licenced individual | AMO=approved org | AMO→PRM (6 yr/6 mo, test ≥70% unless exempt, TC ACK ≤30d) | AOC→PRMCS (test ≥70% unless exempt) | dual AOC+AMO→same person | MPM AMO | MCM operator | MSA intervals | DML defects | App G→INSP**.
 
 ***
 #### Aircraft operating limitations
@@ -415,7 +420,7 @@
 - docs `CoR + flight authority + current AFM + journey log if required`
 - ACFT REG `CoR cancelled on transfer; TC ≤7d; interim ≤3mo/NO second interim transfer; CoA separate` 
 - TECH `journey log + airframe + each ENG + variable-pitch PROP only; technical records follow title transfer`
-- MAINT `AME person / AMO organization / MPM AMO / MCM operator / MSA interval approval / DML defects`
+- MAINT `AME person / AMO org / PRM AMO: ≥6y incl ≥6mo recent; 70% or exempt; TC ACK ≤30d / PRMCS AOC: 70% or exempt; dual AOC+AMO same person / MPM AMO / MCM operator / MSA intervals / DML defects`
 - TSB `accidents all sizes; reportable incidents >2,250kg MCTOW OR Part VII AOC`
 - defects `required? serviceable? legal defer? safe?`
 - fuel VFR `30D/45N`; IFR prop `app+missed+alt+45`
