@@ -450,6 +450,7 @@
 - TECH `journey log + airframe + each ENG + variable-pitch PROP only; technical records follow title transfer`
 - AAIR `owner→TC ≤MAR30 after calendar yr (or pre-agreed date) | CAWIS/24-0059 | hours+INSP (except IV/VII)+DMG+ENG/PROP data any pitch | out-of-service exemption if reported; RTS notify TC | AAIR≠annual INSP`
 - MAINT `AME person / AMO org / PRM AMO: ≥6y incl ≥6mo recent; 70% or exempt; TC ACK ≤30d / PRMCS AOC: 70% or exempt; dual AOC+AMO same person / MPM AMO / MCM operator / MSA intervals / DML defects`
+- FDP 604/700 `604 base14/15 if ≤70h FDP/30d OR prior REST≥24h; split≥4h→+½break MAX4h +REST | 604 UOC after start +3h MAX +REST | 700 base table; split≥1h credit (break−45m)×night100%/day50%; UOC≤60m at FDP start: +1 single/+2 unaug/+3 aug1FLT/+2 aug2–3FLT +REST | FDP EXT≠FLT time`
 - TSB `accidents all sizes; reportable incidents >2,250kg MCTOW OR Part VII AOC`
 - defects `required? serviceable? legal defer? safe?`
 - NIGHT VFR `605.16 base | PAX→LDG light | VI-4/VII-2–5→AI+VSI+ASI anti-ice+OAT even no PAX | 703 night LDG light, icing→detect | 703 SE PAX IFR/night prohibited unless AOC AUTH + 723.22 turbine/STC+extra EQPT`
@@ -517,5 +518,26 @@ The shared flight/duty section below contains current limits and applicability.
 | Work / Travail 700.29 | 60 h/7 d or qualifying 70 h/7 d option; 192 h/28 d; 2200 h/365 d. Each option has its own time-off conditions. |
 | Rest / Repos 700.40 | Home: 12 h OR 11 h + travel to/from rest OR 10 h in operator-provided suitable accommodation. Away: 10 h in suitable accommodation. Special schedules may require more. |
 | Fatigue trap | Being under a numeric limit does not establish fitness. Acclimatization, reserve/standby, split duty, extensions and augmented crews require their specific rules. |
+
+***
+#### FDP extensions / split / unforeseen — CAR 604 vs 700 (Division III)
+
+| CAVE | 604 · Private operator | 700 · Commercial general fatigue regime |
+|---|---|---|
+| `R` Base FDP | **14 h/24 h**; **15 h/24 h** iff previous 30 d total FDP **≤70 h OR previous REST ≥24 h**. [604.99](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-604.99.html) | **700.28** A/B/C = **9–13 h** based on start-time reference + scheduled FLT count/average duration (table above). |
+| `R` Split | **604.100:** planned break **≥4 consecutive h** in suitable accommodation; prior notice before first FLT/standby. | **700.50:** break **≥60 consecutive min** in suitable accommodation; time windows at acclimatized location. |
+| `F` Split EXT | `MIN(break ÷ 2, 4 h)` → FDP MAX increases by credit. | Deduct **45 min** first; **00:00–05:59 → 100%** of remainder; **06:00–23:59 → 50%**; if replanned after FDP start due to unforeseen circumstances → **50%**. [700.50](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-700.50.html) |
+| `R` Split REST | **Next minimum REST += ≥actual FDP extension**. [604.100(c)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-604.100.html) | REST under **700.40**, plus other applicable provisions; **700.50 does not itself mandate REST += split credit**. |
+| `R` Split restrictions | No generic automatic extension without all 604.100 conditions. | Night-duty split maximum **3 consecutive nights**; reserve duty +2 h only under 700.50(5), with **≤2 FLTs after break**. |
+| `R` UOC timing | **604.102:** unforeseen operational circumstance **after FDP begins**; PIC consults other FLT crew; safe. | **700.63:** UOC **within 60 min of FDP beginning**; PIC consults **all crew** about fatigue; may reduce FDP, extend FDP, or extend REST. |
+| `R` UOC MAX | **+3 h** FDP. [604.102](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-604.102.html) | **+1 h** single-pilot · **+2 h** non-augmented · **+3 h** augmented +1 scheduled FLT · **+2 h** augmented +2–3 scheduled FLTs. [700.63](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-700.63.html) |
+| `R` UOC special | PIC informs private operator of UOC + EXT; operator retains notification **5 yr**. | Further UOC **after TKOF of final FLT already extended** → PIC may continue to DESTN/ALTN; PIC notifies operator **at FDP end**. [700.63(2),(4)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-700.63.html) |
+| `R` UOC REST | **Next minimum REST += ≥actual FDP extension**. | **REST after extended FDP += ≥actual extension**. [700.63(3)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-700.63.html) |
+| `R` UOC→split | `604.102` unexpected EXT ≠ `604.100` planned split. | **700.64:** post-start UOC may trigger split **only if PIC agrees before scheduled ground break**; after consulting crew, refuse if fatigue jeopardizes safety; waiting **before decision ≠ credited break**. [700.64](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-700.64.html) |
+| `T` | Extension changes **FDP MAX**, **not FLT time** limits under 604.98; split/UOC credits **not automatically stackable**. | Extension changes **FDP MAX**, **not FLT time** limits under 700.27; night split ≠ UOC night credit; no invented universal split cap. |
+
+- `M · L4` **604: 14h | 15h if 30d FDP≤70h OR prior REST≥24h | SPLIT≥4h→+MIN(½break,4h) + next REST≥EXT | UOC after start +3h MAX + next REST≥EXT, PIC→operator, 5yr record.**
+- `M · L4` **700 Div III: FDP 700.28 matrix | SPLIT≥60min→deduct45min, remaining ×100% (00–0559) / ×50% (06–2359 or UOC replan) | UOC ≤60min from FDP start→+1h single/+2h unaug/+3h aug1FLT/+2h aug2–3FLT + next REST≥EXT | 700.64 post-start split only before break + PIC consent.**
+
 
 Shared additions reviewed 19 October 2026: [source editions and scope](../CONTENT_REVIEW.md#operational-additions--19-october-2026).
