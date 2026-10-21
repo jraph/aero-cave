@@ -112,6 +112,8 @@
 | CAVE | Rule / trap |
 |---|---|
 | `R` CoR | Certificate of Registration; carry onboard; registered custody/control **≠ proof of title**. [202.26](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.26.html) |
+| `R` CoR fields | **REG marks · ACFT manufacturer/model/serial no. · registered owner name/address · purpose PVT/COM/State · issuing authority/date**; `purpose` = statistical designation **≠ operating AUTH or MAINT category**. [TC AC 202-002 §3, 7.2](https://tc.canada.ca/en/aviation/reference-centre/advisory-circulars/advisory-circular-ac-no-202-002) |
+| `T` CoR vs register | **MTOW stored in Canadian Civil Aircraft Register (CCAR), NOT displayed on CoR**; CCAR MTOW ≠ approved AFM/POH limit. [TC AC 202-002 §7.2(3)](https://tc.canada.ca/en/aviation/reference-centre/advisory-circulars/advisory-circular-ac-no-202-002) |
 | `R` transfer | Any transfer of legal custody/control → CoR cancelled; former registered owner informs TC **in writing ≤7 days**; Part 203 leasing provisions may apply. [202.35](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.35.html) |
 | `R` interim | First qualifying transfer to eligible new owner → deemed interim REG; **no second successive interim transfer**; ends at earliest trigger, including **3 mo**, new CoR or further transfer. [202.36](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.36.html) |
 | `R` temporary | TC-issued temporary CoR for registration processing; **≤3 mo** or earlier termination. [202.25](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.25.html) |
@@ -120,7 +122,7 @@
 | `R` special | Special CoA (e.g. amateur-built/restricted) ≠ flight permit (specific operation/ferry); conditions control. [507.02–.11](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-507.11.html) |
 | `T` | REG≠title≠airworthiness · CoA alone cannot replace REG · dual-state REG prohibited. |
 
-`M:` **CoR onboard | transfer→cancel + TC ≤7d | interim ≤3mo/2nd NO | TEMP ≤3mo | PROV route-specific | CoA independent**.
+`M:` **CoR: REG marks + manufacturer/model/serial + owner name/address + purpose PVT/COM/State + issue info | MTOW NOT printed | transfer→cancel + TC ≤7d | interim ≤3mo/2nd NO | TEMP ≤3mo | PROV route-specific | CoA independent**.
 
 ***
 #### Journey log / technical records — CAR 605.92–.97
@@ -418,7 +420,7 @@
 - PPL cost-share = owner/operator + non-commercial purpose + incidental pax + fuel/oil/fees only
 - CPL pilot privilege ≠ AOC
 - docs `CoR + flight authority + current AFM + journey log if required`
-- ACFT REG `CoR cancelled on transfer; TC ≤7d; interim ≤3mo/NO second interim transfer; CoA separate` 
+- ACFT REG `CoR: marks/MFR model/SN/owner name+address/purpose/issue | NO MTOW; purpose≠AUTH | transfer→cancel; TC ≤7d | interim ≤3mo/no second transfer | CoA separate`
 - TECH `journey log + airframe + each ENG + variable-pitch PROP only; technical records follow title transfer`
 - MAINT `AME person / AMO org / PRM AMO: ≥6y incl ≥6mo recent; 70% or exempt; TC ACK ≤30d / PRMCS AOC: 70% or exempt; dual AOC+AMO same person / MPM AMO / MCM operator / MSA intervals / DML defects`
 - TSB `accidents all sizes; reportable incidents >2,250kg MCTOW OR Part VII AOC`
