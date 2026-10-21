@@ -64,14 +64,19 @@
 ***
 #### Maintenance approvals / abnormal occurrences
 
-- `R:` **AME** = licensed individual with appropriate ratings/privileges who may sign a maintenance release within authority; **AMO** = TC-approved maintenance organization with approved scope/personnel; some work/operations **require AMO**, but private ACFT work does **not universally** require an AMO. [CAR 403](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-403.01.html) · [CAR 571](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-571.11.html) · [CAR 573](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-573.02.html).
-- `R:` **Abnormal occurrence** (e.g. hard/overweight LDG, prop strike, excessive turbulence/load, lightning, excessive wind/jet blast or other suspected overload/damage) → evaluate and carry out **applicable inspection/MAINT before return to service**, following manufacturer and **Standard 625 Appendix G**. **Not every such occurrence mandates an AMO specifically**; required signer/organization depends on work/operation. [STD 625 App G](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-625-aircraft-equipment-maintenance-canadian-aviation-regulations-cars).
-- `DML:` Deferred Maintenance List = tracking deferred defects (where used); **not automatically an MEL authorization**. [CAR 605.09–605.10](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.10.html).
-- `MPM:` Maintenance Policy Manual = **AMO** organization procedures / approved scope. [CAR 573.10](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-573.10.html).
-- `MCM:` Maintenance Control Manual = **air operator** maintenance control system. Applicability depends on Part VII subpart (e.g. 706.08). [CAR 706.08](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-706.08.html).
-- `MSA:` Maintenance Schedule Approval = approval of applicable maintenance schedule/intervals where required; schedules and deviations governed by 605.86/Standard 625. Not every private ACFT requires an individually approved MSA. [CAR 605.86](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.86.html).
-- `T:` AME≠AMO; defect list ≠ MEL; inspection required ≠ automatically AMO-required; record `MAINT release` separately from pilot defect entry.
-- `M · L4:` `AME=licensed person · AMO=approved org · App G abnormal occurrence→applicable INSP · DML=defects · MPM=AMO · MCM=operator · MSA=approved intervals`
+| CAVE | Recall / rule |
+|---|---|
+| `R` AME | Aircraft Maintenance Engineer = licensed person; maintenance-release privileges depend on licence, rating, work and CAR 571 authority. [CAR 403](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-403.01.html) · [571.11](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-571.11.html) |
+| `R` AMO | Approved Maintenance Organization = TC-approved organization/scope; **not required for every private-ACFT inspection**. [CAR 573](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-573.02.html) |
+| `R` abnormal occurrence | Hard/overweight LDG, prop strike, excessive loads/turbulence, lightning, wind/jet blast suspected damage → applicable inspection per MFR + STD 625 App G **before return to service**; release by appropriately authorized person/org. [STD 625 App G](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-625-aircraft-equipment-maintenance-canadian-aviation-regulations-cars) |
+| `R` MPM | Maintenance Policy Manual → AMO procedures. [573.10](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-573.10.html) |
+| `R` MCM | Maintenance Control Manual → applicable air-operator maintenance-control procedures. [706.08](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-706.08.html) |
+| `R` MSA | Maintenance Schedule Approval → where required, approved schedule/intervals; **not universal to every private ACFT**. [605.86](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.86.html) |
+| `R` DML | Deferred Maintenance List → defect tracking (where used); **DML ≠ MEL authority**. [605.09–.10](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.10.html) |
+| `T` | AME≠AMO · INSP requirement≠mandatory AMO · defect entry≠maintenance release. |
+
+`M:` **AME person | AMO org | MPM AMO | MCM operator | MSA intervals | DML defects | App G → applicable INSP**.
+
 ***
 #### Aircraft operating limitations
 
@@ -97,24 +102,35 @@
 - Journey-log exception: may remain behind when no landing and shutdown is planned anywhere other than departure, subject to exact CAR conditions.
 - `T:` proof of insurance is required by CAR 606.02, but “must be carried on board” is not stated as a universal CAR 202/605 document rule.
 ***
-#### ACFT registration / airworthiness — CoR · CoA
+#### ACFT REG / airworthiness — CoR · CoA
 
-- `R:` **CoR** (Certificate of Registration) = registration/custody-control document, **not proof of legal title**; carry aboard. [CAR 202.26](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.26.html).
-- `R:` Transfer of any part of legal custody/control → existing CoR **cancelled**; previous registered owner notifies TC **in writing ≤7 days**. Custody/control means complete responsibility for operation + MAINT. Subpart 203 leasing provisions may alter applicability. [CAR 202.35](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.35.html).
-- `R:` **Interim REG:** qualifying first transfer to eligible new owner → deemed interim registration; interim documents must meet carriage/operation rules. **No second successive interim transfer.** Expires at earliest applicable trigger under 202.36 (including 3 months, subsequent transfer or permanent CoR issuance). [CAR 202.36](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.36.html).
-- `R:` **Temporary REG:** issued when registration processing cannot be completed immediately; normally limited to ≤3 months or earlier termination. **Provisional REG** under 202.37 is for a specified movement/import purpose subject to named dates, route and conditions, **not a generic 3-month operating permission**. [CAR 202.25](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.25.html) · [202.37](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.37.html).
-- `R:` **CoA** = Certificate of Airworthiness / flight authority, distinct from CoR. CoA can remain effective after ownership transfer **if conditions continue to be met**; flight authority may be indefinite or have specified conditions/limits. Special CoA (e.g. amateur-built/restricted) and **flight permits** (e.g. specified ferry purposes) are distinct authorities. [CAR 507.02–507.11](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-507.11.html) · [605.03](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.03.html).
-- `T:` REG ≠ title ≠ airworthiness; valid CoA cannot substitute for missing/invalid REG; one ACFT cannot be simultaneously registered in two states.
-- `M · L4:` `CoR onboard · Transfer→CoR cancelled + TC ≤7d · Interim ≤3mo / 2nd transfer NO · TEMP ≤3mo · PROV specific movement · CoA survives transfer iff valid/airworthy`
+| CAVE | Rule / trap |
+|---|---|
+| `R` CoR | Certificate of Registration; carry onboard; registered custody/control **≠ proof of title**. [202.26](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.26.html) |
+| `R` transfer | Any transfer of legal custody/control → CoR cancelled; former registered owner informs TC **in writing ≤7 days**; Part 203 leasing provisions may apply. [202.35](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.35.html) |
+| `R` interim | First qualifying transfer to eligible new owner → deemed interim REG; **no second successive interim transfer**; ends at earliest trigger, including **3 mo**, new CoR or further transfer. [202.36](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.36.html) |
+| `R` temporary | TC-issued temporary CoR for registration processing; **≤3 mo** or earlier termination. [202.25](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.25.html) |
+| `R` provisional | Movement/import under **specific route/dates/conditions**, not general 3-mo authority. [202.37](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.37.html) |
+| `R` CoA | Certificate of Airworthiness = flight authority **≠ CoR**; transfer alone does not cancel CoA if validity/airworthiness conditions continue. [507.11](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-507.11.html) |
+| `R` special | Special CoA (e.g. amateur-built/restricted) ≠ flight permit (specific operation/ferry); conditions control. [507.02–.11](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-507.11.html) |
+| `T` | REG≠title≠airworthiness · CoA alone cannot replace REG · dual-state REG prohibited. |
+
+`M:` **CoR onboard | transfer→cancel + TC ≤7d | interim ≤3mo/2nd NO | TEMP ≤3mo | PROV route-specific | CoA independent**.
+
 ***
-#### Journey log / technical records — CAR 605.92–605.97
+#### Journey log / technical records — CAR 605.92–.97
 
-- `R:` Owner keeps journey log, separate airframe technical record, **each installed engine** technical record and **each variable-pitch propeller** technical record, plus applicable component records and empty-weight/CG report; subject to permitted record-combination cases. [CAR 605.92](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.92.html).
-- `T:` **Fixed-pitch PROP does NOT require its own separate propeller record**; still record applicable repairs/maintenance/installation in the appropriate technical record. Do not generalize `PROP` to all propellers.
-- `R:` Journey-log entries include flight air time, defects, incidents, maintenance and maintenance releases as prescribed, with responsibility/timing specified in Schedules I–II. PIC reviews status before flight. [CAR 605.94](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.94.html).
-- `R:` Journey log carried aboard except listed conditions (e.g. planned return to departure aerodrome with no landing and engine shutdown elsewhere); check exact exclusions. [CAR 605.95](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.95.html).
-- `R:` Record retained per applicable **Standard 625** period; no universal single retention period. On transfer of **title**, deliver **all applicable technical records at transfer**. [CAR 605.96–605.97](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.97.html).
-- `M · L4:` `Journey log + airframe + each ENG + variable-pitch PROP only + W&B; carry JL unless exception; transfer title→transfer tech records; MAINT release ≠ simple entry`
+| CAVE | Rule / trap |
+|---|---|
+| `R` records | Owner: journey log + airframe + **each ENG** + **each variable-pitch PROP** technical record + applicable components + empty W&B report; allowed combining cases apply. [605.92](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.92.html) |
+| `T` fixed PROP | **No separate fixed-pitch PROP technical record required**; applicable MAINT still recorded. |
+| `R` journey | Air time/defects/MAINT/releases entered per prescribed schedules/timing; PIC checks defects + MAINT status. [605.94](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.94.html) |
+| `R` carry | Journey log onboard **unless CAR 605.95 exception** (e.g. no planned LDG + engine shutdown outside DEP). [605.95](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.95.html) |
+| `R` retain | Technical-record retention varies by record/STD 625; **no universal period**. [605.96](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.96.html) |
+| `R` title transfer | Transfer **all related technical records with aeronautical product at transfer**. [605.97](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.97.html) |
+
+`M:` **JL + airframe + each ENG + variable-pitch PROP only + W&B | JL onboard unless exception | title→records | MAINT entry≠release**.
+
 ***
 #### Unserviceable equipment — no MEL
 
@@ -142,14 +158,19 @@
 - `[CAR 605.18]`
 - `T:` “IFR-certified GPS installed” ≠ aircraft/procedure/current-database/RAIM/approval requirements all met.
 ***
-#### ELT — CAR 605.38–605.40
+#### ELT — CAR 605.38–.40
 
-- `R:` Normally serviceable ELT(s) per 605.38, with **406 MHz distress + 121.5 MHz homing** for modern approved ELT; **ELT type/number depends on operation** (over land; over water requiring rafts; passenger large ME turbojet). Do not memorize a blanket 1-ELT rule. [CAR 605.38](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.38.html).
-- `R:` Exemptions include glider, balloon, airship, ultralight and gyroplane; FTU certificated flight training **≤25 NM departure aerodrome**; flight tests; specified new-ACFT manufacture/delivery operations; parachuting **≤25 NM**; qualifying foreign-registered 406-MHz beacon; or operation under the unserviceable-ELT allowance. Exemptions are conditional. [CAR 605.38(3)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.38.html).
-- `R:` Defective/missing ELT: comply with **CAR 605.39** conditions, placard/logbook/repair arrangements and applicable replacement-time limits; not a blanket 30-day permission for every operation. [CAR 605.39](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.39.html).
-- `G:` 121.5-MHz functional test (if permitted): first **5 min of UTC hour**, transmission **≤5 s**; **406-MHz ELT tests must follow manufacturer instructions** to avoid false SAR alerts. [TC AIM SAR 3.8–3.9](https://tc.canada.ca/en/aviation/publications/transport-canada-aeronautical-information-manual-tc-aim).
-- `T:` **FTU ≤25 NM exception does not automatically apply to a private owner's flight**; confirm ELT class, approvals, coding/registration and expiry.
-- `M · L4:` `ELT 406+121.5 · 605.38 exemptions: FTU training ≤25NM / glider-balloon-ultralight etc. · Water/large jet additional types · 121.5 test UTC first5min ≤5s · 406 test per MFR`
+| CAVE | Rule / trap |
+|---|---|
+| `R` general | Approved ELT(s) required subject to type/operation + exceptions; modern approved ELT **406 MHz distress + 121.5 MHz homing**. [605.38](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.38.html) |
+| `R` exceptions | Glider/balloon/airship/ultralight/gyroplane; **FTU flight training ≤25 NM DEP**; flight test; specified new-ACFT delivery/manufacture; parachuting **≤25 NM**; qualifying foreign-registered 406 beacon; or compliant unserviceable-ELT operation. [605.38(3)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.38.html) |
+| `R` over water | Where liferafts required, relevant **type S** ELT rules; passenger large ME turbojet additional ELT rules. See operation-specific table. [605.38](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.38.html) |
+| `R` UNSVCBL | Missing/defective ELT → only fly if **605.39 conditions** met; placard, records, rectification + applicable time limit. [605.39](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.39.html) |
+| `G` test | 121.5 functional test: first **5 min of UTC HR**, **≤5 sec TX**; 406 testing **MFR instructions only**. [AIM SAR 3.8](https://tc.canada.ca/en/aviation/publications/transport-canada-aeronautical-information-manual-tc-aim) |
+| `T` | FTU ≤25 NM ≠ general exemption for private flights; required ELT count/type varies. |
+
+`M:` **ELT 406+121.5 | FTU training ≤25NM exempt | other 605.38 exceptions | UNSVCBL→605.39 | test first5min UTC HR ≤5s; 406 MFR**.
+
 ***
 #### Over water · survival / Survol de l’eau · survie
 
@@ -330,39 +351,54 @@
 - `T:` clearance/TFC/flight following ≠ collision-avoidance transfer. Lookout + right-of-way remain.
 - Sources: [TC AIM 2026-2 RAC 2.8.1–2.8.7](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_rac_en.pdf) · [Standard 821.01 definitions](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/sor-96-433/standards/standard-821-canadian-domestic-air-traffic-control-separation-standards-canadian-aviation-regulations-cars)
 ***
-#### ATS surveillance / wake / RVSM — CPAER
+#### ATS surveillance / wake / RVSM
 
-- `G:` Baseline ATS surveillance separation often **5 NM**, reducible to **3 NM** in authorized terminal environments where conditions met; not universal for all aircraft/airspace. IFR vertical **1,000 ft below FL290**, and **RVSM 1,000 ft FL290–FL410 inclusive** between appropriately approved ACFT; outside applicable RVSM, usually **2,000 ft** at higher levels. [TC AIM RAC ATS separation/RVSM](https://tc.canada.ca/en/aviation/publications/transport-canada-aeronautical-information-manual-tc-aim).
-- `G:` Wake categories **S=A380 · H>136 t · M>7 t to <136 t · L≤7 t**; wake surveillance leader→follower **S→S/H/M/L 4/6/7/8 NM · H→H/M/L 4/5/6 NM · M→L 4 NM**. Other pairings still require ordinary ATS SEP. Apply only where the published wake rules specify.
-- `G:` Non-surveillance/departure **H→following 2 min** in specified same/close-parallel threshold cases; **3 min** for specified intersection/downstream departures; **M→L at same threshold = advisory**, **intersection = 3 min**. Confirm exact intersection, runway and cross-path scenarios before applying. 
-- `G:` Wake strongest **heavy/clean/slow**; vortices sink and drift downwind: remain above/upwind of preceding wake where practicable. Avoid below/downwind flight path. Jet blast/propwash is **separate** from wingtip-vortex wake.
-- `M · L4:` `ATS surveillance 5NM / 3NM authorized · IFR vertical 1,000ft; RVSM FL290–410 1,000ft · Wake S 4/6/7/8 H 4/5/6 M→L 4NM · H TKOF 2/3min scenarios`
+| CAVE | Rule / trap |
+|---|---|
+| `G` ATS SEP | Surveillance **5 NM standard / 3 NM authorized terminal**; other minima may apply. [AIM RAC](https://tc.canada.ca/en/aviation/publications/transport-canada-aeronautical-information-manual-tc-aim) |
+| `G` vertical | **1,000 ft below FL290**; RVSM **FL290–FL410 incl. 1,000 ft** for approved ACFT; higher non-RVSM generally **2,000 ft**. |
+| `G` WAKE CAT | **S=A380 · H>136t · M>7t to <136t · L≤7t**. |
+| `G` WAKE NM | Leader→follower: **S→S/H/M/L=4/6/7/8 · H→H/M/L=4/5/6 · M→L=4**; unspecified pairs still need normal ATS SEP. |
+| `G` TKOF MIN | Specified same/close-parallel THLD: **H→following 2 min**; specified INTXN/downstream: **3 min**; **M→L same THLD advisory, INTXN 3 min**. Check configuration. |
+| `G` WAKE AVOID | Strongest heavy+clean+slow; vortex ↓ and downwind drift; avoid behind/below/downwind · jet blast/propwash ≠ vortex WAKE. |
+
+`M:` **ATS 5/3NM | RVSM FL290–410 1,000ft | WAKE S 4/6/7/8 · H 4/5/6 · M→L 4NM | H TKOF 2/3min cases**.
+
 ***
-#### TWR light-gun signals — NORDO
+#### TWR light signals — NORDO
 
-| Signal | ACFT IN FLT | ACFT ON GND |
+| Signal | IN FLT | ON GND |
 |---|---|---|
-| Steady GN | Cleared LDG | Cleared TKOF |
-| Flash GN | Return for LDG (not yet clearance to land) | Cleared taxi |
-| Steady RED | Give way; continue circling | Stop |
-| Flash RED | A/D unsafe; do not land | Taxi clear of LDG area/RWY in use |
-| Flash WHITE | — | Return to starting point |
-| Alternating RED/GN | Exercise extreme caution | Exercise extreme caution |
+| Steady GN | LDG CLNC | TKOF CLNC |
+| Flash GN | Return for LDG (not CLNC) | Taxi CLNC |
+| Steady RED | Give way / circle | STOP |
+| Flash RED | A/D unsafe / NO LDG | Taxi clear LDG area / RWY |
+| Flash WHITE | — | Return starting point |
+| Alternating RED/GN | Extreme caution | Extreme caution |
 
-- `ACK:` In flight rock wings; night acknowledgement may use flashing LDG/NAV lights in accordance with published signal procedures. `T:` **Flashing green = return, not LDG clearance; steady green = LDG clearance.** [TC AIM RAC light signals](https://tc.canada.ca/en/aviation/publications/transport-canada-aeronautical-information-manual-tc-aim).
-- `M · L4:` `IN FLT steady GN=LDG; flash GN=return; steady RED=yield/circle; flash RED=unsafe · GND steady GN=TKOF; flash GN=taxi; steady RED=stop; flash RED=vacate; flash WHITE=return`
+- `P:` ACK IN FLT → rock wings; night → flashing lights as prescribed. [TC AIM RAC](https://tc.canada.ca/en/aviation/publications/transport-canada-aeronautical-information-manual-tc-aim).
+- `T:` Flash GN ≠ LDG CLNC; **steady GN** = LDG CLNC.
+- `M:` **IN FLT GN steady=LDG/flash=return · RED steady=circle/flash=unsafe | GND GN steady=TKOF/flash=taxi · RED steady=STOP/flash=clear · WHITE=return**.
+
 ***
 #### Night definition
 
 - `Night` = period from end of evening civil twilight to beginning of morning civil twilight. `[CAR 101.01]`
 - `T:` sunset is not the legal start of night; use official twilight data.
 ***
-#### TSB mandatory occurrence reporting — TC AIM GEN 3
+#### TSB occurrence reporting — AIM GEN 3.3–3.4
 
-- `R:` **Accident**: fatality/serious injury from ACFT operation; significant structural damage affecting strength/performance/flight characteristics (excluding specified limited damage); or ACFT missing/inaccessible. [TSB Regulations; TC AIM GEN 3.3](https://tc.canada.ca/en/aviation/publications/transport-canada-aeronautical-information-manual-tc-aim).
-- `R:` **Mandatory incident threshold**: ACFT **MCTOW >2,250 kg** **OR** operated under **Part VII AOC**. Examples: engine failure/shutdown, fire/smoke, inability to control, runway excursion/gear-up LDG, crew incapacitation, decompression/emergency descent, fuel shortage causing diversion/priority, wrong/contaminated fuel, collision/risk/SEP loss, emergency requiring priority, unintentional slung-load release, dangerous-goods release. **Not all ordinary private light-aircraft malfunctions are mandatory TSB incidents** absent an accident/other category.
-- `R:` Owner/operator/PIC/crew/ATS person with direct knowledge must report **as soon as possible by quickest means available**; remaining prescribed info **as available within 30 days**; preserve occurrence evidence, except necessary safety measures (document steps insofar practicable).
-- `M · L4:` `TSB accident: death/serious injury/major structural DMG/missing · Incident if >2,250kg MCTOW OR Part VII AOC · ASAP fastest means; balance ≤30d · Preserve evidence`
+| CAVE | Rule / trap |
+|---|---|
+| `R` accident | Fatal/serious injury from ACFT operation; significant structural DMG affecting strength/performance/flight characteristics (specified minor/engine-only exclusions); missing/inaccessible ACFT. [AIM GEN 3.3](https://tc.canada.ca/en/aviation/publications/transport-canada-aeronautical-information-manual-tc-aim) |
+| `R` incident scope | Mandatory listed incidents for **MCTOW >2,250 kg OR ACFT under Part VII AOC**; **not** every private light-ACFT malfunction. |
+| `R` examples | ENG failure/shutdown · fire/smoke · control difficulties · RWY excursion/gear-up · crew incapacitation · depressurization/emerg DESC · fuel divert/priority · wrong fuel · collision/SEP loss · emergency priority · dropped slung load · dangerous goods release. |
+| `R` who/when | Owner/operator/PIC/crew/ATS direct knowledge → TSB **ASAP by quickest means**; remaining info **as available ≤30d**. |
+| `R` evidence | Preserve; safety measures permitted, document/advise TSB as practicable. |
+| `T` | Accident duty ≠ incident threshold; **2,250 kg** applies listed incident class, not accidents. |
+
+`M:` **TSB accident: fatal/serious/structural DMG/missing | incident >2,250kg OR Part VII | ASAP fastest; balance ≤30d | preserve evidence**.
+
 ***
 #### High-yield traps
 
