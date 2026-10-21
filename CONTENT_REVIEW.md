@@ -12,6 +12,10 @@ Expanded the CFS servicing block with the separate `PF` public-facilities legend
 
 Added a Class A–G VFR entry and ATC-service matrix to card 04 and linked it from card 01. It distinguishes formal separation, traffic information and conflict resolution; covers the Class C/D-to-E change outside ATC operating hours; and separates runway separation from airborne VFR separation. Checked against TC AIM 2026-2 RAC 2.8.1–2.8.7 and Standard 821.01. The TC AIM 2026-2 explanation of changes lists no change to RAC 2.8 from 2026-1.
 
+## Air-law Cave audit / correction — 21 October 2026
+
+Corrected card 04 after reviewing repository `AGENTS.md`: replaced prose-heavy insertions with compact rule/trap tables and L4 memory lines. Coverage: CoR/CoA and transfer/interim/temporary/provisional registration; technical records (**variable-pitch PROP only**); ELT scope/exemptions/tests; AME/AMO and abnormal-occurrence inspections; DML/MPM/MCM/MSA; ATS/wake/RVSM; tower light signals; TSB reporting. Existing numbered-card `#### Pebble` retained and updated; no standalone air-law HTML reader exists. Regulatory source pointers embedded in card; review based on CAR/TC AIM references, not an operational dispatch authority. Original update commit: `9ed75e8`.
+
 ## Completed in this review
 
 - Added 22 bilingual navigation entries: RB/MH/BTS/BFS arithmetic and wraparound, ADF cards/RMI, needle movement, homing/tracking, VOR radials and flags, 30° inbound/outbound intercepts, wind assumptions, lateral displacement, VOR scale, DME slant range and closing time.
