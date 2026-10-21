@@ -28,6 +28,10 @@ Card 04: added AMO PRM and AOC maintenance-control PRMCS distinctions, PRM exper
 
 Card 04: added CoR document fields (REG marks; manufacturer, model and serial number; registered-owner name/address; purpose PVT/COM/State; issuer/issue details). Distinguished purpose classification from operational authorization and the CoR from CCAR-only MTOW (not printed on the certificate). Updated section L4 recall and numbered-card `#### Pebble`. Source: TC AC 202-002 §3, §7.2; verified 21 October 2026. No paired HTML air-law reader.
 
+## AAIR continuing airworthiness — 21 October 2026
+
+Card 04: added annual airworthiness information report (AAIR) CAR 501 / STD 501 in compact CAVE table and final `#### Pebble`: owner/report applicability, MAR 30 deadline for JAN–DEC (or prior agreed date), CAWIS/form 24-0059, data and Part IV/VII inspection-reporting distinctions, qualifying out-of-service exception and return-to-service notification. Clarified `PROP` in AAIR may cover fixed- or variable-pitch where applicable, whereas **separate technical record applies to variable-pitch PROP only** under CAR 605.92. Source links embedded in card; verified against CAR 501.01/501.03 and Standard 501.02, 21 October 2026. No paired HTML air-law reader.
+
 ## Completed in this review
 
 - Added 22 bilingual navigation entries: RB/MH/BTS/BFS arithmetic and wraparound, ADF cards/RMI, needle movement, homing/tracking, VOR radials and flags, 30° inbound/outbound intercepts, wind assumptions, lateral displacement, VOR scale, DME slant range and closing time.
