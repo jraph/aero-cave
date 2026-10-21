@@ -32,6 +32,10 @@ Card 04: added CoR document fields (REG marks; manufacturer, model and serial nu
 
 Card 04: added annual airworthiness information report (AAIR) CAR 501 / STD 501 in compact CAVE table and final `#### Pebble`: owner/report applicability, MAR 30 deadline for JAN–DEC (or prior agreed date), CAWIS/form 24-0059, data and Part IV/VII inspection-reporting distinctions, qualifying out-of-service exception and return-to-service notification. Clarified `PROP` in AAIR may cover fixed- or variable-pitch where applicable, whereas **separate technical record applies to variable-pitch PROP only** under CAR 605.92. Source links embedded in card; verified against CAR 501.01/501.03 and Standard 501.02, 21 October 2026. No paired HTML air-law reader.
 
+## Commercial night VFR with PAX — 21 October 2026
+
+Card 04: expanded night-VFR equipment into compact CAVE rows: baseline 605.16(1), conditional LDG light with PAX, 605.16(4) additional AI/VSI/ASI anti-ice/OAT for Subpart 604 and commercial 702–705 **irrespective of PAX**, 703 night-specific equipment, and CAR 703.22 / STD 723.22 AOC authority + turbine / approved STC + equipment for SE transport of PAX IFR/night VFR. Includes current 723.22 amendment effective 2026-09-01 and airborne WX radar amendment effective 2026-04-10; updated section memory and final Pebble. Sources checked: current CAR 605.16; CAR 703.22/703.64; TC Standard 723.22 (last amended 2026-09-10). No paired HTML reader for card 04.
+
 ## Completed in this review
 
 - Added 22 bilingual navigation entries: RB/MH/BTS/BFS arithmetic and wraparound, ADF cards/RMI, needle movement, homing/tracking, VOR radials and flags, 30° inbound/outbound intercepts, wind assumptions, lateral displacement, VOR scale, DME slant range and closing time.
