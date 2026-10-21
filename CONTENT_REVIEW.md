@@ -20,6 +20,10 @@ Corrected card 04 after reviewing repository `AGENTS.md`: replaced prose-heavy i
 
 Added `.agents/skills/write-l4-pebble/SKILL.md` and linked it from `AGENTS.md`. The skill specifies scan-first L4 memory lines, MANAB/CFS abbreviation verification, legally significant scope/exception preservation, a mandatory `#### Pebble` recap for numbered cards, paired reader synchronization, and a pre-commit accuracy checklist. Complements the existing `build-cave-study-readers` skill; no study-card content changes in this commit.
 
+## PRM / PRMCS addition — 21 October 2026
+
+Card 04: added AMO PRM and AOC maintenance-control PRMCS distinctions, PRM experience (STD 573.04: six years; six months within prior two years), regulatory knowledge test and exceptions, PRM acceptance within 30 days, non-delegable accountability, and combined AOC+AMO same-person requirement. Updated subsection L4 memory and final `#### Pebble`. Sources: current CAR 573.03–.04, 706.03 and TC Standard 573.04 (verified 21 October 2026). No air-law HTML reader paired with card 04.
+
 ## Completed in this review
 
 - Added 22 bilingual navigation entries: RB/MH/BTS/BFS arithmetic and wraparound, ADF cards/RMI, needle movement, homing/tracking, VOR radials and flags, 30° inbound/outbound intercepts, wind assumptions, lateral displacement, VOR scale, DME slant range and closing time.
