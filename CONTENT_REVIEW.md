@@ -36,6 +36,10 @@ Card 04: added annual airworthiness information report (AAIR) CAR 501 / STD 501 
 
 Card 04: expanded night-VFR equipment into compact CAVE rows: baseline 605.16(1), conditional LDG light with PAX, 605.16(4) additional AI/VSI/ASI anti-ice/OAT for Subpart 604 and commercial 702–705 **irrespective of PAX**, 703 night-specific equipment, and CAR 703.22 / STD 723.22 AOC authority + turbine / approved STC + equipment for SE transport of PAX IFR/night VFR. Includes current 723.22 amendment effective 2026-09-01 and airborne WX radar amendment effective 2026-04-10; updated section memory and final Pebble. Sources checked: current CAR 605.16; CAR 703.22/703.64; TC Standard 723.22 (last amended 2026-09-10). No paired HTML reader for card 04.
 
+## CAR 604 / 700 FDP, split duty and unforeseen extensions — 21 October 2026
+
+Added scan-first 604/700 comparison to card 04 with L4 Pebble; synchronized nine bilingual rows in the CPAER formulas Markdown and HTML reader. Covers: 604.99 base 14 h or 15 h if preceding 30 d FDP ≤70 h OR prior REST ≥24 h; 604.100 ≥4 h split credit half capped +4 h; 604.102 UOC after FDP start capped +3 h; 700.28 time-of-day/sector FDP table; 700.50 ≥60 min split less 45 min and 100% night/50% day credit; 700.63 early UOC PIC/crew conditions and crew-dependent +1/+2/+3 h; 700.64 unforeseen split replanning; subsequent REST increases where explicitly required. Distinguishes FDP extension from unchanged FLT time limits, and Part 700 Division III from Division IV MEDEVAC. Checked Canadian Aviation Regulations online 21 Oct 2026 (sections 604.98–.102, 700.27–.28, .40, .50, .63–.64). HTML content structure manually checked; browser behavior not exercised.
+
 ## Completed in this review
 
 - Added 22 bilingual navigation entries: RB/MH/BTS/BFS arithmetic and wraparound, ADF cards/RMI, needle movement, homing/tracking, VOR radials and flags, 30° inbound/outbound intercepts, wind assumptions, lateral displacement, VOR scale, DME slant range and closing time.
