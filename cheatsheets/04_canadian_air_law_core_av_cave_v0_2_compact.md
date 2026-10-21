@@ -125,6 +125,21 @@
 `M:` **CoR: REG marks + manufacturer/model/serial + owner name/address + purpose PVT/COM/State + issue info | MTOW NOT printed | transfer→cancel + TC ≤7d | interim ≤3mo/2nd NO | TEMP ≤3mo | PROV route-specific | CoA independent**.
 
 ***
+#### AAIR — Annual Airworthiness Information Report · CAR 501
+
+| CAVE | Rule / trap |
+|---|---|
+| `R` WHO | Canadian ACFT owner → AAIR to TC; exemptions: ultra-light; RPAS without issued/applied design approval document; reported out-of-service ACFT for ≥1 reporting period, with **TC notified forthwith on return to service**. [CAR 501.01](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-501.01.html) |
+| `R` WHEN | **JAN 1–DEC 31** reporting period → submit **≤MAR 30 following year**, or **different date agreed beforehand with TC**. [CAR 501.03](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-501.03.html) |
+| `R` HOW | Individual via **CAWIS** or **Form 24-0059** (mail/fax); approved consolidated fleet report permitted. [STD 501.01](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-501-annual-airworthiness-information-report-canadian-aviation-regulations-cars) |
+| `R` DATA | REG marks · total/annual **air time** · aircraft make/model/serial · base/region · REG & flight-authority type · type certificate · empty W&B/MCTOW/config · **ENG + PROP make/model/serial if applicable** · skis/floats if applicable · significant DMG/repair certification · owner signature/CAWIS authentication. [STD 501.02](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-501-annual-airworthiness-information-report-canadian-aviation-regulations-cars) |
+| `R` INSP | **Except Part IV/VII ACFT**: last annual/equivalent INSP date + certifying AME licence no. or AMO approval no.; owner-maintenance/amateur-built special CoA → inspector name. [STD 501.02(1)(c)](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-501-annual-airworthiness-information-report-canadian-aviation-regulations-cars) |
+| `T` PROP | **AAIR: all applicable PROP** (fixed or variable pitch) · **separate PROP tech record: variable-pitch only** [CAR 605.92](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.92.html). |
+| `T` | **AAIR ≠ annual INSP**; AAIR notice not received ≠ exemption; out-of-service declaration requires qualified reporting + return notification. |
+
+`M:` **AAIR: owner→TC ≤MAR30 after JAN–DEC (or pre-agreed date) | CAWIS/24-0059 | air time+INSP/AME/AMO exceptions+DMG+ACFT/ENG/PROP data | O/S reported→no AAIR until RTS notice | AAIR PROP any type ≠ tech-record variable-pitch PROP only**.
+
+***
 #### Journey log / technical records — CAR 605.92–.97
 
 | CAVE | Rule / trap |
@@ -422,6 +437,7 @@
 - docs `CoR + flight authority + current AFM + journey log if required`
 - ACFT REG `CoR: marks/MFR model/SN/owner name+address/purpose/issue | NO MTOW; purpose≠AUTH | transfer→cancel; TC ≤7d | interim ≤3mo/no second transfer | CoA separate`
 - TECH `journey log + airframe + each ENG + variable-pitch PROP only; technical records follow title transfer`
+- AAIR `owner→TC ≤MAR30 after calendar yr (or pre-agreed date) | CAWIS/24-0059 | hours+INSP (except IV/VII)+DMG+ENG/PROP data any pitch | out-of-service exemption if reported; RTS notify TC | AAIR≠annual INSP`
 - MAINT `AME person / AMO org / PRM AMO: ≥6y incl ≥6mo recent; 70% or exempt; TC ACK ≤30d / PRMCS AOC: 70% or exempt; dual AOC+AMO same person / MPM AMO / MCM operator / MSA intervals / DML defects`
 - TSB `accidents all sizes; reportable incidents >2,250kg MCTOW OR Part VII AOC`
 - defects `required? serviceable? legal defer? safe?`
