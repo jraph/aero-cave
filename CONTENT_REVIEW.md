@@ -16,6 +16,10 @@ Added a Class A–G VFR entry and ATC-service matrix to card 04 and linked it fr
 
 Corrected card 04 after reviewing repository `AGENTS.md`: replaced prose-heavy insertions with compact rule/trap tables and L4 memory lines. Coverage: CoR/CoA and transfer/interim/temporary/provisional registration; technical records (**variable-pitch PROP only**); ELT scope/exemptions/tests; AME/AMO and abnormal-occurrence inspections; DML/MPM/MCM/MSA; ATS/wake/RVSM; tower light signals; TSB reporting. Existing numbered-card `#### Pebble` retained and updated; no standalone air-law HTML reader exists. Regulatory source pointers embedded in card; review based on CAR/TC AIM references, not an operational dispatch authority. Original update commit: `9ed75e8`.
 
+## L4 Pebble authoring skill — 21 October 2026
+
+Added `.agents/skills/write-l4-pebble/SKILL.md` and linked it from `AGENTS.md`. The skill specifies scan-first L4 memory lines, MANAB/CFS abbreviation verification, legally significant scope/exception preservation, a mandatory `#### Pebble` recap for numbered cards, paired reader synchronization, and a pre-commit accuracy checklist. Complements the existing `build-cave-study-readers` skill; no study-card content changes in this commit.
+
 ## Completed in this review
 
 - Added 22 bilingual navigation entries: RB/MH/BTS/BFS arithmetic and wraparound, ADF cards/RMI, needle movement, homing/tracking, VOR radials and flags, 30° inbound/outbound intercepts, wind assumptions, lateral displacement, VOR scale, DME slant range and closing time.
