@@ -450,6 +450,7 @@
 - TECH `journey log + airframe + each ENG + variable-pitch PROP only; technical records follow title transfer`
 - AAIR `owner→TC ≤MAR30 after calendar yr (or pre-agreed date) | CAWIS/24-0059 | hours+INSP (except IV/VII)+DMG+ENG/PROP data any pitch | out-of-service exemption if reported; RTS notify TC | AAIR≠annual INSP`
 - MAINT `AME person / AMO org / PRM AMO: ≥6y incl ≥6mo recent; 70% or exempt; TC ACK ≤30d / PRMCS AOC: 70% or exempt; dual AOC+AMO same person / MPM AMO / MCM operator / MSA intervals / DML defects`
+- TYPE `HP single-pilot VNE≥250 OR VSO≥80 KIAS (or amateur-built wing loading)→individual TYPE: ≥200h + qualified FLT ≤12mo; 2-crew TYPE: ≥250h OR integrated ATP(A), IATRA≥70% ≤24mo OR SAMRA+SARON/ATPL route, PPC/LOE/PCC ≤12mo; 704 new 24mo PPC ends 01 NOV 2026→12mo; TYPE≠PPC/operational currency`
 - FDP 604/700 `604 base14/15 if ≤70h FDP/30d OR prior REST≥24h; split≥4h→+½break MAX4h +REST | 604 UOC after start +3h MAX +REST | 700 base table; split≥1h credit (break−45m)×night100%/day50%; UOC≤60m at FDP start: +1 single/+2 unaug/+3 aug1FLT/+2 aug2–3FLT +REST | FDP EXT≠FLT time`
 - TSB `accidents all sizes; reportable incidents >2,250kg MCTOW OR Part VII AOC`
 - defects `required? serviceable? legal defer? safe?`
@@ -493,6 +494,22 @@ The shared flight/duty section below contains current limits and applicability.
 | Segment 12–16 | 12–16 certificated passenger seats: summer M/X 227, F 190 lb; winter M/X 233, F 196 lb. |
 | Segment 17–25 | 17–25 certificated passenger seats: summer M/X 223, F 187 lb; winter M/X 229, F 193 lb. |
 | Actual wins / Réel | If a group is heavier than the assumed average, account for actual weights. Never hide infant, baggage or unusual load in a blanket average. |
+***
+#### ACFT type ratings · HP / two-crew / IATRA / PPC — Oct 2026
+
+| CAVE | Rule / trap |
+|---|---|
+| `R` Blanket | Single-pilot **non-high-performance** aeroplanes → blanket rating with applicable class; otherwise individual type rating where required. |
+| `R` HP test | **Single-pilot** aeroplane per minimum-crew document AND **VNE ≥250 KIAS OR VSO ≥80 KIAS**; **OR** amateur-built aeroplane wing loading above AWM 549.103 threshold. [CAR 400.01](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-400.01.html) |
+| `T` Complex ≠ HP | Complex = flaps + constant-speed PROP + retractable gear (except seaplane); complex, turbine-powered or pressurized ≠ automatically HP. |
+| `R` HP individual TYPE | **STD 421.40(3)(c):** type ground training + type FLT training + **≥200 h aeroplane pilot FLT time** + **qualifying FLT in 12 mo BEFORE rating application** supervised by TC Inspector or qualified person under 425.21(7)(a); **IATRA/PPC not stated as initial HP requirement**. |
+| `R` Two-crew individual TYPE | **Minimum crew ≥2 pilots** per type approval → type ground+FLT training + **≥250 h aeroplane pilot FLT time**, **OR** approved integrated ATP(A) course alternative (STD 421.40, effective 17 DEC 2025). |
+| `R` Two-crew knowledge | First PPL(A)/CPL(A) two-crew endorsement: **IATRA ≥70% within 24 mo** before application **OR SAMRA+SARON ≥70% each within 24 mo**; ATPL(A) holder meets knowledge; approved integrated ATP(A): ATP exams within **5 years** before application. |
+| `R` Two-crew skill | Type-specific **PPC within 12 mo before application** (Part VII / Minister-accepted); **approved AQP LOE** accepted; CAR 604 certificate holder: approved training/proficiency programme + **PPC or PCC under 604.143 within 12 mo**. [STD 421.40](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-421-flight-crew-permits-licences-ratings-canadian-aviation-regulations-cars) |
+| `T` Three clocks | **IATRA 24 mo** = exam-to-first-rating application; **qualifying FLT/PPC 12 mo** = test-to-type-rating application; **operational PPC currency** = independent recurrent check, **not TYPE rating expiration**. |
+| `R` CAR 704 PPC transition | **Until 01 NOV 2026:** qualifying new PPC may use **24-mo exemption**; **on/after 01 NOV 2026:** no new 24-mo PPC; **standard 12 mo**. Existing PPC issued under 24-mo exemption keeps original validity per TC Bulletin 01/26. [TC ACP/AQPE Bulletin 01/26](https://tc.canada.ca/en/aviation/commercial-air-services/approved-check-pilot-acp-advanced-qualification-program-aqp/acp-aqpe-bulletins/approved-check-pilot-acp-advanced-qualification-program-aqp-evaluator-bulletin-no-01-26) |
+| `T` Operations | TYPE endorsement ≠ operator authorization, PPC, IR, recurrent training or flight crew recency. ATR/other two-crew turboprop uses two-crew path, not HP-speed shortcut. |
+
 ***
 #### Flight time · FDT · FDP / Temps de vol · service
 
