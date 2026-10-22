@@ -32,7 +32,7 @@
 ***
 #### Files revised
 
-- `vfr_knowledge_core_av_cave_v0_6.md`
+- `flight_theory_vfr_knowledge_av_cave_v0_6.md`
 - `ifr_knowledge_core_av_cave_v0_2.md`
 - `cap_plate_reading_qrc_av_cave_v0_2.md`
 - `ifr_procedures_qrc_av_cave_v0_2.md`
