@@ -36,6 +36,12 @@ Card 04: added annual airworthiness information report (AAIR) CAR 501 / STD 501 
 
 Card 04: expanded night-VFR equipment into compact CAVE rows: baseline 605.16(1), conditional LDG light with PAX, 605.16(4) additional AI/VSI/ASI anti-ice/OAT for Subpart 604 and commercial 702–705 **irrespective of PAX**, 703 night-specific equipment, and CAR 703.22 / STD 723.22 AOC authority + turbine / approved STC + equipment for SE transport of PAX IFR/night VFR. Includes current 723.22 amendment effective 2026-09-01 and airborne WX radar amendment effective 2026-04-10; updated section memory and final Pebble. Sources checked: current CAR 605.16; CAR 703.22/703.64; TC Standard 723.22 (last amended 2026-09-10). No paired HTML reader for card 04.
 
+## Aviation abbreviations · MANAB / CFS / TC examinations — 22 October 2026
+
+Renamed canonical bilingual glossary and HTML reader to `cheatsheets/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.md` and `readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html`. Retained 369 MANAB/CFS entries and added 79 TC flight-crew examination entries in a separate searchable bilingual topic. Shared symbols remain source-qualified (`AD` directive vs aerodrome, `MP` manifold pressure vs `MAP` missed approach point, `FD` upper winds vs flight director, `CARs/CARS`, `FPD/FDP`, turbine N conventions). English expansions are study mappings based on TC examination abbreviation list; French additions are study translations, not claimed official TC terminology. Previous filenames now redirect/link to canonical renamed editions. Updated README, home page, manifest shortcut, precache path/version, offline test fixture and repository authoring skill path. No separate source-code generator introduced. Reader markup and category/search wiring verified structurally, not in a real mobile browser.
+
+Primary source: https://tc.canada.ca/en/aviation/licensing-pilots-personnel/flight-crew-licences-permits-ratings/flight-crew-examinations/abbreviations-acronyms-flight-crew-examinations
+
 ## Turbine engine architecture / PROP governor / feather L4 — 22 October 2026
 
 Card 08: ultra-dense Powerplant/PROP CAVE table + local L4 + final Pebble; core turbine cycle, turbojet/turbofan/turboprop/turboshaft, BPR vs AFR, axial/centrifugal compressor, stage vs spool/free turbine, fine/coarse/feather/reverse/beta and constant-speed governors. Card 13: short ME governor/feather cross-reference + final Pebble. Qualified opposing oil-pressure directions as **typical piston non-feather SE** versus **typical piston full-feather ME**, not universal: POH/AFM/SOP authority remains controlling. Sources reviewed 22 Oct 2026: FAA PHAK (FAA-H-8083-25C), FAA Airplane Flying Handbook transition-to-ME chapter, FAA AMT Powerplant Chapter 7. Both numbered cards Markdown-only; no matching HTML reader.
@@ -68,7 +74,7 @@ Added scan-first 604/700 comparison to card 04 with L4 Pebble; synchronized nine
 |---|---|---|
 | Bilingual formulas, quick recall, navigation, ETE | CPAER_Formulas_Recall_EN_FR.md | CPAER_Formulas_Recall_EN_FR.md + HTML; navigation/ETE also present in 06 |
 | Additional calculations and IFR reminders in 06 | 06 MD | 06 MD |
-| MANAB terminology | MANAB_CFS_Essential_EN_FR.md and existing reader | Still a manually maintained pair |
+| MANAB terminology | Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.md and matching reader | Still a manually maintained pair |
 | Subject-specific cards 01–16 | Their existing Markdown files | Subject-specific review sheets |
 | Older formulas | archive/CPAER_CAVE_Formulas.md | Historical only |
 
