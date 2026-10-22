@@ -1,5 +1,9 @@
 # Content review
 
+## Cards 01–03 scope, aerodynamics and filenames — 22 October 2026
+
+Renamed cards and canonical filenames: **01 Flight Theory & VFR Knowledge**, **02 Flight Training and Procedures**, **03 Licensing, Performance & Operations**. Card 01 gained essential lift, CP/CG/AC, pitching moments, induced and parasite/form drag, equilibrium, and bank/load-factor relations, including final Pebble. Cards 02–03 had display titles updated; content otherwise unchanged. README, review links and archived source-index pointers migrated to new filenames.
+
 ## Weather fronts consolidation — 22 October 2026
 
 Card 16 remains the canonical weather theory source, including cold/warm frontal passage tables, hazards and memory traps. Removed duplicate bilingual `cheatsheets/Weather_Fronts_EN_FR.md` and `readers/Weather_Fronts_EN_FR.html`; cleaned README, app index, PWA manifest, service-worker precache and offline test references. Existing historical review entries retained; bilingual reader functionality discontinued rather than duplicating card content.
@@ -167,7 +171,7 @@ Moved from the study cards on 19 October 2026. These are historical review recor
 - Current CAP/CFS cycle validated `2026-07-09` to `2026-09-03`.
 - NOTAM + AIP SUP check added because Trigger NOTAMs may expire while SUP remains active.
 
-### [01_vfr_knowledge_core_av_cave_v0_6.md](cheatsheets/01_vfr_knowledge_core_av_cave_v0_6.md)
+### [01_flight_theory_vfr_knowledge_av_cave_v0_6.md](cheatsheets/01_flight_theory_vfr_knowledge_av_cave_v0_6.md)
 
 ##### Current-source notes — v0.6
 
