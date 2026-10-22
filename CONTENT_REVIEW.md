@@ -1,5 +1,9 @@
 # Content review — 19 October 2026
 
+## Cabin pressurization / outflow valve · L4 CAVE — 22 October 2026
+
+Added seven concise rows to card 08 and final Pebble: cabin altitude versus aircraft altitude; outflow valve control of cabin pressure by modulating discharged air; close/open effects; differential pressure ΔP = cabin − ambient; positive/negative relief; loss of pressurization with O₂/emergency descent per AFM. Cross-referenced oxygen requirements already present in card 04 CAR 605.31–32 without repeating thresholds. Source pointers: FAA PHAK pressurization systems and CAR 605.31–32. Card 08 has no paired HTML reader; AFM/checklists prevail.
+
 ## Aviation fuels / FSII · L4 CAVE — 22 October 2026
 
 Added 8 compressed fuel-grade/FSII rows to card 08 and its final Pebble: octane = detonation resistance, dual 80/87 and 100/130 lean/rich ratings, 100LL low-lead (not unleaded), AVGAS grade colours, Jet A and A-1 maximum freezing points (−40°C and −47°C), Jet B wide-cut volatility, FSII water-ice inhibition (not fuel freezing point or airframe anti-icing), and approved-fuel/misfuelling warning. Aircraft-specific AFM/POH approval prevails; legacy grades are study recognition, not universal current availability or compatibility. FAA fuel guidance, FAA FSII guidance, and Canadian turbine-fuel specifications linked within card. No paired HTML reader for card 08.
