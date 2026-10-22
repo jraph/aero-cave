@@ -199,7 +199,7 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 
 - `VS` = generic stall speed in stated config; `VS1` = stall speed in specified config (**often clean**); `VS0` = stall speed in landing config. `VS` and `VS1` may denote the **same clean-config value** in context; do not substitute `VS0`.
 - `F theoretical:` positive stall/limit-load intersection `VA_est ≈ VS(clean) × √n_limit`, using matching config/weight/speed basis; **not guaranteed published VA**.
-- `M legacy normal:` `n_limit=+3.8` ⇒ `VA_est≈1.95×VS1` (rough `1.9–2.0×VS1`); e.g. `VS1=50 KIAS ⇒ ≈97.5 KIAS`.
+- `M legacy normal:` `n_limit=+3.8` ⇒ `VA_est≈1.95×VS1` (mental shortcut `≈2×VS1`, **not a VA range**); e.g. `VS1=50 KIAS ⇒ ≈97.5 KIAS`.
 - `F weight:` approximate `VA2≈VA1×√(W2/W1)` if same config/load-factor basis; lighter ⇒ lower speed.
 - `T:` approved POH/AFM `VA` and weight schedule win; `VA` does **not** guarantee protection against multiple/abrupt control inputs or all turbulence.
 
