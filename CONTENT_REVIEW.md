@@ -1,5 +1,9 @@
 # Content review
 
+## Airfoil / washout / aspect ratio — 22 October 2026
+
+Card 01: added five compact L4 rows on airfoil geometry (chord, camber, thickness, critical AOA), geometric washout versus dihedral (generally root-first stall, not guaranteed), aspect ratio `b²/S` and rectangular `b/c`, induced-drag relation `CDi=CL²/(πeAR)` with equal-CL/span-efficiency scope, and airfoil/stall traps. Updated the final Pebble. FAA PHAK aerodynamics source pointer retained; no paired HTML reader.
+
 ## Cards 01–03 scope, aerodynamics and filenames — 22 October 2026
 
 Renamed cards and canonical filenames: **01 Flight Theory & VFR Knowledge**, **02 Flight Training and Procedures**, **03 Licensing, Performance & Operations**. Card 01 gained essential lift, CP/CG/AC, pitching moments, induced and parasite/form drag, equilibrium, and bank/load-factor relations, including final Pebble. Cards 02–03 had display titles updated; content otherwise unchanged. README, review links and archived source-index pointers migrated to new filenames.
