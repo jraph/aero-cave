@@ -1,50 +1,5 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aero CAVE</title><style>html{color-scheme:dark light}body{font:16px/1.5 system-ui;max-width:52rem;margin:3rem auto;padding:0 1rem}a{color:#569dec}li{margin:.7rem 0}</style><link rel="manifest" href="./manifest.json"><link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Aero CAVE"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#f4f7f8" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#111c24" media="(prefers-color-scheme: dark)"></head><body><h1>Aero CAVE</h1><div class="offline-tools"><output id="offline-status" role="status" aria-live="polite">Saving offline… / Enregistrement hors ligne…</output> <button id="offline-save" type="button">Save offline / Enregistrer</button></div><p>Canadian aviation study readers · Révisions aéronautiques canadiennes</p><ul><li><a href="readers/CPAER_Formulas_Recall_EN_FR.html">CPAER · Formulas & quick recall / Formules et rappels</a></li><li><a href="readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html">Aviation abbreviations · MANAB / CFS / TC · EN / FR</a></li></ul><p>Study aids only. Use current official publications and the aircraft flight manual for operations.</p><p><a href="https://github.com/jraph/aero-cave">Repository, Markdown cards and sources</a></p><p>iPad / iPhone: Safari → Share / Partager → Add to Home Screen / Sur l’écran d’accueil. Open once online; wait for “Offline ready”. / Ouvrir une fois en ligne; attendre « Prêt hors ligne ».</p><script id="pwa-registration">
-(() => {
-  'use strict';
-  const status = document.getElementById('offline-status');
-  const button = document.getElementById('offline-save');
-  const base = new URL('./', location.href);
-  let registration;
-  const show = text => { status.textContent = text; };
-  function check(worker, repair = false) {
-    if (!worker) return;
-    const channel = new MessageChannel();
-    const timer = setTimeout(() => { channel.port1.close(); show('Offline check failed / Vérification impossible'); }, 8000);
-    channel.port1.onmessage = ({data}) => {
-      clearTimeout(timer); channel.port1.close();
-      show(data.ready ? 'Offline ready · ' + data.version + ' / Prêt hors ligne' : 'Offline download incomplete / Téléchargement incomplet');
-    };
-    worker.postMessage({type:repair ? 'CACHE_OFFLINE' : 'OFFLINE_STATUS'}, [channel.port2]);
-  }
-  function watch(worker) {
-    if (!worker) return;
-    worker.addEventListener('statechange', () => {
-      if (worker.state === 'activated') check(worker);
-      if (worker.state === 'redundant') show('Offline update failed; retry online / Échec de mise à jour; réessayer en ligne');
-    });
-  }
-  async function register() {
-    try {
-      registration = await navigator.serviceWorker.register(new URL('service-worker.js', base), {scope:base.pathname, updateViaCache:'none'});
-      if (registration.active) check(registration.active);
-      watch(registration.installing);
-      registration.addEventListener('updatefound', () => watch(registration.installing));
-    } catch (_) { show('Offline save failed; retry online / Échec; réessayer en ligne'); }
-  }
-  if (!('serviceWorker' in navigator) || !['https:', 'http:'].includes(location.protocol)) {
-    show('Offline app requires HTTPS / Application hors ligne : HTTPS requis'); button.hidden = true; return;
-  }
-  navigator.serviceWorker.addEventListener('controllerchange', () => check(navigator.serviceWorker.controller));
-  button.addEventListener('click', async () => {
-    button.disabled = true;
-    try {
-      if (navigator.storage?.persist) await navigator.storage.persist().catch(() => false);
-      if (!registration) await register();
-      else if (navigator.onLine) await registration.update();
-      if (registration?.active) check(registration.active, navigator.onLine);
-    } catch (_) { show('Offline update failed; retry online / Échec; réessayer en ligne'); }
-    finally { button.disabled = false; }
-  });
-  register();
-})();
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aero CAVE</title><style>html{color-scheme:dark light}body{font:16px/1.5 system-ui;max-width:52rem;margin:3rem auto;padding:0 1rem}a{color:#569dec}li{margin:.7rem 0}</style><link rel="manifest" href="./manifest.json"><link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Aero CAVE"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#f4f7f8" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#111c24" media="(prefers-color-scheme: dark)"></head><body><h1>Aero CAVE</h1><p>Canadian aviation study readers · Révisions aéronautiques canadiennes</p><ul><li><a href="readers/CPAER_Formulas_Recall_EN_FR.html">CPAER · Formulas & quick recall / Formules et rappels</a></li><li><a href="readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html">Aviation abbreviations · MANAB / CFS / TC · EN / FR</a></li></ul><p>Study aids only. Use current official publications and the aircraft flight manual for operations.</p><p><a href="https://github.com/jraph/aero-cave">Repository, Markdown cards and sources</a></p><p>iPad / iPhone: Safari → Share / Partager → Add to Home Screen / Sur l’écran d’accueil.</p><script id="pwa-registration">
+if ('serviceWorker' in navigator && location.protocol === 'https:') {
+  navigator.serviceWorker.register('./service-worker.js', {updateViaCache:'none'}).catch(() => {});
+}
 </script></body></html>
