@@ -75,3 +75,12 @@ For each TP 12881 item, record:
 Do not call a topic Covered from a heading alone. Verify actual content against the **August 2026** syllabus and authoritative sources.
 
 **Current state:** inventory registered; **no study content has been moved, deleted or replaced**.
+
+***
+#### Phase 2 — first content audit (22 October 2026)
+
+[Open the content coverage matrix](CPAER_COVERAGE_MATRIX.md): syllabus topic-group screening across all eight subject/subsubject areas; individual checks for all **52 Flight Instruments** and **40 Human Factors** numbered items. Evidence links point to inspected content at the recorded baseline. Covered / Partial / Missing / Conflicting / Needs verification are distinguished; content presence is not regulatory validation.
+
+Findings: HF physiology and instrument principles are thin despite useful failure/procedure reminders; electric propulsion, detailed EFB hazards, medevac fatigue and weather-chart interpretation need attention. Internal publication-currency and TEMPO wording conflicts, plus an ambiguous unusual-attitude instruction, are recorded for comparison before correction.
+
+**Gate 1 remains open:** Air Law regulation-by-regulation and the remaining subject numbered-item expansion are outstanding. No overall coverage percentage, target folder approval, deduplication or study-content migration is claimed. Existing cards/readers/PWA remain unchanged.
