@@ -2,7 +2,7 @@
 
 ## Cloud-base and freezing-level calculation clarification — 22 October 2026
 
-Corrected bilingual `CPAER_Formulas_Recall_EN_FR.md` and matching HTML reader (weather rows 10→13; overall entries 245→248). Separated classroom convective-base shortcut `1000(T−Td)/3` (assumes parcel Td constant), parcel LCL `1000(T−Td)/2.5=400(T−Td)` (parcel dew point falls ≈0.5°C/1000 ft), classroom parcel 0°C height `CB+1000 Td_surface/1.5`, and fuller parcel calculation using estimated temperature at cloud base. All are simplified parcel estimates, **not** an observed/forecast environmental freezing level; GFA/vertical temperature profile governs. Synchronized weather card 16 and its Pebble; updated PWA cache version. Bilingual rows/HTML refetched, not tested on a mobile browser.
+Corrected bilingual `CPAER_Formulas_Recall_EN_FR.md` and matching HTML reader (weather rows 10→13; overall entries 245→248). Separated classroom convective-base shortcut `1000(T−Td)/3` (assumes parcel Td constant), parcel LCL `1000(T−Td)/(3−0.5)` (parcel dew point falls ≈0.5°C/1000 ft; temperature–dew-point spread closes ≈2.5°C/1000 ft), classroom parcel 0°C height `CB+1000 Td_surface/1.5`, and fuller parcel calculation using estimated temperature at cloud base. All are simplified parcel estimates, **not** an observed/forecast environmental freezing level; GFA/vertical temperature profile governs. Synchronized weather card 16 and its Pebble; updated PWA cache version. Bilingual rows/HTML refetched, not tested on a mobile browser.
 
 ## Canadian flight authorities — 22 October 2026
 
