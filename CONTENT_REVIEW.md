@@ -1,5 +1,9 @@
 # Content review — 19 October 2026
 
+## Turboprop ALPHA / BETA / ground fine / reverse — 22 October 2026
+
+Card 08: replaced the short BETA mention with concise separate ALPHA normal governed-flight range, BETA ground power-lever blade-angle control, ground-fine low forward thrust, reverse negative blade angle subset of BETA on equipped ACFT, and FLT-idle/AFM limitations. Updated local L4 and final Pebble; retained distinction from feathering. Reviewed FAA Airplane Flying Handbook turboprop operations; limitations are aircraft-specific. Card 08 has no paired HTML reader.
+
 ## Cabin pressurization / outflow valve · L4 CAVE — 22 October 2026
 
 Added seven concise rows to card 08 and final Pebble: cabin altitude versus aircraft altitude; outflow valve control of cabin pressure by modulating discharged air; close/open effects; differential pressure ΔP = cabin − ambient; positive/negative relief; loss of pressurization with O₂/emergency descent per AFM. Cross-referenced oxygen requirements already present in card 04 CAR 605.31–32 without repeating thresholds. Source pointers: FAA PHAK pressurization systems and CAR 605.31–32. Card 08 has no paired HTML reader; AFM/checklists prevail.
