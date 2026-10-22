@@ -104,6 +104,20 @@
 - `T:` balanced field/V1 thinking from transport category does not automatically apply to light twins.
 - `P pre-TKOF brief:` below reject speed/runway remaining → stop; after liftoff/gear up/no runway → control, clean, climb if able, land ahead/nearby if not.
 ***
+#### TKOF speeds · transport-category distinctions — L4
+
+| Key | Recall |
+|---|---|
+| `V1` | Reject/continue boundary; first reject action **by V1** to satisfy applicable accelerate-stop limits. |
+| `VR` | Rotation speed → initiate nose-up rotation. |
+| `V2` | TKOF safety speed → **OEI = One Engine Inoperative** climb/control margins; **≠ braking speed**. |
+| `Vtire` | Maximum certificated **tire groundspeed** during TKOF roll; may limit max TKOF GW. |
+| `T` | V1 depends on GW/ENG accel, RWY, wind, conditions/config; transport-category V1/V2 concepts **not automatically applicable to light twins**; AFM/POH wins. |
+
+- `SRC:` [FAA AFH Ch 16 · takeoff speeds/accelerate-stop](https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf).
+- `M · L4` **V1=reject/continue (accelerate-stop) | VR=rotate | V2=OEI safety/climb | Vtire=max tire GS | GW/RWY/conditions affect V1 | light twin ≠ automatic transport-category V-speeds | AFM wins.**
+
+***
 #### Takeoff briefing — ME
 
 - `P:` runway/length/wind/DA/perf → rotate speed → `Vmc/Vyse/Vsse` → reject criteria → EF before liftoff → EF after liftoff with runway → EF airborne no runway → emergency return/straight-ahead plan.
@@ -210,5 +224,6 @@
 ***
 #### Pebble
 
+- TKOF `V1=reject/continue; accelerate-stop | VR=rotate | V2=OEI (One Engine Inoperative) safety/climb | Vtire=max tire GS | GW/RWY/conditions affect V1 | light twins≠automatic transport-category V-speeds | AFM wins`
 - PROP `typical piston SE oil→coarse/RPM↓ vs ME oil→fine/RPM↑; ME oil loss→feather | fine RPM tendency↑, coarse RPM tendency↓ | windmill drag↑; feather drag↓ | verify before feather; POH wins`
 - ME rating = skill flight test | ME≠Group1 IFR | Vmc control not climb | Vsse = Vmc+10 if POH none | Vyse blue line | critical engine worst handling/perf | Vmc worst: max pwr/light/aft/gear up/takeoff flap/windmilling | below Vmc: reduce live power + lower nose | zero sideslip = bank good engine | dead foot dead engine | identify-verify-feather | clean-feather-blue | OEI climb maybe negative | accelerate-stop/go prebrief | OEI go-around may not climb | POH speeds/procedures win.
