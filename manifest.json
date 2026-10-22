@@ -15,7 +15,7 @@
   ],
   "shortcuts": [
     {"name":"CPAER · Formulas / Formules","short_name":"CPAER","url":"./readers/CPAER_Formulas_Recall_EN_FR.html"},
-    {"name":"MANAB / CFS · EN / FR","short_name":"MANAB / CFS","url":"./readers/MANAB_CFS_EN_FR_Reader.html"},
+    {"name":"Aviation abbreviations · EN / FR","short_name":"Aviation codes","url":"./readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html"},
     {"name":"Fronts · CF / WF","short_name":"Fronts","url":"./readers/Weather_Fronts_EN_FR.html"}
   ]
 }
