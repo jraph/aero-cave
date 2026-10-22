@@ -119,10 +119,28 @@
 | `R` temporary | TC-issued temporary CoR for registration processing; **≤3 mo** or earlier termination. [202.25](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.25.html) |
 | `R` provisional | Movement/import under **specific route/dates/conditions**, not general 3-mo authority. [202.37](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-202.37.html) |
 | `R` CoA | Certificate of Airworthiness = flight authority **≠ CoR**; transfer alone does not cancel CoA if validity/airworthiness conditions continue. [507.11](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-507.11.html) |
-| `R` special | Special CoA (e.g. amateur-built/restricted) ≠ flight permit (specific operation/ferry); conditions control. [507.02–.11](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-507.11.html) |
+| `R` special | Special CoA ≠ Flight Permit; see FLT-authority classification table below; conditions control. [CAR 507.03–.04](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/FullText.html) |
 | `T` | REG≠title≠airworthiness · CoA alone cannot replace REG · dual-state REG prohibited. |
 
 `M:` **CoR: REG marks + manufacturer/model/serial + owner name/address + purpose PVT/COM/State + issue info | MTOW NOT printed | transfer→cancel + TC ≤7d | interim ≤3mo/2nd NO | TEMP ≤3mo | PROV route-specific | CoA independent**.
+
+***
+#### Flight authorities — CAR 507
+
+| Flight authority | Classification / meaning |
+|---|---|
+| `C of A` (standard) | Aircraft conforms to approved, non-restricted type design and is safe for FLT. |
+| `Special C of A — Provisional` | Provisional type certificate. |
+| `Special C of A — Restricted` | Restricted-category type certificate or approved modified/special-purpose ACFT. |
+| `Special C of A — Amateur-built` | Built to amateur-built airworthiness requirements (AWM 549). |
+| `Special C of A — Limited` | Eligible aircraft accepted under Limited classification (e.g. certain historic/ex-military ACFT). |
+| `Special C of A — Owner-maintenance` | Eligible ACFT with owner-maintenance privileges; recreational purposes only. |
+| `Flight Permit — Experimental` | Aeronautical R&D or demonstration of compliance with airworthiness standards; not the Canadian amateur-built classification. |
+| `Flight Permit — Specific Purpose` | Defined flight of nonconforming but safe-to-fly ACFT when no CoA/Special CoA is in effect (e.g. ferry). |
+
+- `T:` Amateur-built ≠ Experimental in Canada; Normal/Utility/Aerobatic/Commuter/Transport = **type-certification categories**, not FLT-authority classifications.
+- `T PAX:` Classification alone ≠ passenger authorization; check FLT-authority conditions, operating limits, pilot privileges and applicable CARs.
+- `SRC:` [CAR 507.02–.04, .09–.11](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/FullText.html) · [AWM Standard 507.02–.04](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-507-flight-authority-certificate-noise-compliance-canadian-aviation-regulations-cars).
 
 ***
 #### AAIR — Annual Airworthiness Information Report · CAR 501
@@ -447,6 +465,7 @@
 - CPL pilot privilege ≠ AOC
 - docs `CoR + flight authority + current AFM + journey log if required`
 - ACFT REG `CoR: marks/MFR model/SN/owner name+address/purpose/issue | NO MTOW; purpose≠AUTH | transfer→cancel; TC ≤7d | interim ≤3mo/no second transfer | CoA separate`
+- FLT AUTH `CoA=standard | Special CoA=provisional/restricted/amateur-built/limited/owner-maintenance | Flight Permit=experimental/specific purpose | type-cert category≠flight authority | PAX depends on conditions+limits+pilot privileges`
 - TECH `journey log + airframe + each ENG + variable-pitch PROP only; technical records follow title transfer`
 - AAIR `owner→TC ≤MAR30 after calendar yr (or pre-agreed date) | CAWIS/24-0059 | hours+INSP (except IV/VII)+DMG+ENG/PROP data any pitch | out-of-service exemption if reported; RTS notify TC | AAIR≠annual INSP`
 - MAINT `AME person / AMO org / PRM AMO: ≥6y incl ≥6mo recent; 70% or exempt; TC ACK ≤30d / PRMCS AOC: 70% or exempt; dual AOC+AMO same person / MPM AMO / MCM operator / MSA intervals / DML defects`
