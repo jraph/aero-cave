@@ -7,7 +7,7 @@ Compact study notes for Canadian **CPAER · INRAT · flight training**, in Engli
 | Collection | Read on GitHub | CAVE reader |
 |---|---|---|
 | **CPAER — formulas & quick recall** | [Open study notes](cheatsheets/CPAER_Formulas_Recall_EN_FR.md) | [Open HTML reader](https://jraph.github.io/aero-cave/readers/CPAER_Formulas_Recall_EN_FR.html) |
-| **MANAB / CFS — terms & abbreviations** | [Open study notes](cheatsheets/MANAB_CFS_Essential_EN_FR.md) | [Open HTML reader](https://jraph.github.io/aero-cave/readers/MANAB_CFS_EN_FR_Reader.html) |
+| **Aviation abbreviations — MANAB / CFS / TC exams** | [Open study notes](cheatsheets/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.md) | [Open HTML reader](https://jraph.github.io/aero-cave/readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html) |
 | **Weather — CF / WF passage** | [Open study notes](cheatsheets/Weather_Fronts_EN_FR.md) | [Open HTML reader](https://jraph.github.io/aero-cave/readers/Weather_Fronts_EN_FR.html) |
 
 HTML readers offer search, topic filters, dark/light themes, adjustable text and printing. Download an HTML file to read offline. Markdown opens directly on GitHub.
