@@ -1,0 +1,21 @@
+{
+  "id": "./",
+  "name": "Aero CAVE",
+  "short_name": "Aero CAVE",
+  "description": "Canadian aviation study readers · Révisions aéronautiques canadiennes",
+  "lang": "en-CA",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#111c24",
+  "theme_color": "#111c24",
+  "icons": [
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ],
+  "shortcuts": [
+    {"name":"CPAER · Formulas / Formules","short_name":"CPAER","url":"./readers/CPAER_Formulas_Recall_EN_FR.html"},
+    {"name":"MANAB / CFS · EN / FR","short_name":"MANAB / CFS","url":"./readers/MANAB_CFS_EN_FR_Reader.html"},
+    {"name":"Fronts · CF / WF","short_name":"Fronts","url":"./readers/Weather_Fronts_EN_FR.html"}
+  ]
+}

@@ -42,3 +42,16 @@ Edit the Markdown directly on GitHub. When a topic appears in an HTML reader or 
 Keep the compact layout, bilingual meaning, units and source dates. Original paths are retained so saved links continue to work. Earlier material is in [archive](archive/).
 
 Record future changes in descriptive commit messages. Keep historical review notes in [CONTENT_REVIEW.md](CONTENT_REVIEW.md), and keep study cards and readers focused on study content and source references.
+
+
+## Offline app & language
+
+Open [Aero CAVE](https://jraph.github.io/aero-cave/) online and wait for **Offline ready**. All three HTML readers, their embedded styles/scripts, the landing page, manifest and icons are cached together. On iPad/iPhone, use Safari → Share → Add to Home Screen; open the installed app online once and check readiness there. Manifest shortcuts appear where supported.
+
+**EN / FR / BOTH** in each reader switches definitions and memory reminders immediately; BOTH is the default. The shared choice is saved when local storage is available. Search follows the selected language; labels remain bilingual. Printing includes all rows in the selected language and restores search/topic filters afterward. Downloaded standalone HTML files retain the toggle and embedded layout without a build step.
+
+**Save offline** requests persistent storage where supported, checks for updates and verifies the cached bundle. Open online to obtain updates, then check readiness and test in airplane mode before relying on the saved readers. Browsers/OS can evict website data; clearing storage removes the download. External source publications and GitHub Markdown links require a connection. Offline does not establish source currency.
+
+Maintenance: update `service-worker.js` VERSION whenever any precached file changes; add new readers to FILES and the manifest shortcuts/index. A failed download does not replace the installed version. Cache cleanup is restricted to this app’s scope.
+
+Run the dependency-free cache regression checks with `node --test tests/offline.test.cjs`. Real iOS Home Screen installation and layout need device verification.
