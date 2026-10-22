@@ -45,12 +45,12 @@ Record future changes in descriptive commit messages. Keep historical review not
 
 ## Offline app & language
 
-Open [Aero CAVE](https://jraph.github.io/aero-cave/) online and wait for **Offline ready**. All three HTML readers, their embedded styles/scripts, the landing page, manifest and icons are cached together. On iPad/iPhone, use Safari → Share → Add to Home Screen; open the installed app online once and check readiness there. Manifest shortcuts appear where supported.
+[Aero CAVE](https://jraph.github.io/aero-cave/) uses the cross-platform **Progressive Web App (PWA)** approach: a Web App Manifest specifies installation/standalone presentation, while a service worker caches the homepage, two HTML readers and required app assets for offline access. Installation, when supported, is offered through the browser's native menu or controls; no device-specific install button or `beforeinstallprompt` dependency is required.
 
 **EN / FR / BOTH** in each reader switches definitions and memory reminders immediately; BOTH is the default. The shared choice is saved when local storage is available. Search follows the selected language; labels remain bilingual. Printing includes all rows in the selected language and restores search/topic filters afterward. Downloaded standalone HTML files retain the toggle and embedded layout without a build step.
 
-**Save offline** requests persistent storage where supported, checks for updates and verifies the cached bundle. Open online to obtain updates, then check readiness and test in airplane mode before relying on the saved readers. Browsers/OS can evict website data; clearing storage removes the download. External source publications and GitHub Markdown links require a connection. Offline does not establish source currency.
+Open the app online once to allow its assets to cache, and **verify access offline before relying on it**. Browsers/operating systems may evict site data; clearing browser storage removes cached assets. External source publications and GitHub Markdown links require a connection. Offline access does not establish source currency.
 
-Maintenance: update `service-worker.js` VERSION whenever any precached file changes; add new readers to FILES and the manifest shortcuts/index. A failed download does not replace the installed version. Cache cleanup is restricted to this app’s scope.
+Maintenance: update `service-worker.js` VERSION whenever a precached file changes; add new readers to FILES and manifest shortcuts/index. A failed download does not replace the installed version. Cache cleanup is restricted to this app's scope.
 
-Run the dependency-free cache regression checks with `node --test tests/offline.test.cjs`. Real iOS Home Screen installation and layout need device verification.
+Run the dependency-free cache regression checks with `node --test tests/offline.test.cjs`. Actual installation and offline behaviour still require testing on supported browsers/devices.
