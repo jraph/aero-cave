@@ -1,5 +1,9 @@
 # Content review
 
+## Canadian flight authorities — 22 October 2026
+
+Card 04: added a two-column CAR 507 flight-authority classification/meaning table (C of A; Special C of A provisional, restricted, amateur-built, limited, owner-maintenance; Flight Permit experimental/specific purpose), distinguished type-certification categories and passenger privileges, and updated the final Pebble. No categorical PAX permission column; actual authorization depends on flight-authority conditions, operating limitations, pilot privileges and CARs.
+
 ## Airfoil / washout / aspect ratio — 22 October 2026
 
 Card 01: added five compact L4 rows on airfoil geometry (chord, camber, thickness, critical AOA), geometric washout versus dihedral (generally root-first stall, not guaranteed), aspect ratio `b²/S` and rectangular `b/c`, induced-drag relation `CDi=CL²/(πeAR)` with equal-CL/span-efficiency scope, and airfoil/stall traps. Updated the final Pebble. FAA PHAK aerodynamics source pointer retained; no paired HTML reader.
