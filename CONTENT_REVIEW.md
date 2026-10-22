@@ -1,4 +1,4 @@
-# Content review — 19 October 2026
+# Content review
 
 ## TKOF speeds / OEI / tire speed · L4 CAVE — 22 October 2026
 
