@@ -15,8 +15,8 @@ HTML readers offer search, topic filters, dark/light themes, adjustable text and
 
 | Subject | Study cards |
 |---|---|
-| VFR & flight training | [01 · VFR knowledge](cheatsheets/01_vfr_knowledge_core_av_cave_v0_6.md) · [02 · Flight procedures](cheatsheets/02_vfr_ftm_proc_av_cave_v0_2.md) |
-| CPL & air law | [03 · CPL knowledge](cheatsheets/03_cpl_knowledge_core_av_cave_v0_2.md) · [04 · Canadian air law](cheatsheets/04_canadian_air_law_core_av_cave_v0_2_compact.md) |
+| Flight theory & training | [01 · Flight Theory & VFR Knowledge](cheatsheets/01_flight_theory_vfr_knowledge_av_cave_v0_6.md) · [02 · Flight Training and Procedures](cheatsheets/02_flight_training_procedures_av_cave_v0_2.md) |
+| Licensing & operations | [03 · Licensing, Performance & Operations](cheatsheets/03_licensing_performance_operations_av_cave_v0_2.md) · [04 · Canadian air law](cheatsheets/04_canadian_air_law_core_av_cave_v0_2_compact.md) |
 | Weather | [05 · Decoding & decisions](cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md) · [16 · Weather knowledge](cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md) |
 | Calculations | [06 · Formulas & conversions](cheatsheets/06_aviation_formulas_conversions_av_cave_v0_2.md) |
 | Aircraft | [07 · C150M POH](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md) · [08 · Systems & failures](cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md) · [13 · Multi-engine](cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md) |
