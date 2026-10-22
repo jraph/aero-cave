@@ -129,6 +129,14 @@
 - `P:` confirm need → stabilize → identify/verify affected engine → reduce power → feather/secure per checklist → monitor live engine → divert/land.
 - `T:` not every roughness = immediate shutdown; not every problem can wait. Decide by fire/mechanical damage/controllability.
 ***
+#### PROP governor / feather — L4 cross-ref
+
+- `M` Typical **piston SE CS non-feather**: governor oil P↑→COARSE/pitch↑→RPM↓ | **piston ME CS full-feather**: oil P↑→FINE/pitch↓→RPM↑; oil P↓→counterweights/springs→FEATHER; **architecture varies**.
+- `T` FINE low blade angle ≠ low RPM: low angle→RPM tendency↑ | COARSE high angle→RPM tendency↓ | FEATHER near airflow→drag↓; REVERSE negative thrust (ground only if approved).
+- `!` OEI: windmilling low-pitch PROP→drag↑/climb↓ | **IDENTIFY→VERIFY→FEATHER** per POH; feather locks, unfeather pumps, accumulators ACFT-specific.
+- `SRC:` [FAA AFH · ME propeller](https://www.faasafety.gov/files/events/SO/SO15/2022/SO15118118/TransitionToMultiengineAirplanes.pdf) | [08 Aircraft Systems · Powerplant / PROP](08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md).
+
+***
 #### Restart / unfeather
 
 - `P:` assess altitude/time/fire/damage/prop status/fuel/electrical. If feasible: restart checklist; if not: leave secured and land.
@@ -202,4 +210,5 @@
 ***
 #### Pebble
 
+- PROP `typical piston SE oil→coarse/RPM↓ vs ME oil→fine/RPM↑; ME oil loss→feather | fine RPM tendency↑, coarse RPM tendency↓ | windmill drag↑; feather drag↓ | verify before feather; POH wins`
 - ME rating = skill flight test | ME≠Group1 IFR | Vmc control not climb | Vsse = Vmc+10 if POH none | Vyse blue line | critical engine worst handling/perf | Vmc worst: max pwr/light/aft/gear up/takeoff flap/windmilling | below Vmc: reduce live power + lower nose | zero sideslip = bank good engine | dead foot dead engine | identify-verify-feather | clean-feather-blue | OEI climb maybe negative | accelerate-stop/go prebrief | OEI go-around may not climb | POH speeds/procedures win.
