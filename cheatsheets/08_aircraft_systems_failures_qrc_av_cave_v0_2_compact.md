@@ -99,13 +99,28 @@
 | `R` N1/N2 | Typical two-spool turbofan: **N1 LP/fan**, **N2 HP/core** speeds; exact indications/configuration ACFT-specific. Free power turbine mechanically independent of gas-generator compressor spool. |
 | `R` Pitch | Blade angle ↑ → **COARSE/HIGH** → PROP load ↑, RPM tendency ↓; angle ↓ → **FINE/LOW** → load ↓, RPM tendency ↑ (**given comparable power/airspeed**). Pitch≠blade AOA. |
 | `R` Types | Fixed: no FLT pitch control; ground-adjustable: ground only; pilot variable: selectable angle; **constant-speed governor varies pitch to hold selected RPM** within stops; full-feathering or reversible only if installed. |
-| `P` CS PROP | Typical piston: throttle→power/MAP; PROP lever→governed RPM; lever FWD→high RPM/fine, AFT→lower RPM/coarse; pitch stops may prevent RPM hold. |
+| `P` CS PROP | Typical piston: throttle→power/MP; PROP lever→governed RPM; lever FWD→high RPM/fine, AFT→lower RPM/coarse; pitch stops may prevent RPM hold. |
 | `R` Feather | Near edge-on to airflow→**windmilling drag ↓** after ENG failure; **reverse** = negative blade angle/ground braking; **beta** = blade angle control outside normal governing range on equipped turbines. |
 | `T` SE vs ME | **Typical piston** SE non-feathering: governor oil P↑→pitch↑/RPM↓; **typical piston** ME full-feathering: oil P↑→pitch↓/RPM↑; oil P loss→counterweights/springs drive feather. **Not universal**; POH/AFM wins. |
 | `!` OEI | Windmilling unfeathered failed PROP→large drag / climb loss; **control→identify→verify→feather→secure per POH**, never feather unverified ENG; feather locks/accumulator/prop architecture vary. |
 
 - `SRC:` [FAA PHAK · engines/PROP](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/faa-h-8083-25c.pdf) · [FAA AFH · ME governor/feather](https://www.faasafety.gov/files/events/SO/SO15/2022/SO15118118/TransitionToMultiengineAirplanes.pdf) · [FAA AMT Powerplant · PROP](https://www.faa.gov/sites/faa.gov/files/09_amtp_ch7.pdf); aircraft POH/AFM controls.
 - `M · L4` **JET=exhaust | FAN=bypass+core | T-PROP=gearbox+PROP | T-SHAFT=shaft | BPR=bypass/core ≠ AFR=air/fuel | STAGE≠SPOOL | FINE=angle↓/RPM↑; COARSE=angle↑/RPM↓ | FEATHER drag↓ ≠ REVERSE thrust | SE oil→coarse vs ME oil→fine (typical piston only) | verify ENG before feather.**
+
+***
+#### Manifold pressure · MP — L4
+
+| Key | Recall |
+|---|---|
+| `R` MP | **Absolute** intake-manifold P, **inHg**; **MP ≠ MAP** (missed approach point). |
+| `M` OFF→IDLE | ENG OFF: **MP≈ambient P** (29.92 inHg at standard SL) → IDLE: throttle nearly closed + intake pumping → **MP↓↓** (typically ~10–15 inHg; ACFT-specific). |
+| `R` POWER | Throttle↑→MP↑; constant-speed PROP lever→selected RPM; power depends on **MP+RPM+mixture/conditions**. |
+| `R` ALT / TURBO | Naturally aspirated ALT↑→max MP↓; turbocharged ENG may maintain commanded MP up to critical ALT, within limits. |
+| `S` ICE | Carb ice: fixed-pitch **RPM↓**; constant-speed **MP↓**, RPM initially governed. |
+| `T` LIMIT | **Over-square ≠ overboost**; overboost = MP above approved limit; MP/RPM settings + sequencing per **POH/AFM**. |
+
+- `SRC:` [FAA PHAK · manifold pressure / constant-speed PROP](https://www.faa.gov/sites/faa.gov/files/pilot_handbook_1.pdf) · POH/AFM governs.
+- `M · L4` **MP absolute inHg | OFF≈ambient→IDLE↓↓ | throttle↑ MP↑ | NA ALT↑ MPmax↓ | CS PROP→RPM | carb ice: CS MP↓ / fixed RPM↓ | over-square≠overboost | POH wins.**
 
 ***
 #### Propeller / governor — constant-speed
@@ -290,5 +305,6 @@
 ***
 #### Pebble
 
+- MP `absolute intake P inHg | OFF≈ambient→IDLE↓↓ | throttle↑ MP↑ | NA ALT↑ MPmax↓; turbo may hold MP to critical ALT | CS throttle→MP/PROP→RPM | carb ice CS MP↓ vs fixed RPM↓ | over-square≠overboost; POH wins`
 - POWERPLANT `JET exhaust | FAN bypass/core; BPR≠AFR | T-PROP gearbox→PROP | T-SHAFT output | STAGE≠SPOOL | fine low pitch/high RPM ↔ coarse high pitch/low RPM | feather drag↓ ≠ reverse | constant-speed governor holds RPM within stops | typical piston SE oil→coarse, ME oil→fine/feather on oil loss; POH wins`
 - `CONTROL-DIAGNOSE-MEMORY-CHECKLIST-DECLARE-LAND` | engine=`AIR-FUEL-SPARK-COMPRESSION` | rough=`HEAT-MIX-FUEL-PRIMER-MAGS` | mags independent of master | carb ice: full heat, worse→better | fuel gauges + clock, not gauges alone | low oil P+high T=land ASAP | alternator fail=`SHED-CALCULATE-COMMUNICATE-LAND` | pitot affects ASI; static affects ASI/ALT/VSI | vacuum often AI+DG | smoke/fire=land now | CO heat off/fresh air/land | flap asymmetry stop movement | controls first, checklist second | POH wins.
