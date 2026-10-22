@@ -195,6 +195,15 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - `M:` `45°` bank ≈ `1.41g`, stall ×`1.19`; `60°` bank = `2g`, stall ×`1.41`.
 - `T:` accelerated stall depends load factor/AoA, not just bank; POH chart wins.
 ***
+#### Manoeuvring speed / stall-speed notation
+
+- `VS` = generic stall speed in stated config; `VS1` = stall speed in specified config (**often clean**); `VS0` = stall speed in landing config. `VS` and `VS1` may denote the **same clean-config value** in context; do not substitute `VS0`.
+- `F theoretical:` positive stall/limit-load intersection `VA_est ≈ VS(clean) × √n_limit`, using matching config/weight/speed basis; **not guaranteed published VA**.
+- `M legacy normal:` `n_limit=+3.8` ⇒ `VA_est≈1.95×VS1` (rough `1.9–2.0×VS1`); e.g. `VS1=50 KIAS ⇒ ≈97.5 KIAS`.
+- `F weight:` approximate `VA2≈VA1×√(W2/W1)` if same config/load-factor basis; lighter ⇒ lower speed.
+- `T:` approved POH/AFM `VA` and weight schedule win; `VA` does **not** guarantee protection against multiple/abrupt control inputs or all turbulence.
+
+***
 #### VREF / landing reference speed
 
 - `Definition:` `VREF` is the landing reference speed. Use the POH/AFM value for the specified landing configuration; certification bases differ. In landing-distance certification it is maintained to the `50 ft` screen height.
@@ -267,7 +276,7 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 ***
 #### Pebble
 
-- `D=GS×t` | `t=min=D/GS×60` | `fuel=t×burn` | `CG=ΣM/ΣW` | `PA=elev+(29.92-alt)×1000` | `DA≈PA+120(OAT-ISA)` | `1-in-60: err=off×60/flown` | `WCA≈60×XW/TAS` | `ROC=GS×ft/NM/60` | `3° ROD=GS×5` | `TOD=alt lose/300` | `n=1/cosφ` | `Vsφ=Vs√n` | `VREF=1.3VSO` if unpublished | `+10%V=+21%E` | `1°lat=60NM` | `0.1h=6min`.
+- `D=GS×t` | `t=min=D/GS×60` | `fuel=t×burn` | `CG=ΣM/ΣW` | `PA=elev+(29.92-alt)×1000` | `DA≈PA+120(OAT-ISA)` | `1-in-60: err=off×60/flown` | `WCA≈60×XW/TAS` | `ROC=GS×ft/NM/60` | `3° ROD=GS×5` | `TOD=alt lose/300` | `n=1/cosφ` | `Vsφ=Vs√n` | `VA_est=VS1√nlimit≈1.95VS1 @+3.8g; VS≈VS1 if same clean config ≠VS0` | `VREF=1.3VSO` if unpublished | `+10%V=+21%E` | `1°lat=60NM` | `0.1h=6min`.
 
 ***
 #### Sources & review status
