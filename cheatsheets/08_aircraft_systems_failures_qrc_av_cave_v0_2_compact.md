@@ -120,7 +120,7 @@
 | `T` LIMIT | **Over-square ≠ overboost**; overboost = MP above approved limit; MP/RPM settings + sequencing per **POH/AFM**. |
 
 - `SRC:` [FAA PHAK · manifold pressure / constant-speed PROP](https://www.faa.gov/sites/faa.gov/files/pilot_handbook_1.pdf) · POH/AFM governs.
-- `M · L4` **MP absolute inHg | OFF≈ambient→IDLE↓↓ | throttle↑ MP↑ | NA ALT↑ MPmax↓ | CS PROP→RPM | carb ice: CS MP↓ / fixed RPM↓ | over-square≠overboost | POH wins.**
+- `M · L4` **MP absolute inHg | OFF≈ambient→IDLE↓↓ | throttle↑ MP↑ | non-turbo ALT↑→MPmax↓ | CS PROP→RPM | carb ice: CS MP↓ / fixed RPM↓ | over-square≠overboost | POH wins.**
 
 ***
 #### Propeller / governor — constant-speed
@@ -305,6 +305,6 @@
 ***
 #### Pebble
 
-- MP `absolute intake P inHg | OFF≈ambient→IDLE↓↓ | throttle↑ MP↑ | NA ALT↑ MPmax↓; turbo may hold MP to critical ALT | CS throttle→MP/PROP→RPM | carb ice CS MP↓ vs fixed RPM↓ | over-square≠overboost; POH wins`
+- MP `absolute intake P inHg | OFF≈ambient→IDLE↓↓ | throttle↑ MP↑ | non-turbo ALT↑→MPmax↓; turbo may hold MP to critical ALT | CS throttle→MP/PROP→RPM | carb ice CS MP↓ vs fixed RPM↓ | over-square≠overboost; POH wins`
 - POWERPLANT `JET exhaust | FAN bypass/core; BPR≠AFR | T-PROP gearbox→PROP | T-SHAFT output | STAGE≠SPOOL | fine low pitch/high RPM ↔ coarse high pitch/low RPM | feather drag↓ ≠ reverse | constant-speed governor holds RPM within stops | typical piston SE oil→coarse, ME oil→fine/feather on oil loss; POH wins`
 - `CONTROL-DIAGNOSE-MEMORY-CHECKLIST-DECLARE-LAND` | engine=`AIR-FUEL-SPARK-COMPRESSION` | rough=`HEAT-MIX-FUEL-PRIMER-MAGS` | mags independent of master | carb ice: full heat, worse→better | fuel gauges + clock, not gauges alone | low oil P+high T=land ASAP | alternator fail=`SHED-CALCULATE-COMMUNICATE-LAND` | pitot affects ASI; static affects ASI/ALT/VSI | vacuum often AI+DG | smoke/fire=land now | CO heat off/fresh air/land | flap asymmetry stop movement | controls first, checklist second | POH wins.
