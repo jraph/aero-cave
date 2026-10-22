@@ -2,7 +2,7 @@
 
 ## Manoeuvring speed / stall speed — 22 October 2026
 
-Card 06, bilingual CPAER formulas Markdown and HTML reader: added theoretical `VA_est=VS(clean)√n_limit`, legacy Normal-category +3.8g `VA_est≈1.95 VS1` (rough 1.9–2.0), matching-weight `VA₂≈VA₁√(W₂/W₁)`, and `VS` (generic) / `VS1` (specified, commonly clean) / `VS0` (landing) distinctions. This theoretical intersection is not necessarily published certified `VA`; POH/AFM wins and `VA` offers no blanket structural protection. Card 06 Pebble updated; HTML stall group 9→12 and total 248→251; PWA cache bumped.
+Card 06, bilingual CPAER formulas Markdown and HTML reader: added theoretical `VA_est=VS(clean)√n_limit`, legacy Normal-category +3.8g `VA_est≈1.95 VS1` (mental shortcut ≈2×VS1; not a range of VA values), matching-weight `VA₂≈VA₁√(W₂/W₁)`, and `VS` (generic) / `VS1` (specified, commonly clean) / `VS0` (landing) distinctions. This theoretical intersection is not necessarily published certified `VA`; POH/AFM wins and `VA` offers no blanket structural protection. Card 06 Pebble updated; HTML stall group 9→12 and total 248→251; PWA cache bumped.
 
 ## Cloud-base and freezing-level calculation clarification — 22 October 2026
 
