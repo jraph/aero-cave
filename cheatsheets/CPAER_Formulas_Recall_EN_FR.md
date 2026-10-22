@@ -82,8 +82,11 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 | DALR | Unsaturated rising parcel: −3°C/1000 ft | Parcelle ascendante non saturée : −3°C/1000 pi |
 | SALR | Saturated rising parcel: ≈ −1.5°C/1000 ft; variable | Parcelle ascendante saturée : ≈ −1,5°C/1000 pi; variable |
 | Dew point | Unsaturated parcel: ≈ −0.5°C/1000 ft | Point de rosée, parcelle non saturée : ≈ −0,5°C/1000 pi |
-| Cloud base | Convective base AGL ft ≈ 400(T − Td) | Base convective AGL pi ≈ 400(T − Td) |
-| Freezing level | Height change ft = 1000 × T/lapse rate(°C/1000 ft); use actual profile | Dénivelé pi = 1000 × T/gradient(°C/1000 pi); utiliser le profil réel |
+| Cloud base · exam | Convective base AGL ft ≈ 1000(T − Td)/3; **simplified classroom shortcut** assuming Td approximately constant | Base convective AGL pi ≈ 1000(T − Td)/3; **raccourci de cours** avec Td supposé presque constant |
+| Cloud base · parcel | Convective LCL AGL ft ≈ 1000(T − Td)/(3 − 0.5) = 400(T − Td); unsaturated parcel T cools 3°C/1000 ft, Td drops 0.5°C/1000 ft | NCL convectif AGL pi ≈ 1000(T − Td)/(3 − 0,5) = 400(T − Td); T baisse de 3°C/1000 pi, Td de 0,5°C/1000 pi |
+| Freezing · exam | Parcel 0°C height AGL ≈ CB(exam) + 1000 Td/1.5; assumes T at cloud base ≈ surface Td, saturated lapse ≈ 1.5°C/1000 ft | Hauteur AGL de 0°C dans la parcelle ≈ base(examen) + 1000 Td/1,5; T à la base ≈ Td de surface, gradient saturé ≈ 1,5°C/1000 pi |
+| Freezing · parcel | T_CB ≈ T − 3 CB(parcel)/1000; parcel 0°C height AGL ≈ CB(parcel) + 1000 T_CB/1.5 (if T_CB > 0°C); saturated lapse variable | T_base ≈ T − 3 base(parcelle)/1000; hauteur AGL de 0°C ≈ base(parcelle) + 1000 T_base/1,5 (si T_base > 0°C); gradient saturé variable |
+| Freezing · actual | Parcel 0°C height ≠ atmospheric freezing level; environmental vertical temperature profile / GFA / winds-temp aloft wins. ASL = AGL + field elevation (same datum) | Hauteur de 0°C de la parcelle ≠ niveau de congélation réel; privilégier profil thermique ambiant / GFA / vents-températures en altitude. ASL = AGL + altitude du terrain (même référence) |
 ***
 
 ## Stall · airspeed / Décrochage · vitesse
