@@ -60,12 +60,12 @@
 
 | File | Current status | Primary dependencies | Required work |
 |---|---|---|---|
-| `vfr_ftm_proc_av_cave_v0_2.md` | `PROVISIONAL / AIRCRAFT` | FTM + POH + SOP | map each procedure to C150M POH/SOP; separate generic from aircraft action |
+| `flight_training_procedures_av_cave_v0_2.md` | `PROVISIONAL / AIRCRAFT` | FTM + POH + SOP | map each procedure to C150M POH/SOP; separate generic from aircraft action |
 | `c150m_speed_patch_av_cave_v0_2.md` | `SUPERSEDED-STUDY` | 1977 C150M POH | retained for history; use full POH core instead |
 | `c150m_poh_core_av_cave_v0_1.md` | `AIRCRAFT-REF PROVISIONAL` | provided 1977 C150M POH | model-level audit completed; confirm exact serial/configuration/change status/supplements before flight |
-| `vfr_knowledge_core_av_cave_v0_6.md` | `LEGAL/CYCLE-REF PROVISIONAL` | live CARs + AIM 2026-1 + current CFS cycle | cycle/source workflow updated; route-specific data still requires current briefing |
+| `flight_theory_vfr_knowledge_av_cave_v0_6.md` | `LEGAL/CYCLE-REF PROVISIONAL` | live CARs + AIM 2026-1 + current CFS cycle | cycle/source workflow updated; route-specific data still requires current briefing |
 | `canadian_air_law_core_av_cave_v0_1.md` | `LEGAL-REF PROVISIONAL` | live CARs current to 2026-05-26 + Standard 421 | core sections mapped; future amendment/regression audit required before flight use |
-| `cpl_knowledge_core_av_cave_v0_2.md` | `EXAM-PROVISIONAL` | Standard 421.30 + CPL test guide | licensing values mostly sourced; label flight-test stabilization criteria as guide only |
+| `licensing_performance_operations_av_cave_v0_2.md` | `EXAM-PROVISIONAL` | Standard 421.30 + CPL test guide | licensing values mostly sourced; label flight-test stabilization criteria as guide only |
 | `ifr_knowledge_core_av_cave_v0_2.md` | `CYCLE-REF PROVISIONAL` | CARs + AIM 2026-1 + current CAP cycle/AICs | cycle/Trigger/PFAF transition updated; full line audit still required |
 | `inrat_knowledge_core_av_cave_v0_3.md` | `EXAM/CYCLE-REF PROVISIONAL` | TP 691E + CARs + AIM 2026-1 + current cycle/AICs | current publication workflow updated; broader line audit still required |
 | `aviation_formulas_conversions_av_cave_v0_2.md` | `PROVISIONAL-CORRECTED` | derived math + AIM 2026-1 + CAR 602.129 + C150M POH | known turn/glide errors repaired; flagged hold/RVR items resolved |
