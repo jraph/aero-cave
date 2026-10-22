@@ -16,7 +16,7 @@ Read repository `AGENTS.md` **before** drafting. Treat this skill as the *conten
 
 ## Abbreviation protocol
 
-1. Consult `cheatsheets/MANAB_CFS_Essential_EN_FR.md` and, as needed, the **current original NAV CANADA MANAB/CFS** before replacing a word with an abbreviation.
+1. Consult `cheatsheets/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.md` and, as needed, the **current original NAV CANADA MANAB/CFS** before replacing a word with an abbreviation.
 2. Use only established abbreviation **with the applicable meaning and publication context**, e.g. `ACFT` aircraft, `TKOF` takeoff, `LDG` landing, `RWY` runway, `THLD` threshold, `ALT` altitude, `CLNC` clearance, `MAINT` maintenance, `TFC` traffic. Write the word out if no verified code exists.
 3. Preserve collisions and context: `AD` (MANAB) / `A/D` (CFS); `RPT` meaning differs; `S 5` ≠ `PF 5`; weather symbols are not universally CFS codes. Never invent abbreviations or expand an existing code to a different meaning.
 4. Retain technical/regulatory acronyms (e.g. `AME`, `AMO`, `CoR`, `CoA`, `ELT`, `MEL`, `RVSM`) **without claiming they are MANAB/CFS codes**.
