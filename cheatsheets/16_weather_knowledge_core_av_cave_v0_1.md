@@ -44,7 +44,7 @@
 - Condensation nuclei help droplets form.
 - Cloud base often near LCL; rising unsaturated air cools DALR until saturated, then SALR.
 - `F exam CB:` convective cloud base AGL ≈ `1000(T−Td)/3` ft, with surface `T,Td` °C; **simplified course shortcut** assumes Td ≈ constant during unsaturated ascent.
-- `F parcel CB:` LCL/cloud base AGL ≈ `1000(T−Td)/(3−0.5)=400(T−Td)` ft; parcel T↓ ≈3°C/1000 ft, parcel Td↓ ≈0.5°C/1000 ft; both approximate.
+- `F parcel CB:` LCL/cloud base AGL ≈ `1000(T−Td)/(3−0.5)` ft; parcel T↓ ≈3°C/1000 ft, parcel Td↓ ≈0.5°C/1000 ft; both approximate.
 - `T:` estimates apply to a surface-lifted convective parcel, not every observed ceiling/cloud base; field elevation + AGL = ASL only for same vertical datum.
 ***
 #### Cloud families
@@ -284,7 +284,7 @@
 - ISA `15°C /29.92 / -2°C per1000`
 - DA `≈ PA +120×ΔT`
 - DALR `3°/1000`; SALR `~1.5°/1000`
-- CB exam `AGL=1000(T−Td)/3`; parcel `AGL=400(T−Td)` | parcel 0°C exam `CB+1000Td/1.5`, detailed `CB+1000T_CB/1.5` | environmental FZ≠parcel 0°C
+- CB exam `AGL=1000(T−Td)/3`; parcel `AGL=1000(T−Td)/(3−0.5)` | parcel 0°C exam `CB+1000Td/1.5`, detailed `CB+1000T_CB/1.5` | environmental FZ≠parcel 0°C
 - stable=`STRATUS-SMOOTH-POOR VIS`; unstable=`CU-TURB-SHOWERS`
 - low=`CCW-IN-RISE`; high=`CW-OUT-SINK`
 - cold front=`FAST-STEEP-CU`; warm=`SLOW-WIDE-LAYERED`
