@@ -1,4 +1,4 @@
-### VFR KNOW — AV-CAVE v0.6
+### FLIGHT THEORY & VFR KNOWLEDGE — AV-CAVE v0.6
 `TARGETED CPAER REVIEW: 2026-09-06` | see `00_CPAER_REVIEW_NOTES.md` for scope and remaining gaps
 `R` rule | `F` formula | `P` proc | `T` trap | `M` memory | `!` safety | `?` verify
 `RELEASE:` `LEGAL/CYCLE-REF PROVISIONAL` | `CANONICAL SOURCE:` `vfr_knowledge_core_av_cave_v0_6.md` | `NOT FLIGHT AUTHORITY`
@@ -72,6 +72,21 @@
 - DA↑ with temperature/humidity/pressure altitude↑. Weight does NOT change DA; it independently worsens takeoff/climb. Higher DA: roll↑ climb↓; TAS↑ for the same IAS.
 - `F:` PA≈elev+(29.92-altset)×1000. DA≈PA+120×(OAT-ISA). `T:` approximation only.
 ***
+#### Aerodynamics — lift, drag & equilibrium
+
+| Key | Essential recall |
+|---|---|
+| `LIFT` | Force component ⟂ relative airflow; `L=½ρV²SCL` (V = TAS); AOA controls `CL` until critical AOA/stall. |
+| `CP / CG / AC` | CP = location of resultant aero force on airfoil (moves with AOA); CG = weight acts here; AC ≈25% chord for typical subsonic airfoil (pitching moment approx constant with AOA). |
+| `MOMENT` | Pitching moment about CG = force × perpendicular arm; trimmed unaccelerated FLT requires net pitching moment `ΣM(CG)=0` (tail force may balance wing/fuselage moment). |
+| `DRAG` | Total = parasite + induced; parasite = form/pressure + skin friction + interference; induced = drag due to lift/downwash. |
+| `SPD / DRAG` | At given GW/config/ALT in steady level FLT, IAS↓→AOA/induced drag↑; IAS↑→parasite drag↑; minimum total drag ≈ max `L/D`. |
+| `EQUIL` | Straight/level/constant-speed simplified: `L=W; T=D; ΣM=0`; requires aligned thrust & negligible vertical thrust/tail geometry effects. |
+| `BANK` | Coordinated level turn: `L cosφ=W`, `n=1/cosφ`, `Vs(turn)=Vs(level)√n` (same config/weight). |
+| `T` | CP ≠ CG ≠ AC; lift vector ⟂ relative wind, not necessarily vertical; stall = critical AOA, not a fixed IAS. |
+
+- `SRC:` [FAA PHAK, Ch. 4–5 · Principles/Aerodynamics of Flight](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak); general theory; aircraft POH/AFM governs performance.
+***
 #### Performance / W&B
 
 - Vx=altitude/distance. Vy=altitude/time. Best glide=max distance no power. Min sink=max time.
@@ -95,6 +110,7 @@
 ***
 #### Pebble
 
+- AERO `L⊥relative wind | CP resultant force / CG weight / AC≈¼ chord | ΣM(CG)=0 in trim | D=parasite(form+friction+interference)+induced | slow→induced↑; fast→parasite↑ | L/Dmax≈Dmin | straight level L=W,T=D | coordinated level turn n=1/cosφ, Vs×√n`
 - docs-current | close plan | 1200/1400/7600/7700/7500 | A/B/C/D/E/F/G | CTRL 3-1-500 | unctl high 1/3+2000/500 | unctl low 2/3 COC | track≠hdg | hot-high-heavy bad | high→low/cold below | W×arm | T±V=M±D=C | 1:60 | lost C5 | aviate first.
 
 ***
