@@ -1,5 +1,9 @@
 # Content review — 19 October 2026
 
+## Aviation fuels / FSII · L4 CAVE — 22 October 2026
+
+Added 8 compressed fuel-grade/FSII rows to card 08 and its final Pebble: octane = detonation resistance, dual 80/87 and 100/130 lean/rich ratings, 100LL low-lead (not unleaded), AVGAS grade colours, Jet A and A-1 maximum freezing points (−40°C and −47°C), Jet B wide-cut volatility, FSII water-ice inhibition (not fuel freezing point or airframe anti-icing), and approved-fuel/misfuelling warning. Aircraft-specific AFM/POH approval prevails; legacy grades are study recognition, not universal current availability or compatibility. FAA fuel guidance, FAA FSII guidance, and Canadian turbine-fuel specifications linked within card. No paired HTML reader for card 08.
+
 Current editing workflow: edit Markdown directly; update matching HTML/cards in the same change. The earlier JSON/build experiment described below has been removed. Study content and reader features are retained.
 
 ## VREF and CFS PF additions — 20 October 2026
