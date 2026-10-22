@@ -43,6 +43,9 @@
 - Lift: convection, fronts, terrain, convergence.
 - Condensation nuclei help droplets form.
 - Cloud base often near LCL; rising unsaturated air cools DALR until saturated, then SALR.
+- `F exam CB:` convective cloud base AGL ≈ `1000(T−Td)/3` ft, with surface `T,Td` °C; **simplified course shortcut** assumes Td ≈ constant during unsaturated ascent.
+- `F parcel CB:` LCL/cloud base AGL ≈ `1000(T−Td)/(3−0.5)=400(T−Td)` ft; parcel T↓ ≈3°C/1000 ft, parcel Td↓ ≈0.5°C/1000 ft; both approximate.
+- `T:` estimates apply to a surface-lifted convective parcel, not every observed ceiling/cloud base; field elevation + AGL = ASL only for same vertical datum.
 ***
 #### Cloud families
 
@@ -228,6 +231,9 @@
 #### Freezing level
 
 - Altitude where `0°C`; may be multiple levels with inversions.
+- `F exam parcel 0°C:` AGL ≈ `CB_exam + 1000×Td_surface/1.5` ft: assumes cloud-base parcel temperature ≈ surface dew point and SALR≈1.5°C/1000 ft.
+- `F parcel 0°C:` `T_CB ≈ T_surface−3×CB_parcel/1000`; if `T_CB>0°C`, parcel reaches 0°C at `CB_parcel+1000×T_CB/1.5` ft AGL (approximate/variable SALR).
+- `T:` parcel 0°C height ≠ atmospheric freezing level; use actual environmental temperature profile / GFA / temperatures aloft. Temperature inversions may create multiple 0°C levels.
 - Freezing level ≠ guaranteed icing layer; requires moisture.
 - Cloud + subzero temp + PIREP/AIRMET icing = stronger evidence.
 ***
@@ -278,6 +284,7 @@
 - ISA `15°C /29.92 / -2°C per1000`
 - DA `≈ PA +120×ΔT`
 - DALR `3°/1000`; SALR `~1.5°/1000`
+- CB exam `AGL=1000(T−Td)/3`; parcel `AGL=400(T−Td)` | parcel 0°C exam `CB+1000Td/1.5`, detailed `CB+1000T_CB/1.5` | environmental FZ≠parcel 0°C
 - stable=`STRATUS-SMOOTH-POOR VIS`; unstable=`CU-TURB-SHOWERS`
 - low=`CCW-IN-RISE`; high=`CW-OUT-SINK`
 - cold front=`FAST-STEEP-CU`; warm=`SLOW-WIDE-LAYERED`
