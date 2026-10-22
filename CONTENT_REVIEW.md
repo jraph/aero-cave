@@ -1,5 +1,9 @@
 # Content review — 19 October 2026
 
+## TKOF speeds / OEI / tire speed · L4 CAVE — 22 October 2026
+
+Card 13: five compact rows for V1 reject/continue and accelerate-stop, VR rotation, V2 One Engine Inoperative (OEI) takeoff safety/climb rather than braking, Vtire as maximum certificated tire **groundspeed**, and GW/RWY/conditions/transport-category-versus-light-twin scope; revised final Pebble. Existing light-twin accelerate-stop/go and Vmc/Vyse references preserved. FAA Airplane Flying Handbook Chapter 16 cited; aircraft AFM/POH remains controlling. Markdown-only card, no paired HTML.
+
 ## Turboprop ALPHA / BETA / ground fine / reverse — 22 October 2026
 
 Card 08: replaced the short BETA mention with concise separate ALPHA normal governed-flight range, BETA ground power-lever blade-angle control, ground-fine low forward thrust, reverse negative blade angle subset of BETA on equipped ACFT, and FLT-idle/AFM limitations. Updated local L4 and final Pebble; retained distinction from feathering. Reviewed FAA Airplane Flying Handbook turboprop operations; limitations are aircraft-specific. Card 08 has no paired HTML reader.
