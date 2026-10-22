@@ -1,5 +1,9 @@
 # Content review
 
+## Weather fronts consolidation — 22 October 2026
+
+Card 16 remains the canonical weather theory source, including cold/warm frontal passage tables, hazards and memory traps. Removed duplicate bilingual `cheatsheets/Weather_Fronts_EN_FR.md` and `readers/Weather_Fronts_EN_FR.html`; cleaned README, app index, PWA manifest, service-worker precache and offline test references. Existing historical review entries retained; bilingual reader functionality discontinued rather than duplicating card content.
+
 ## TKOF speeds / OEI / tire speed · L4 CAVE — 22 October 2026
 
 Card 13: five compact rows for V1 reject/continue and accelerate-stop, VR rotation, V2 One Engine Inoperative (OEI) takeoff safety/climb rather than braking, Vtire as maximum certificated tire **groundspeed**, and GW/RWY/conditions/transport-category-versus-light-twin scope; revised final Pebble. Existing light-twin accelerate-stop/go and Vmc/Vyse references preserved. FAA Airplane Flying Handbook Chapter 16 cited; aircraft AFM/POH remains controlling. Markdown-only card, no paired HTML.
