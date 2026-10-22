@@ -44,6 +44,23 @@
 - `T:` partial heat without carb-air-temperature guidance may place air in icing range. Heated air is usually unfiltered and reduces power.
 - `T:` structural icing conditions and carb-ice conditions are related but not identical.
 ***
+#### Aviation fuel grades / FSII — L4
+
+| Key | Recall |
+|---|---|
+| `T` OCTANE | AVGAS **antiknock/detonation resistance**, not fuel energy; **80/87 = lean/rich ratings**, likewise **100/130** (rich performance number >100 ≠ % octane). |
+| `M` AVGAS | **80/87 RED** | **100/130 GREEN** | **100LL BLUE** (`LL` = low lead, **≠ unleaded**; rated 100 lean / 130 rich). |
+| `M` JET A | Kerosene-type turbine fuel; **max freezing point −40°C**. |
+| `M` JET A-1 | Kerosene-type turbine fuel; **max freezing point −47°C**. |
+| `T` JET B | Wide-cut gasoline/kerosene-type turbine fuel, more volatile; fuel specification / AFM approval required. |
+| `R` FSII | **Fuel System Icing Inhibitor:** lowers freezing point of **water in fuel** → prevents fuel-line/filter ice; **not fuel freeze-point improver or airframe de-icer**; use approved additive/concentration only. |
+| `T` ICE | **Fuel freezing (wax/crystals) ≠ entrained/free WATER freezing**; FSII addresses latter. |
+| `!` FUEL | Confirm **correct grade/type** against AFM/POH, placards and delivery; sample/check water/debris, no-go contaminated/wrong fuel; AVGAS↔JET misfuel may cause ENG failure; **colour alone insufficient**. |
+
+- `SRC:` [FAA AMT General · AVGAS grades/colour + JET types](https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/amt_general_handbook.pdf) · [Canadian SCC · JET A/A-1 freeze points](https://scc-ccn.ca/standards/notices-of-intent/canadian-general-standards-board-cgsb/aviation-turbine-fuel-grades-4) · [FAA AC 20-29C · FSII](https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20_29C.pdf); **POH/AFM wins**.
+- `M · L4` **FUEL: OCTANE=knock resistance | 80/87 RED; 100/130 GREEN (lean/rich); 100LL BLUE (low lead≠unleaded) | JET A −40°C / A-1 −47°C (max freeze) | JET B wide-cut | FSII inhibits water ice ≠ fuel/airframe de-ice | verify approved grade/type; colour≠proof.**
+
+***
 #### Fuel / starvation / contamination
 
 - Know total/usable/unusable, geometry, selector, vents, drains, pumps/crossfeed and gauge limits.
@@ -305,6 +322,7 @@
 ***
 #### Pebble
 
+- FUEL `octane=knock resistance | AVGAS 80/87 RED; 100/130 GREEN (lean/rich); 100LL BLUE (LL=low lead) | JET A max freeze −40°C / A-1 −47°C; B wide-cut | FSII water-ice inhibitor ≠ fuel/airframe de-ice | approved fuel/grade per POH; colour alone≠proof`
 - MP `absolute intake P inHg | OFF≈ambient→IDLE↓↓ | throttle↑ MP↑ | non-turbo ALT↑→MPmax↓; turbo may hold MP to critical ALT | CS throttle→MP/PROP→RPM | carb ice CS MP↓ vs fixed RPM↓ | over-square=MP>RPM/100 (may be OK); overboost=MP>approved limit (RPM-dependent); POH wins`
 - POWERPLANT `JET exhaust | FAN bypass/core; BPR≠AFR | T-PROP gearbox→PROP | T-SHAFT output | STAGE≠SPOOL | fine low pitch/high RPM ↔ coarse high pitch/low RPM | feather drag↓ ≠ reverse | constant-speed governor holds RPM within stops | typical piston SE oil→coarse, ME oil→fine/feather on oil loss; POH wins`
 - `CONTROL-DIAGNOSE-MEMORY-CHECKLIST-DECLARE-LAND` | engine=`AIR-FUEL-SPARK-COMPRESSION` | rough=`HEAT-MIX-FUEL-PRIMER-MAGS` | mags independent of master | carb ice: full heat, worse→better | fuel gauges + clock, not gauges alone | low oil P+high T=land ASAP | alternator fail=`SHED-CALCULATE-COMMUNICATE-LAND` | pitot affects ASI; static affects ASI/ALT/VSI | vacuum often AI+DG | smoke/fire=land now | CO heat off/fresh air/land | flap asymmetry stop movement | controls first, checklist second | POH wins.
