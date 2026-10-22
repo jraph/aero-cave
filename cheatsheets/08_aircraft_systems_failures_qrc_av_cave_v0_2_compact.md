@@ -272,6 +272,22 @@
 - `S:` intake filter blockage/ice → power loss; alternate air may restore.
 - `T:` alternate air often warmer/unfiltered and changes mixture/power.
 ***
+#### Cabin pressurization / outflow — L4
+
+| Key | Recall |
+|---|---|
+| `T` CABIN ALT | Pressure-equivalent **cabin** ALT ≠ ACFT ALT; cabin ALT governs altitude-dependent O₂ use, subject to separate rules. |
+| `R` OUTFLOW | Regulates cabin P by controlling **air discharged**, with conditioned/pressurizing air supplied. |
+| `M` CLOSE | Outflow closes→less air escapes→cabin **P↑ / ALT↓** (other factors equal). |
+| `M` OPEN | Outflow opens→more air escapes→cabin **P↓ / ALT↑** (other factors equal). |
+| `F` ΔP | Differential P = **cabin P − ambient P**; AFM structural limit. |
+| `T` RELIEF | **Positive** relief protects against excess cabin P; **negative** relief protects against excess outside P. |
+| `!` FAILURE | Depressurization→cabin ALT↑→O₂ / emergency DESC per AFM; **O₂ thresholds/supply: [card 04 · CAR 605.31–32](04_canadian_air_law_core_av_cave_v0_2_compact.md#oxygen--oxygène--car-60531-32)** (not duplicated). |
+
+- `SRC:` [FAA PHAK · pressurization systems](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak) · [CAR 605.31–32](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.31.html); ACFT AFM/checklists control.
+- `M · L4` **PRESSURIZATION: outflow CLOSE→cabin P↑/ALT↓; OPEN→P↓/ALT↑ | ΔP=cabin−ambient | +relief excess cabin P; −relief excess outside P | decompression→O₂/emergency DESC per AFM.**
+
+***
 #### Cabin heat / defrost
 
 - Often uses exhaust-shroud heat; exhaust crack can introduce CO.
@@ -322,6 +338,7 @@
 ***
 #### Pebble
 
+- PRESSURIZATION `outflow CLOSE→cabin P↑/ALT↓; OPEN→P↓/ALT↑ | ΔP=cabin−ambient | +relief excess internal P; −relief excess external P | decompression→O₂/emergency DESC per AFM; O₂ rules card 04`
 - FUEL `octane=knock resistance | AVGAS 80/87 RED; 100/130 GREEN (lean/rich); 100LL BLUE (LL=low lead) | JET A max freeze −40°C / A-1 −47°C; B wide-cut | FSII water-ice inhibitor ≠ fuel/airframe de-ice | approved fuel/grade per POH; colour alone≠proof`
 - MP `absolute intake P inHg | OFF≈ambient→IDLE↓↓ | throttle↑ MP↑ | non-turbo ALT↑→MPmax↓; turbo may hold MP to critical ALT | CS throttle→MP/PROP→RPM | carb ice CS MP↓ vs fixed RPM↓ | over-square=MP>RPM/100 (may be OK); overboost=MP>approved limit (RPM-dependent); POH wins`
 - POWERPLANT `JET exhaust | FAN bypass/core; BPR≠AFR | T-PROP gearbox→PROP | T-SHAFT output | STAGE≠SPOOL | fine low pitch/high RPM ↔ coarse high pitch/low RPM | feather drag↓ ≠ reverse | constant-speed governor holds RPM within stops | typical piston SE oil→coarse, ME oil→fine/feather on oil loss; POH wins`
