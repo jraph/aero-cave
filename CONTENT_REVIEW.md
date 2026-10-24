@@ -1,5 +1,10 @@
 # Content review
 
+## Pilot licensing / PPC / CC / type-rating decision card — 24 October 2026
+
+Added Card 17 as a **bilingual CAVE quick-reference** (standalone Markdown + HTML reader), referencing authoritative Card 04 rather than moving or deleting legal material. Cross-checked operative PIC/SIC distinctions against CAR 702.65, 703.88, 704.108, 705.106; check validity against 604.139, 702.67, 703.91, 704.111, 705.113; current instrument recency under 401.05; type requirements in Standard 421.40; licence headline hours in TC AIM 2026-2. Live CARs consolidation noted current to 2026-09-30 (last amended 2026-06-17). Exam summary deliberately excludes complete Ops Specs, Part IV aircraft-specific limits and alternate programs. Added index, README, manifest shortcut, PWA cache entry/version and offline cache-test path. Browser/device rendering not independently verified.
+
+
 ## Manoeuvring speed / stall speed — 22 October 2026
 
 Card 06, bilingual CPAER formulas Markdown and HTML reader: added theoretical `VA_est=VS(clean)√n_limit`, legacy Normal-category +3.8g `VA_est≈1.95 VS1` (mental shortcut ≈2×VS1; not a range of VA values), matching-weight `VA₂≈VA₁√(W₂/W₁)`, and `VS` (generic) / `VS1` (specified, commonly clean) / `VS0` (landing) distinctions. This theoretical intersection is not necessarily published certified `VA`; POH/AFM wins and `VA` offers no blanket structural protection. Card 06 Pebble updated; HTML stall group 9→12 and total 248→251; PWA cache bumped.
