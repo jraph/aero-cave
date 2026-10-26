@@ -1,6 +1,6 @@
 /* Bump VERSION whenever a reader, layout, icon or app shell changes. */
 'use strict';
-const VERSION = '2026-10-22-9';
+const VERSION = '2026-10-24-10';
 const BASE = new URL('./', self.location.href);
 const PREFIX = 'aero-cave:' + BASE.pathname + ':';
 const CACHE = PREFIX + VERSION;
@@ -8,7 +8,8 @@ const FILES = [
   'index.html', 'manifest.json',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
   'readers/CPAER_Formulas_Recall_EN_FR.html',
-  'readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html'
+  'readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html',
+  'readers/17_Pilot_Qualifications_Operator_Checks_EN_FR.html'
 ];
 const URLS = FILES.map(path => new URL(path, BASE).href);
 self.addEventListener('install', event => {

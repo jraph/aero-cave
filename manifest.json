@@ -33,6 +33,11 @@
       "name": "Aviation abbreviations · EN / FR",
       "short_name": "Aviation codes",
       "url": "./readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html"
+    },
+    {
+      "name": "Pilot qualifications · Qualifications",
+      "short_name": "Pilot qualifications",
+      "url": "./readers/17_Pilot_Qualifications_Operator_Checks_EN_FR.html"
     }
   ]
 }

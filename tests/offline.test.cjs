@@ -42,7 +42,7 @@ function harness({failInstall=false}={}) {
 }
 test('installation precaches every reader and serves them without network, including directory/query URLs',async()=>{
   const h=harness();await h.lifecycle('install');await h.lifecycle('activate');h.goOffline();
-  for(const file of ['','index.html?home=1','readers/CPAER_Formulas_Recall_EN_FR.html','readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html?mode=fr','manifest.json','icons/icon-192.png']){
+  for(const file of ['','index.html?home=1','readers/CPAER_Formulas_Recall_EN_FR.html','readers/17_Pilot_Qualifications_Operator_Checks_EN_FR.html','readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html?mode=fr','manifest.json','icons/icon-192.png']){
     const r=await h.fetchPage('https://example.test/aero-cave/'+file);assert.equal(r.status,200);assert.ok((await r.arrayBuffer()).byteLength);
   }
   assert.equal((await h.status()).ready,true);assert.deepEqual(h.info(),{requests:0,claimed:true,skipped:true});

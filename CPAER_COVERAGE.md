@@ -38,6 +38,7 @@
 | 11 CAP plate reading | [Open](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md) | INRAT | Keep chart-reading companion |
 | 12 IFR procedures | [Open](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) | INRAT | Keep procedural companion |
 | 13 Multi-engine knowledge | [Open](cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md) | Multi-engine; Aeronautics cross-reference | Keep rating/type-specific matters separate; link generic theory |
+| 17 Pilot qualifications & checks | [Open](cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md) | Air Law / INRAT + ATPL recap | Condensed bilingual lookup; Card 04 remains canonical legal source; do not treat this as a migrated authoritative rule collection |
 | 16 Weather knowledge | [Open](cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md) | Meteorology | Candidate authoritative home for meteorological theory |
 
 The three existing bilingual Markdown/HTML reader pairs remain separate *reading formats / indices*, not independent authoritative sources: CPAER formulas, aviation abbreviations, and MANAB/CFS. Preserve paired Markdown↔HTML parity. Existing numbered card filenames and all reader URLs remain unchanged during inventory.
