@@ -1,5 +1,11 @@
 # Content review
 
+## CPAER Phase 2 content audit — 22 October 2026
+
+Added [CPAER coverage matrix](CPAER_COVERAGE_MATRIX.md), based on repository commit `3dbd013ba1e93160727d40b6fde8f4a0e50ca0f4` and official TC TP 12881 seventh edition, August 2026 (HTML/PDF edition verified). Topic-group screening across the syllabus; individual rows for 52 Flight Instruments and 40 Human Factors items. Active Markdown evidence inspected, including all 14 numbered cards and supplementary bilingual recall/glossary content. Not a fresh regulatory/medical/POH validation or an exam-completeness claim.
+
+Logged publication-currency conflict in cards 09–12 versus 01; TEMPO ≤half/<half wording difference; ambiguous nose-high recovery wording in card 12. Authoritative resolution remains pending. Distinguished qualified VOR source scopes and cloud/freezing calculation models from harmful duplication. Gate 1 remains open for other numbered-item expansion; no study facts, Pebbles, reader code, HTML or PWA assets changed.
+
 ## Manoeuvring speed / stall speed — 22 October 2026
 
 Card 06, bilingual CPAER formulas Markdown and HTML reader: added theoretical `VA_est=VS(clean)√n_limit`, legacy Normal-category +3.8g `VA_est≈1.95 VS1` (mental shortcut ≈2×VS1; not a range of VA values), matching-weight `VA₂≈VA₁√(W₂/W₁)`, and `VS` (generic) / `VS1` (specified, commonly clean) / `VS0` (landing) distinctions. This theoretical intersection is not necessarily published certified `VA`; POH/AFM wins and `VA` offers no blanket structural protection. Card 06 Pebble updated; HTML stall group 9→12 and total 248→251; PWA cache bumped.
