@@ -1,5 +1,10 @@
 # Content review
 
+## Illustrative aircraft models in operating-category matrix — 26 October 2026
+
+Added a model-examples column to all 10 PIC/SIC entries in Card 17 Markdown and bilingual HTML. Covers representative 604 private piston twin/pressurized piston/single turbine/jet/large business jet; 702 aerial-work aircraft; 703 single- and multi-engine air taxi; 704 19-seat commuter aircraft and qualifying business jet; 705 regional and airline aircraft. Examples are non-exhaustive and do not confer a regulatory subpart: actual type, certification, seats, mission, aircraft weights and air-operator approvals control. Manufacturer references added; HTML mobile layout updated and offline cache version bumped. Not browser- or device-tested.
+
+
 ## CAR 604 scope versus private-operator registration — 26 October 2026
 
 Clarified both 604 rows in Card 17 Markdown and HTML: section 604.02 is a logical **OR** across four aircraft categories (large, turbine-powered, pressurized, multi-engine). Section 604.03 is a *separate* registration obligation when carrying passengers or goods in large aeroplanes, turbojets, or turbine-powered pressurized aeroplanes with more than six certificated passenger seats, subject to specified exceptions. Clarified that a small unpressurized piston twin can meet 604.02 without itself triggering 604.03 registration. Source: live CAR 604.02/604.03 (current to 2026-09-30). PWA cache bumped; mobile/browser tests not run.
