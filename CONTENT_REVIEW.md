@@ -1,5 +1,10 @@
 # Content review
 
+## CAR 604 scope versus private-operator registration — 26 October 2026
+
+Clarified both 604 rows in Card 17 Markdown and HTML: section 604.02 is a logical **OR** across four aircraft categories (large, turbine-powered, pressurized, multi-engine). Section 604.03 is a *separate* registration obligation when carrying passengers or goods in large aeroplanes, turbojets, or turbine-powered pressurized aeroplanes with more than six certificated passenger seats, subject to specified exceptions. Clarified that a small unpressurized piston twin can meet 604.02 without itself triggering 604.03 registration. Source: live CAR 604.02/604.03 (current to 2026-09-30). PWA cache bumped; mobile/browser tests not run.
+
+
 ## Aircraft applicability and dual-unit limits — 26 October 2026
 
 Card 17 Markdown and bilingual HTML: added aircraft applicability to each PIC/SIC row of Table 1, with metric and regulatory pound equivalents: large aeroplane >5,700 kg (>12,566 lb); 703/704 multi-engine MCTOW ≤8,618 kg (19,000 lb); 704 turbojet MZFW ≤22,680 kg (50,000 lb); 705 aeroplane MCTOW >8,618 kg (>19,000 lb) or type certificate ≥20 pax. Distinguished 604.02 aircraft scope from 604.03 private-operator registration; noted 702 work-based applicability and applicable authorization exceptions. Verified against current online CAR 101.01, 604.02–.03, 702.01, 703.01, 704.01, 705.01 (CARs current to 2026-09-30). Existing operator/seat/PPC/CC content retained. Updated HTML mobile table layout and PWA cache version. Browser and offline device testing outstanding.
