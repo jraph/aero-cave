@@ -1,5 +1,10 @@
 # Content review
 
+## CAR 703 single-pilot IFR 50-hour minima — 26 October 2026
+
+Card 17 Markdown/HTML: added a separate, prominently labelled 723.86 single-pilot IFR passenger-operation requirement: 1,000 hours total, 100 hours ME if multi-engine, 50 hours actual/simulated IMC and 50 hours on aeroplane type; PPC autopilot assessment and FL250 limit for pressurized aeroplanes. Explicitly not a blanket CAR 703 PIC requirement. Source: Transport Canada Standard 723.86 (aeroplanes). PWA cache bumped. Visual tests not run.
+
+
 ## Illustrative aircraft models in operating-category matrix — 26 October 2026
 
 Added a model-examples column to all 10 PIC/SIC entries in Card 17 Markdown and bilingual HTML. Covers representative 604 private piston twin/pressurized piston/single turbine/jet/large business jet; 702 aerial-work aircraft; 703 single- and multi-engine air taxi; 704 19-seat commuter aircraft and qualifying business jet; 705 regional and airline aircraft. Examples are non-exhaustive and do not confer a regulatory subpart: actual type, certification, seats, mission, aircraft weights and air-operator approvals control. Manufacturer references added; HTML mobile layout updated and offline cache version bumped. Not browser- or device-tested.
