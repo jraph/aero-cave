@@ -28,6 +28,12 @@
 
 **Aircraft classification / Classement des aéronefs:** MCTOW = maximum certificated takeoff weight / masse maximale homologuée au décollage (MMHD). MZFW = maximum zero fuel weight / masse maximale sans carburant. **704 turbojet uses MZFW, not MCTOW.** Seating limits exclude pilot seats except where the rule expressly uses type-certificate passenger authorization; 702 aerial work and 604 private operations are defined by purpose/equipment, not one shared seat cut-off. §604.02 applicability is broader than §604.03 registration. Ministerial 703/704/705 authorizations and helicopter-specific conditions may apply. / **704 turboréacteur : masse maxi sans carburant, non masse au décollage.**
 
+### 703 SINGLE-PILOT IFR + PASSENGERS / IFR MONOPILOTE + PASSAGERS — STD 723.86
+
+**Authorized exception to two-pilot IFR / Dispense autorisée de copilote IFR.** In addition to 703 ME PIC **PPC 12 mo**, the PIC needs **1,000 h total**, **100 h ME if operating ME**, **50 h simulated or actual flight in IMC**, **50 h on aeroplane type**. PPC must assess single-pilot procedures including autopilot; for pressurized aeroplanes, **FL250 maximum**. These thresholds do **not** apply to every 703 flight. / En plus du **PPC CDB multimoteur 12 mois** : **1 000 h total**, **100 h multimoteur si appareil ME**, **50 h de vol en IMC réel ou simulé**, **50 h sur type**; PPC monopilote et procédures pilote automatique; avion pressurisé **FL250 max**. **Pas** un minimum universel pour tous les vols 703.
+
+**M:** `703 SP-IFR PAX = 1000 TT / 100 ME / 50 IMC / 50 TYPE + PPC`. [CASS 723.86](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-723-air-taxi-aeroplanes-canadian-aviation-regulations-cars)
+
 ## LICENCE → TYPE / LICENCE → TYPE
 
 | Qualification | English | Français |
