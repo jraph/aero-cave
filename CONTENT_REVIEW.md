@@ -1,5 +1,10 @@
 # Content review
 
+## Aircraft applicability and dual-unit limits — 26 October 2026
+
+Card 17 Markdown and bilingual HTML: added aircraft applicability to each PIC/SIC row of Table 1, with metric and regulatory pound equivalents: large aeroplane >5,700 kg (>12,566 lb); 703/704 multi-engine MCTOW ≤8,618 kg (19,000 lb); 704 turbojet MZFW ≤22,680 kg (50,000 lb); 705 aeroplane MCTOW >8,618 kg (>19,000 lb) or type certificate ≥20 pax. Distinguished 604.02 aircraft scope from 604.03 private-operator registration; noted 702 work-based applicability and applicable authorization exceptions. Verified against current online CAR 101.01, 604.02–.03, 702.01, 703.01, 704.01, 705.01 (CARs current to 2026-09-30). Existing operator/seat/PPC/CC content retained. Updated HTML mobile table layout and PWA cache version. Browser and offline device testing outstanding.
+
+
 ## Pilot licensing / PPC / CC / type-rating decision card — 24 October 2026
 
 Added Card 17 as a **bilingual CAVE quick-reference** (standalone Markdown + HTML reader), referencing authoritative Card 04 rather than moving or deleting legal material. Cross-checked operative PIC/SIC distinctions against CAR 702.65, 703.88, 704.108, 705.106; check validity against 604.139, 702.67, 703.91, 704.111, 705.113; current instrument recency under 401.05; type requirements in Standard 421.40; licence headline hours in TC AIM 2026-2. Live CARs consolidation noted current to 2026-09-30 (last amended 2026-06-17). Exam summary deliberately excludes complete Ops Specs, Part IV aircraft-specific limits and alternate programs. Added index, README, manifest shortcut, PWA cache entry/version and offline cache-test path. Browser/device rendering not independently verified.
