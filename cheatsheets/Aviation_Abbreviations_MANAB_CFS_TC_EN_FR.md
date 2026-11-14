@@ -478,6 +478,65 @@
 **Memory traps & examples / Pièges et exemples**
 <!-- id: abbr-memory-traps-examples-pi-ges-et-exemples | concepts: study-pebble, study-traps, study-abbrev | level: PPL CPL IR ME -->
 
+| Code | English | Français |
+|---|---|---|
+| TC · MP / MAP / AD / FD | MP manifold pressure ≠ MAP missed approach point; TC AD airworthiness directive ≠ MANAB aerodrome; TC FD upper-level wind and temperature forecasts ≠ flight director. | MP pression d'admission ≠ MAP point d'approche interrompue ; TC AD consigne de navigabilité ≠ MANAB aérodrome ; TC FD vents/températures en altitude ≠ directeur de vol. |
+| ACFT · AD · APRT | Aircraft · Aerodrome · Airport. | Aéronef · Aérodrome · Aéroport. |
+| AP | Airport, or anomalous propagation in weather | Aéroport, ou propagation anormale en météo. |
+| RPT | CFS: report; MANAB: repeat | CFS : compte rendu; MANAB : répéter. |
+| hr / HR | CFS hr: hour; CFS HR: high-level air route | CFS hr : heure; CFS HR : route aérienne de haute altitude. |
+| MIFG | MI shallow + FG fog | MI mince + FG brouillard. |
+| BCFG · PRFG | Fog patches · Partial aerodrome coverage. | Bancs de brouillard · Couverture partielle de l’aérodrome. |
+| VCFG · FZFG | Fog nearby · Freezing fog. | Brouillard au voisinage · Brouillard givrant. |
+| MI · BC · PR | Weather descriptors used with FG | Descripteurs météo employés avec FG. |
+| TS + SH | Do not combine these two descriptors in one weather group | Ne pas combiner ces deux descripteurs dans un même groupe météo. |
+| SS | Weather: sandstorm; CFS: sunset | Météo : tempête de sable; CFS : coucher du soleil. |
+| M | Temperature: minus; bearing: magnetic; RVR: below measurement range | Température : moins; relèvement : magnétique; RVR : sous la plage de mesure. |
+| ACC | Weather: altocumulus castellanus; CFS: Area Control Centre | Météo : altocumulus castellanus; CFS : centre de contrôle régional. |
+| NS | Cloud: nimbostratus; location: Nova Scotia | Nuage : nimbostratus; lieu : Nouvelle-Écosse. |
+| GS | Weather: snow pellets; ILS: glide slope | Météo : neige roulée; ILS : alignement de descente. |
+| NR · WI | Near or number · Within, or Wisconsin. | Près ou numéro · À l’intérieur de, ou Wisconsin. |
+| FEW · SCT · BKN · OVC | 1–2 · 3–4 · 5–7 · 8 oktas. | 1–2 · 3–4 · 5–7 · 8 octas. |
+| CIG | Lowest BKN/OVC layer, or vertical visibility | Plus basse couche BKN/OVC, ou visibilité verticale. |
+| METAR / TAF | Cloud heights: hundreds of feet above aerodrome | Hauteurs des nuages : centaines de pieds au-dessus de l’aérodrome. |
+| GFA | Cloud bases/tops generally ASL; ceilings AGL | Bases/sommets généralement ASL; plafonds AGL. |
+| FZ · SH · TS | Freezing · Showers · Thunderstorm. | Verglaçant · Averses · Orage. |
+| − · no sign · + | Light · moderate · heavy, where intensity applies | Léger · modéré · fort, lorsque l’intensité s’applique. |
+| −SHRA | Light rain showers | Averses de pluie légères. |
+| SHGS | Snow-pellet showers; may also mean small hail <5 mm | Averses de neige roulée; aussi petite grêle <5 mm. |
+| FM | New prevailing conditions from the stated time | Nouvelles conditions dominantes dès l’heure indiquée. |
+| BECMG | Transition within the stated interval | Transition pendant l’intervalle indiqué. |
+| TEMPO | Each event <1 h; total ≤ half the TEMPO window | Chaque épisode <1 h; total ≤ la moitié de la période TEMPO. |
+| NSW | No significant weather; clouds may remain | Aucun temps significatif; des nuages peuvent subsister. |
+| PN ≠ PPR | Notify ≠ obtain permission | Donner un préavis ≠ obtenir une permission. |
+| O/R · O/T · O/S | On request · other times · out of service | Sur demande · aux autres heures · hors service. |
+| MF / ATF | Frequency-area designation; not a service type | Désignation de fréquence-zone; pas un type de service. |
+| FSS · RAAS · CARS · AU · UNICOM | Service labels; an MF area can have no ground station operating | Types de services; une MF peut exister sans station au sol en service. |
+| LWIS | Wind, temperature, dew point, altimeter | Vent, température, point de rosée, calage altimétrique. |
+| 10–04Z | 1000 UTC to 0400 UTC the next day | 10 h UTC à 4 h UTC le lendemain. |
+| ‡ | UTC hours become 1 h earlier during daylight-saving time | Heures UTC avancées de 1 h à l’heure d’été. |
+| UTC−5(4) | Local time: UTC−5 standard; UTC−4 daylight | Heure locale : UTC−5 normale; UTC−4 été. |
+| (V) · (U) · (E) | 121.5 MHz · 243.0 MHz · both | 121,5 MHz · 243,0 MHz · les deux. |
+| INTL AIR | International Air Carrier | Transporteur aérien international. |
+| (bil) | After COMM: all listed services; before one service: that service | Après COMM : tous les services listés; devant un service : ce service. |
+| TORA · TODA · ASDA · LDA | Run · run + clearway · run + stopway · landing | Roulement · roulement + prolongement dégagé · roulement + prolongement d’arrêt · atterrissage. |
+| Displaced threshold / Seuil décalé | Landing distance reduced in that direction | Distance d’atterrissage réduite dans ce sens. |
+| DME | Slant-range distance | Distance oblique. |
+| MEHT | Eye height, not wheel clearance | Hauteur de l’œil, pas marge des roues. |
+| NDA | VOR/TACAN referenced to true north | VOR/TACAN orientés au nord vrai. |
+| FL | Pressure reference 29.92 inHg | Référence de pression 1013,2 hPa. |
+| S 1 · 2 · 3 | Storage · minor repairs · major repairs | Entreposage · réparations mineures · réparations majeures. |
+| S 4 · 5 · 6 · 7 | Extended parking · tie-down · plug-in · pick-up/drop-off only | Stationnement prolongé · arrimage · prises · embarquement/débarquement seulement. |
+| PF A · B · C · D | Terminal · on aerodrome · within 5 NM · within 30 NM | Aérogare · sur l’aérodrome · à moins de 5 NM · à moins de 30 NM. |
+| PF 1 · 2 · 3 · 4 | Phone · food · taxi · medical | Téléphone · restauration · taxi · services médicaux. |
+| PF 5 · 6 · 7 · 8 | Hotel · car rental · public Wi-Fi · public Internet | Hôtel · location auto · Wi-Fi public · Internet public. |
+| S 5 ≠ PF 5 | Tie-down ≠ hotel | Arrimage ≠ hôtel. |
+| PF A-1,2 B-5 | Phone/food in terminal; hotel on aerodrome | Téléphone/restauration dans l’aérogare; hôtel sur l’aérodrome. |
+| S 2,5 | Minor repairs + tie-down | Réparations mineures + arrimage. |
+| MF 118.7 04–12Z 5NM 3100 ASL | Frequency · service hours · radius · upper limit | Fréquence · heures du service · rayon · limite supérieure. |
+
+##### Grouped examples / Exemples groupés
+
 **Basic-code context / Contexte des codes de base** · ACFT = aircraft / aéronef; AD and A/D = aerodrome / aérodrome; APRT = airport / aéroport. AP also means anomalous propagation in meteorology / AP signifie aussi propagation anormale en météo. CFS rpt = report / compte rendu; MANAB RPT = repeat / répéter. CFS hr = hour, HR = high-level air route / CFS hr = heure, HR = route aérienne de haute altitude.
 
 **Fog & code-building / Brouillard et composition** · MIFG = MI shallow + FG fog / MI mince + FG brouillard. BCFG = banks / bancs; PRFG = partial aerodrome coverage / couverture partielle de l’aérodrome; VCFG = nearby / au voisinage; FZFG = freezing fog / brouillard givrant. MI/BC/PR apply to FG / s’emploient avec FG. No TS+SH combined descriptor / pas de double descripteur TS+SH. SS: weather sandstorm, CFS sunset / météo tempête de sable, CFS coucher du soleil. M: temperature minus; bearing magnetic; RVR below measurement range / température négative; relèvement magnétique; RVR sous la plage de mesure.

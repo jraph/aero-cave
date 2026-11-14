@@ -1,5 +1,9 @@
 # Content review
 
+## Abbreviations in the explorer — 14 November 2026
+
+The abbreviations tile and PWA shortcut open collection A. The explorer selects EN/FR/both columns for MANAB/CFS and supplementary TC exam entries. All 54 individually labelled bilingual memory reminders from the legacy reader are available in the memory-traps unit, alongside its original grouped examples, which contain additional context. The existing reader URL remains published. Migration only; source editions and aviation wording carried forward.
+
 ## CPAER formulas in the explorer — 14 November 2026
 
 The home collection tile and installed-app shortcut open the formulas card in the explorer. EN/FR/both selects the language columns and memory-trap explanations. The published standalone reader remains available through its existing URL and section links during migration. Study text and source references were carried forward without an aviation accuracy review.

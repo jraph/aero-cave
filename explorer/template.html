@@ -237,7 +237,7 @@ function fmt(s, card) {
     .replace(/(^|[^*\w])\*([^*\s][^*]*)\*(?![\w*])/g, '$1<em>$2</em>');
 }
 const cells = r => r.trim().replace(/^\|/, '').replace(/\|$/, '').split(/(?<!\\)\|/).map(c => c.trim().replace(/\\\|/g, '|'));
-function formulaColumns(row) {
+function languageColumns(row) {
   return cells(row).filter((_, i) => i === 0 || lang === 'both' || i === (lang === 'en' ? 1 : 2));
 }
 function md(src, card) {
@@ -252,10 +252,15 @@ function md(src, card) {
     if ((m = /^#{5,6}\s+(.*)$/.exec(tr))) { flushP(); closeLists(0); out.push('<h5>' + inline(m[1], card) + '</h5>'); i++; continue; }
     if (tr[0] === '|' && i + 1 < lines.length && /^\|?\s*:?-{2,}/.test(lines[i + 1].trim())) {
       flushP(); closeLists(0);
-      const columns = card?.id === 'F' && tr === '| Label | English | Français |' ? formulaColumns : cells;
+      const columns = /^[|] (?:Label|Code) [|] English(?: · TC exam)? [|] Français(?: · étude)? [|]$/.test(tr) ? languageColumns : cells;
       let h = '<div class="tw"><table><thead><tr>' + columns(tr).map(c => '<th>' + inline(c, card) + '</th>').join('') + '</tr></thead><tbody>';
       i += 2;
-      while (i < lines.length && lines[i].trim()[0] === '|') { h += '<tr>' + columns(lines[i]).map(c => '<td>' + inline(c, card) + '</td>').join('') + '</tr>'; i++; }
+      const glossarySearch = card?.id === 'A' && tokens.length && !tokens.every(w => norm(card.heading || '').includes(w));
+      while (i < lines.length && lines[i].trim()[0] === '|') {
+        const row = lines[i++];
+        if (glossarySearch && !tokens.every(w => norm(row).includes(w))) continue;
+        h += '<tr>' + columns(row).map(c => '<td>' + inline(c, card) + '</td>').join('') + '</tr>';
+      }
       out.push(h + '</tbody></table></div>'); continue;
     }
     if ((m = /^(\s*)([-*+]|\d+[.)])\s+(.*)$/.exec(ln))) {
@@ -369,7 +374,7 @@ function sectionEl(s) {
   d.appendChild(el('summary', '', '<span class="st">' + esc(s.h) + '</span>' + s.p.map(p => '<span class="pb">' + p + '</span>').join('') + snippet(s)));
   d.addEventListener('toggle', () => {
     if (!d.open || d.dataset.done) return; d.dataset.done = 1;
-    const b = el('div', 'body', (/pebble/i.test(s.h) && pebble(s.md)) || md(s.md, {id: card.id, file: s.f || card.file})), f = el('div', 'foot', '<span>' + esc(t('also')) + '</span>');
+    const b = el('div', 'body', (/pebble/i.test(s.h) && pebble(s.md)) || md(s.md, {id: card.id, heading: s.h, file: s.f || card.file})), f = el('div', 'foot', '<span>' + esc(t('also')) + '</span>');
     s.c.forEach(id => f.appendChild(chip(id, id === S.c ? 'b' : '')));
     if (s.u) { const refs = unitItems.get(s.u) || [], f2 = el('div', 'foot', '<span class="uid">#' + s.u + '</span>');
       const byG = new Map(); for (const r of refs) { if (!byG.has(r.g.id)) byG.set(r.g.id, []); byG.get(r.g.id).push(r.grp.code + ' ' + r.it.n); }
@@ -426,7 +431,7 @@ function render() {
   $('home').hidden = !browsing;
   if (browsing) {
     const ts = $('ts'), tg = $('tg'), tr = $('tr'); ts.textContent = tg.textContent = tr.textContent = '';
-    for (const c of D.cards) if (c.reader) { const a = el('a', 'tile', '<b>' + esc(L(c)) + '</b><span>EN / FR</span>'); a.href = c.id === 'F' ? '#x-any-F-any' : c.reader; a.style.textDecoration = 'none'; a.style.color = 'inherit'; tr.appendChild(a); }
+    for (const c of D.cards) if (c.reader) { const a = el('a', 'tile', '<b>' + esc(L(c)) + '</b><span>EN / FR</span>'); a.href = ['F', 'A'].includes(c.id) ? '#x-any-' + c.id + '-any' : c.reader; a.style.textDecoration = 'none'; a.style.color = 'inherit'; tr.appendChild(a); }
     for (const g of D.guides) { const all = g.groups.flatMap(x => x.items), n = k => all.filter(i => i.s === k).length; const b = el('button', 'tile', '<b>' + esc(g.guide + ' · ' + L(g)) + '</b><span>' + all.length + ' ' + t('items') + ' · ' + n('C') + ' C · ' + n('P') + ' P · ' + n('M') + ' M · ' + n('E') + ' E</span>'); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); }
     for (const [g, box] of [['stage', $('tp')], ['ops', $('to')]]) { box.textContent = ''; for (const v of V.values()) if (v.group === g) { const b = el('button', 'tile', '<b>' + esc(L(v)) + '</b><span>' + (v.ref ? esc(v.ref) + ' · ' : '') + vn.get(v.id) + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p:v.id}, true); box.appendChild(b); } }
     for (const r of roots) { const n = counts.get(r); if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(C.get(r))) + '</b><span>' + n + ' ' + t('secs') + ' · ' + C.get(r).narrower.filter(x => counts.get(x)).length + ' ' + t('topics') + '</span>'); b.type = 'button'; b.onclick = () => go({c:r}, true); ts.appendChild(b); }

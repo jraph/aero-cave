@@ -70,3 +70,25 @@ test('formula tables and memory traps render in each selected language', () => {
     }
   }
 });
+
+test('abbreviation collection keeps bilingual rows, TC scope and searchable memory reminders', () => {
+  const vm = require('node:vm');
+  const renderer = html.slice(html.indexOf('function href('), html.indexOf('function pebble('));
+  const glossary = data.sections.filter(s => s.card === 'A');
+  const norm = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const render = (unit, lang, tokens = []) => vm.runInNewContext(renderer + '\nmd', {
+    lang, tokens, norm, esc: s => s, URL, REPO: 'https://example.org/'
+  })(unit.md, {id:'A', heading:unit.h});
+  for (const lang of ['en', 'fr', 'both']) {
+    const views = glossary.map(unit => render(unit, lang));
+    const count = views.join('').match(/<td>/g).length;
+    assert.equal(count, (369 + 79 + 54) * (lang === 'both' ? 3 : 2));
+    assert.equal(views.at(-1).includes('<th>English · TC exam</th>'), lang !== 'fr');
+    assert.equal(views.at(-1).includes('<th>Français · étude</th>'), lang !== 'en');
+  }
+  const traps = glossary.find(s => s.u.startsWith('abbr-memory-traps'));
+  const result = render(traps, 'fr', ['tempo']);
+  assert.equal((result.match(/<tbody><tr>/g) || []).length, 1);
+  assert.equal((result.match(/<td>/g) || []).length, 2);
+  assert.match(result, /la moitié de la période TEMPO/);
+});
