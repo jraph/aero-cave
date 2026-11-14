@@ -25,7 +25,7 @@ test('every section has a valid card, path and concept; every concept link resol
 test('guide items point at existing stable unit IDs; ID comments never leak into content', () => {
   const units = new Map(data.sections.filter(s => s.u).map(s => [s.u, s]));
   assert.equal(units.size, data.sections.filter(s => s.u).length, 'duplicate unit id');
-  assert.ok(data.sections.filter(s => s.card === 'MET' || s.card === '05').every(s => s.u || s.h === 'Overview'));
+  assert.ok(data.sections.filter(s => s.card === 'MET' || s.card === 'IFR' || s.card === '05').every(s => s.u || s.h === 'Overview'));
   assert.equal(data.sections.some(s => s.card === '16'), false, 'card 16 is retired');
   for (const f of Object.keys(data.cards.find(c => c.id === 'MET').files)) if (!/recall\.md$/.test(f)) assert.equal(data.sections.filter(s => s.f === f && s.h === 'Pebble').length, 1, f + ': one Pebble');
   for (const s of data.sections) assert.equal(s.md.includes('<!-- id:'), false, s.id);

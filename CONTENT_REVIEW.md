@@ -1,5 +1,11 @@
 # Content review
 
+## IFR / INRAT moved to concept files — 14 November 2026
+
+Cards 09 and 10 moved into 16 concept files under `kb/ifr/` (60 units, new permanent IDs `ifr-…`), then deleted. **Unit text unchanged** (machine-compared: every old section's text present; no concept link lost; all other cards byte-identical). Three units identical in both cards kept once: Instrument-rating recency, Current publication cycle, Sources & review status. Card 10 headings that collided with card 09 in the same file carry a `· INRAT` suffix. Six coverage-matrix link definitions re-pointed.
+
+Not done: near-duplicate units (clearance, IFR in VMC, lost comms, holding, RASS, landing minima, missed approach, alternate minima, approach ban, GNSS) are side by side, **not merged**; no per-concept Pebbles (both card Pebbles are in `kb/ifr/recall.md`); nothing re-validated against CARs / AIM / CAP. **X-01 still open and now lives in `kb/ifr/cap-plates-publications.md`**: the "current" AIRAC cycle reads 9 Jul–3 Sep 2026. Cards 11 and 12 (procedures) unchanged.
+
 ## V-02 closed — 14 November 2026
 
 Verified against Transport Canada AIM 2026-2, MET 7.3, printed p. 158 (TEMPO). Each occurrence lasts less than one hour. Their combined duration may equal half of the indicated TEMPO window. Updated the TAF unit and Pebble, EN/FR glossary and reader, syllabus note and coverage records. Earlier entries below are historical snapshots.

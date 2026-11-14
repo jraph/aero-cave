@@ -33,8 +33,8 @@
 | 06 Formulas & conversions | [Open](cheatsheets/06_aviation_formulas_conversions_av_cave_v0_2.md) | Navigation; Meteorology; Aeronautics / Flight Operations | Shared calculation reference; keep single formula index with syllabus tags |
 | 07 C150M POH | [Open](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md) | Aeronautics (aircraft-specific supplement) | Keep aircraft type-specific speeds/limits separate from generic theoretical guidance |
 | 08 Systems & failures | [Open](cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md) | Aeronautics / Airframes, Engines and Systems; Flight Instruments; Operations | Owner candidate for aircraft systems; check overlapping POH procedures |
-| 09 IFR knowledge | [Open](cheatsheets/09_ifr_knowledge_core_av_cave_v0_2.md) | INRAT; CPAER cross-reference only | Advanced IFR companion, not default CPAER content home |
-| 10 INRAT knowledge | [Open](cheatsheets/10_inrat_knowledge_core_av_cave_v0_3.md) | INRAT | Keep exam-specific IFR scope intact |
+| 09 IFR knowledge (retired 14 Nov 2026) | [kb/ifr](kb/ifr/README.md) | INRAT; CPAER cross-reference only | Advanced IFR companion, not default CPAER content home |
+| 10 INRAT knowledge (retired 14 Nov 2026) | [kb/ifr](kb/ifr/README.md) | INRAT | Keep exam-specific IFR scope intact |
 | 11 CAP plate reading | [Open](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md) | INRAT | Keep chart-reading companion |
 | 12 IFR procedures | [Open](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) | INRAT | Keep procedural companion |
 | 13 Multi-engine knowledge | [Open](cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md) | Multi-engine; Aeronautics cross-reference | Keep rating/type-specific matters separate; link generic theory |

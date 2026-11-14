@@ -256,10 +256,10 @@ Numbers below refer to the named TP group. Evidence supports only the specific s
 
 ## Evidence links
 
-[ifr-check]: cheatsheets/10_inrat_knowledge_core_av_cave_v0_3.md#navigation-aid-checks
-[ifr-gnss]: cheatsheets/10_inrat_knowledge_core_av_cave_v0_3.md#rnavgnss
-[ifr-human]: cheatsheets/10_inrat_knowledge_core_av_cave_v0_3.md#human-factors--single-pilot-ifr
-[inrat-cycle]: cheatsheets/10_inrat_knowledge_core_av_cave_v0_3.md#current-publication-cycle
+[ifr-check]: kb/ifr/navaid-checks.md#navigation-aid-checks
+[ifr-gnss]: kb/ifr/approaches.md#rnavgnss
+[ifr-human]: kb/ifr/rules-privileges.md#human-factors--single-pilot-ifr
+[inrat-cycle]: kb/ifr/cap-plates-publications.md#current-publication-cycle
 [plate-light]: cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md#lighting--runway--visual-aids
 [plate-source]: cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md#frequencies--nav-source
 [plate-method]: cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md#inrat-plate-question-method
@@ -406,8 +406,8 @@ Numbers below refer to the named TP group. Evidence supports only the specific s
 [sys-scan]: cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md#source--discipline--scan
 [sys-co]: cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md#carbon-monoxide
 [sys-checklist]: cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md#checklist--declaration
-[ifr-cycle]: cheatsheets/09_ifr_knowledge_core_av_cave_v0_2.md#current-publication-cycle
-[ifr-emerg]: cheatsheets/09_ifr_knowledge_core_av_cave_v0_2.md#ifr-emergencies
+[ifr-cycle]: kb/ifr/cap-plates-publications.md#current-publication-cycle
+[ifr-emerg]: kb/ifr/emergencies-instrument-failures.md#ifr-emergencies
 [recall-fic]: cheatsheets/CPAER_Formulas_Recall_EN_FR.md#fir--fic
 [recall-time]: cheatsheets/CPAER_Formulas_Recall_EN_FR.md#twilight--time-zones--dst--crépuscule--fuseaux--heure-avancée
 [recall-stall]: cheatsheets/CPAER_Formulas_Recall_EN_FR.md#stall--airspeed--décrochage--vitesse

@@ -39,7 +39,7 @@ The collection is moving from numbered cards to **concept files**: one Markdown 
 | Licensing & air law | [03 · Licensing, performance & ops](cheatsheets/03_licensing_performance_operations_av_cave_v0_2.md) · [04 · Canadian air law](cheatsheets/04_canadian_air_law_core_av_cave_v0_2_compact.md) · [17 · Pilot qualifications](cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md) |
 | Calculations | [06 · Formulas & conversions](cheatsheets/06_aviation_formulas_conversions_av_cave_v0_2.md) |
 | Aircraft | [07 · C150M POH](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md) · [08 · Systems & failures](cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md) · [13 · Multi-engine](cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md) |
-| IFR & INRAT | [09 · IFR knowledge](cheatsheets/09_ifr_knowledge_core_av_cave_v0_2.md) · [10 · INRAT](cheatsheets/10_inrat_knowledge_core_av_cave_v0_3.md) · [11 · CAP plates](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md) · [12 · IFR procedures](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) |
+| IFR & INRAT | [`kb/ifr/`](kb/ifr/README.md): 16 concept files (rules & recency, planning & fuel, alternates, departure, enroute, holding, approaches, minima, missed & circling, CAP plates, RASS, lost comms, emergencies, navaid checks, IFR weather, recall); near-duplicates not merged yet · procedures: [11 · CAP plates](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md) · [12 · IFR procedures](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) |
 
 **What goes where:** knowledge → concept file · ordered procedures, flows and QRCs → numbered card · aircraft-type data → its POH card.
 
