@@ -8,7 +8,7 @@
 <!-- id: wxp-taf | from: 05 -->
 
 - `P:` ID→issue/valid→prevailing→`FM/BECMG/TEMPO/PROB` timeline covering DEP/ETA/ALT ETA + delay; do not average groups.
-- `FM` permanent from minute | `BECMG` gradual permanent | `TEMPO` each `<1 h`, total `≤½` period | `PROB30/40` probability.
+- `FM` permanent from minute | `BECMG` gradual permanent | `TEMPO` each `<1 h`, combined `≤½` of the TEMPO window [TC AIM 2026-2, MET 7.3, p. 158] | `PROB30/40` probability.
 - `FM` begins a new self-contained forecast period. With `BECMG/TEMPO`, unchanged groups may carry forward, but a changed cloud group gives the complete new cloud picture; visibility/weather/obscuration form another related group. Do not retain an old cloud layer merely because it is absent after a change. `[AIM MET 7.4]`
 ***
 #### TAF alternate / risk
@@ -20,6 +20,6 @@
 #### Pebble
 <!-- id: met-taf-pebble | also: study-pebble -->
 
-- TAF `FM = permanent from the minute, new self-contained period | BECMG = gradual permanent | TEMPO = each <1 h, total ≤½ period (? glossary says <½: unresolved V-02) | PROB30/40 | do not average groups`
+- TAF `FM = permanent from the minute, new self-contained period | BECMG = gradual permanent | TEMPO = each <1 h, combined ≤½ TEMPO window | PROB30/40 | do not average groups`
 - ALTERNATE `BECMG improve = end / deteriorate = start | TEMPO ≥ alternate minima | PROB ≥ landing minima | alternate ≠ landing ≠ approach-ban minima`
 ***

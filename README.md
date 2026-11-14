@@ -29,7 +29,7 @@ Readers offer EN / FR / both, search, topic filters, themes, text size and print
 
 ## Content
 
-The collection is moving from numbered cards to **concept files**: one Markdown file per ontology concept, each ending with its own Pebble. Meteorology is done; other subjects are still numbered cards.
+The collection is moving from numbered cards to **concept files**: one Markdown file per ontology concept, with per-concept Pebbles and a separate exam-traps file. The Meteorology migration is complete; other subjects are still numbered cards.
 
 | Subject | Where |
 |---|---|
@@ -47,7 +47,7 @@ The collection is moving from numbered cards to **concept files**: one Markdown 
 
 - **Coverage:** [CPAER_COVERAGE.md](CPAER_COVERAGE.md) (plan and gates) and [CPAER_COVERAGE_MATRIX.md](CPAER_COVERAGE_MATRIX.md) (group-level audit, 22 Oct 2026). Item-level map: [`explorer/syllabus.json`](explorer/syllabus.json), TP 12881 Meteorology = 51 covered / 33 partial / 26 missing / 1 unchecked.
 - **Review log:** [CONTENT_REVIEW.md](CONTENT_REVIEW.md) records sources, editions, what was checked and what was not. A commit date does not establish regulatory currency.
-- **Open conflicts:** listed in the coverage matrix (e.g. V-02, TAF `TEMPO` ≤½ vs <½).
+- **Open conflicts:** see the coverage matrix for X-01 and X-03. V-02 (TAF TEMPO) is closed.
 
 ## Authoritative references
 

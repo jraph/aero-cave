@@ -147,7 +147,7 @@
         {"n": 1, "en": "Issue times and validity", "s": "P", "u": ["wxp-gfa", "wxp-taf"], "gap": "GFA issue / valid times given; TAF, FB, AIRMET and SIGMET issue and validity periods absent."},
         {"n": 2, "en": "Decoding", "s": "C", "u": ["wxp-taf", "wxp-gfa", "wxp-upper-winds"], "gap": ""},
         {"n": 3, "en": "GFA", "s": "C", "u": ["wxp-gfa", "wx-products", "wx-freezing-level"], "gap": ""},
-        {"n": 4, "en": "TAF", "s": "C", "u": ["wxp-taf", "wxp-taf-alternate", "wx-products"], "gap": "Open conflict V-02: TEMPO total ≤½ here vs <½ in the glossary; not yet resolved against AIM MET."},
+        {"n": 4, "en": "TAF", "s": "C", "u": ["wxp-taf", "wxp-taf-alternate", "wx-products"], "gap": ""},
         {"n": 5, "en": "Upper winds and temperatures (FB)", "s": "P", "u": ["wxp-upper-winds"], "gap": "Use and interpolation; FB coding format, levels and issue times absent."},
         {"n": 6, "en": "AIRMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wx-products"], "gap": ""},
         {"n": 7, "en": "SIGMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wx-products"], "gap": ""}

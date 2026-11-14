@@ -1,5 +1,9 @@
 # Content review
 
+## V-02 closed — 14 November 2026
+
+Verified against Transport Canada AIM 2026-2, MET 7.3, printed p. 158 (TEMPO). Each occurrence lasts less than one hour. Their combined duration may equal half of the indicated TEMPO window. Updated the TAF unit and Pebble, EN/FR glossary and reader, syllabus note and coverage records. Earlier entries below are historical snapshots.
+
 ## Meteorology: merged overlapping units, per-concept Pebbles, card 16 removed — 14 November 2026
 
 Branch `feat/kb-met-concepts`. **No fact was added and nothing was re-validated against the AIM**; this is consolidation of existing card text.
