@@ -1,5 +1,9 @@
 # Content review
 
+## CPAER formulas in the explorer — 14 November 2026
+
+The home collection tile and installed-app shortcut open the formulas card in the explorer. EN/FR/both selects the language columns and memory-trap explanations. The published standalone reader remains available through its existing URL and section links during migration. Study text and source references were carried forward without an aviation accuracy review.
+
 ## Consolidation completed; ontology and landing page — 14 November 2026
 
 **Navigation, aeronautics, multi-engine consolidated** (no fact added, none re-validated): `nav-navigation` (01) and `nav-nav-met-systems` (03) retired into `nav-diversion-lost` (new, both divert lines combined), `nav-true-magnetic-compass`, `nav-1-in-60-rule` and `agk-systems-oral-list` (new); the card 03 MET summary line dropped as restated in `kb/met`. `agk-performance-w-b` (01) and `-c03` (03) retired into `agk-weight-balance` and `agk-performance-factors` (new). `agk-human-emergency` / `agk-emerg-human` regrouped as “Human factors / ADM” and “Emergency priorities” (duplicate CO lines combined). 18 per-concept Pebbles added.

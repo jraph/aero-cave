@@ -47,3 +47,26 @@ test('no card heading is dropped and the page loads nothing external', () => {
   }
   assert.equal(/<script[^>]+src=|<link[^>]+stylesheet|@import|fetch\(/.test(html), false);
 });
+
+test('formula tables and memory traps render in each selected language', () => {
+  const vm = require('node:vm');
+  const renderer = html.slice(html.indexOf('function href('), html.indexOf('function pebble('));
+  const formulas = data.sections.filter(s => s.card === 'F');
+  const tableLines = formulas.flatMap(s => s.md.split('\n')).filter(line => line.startsWith('|') && !line.startsWith('| Label') && !line.startsWith('|---'));
+  const traps = formulas.flatMap(s => s.md.split('\n')).filter(line => /^\*\*.+?\*\* · /.test(line));
+  assert.equal(tableLines.length, 251);
+  assert.equal(traps.length, 11);
+  for (const lang of ['en', 'fr', 'both']) {
+    const render = vm.runInNewContext(renderer + '\nmd', {lang, esc: s => s, URL, REPO: 'https://example.org/'});
+    for (const row of tableLines) {
+      const output = render('| Label | English | Français |\n|---|---|---|\n' + row, {id:'F'});
+      assert.equal((output.match(/<td>/g) || []).length, lang === 'both' ? 3 : 2);
+    }
+    for (const line of traps) {
+      const [, en, fr] = /\*\* · (.+?) \/ (.+)$/.exec(line);
+      const output = render(line, {id:'F'});
+      assert.equal(output.includes(en), lang !== 'fr');
+      assert.equal(output.includes(fr), lang !== 'en');
+    }
+  }
+});
