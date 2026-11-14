@@ -5,18 +5,16 @@
 
 ***
 #### Carburetor icing
-<!-- id: wx-carb-ice | from: 16 -->
+<!-- id: wx-carb-ice | from: 16, 05 -->
 
 - Fuel vaporization + venturi pressure drop can cool carb throat well below OAT.
-- Possible even in warm weather; risk high with humidity and partial power.
+- Possible even in warm weather, well above freezing; risk high with humidity and partial power/descent.
 - Fixed-pitch clue: RPM↓ then roughness.
-- Apply carb heat per POH; initial RPM drop/roughness may worsen while ice melts.
-- `T:` carb icing ≠ structural icing.
+- `P:` apply carb heat per POH; initial RPM drop/roughness may worsen while ice melts, then recovery.
+- `T:` carb icing ≠ structural icing; structural icing forecast and carb icing risk are different.
 ***
-#### Carburetor icing · QRC
-<!-- id: wxp-carb-ice | from: 05 -->
+#### Pebble
+<!-- id: carb-ice-pebble | also: study-pebble -->
 
-- Possible in humid conditions and well above freezing, especially partial power/descent.
-- `P:` apply carb heat per POH; expect initial RPM loss/roughness, then recovery if ice melts.
-- `T:` structural icing forecast and carb icing risk are different.
+- CARB ICE `fuel vaporization + venturi → throat well below OAT | possible in warm weather, well above freezing | humid + partial power/descent | fixed pitch: RPM↓ then roughness | carb heat per POH: RPM drop/roughness may worsen first | ≠ structural icing`
 ***

@@ -59,3 +59,13 @@
 - `M:` high→low or warm→cold = actual lower than indicated.
 - `T:` rapidly falling pressure often accompanies strengthening system/wind/weather deterioration.
 ***
+#### Pebble
+<!-- id: met-metar-pebble | also: study-pebble -->
+
+- SCAN `ID-TIME-WIND-VIS-WX-CLOUD-T/TD-ALT-RMK`
+- WIND `dddffGggKT, true direction | VRB | XW = wind×sin angle, HW = wind×cos angle | 30° = ½ / 45° ≈ 0.7 / 60° ≈ 0.87 / 90° = full | use gust for margin`
+- VIS `P6SM = >6 SM | prevailing ≠ flight ≠ ground ≠ runway visibility ≠ RVR`
+- WX `− light / no sign moderate / + heavy | VC proximity | FZ + liquid precip = icing red flag`
+- CLOUD `FEW 1-2 / SCT 3-4 / BKN 5-7 / OVC 8 oktas | hundreds ft AGL | ceiling = lowest BKN/OVC/VV; SCT ≠ ceiling`
+- T / ALT `TT/DD, M = minus | small spread alone ≠ fog | A2992 = 29.92 inHg`
+***

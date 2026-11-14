@@ -22,3 +22,10 @@
 - Stable air tends to trap contaminants; unstable mixing often improves general visibility.
 - `!:` whiteout = no discernible horizon/terrain cues over snow/cloud; visual attitude/height judgment can disappear.
 ***
+#### Pebble
+<!-- id: met-fog-pebble | also: study-pebble -->
+
+- FOG `RAD = clear / light wind / moist ground / night cooling | ADVECT = moist air over colder surface, needs wind, can persist | UPSLOPE = forced uphill | STEAM = cold air over warmer water | PRECIP/frontal = rain into cooler air | ICE FOG = very cold air`
+- M `RAD COOL / ADVECT MOVE / UPSLOPE LIFT`
+- VIS `stable air traps contaminants | whiteout = no horizon/terrain cues over snow/cloud`
+***

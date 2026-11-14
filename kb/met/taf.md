@@ -17,3 +17,9 @@
 - `BECMG` improve=end, deteriorate=start; `TEMPO`≥alternate minima; `PROB`≥landing minima.
 - `T:` alternate≠landing≠approach-ban minima. `TEMPO` near ETA and `PROB30/40` high-consequence `TS/FZRA/low vis` require fuel/options; many short groups reduce confidence.
 ***
+#### Pebble
+<!-- id: met-taf-pebble | also: study-pebble -->
+
+- TAF `FM = permanent from the minute, new self-contained period | BECMG = gradual permanent | TEMPO = each <1 h, total ≤½ period (? glossary says <½: unresolved V-02) | PROB30/40 | do not average groups`
+- ALTERNATE `BECMG improve = end / deteriorate = start | TEMPO ≥ alternate minima | PROB ≥ landing minima | alternate ≠ landing ≠ approach-ban minima`
+***

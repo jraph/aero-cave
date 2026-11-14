@@ -37,3 +37,11 @@
 - Rule-of-thumb TAS ≈ `IAS + ~2% per 1000 ft` in lower atmosphere.
 - Higher TAS at same IAS ⇒ larger turn radius and more ground distance during manoeuvre.
 ***
+#### Pebble
+<!-- id: met-atmos-pebble | also: study-pebble -->
+
+- ISA `15°C / 29.92 inHg / 1013.25 hPa / ≈2°C per 1000 ft to tropopause | ISA temp ≈ 15 − 2×ALT(1000 ft) | reference model ≠ forecast`
+- DA `PA = altitude with 29.92 set | DA ≈ PA + 120×(OAT − ISA temp) ft | HOT-HIGH-HUMID → TKOF roll↑ climb↓ TAS↑ for same IAS`
+- ALTIMETRY `HIGH→LOW / HOT→COLD = LOOK OUT BELOW (true ALT lower than indicated) | cold → apply published corrections where required`
+- TAS `≈ IAS + ~2% per 1000 ft (lower atmosphere) | TAS↑ → turn radius↑`
+***

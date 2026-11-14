@@ -20,7 +20,7 @@
 - Environment cools faster than DALR ⇒ absolutely unstable.
 - Environment cools slower than SALR / inversion ⇒ absolutely stable.
 - Between SALR/DALR ⇒ conditionally unstable.
-- Stable: stratiform cloud, smooth air, poor vis, steady precip.
+- Stable: stratiform cloud, smooth air, poor vis, steady precip, broad ice.
 - Unstable: CU/TCU/CB, turbulence, showers, generally better between-cloud vis.
 - `M:` steep lapse = vertical motion grows.
 ***
@@ -58,4 +58,13 @@
 - `RA` liquid; `DZ` tiny droplets; `SN`; `PL` ice pellets; `FZRA/FZDZ` supercooled liquid freezing on contact.
 - `!:` freezing rain/drizzle = high-severity icing signal.
 - Virga = precip evaporates before ground; may indicate downdrafts/microburst potential.
+***
+#### Pebble
+<!-- id: met-stab-pebble | also: study-pebble -->
+
+- LAPSE `DALR ≈3°C/1000 ft | SALR ≈1.5°C/1000 ft average, varies | environment cools faster than DALR → absolutely unstable | slower than SALR / inversion → absolutely stable | between → conditionally unstable`
+- AIR `stable = STRATUS-SMOOTH-POOR VIS-steady precip | unstable = CU/TCU/CB-TURB-SHOWERS, better vis between cloud`
+- CLOUD BASE `exam AGL = 1000(T−Td)/3 | parcel AGL = 1000(T−Td)/(3−0.5) | surface-lifted convective parcel only ≠ every ceiling`
+- DEW POINT `small T−Td + cooling → fog/low cloud more likely, not guaranteed | inversion = temp↑ with height: strongly stable, traps haze/smoke, possible wind shear`
+- PRECIP `FZRA/FZDZ = supercooled liquid, freezes on contact → high-severity icing | virga → possible downdraft/microburst`
 ***

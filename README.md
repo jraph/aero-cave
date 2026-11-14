@@ -22,7 +22,7 @@ HTML readers offer search, topic filters, dark/light themes, adjustable text and
 |---|---|
 | Flight theory & training | [01 · Flight Theory & VFR Knowledge](cheatsheets/01_flight_theory_vfr_knowledge_av_cave_v0_6.md) · [02 · Flight Training and Procedures](cheatsheets/02_flight_training_procedures_av_cave_v0_2.md) |
 | Licensing & operations | [17 · Pilot qualifications & checks](cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md) · [03 · Licensing, Performance & Operations](cheatsheets/03_licensing_performance_operations_av_cave_v0_2.md) · [04 · Canadian air law](cheatsheets/04_canadian_air_law_core_av_cave_v0_2_compact.md) |
-| Weather | [Meteorology concept files](kb/met/README.md) (pilot layout: one file per concept) · [05 · Go/no-go flows](cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md) · card 16 is now a pointer page |
+| Weather | [Meteorology concept files](kb/met/README.md) (one file per concept, each with its own Pebble) · [05 · Go/no-go flows](cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md) |
 | Calculations | [06 · Formulas & conversions](cheatsheets/06_aviation_formulas_conversions_av_cave_v0_2.md) |
 | Aircraft | [07 · C150M POH](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md) · [08 · Systems & failures](cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md) · [13 · Multi-engine](cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md) |
 | IFR & INRAT | [09 · IFR knowledge](cheatsheets/09_ifr_knowledge_core_av_cave_v0_2.md) · [10 · INRAT](cheatsheets/10_inrat_knowledge_core_av_cave_v0_3.md) · [11 · CAP plates](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md) · [12 · IFR procedures](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) |

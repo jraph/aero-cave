@@ -5,15 +5,17 @@
 
 ***
 #### Structural icing
-<!-- id: wx-icing | from: 16 -->
+<!-- id: wx-icing | from: 16, 05 -->
 
 - Requires visible moisture + aircraft surface at/below freezing.
 - **Rime:** small supercooled drops, rapid freeze, rough/opaque.
 - **Clear:** larger drops, slower freeze/spread, smooth/heavy.
 - **Mixed:** combination.
+- Intensity: trace/light/moderate/severe.
 - Effects: lift↓, drag↑, stall speed↑, climb↓; prop/intake/static/control contamination.
 - `!:` freezing rain/drizzle and severe icing require immediate escape.
-- `T:` `OAT >0°C` at surface says nothing about cloud icing aloft.
+- `!:` non-approved aircraft: avoid forecast/reported ice; exit at first indication.
+- Red: `FZRA/FZDZ/PL`, freezing-level crossing in cloud/precip, warm-front overrunning, PIREP/AIRMET/SIGMET, tops above capability. `T:` surface >`0°C` does not clear icing aloft.
 ***
 #### Freezing level
 <!-- id: wx-freezing-level | from: 16 | also: met-stab -->
@@ -25,13 +27,6 @@
 - Freezing level ≠ guaranteed icing layer; requires moisture.
 - Cloud + subzero temp + PIREP/AIRMET icing = stronger evidence.
 ***
-#### Icing gate
-<!-- id: wxp-icing | from: 05 | also: met-decide -->
-
-- Visible moisture + subfreezing surface; `FZRA/FZDZ` especially severe. Types rime/clear/mixed; trace/light/moderate/severe.
-- `!:` non-approved aircraft: avoid forecast/reported ice; exit at first indication.
-- Red: `FZRA/FZDZ/PL`, freezing-level crossing in cloud/precip, warm-front overrunning, PIREP/AIRMET/SIGMET, tops above capability. `T:` surface >`0°C` does not clear icing aloft.
-***
 #### Snow / freezing precipitation
 <!-- id: wxp-snow-fzra | from: 05 -->
 
@@ -39,4 +34,11 @@
 - Ice pellets imply warm layer aloft and possible nearby freezing rain/mixed icing.
 - `!:` freezing rain = severe icing/ground contamination risk; avoid.
 - `T:` light snow code can still produce unacceptable visual contrast/visibility.
+***
+#### Pebble
+<!-- id: met-icing-pebble | also: study-pebble -->
+
+- ICING `visible moisture + ACFT surface ≤0°C | rime = small drops, rough/opaque | clear = larger drops, smooth/heavy | lift↓ drag↑ stall speed↑ climb↓ | FZRA/FZDZ RED → immediate escape | surface >0°C ≠ no ice aloft`
+- GATE `non-approved ACFT: avoid forecast/reported ice, exit at first indication | PL → warm layer aloft, FZRA possible nearby`
+- FREEZING LEVEL `parcel 0°C exam = CB + 1000×Td/1.5 | detailed = CB + 1000×T_CB/1.5 | environmental FZ ≠ parcel 0°C | multiple levels possible with inversions | FZ level ≠ icing without moisture`
 ***
