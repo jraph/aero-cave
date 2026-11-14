@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aero CAVE · Knowledge explorer</title>
+<link rel="manifest" href="./manifest.json"><link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+<meta name="theme-color" content="#f4f7f8" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#111c24" media="(prefers-color-scheme: dark)">
+<style>
+:root{--size:16px;--bg:#f4f7f8;--panel:#fff;--ink:#183044;--muted:#526775;--accent:#006f75;--line:#dbe6e9;--stripe:#f0f6f6;--pill:#dff1ef;--warn:#8a5a00;font-size:var(--size);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111c24;--panel:#172731;--ink:#e7f0f4;--muted:#b2c3cc;--accent:#72d8ce;--line:#304550;--stripe:#1b3039;--pill:#234d50;--warn:#e8b95a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111c24;--panel:#172731;--ink:#e7f0f4;--muted:#b2c3cc;--accent:#72d8ce;--line:#304550;--stripe:#1b3039;--pill:#234d50;--warn:#e8b95a;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.35 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%}
+.wrap{max-width:60rem;margin:0 auto;padding:0 .7rem}
+header{padding:.7rem 0 .3rem}
+.eyebrow{font-size:.72rem;letter-spacing:.12em;color:var(--accent);font-weight:700}
+h1{font-size:1.25rem;margin:.1rem 0 .3rem;line-height:1.2}
+.top{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;font-size:.85rem}
+.top a{color:var(--accent)}
+.top .sp{flex:1}
+button,select,input{font:inherit;color:inherit}
+.btn{background:var(--panel);border:1px solid var(--line);border-radius:.45rem;padding:.25rem .55rem;cursor:pointer;min-height:2rem}
+.btn[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:.4rem 0}
+.bar .wrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.35rem}
+#q{grid-column:1/-1;width:100%;padding:.5rem .6rem;border:1px solid var(--line);border-radius:.5rem;background:var(--panel);min-height:2.4rem}
+.bar select{width:100%;min-width:0;padding:.4rem .3rem;border:1px solid var(--line);border-radius:.5rem;background:var(--panel);min-height:2.3rem;text-overflow:ellipsis}
+.bar select.on{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+@media (max-width:30rem){.bar .wrap{grid-template-columns:1fr 1fr}#fc{grid-column:1/-1}}
+main{padding:.6rem 0 3rem}
+h2{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:1rem 0 .4rem}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:.4rem}
+.tile{display:flex;flex-direction:column;gap:.15rem;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:.6rem;padding:.55rem .6rem;cursor:pointer;min-height:3.4rem}
+.tile b{font-size:.92rem;line-height:1.2}
+.tile span{font-size:.75rem;color:var(--muted)}
+.tile:hover,.chip:hover{border-color:var(--accent)}
+.tile.sel{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+#cpanel{background:var(--panel);border:1px solid var(--line);border-radius:.6rem;padding:.6rem;margin-bottom:.6rem}
+#cpanel h3{margin:.15rem 0 .35rem;font-size:1.1rem;line-height:1.2}
+.crumbs{font-size:.78rem;color:var(--muted);line-height:1.5}
+.crumbs button{background:none;border:0;padding:0;color:var(--accent);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.rel{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;margin-top:.35rem}
+.rel i{font-style:normal;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:4.2rem}
+.chip{background:var(--pill);border:1px solid transparent;border-radius:1rem;padding:.2rem .6rem;font-size:.8rem;cursor:pointer;line-height:1.25;text-align:left}
+.chip small{color:var(--muted)}
+.chip.r{background:none;border:1px dashed var(--line)}
+.chip.b{background:none;border:1px solid var(--line)}
+#graph{margin-top:.5rem;border-top:1px solid var(--line);padding-top:.4rem}
+#graph svg{display:block;width:100%;height:auto;max-width:34rem;margin:0 auto}
+#graph text{font-size:11px;fill:var(--ink);pointer-events:none}
+#graph .n rect{fill:var(--pill);stroke:var(--line);cursor:pointer}
+#graph .n.c rect{fill:var(--accent)}#graph .n.c text{fill:var(--bg);font-weight:700}
+#graph .n.r rect{fill:var(--panel);stroke-dasharray:4 3}
+#graph .n.b rect{fill:var(--panel)}
+#graph path{fill:none;stroke:var(--line);stroke-width:1.3}
+#graph path.r{stroke-dasharray:4 3}
+#count{font-size:.8rem;color:var(--muted);margin:.5rem 0 .3rem;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+.gh{font-size:.8rem;font-weight:700;color:var(--accent);margin:.8rem 0 .25rem;display:flex;gap:.4rem;align-items:baseline}
+.gh small{color:var(--muted);font-weight:400}
+details.sec{background:var(--panel);border:1px solid var(--line);border-radius:.5rem;margin:.22rem 0}
+details.sec>summary{list-style:none;cursor:pointer;padding:.42rem .55rem;display:flex;flex-wrap:wrap;gap:.3rem .45rem;align-items:baseline}
+details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary::before{content:"▸";color:var(--accent);font-size:.8rem}
+details.sec[open]>summary::before{content:"▾"}
+details.sec[open]>summary{border-bottom:1px solid var(--line)}
+.st{font-weight:600;flex:1;min-width:9rem;line-height:1.25}
+.pb{font-size:.62rem;font-weight:700;border:1px solid var(--line);border-radius:.3rem;padding:0 .25rem;color:var(--muted);letter-spacing:.03em}
+.snip{flex-basis:100%;font-size:.78rem;color:var(--muted);overflow-wrap:anywhere}
+mark{background:var(--pill);color:inherit;border-radius:.15rem;padding:0 .1rem}
+.body{padding:.45rem .55rem .55rem;font-size:.9rem;line-height:1.3;overflow-wrap:anywhere}
+.body p{margin:.3rem 0}.body ul,.body ol{margin:.25rem 0;padding-left:1.1rem}.body li{margin:.14rem 0}
+.body h5{margin:.6rem 0 .25rem;font-size:.86rem;color:var(--accent)}
+.body code{background:var(--stripe);border-radius:.2rem;padding:0 .2rem;font-size:.92em;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.body a{color:var(--accent)}
+.tw{overflow-x:auto;margin:.35rem 0;-webkit-overflow-scrolling:touch}
+.body table{border-collapse:collapse;font-size:.84rem;min-width:100%;overflow-wrap:normal}
+.body th,.body td{border:1px solid var(--line);padding:.14rem .35rem;text-align:left;vertical-align:top;min-width:3.2rem}
+.body th{background:var(--stripe)}.body tr:nth-child(even) td{background:var(--stripe)}
+.foot{border-top:1px dashed var(--line);margin-top:.5rem;padding-top:.4rem;display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;font-size:.78rem}
+.foot a{color:var(--accent);margin-left:auto}
+.empty{padding:1.2rem .4rem;color:var(--muted)}
+footer{font-size:.74rem;color:var(--muted);padding:1rem 0 2rem;border-top:1px solid var(--line)}
+footer a{color:var(--accent)}
+.note{font-size:.76rem;color:var(--warn);margin:.3rem 0 0}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style></head>
+<body>
+<header class="wrap">
+  <div class="eyebrow">AERO CAVE · PROTOTYPE</div>
+  <h1 data-t="title"></h1>
+  <div class="top">
+    <a href="https://jraph.github.io/aero-cave/" data-t="home"></a><span class="sp"></span>
+    <button class="btn" data-lang="en">EN</button><button class="btn" data-lang="fr">FR</button><button class="btn" data-lang="both">EN/FR</button>
+    <button class="btn" id="fs-">A−</button><button class="btn" id="fs+">A+</button><button class="btn" id="theme" aria-label="Theme / Thème">◐</button>
+  </div>
+</header>
+<div class="bar"><div class="wrap">
+  <label class="sr" for="q">Search / Rechercher</label><input id="q" type="search" autocomplete="off">
+  <label class="sr" for="fp">Study path / Parcours</label><select id="fp"></select>
+  <label class="sr" for="fk">Card / Fiche</label><select id="fk"></select>
+  <label class="sr" for="fc">Topic / Thème</label><select id="fc"></select>
+</div></div>
+<main class="wrap">
+  <div id="home">
+    <h2 data-t="hPath"></h2><div class="tiles" id="tp"></div>
+    <h2 data-t="hSubj"></h2><div class="tiles" id="ts"></div>
+    <p class="note" data-t="note"></p>
+  </div>
+  <div id="cpanel" hidden></div>
+  <div id="count" hidden></div>
+  <div id="results"></div>
+</main>
+<footer class="wrap"><span data-t="disc"></span> · <a href="https://github.com/jraph/aero-cave">GitHub</a> · build __BUILD__</footer>
+<script id="data" type="application/json">/*__DATA__*/null</script>
+<script>
+(() => {
+'use strict';
+const D = JSON.parse(document.getElementById('data').textContent);
+const $ = id => document.getElementById(id);
+const REPO = 'https://github.com/jraph/aero-cave/blob/main/', SITE = 'https://jraph.github.io/aero-cave/';
+const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const norm = t => t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const T = {
+  title:['Knowledge explorer','Explorateur de connaissances'], home:['Aero CAVE · Home','Aero CAVE · Accueil'],
+  search:['Search topics, rules, codes…','Chercher thèmes, règles, codes…'],
+  allP:['All study paths','Tous les parcours'], allK:['All cards','Toutes les fiches'], allC:['All topics','Tous les thèmes'],
+  hPath:['Start from a study path','Partir d’un parcours'], hSubj:['Or from a subject','Ou d’un sujet'],
+  note:['Path tags (PPL / CPL / IR / ME) and topic links are an editorial study structure, not a Transport Canada syllabus mapping.','Les parcours (PPL / CPL / IFR / ME) et les liens thématiques sont une structure d’étude éditoriale, non une correspondance officielle de Transports Canada.'],
+  topics:['topics','thèmes'],
+  secs:['sections','sections'], sec:['section','section'], reset:['Clear filters','Effacer les filtres'],
+  nar:['Narrower','Plus précis'], rel:['Related','Associés'], bro:['Broader','Plus large'], graph:['Graph','Graphe'],
+  also:['Filed under','Classé sous'], open:['Open card ↗','Ouvrir la fiche ↗'], reader:['Reader ↗','Lecteur ↗'],
+  none:['Nothing matches. Remove a filter or shorten the search.','Aucun résultat. Retirez un filtre ou raccourcissez la recherche.'],
+  disc:['Study aid only. Use current official publications and the aircraft flight manual for operations.','Aide à l’étude seulement. Utilisez les publications officielles en vigueur et le manuel de vol pour l’exploitation.'],
+  expand:['Expand all','Tout ouvrir'], collapse:['Collapse all','Tout fermer']
+};
+let lang = store.get('aero-cave-language'); if (!['en','fr','both'].includes(lang)) lang = 'both';
+const t = k => lang === 'en' ? T[k][0] : lang === 'fr' ? T[k][1] : (T[k][0] === T[k][1] ? T[k][0] : T[k][0] + ' / ' + T[k][1]);
+const L = o => lang === 'en' ? o.en : lang === 'fr' ? o.fr : (o.en === o.fr ? o.en : o.en + ' / ' + o.fr);
+const L1 = o => lang === 'fr' ? o.fr : o.en;
+
+/* ---- graph index ---- */
+const C = new Map(D.concepts.map(c => [c.id, Object.assign({narrower:[]}, c)]));
+for (const c of C.values()) for (const b of c.broader) C.get(b).narrower.push(c.id);
+for (const c of C.values()) for (const r of c.related) { const o = C.get(r); if (!o.related.includes(c.id)) o.related.push(c.id); }
+const desc = new Map();
+const getDesc = id => { if (desc.has(id)) return desc.get(id); const s = new Set([id]); desc.set(id, s); for (const n of C.get(id).narrower) for (const x of getDesc(n)) s.add(x); return s; };
+const roots = D.concepts.filter(c => !c.broader.length).map(c => c.id);
+const K = new Map(D.cards.map(c => [c.id, c]));
+for (const s of D.sections) {
+  s.t = norm(s.h + ' ' + s.md + ' ' + s.c.map(id => C.get(id).en + ' ' + C.get(id).fr).join(' '));
+  s.hn = norm(s.h);
+}
+
+/* ---- state + routing: #x-PATH-CARD-CONCEPT ---- */
+const S = {q:'', p:'', k:'', c:''};
+function readHash() {
+  const m = /^#x-([A-Za-z0-9]+)-([A-Za-z0-9]+)-([a-z0-9-]+)$/.exec(location.hash);
+  S.p = S.k = S.c = '';
+  if (!m) return;
+  if (D.paths.some(p => p.id === m[1])) S.p = m[1];
+  if (K.has(m[2])) S.k = m[2];
+  if (C.has(m[3])) S.c = m[3];
+}
+function writeHash() {
+  const h = (S.p || S.k || S.c) ? '#x-' + (S.p || 'any') + '-' + (S.k || 'any') + '-' + (S.c || 'any') : '';
+  if (h !== location.hash) { try { history.replaceState(null, '', h || location.pathname + location.search); } catch (e) { location.hash = h; } }
+}
+function go(patch, top) { Object.assign(S, patch); writeHash(); render(); if (top) window.scrollTo({top:0}); }
+
+/* ---- filtering ---- */
+function matches(s, skip) {
+  if (skip !== 'p' && S.p && !s.p.includes(S.p)) return false;
+  if (skip !== 'k' && S.k && s.card !== S.k) return false;
+  if (skip !== 'c' && S.c) { const d = getDesc(S.c); if (!s.c.some(x => d.has(x))) return false; }
+  for (const w of tokens) if (!s.t.includes(w)) return false;
+  return true;
+}
+let tokens = [];
+function conceptCounts() {
+  const base = D.sections.filter(s => matches(s, 'c')), n = new Map();
+  for (const id of C.keys()) { const d = getDesc(id); let k = 0; for (const s of base) if (s.c.some(x => d.has(x))) k++; n.set(id, k); }
+  return n;
+}
+
+/* ---- markdown (subset used by the cards) ---- */
+function href(u, card) {
+  try { const x = new URL(u, REPO + (card ? card.file : '')); return /^https?:$/.test(x.protocol) ? x.href : null; } catch (e) { return null; }
+}
+function inline(s, card) {
+  const parts = s.split('`'); if (parts.length % 2 === 0) return fmt(esc(s), card);
+  return parts.map((p, i) => i % 2 ? '<code>' + esc(p) + '</code>' : fmt(esc(p), card)).join('');
+}
+function fmt(s, card) {
+  return s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, a, u) => { const h = href(u.replace(/&amp;/g, '&'), card); return h ? '<a href="' + esc(h) + '" target="_blank" rel="noopener">' + a + '</a>' : a; })
+    .replace(/\[([^\]]+)\]\[[^\]]*\]/g, '$1')
+    .replace(/\*\*\*([^*]+)\*\*\*/g, '<strong><em>$1</em></strong>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*\w])\*([^*\s][^*]*)\*(?![\w*])/g, '$1<em>$2</em>');
+}
+const cells = r => r.trim().replace(/^\|/, '').replace(/\|$/, '').split(/(?<!\\)\|/).map(c => c.trim().replace(/\\\|/g, '|'));
+function md(src, card) {
+  const lines = src.split('\n'), out = []; let i = 0, stack = [], para = [];
+  const closeLists = n => { while (stack.length > n) out.push('</li></' + stack.pop() + '>'); };
+  const flushP = () => { if (para.length) { out.push('<p>' + para.join('<br>') + '</p>'); para = []; } };
+  while (i < lines.length) {
+    const ln = lines[i], tr = ln.trim();
+    if (!tr) { flushP(); closeLists(0); i++; continue; }
+    if (/^(\*\*\*|---|___)$/.test(tr) || /^\[[^\]]+\]:\s/.test(tr)) { flushP(); closeLists(0); i++; continue; }
+    let m;
+    if ((m = /^#{5,6}\s+(.*)$/.exec(tr))) { flushP(); closeLists(0); out.push('<h5>' + inline(m[1], card) + '</h5>'); i++; continue; }
+    if (tr[0] === '|' && i + 1 < lines.length && /^\|?\s*:?-{2,}/.test(lines[i + 1].trim())) {
+      flushP(); closeLists(0);
+      let h = '<div class="tw"><table><thead><tr>' + cells(tr).map(c => '<th>' + inline(c, card) + '</th>').join('') + '</tr></thead><tbody>';
+      i += 2;
+      while (i < lines.length && lines[i].trim()[0] === '|') { h += '<tr>' + cells(lines[i]).map(c => '<td>' + inline(c, card) + '</td>').join('') + '</tr>'; i++; }
+      out.push(h + '</tbody></table></div>'); continue;
+    }
+    if ((m = /^(\s*)([-*+]|\d+[.)])\s+(.*)$/.exec(ln))) {
+      flushP();
+      const depth = Math.floor(m[1].replace(/\t/g, '  ').length / 2) + 1, tag = /\d/.test(m[2]) ? 'ol' : 'ul';
+      if (stack.length > depth) closeLists(depth);
+      if (stack.length === depth) out.push('</li><li>');
+      while (stack.length < depth) { out.push('<' + tag + '><li>'); stack.push(tag); }
+      out.push(inline(m[3], card)); i++; continue;
+    }
+    if (stack.length && /^\s{2,}\S/.test(ln)) { out.push('<br>' + inline(tr, card)); i++; continue; }
+    closeLists(0); para.push(inline(tr.replace(/^>\s?/, ''), card)); i++;
+  }
+  flushP(); closeLists(0);
+  return out.join('');
+}
+
+/* ---- rendering ---- */
+function fillSelect(sel, opts, value) {
+  sel.textContent = '';
+  for (const [v, label, dis] of opts) { const o = document.createElement('option'); o.value = v; o.textContent = label; if (dis) o.disabled = true; sel.appendChild(o); }
+  sel.value = value; sel.classList.toggle('on', !!value);
+}
+function conceptOptions(counts) {
+  const out = [['', t('allC')]];
+  const walk = (id, depth, seen) => {
+    if (seen.has(id)) return; const c = C.get(id), n = counts.get(id);
+    if (!n && id !== S.c) return;
+    out.push([id, '  '.repeat(depth) + (depth ? '· ' : '') + L1(c) + ' (' + n + ')']);
+    const s2 = new Set(seen).add(id); for (const k of c.narrower) walk(k, depth + 1, s2);
+  };
+  for (const r of roots) walk(r, 0, new Set());
+  return out;
+}
+function el(tag, cls, html) { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
+function chip(id, cls, n) {
+  const b = el('button', 'chip ' + (cls || ''), esc(L(C.get(id))) + (n != null ? ' <small>' + n + '</small>' : ''));
+  b.type = 'button'; b.onclick = () => go({c:id}, true); return b;
+}
+function crumbPaths(id) {
+  const c = C.get(id); if (!c.broader.length) return [[id]];
+  const out = []; for (const b of c.broader) for (const p of crumbPaths(b)) out.push(p.concat(id)); return out;
+}
+function wrapLabel(s, max) {
+  const words = s.split(' '), lines = ['']; for (const w of words) { if ((lines[lines.length - 1] + ' ' + w).trim().length > max && lines[lines.length - 1]) lines.push(w); else lines[lines.length - 1] = (lines[lines.length - 1] + ' ' + w).trim(); }
+  if (lines.length > 2) { lines.length = 2; lines[1] = lines[1].slice(0, max - 1) + '…'; } return lines;
+}
+function egoGraph(id, counts) {
+  const c = C.get(id), W = 360, NW = 168, NH = 32, GAP = 8;
+  const rows = []; let y = 4;
+  const place = (ids, cls) => { const r = []; ids.forEach((x, i) => { const col = i % 2, row = Math.floor(i / 2); const single = ids.length === 1; r.push({id:x, cls, x: single ? (W - NW) / 2 : (col ? W - NW - 4 : 4), y: y + row * (NH + GAP)}); }); if (ids.length) y += Math.ceil(ids.length / 2) * (NH + GAP) + 14; return r; };
+  const top = place(c.broader, 'b');
+  const centre = {id, cls:'c', x:(W - 220) / 2, y, w:220}; y += NH + 22;
+  const nar = place(c.narrower.filter(x => counts.get(x)), '');
+  const rel = place(c.related.filter(x => counts.get(x)), 'r');
+  const cx = W / 2, edges = [], nodes = [];
+  for (const n of top) edges.push('<path d="M' + cx + ' ' + centre.y + ' C' + cx + ' ' + (centre.y - 12) + ' ' + (n.x + NW / 2) + ' ' + (n.y + NH + 12) + ' ' + (n.x + NW / 2) + ' ' + (n.y + NH) + '"/>');
+  for (const n of nar.concat(rel)) edges.push('<path class="' + n.cls + '" d="M' + cx + ' ' + (centre.y + NH) + ' C' + cx + ' ' + (centre.y + NH + 14) + ' ' + (n.x + NW / 2) + ' ' + (n.y - 14) + ' ' + (n.x + NW / 2) + ' ' + n.y + '"/>');
+  for (const n of top.concat([centre], nar, rel)) {
+    const w = n.w || NW, lines = wrapLabel(L1(C.get(n.id)), n.w ? 36 : 27);
+    nodes.push('<g class="n ' + n.cls + '" data-id="' + n.id + '"><rect x="' + n.x + '" y="' + n.y + '" width="' + w + '" height="' + NH + '" rx="7"/>' +
+      lines.map((l, i) => '<text x="' + (n.x + w / 2) + '" y="' + (n.y + (lines.length === 1 ? 20 : 13 + i * 12)) + '" text-anchor="middle">' + esc(l) + '</text>').join('') + '</g>');
+  }
+  const svg = '<svg viewBox="0 0 ' + W + ' ' + (y - 4) + '" role="img" aria-label="' + esc(L1(c)) + '">' + edges.join('') + nodes.join('') + '</svg>';
+  const box = el('div', '', svg); box.id = 'graph';
+  box.onclick = e => { const g = e.target.closest('.n'); if (g && g.dataset.id !== id) go({c:g.dataset.id}, true); };
+  return box;
+}
+function renderConcept(counts) {
+  const p = $('cpanel'); p.textContent = ''; p.hidden = !S.c; if (!S.c) return;
+  const c = C.get(S.c);
+  const cr = el('div', 'crumbs');
+  crumbPaths(S.c).forEach((path, i) => {
+    if (i) cr.appendChild(document.createElement('br'));
+    path.slice(0, -1).forEach(id => { const b = el('button', '', esc(L1(C.get(id)))); b.type = 'button'; b.onclick = () => go({c:id}, true); cr.appendChild(b); cr.appendChild(document.createTextNode(' › ')); });
+    if (path.length === 1) { const b = el('button', '', esc(t('allC'))); b.type = 'button'; b.onclick = () => go({c:''}, true); cr.appendChild(b); cr.appendChild(document.createTextNode(' › ')); }
+    cr.appendChild(document.createTextNode(L1(c)));
+  });
+  p.appendChild(cr); p.appendChild(el('h3', '', esc(L(c))));
+  const row = (label, ids, cls) => { ids = ids.filter(x => counts.get(x)); if (!ids.length) return; const r = el('div', 'rel', '<i>' + esc(t(label)) + '</i>'); ids.forEach(x => r.appendChild(chip(x, cls, counts.get(x)))); p.appendChild(r); };
+  row('nar', c.narrower, ''); row('rel', c.related, 'r'); row('bro', c.broader, 'b');
+  const gOn = store.get('aero-cave-graph') !== '0';
+  const tg = el('button', 'btn', esc(t('graph')) + (gOn ? ' ▾' : ' ▸')); tg.type = 'button'; tg.style.marginTop = '.45rem'; tg.setAttribute('aria-expanded', gOn);
+  tg.onclick = () => { store.set('aero-cave-graph', gOn ? '0' : '1'); render(); };
+  p.appendChild(tg); if (gOn) p.appendChild(egoGraph(S.c, counts));
+}
+function snippet(s) {
+  if (!tokens.length) return '';
+  const line = s.md.split('\n').find(l => tokens.some(w => norm(l).includes(w))); if (!line) return '';
+  let txt = line.replace(/[`*|]+/g, ' ').replace(/\s+/g, ' ').trim(); const n = norm(txt), w = tokens.find(x => n.includes(x)), at = n.indexOf(w);
+  const from = Math.max(0, at - 50); txt = (from ? '…' : '') + txt.slice(from, from + 170) + (txt.length > from + 170 ? '…' : '');
+  let h = esc(txt); const nh = norm(txt);
+  if (nh.length === txt.length) { const i = nh.indexOf(w); if (i >= 0) h = esc(txt.slice(0, i)) + '<mark>' + esc(txt.slice(i, i + w.length)) + '</mark>' + esc(txt.slice(i + w.length)); }
+  return '<span class="snip">' + h + '</span>';
+}
+function sectionEl(s) {
+  const d = el('details', 'sec'), card = K.get(s.card);
+  d.appendChild(el('summary', '', '<span class="st">' + esc(s.h) + '</span>' + s.p.map(p => '<span class="pb">' + p + '</span>').join('') + snippet(s)));
+  d.addEventListener('toggle', () => {
+    if (!d.open || d.dataset.done) return; d.dataset.done = 1;
+    const b = el('div', 'body', md(s.md, card)), f = el('div', 'foot', '<span>' + esc(t('also')) + '</span>');
+    s.c.forEach(id => f.appendChild(chip(id, id === S.c ? 'b' : '')));
+    if (card.reader) { const r = el('a', '', esc(t('reader'))); r.href = SITE + card.reader; f.appendChild(r); }
+    const a = el('a', '', esc(t('open'))); a.href = REPO + card.file + (s.a ? '#' + s.a : ''); a.target = '_blank'; a.rel = 'noopener'; if (card.reader) a.style.marginLeft = '0'; f.appendChild(a);
+    b.appendChild(f); d.appendChild(b);
+  });
+  return d;
+}
+function render() {
+  tokens = norm(S.q).split(/\s+/).filter(Boolean);
+  document.documentElement.lang = lang === 'fr' ? 'fr-CA' : 'en-CA';
+  document.querySelectorAll('[data-t]').forEach(n => n.textContent = t(n.dataset.t));
+  document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+  $('q').placeholder = t('search'); if ($('q').value !== S.q) $('q').value = S.q;
+  const counts = conceptCounts();
+  const baseP = D.sections.filter(s => matches(s, 'p')), baseK = D.sections.filter(s => matches(s, 'k'));
+  fillSelect($('fp'), [['', t('allP')]].concat(D.paths.map(p => [p.id, L1(p) + ' (' + baseP.filter(s => s.p.includes(p.id)).length + ')'])), S.p);
+  fillSelect($('fk'), [['', t('allK')]].concat(D.cards.map(c => [c.id, (/^\d/.test(c.id) ? c.id + ' · ' : '') + L1(c) + ' (' + baseK.filter(s => s.card === c.id).length + ')'])), S.k);
+  fillSelect($('fc'), conceptOptions(counts), S.c);
+  const browsing = !S.c && !S.k && !tokens.length;
+  $('home').hidden = !browsing;
+  if (browsing) {
+    const tp = $('tp'), ts = $('ts'); tp.textContent = ts.textContent = '';
+    for (const p of D.paths) { const b = el('button', 'tile' + (S.p === p.id ? ' sel' : ''), '<b>' + esc(L(p)) + '</b><span>' + baseP.filter(s => s.p.includes(p.id)).length + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p: S.p === p.id ? '' : p.id}); tp.appendChild(b); }
+    for (const r of roots) { const n = counts.get(r); if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(C.get(r))) + '</b><span>' + n + ' ' + t('secs') + ' · ' + C.get(r).narrower.filter(x => counts.get(x)).length + ' ' + t('topics') + '</span>'); b.type = 'button'; b.onclick = () => go({c:r}, true); ts.appendChild(b); }
+  }
+  renderConcept(counts);
+  const res = $('results'), cnt = $('count'); res.textContent = ''; cnt.hidden = browsing; if (browsing) return;
+  let list = D.sections.filter(s => matches(s));
+  if (tokens.length) { const sc = s => tokens.every(w => s.hn.includes(w)) ? 0 : tokens.some(w => s.hn.includes(w)) ? 1 : 2; list = list.map((s, i) => [sc(s), i, s]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).map(x => x[2]); }
+  cnt.textContent = '';
+  cnt.appendChild(el('span', '', '<b>' + list.length + '</b> ' + t(list.length === 1 ? 'sec' : 'secs')));
+  const rs = el('button', 'btn', esc(t('reset'))); rs.type = 'button'; rs.onclick = () => go({q:'', p:'', k:'', c:''}, true); cnt.appendChild(rs);
+  if (list.length && list.length <= 40) { const ex = el('button', 'btn', esc(t('expand'))); ex.type = 'button'; let open = false; ex.onclick = () => { open = !open; res.querySelectorAll('details').forEach(d => d.open = open); ex.textContent = t(open ? 'collapse' : 'expand'); }; cnt.appendChild(ex); }
+  if (!list.length) { res.appendChild(el('p', 'empty', esc(t('none')))); return; }
+  const frag = document.createDocumentFragment();
+  if (tokens.length) { list.forEach(s => { const d = sectionEl(s); d.querySelector('.st').insertAdjacentHTML('beforebegin', '<span class="pb" style="color:var(--accent)">' + s.card + '</span>'); frag.appendChild(d); }); }
+  else { let cur = null; for (const s of list) { if (s.card !== cur) { cur = s.card; const c = K.get(cur), n = list.filter(x => x.card === cur).length; frag.appendChild(el('div', 'gh', esc((/^\d/.test(c.id) ? c.id + ' · ' : '') + L(c)) + ' <small>' + n + '</small>')); } frag.appendChild(sectionEl(s)); } }
+  res.appendChild(frag);
+  if (list.length === 1) res.querySelector('details').open = true;
+}
+
+/* ---- events ---- */
+let timer; $('q').addEventListener('input', e => { clearTimeout(timer); timer = setTimeout(() => { S.q = e.target.value; render(); }, 120); });
+$('fp').onchange = e => go({p:e.target.value}); $('fk').onchange = e => go({k:e.target.value}); $('fc').onchange = e => go({c:e.target.value});
+document.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => { lang = b.dataset.lang; store.set('aero-cave-language', lang); render(); });
+let size = +store.get('aero-cave-explorer-size') || 16; const setSize = n => { size = Math.min(22, Math.max(12, n)); document.documentElement.style.setProperty('--size', size + 'px'); store.set('aero-cave-explorer-size', size); };
+setSize(size); $('fs-').onclick = () => setSize(size - 1); $('fs+').onclick = () => setSize(size + 1);
+const th = store.get('aero-cave-explorer-theme'); if (th) document.documentElement.dataset.theme = th;
+$('theme').onclick = () => { const dark = document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme:dark)').matches); const v = dark ? 'light' : 'dark'; document.documentElement.dataset.theme = v; store.set('aero-cave-explorer-theme', v); };
+window.addEventListener('hashchange', () => { readHash(); render(); });
+readHash(); render();
+window.__explorer = {D, S, go, md};
+})();
+</script>
+<script id="pwa-registration">
+try { if ('serviceWorker' in navigator && location.protocol === 'https:' && /github\.io$/.test(location.hostname)) navigator.serviceWorker.register('./service-worker.js', {updateViaCache:'none'}).catch(() => {}); } catch (e) {}
+</script>
+</body></html>

@@ -12,6 +12,10 @@ Compact study notes for Canadian **CPAER · INRAT · flight training**, in Engli
 
 HTML readers offer search, topic filters, dark/light themes, adjustable text and printing. Download an HTML file to read offline. Markdown opens directly on GitHub.
 
+## Knowledge explorer (prototype)
+
+[Open the explorer](https://jraph.github.io/aero-cave/explorer.html): every card section reachable by study path (PPL / CPL / IR / ME), topic graph, source card or full-text search; works offline once cached. `explorer.html` is **generated**: after editing a card or `explorer/ontology.json`, run `python3 explorer/build_explorer.py` (no dependencies) and bump the service-worker VERSION. Path tags and topic links are editorial, not a TC syllabus mapping.
+
 ## Browse by subject
 
 | Subject | Study cards |
@@ -46,7 +50,7 @@ Record future changes in descriptive commit messages. Keep historical review not
 
 ## Offline app & language
 
-[Aero CAVE](https://jraph.github.io/aero-cave/) uses the cross-platform **Progressive Web App (PWA)** approach: a Web App Manifest specifies installation/standalone presentation, while a service worker caches the homepage, two HTML readers and required app assets for offline access. Installation, when supported, is offered through the browser's native menu or controls; no device-specific install button or `beforeinstallprompt` dependency is required.
+[Aero CAVE](https://jraph.github.io/aero-cave/) uses the cross-platform **Progressive Web App (PWA)** approach: a Web App Manifest specifies installation/standalone presentation, while a service worker caches the homepage, the knowledge explorer, three HTML readers and required app assets for offline access. Installation, when supported, is offered through the browser's native menu or controls; no device-specific install button or `beforeinstallprompt` dependency is required.
 
 **EN / FR / BOTH** in each reader switches definitions and memory reminders immediately; BOTH is the default. The shared choice is saved when local storage is available. Search follows the selected language; labels remain bilingual. Printing includes all rows in the selected language and restores search/topic filters afterward. Downloaded standalone HTML files retain the toggle and embedded layout without a build step.
 

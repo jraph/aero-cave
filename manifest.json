@@ -25,6 +25,11 @@
   ],
   "shortcuts": [
     {
+      "name": "Knowledge explorer · Explorateur",
+      "short_name": "Explorer",
+      "url": "./explorer.html"
+    },
+    {
       "name": "CPAER · Formulas / Formules",
       "short_name": "CPAER",
       "url": "./readers/CPAER_Formulas_Recall_EN_FR.html"
