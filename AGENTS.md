@@ -8,7 +8,7 @@ Default to **CAVE mode** for repository content: super-condensed, scan-first avi
 - Preserve every qualifier that changes legality, applicability or safety; never compress into ambiguity.
 - Explicitly distinguish similar concepts: clearance, separation, conflict resolution, traffic information, authorization, recommendation and memory aid.
 - Use existing tags where useful: `F` formula, `M` memory, `T` trap, `P` procedure, `R` rule, `?` verify.
-- Maintain a `#### Pebble` section in numbered CAVE study cards: ultra-dense final recall of the card’s highest-yield rules, formulas and traps.
+- Maintain a `#### Pebble` section in numbered CAVE study cards and at the end of each concept file (`kb/…`): ultra-dense final recall of the card’s highest-yield rules, formulas and traps.
 - Pebbles summarize facts already explained above; introduce no new rule or qualifier. Use short tokens, `|`, arrows and standard abbreviations.
 - Update the Pebble whenever a material study point changes. Bilingual readers/glossaries may use their existing memory-trap format instead of a Pebble.
 - Match the language pattern of the destination: bilingual EN/FR where already bilingual; otherwise retain the card’s language.
