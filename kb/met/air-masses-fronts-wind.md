@@ -41,7 +41,7 @@
 - `T:` airport wind may differ sharply from ridge/pass/valley wind.
 ***
 #### Fronts
-<!-- id: wx-fronts | from: 16 -->
+<!-- id: wx-fronts | from: 16, 05 -->
 
 - **Cold:** cold undercuts warm; steeper/narrower; CU/CB, showers, gusts, turbulence, fast wind shift.
 - **Warm:** warm overruns cold; broad layered cloud; lowering ceilings, steady precip, icing/FZRA risk.
@@ -49,6 +49,7 @@
 - **Occluded:** cold front catches warm front; extensive mixed frontal weather.
 - `M cold:` `fast-steep-convective`.
 - `M warm:` `slow-wide-layered`.
+- `T:` timing errors can rapidly change runway/wind/CIG; fog may form after departure.
 ***
 #### CF — before / passing / after
 <!-- id: wx-cold-front | from: 16 -->
@@ -91,11 +92,14 @@
 - `Ci → Cs → As → Ns → St/fog`, ceilings lower and precip increases approaching front.
 - Warm-layer-over-subfreezing-surface setup can produce `FZRA/PL`.
 ***
-#### Stability / fronts / fog
-<!-- id: wxp-stability-fronts-fog | from: 05 | also: met-stab, met-fog -->
+#### Pebble
+<!-- id: met-systems-pebble | also: study-pebble -->
 
-- Stable: layered/smooth/poor vis/steady precip/broad ice; unstable: CU/TCU/CB/turb/showers. `M:` moisture+lift+instability→convection.
-- Warm front: broad lowering CIG/vis/steady precip/FZRA-PL risk; cold front: narrower SH/TS/gust/shift/turb/rapid change; occlusion: mixed/extensive.
-- Fog: radiation=clear/light wind/moist cooling; advection=warm moist over cold; upslope=forced lift; steam=cold over warm water; precip fog=rain into cold air.
-- `T:` timing errors can rapidly change runway/wind/CIG; fog may form after departure.
+- AIR MASS `c dry / m moist; Arctic/Polar/Tropical | cold air over warm surface → instability/showers | warm air over cold surface → stability/fog/stratus`
+- PRESSURE (NH) `low = CCW-IN-RISE, cloud/precip | high = CW-OUT-SINK | trough → wind shift/cloud/showers | closely spaced isobars → stronger wind`
+- WIND `pressure gradient high→low | Coriolis deflects right (NH) | aloft ≈ parallel isobars | surface friction → wind crosses isobars toward low`
+- LOCAL `sea breeze day sea→land; land breeze night land→sea | anabatic day upslope; katabatic night downslope`
+- COLD FRONT `FAST-STEEP-CU | T↓ Td↓ P↑ WIND VEERS | passage ≠ instant clearing`
+- WARM FRONT `SLOW-WIDE-LAYERED | Ci→Cs→As→Ns→St/fog | T↑ Td↑ WIND VEERS; P FALL STOPS | FZRA/PL if warm layer over subfreezing surface`
+- T `tendencies, not guarantees | both fronts can have CB`
 ***

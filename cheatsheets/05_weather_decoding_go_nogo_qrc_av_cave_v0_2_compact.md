@@ -2,7 +2,7 @@
 `TARGETED CPAER REVIEW: 2026-09-06` | see `00_CPAER_REVIEW_NOTES.md` for scope and remaining gaps
 `P` procedure | `R` rule | `F` formula | `T` trap | `M` memory | `!` safety | `?` verify | Canada PPL/CPL/INRAT/IR
 `RELEASE:` `STUDY/OPS-REF PROVISIONAL` | `NOT FLIGHT AUTHORITY`
-`MOVED 2026-11-14:` knowledge sections now live in concept files under [`kb/met/`](../kb/met/README.md); headings below are kept as pointers so saved links still land. Go/no-go flows and gates remain here.
+`MOVED 2026-11-14:` knowledge sections now live in concept files under [`kb/met/`](../kb/met/README.md); go/no-go flows and gates remain here.
 ***
 #### Source / master scan
 <!-- id: wxp-master-scan -->
@@ -20,96 +20,12 @@
 - `PILOT:` currency/recent IMC-night-XW-ice/fatigue/workload. `OPTIONS:` alternates/turn-back/fuel/route-alt-time.
 - `T:` legal + no options = fragile.
 ***
-#### Product roles
-
-→ Moved / Déplacé : [Weather products & decoding / Produits météo et décodage](../kb/met/weather-products.md#product-roles)
-***
-#### METAR / SPECI scan
-
-→ Moved / Déplacé : [METAR / SPECI](../kb/met/metar.md#metar--speci-scan)
-***
-#### Wind decoding
-
-→ Moved / Déplacé : [METAR / SPECI](../kb/met/metar.md#wind-decoding)
-***
-#### Visibility / RVR
-
-→ Moved / Déplacé : [METAR / SPECI](../kb/met/metar.md#visibility--rvr)
-***
-#### Weather codes
-
-→ Moved / Déplacé : [METAR / SPECI](../kb/met/metar.md#weather-codes)
-***
-#### Cloud groups
-
-→ Moved / Déplacé : [METAR / SPECI](../kb/met/metar.md#cloud-groups)
-***
-#### Temperature / dew point
-
-→ Moved / Déplacé : [METAR / SPECI](../kb/met/metar.md#temperature--dew-point)
-***
-#### Altimeter / pressure trend
-
-→ Moved / Déplacé : [METAR / SPECI](../kb/met/metar.md#altimeter--pressure-trend)
-***
-#### TAF scan / groups
-
-→ Moved / Déplacé : [TAF](../kb/met/taf.md#taf-scan--groups)
-***
-#### TAF alternate / risk
-
-→ Moved / Déplacé : [TAF](../kb/met/taf.md#taf-alternate--risk)
-***
-#### GFA
-
-→ Moved / Déplacé : [GFA, SIGMET / AIRMET, PIREP & upper winds / GFA, SIGMET / AIRMET, PIREP et vents en altitude](../kb/met/gfa-sigmet-pirep-winds.md#gfa)
-***
-#### AIRMET / SIGMET / PIREP
-
-→ Moved / Déplacé : [GFA, SIGMET / AIRMET, PIREP & upper winds / GFA, SIGMET / AIRMET, PIREP et vents en altitude](../kb/met/gfa-sigmet-pirep-winds.md#airmet--sigmet--pirep)
-***
-#### Upper winds / temperature
-
-→ Moved / Déplacé : [GFA, SIGMET / AIRMET, PIREP & upper winds / GFA, SIGMET / AIRMET, PIREP et vents en altitude](../kb/met/gfa-sigmet-pirep-winds.md#upper-winds--temperature)
-***
-#### Stability / fronts / fog
-
-→ Moved / Déplacé : [Air masses, fronts, pressure systems & wind / Masses d’air, fronts, systèmes de pression et vent](../kb/met/air-masses-fronts-wind.md#stability--fronts--fog)
-***
-#### Icing gate
-
-→ Moved / Déplacé : [Icing / Givrage](../kb/met/icing.md#icing-gate)
-***
-#### Carburetor icing
-
-→ Moved / Déplacé : [Carburettor icing & induction / Givrage du carburateur et admission](../kb/met/carburettor-icing.md#carburetor-icing--qrc)
-***
-#### Convection gate
-
-→ Moved / Déplacé : [Thunderstorms & convection / Orages et convection](../kb/met/thunderstorms.md#convection-gate)
-***
-#### LLWS / microburst
-
-→ Moved / Déplacé : [Turbulence, wind shear & mountain wave / Turbulence, cisaillement et ondes orographiques](../kb/met/turbulence-wind-shear.md#llws--microburst)
-***
-#### Turbulence
-
-→ Moved / Déplacé : [Turbulence, wind shear & mountain wave / Turbulence, cisaillement et ondes orographiques](../kb/met/turbulence-wind-shear.md#turbulence--qrc)
-***
 #### Wind / runway gate
 <!-- id: wxp-wind-runway -->
 
 - Compute steady + gust XW/HW/TW; compare POH/SOP/personal limits.
 - Add runway length/slope/surface/RSC/CRFI, obstacles, mechanical turbulence, wind shear.
 - `T:` gusty XW + wet/contaminated short runway = compounded risk, not separate minor issues.
-***
-#### Snow / freezing precipitation
-
-→ Moved / Déplacé : [Icing / Givrage](../kb/met/icing.md#snow--freezing-precipitation)
-***
-#### Mountain / terrain weather
-
-→ Moved / Déplacé : [Turbulence, wind shear & mountain wave / Turbulence, cisaillement et ondes orographiques](../kb/met/turbulence-wind-shear.md#mountain--terrain-weather)
 ***
 #### Night weather
 <!-- id: wxp-night -->
@@ -174,8 +90,5 @@
 #### Pebble
 <!-- id: wxp-pebble -->
 
-- weather scan `SYNOPTIC-GFA-HAZARDS-TERMINALS-PIREP-WINDS-RUNWAY-TREND` | METAR now / TAF terminal future / GFA regional | METAR cloud AGL; GFA heights ASL unless stated | ceiling=BKN/OVC/VV | `FM` permanent exact | `BECMG` gradual | `TEMPO <1h each/≤half` | alternate BECMG improve=end/deteriorate=start | TEMPO≥alt min / PROB≥landing min | FZ liquid=red | visible moisture+subzero surface=ice | TS avoid | XW 30°=.5/45°=.7/60°=.87 | observations worse than forecast=confidence↓ | many amber=red.
+- weather scan `SYNOPTIC-GFA-HAZARDS-TERMINALS-PIREP-WINDS-RUNWAY-TREND` | gates `LEGAL-AIRCRAFT-PILOT-OPTIONS`; legal + no options = fragile | observations worse than forecast=confidence↓ | many amber=red | `UPDATE-FUEL-OPTIONS-DECIDE EARLY` | scud running = shrinking options; turn around early | decoding and hazard recall: concept Pebbles in `kb/met/`.
 ***
-#### De-/anti-icing · FPD · HOT / Dégivrage · antigivrage
-
-→ Moved / Déplacé : [Ground de-/anti-icing & clean aircraft / Dégivrage / antigivrage au sol et aéronef propre](../kb/met/ground-deicing.md#de-anti-icing--fpd--hot--dégivrage--antigivrage)

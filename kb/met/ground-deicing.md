@@ -21,3 +21,11 @@
 
 Shared additions reviewed 19 October 2026: [source editions and scope](../../CONTENT_REVIEW.md#operational-additions--19-october-2026).
 ***
+#### Pebble
+<!-- id: deice-pebble | also: study-pebble -->
+
+- DE/ANTI `de-icing removes contamination | anti-icing protects a clean surface temporarily | clean-ACFT rule CAR 602.11 | ground fluid ≠ authority to fly in icing`
+- FLUIDS `I thin, usually heated, orange, short protection | II thickened, pale/yellow | III thickened, lower-speed, bright yellow | IV thickened, longer protection, green | verify product/ACFT approval`
+- LOUT `warmest of: aerodynamic acceptance | freezing point +10°C (I) or +7°C (II/III/IV) | diluted thickened: coldest published HOT temperature`
+- HOT `clock starts at BEGINNING of final fluid application (two-step: start of anti-icing step) | estimate, not assured | expired → approved inspection/re-treatment, never automatic extra minutes | current-season table for the exact fluid`
+***
