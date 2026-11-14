@@ -14,7 +14,7 @@ HTML readers offer search, topic filters, dark/light themes, adjustable text and
 
 ## Knowledge explorer (prototype)
 
-[Open the explorer](https://jraph.github.io/aero-cave/explorer.html): every card section reachable by training stage, phase of flight, licence level (PPL / CPL / IR / ME), topic graph, source card or full-text search; works offline once cached. `explorer.html` is **generated**: after editing a card or `explorer/ontology.json`, run `python3 explorer/build_explorer.py` (no dependencies) and bump the service-worker VERSION. Path tags and topic links are editorial, not a TC syllabus mapping.
+[Open the explorer](https://jraph.github.io/aero-cave/explorer.html): every card section reachable by training stage, phase of flight, licence level (PPL / CPL / IR / ME), topic graph, source card or full-text search; works offline once cached. `explorer.html` is **generated**: after editing a card or `explorer/ontology.json`, run `python3 explorer/build_explorer.py` (no dependencies) and bump the service-worker VERSION. Stage views and topic links are editorial. Item-level TC guide mapping lives in `explorer/syllabus.json` and points at **stable unit IDs**: an invisible `<!-- id: wx-fog -->` line directly under a section heading (card 16 so far). Never rename an ID that the syllabus map references; the build fails on unknown or duplicate IDs.
 
 ## Browse by subject
 

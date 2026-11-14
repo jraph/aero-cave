@@ -1,5 +1,13 @@
 # Content review
 
+## Stable unit IDs (card 16) and TP 12881 Meteorology item map — 14 November 2026
+
+Pilot of ID-anchored mapping. Card 16: each of the 32 sections now carries a stable ID as an invisible comment on the line under its heading (`<!-- id: wx-fog -->`); no study text, Pebble or heading changed. IDs are card-independent (`wx-…`), must stay unique, and must not be renamed once referenced.
+
+`explorer/syllabus.json`: all 111 Meteorology items of TP 12881 (7th ed., Aug 2026; item list read from the TC HTML edition on 14 Nov 2026) mapped to unit IDs with status and gap note: **41 Covered, 27 Partial, 25 Missing, 18 Elsewhere**. Item labels are our own short wording under the guide's group order and numbering; the guide text governs. *Elsewhere* = topic belongs to a card without IDs yet (mainly 05 decoding, also 01/04/06/10/12) and was **not** checked at item level. Covered/Partial judged against card 16 text only, by content read, not against AIM/MANAB for accuracy. Collection-wide absences confirmed by text search: CFPS, trowal, isothermal layers, latent heat, hoar frost (MET sense), analysis/prog charts, other-hazards group. Supersedes the group-level Meteorology rows of the 22 Oct matrix for card 16 evidence; matrix file itself unchanged. Gate 1 remains open for other subjects.
+
+Explorer: guide coverage screen (status filter, per-group bars, tap-through to the unit), `#u-<id>` deep links, guide-item chips on each ID'd section. Build fails on unknown/duplicate IDs or a Partial item without a gap note.
+
 ## Explorer views and card 08 table format — 14 November 2026
 
 Explorer: replaced the single path filter with **views** defined in `explorer/ontology.json`: ten training stages (pre-solo to first commercial seat), eight phase-of-flight quick-access sets, and the four licence-level tags. Each stage names the TC guide it is aimed at (TP 11919, 12880, 13723, 12881, 13462, 219 / 11575, 691, 9939, 13524); TP numbers checked against the TC publications list on 14 Nov 2026. Stage membership is a **topic-based approximation, not an item-by-item mapping** to those guides. Topic graph now starts collapsed; Pebble sections display as wrapped tokens (display only, Markdown unchanged).

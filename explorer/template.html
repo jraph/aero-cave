@@ -4,7 +4,7 @@
 <link rel="manifest" href="./manifest.json"><link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
 <meta name="theme-color" content="#f4f7f8" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#111c24" media="(prefers-color-scheme: dark)">
 <style>
-:root{--size:16px;--bg:#f4f7f8;--panel:#fff;--ink:#183044;--muted:#526775;--accent:#006f75;--line:#dbe6e9;--stripe:#f0f6f6;--pill:#dff1ef;--warn:#8a5a00;font-size:var(--size);color-scheme:light}
+:root{--ok:#1c7c54;--part:#9a6200;--miss:#b3261e;--size:16px;--bg:#f4f7f8;--panel:#fff;--ink:#183044;--muted:#526775;--accent:#006f75;--line:#dbe6e9;--stripe:#f0f6f6;--pill:#dff1ef;--warn:#8a5a00;font-size:var(--size);color-scheme:light}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111c24;--panel:#172731;--ink:#e7f0f4;--muted:#b2c3cc;--accent:#72d8ce;--line:#304550;--stripe:#1b3039;--pill:#234d50;--warn:#e8b95a;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#111c24;--panel:#172731;--ink:#e7f0f4;--muted:#b2c3cc;--accent:#72d8ce;--line:#304550;--stripe:#1b3039;--pill:#234d50;--warn:#e8b95a;color-scheme:dark}
 *{box-sizing:border-box}
@@ -35,6 +35,21 @@ h2{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu
 .tile.sel{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
 #vpanel{border-left:3px solid var(--accent);padding:.1rem .6rem .3rem;margin-bottom:.6rem}#vpanel h3{margin:.1rem 0 .2rem;font-size:1.05rem;line-height:1.2}
 .pl{margin:.3rem 0;display:flex;flex-wrap:wrap;gap:.22rem}.pt{background:var(--stripe);border:1px solid var(--line);border-radius:.3rem;padding:.05rem .35rem;font-size:.84rem;line-height:1.3}.pt.k{background:var(--pill);font-weight:700;border-color:transparent}
+#gpanel h3{margin:.2rem 0 .2rem;font-size:1.1rem}
+.bars{display:flex;height:.55rem;border-radius:.3rem;overflow:hidden;margin:.5rem 0 .4rem;background:var(--line)}
+.bars span{display:block}.sC{background:var(--ok)}.sP{background:var(--part)}.sM{background:var(--miss)}.sE{background:var(--muted)}
+.leg{display:flex;flex-wrap:wrap;gap:.3rem;margin:.3rem 0 .6rem}
+.leg .btn{font-size:.8rem;display:flex;gap:.35rem;align-items:center}.leg .btn[aria-pressed="true"]{background:var(--pill);color:var(--ink);border-color:var(--accent)}
+.dot{width:.6rem;height:.6rem;border-radius:50%;display:inline-block;flex:none}
+details.grp{background:var(--panel);border:1px solid var(--line);border-radius:.5rem;margin:.25rem 0}
+details.grp>summary{cursor:pointer;padding:.45rem .55rem;display:flex;gap:.5rem;align-items:center;list-style:none;font-weight:600}
+details.grp>summary::-webkit-details-marker{display:none}
+details.grp>summary .bars{flex:0 0 4.5rem;margin:0 0 0 auto;height:.4rem}
+.it{display:grid;grid-template-columns:auto 1fr;gap:.1rem .5rem;padding:.4rem .55rem;border-top:1px solid var(--line);font-size:.9rem}
+.it .sb{font-size:.62rem;font-weight:700;color:#fff;border-radius:.3rem;padding:.05rem .3rem;align-self:start;margin-top:.15rem;min-width:1.2rem;text-align:center}
+.it .gap{grid-column:2;font-size:.78rem;color:var(--muted)}.it .us{grid-column:2;display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.15rem}
+.uid{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.72rem;color:var(--muted)}
+details.sec.hit{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
 #cpanel{background:var(--panel);border:1px solid var(--line);border-radius:.6rem;padding:.6rem;margin-bottom:.6rem}
 #cpanel h3{margin:.15rem 0 .35rem;font-size:1.1rem;line-height:1.2}
 .crumbs{font-size:.78rem;color:var(--muted);line-height:1.5}
@@ -57,7 +72,7 @@ h2{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu
 #count{font-size:.8rem;color:var(--muted);margin:.5rem 0 .3rem;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
 .gh{font-size:.8rem;font-weight:700;color:var(--accent);margin:.8rem 0 .25rem;display:flex;gap:.4rem;align-items:baseline}
 .gh small{color:var(--muted);font-weight:400}
-details.sec{background:var(--panel);border:1px solid var(--line);border-radius:.5rem;margin:.22rem 0}
+details.sec{scroll-margin-top:8.5rem;background:var(--panel);border:1px solid var(--line);border-radius:.5rem;margin:.22rem 0}
 details.sec>summary{list-style:none;cursor:pointer;padding:.42rem .55rem;display:flex;flex-wrap:wrap;gap:.3rem .45rem;align-items:baseline}
 details.sec>summary::-webkit-details-marker{display:none}
 details.sec>summary::before{content:"▸";color:var(--accent);font-size:.8rem}
@@ -105,9 +120,11 @@ footer a{color:var(--accent)}
   <div id="home">
     <h2 data-t="hStage"></h2><div class="tiles" id="tp"></div>
     <h2 data-t="hOps"></h2><div class="tiles" id="to"></div>
+    <h2 data-t="hGuide"></h2><div class="tiles" id="tg"></div>
     <h2 data-t="hSubj"></h2><div class="tiles" id="ts"></div>
     <p class="note" data-t="note"></p>
   </div>
+  <div id="gpanel" hidden></div>
   <div id="vpanel" hidden></div>
   <div id="cpanel" hidden></div>
   <div id="count" hidden></div>
@@ -136,6 +153,7 @@ const T = {
   also:['Filed under','Classé sous'], open:['Open card ↗','Ouvrir la fiche ↗'], reader:['Reader ↗','Lecteur ↗'],
   none:['Nothing matches. Remove a filter or shorten the search.','Aucun résultat. Retirez un filtre ou raccourcissez la recherche.'],
   disc:['Study aid only. Use current official publications and the aircraft flight manual for operations.','Aide à l’étude seulement. Utilisez les publications officielles en vigueur et le manuel de vol pour l’exploitation.'],
+  hGuide:['TC guide coverage (pilot)','Couverture des guides TC (pilote)'], items:['items','points'], stC:['Covered','Couvert'], stP:['Partial','Partiel'], stM:['Missing','Manquant'], stE:['Elsewhere, unchecked','Ailleurs, non vérifié'], back:['← Explorer','← Explorateur'], reviewed:['Reviewed','Révisé'], official:['Official guide ↗','Guide officiel ↗'], own:['Item labels are our own short wording; the guide text is authoritative.','Les libellés sont notre formulation abrégée; le texte du guide fait foi.'],
   expand:['Expand all','Tout ouvrir'], collapse:['Collapse all','Tout fermer']
 };
 let lang = store.get('aero-cave-language'); if (!['en','fr','both'].includes(lang)) lang = 'both';
@@ -160,21 +178,30 @@ for (const s of D.sections) {
   s.hn = norm(s.h);
 }
 
+const U = new Map(D.sections.filter(s => s.u).map(s => [s.u, s]));
+const G = new Map(D.guides.map(g => [g.id, g]));
+const unitItems = new Map();
+for (const g of D.guides) for (const grp of g.groups) for (const it of grp.items) for (const u of it.u) { if (!unitItems.has(u)) unitItems.set(u, []); unitItems.get(u).push({g, grp, it}); }
+let gFilter = '';
 /* ---- state + routing: #x-PATH-CARD-CONCEPT ---- */
-const S = {q:'', p:'', k:'', c:''};
+const S = {q:'', p:'', k:'', c:'', g:''};
+let focusUnit = '';
 function readHash() {
   const m = /^#x-([A-Za-z0-9]+)-([A-Za-z0-9]+)-([a-z0-9-]+)$/.exec(location.hash);
-  S.p = S.k = S.c = '';
+  S.p = S.k = S.c = S.g = '';
+  const mg = /^#g-([a-z0-9-]+)$/.exec(location.hash); if (mg && G.has(mg[1])) { S.g = mg[1]; return; }
+  const mu = /^#u-([a-z0-9-]+)$/.exec(location.hash); if (mu && U.has(mu[1])) { S.k = U.get(mu[1]).card; focusUnit = mu[1]; return; }
   if (!m) return;
   if (V.has(m[1])) S.p = m[1];
   if (K.has(m[2])) S.k = m[2];
   if (C.has(m[3])) S.c = m[3];
 }
 function writeHash() {
-  const h = (S.p || S.k || S.c) ? '#x-' + (S.p || 'any') + '-' + (S.k || 'any') + '-' + (S.c || 'any') : '';
+  const h = S.g ? '#g-' + S.g : (S.p || S.k || S.c) ? '#x-' + (S.p || 'any') + '-' + (S.k || 'any') + '-' + (S.c || 'any') : '';
   if (h !== location.hash) { try { history.replaceState(null, '', h || location.pathname + location.search); } catch (e) { location.hash = h; } }
 }
-function go(patch, top) { Object.assign(S, patch); writeHash(); render(); if (top) window.scrollTo({top:0}); }
+function openUnit(u) { focusUnit = u; go({q:'', p:'', c:'', g:'', k:U.get(u).card}); }
+function go(patch, top) { if (!('g' in patch)) S.g = ''; Object.assign(S, patch); writeHash(); render(); if (top) window.scrollTo({top:0}); }
 
 /* ---- filtering ---- */
 function matches(s, skip) {
@@ -325,17 +352,45 @@ function snippet(s) {
   return '<span class="snip">' + h + '</span>';
 }
 function sectionEl(s) {
-  const d = el('details', 'sec'), card = K.get(s.card);
+  const d = el('details', 'sec'), card = K.get(s.card); if (s.u) d.dataset.u = s.u;
   d.appendChild(el('summary', '', '<span class="st">' + esc(s.h) + '</span>' + s.p.map(p => '<span class="pb">' + p + '</span>').join('') + snippet(s)));
   d.addEventListener('toggle', () => {
     if (!d.open || d.dataset.done) return; d.dataset.done = 1;
     const b = el('div', 'body', (/pebble/i.test(s.h) && pebble(s.md)) || md(s.md, card)), f = el('div', 'foot', '<span>' + esc(t('also')) + '</span>');
     s.c.forEach(id => f.appendChild(chip(id, id === S.c ? 'b' : '')));
+    if (s.u) { const refs = unitItems.get(s.u) || [], f2 = el('div', 'foot', '<span class="uid">#' + s.u + '</span>');
+      const byG = new Map(); for (const r of refs) { if (!byG.has(r.g.id)) byG.set(r.g.id, []); byG.get(r.g.id).push(r.grp.code + ' ' + r.it.n); }
+      for (const [gid, list] of byG) { const c = el('button', 'chip b', esc(G.get(gid).guide + ': ' + list.join(', '))); c.type = 'button'; c.onclick = () => go({g:gid}, true); f2.appendChild(c); }
+      b.appendChild(f2); }
     if (card.reader) { const r = el('a', '', esc(t('reader'))); r.href = SITE + card.reader; f.appendChild(r); }
     const a = el('a', '', esc(t('open'))); a.href = REPO + card.file + (s.a ? '#' + s.a : ''); a.target = '_blank'; a.rel = 'noopener'; if (card.reader) a.style.marginLeft = '0'; f.appendChild(a);
-    b.appendChild(f); d.appendChild(b);
+    b.insertBefore(f, b.querySelector('.foot + .foot') || null); d.appendChild(b);
   });
   return d;
+}
+function renderGuide() {
+  const g = G.get(S.g), p = $('gpanel'); p.textContent = '';
+  const bk = el('button', 'btn', esc(t('back'))); bk.type = 'button'; bk.onclick = () => go({g:''}, true); p.appendChild(bk);
+  p.appendChild(el('h3', '', esc(g.guide + ' · ' + L(g))));
+  const all = g.groups.flatMap(x => x.items), n = k => all.filter(i => i.s === k).length;
+  p.appendChild(el('div', 'crumbs', esc(g.edition) + ' · ' + esc(t('reviewed')) + ' ' + esc(g.reviewed) + ' · <a href="' + esc(g.url) + '" target="_blank" rel="noopener" style="color:var(--accent)">' + esc(t('official')) + '</a>'));
+  p.appendChild(el('div', 'crumbs', esc(L(g.scope)) + ' ' + esc(t('own'))));
+  const bar = arr => '<div class="bars">' + ['C','P','M','E'].map(k => '<span class="s' + k + '" style="flex:' + arr.filter(i => i.s === k).length + '"></span>').join('') + '</div>';
+  p.insertAdjacentHTML('beforeend', bar(all));
+  const leg = el('div', 'leg');
+  for (const k of ['C','P','M','E']) { const b = el('button', 'btn', '<span class="dot s' + k + '"></span>' + esc(t('st' + k)) + ' <b>' + n(k) + '</b>'); b.type = 'button'; b.setAttribute('aria-pressed', gFilter === k); b.onclick = () => { gFilter = gFilter === k ? '' : k; render(); }; leg.appendChild(b); }
+  p.appendChild(leg);
+  for (const grp of g.groups) {
+    const items = grp.items.filter(i => !gFilter || i.s === gFilter); if (!items.length) continue;
+    const d = el('details', 'grp'); d.open = !!gFilter;
+    d.appendChild(el('summary', '', '<span>' + esc(grp.code + ' · ' + L(grp)) + '</span><small style="color:var(--muted);font-weight:400">' + items.length + '</small>' + bar(grp.items)));
+    for (const it of items) {
+      const r = el('div', 'it', '<span class="sb s' + it.s + '" title="' + esc(t('st' + it.s)) + '">' + it.s + '</span><span><b>' + grp.code + ' ' + it.n + '</b> · ' + esc(it.en) + '</span>' + (it.gap ? '<span class="gap">' + esc(it.gap) + '</span>' : ''));
+      if (it.u.length) { const us = el('div', 'us'); for (const u of it.u) { const c = el('button', 'chip', esc(U.get(u).h)); c.type = 'button'; c.onclick = () => openUnit(u); us.appendChild(c); } r.appendChild(us); }
+      d.appendChild(r);
+    }
+    p.appendChild(d);
+  }
 }
 function render() {
   tokens = norm(S.q).split(/\s+/).filter(Boolean);
@@ -351,10 +406,13 @@ function render() {
   fp.value = S.p; fp.classList.toggle('on', !!S.p);
   fillSelect($('fk'), [['', t('allK')]].concat(D.cards.map(c => [c.id, (/^\d/.test(c.id) ? c.id + ' · ' : '') + L1(c) + ' (' + baseK.filter(s => s.card === c.id).length + ')'])), S.k);
   fillSelect($('fc'), conceptOptions(counts), S.c);
+  $('gpanel').hidden = !S.g;
+  if (S.g) { for (const id of ['home','vpanel','cpanel','count']) $(id).hidden = true; $('results').textContent = ''; renderGuide(); return; }
   const browsing = !S.c && !S.k && !tokens.length && !S.p;
   $('home').hidden = !browsing;
   if (browsing) {
-    const ts = $('ts'); ts.textContent = '';
+    const ts = $('ts'), tg = $('tg'); ts.textContent = tg.textContent = '';
+    for (const g of D.guides) { const all = g.groups.flatMap(x => x.items), n = k => all.filter(i => i.s === k).length; const b = el('button', 'tile', '<b>' + esc(g.guide + ' · ' + L(g)) + '</b><span>' + all.length + ' ' + t('items') + ' · ' + n('C') + ' C · ' + n('P') + ' P · ' + n('M') + ' M · ' + n('E') + ' E</span>'); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); }
     for (const [g, box] of [['stage', $('tp')], ['ops', $('to')]]) { box.textContent = ''; for (const v of V.values()) if (v.group === g) { const b = el('button', 'tile', '<b>' + esc(L(v)) + '</b><span>' + (v.ref ? esc(v.ref) + ' · ' : '') + vn.get(v.id) + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p:v.id}, true); box.appendChild(b); } }
     for (const r of roots) { const n = counts.get(r); if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(C.get(r))) + '</b><span>' + n + ' ' + t('secs') + ' · ' + C.get(r).narrower.filter(x => counts.get(x)).length + ' ' + t('topics') + '</span>'); b.type = 'button'; b.onclick = () => go({c:r}, true); ts.appendChild(b); }
   }
@@ -371,7 +429,7 @@ function render() {
   if (tokens.length) { const sc = s => tokens.every(w => s.hn.includes(w)) ? 0 : tokens.some(w => s.hn.includes(w)) ? 1 : 2; list = list.map((s, i) => [sc(s), i, s]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).map(x => x[2]); }
   cnt.textContent = '';
   cnt.appendChild(el('span', '', '<b>' + list.length + '</b> ' + t(list.length === 1 ? 'sec' : 'secs')));
-  const rs = el('button', 'btn', esc(t('reset'))); rs.type = 'button'; rs.onclick = () => go({q:'', p:'', k:'', c:''}, true); cnt.appendChild(rs);
+  const rs = el('button', 'btn', esc(t('reset'))); rs.type = 'button'; rs.onclick = () => go({q:'', p:'', k:'', c:'', g:''}, true); cnt.appendChild(rs);
   if (list.length && list.length <= 40) { const ex = el('button', 'btn', esc(t('expand'))); ex.type = 'button'; let open = false; ex.onclick = () => { open = !open; res.querySelectorAll('details').forEach(d => d.open = open); ex.textContent = t(open ? 'collapse' : 'expand'); }; cnt.appendChild(ex); }
   if (!list.length) { res.appendChild(el('p', 'empty', esc(t('none')))); return; }
   const frag = document.createDocumentFragment();
@@ -379,6 +437,7 @@ function render() {
   else { let cur = null; for (const s of list) { if (s.card !== cur) { cur = s.card; const c = K.get(cur), n = list.filter(x => x.card === cur).length; frag.appendChild(el('div', 'gh', esc((/^\d/.test(c.id) ? c.id + ' · ' : '') + L(c)) + ' <small>' + n + '</small>')); } frag.appendChild(sectionEl(s)); } }
   res.appendChild(frag);
   if (list.length === 1) res.querySelector('details').open = true;
+  if (focusUnit) { const d = res.querySelector('details[data-u="' + focusUnit + '"]'); focusUnit = ''; if (d) { d.open = true; d.classList.add('hit'); setTimeout(() => d.scrollIntoView({block:'start'}), 0); } }
 }
 
 /* ---- events ---- */

@@ -18,6 +18,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ONT = ROOT / "explorer" / "ontology.json"
 TPL = ROOT / "explorer" / "template.html"
+SYL = ROOT / "explorer" / "syllabus.json"
+UID = re.compile(r"^<!--\s*id:\s*([a-z][a-z0-9-]*)\s*-->\s*\n?")
 OUT = ROOT / "explorer.html"
 HEAD = re.compile(r"^(#{1,4})\s+(.*\S)\s*$")
 BOLD = re.compile(r"^\*\*([^*]+)\*\*$")
@@ -93,7 +95,7 @@ def build():
     matchers = [(c["id"], [parse_match(m) for m in c["match"]]) for c in concepts]
     rules = [(set(r["cards"].split(",")), re.compile(r["re"], re.I), r["paths"]) for r in ont["pathRules"]]
 
-    sections, cards, report = [], [], []
+    sections, cards, report, uids = [], [], [], set()
     for cid, card in ont["cards"].items():
         for p in card["paths"]:
             if p not in pathset:
@@ -118,8 +120,18 @@ def build():
                 if cid in only and rx.search(head):
                     paths = ps
                     break
-            sections.append({"id": f"{cid}-{i}", "card": cid, "h": head, "a": anchor,
-                             "c": cs, "p": paths, "md": body})
+            sec = {"id": f"{cid}-{i}", "card": cid, "h": head, "a": anchor, "c": cs, "p": paths}
+            m = UID.match(body)
+            if m:
+                if m.group(1) in uids:
+                    errors.append(f"duplicate unit id {m.group(1)}")
+                uids.add(m.group(1))
+                sec["u"] = m.group(1)
+                body = body[m.end():].strip()
+            elif "<!-- id:" in body:
+                errors.append(f"{cid} · {head}: unit id must be the first line under the heading")
+            sec["md"] = body
+            sections.append(sec)
 
     used = {c for s in sections for c in s["c"]}
     for c in concepts:
@@ -142,7 +154,23 @@ def build():
             re.compile(v["re"])
     if errors:
         sys.exit("ontology errors:\n  " + "\n  ".join(errors))
+    syl = json.loads(SYL.read_text(encoding="utf-8"))
+    for g in syl["guides"]:
+        for grp in g["groups"]:
+            for it in grp["items"]:
+                if it["s"] not in "CPME":
+                    errors.append(f"{g['id']} {grp['code']} {it['n']}: bad status")
+                if it["s"] in "CP" and not it["u"]:
+                    errors.append(f"{g['id']} {grp['code']} {it['n']}: C/P needs a unit")
+                if it["s"] == "P" and not it["gap"]:
+                    errors.append(f"{g['id']} {grp['code']} {it['n']}: P needs a gap note")
+                for u in it["u"]:
+                    if u not in uids:
+                        errors.append(f"{g['id']} {grp['code']} {it['n']}: unknown unit {u}")
+    if errors:
+        sys.exit("syllabus errors:\n  " + "\n  ".join(errors))
     data = {
+        "guides": syl["guides"],
         "paths": ont["paths"],
         "views": ont["views"],
         "concepts": [{k: c[k] for k in ("id", "en", "fr", "broader", "related")} for c in concepts],
