@@ -37,7 +37,7 @@ python3 explorer/build_explorer.py   # regenerate index.html (no dependencies)
 node --test tests/*.cjs               # ontology, IDs, staleness, offline cache, layout
 ```
 
-Then bump `VERSION` in `service-worker.js`. Record source or review changes in `CONTENT_REVIEW.md`. When a topic also appears in an HTML reader, update both.
+Then bump `VERSION` in `service-worker.js`. Record source or review changes in `CONTENT_REVIEW.md`. Publish new knowledge in `kb/` and regenerate the explorer. The three existing bilingual readers still have paired Markdown and HTML files. Update both when their content changes.
 
 ## Sources
 
