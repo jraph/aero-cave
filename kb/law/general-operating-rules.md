@@ -32,11 +32,12 @@
 - `T:` within total weight ≠ correctly secured or within CG.
 ***
 #### Passenger briefing
-<!-- id: law-passenger-briefing | from: 04 | level: PPL CPL -->
+<!-- id: law-passenger-briefing | from: 01, 04 | level: PPL CPL -->
 
 - Before takeoff brief exits, seat belts/harnesses/restraints, seats/tables, baggage, oxygen where applicable and smoking restrictions. `[CAR 602.89]`
 - Where applicable include life preservers, first-aid/survival equipment, ELT and raft information.
 - `M:` brief normal use + emergency action, not just “seat belt on.”
+- Pax brief memory: belts/doors/exits/no smoking/ELT/survival/sterile cockpit/emerg. `M:` SAFETY.
 ***
 #### Safety belts / restraints
 <!-- id: law-safety-belts-restraints | from: 04 | also: law-elt | level: PPL CPL IR -->
@@ -91,4 +92,15 @@
 | Segment 12–16 | 12–16 certificated passenger seats: summer M/X 227, F 190 lb; winter M/X 233, F 196 lb. |
 | Segment 17–25 | 17–25 certificated passenger seats: summer M/X 223, F 187 lb; winter M/X 229, F 193 lb. |
 | Actual wins / Réel | If a group is heavier than the assumed average, account for actual weights. Never hide infant, baggage or unusual load in a blanket average. |
+***
+#### Pebble
+<!-- id: law-general-operating-rules-pebble | also: study-pebble | level: PPL CPL IR -->
+
+- PIC `responsible; reckless/negligent operation prohibited | emergency deviation only as necessary | pre-flight: WX-NOTAM-FUEL-W&B-PERF-ROUTE-AIRSPACE-RUNWAY-ALTERNATES (602.71)`
+- CLEAN AIRCRAFT CAR 602.11 `no takeoff with frost, ice or snow adhering to critical surfaces`
+- MIN ALT CAR 602.14 `built-up area/open-air assembly: 1000 ft above highest obstacle within 2000 ft horizontally + able to land without hazard | elsewhere 500 ft FROM person, vessel, vehicle, structure ≠ 500 AGL`
+- RIGHT OF WAY `distress first | converging: traffic on right | head-on: both right | overtaking: pass right | landing ACFT has ROW, lower may not cut in | ATC clearance ≠ end of see-and-avoid`
+- NIGHT CAR 101.01 `end of evening civil twilight → beginning of morning civil twilight ≠ sunset`
+- PAX `brief exits, belts, baggage, oxygen, smoking before takeoff (602.89) | cargo secured (602.86); within weight ≠ secured or within CG`
+- PAX WEIGHTS `adult M/X 206 summer / 212 winter lb | adult F 172 / 178 lb | child 2–11 75 lb | infant 30 lb | 1–4 passenger seats: actual, volunteered or estimated | actual wins`
 ***

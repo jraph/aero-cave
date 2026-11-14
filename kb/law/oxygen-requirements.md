@@ -16,3 +16,8 @@
 | Pressurized / Pressurisé | Size emergency supply for worst-point decompression, descent profile and suitable landing aerodrome: use 605.31(2) table and notes; do not reuse unpressurized quantities. |
 | Pilot mask / Masque | Pilot at controls: mask required at/above FL250 without quick-donning masks; above FL410 with quick-donning masks. |
 ***
+#### Pebble
+<!-- id: law-oxygen-requirements-pebble | also: study-pebble | level: PPL CPL IR -->
+
+- OXYGEN CAR 605.31–.32 `>10,000 to ≤13,000 ft cabin: crew USE after 30 min | >13,000 ft: all aboard USE throughout | unpressurized supply 10–13: all crew + 10% passengers (min 1) for time beyond 30 min | exactly 13,000 stays in the 30-min band | cabin pressure altitude, not AGL | mask: at/above FL250 without quick-donning; above FL410 with`
+***

@@ -179,8 +179,8 @@
         {"n": 6, "en": "401.48 Instrument rating period of validity", "s": "P", "u": ["ifr-instrument-rating-recency"], "gap": "24-month test cycle given; validity period not stated as such."}
       ]},
       {"code": "GEN", "en": "CARs 601 / 602: airspace, ATC compliance, altimeter", "fr": "RAC 601 / 602", "items": [
-        {"n": 1, "en": "601.01 Airspace structure", "s": "P", "u": ["law-airspace"], "gap": "Class table only; structure of Canadian airspace absent."},
-        {"n": 2, "en": "601.02 Airspace classification", "s": "C", "u": ["law-airspace", "law-airspace-entry-memory"], "gap": ""},
+        {"n": 1, "en": "601.01 Airspace structure", "s": "P", "u": ["law-airspace-entry-memory"], "gap": "Class table only; structure of Canadian airspace absent."},
+        {"n": 2, "en": "601.02 Airspace classification", "s": "C", "u": ["law-airspace-entry-memory"], "gap": ""},
         {"n": 3, "en": "601.03 Transponder airspace", "s": "M", "u": [], "gap": "Transponder codes only (law-radio-transponder); transponder airspace not defined."},
         {"n": 4, "en": "601.04 IFR or VFR flight in Class F", "s": "M", "u": [], "gap": ""},
         {"n": 5, "en": "601.05 IFR flight in Class A–E / Class F controlled", "s": "P", "u": ["ifr-controlled-uncontrolled-ifr"], "gap": "Clearance requirement stated generally only."},
@@ -199,7 +199,7 @@
         {"n": 4, "en": "602.74 Contents of a flight plan / itinerary", "s": "M", "u": [], "gap": ""},
         {"n": 5, "en": "602.75 Filing", "s": "P", "u": ["law-flight-plan-itinerary"], "gap": "Who to file with only."},
         {"n": 6, "en": "602.76 Changes in the flight plan", "s": "P", "u": ["law-flight-plan-itinerary"], "gap": "One line citing 602.76–602.78."},
-        {"n": 7, "en": "602.77 Arrival report", "s": "P", "u": ["law-flight-plan-itinerary", "law-flight-plan-itinerary-pirep"], "gap": "Report contents; filing deadline not stated."},
+        {"n": 7, "en": "602.77 Arrival report", "s": "P", "u": ["law-flight-plan-itinerary"], "gap": "Report contents; filing deadline not stated."},
         {"n": 8, "en": "602.88 Fuel requirements", "s": "C", "u": ["ifr-ifr-fuel-car-602-88-memory"], "gap": ""}
       ]},
       {"code": "ADR", "en": "CARs: operations at or near an aerodrome", "fr": "RAC : aérodromes", "items": [
@@ -232,8 +232,8 @@
         {"n": 8, "en": "Reduced visibility operations", "s": "M", "u": [], "gap": ""}
       ]},
       {"code": "ASP", "en": "Canadian airspace", "fr": "Espace aérien canadien", "items": [
-        {"n": 1, "en": "Low level controlled airspace: types, dimensions, flight rules", "s": "P", "u": ["law-airspace", "law-vfr-minima-controlled"], "gap": "Class memory and control-zone minima; types and dimensions of low-level controlled airspace absent."},
-        {"n": 2, "en": "Classification of airspace", "s": "C", "u": ["law-airspace", "law-airspace-entry-memory"], "gap": ""},
+        {"n": 1, "en": "Low level controlled airspace: types, dimensions, flight rules", "s": "P", "u": ["law-airspace-entry-memory", "law-vfr-minima-controlled"], "gap": "Class memory and control-zone minima; types and dimensions of low-level controlled airspace absent."},
+        {"n": 2, "en": "Classification of airspace", "s": "C", "u": ["law-airspace-entry-memory"], "gap": ""},
         {"n": 3, "en": "Special use airspace", "s": "M", "u": [], "gap": ""}
       ]},
       {"code": "RFP", "en": "Route and flight planning", "fr": "Planification", "items": [

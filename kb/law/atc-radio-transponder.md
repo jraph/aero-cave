@@ -48,3 +48,11 @@
 - `T:` Flash GN ≠ LDG CLNC; **steady GN** = LDG CLNC.
 - `M:` **IN FLT GN steady=LDG/flash=return · RED steady=circle/flash=unsafe | GND GN steady=TKOF/flash=taxi · RED steady=STOP/flash=clear · WHITE=return**.
 ***
+#### Pebble
+<!-- id: law-atc-radio-transponder-pebble | also: study-pebble | level: PPL CPL IR -->
+
+- XPDR `1200 ≤12,500 | 1400 >12,500 | 7600 comm | 7700 emergency | 7500 hijack`
+- ATC CAR 602.31 `comply with clearances/instructions received and accepted, except emergency authority or amended clearance | unable → advise immediately | “roger” ≠ cleared`
+- LIGHTS `in flight: steady green = LDG clearance / flashing green = return for landing / steady red = give way, circle / flashing red = unsafe, no landing | ground: steady green = TKOF / flashing green = taxi / steady red = STOP / flashing red = taxi clear / flashing white = return to start`
+- ATS / WAKE `surveillance 5 NM standard / 3 NM authorized terminal | 1,000 ft below FL290; RVSM FL290–FL410 1,000 ft approved ACFT | wake S→S/H/M/L 4/6/7/8 NM · H→H/M/L 4/5/6 · M→L 4 | H ahead: 2 min same threshold, 3 min intersection`
+***

@@ -4,30 +4,6 @@
 [Index](README.md) · concept `law-airspace` · unit IDs are stable: never rename one.
 
 ***
-#### Airspace
-<!-- id: law-airspace | from: 01 | level: PPL CPL -->
-
-| Class | Memory |
-|---|---|
-| A | IFR only |
-| B | clearance + separation |
-| C | clearance |
-| D | 2-way comm |
-| E | IFR controlled / VFR no clearance |
-| F | CYR/CYA/CYD special |
-| G | uncontrolled |
-
-- `T:` chart/CFS floor/ceiling wins. class rules≠weather minima.
-- See the [VFR separation / conflict-resolution matrix](#vfr-separation--conflict-resolution-by-class) for who ATC separates in Classes B–E.
-***
-#### VFR minima / cruise altitude
-<!-- id: law-vfr-minima-cruise-altitude | from: 01 | level: PPL CPL -->
-
-- CTRL: flight vis `≥3 SM`, cloud `1 SM horiz / 500 ft vert`, visual reference to surface. CZ: reported ground vis also `≥3 SM`; stay `≥500 ft` from surface except takeoff/landing.
-- UNCTRL ≥`1000 AGL`: day `1 SM`, night `3 SM`, cloud `2000h/500v`.
-- UNCTRL <`1000 AGL` aeroplane: day `2 SM`, night `3 SM`, clear of cloud.
-- CRZ >`3000 AGL`: SDA=`MTRK`, NDA=`TTRK`; `000–179 odd+500 / 180–359 even+500`. `T:` track≠heading.
-***
 #### Cruising altitudes
 <!-- id: law-cruising-altitudes | from: 04 | level: PPL CPL IR -->
 
@@ -58,7 +34,7 @@
 | Height | Day | Night | Cloud |
 |---|---:|---:|---|
 | `≥1000 AGL` | `1 SM` | `3 SM` | `500 ft vert / 2000 ft horiz` |
-| `<1000 AGL` | `2 SM` | `3 SM` | clear of cloud |
+| `<1000 AGL` | `2 SM` (unless otherwise authorized in an AOC) | `3 SM` | clear of cloud |
 
 - Visual reference to surface required. `[CAR 602.115]`
 - `T:` these are legal minima, not personal minima.
@@ -84,8 +60,8 @@
 - Alternate, takeoff, approach, landing and approach-ban rules are separated in CAR 602.122–602.131.
 - `T:` advisory visibility, approach-ban threshold and DA/MDA visual-reference rule are three different concepts.
 ***
-#### Airspace entry memory
-<!-- id: law-airspace-entry-memory | from: 04 | level: PPL CPL -->
+#### Airspace classes / entry
+<!-- id: law-airspace-entry-memory | from: 01, 04| level: PPL CPL -->
 
 | Class | VFR memory |
 |---|---|
@@ -98,6 +74,8 @@
 | G | uncontrolled; CARs still apply |
 
 - Check current chart/CFS for floor, ceiling, transponder and communication requirements.
+- `T:` class rules≠weather minima.
+- See the [VFR separation / conflict-resolution matrix](#vfr-separation--conflict-resolution-by-class) for who ATC separates in Classes B–E.
 ***
 #### VFR separation / conflict resolution by class
 <!-- id: law-vfr-separation-conflict-resolution-by-class | from: 04 | also: law-atc | level: PPL CPL -->
@@ -117,4 +95,16 @@
 - `C/D runway:` `SEP ALL`; this does **not** mean airborne VFR–VFR separation.
 - `T:` clearance/TFC/flight following ≠ collision-avoidance transfer. Lookout + right-of-way remain.
 - Sources: [TC AIM 2026-2 RAC 2.8.1–2.8.7](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_rac_en.pdf) · [Standard 821.01 definitions](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/sor-96-433/standards/standard-821-canadian-domestic-air-traffic-control-separation-standards-canadian-aviation-regulations-cars)
+***
+#### Pebble
+<!-- id: law-airspace-vfr-minima-cruising-altitudes-pebble | also: study-pebble | level: PPL CPL IR -->
+
+- CLASSES `A IFR only | B clearance + specified equipment/qualification (CVFR) | C clearance before entry | D two-way comm before entry | E no VFR clearance generally, IFR controlled | F CYR/CYA/CYD | G uncontrolled, CARs still apply | class rules ≠ weather minima`
+- ATC SERVICE `B SEP ALL | C SEP IFR–IFR, CR IFR–VFR, TFC all | D SEP IFR–IFR only | E SEP IFR–IFR only | clearance/TFC ≠ collision-avoidance transfer`
+- VFR CONTROLLED CAR 602.114 `visual reference to surface | flight vis ≥3 SM | cloud 500 ft vertical + 1 SM horizontal | control zone: ground vis ≥3 SM, ≥500 ft from surface except TKOF/LDG`
+- VFR UNCONTROLLED CAR 602.115 `≥1000 AGL: day 1 SM / night 3 SM, cloud 500 ft vert / 2000 ft horiz | <1000 AGL aeroplane: day 2 SM / night 3 SM, clear of cloud`
+- SVFR `control zone only | pilot requests | aeroplane flight vis ≥1 SM | clear of cloud, visual reference to surface | night aeroplane: to land at destination`
+- VFR OTT `day cruise only | ≥1000 ft vertical from cloud | ≥5000 ft between layers | flight vis ≥5 SM | not automatic with PPL`
+- CRUISE CAR 602.34 `>3000 ft AGL | VFR 000–179° odd +500 / 180–359° even +500 | SDA magnetic track, NDA true track | track ≠ heading`
+- AERODROME `left turns unless CFS/ATC says right | no flight below 2000 ft over an aerodrome except listed operations | ATF calls ≠ MF mandatory reports`
 ***

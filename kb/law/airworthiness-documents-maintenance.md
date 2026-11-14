@@ -4,14 +4,6 @@
 [Index](README.md) · concept `law-airworthy` · unit IDs are stable: never rename one.
 
 ***
-#### Docs / legal
-<!-- id: law-docs-legal | from: 01 | level: PPL CPL -->
-
-- PIC responsible. Onboard as applicable: CofR, flight authority/CofA, current POH/AFM/supplements, journey log unless exception, required licences/medical.
-- Insurance coverage is required; the CARs do not impose one universal onboard proof-of-insurance document rule for every private flight.
-- `T:` valid document≠current pilot or airworthy aircraft. Current CFS/AIP/NOTAM/POH wins.
-- Pax brief: belts/doors/exits/no smoking/ELT/survival/sterile cockpit/emerg. `M:` SAFETY.
-***
 #### Maintenance approvals / abnormal occurrences
 <!-- id: law-maintenance-approvals-abnormal-occurrences | from: 04 | also: law-report | level: PPL CPL -->
 
@@ -40,7 +32,7 @@
 - `T:` a school checklist cannot authorize something prohibited by the POH/placard.
 ***
 #### Core aircraft documents
-<!-- id: law-core-aircraft-documents | from: 04 | level: PPL CPL -->
+<!-- id: law-core-aircraft-documents | from: 01, 04| level: PPL CPL -->
 
 | Document | Rule |
 |---|---|
@@ -52,6 +44,8 @@
 
 - Journey-log exception: may remain behind when no landing and shutdown is planned anywhere other than departure, subject to exact CAR conditions.
 - `T:` proof of insurance is required by CAR 606.02, but “must be carried on board” is not stated as a universal CAR 202/605 document rule.
+- PIC responsible. Also onboard as applicable: required licences/medical.
+- `T:` valid document≠current pilot or airworthy aircraft. Current CFS/AIP/NOTAM/POH wins.
 ***
 #### ACFT REG / airworthiness — CoR · CoA
 <!-- id: law-acft-reg-airworthiness-cor-coa | from: 04 | level: PPL CPL -->
@@ -125,4 +119,15 @@
 - Non-required defective equipment may permit flight only if isolated/secured, placarded, and recorded as applicable. `[CAR 605.10]`
 - PIC cannot fly if safety is affected regardless of deferral mechanics. `[CAR 605.08]`
 - `M:` `REQUIRED? → SERVICEABLE? → DEFER LEGALLY? → SAFE?`
+***
+#### Pebble
+<!-- id: law-airworthiness-documents-maintenance-pebble | also: study-pebble | level: PPL CPL IR -->
+
+- DOCS `CofR on board | flight authority in effect, normally carried | AFM/POH if required | journey log unless 605.95 exception | radio licence if issued | insurance required (606.02), not a universal carry rule | valid document ≠ airworthy aircraft`
+- REG `CoR ≠ proof of title | MTOW not printed on CoR | transfer → CoR cancelled, TC in writing ≤7 days | interim ≤3 mo, no second successive | temporary ≤3 mo | provisional route-specific | CoA independent of CoR`
+- FLIGHT AUTHORITY `C of A standard | Special C of A: provisional / restricted / amateur-built / limited / owner-maintenance | Flight Permit: experimental / specific purpose | amateur-built ≠ experimental in Canada`
+- MAINT `AME = licensed individual | AMO = approved organization, not required for every private inspection | AMO → PRM | AOC → PRMCS | MPM AMO / MCM operator | DML ≠ MEL | defect entry ≠ maintenance release | abnormal occurrence → inspection before return to service`
+- RECORDS `journey log + airframe + each ENG + each variable-pitch PROP + W&B | no separate fixed-pitch PROP record | title transfer → all records`
+- AAIR `owner → TC ≤MAR 30 after JAN–DEC period, or pre-agreed date | AAIR ≠ annual inspection`
+- UNSERVICEABLE `REQUIRED? → SERVICEABLE? → DEFER LEGALLY? → SAFE? | required equipment unserviceable → no takeoff (605.10)`
 ***

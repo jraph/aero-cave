@@ -34,3 +34,11 @@
 | Land survival / Survie terre | 602.61: FIRE + SHELTER + WATER + SIGNAL, for everyone and climate. 25-NM exception requires staying within 25 NM of departure aerodrome AND surface-station radio capability throughout. Other listed exceptions exist. |
 | Planning / Préparation | Recommendation: wear suitable inflatable flotation, brief evacuation and inflate only outside; assess cold-water exposure and rescue delay. Equipment carriage alone does not make a crossing safe. |
 ***
+#### Pebble
+<!-- id: law-elt-survival-equipment-pebble | also: study-pebble | level: PPL CPL IR -->
+
+- ELT `406 MHz distress + 121.5 homing | FTU flight training ≤25 NM DEP exempt, not private flights generally | unserviceable → 605.39 conditions | 121.5 test: first 5 min of UTC hour, ≤5 s; 406 per MFR only`
+- FLOTATION 602.62 `water TKOF/LDG or cannot reach shore engine-out: one per person | landplane >50 NM from shore: life preserver each, accessible while seated`
+- RAFTS 602.63 `SE (or ME unable to hold flight OEI): beyond lesser of 100 NM / 30 min at filed cruise | ME able: lesser of 200 NM / 60 min | measured from a suitable emergency landing site, not shore`
+- SURVIVAL 602.61 `fire + shelter + water + signal | 25-NM exception needs radio capability with a surface station throughout`
+***

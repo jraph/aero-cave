@@ -49,7 +49,7 @@ Knowledge lives in **concept files**: one Markdown file per ontology concept und
 | IFR | [11 · CAP plate reading](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md) · [12 · IFR procedures](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) |
 | Reader-paired | [17 · Pilot qualifications](cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md) · [Formulas](cheatsheets/CPAER_Formulas_Recall_EN_FR.md) · [Abbreviations](cheatsheets/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.md) |
 
-Meteorology and IFR are consolidated (duplicates merged, a Pebble per concept). Air law, navigation, aeronautics and multi-engine are moved but **not yet merged or given per-concept Pebbles**.
+Meteorology, IFR and air law are consolidated (duplicates merged, a Pebble per concept). Navigation, aeronautics and multi-engine are moved but **not yet merged or given per-concept Pebbles**.
 
 **What goes where:** knowledge → concept file · ordered procedures, flows and QRCs → numbered card · aircraft-type data → its POH card.
 

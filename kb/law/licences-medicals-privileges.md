@@ -45,3 +45,12 @@
 - Air transport and listed aerial work generally require an authorizing AOC. `[CAR 700.02]`
 - `M:` licence qualifies pilot; AOC authorizes service. `T:` equal cost split alone is insufficient.
 ***
+#### Pebble
+<!-- id: law-licences-medicals-privileges-pebble | also: study-pebble | level: PPL CPL -->
+
+- VALIDITY `LICENCE-RATING-MEDICAL-RECENCY-AIRCRAFT-OPERATION`
+- CPL-A `age 18 | Cat 1 | 80 h ground school | CPAER 60% each subject + overall | 200 h TT incl 100 PIC + 20 PIC XC | 65 h post-PPL = 35 dual + 30 solo | dual: 5 night incl 2 XC, 5 XC, 20 instrument (max 10 sim) | solo: 300 NM XC with 3 full stops, one ≥250 NM straight-line; 5 h night with 10 TKOF/LDG | flight test within 12 mo`
+- PPL-A `no hire/reward except CAR 401.28 cases | cost-share: owner/operator + non-commercial purpose + incidental passengers + fuel/oil/aircraft fees only | equal split alone insufficient`
+- CPL-A `licence qualifies pilot; AOC authorizes service | CPL ≠ 703/704/705 authorization | day-only if issued without night requirement`
+- FLIGHT TEST `instructor letter ≤30 d | stable VFR approach: ROD ≤1000 fpm, speed +10/−5, stable by 200 AGL or overshoot (test criterion, not a CAR minimum)`
+***

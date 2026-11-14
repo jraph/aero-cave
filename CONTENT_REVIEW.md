@@ -1,5 +1,13 @@
 # Content review
 
+## Air law consolidated — 14 November 2026
+
+`kb/law`: six overlapping units retired, 14 per-concept Pebbles added, card 04's whole-card Pebble retired from `kb/study`.
+
+Retired (content kept in the survivor unless noted): `law-vfr-minima-cruise-altitude` (01; every value restated by the 602.114 / 602.115 / 602.34 units); `law-airspace` (01) → `law-airspace-entry-memory` (adds “class rules ≠ weather minima” and the separation-matrix link); `law-docs-legal` (01) → `law-core-aircraft-documents` (adds licences/medical on board, valid-document trap) and `law-passenger-briefing` (adds the SAFETY brief memory line); `law-flight-plan-itinerary-pirep` (01) → `law-flight-plan-itinerary` (adds arrival-report, VFR position-report and PIREP formats); `law-ifr-fuel-reserve-memory` (06) → `law-fuel-requirements`; `law-instrument-rating-recency` (04) removed as a word-for-word duplicate of `ifr-instrument-rating-recency`, which stays filed under the recency concept.
+
+**Checked against the project copy of the CARs (SOR/96-433) and CFS on this date:** 602.115 uncontrolled VFR minima (values match; **added the qualifier “unless otherwise authorized in an AOC” to the day 2 SM <1000 ft AGL value**, per 602.115(c)(i)); 602.88 fuel (VFR 30 / 45 min, IFR prop 45 min, turbojet/helicopter IFR 30 min: match; note 602.88(3)(b) gives helicopters 20 min VFR, not in the card, which is aeroplane-scoped); arrival-report contents, VFR position report and PIREP order (match CFS Planning section). **Everything else in `kb/law` is unverified consolidation.** Noted but not added: itinerary arrival-report deadline (602.77(2): SAR time, else 24 h after last reported ETA).
+
 ## Remaining knowledge cards moved to concept files; all cards ID'd — 14 November 2026
 
 Cards 01, 03, 04, 06 and 13 moved into concept files (`kb/law`, `kb/nav`, `kb/agk`, `kb/me`, `kb/study`, plus additions to `kb/met` and `kb/ifr`) and deleted: 138 sections, **text unchanged** (machine-compared; one exact duplicate, card 06's sources line, kept once), concept links and level tags preserved, all other cards byte-identical. Each unit's primary concept was chosen automatically (most specific concept; card 04 prefers `law-…`, card 13 prefers `me-…`) and **has not been reviewed unit by unit**; the other concepts are in `also:`. Whole-card Pebbles and source notes are in `kb/study/`. 61 coverage-matrix links re-pointed.

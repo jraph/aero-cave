@@ -63,3 +63,13 @@ The shared flight/duty section below contains current limits and applicability.
 
 Shared additions reviewed 19 October 2026: [source editions and scope](../../CONTENT_REVIEW.md#operational-additions--19-october-2026).
 ***
+#### Pebble
+<!-- id: law-commercial-ops-604-702-705-duty-time-pebble | also: study-pebble | level: CPL -->
+
+- 604 `large aeroplane, turbojet, or pressurized turbine >6 passenger seats | no fare needed | ordinary private C150 flying ≠ 604`
+- FLIGHT TIME `700.27: 112 h/28 d, 300 h/90 d, 1000 h/365 d, single-pilot 8 h/24 h | 604.98: 120 h/30 d, 300 h/90 d, 1200 h/12 mo, single-pilot IFR 8 h/24 h`
+- FDP 700.28 `9–13 h by start time + flights + average duration | no universal 14 h | all day VFR → column A | positioning not a flight for the count`
+- 604 FDP `14 h/24 h; 15 h iff previous 30 d FDP ≤70 h OR previous rest ≥24 h`
+- WORK / REST `700.29: 60 h/7 d (or qualifying 70 h option), 192 h/28 d, 2200 h/365 d | 700.40 home: 12 h, or 11 h + travel, or 10 h in operator accommodation; away: 10 h`
+- UOC `604.102: +3 h | 700.63: +1 h single-pilot, +2 h non-augmented | next rest += actual extension`
+***
