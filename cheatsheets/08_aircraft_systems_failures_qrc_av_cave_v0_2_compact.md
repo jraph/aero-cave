@@ -49,7 +49,7 @@
 | Key | Recall |
 |---|---|
 | `T` OCTANE | AVGAS **antiknock/detonation resistance**, not fuel energy; **80/87 = lean/rich ratings**, likewise **100/130** (rich performance number >100 ≠ % octane). |
-| `M` AVGAS | **80/87 RED** | **100/130 GREEN** | **100LL BLUE** (`LL` = low lead, **≠ unleaded**; rated 100 lean / 130 rich). |
+| `M` AVGAS | **80/87 RED** · **100/130 GREEN** · **100LL BLUE** (`LL` = low lead, **≠ unleaded**; rated 100 lean / 130 rich). |
 | `M` JET A | Kerosene-type turbine fuel; **max freezing point −40°C**. |
 | `M` JET A-1 | Kerosene-type turbine fuel; **max freezing point −47°C**. |
 | `T` JET B | Wide-cut gasoline/kerosene-type turbine fuel, more volatile; fuel specification / AFM approval required. |
@@ -122,7 +122,7 @@
 | `R` BETA | Ground range aft of FLT idle: power lever schedules PROP blade angle (outside normal RPM governing). |
 | `R` GROUND FINE | Low blade angle→low/near-zero forward thrust for taxi. |
 | `R` REVERSE | Further BETA→negative blade angle→reverse thrust for ground deceleration; **BETA ≠ REVERSE** (reverse ⊂ beta, on equipped ACFT). |
-| `!` BETA LIMIT | Normally **ground only**; observe FLT-idle gate and AFM limits; in-FLT BETA may cause loss of control/overspeed.
+| `!` BETA LIMIT | Normally **ground only**; observe FLT-idle gate and AFM limits; in-FLT BETA may cause loss of control/overspeed. |
 | `T` SE vs ME | **Typical piston** SE non-feathering: governor oil P↑→pitch↑/RPM↓; **typical piston** ME full-feathering: oil P↑→pitch↓/RPM↑; oil P loss→counterweights/springs drive feather. **Not universal**; POH/AFM wins. |
 | `!` OEI | Windmilling unfeathered failed PROP→large drag / climb loss; **control→identify→verify→feather→secure per POH**, never feather unverified ENG; feather locks/accumulator/prop architecture vary. |
 

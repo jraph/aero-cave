@@ -1,0 +1,164 @@
+{
+  "_about": "Item-level map from Transport Canada guide items to stable unit IDs in the cards. Labels are our own short wording; group order and item numbers follow the guide, whose text is authoritative. Status: C covered (substantive treatment in the linked units), P partial (see gap), M missing (nothing substantive found), E elsewhere (belongs to a card without stable IDs yet; not checked at item level). Editorial study mapping; no TC endorsement; not a claim of exam readiness or regulatory currency.",
+  "guides": [{
+    "id": "tp12881-met",
+    "guide": "TP 12881",
+    "edition": "7th edition, August 2026",
+    "en": "CPAER · Meteorology",
+    "fr": "CPAER · Météorologie",
+    "url": "https://tc.canada.ca/en/aviation/publications/study-reference-guide-written-examinations-commercial-pilot-licence-aeroplane-tp-12881",
+    "reviewed": "2026-11-14",
+    "scope": {"en": "Checked against cards 16 and 05 (plus the temperature section of card 06). Elsewhere = topic sits in a card without stable IDs yet.", "fr": "Vérifié avec les fiches 16 et 05 (et la section température de la fiche 06). Ailleurs = sujet situé dans une fiche sans identifiants stables."},
+    "groups": [
+      {"code": "ATM", "en": "Atmosphere", "fr": "Atmosphère", "items": [
+        {"n": 1, "en": "Composition, physical properties", "s": "P", "u": ["wx-isa"], "gap": "Gas composition and water-vapour role not stated."},
+        {"n": 2, "en": "Vertical structure", "s": "P", "u": ["wx-isa", "wx-jet-cat"], "gap": "Tropopause named only; layers and tropopause height variation absent."},
+        {"n": 3, "en": "Standard atmosphere (ISA)", "s": "C", "u": ["wx-isa"], "gap": ""},
+        {"n": 4, "en": "Density and pressure", "s": "C", "u": ["wx-isa", "wx-pa-da"], "gap": ""},
+        {"n": 5, "en": "Mobility", "s": "M", "u": [], "gap": ""},
+        {"n": 6, "en": "Expansion and compression", "s": "P", "u": ["wx-lapse-stability", "wx-moisture-cloud"], "gap": "Adiabatic cooling on ascent used; warming by compression on descent not explained."}
+      ]},
+      {"code": "PRS", "en": "Atmospheric pressure", "fr": "Pression atmosphérique", "items": [
+        {"n": 1, "en": "Pressure measurement", "s": "P", "u": ["wx-isa"], "gap": "Units appear in ISA values only; barometer types absent."},
+        {"n": 2, "en": "Station pressure", "s": "M", "u": [], "gap": ""},
+        {"n": 3, "en": "Sea-level pressure", "s": "M", "u": [], "gap": ""},
+        {"n": 4, "en": "Pressure systems and variations", "s": "C", "u": ["wx-pressure-systems"], "gap": ""},
+        {"n": 5, "en": "Effect of temperature", "s": "P", "u": ["wx-altimetry-traps"], "gap": "Altimeter consequence given; spacing of pressure levels in warm vs cold air not explained."},
+        {"n": 6, "en": "Isobars", "s": "P", "u": ["wx-pressure-systems"], "gap": "Spacing-to-wind link only; no definition."},
+        {"n": 7, "en": "Horizontal pressure differences", "s": "C", "u": ["wx-wind", "wx-pressure-systems"], "gap": ""}
+      ]},
+      {"code": "ALT", "en": "Altimetry (MET aspects)", "fr": "Altimétrie (aspects MET)", "items": [
+        {"n": 1, "en": "Pressure altitude", "s": "C", "u": ["wx-pa-da"], "gap": ""},
+        {"n": 2, "en": "Density altitude", "s": "C", "u": ["wx-pa-da"], "gap": ""},
+        {"n": 3, "en": "Altimeter settings", "s": "P", "u": ["wxp-altimeter"], "gap": "METAR altimeter group and pressure-trend trap; what a setting represents and setting procedures sit in cards 01 / 10 (no IDs yet)."},
+        {"n": 4, "en": "High↔low pressure / temperature areas", "s": "C", "u": ["wx-altimetry-traps"], "gap": ""}
+      ]},
+      {"code": "TMP", "en": "Temperature", "fr": "Température", "items": [
+        {"n": 1, "en": "°F / °C scales", "s": "C", "u": ["calc-temperature"], "gap": ""},
+        {"n": 2, "en": "Heating / cooling: convection, advection, radiation", "s": "P", "u": ["wx-moisture-cloud", "wx-fog"], "gap": "Cooling mechanisms listed; atmospheric heating processes and diurnal cycle absent."},
+        {"n": 3, "en": "Horizontal differences", "s": "M", "u": [], "gap": ""},
+        {"n": 4, "en": "Variation with altitude", "s": "C", "u": ["wx-isa", "wx-lapse-stability"], "gap": ""},
+        {"n": 5, "en": "Inversions", "s": "C", "u": ["wx-temp-dewpoint", "wx-wind-shear"], "gap": ""},
+        {"n": 6, "en": "Isothermal layers", "s": "M", "u": [], "gap": ""}
+      ]},
+      {"code": "MST", "en": "Moisture", "fr": "Humidité", "items": [
+        {"n": 1, "en": "Relative humidity and dew point", "s": "P", "u": ["wx-temp-dewpoint"], "gap": "Dew point defined; relative humidity not."},
+        {"n": 2, "en": "Change of state", "s": "M", "u": [], "gap": "Latent heat not treated."},
+        {"n": 3, "en": "Sublimation and condensation", "s": "P", "u": ["wx-moisture-cloud"], "gap": "Condensation nuclei only; sublimation / deposition absent."},
+        {"n": 4, "en": "Cloud formation", "s": "C", "u": ["wx-moisture-cloud"], "gap": ""},
+        {"n": 5, "en": "Precipitation", "s": "C", "u": ["wx-precip"], "gap": ""},
+        {"n": 6, "en": "Dry / saturated adiabatic lapse rates", "s": "C", "u": ["wx-lapse-stability"], "gap": ""}
+      ]},
+      {"code": "STB", "en": "Stability", "fr": "Stabilité", "items": [
+        {"n": 1, "en": "Lapse rate and stability", "s": "C", "u": ["wx-lapse-stability"], "gap": ""},
+        {"n": 2, "en": "Modification of stability", "s": "P", "u": ["wx-air-masses"], "gap": "Surface warming / cooling of an air mass only."},
+        {"n": 3, "en": "Stable vs unstable air characteristics", "s": "C", "u": ["wx-lapse-stability", "wx-exam-traps"], "gap": ""},
+        {"n": 4, "en": "Surface heating and cooling", "s": "P", "u": ["wx-air-masses", "wx-fog"], "gap": "Effects implied through air-mass and radiation-fog lines; no direct treatment."},
+        {"n": 5, "en": "Lifting processes", "s": "C", "u": ["wx-moisture-cloud"], "gap": ""},
+        {"n": 6, "en": "Subsidence and convergence", "s": "P", "u": ["wx-pressure-systems", "wx-moisture-cloud"], "gap": "Sinking air in highs and convergence as lift named; subsidence warming / inversion absent."}
+      ]},
+      {"code": "CLD", "en": "Clouds", "fr": "Nuages", "items": [
+        {"n": 1, "en": "Classification", "s": "C", "u": ["wx-cloud-families"], "gap": ""},
+        {"n": 2, "en": "Formation and structure", "s": "P", "u": ["wx-moisture-cloud"], "gap": "Formation covered; structure thin."},
+        {"n": 3, "en": "Types and recognition", "s": "P", "u": ["wx-cloud-families"], "gap": "Significance per type; appearance / recognition cues absent."},
+        {"n": 4, "en": "Associated precipitation and turbulence", "s": "C", "u": ["wx-cloud-families", "wx-lapse-stability"], "gap": ""}
+      ]},
+      {"code": "SFC", "en": "Surface-based layers", "fr": "Couches en surface", "items": [
+        {"n": 1, "en": "Fog formation", "s": "C", "u": ["wx-fog", "wx-temp-dewpoint", "wxp-stability-fronts-fog"], "gap": ""},
+        {"n": 2, "en": "Fog types, incl. mist", "s": "P", "u": ["wx-fog", "wxp-stability-fronts-fog", "wxp-wx-codes"], "gap": "Fog types and BR / FG codes; mist vs fog visibility distinction absent."},
+        {"n": 3, "en": "Haze and smoke", "s": "P", "u": ["wx-visibility", "wx-temp-dewpoint", "wxp-wx-codes"], "gap": "FU / HZ codes and inversion trapping; no formation or operational detail."},
+        {"n": 4, "en": "Blowing obstructions to vision", "s": "P", "u": ["wx-visibility", "wxp-wx-codes", "wxp-snow-fzra"], "gap": "BL / DR codes, blowing-snow whiteout; no criteria for dust / sand."}
+      ]},
+      {"code": "TRB", "en": "Turbulence", "fr": "Turbulence", "items": [
+        {"n": 1, "en": "Convective", "s": "C", "u": ["wx-turbulence", "wxp-turbulence"], "gap": ""},
+        {"n": 2, "en": "Mechanical", "s": "C", "u": ["wx-turbulence", "wxp-turbulence"], "gap": ""},
+        {"n": 3, "en": "Orographic", "s": "C", "u": ["wx-mountain-wave", "wx-turbulence", "wxp-mountain"], "gap": ""},
+        {"n": 4, "en": "Wind shear", "s": "C", "u": ["wx-wind-shear", "wx-microburst", "wxp-llws"], "gap": ""},
+        {"n": 5, "en": "Clear air turbulence", "s": "C", "u": ["wx-jet-cat", "wx-turbulence"], "gap": ""},
+        {"n": 6, "en": "Reporting criteria", "s": "M", "u": [], "gap": "PIREP /TB field named in card 05; intensity definitions absent."}
+      ]},
+      {"code": "WND", "en": "Wind", "fr": "Vent", "items": [
+        {"n": 1, "en": "Definition", "s": "C", "u": ["wxp-wind"], "gap": ""},
+        {"n": 2, "en": "Pressure gradient", "s": "C", "u": ["wx-wind"], "gap": ""},
+        {"n": 3, "en": "Coriolis deflection", "s": "C", "u": ["wx-wind"], "gap": ""},
+        {"n": 4, "en": "Low-level winds, surface-wind variation", "s": "P", "u": ["wx-wind", "wx-local-winds"], "gap": "Friction effect and local winds; gustiness and variation with height thin."},
+        {"n": 5, "en": "Friction", "s": "C", "u": ["wx-wind"], "gap": ""},
+        {"n": 6, "en": "Centrifugal force", "s": "M", "u": [], "gap": "Gradient flow named, force not explained."},
+        {"n": 7, "en": "Veer / back", "s": "P", "u": ["wx-cold-front", "wx-warm-front"], "gap": "Term used in frontal tables; never defined."},
+        {"n": 8, "en": "Squalls / gusts", "s": "P", "u": ["wx-cold-front", "wxp-wind", "wxp-wx-codes"], "gap": "Gust group and SQ code decoded; squall / gust criteria absent."},
+        {"n": 9, "en": "Diurnal effects", "s": "M", "u": [], "gap": ""},
+        {"n": 10, "en": "Land and sea breezes", "s": "C", "u": ["wx-local-winds"], "gap": ""},
+        {"n": 11, "en": "Katabatic and anabatic", "s": "C", "u": ["wx-local-winds"], "gap": ""},
+        {"n": 12, "en": "Topographical effects", "s": "C", "u": ["wx-local-winds", "wx-mountain-wave"], "gap": ""},
+        {"n": 13, "en": "Wind shear: types and causes", "s": "C", "u": ["wx-wind-shear", "wxp-llws"], "gap": ""},
+        {"n": 14, "en": "Jet stream: composition, altitude, seasons", "s": "P", "u": ["wx-jet-cat"], "gap": "Location and CAT link; typical altitude and seasonal shift absent."}
+      ]},
+      {"code": "AMS", "en": "Air masses", "fr": "Masses d’air", "items": [
+        {"n": 1, "en": "Definition and characteristics", "s": "P", "u": ["wx-air-masses"], "gap": "Classification given; no definition."},
+        {"n": 2, "en": "Formation and classification", "s": "C", "u": ["wx-air-masses"], "gap": ""},
+        {"n": 3, "en": "Modification", "s": "C", "u": ["wx-air-masses"], "gap": ""},
+        {"n": 4, "en": "Factors that determine weather", "s": "P", "u": ["wx-air-masses"], "gap": "Moisture and stability implied, not set out as factors."},
+        {"n": 5, "en": "Seasonal and geographic effects", "s": "M", "u": [], "gap": ""},
+        {"n": 6, "en": "Air masses affecting North America", "s": "P", "u": ["wx-air-masses"], "gap": "Source types named; the specific North American air masses and their weather not listed."}
+      ]},
+      {"code": "FRT", "en": "Fronts", "fr": "Fronts", "items": [
+        {"n": 1, "en": "Structure", "s": "P", "u": ["wx-fronts"], "gap": "Undercut / overrun and relative slope; no frontal-surface detail."},
+        {"n": 2, "en": "Types", "s": "C", "u": ["wx-fronts"], "gap": ""},
+        {"n": 3, "en": "Formation", "s": "M", "u": [], "gap": "No frontal-wave / development model."},
+        {"n": 4, "en": "Cross-sections", "s": "P", "u": ["wx-warm-front-sequence", "wx-cold-front", "wx-warm-front"], "gap": "Sequences in words and tables; no cross-section reading."},
+        {"n": 5, "en": "Frontogenesis / frontolysis", "s": "M", "u": [], "gap": ""},
+        {"n": 6, "en": "Cold front", "s": "C", "u": ["wx-cold-front", "wx-fronts"], "gap": ""},
+        {"n": 7, "en": "Warm front", "s": "C", "u": ["wx-warm-front", "wx-warm-front-sequence", "wx-fronts"], "gap": ""},
+        {"n": 8, "en": "Trowal and upper fronts", "s": "M", "u": [], "gap": "Occlusion mentioned; trowal absent from all cards."}
+      ]},
+      {"code": "ICE", "en": "Aircraft icing", "fr": "Givrage", "items": [
+        {"n": 1, "en": "Formation", "s": "C", "u": ["wx-icing", "wxp-icing"], "gap": ""},
+        {"n": 2, "en": "In flight, freezing rain", "s": "C", "u": ["wx-icing", "wx-precip", "wx-warm-front", "wxp-icing", "wxp-snow-fzra"], "gap": ""},
+        {"n": 3, "en": "Hoar frost", "s": "M", "u": [], "gap": "Only the clean-aircraft rule in card 04."},
+        {"n": 4, "en": "Engine icing impact", "s": "C", "u": ["wx-carb-ice", "wx-icing", "wxp-carb-ice"], "gap": ""}
+      ]},
+      {"code": "TS", "en": "Thunderstorms", "fr": "Orages", "items": [
+        {"n": 1, "en": "Requirements for development", "s": "C", "u": ["wx-thunderstorms"], "gap": ""},
+        {"n": 2, "en": "Structure and development", "s": "C", "u": ["wx-thunderstorms"], "gap": ""},
+        {"n": 3, "en": "Types: air mass and frontal", "s": "M", "u": [], "gap": ""},
+        {"n": 4, "en": "Hazards", "s": "C", "u": ["wx-thunderstorms", "wx-microburst", "wxp-convection"], "gap": ""},
+        {"n": 5, "en": "Squall lines", "s": "P", "u": ["wx-cold-front", "wxp-convection"], "gap": "Prefrontal squall line and line avoidance named; no structure or behaviour."}
+      ]},
+      {"code": "HAZ", "en": "Other hazards", "fr": "Autres dangers", "items": [
+        {"n": 1, "en": "Hurricane", "s": "M", "u": [], "gap": "Tropical cyclone appears as a SIGMET criterion only."},
+        {"n": 2, "en": "Tornado", "s": "M", "u": [], "gap": "Listed as a thunderstorm hazard and urgent-PIREP trigger only."},
+        {"n": 3, "en": "Forest fires", "s": "M", "u": [], "gap": ""},
+        {"n": 4, "en": "Dust / sand whirls", "s": "M", "u": [], "gap": ""},
+        {"n": 5, "en": "Eclipse", "s": "M", "u": [], "gap": ""}
+      ]},
+      {"code": "SVC", "en": "MET services for pilots", "fr": "Services MET", "items": [
+        {"n": 1, "en": "Aviation weather services", "s": "P", "u": ["wxp-master-scan", "wxp-product-roles", "wx-products"], "gap": "Products and briefing flow covered; who provides which service and how to access it not set out."},
+        {"n": 2, "en": "Collaborative Flight Planning Services (CFPS)", "s": "M", "u": [], "gap": "No mention in any card."},
+        {"n": 3, "en": "Weather information from ATS", "s": "E", "u": [], "gap": "ATIS mentions in cards 04, 12, 13 (no IDs yet; not item-checked)."},
+        {"n": 4, "en": "FSS and FIC", "s": "P", "u": ["wxp-fic"], "gap": "In-flight FIC update flow; FSS vs FIC roles and services not described."}
+      ]},
+      {"code": "RPT", "en": "Weather reports", "fr": "Observations", "items": [
+        {"n": 1, "en": "Decoding", "s": "C", "u": ["wxp-metar", "wxp-wind", "wxp-vis-rvr", "wxp-wx-codes", "wxp-cloud-groups", "wxp-temp-dewpoint", "wxp-altimeter"], "gap": ""},
+        {"n": 2, "en": "METAR", "s": "C", "u": ["wxp-metar", "wxp-product-roles", "wx-products"], "gap": ""},
+        {"n": 3, "en": "AWOS / LWIS / AUTO", "s": "P", "u": ["wxp-metar"], "gap": "AUTO flagged as a trap only; AWOS vs LWIS content and sensor limits absent."},
+        {"n": 4, "en": "PIREP", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wxp-product-roles"], "gap": ""}
+      ]},
+      {"code": "FCST", "en": "Forecasts", "fr": "Prévisions", "items": [
+        {"n": 1, "en": "Issue times and validity", "s": "P", "u": ["wxp-gfa", "wxp-taf"], "gap": "GFA issue / valid times given; TAF, FB, AIRMET and SIGMET issue and validity periods absent."},
+        {"n": 2, "en": "Decoding", "s": "C", "u": ["wxp-taf", "wxp-gfa", "wxp-upper-winds"], "gap": ""},
+        {"n": 3, "en": "GFA", "s": "C", "u": ["wxp-gfa", "wx-products", "wx-freezing-level"], "gap": ""},
+        {"n": 4, "en": "TAF", "s": "C", "u": ["wxp-taf", "wxp-taf-alternate", "wx-products"], "gap": "Open conflict V-02: TEMPO total ≤½ here vs <½ in the glossary; not yet resolved against AIM MET."},
+        {"n": 5, "en": "Upper winds and temperatures (FB)", "s": "P", "u": ["wxp-upper-winds"], "gap": "Use and interpolation; FB coding format, levels and issue times absent."},
+        {"n": 6, "en": "AIRMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wxp-product-roles", "wx-products"], "gap": ""},
+        {"n": 7, "en": "SIGMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wxp-product-roles", "wx-products"], "gap": ""}
+      ]},
+      {"code": "CHT", "en": "Weather maps and prog charts", "fr": "Cartes et pronostics", "items": [
+        {"n": 1, "en": "Issue times and validity", "s": "M", "u": [], "gap": ""},
+        {"n": 2, "en": "Symbols and decoding", "s": "M", "u": [], "gap": ""},
+        {"n": 3, "en": "Surface analysis", "s": "M", "u": [], "gap": ""},
+        {"n": 4, "en": "Upper-air analysis to 500 hPa", "s": "M", "u": [], "gap": ""},
+        {"n": 5, "en": "Significant weather prog 700–400 hPa", "s": "M", "u": [], "gap": ""}
+      ]}
+    ]
+  }]
+}

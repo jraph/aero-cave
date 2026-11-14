@@ -84,4 +84,6 @@ Do not call a topic Covered from a heading alone. Verify actual content against 
 
 Findings: HF physiology and instrument principles are thin despite useful failure/procedure reminders; electric propulsion, detailed EFB hazards, medevac fatigue and weather-chart interpretation need attention. Internal publication-currency and TEMPO wording conflicts, plus an ambiguous unusual-attitude instruction, are recorded for comparison before correction.
 
+**14 Nov 2026 — Meteorology item-level pilot:** cards 16 and 05 sections carry stable IDs; `explorer/syllabus.json` maps all 111 TP 12881 Meteorology items (after adding card 05: 51 C / 33 P / 26 M / 1 elsewhere-unchecked) and is browsable in the [explorer](https://jraph.github.io/aero-cave/explorer.html#g-tp12881-met). Details in [CONTENT_REVIEW](CONTENT_REVIEW.md).
+
 **Gate 1 remains open:** Air Law regulation-by-regulation and the remaining subject numbered-item expansion are outstanding. No overall coverage percentage, target folder approval, deduplication or study-content migration is claimed. Existing cards/readers/PWA remain unchanged.

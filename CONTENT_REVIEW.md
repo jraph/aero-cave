@@ -1,5 +1,27 @@
 # Content review
 
+## Card 05 stable IDs; Meteorology map completed — 14 November 2026
+
+Card 05: 34 sections given stable IDs (`wxp-…`, invisible comment under each heading); card 06: `calc-temperature` on the Temperature section only. No study text changed. `explorer/syllabus.json` re-judged the 18 formerly unchecked TP 12881 Meteorology items against card 05 and added card 05 evidence to existing rows: now **51 Covered, 33 Partial, 26 Missing, 1 Elsewhere** (weather information from ATS: ATIS mentions in cards 04 / 12 / 13, not checked). Still judged by content read only, not validated against AIM MET. FCST 4 (TAF) carries the open V-02 TEMPO wording conflict as a note. Explorer topic graph opens by default again, replaces the duplicate chip rows while open, and gains an “All topics” node above the broader concepts.
+
+## Stable unit IDs (card 16) and TP 12881 Meteorology item map — 14 November 2026
+
+Pilot of ID-anchored mapping. Card 16: each of the 32 sections now carries a stable ID as an invisible comment on the line under its heading (`<!-- id: wx-fog -->`); no study text, Pebble or heading changed. IDs are card-independent (`wx-…`), must stay unique, and must not be renamed once referenced.
+
+`explorer/syllabus.json`: all 111 Meteorology items of TP 12881 (7th ed., Aug 2026; item list read from the TC HTML edition on 14 Nov 2026) mapped to unit IDs with status and gap note: **41 Covered, 27 Partial, 25 Missing, 18 Elsewhere**. Item labels are our own short wording under the guide's group order and numbering; the guide text governs. *Elsewhere* = topic belongs to a card without IDs yet (mainly 05 decoding, also 01/04/06/10/12) and was **not** checked at item level. Covered/Partial judged against card 16 text only, by content read, not against AIM/MANAB for accuracy. Collection-wide absences confirmed by text search: CFPS, trowal, isothermal layers, latent heat, hoar frost (MET sense), analysis/prog charts, other-hazards group. Supersedes the group-level Meteorology rows of the 22 Oct matrix for card 16 evidence; matrix file itself unchanged. Gate 1 remains open for other subjects.
+
+Explorer: guide coverage screen (status filter, per-group bars, tap-through to the unit), `#u-<id>` deep links, guide-item chips on each ID'd section. Build fails on unknown/duplicate IDs or a Partial item without a gap note.
+
+## Explorer views and card 08 table format — 14 November 2026
+
+Explorer: replaced the single path filter with **views** defined in `explorer/ontology.json`: ten training stages (pre-solo to first commercial seat), eight phase-of-flight quick-access sets, and the four licence-level tags. Each stage names the TC guide it is aimed at (TP 11919, 12880, 13723, 12881, 13462, 219 / 11575, 691, 9939, 13524); TP numbers checked against the TC publications list on 14 Nov 2026. Stage membership is a **topic-based approximation, not an item-by-item mapping** to those guides. Topic graph now starts collapsed; Pebble sections display as wrapped tokens (display only, Markdown unchanged).
+
+Card 08, format only: AVGAS row in the fuel-grade table contained unescaped `|`, so GitHub dropped the 100/130 and 100LL cells; separators changed to `·`. Added a missing closing `|` on one Powerplant row. No fact, qualifier or Pebble changed.
+
+## Knowledge explorer prototype — 14 November 2026
+
+Added generated `explorer.html` (single offline file) with `explorer/ontology.json`, `template.html` and `build_explorer.py`. 527 sections from all 14 numbered cards plus the formulas and abbreviations Markdown are embedded unchanged and indexed by 92 SKOS-style concepts (broader / narrower / related, polyhierarchy), four study paths (PPL / CPL / IR / ME) and source card. Mapping is heading-regex based and **editorial**: not a TP 12881 item mapping, not a coverage claim, and PPL tagging is by judgment (no PPL syllabus audit). No study content, Pebble or reader changed. Added to index, manifest shortcut, PWA precache (VERSION bumped) and offline test; `tests/explorer.test.cjs` checks ontology integrity and that the generated file is current. Checked in headless Chrome at 390 px and 1100 px; not tested on a device or installed PWA.
+
 ## CAR 703 single-pilot IFR 50-hour minima — 26 October 2026
 
 Card 17 Markdown/HTML: added a separate, prominently labelled 723.86 single-pilot IFR passenger-operation requirement: 1,000 hours total, 100 hours ME if multi-engine, 50 hours actual/simulated IMC and 50 hours on aeroplane type; PPC autopilot assessment and FL250 limit for pressurized aeroplanes. Explicitly not a blanket CAR 703 PIC requirement. Source: Transport Canada Standard 723.86 (aeroplanes). PWA cache bumped. Visual tests not run.
