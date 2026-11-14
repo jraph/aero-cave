@@ -86,4 +86,6 @@ Findings: HF physiology and instrument principles are thin despite useful failur
 
 **14 Nov 2026 — Meteorology item-level pilot:** cards 16 and 05 sections carry stable IDs; `explorer/syllabus.json` maps all 111 TP 12881 Meteorology items (after adding card 05: 51 C / 33 P / 26 M / 1 elsewhere-unchecked) and is browsable in the [explorer](https://jraph.github.io/aero-cave/explorer.html#g-tp12881-met). Details in [CONTENT_REVIEW](CONTENT_REVIEW.md).
 
+**14 Nov 2026 — Meteorology concept-file pilot (branch `feat/kb-met-concepts`):** by owner decision, a Gate 4-style pilot ran for Meteorology ahead of Gate 1 closure for other subjects. 54 units from cards 16 and 05 moved to 14 files in `kb/met/`; text identical (machine-compared per unit ID), old headings kept as pointers, card 05 keeps its 12 flow/gate sections. Not merged or deduplicated; other subjects untouched.
+
 **Gate 1 remains open:** Air Law regulation-by-regulation and the remaining subject numbered-item expansion are outstanding. No overall coverage percentage, target folder approval, deduplication or study-content migration is claimed. Existing cards/readers/PWA remain unchanged.

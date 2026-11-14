@@ -1,5 +1,11 @@
 # Content review
 
+## Meteorology concept-file pilot — 14 November 2026
+
+Branch `feat/kb-met-concepts`. Moved 54 knowledge units (all 32 of card 16; 22 of card 05) into 14 concept files under `kb/met/`, one per ontology concept, theory units first then decoding/QRC units. **Unit text is unchanged**: before/after builds compared per unit ID gave 67 → 67 units, 0 text differences, 0 lost concept links, 0 level changes (one relative link in the de-icing unit re-pointed `../` → `../../`). Two headings gained a `· QRC` suffix to avoid duplicate headings in one file (Turbulence, Carburetor icing). Card 16 is now a pointer page; card 05 keeps its 12 flow/gate sections and Pebble, with pointers under the moved headings so existing anchors still land. Card headers (legend, release status, source line) are reproduced in `kb/met/README.md`.
+
+Not done: overlapping units from the two cards (fog, fronts, icing, carb icing, turbulence, microburst/LLWS, trend) sit side by side and are **not merged**; no per-concept Pebbles yet (card 16's Pebble and exam traps are in `kb/met/recall.md`; card 05's Pebble still summarizes units that moved). The de-icing unit remains duplicated in the formulas Markdown/HTML reader. Explorer reads `kb/` directly (concept and level from file/unit comments, no heading regex); build fails on a missing ID, unknown concept, or a pointer whose target heading does not exist. AGENTS.md gained three authoring rules for concept files and unit IDs.
+
 ## Card 05 stable IDs; Meteorology map completed — 14 November 2026
 
 Card 05: 34 sections given stable IDs (`wxp-…`, invisible comment under each heading); card 06: `calc-temperature` on the Temperature section only. No study text changed. `explorer/syllabus.json` re-judged the 18 formerly unchecked TP 12881 Meteorology items against card 05 and added card 05 evidence to existing rows: now **51 Covered, 33 Partial, 26 Missing, 1 Elsewhere** (weather information from ATS: ATIS mentions in cards 04 / 12 / 13, not checked). Still judged by content read only, not validated against AIM MET. FCST 4 (TAF) carries the open V-02 TEMPO wording conflict as a note. Explorer topic graph opens by default again, replaces the duplicate chip rows while open, and gains an “All topics” node above the broader concepts.

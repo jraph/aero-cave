@@ -359,14 +359,14 @@ function sectionEl(s) {
   d.appendChild(el('summary', '', '<span class="st">' + esc(s.h) + '</span>' + s.p.map(p => '<span class="pb">' + p + '</span>').join('') + snippet(s)));
   d.addEventListener('toggle', () => {
     if (!d.open || d.dataset.done) return; d.dataset.done = 1;
-    const b = el('div', 'body', (/pebble/i.test(s.h) && pebble(s.md)) || md(s.md, card)), f = el('div', 'foot', '<span>' + esc(t('also')) + '</span>');
+    const b = el('div', 'body', (/pebble/i.test(s.h) && pebble(s.md)) || md(s.md, {file: s.f || card.file})), f = el('div', 'foot', '<span>' + esc(t('also')) + '</span>');
     s.c.forEach(id => f.appendChild(chip(id, id === S.c ? 'b' : '')));
     if (s.u) { const refs = unitItems.get(s.u) || [], f2 = el('div', 'foot', '<span class="uid">#' + s.u + '</span>');
       const byG = new Map(); for (const r of refs) { if (!byG.has(r.g.id)) byG.set(r.g.id, []); byG.get(r.g.id).push(r.grp.code + ' ' + r.it.n); }
       for (const [gid, list] of byG) { const c = el('button', 'chip b', esc(G.get(gid).guide + ': ' + list.join(', '))); c.type = 'button'; c.onclick = () => go({g:gid}, true); f2.appendChild(c); }
       b.appendChild(f2); }
     if (card.reader) { const r = el('a', '', esc(t('reader'))); r.href = SITE + card.reader; f.appendChild(r); }
-    const a = el('a', '', esc(t('open'))); a.href = REPO + card.file + (s.a ? '#' + s.a : ''); a.target = '_blank'; a.rel = 'noopener'; if (card.reader) a.style.marginLeft = '0'; f.appendChild(a);
+    const a = el('a', '', esc(t('open'))); a.href = REPO + (s.f || card.file) + (s.a ? '#' + s.a : ''); a.target = '_blank'; a.rel = 'noopener'; if (card.reader) a.style.marginLeft = '0'; f.appendChild(a);
     b.insertBefore(f, b.querySelector('.foot + .foot') || null); d.appendChild(b);
   });
   return d;
@@ -437,7 +437,7 @@ function render() {
   if (!list.length) { res.appendChild(el('p', 'empty', esc(t('none')))); return; }
   const frag = document.createDocumentFragment();
   if (tokens.length) { list.forEach(s => { const d = sectionEl(s); d.querySelector('.st').insertAdjacentHTML('beforebegin', '<span class="pb" style="color:var(--accent)">' + s.card + '</span>'); frag.appendChild(d); }); }
-  else { let cur = null; for (const s of list) { if (s.card !== cur) { cur = s.card; const c = K.get(cur), n = list.filter(x => x.card === cur).length; frag.appendChild(el('div', 'gh', esc((/^\d/.test(c.id) ? c.id + ' · ' : '') + L(c)) + ' <small>' + n + '</small>')); } frag.appendChild(sectionEl(s)); } }
+  else { let cur = null; const key = x => x.f || x.card; for (const s of list) { if (key(s) !== cur) { cur = key(s); const c = K.get(s.card), n = list.filter(x => key(x) === cur).length; frag.appendChild(el('div', 'gh', esc(s.f ? c.id + ' › ' + c.files[s.f] : (/^\d/.test(c.id) ? c.id + ' · ' : '') + L(c)) + ' <small>' + n + '</small>')); } frag.appendChild(sectionEl(s)); } }
   res.appendChild(frag);
   if (list.length === 1) res.querySelector('details').open = true;
   if (focusUnit) { const d = res.querySelector('details[data-u="' + focusUnit + '"]'); focusUnit = ''; if (d) { d.open = true; d.classList.add('hit'); setTimeout(() => d.scrollIntoView({block:'start'}), 0); } }
