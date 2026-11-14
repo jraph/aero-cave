@@ -474,7 +474,7 @@
 
 **Weather decoding / Décodage météo** · FZ freezing / verglaçant; SH showers / averses; TS thunderstorm / orage. - light / léger; no sign / sans signe: moderate / modéré; + heavy / fort, where intensity applies / lorsque l’intensité s’applique. -SHRA = light rain showers / averses de pluie légères. SHGS: snow-pellet showers; may also mean small hail <5 mm / averses de neige roulée; aussi petite grêle <5 mm.
 
-**Forecast changes / Évolution des prévisions** · FM: new prevailing conditions from time / nouvelles conditions dominantes dès l’heure indiquée. BECMG: transition during interval / transition pendant l’intervalle. TEMPO: each event <1 h; total <half the interval / chaque épisode <1 h; total <la moitié de l’intervalle. NSW: no significant weather; cloud may remain / aucun temps significatif; des nuages peuvent subsister.
+**Forecast changes / Évolution des prévisions** · FM: new prevailing conditions from time / nouvelles conditions dominantes dès l’heure indiquée. BECMG: transition during interval / transition pendant l’intervalle. TEMPO: each event <1 h; total ≤ half the TEMPO window / chaque épisode <1 h; total ≤ la moitié de la période TEMPO. NSW: no significant weather; cloud may remain / aucun temps significatif; des nuages peuvent subsister.
 
 **Access & radio / Accès et radio** · PN notify / préavis; PPR permission / permission. O/R request / sur demande; O/T other times / aux autres heures; O/S out of service / hors service. MF-ATF = frequency-area designation / désignation de fréquence-zone. FSS-RAAS-CARS-AU-UNICOM = service / service. MF may have no active ground station / MF possible sans station au sol active. LWIS: wind, temperature, dew point, altimeter / vent, température, point de rosée, calage altimétrique.
 

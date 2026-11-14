@@ -11,7 +11,7 @@
 |---|---|---|
 | Air Law | Air Law and Procedures | Card 04; overlaps cards 01, 03 |
 | Navigation | Navigation and Radio Aids | Navigation portions of 01/03; shared calculations 06 |
-| Meteorology | Meteorology | Theory 16; product decoding / decision gates 05; calculation index 06 |
+| Meteorology | Meteorology | Theory and product decoding in [kb/met](kb/met/README.md); decision gates 05; calculation index 06 |
 | Aeronautics | Airframes, Engines and Systems | Card 08; type-specific example 07 |
 | Aeronautics | Theory of Flight | Aerodynamics in 01; calculation index 06 |
 | Aeronautics | Flight Instruments | Card 08 instrument failures; **full topic coverage not yet audited** |
@@ -29,7 +29,7 @@
 | 02 Flight training & procedures | [Open](cheatsheets/02_flight_training_procedures_av_cave_v0_2.md) | Aeronautics / Flight Operations | Primarily practical training procedures; retain as procedural companion |
 | 03 Licensing, performance & operations | [Open](cheatsheets/03_licensing_performance_operations_av_cave_v0_2.md) | Air Law; Navigation; Aeronautics / Flight Operations | Mixed summary; split only after owner mapping |
 | 04 Canadian air law | [Open](cheatsheets/04_canadian_air_law_core_av_cave_v0_2_compact.md) | Air Law; Aeronautics / Flight Operations (some overlap) | Candidate authoritative home for legal requirements |
-| 05 Weather decoding & go/no-go | [Open](cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md) | Meteorology; Flight Operations | Weather product interpretation/operational decision companion; avoid recopying theory from 16 |
+| 05 Weather decoding & go/no-go | [Open](cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md) | Meteorology; Flight Operations | Operational flows, decision gates and personal weather matrix |
 | 06 Formulas & conversions | [Open](cheatsheets/06_aviation_formulas_conversions_av_cave_v0_2.md) | Navigation; Meteorology; Aeronautics / Flight Operations | Shared calculation reference; keep single formula index with syllabus tags |
 | 07 C150M POH | [Open](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md) | Aeronautics (aircraft-specific supplement) | Keep aircraft type-specific speeds/limits separate from generic theoretical guidance |
 | 08 Systems & failures | [Open](cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md) | Aeronautics / Airframes, Engines and Systems; Flight Instruments; Operations | Owner candidate for aircraft systems; check overlapping POH procedures |
@@ -39,15 +39,15 @@
 | 12 IFR procedures | [Open](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) | INRAT | Keep procedural companion |
 | 13 Multi-engine knowledge | [Open](cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md) | Multi-engine; Aeronautics cross-reference | Keep rating/type-specific matters separate; link generic theory |
 | 17 Pilot qualifications & checks | [Open](cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md) | Air Law / INRAT + ATPL recap | Condensed bilingual lookup; Card 04 remains canonical legal source; do not treat this as a migrated authoritative rule collection |
-| 16 Weather knowledge (retired 14 Nov 2026) | [kb/met](kb/met/README.md) | Meteorology | Candidate authoritative home for meteorological theory |
+| 16 Weather knowledge (retired 14 Nov 2026) | [kb/met](kb/met/README.md) | Meteorology | Historical card; theory now lives in concept files |
 
-The three existing bilingual Markdown/HTML reader pairs remain separate *reading formats / indices*, not independent authoritative sources: CPAER formulas, aviation abbreviations, and MANAB/CFS. Preserve paired Markdown↔HTML parity. Existing numbered card filenames and all reader URLs remain unchanged during inventory.
+The three existing bilingual Markdown/HTML reader pairs remain separate *reading formats / indices*, not independent authoritative sources: CPAER formulas, aviation abbreviations, and MANAB/CFS. Preserve paired Markdown↔HTML parity. Historical inventory preserved filenames and reader URLs. The subsequent Meteorology pilot retired Card 16.
 
 ***
 #### Deduplication contract
 
 1. **One canonical explanation per concept**, with a topic owner recorded *before* splitting. Other cards can contain a short exam-context reminder plus a relative link; do not copy full tables or paragraphs.
-2. **Legal obligations** are owned by Air Law card 04, **meteorological theory** by card 16, **weather decoding** by 05, **generic formulas** by 06, **aircraft-type POH data** by 07, **aircraft systems** by 08, and **INRAT-specific details** by its dedicated collection, subject to topic-by-topic audit.
+2. **Legal obligations** are owned by Air Law card 04, **meteorological theory and product decoding** by kb/met, **weather decision flows and gates** by 05, **generic formulas** by 06, **aircraft-type POH data** by 07, **aircraft systems** by 08, and **INRAT-specific details** by its dedicated collection, subject to topic-by-topic audit.
 3. Preserve *different functions* even when facts overlap: formula derivation versus recall, concept versus operational checklist, generic theory versus POH-specific data. Redundancy is not automatically duplication.
 4. For shared formulas, the bilingual CPAER reader is a **condensed view** of the primary formula explanation, not a separate competing version. Update Markdown and HTML together when either changes.
 5. Do not auto-merge contradictory thresholds or rules. Label conflicts **Needs verification** and compare with current TC/CARs/AIM/POH before selecting canonical wording.
@@ -75,17 +75,17 @@ For each TP 12881 item, record:
 
 Do not call a topic Covered from a heading alone. Verify actual content against the **August 2026** syllabus and authoritative sources.
 
-**Current state:** inventory registered; **no study content has been moved, deleted or replaced**.
+**Historical inventory baseline (October 2026):** inventory registered; **no study content has been moved, deleted or replaced**.
 
 ***
-#### Phase 2 — first content audit (22 October 2026)
+#### Historical Phase 2 — first content audit (22 October 2026)
 
 [Open the content coverage matrix](CPAER_COVERAGE_MATRIX.md): syllabus topic-group screening across all eight subject/subsubject areas; individual checks for all **52 Flight Instruments** and **40 Human Factors** numbered items. Evidence links point to inspected content at the recorded baseline. Covered / Partial / Missing / Conflicting / Needs verification are distinguished; content presence is not regulatory validation.
 
 Findings: HF physiology and instrument principles are thin despite useful failure/procedure reminders; electric propulsion, detailed EFB hazards, medevac fatigue and weather-chart interpretation need attention. Internal publication-currency and TEMPO wording conflicts, plus an ambiguous unusual-attitude instruction, are recorded for comparison before correction.
 
-**14 Nov 2026 — Meteorology item-level pilot:** cards 16 and 05 sections carry stable IDs; `explorer/syllabus.json` maps all 111 TP 12881 Meteorology items (after adding card 05: 51 C / 33 P / 26 M / 1 elsewhere-unchecked) and is browsable in the [explorer](https://jraph.github.io/aero-cave/explorer.html#g-tp12881-met). Details in [CONTENT_REVIEW](CONTENT_REVIEW.md).
+**Historical, before the concept-file migration (14 Nov 2026):** cards 16 and 05 sections carry stable IDs; `explorer/syllabus.json` maps all 111 TP 12881 Meteorology items (after adding card 05: 51 C / 33 P / 26 M / 1 elsewhere-unchecked) and is browsable in the [explorer](https://jraph.github.io/aero-cave/explorer.html#g-tp12881-met). Details in [CONTENT_REVIEW](CONTENT_REVIEW.md).
 
 **14 Nov 2026 — Meteorology concept-file pilot (branch `feat/kb-met-concepts`):** by owner decision, a Gate 4-style pilot ran for Meteorology ahead of Gate 1 closure for other subjects. 54 units from cards 16 and 05 moved to 14 files in `kb/met/`; text identical (machine-compared per unit ID), old headings kept as pointers, card 05 keeps its 12 flow/gate sections. Then eight overlapping units merged, per-concept Pebbles added, card 16 deleted and pointers removed (owner: no backward compatibility needed at this stage). Other subjects untouched.
 
-**Gate 1 remains open:** Air Law regulation-by-regulation and the remaining subject numbered-item expansion are outstanding. No overall coverage percentage, target folder approval, deduplication or study-content migration is claimed. Existing cards/readers/PWA remain unchanged.
+**Gate 1 remains open:** Air Law regulation-by-regulation and the remaining subject numbered-item expansion are outstanding. The completed Meteorology pilot is the exception. Other subjects remain in numbered cards; no overall coverage percentage has been established.

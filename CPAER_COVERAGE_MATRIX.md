@@ -238,7 +238,7 @@ Numbers below refer to the named TP group. Evidence supports only the specific s
 | ID | Evidence | Classification | Required comparison before any correction |
 |---|---|---|---|
 | X-01 | [01 current-cycle section][vfr-cycle] calls July cycle historical; [09][ifr-cycle], [10][inrat-cycle], [11][plate-cycle], [12][proc-cycle] still call 9 July–3 September current and generalize publication intervals. | Confirmed internal currency conflict | Product-specific NAV CANADA schedules/edition dates; separate historical worked examples from current guidance. Do not replace all dates with one universal cycle. |
-| V-02 | [05 TAF][wx-taf] uses total TEMPO duration ≤half; [glossary memory traps][abbr-traps] uses <half. | Wording conflict; authoritative threshold not resolved in this audit | Current TC AIM MET / forecast coding definition; compare Markdown and HTML before updating. |
+| V-02 · closed | [TAF][wx-taf] and bilingual glossary aligned | Each occurrence <1 h; combined duration ≤½ of the TEMPO window | TC AIM 2026-2, MET 7.3, p. 158. |
 | X-03 | [12 unusual attitudes][proc-ua]: nose-high line includes “reduce if near stall?” alongside qualified generic recovery wording. | Needs verification; unresolved instructional ambiguity | Applicable training guidance + exact AFM/instructor procedure; do not compress into a universal memory action. |
 | V-04 | [07 source status][poh-source] says serial/configuration not confirmed. | Applicability unresolved, not proven wrong | Exact aircraft POH revision, supplements, equipment/STCs and W&B before treating example data as fleet authority. |
 | V-05 | [06 VOR][calc-nav] links Canadian and FAA check scopes in [10][ifr-check]. | Qualified cross-reference, **not** an established contradiction | Preserve Canadian versus FAA origin; do not import US intervals/recordkeeping into Canada. |
@@ -248,9 +248,9 @@ Numbers below refer to the named TP group. Evidence supports only the specific s
 
 1. Complete **numbered-item expansion** for Air Law, Navigation, Meteorology, systems/theory/operations; attach precise content evidence to each item, distinguishing no treatment from incomplete depth. This report does not close Gate 1.
 2. Prioritize HF and INST gaps already isolated above; audit authoritative teaching sources before drafting new study facts. Electric propulsion, EFB fire/power, medevac/aerial-work fatigue and chart interpretation are additional explicit gaps.
-3. Resolve X-01 / V-02 / X-03 by source comparison in a separate content change; update all affected Markdown/HTML/Pebbles and review records together.
+3. Resolve X-01 / X-03 by source comparison in a separate content change; update all affected Markdown/HTML/Pebbles and review records together.
 4. For each actual consolidation, record **source A + source B → owner + every retained unique fact/example/qualifier/source/Pebble + links back**. No exact-duplicate deletion is proposed here.
-5. Select one small pilot only after item-level audit and target path/compatibility decisions. Keep card 05 decoding versus 16 theory, card 06 shared formulas, and 07 aircraft-specific examples complementary.
+5. Historical October plan (Meteorology pilot subsequently completed): select one small pilot only after item-level audit and target path/compatibility decisions. Keep card 05 decoding versus 16 theory, card 06 shared formulas, and 07 aircraft-specific examples complementary.
 
 **Change scope:** audit/planning only. No study card, HTML reader, language/search code, manifest, service worker, URL or Pebble changed.
 
