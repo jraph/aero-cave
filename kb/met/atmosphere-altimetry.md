@@ -37,6 +37,23 @@
 - Rule-of-thumb TAS ≈ `IAS + ~2% per 1000 ft` in lower atmosphere.
 - Higher TAS at same IAS ⇒ larger turn radius and more ground distance during manoeuvre.
 ***
+#### Altimetry / density altitude
+<!-- id: wx-altimetry-density-altitude | from: 01 | level: PPL CPL -->
+
+- ISA SL: `29.92 / 1013 / 15°C`; lapse≈`2°C/1000 ft`.
+- High→low or warm→cold = actual lower. `M:` look out below.
+- DA↑ with temperature/humidity/pressure altitude↑. Weight does NOT change DA; it independently worsens takeoff/climb. Higher DA: roll↑ climb↓; TAS↑ for the same IAS.
+- `F:` PA≈elev+(29.92-altset)×1000. DA≈PA+120×(OAT-ISA). `T:` approximation only.
+***
+#### Pressure altitude / density altitude · card 06
+<!-- id: wx-pressure-altitude-density-altitude | from: 06 | also: study-formulas | level: PPL CPL IR -->
+
+- `F:` `PA ≈ field elev + (29.92 - altimeter) × 1000`.
+- `F:` `ISA temp °C ≈ 15 - 2 × altitude(thousands ft)`.
+- `F:` `DA ≈ PA + 120 × (OAT - ISA)`.
+- `M:` hot/high/humid/low pressure ⇒ DA↑ ⇒ roll↑ climb↓. Heavy independently worsens performance; weight does NOT change DA.
+- `T:` DA formula is approximation; POH chart wins.
+***
 #### Pebble
 <!-- id: met-atmos-pebble | also: study-pebble -->
 

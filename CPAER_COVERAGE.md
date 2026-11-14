@@ -25,19 +25,19 @@
 
 | Card | Current canonical file | Initial mapping | Preservation/overlap note |
 |---|---|---|---|
-| 01 Flight theory & VFR | [Open](cheatsheets/01_flight_theory_vfr_knowledge_av_cave_v0_6.md) | Air Law; Navigation; Meteorology; Aeronautics (Theory of Flight, Operations, Human Factors) | Mixed overview: section-level split candidate; keep existing until audited |
+| 01 Flight theory & VFR (retired 14 Nov 2026) | [kb/](kb/) | Air Law; Navigation; Meteorology; Aeronautics (Theory of Flight, Operations, Human Factors) | Mixed overview: section-level split candidate; keep existing until audited |
 | 02 Flight training & procedures | [Open](cheatsheets/02_flight_training_procedures_av_cave_v0_2.md) | Aeronautics / Flight Operations | Primarily practical training procedures; retain as procedural companion |
-| 03 Licensing, performance & operations | [Open](cheatsheets/03_licensing_performance_operations_av_cave_v0_2.md) | Air Law; Navigation; Aeronautics / Flight Operations | Mixed summary; split only after owner mapping |
-| 04 Canadian air law | [Open](cheatsheets/04_canadian_air_law_core_av_cave_v0_2_compact.md) | Air Law; Aeronautics / Flight Operations (some overlap) | Candidate authoritative home for legal requirements |
+| 03 Licensing, performance & operations (retired 14 Nov 2026) | [kb/](kb/) | Air Law; Navigation; Aeronautics / Flight Operations | Mixed summary; split only after owner mapping |
+| 04 Canadian air law (retired 14 Nov 2026) | [kb/](kb/) | Air Law; Aeronautics / Flight Operations (some overlap) | Candidate authoritative home for legal requirements |
 | 05 Weather decoding & go/no-go | [Open](cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md) | Meteorology; Flight Operations | Operational flows, decision gates and personal weather matrix |
-| 06 Formulas & conversions | [Open](cheatsheets/06_aviation_formulas_conversions_av_cave_v0_2.md) | Navigation; Meteorology; Aeronautics / Flight Operations | Shared calculation reference; keep single formula index with syllabus tags |
+| 06 Formulas & conversions (retired 14 Nov 2026) | [kb/](kb/) | Navigation; Meteorology; Aeronautics / Flight Operations | Shared calculation reference; keep single formula index with syllabus tags |
 | 07 C150M POH | [Open](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md) | Aeronautics (aircraft-specific supplement) | Keep aircraft type-specific speeds/limits separate from generic theoretical guidance |
 | 08 Systems & failures | [Open](cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md) | Aeronautics / Airframes, Engines and Systems; Flight Instruments; Operations | Owner candidate for aircraft systems; check overlapping POH procedures |
 | 09 IFR knowledge (retired 14 Nov 2026) | [kb/ifr](kb/ifr/README.md) | INRAT; CPAER cross-reference only | Advanced IFR companion, not default CPAER content home |
 | 10 INRAT knowledge (retired 14 Nov 2026) | [kb/ifr](kb/ifr/README.md) | INRAT | Keep exam-specific IFR scope intact |
 | 11 CAP plate reading | [Open](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md) | INRAT | Keep chart-reading companion |
 | 12 IFR procedures | [Open](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) | INRAT | Keep procedural companion |
-| 13 Multi-engine knowledge | [Open](cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md) | Multi-engine; Aeronautics cross-reference | Keep rating/type-specific matters separate; link generic theory |
+| 13 Multi-engine knowledge (retired 14 Nov 2026) | [kb/](kb/) | Multi-engine; Aeronautics cross-reference | Keep rating/type-specific matters separate; link generic theory |
 | 17 Pilot qualifications & checks | [Open](cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md) | Air Law / INRAT + ATPL recap | Condensed bilingual lookup; Card 04 remains canonical legal source; do not treat this as a migrated authoritative rule collection |
 | 16 Weather knowledge (retired 14 Nov 2026) | [kb/met](kb/met/README.md) | Meteorology | Historical card; theory now lives in concept files |
 

@@ -17,6 +17,15 @@
 - `BECMG` improve=end, deteriorate=start; `TEMPO`≥alternate minima; `PROB`≥landing minima.
 - `T:` alternate≠landing≠approach-ban minima. `TEMPO` near ETA and `PROB30/40` high-consequence `TS/FZRA/low vis` require fuel/options; many short groups reduce confidence.
 ***
+#### TAF change groups
+<!-- id: wx-taf-change-groups | from: 06 | also: study-formulas | level: PPL CPL IR -->
+
+- `BECMG` improving: use new condition at end of period.
+- `BECMG` deteriorating: use new condition at start of period.
+- `TEMPO` must stay ≥ alternate minima.
+- `PROB` must stay ≥ landing minima.
+- `T:` alternate minima ≠ landing minima ≠ approach ban.
+***
 #### Pebble
 <!-- id: met-taf-pebble | also: study-pebble -->
 

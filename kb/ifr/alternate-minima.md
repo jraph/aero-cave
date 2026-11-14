@@ -29,6 +29,18 @@
 - Aerodrome advisory forecast alternate: ≥`500 ft` above lowest usable HAT/HAA and vis ≥`3 SM`.
 - `T:` alternate minima ≠ landing minima ≠ approach-ban minima.
 ***
+#### Alternate minima memory
+<!-- id: ifr-alternate-minima-memory | from: 06 | also: study-formulas | level: IR -->
+
+| Case | Weather memory |
+|---|---|
+| 2+ precision, separate suitable runways | `400-1` or `+200/+1/2`, greater |
+| 1 precision | `600-2` or `+300/+1`, greater |
+| NPA only | `800-2` or `+300/+1`, greater |
+| no IFR approach | ≥`500 ft` above min IFR alt allowing VFR app/landing |
+
+- `T:` check CAP alternate notes, NOTAM, NAVAID, runway suitability, forecast type.
+***
 #### Pebble
 <!-- id: ifr-alternate-minima-pebble | also: study-pebble -->
 

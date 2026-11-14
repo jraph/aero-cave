@@ -1,5 +1,15 @@
 # Content review
 
+## Remaining knowledge cards moved to concept files; all cards ID'd — 14 November 2026
+
+Cards 01, 03, 04, 06 and 13 moved into concept files (`kb/law`, `kb/nav`, `kb/agk`, `kb/me`, `kb/study`, plus additions to `kb/met` and `kb/ifr`) and deleted: 138 sections, **text unchanged** (machine-compared; one exact duplicate, card 06's sources line, kept once), concept links and level tags preserved, all other cards byte-identical. Each unit's primary concept was chosen automatically (most specific concept; card 04 prefers `law-…`, card 13 prefers `me-…`) and **has not been reviewed unit by unit**; the other concepts are in `also:`. Whole-card Pebbles and source notes are in `kb/study/`. 61 coverage-matrix links re-pointed.
+
+Cards 02, 07, 08, 11 and 12 (procedures, POH, QRC) keep their place and now carry stable IDs. Cards 17, formulas and abbreviations are unchanged (paired with HTML readers; no IDs).
+
+Not done for law / nav / agk / me: merging units that overlap across former cards, per-concept Pebbles, any validation against CARs / AIM. Units added to existing `kb/met` and `kb/ifr` files are not yet reflected in those files' Pebbles.
+
+TP 691 map: the 21 formerly unchecked items re-judged against the new law units and cards 11 / 12: now **70 Covered, 91 Partial, 47 Missing**.
+
 ## TP 691 (INRAT) item map — 14 November 2026
 
 `explorer/syllabus.json` now maps all 208 items of TP 691E (17th ed., 2013; item list read from the TC HTML edition on 14 Nov 2026) to unit IDs: **62 Covered, 83 Partial, 42 Missing, 21 Elsewhere**. Judged by reading `kb/ifr`, `kb/met` and card 05 only; **not validated against CARs / AIM / CAP**; CAR items judged on study coverage, not legal completeness. *Elsewhere* = cards without IDs (04 air law, 06, 08, 11, 12), not item-checked. Item labels are our own short wording under the guide's order.

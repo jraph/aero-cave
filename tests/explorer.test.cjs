@@ -25,9 +25,9 @@ test('every section has a valid card, path and concept; every concept link resol
 test('guide items point at existing stable unit IDs; ID comments never leak into content', () => {
   const units = new Map(data.sections.filter(s => s.u).map(s => [s.u, s]));
   assert.equal(units.size, data.sections.filter(s => s.u).length, 'duplicate unit id');
-  assert.ok(data.sections.filter(s => s.card === 'MET' || s.card === 'IFR' || s.card === '05').every(s => s.u || s.h === 'Overview'));
+  assert.ok(data.sections.filter(s => data.cards.find(c => c.id === s.card).kb || ['02','05','07','08','11','12'].includes(s.card)).every(s => s.u || s.h === 'Overview'));
   assert.equal(data.sections.some(s => s.card === '16'), false, 'card 16 is retired');
-  for (const f of [...Object.keys(data.cards.find(c => c.id === 'MET').files), ...Object.keys(data.cards.find(c => c.id === 'IFR').files)]) if (!/recall\.md$/.test(f)) assert.equal(data.sections.filter(s => s.f === f && s.h === 'Pebble').length, 1, f + ': one Pebble');
+  for (const c of data.cards.filter(c => c.kb)) for (const f of Object.keys(c.files)) { const us = data.sections.filter(x => x.f === f), n = us.filter(x => x.h === 'Pebble').length; assert.ok(n <= 1, f + ': at most one Pebble'); if (n) assert.equal(us[us.length - 1].h, 'Pebble', f + ': Pebble last'); }
   for (const s of data.sections) assert.equal(s.md.includes('<!-- id:'), false, s.id);
   for (const g of data.guides) for (const grp of g.groups) for (const it of grp.items) {
     assert.ok('CPME'.includes(it.s)); for (const u of it.u) assert.ok(units.has(u), `${grp.code} ${it.n} → ${u}`);

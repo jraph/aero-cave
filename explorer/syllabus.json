@@ -168,10 +168,10 @@
     "fr": "INRAT",
     "url": "https://tc.canada.ca/en/aviation/publications/tp-691e-study-reference-guide-written-examinations-instrument-rating-aeroplane-helicopter",
     "reviewed": "2026-11-14",
-    "scope": {"en": "Checked against the IFR and Meteorology concept files and card 05. Elsewhere = topic sits in a card without stable IDs yet (04, 06, 08, 11, 12). CAR items are judged on study coverage, not legal completeness.", "fr": "Vérifié avec les fiches par concept IFR et Météo et la fiche 05. Ailleurs = sujet situé dans une fiche sans identifiants stables (04, 06, 08, 11, 12)."},
+    "scope": {"en": "Checked against all concept files and procedure cards. CAR items are judged on study coverage, not legal completeness.", "fr": "Vérifié avec toutes les fiches par concept et les fiches de procédures."},
     "groups": [
       {"code": "LIC", "en": "CARs Parts I & IV: definitions, licensing", "fr": "RAC parties I et IV", "items": [
-        {"n": 1, "en": "101.01 Interpretation (definitions)", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
+        {"n": 1, "en": "101.01 Interpretation (definitions)", "s": "M", "u": [], "gap": "No definitions unit."},
         {"n": 2, "en": "401.03 Requirement to hold a permit, licence or rating", "s": "P", "u": ["ifr-air-law-ifr-privileges"], "gap": "General statement only."},
         {"n": 3, "en": "401.05 Recency requirements", "s": "C", "u": ["ifr-instrument-rating-recency"], "gap": ""},
         {"n": 4, "en": "Std 421.46 Instrument rating aircraft groups", "s": "C", "u": ["ifr-source-exam-frame", "ifr-air-law-ifr-privileges"], "gap": ""},
@@ -179,31 +179,31 @@
         {"n": 6, "en": "401.48 Instrument rating period of validity", "s": "P", "u": ["ifr-instrument-rating-recency"], "gap": "24-month test cycle given; validity period not stated as such."}
       ]},
       {"code": "GEN", "en": "CARs 601 / 602: airspace, ATC compliance, altimeter", "fr": "RAC 601 / 602", "items": [
-        {"n": 1, "en": "601.01 Airspace structure", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
-        {"n": 2, "en": "601.02 Airspace classification", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
-        {"n": 3, "en": "601.03 Transponder airspace", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
+        {"n": 1, "en": "601.01 Airspace structure", "s": "P", "u": ["law-airspace"], "gap": "Class table only; structure of Canadian airspace absent."},
+        {"n": 2, "en": "601.02 Airspace classification", "s": "C", "u": ["law-airspace", "law-airspace-entry-memory"], "gap": ""},
+        {"n": 3, "en": "601.03 Transponder airspace", "s": "M", "u": [], "gap": "Transponder codes only (law-radio-transponder); transponder airspace not defined."},
         {"n": 4, "en": "601.04 IFR or VFR flight in Class F", "s": "M", "u": [], "gap": ""},
         {"n": 5, "en": "601.05 IFR flight in Class A–E / Class F controlled", "s": "P", "u": ["ifr-controlled-uncontrolled-ifr"], "gap": "Clearance requirement stated generally only."},
         {"n": 6, "en": "602.08 Portable electronic devices", "s": "M", "u": [], "gap": ""},
         {"n": 7, "en": "602.31 Compliance with ATC instructions and clearances", "s": "P", "u": ["ifr-clearance-readback"], "gap": "Readback and clearance meaning; the compliance / deviation rule itself absent."},
-        {"n": 8, "en": "602.34 Cruising altitudes and flight levels", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
+        {"n": 8, "en": "602.34 Cruising altitudes and flight levels", "s": "P", "u": ["law-cruising-altitudes"], "gap": "VFR levels and track rule; IFR levels not listed."},
         {"n": 9, "en": "602.35 Altimeter-setting region procedures", "s": "C", "u": ["ifr-altimeter-setting-standard-pressure-regions"], "gap": ""},
         {"n": 10, "en": "602.36 Standard pressure region procedures", "s": "C", "u": ["ifr-altimeter-setting-standard-pressure-regions"], "gap": ""},
         {"n": 11, "en": "602.37 Transition between regions", "s": "C", "u": ["ifr-altimeter-setting-standard-pressure-regions"], "gap": ""},
-        {"n": 12, "en": "602.60 Equipment requirements, power-driven aircraft", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."}
+        {"n": 12, "en": "602.60 Equipment requirements, power-driven aircraft", "s": "M", "u": [], "gap": ""}
       ]},
       {"code": "FPL", "en": "CARs: flight preparation, flight plans, fuel", "fr": "RAC : préparation, plans de vol, carburant", "items": [
-        {"n": 1, "en": "602.71 Pre-flight information", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
-        {"n": 2, "en": "602.72 Weather information", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
-        {"n": 3, "en": "602.73 Requirement to file a flight plan / itinerary", "s": "P", "u": ["ifr-air-law-ifr-privileges"], "gap": "Mention only; detail in card 04 (not item-checked)."},
-        {"n": 4, "en": "602.74 Contents of a flight plan / itinerary", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
-        {"n": 5, "en": "602.75 Filing", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
-        {"n": 6, "en": "602.76 Changes in the flight plan", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
-        {"n": 7, "en": "602.77 Arrival report", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
+        {"n": 1, "en": "602.71 Pre-flight information", "s": "C", "u": ["law-pre-flight-information"], "gap": ""},
+        {"n": 2, "en": "602.72 Weather information", "s": "P", "u": ["law-pre-flight-information"], "gap": "Weather named within pre-flight information; 602.72 not treated."},
+        {"n": 3, "en": "602.73 Requirement to file a flight plan / itinerary", "s": "C", "u": ["law-flight-plan-itinerary"], "gap": ""},
+        {"n": 4, "en": "602.74 Contents of a flight plan / itinerary", "s": "M", "u": [], "gap": ""},
+        {"n": 5, "en": "602.75 Filing", "s": "P", "u": ["law-flight-plan-itinerary"], "gap": "Who to file with only."},
+        {"n": 6, "en": "602.76 Changes in the flight plan", "s": "P", "u": ["law-flight-plan-itinerary"], "gap": "One line citing 602.76–602.78."},
+        {"n": 7, "en": "602.77 Arrival report", "s": "P", "u": ["law-flight-plan-itinerary", "law-flight-plan-itinerary-pirep"], "gap": "Report contents; filing deadline not stated."},
         {"n": 8, "en": "602.88 Fuel requirements", "s": "C", "u": ["ifr-ifr-fuel-car-602-88-memory"], "gap": ""}
       ]},
       {"code": "ADR", "en": "CARs: operations at or near an aerodrome", "fr": "RAC : aérodromes", "items": [
-        {"n": 1, "en": "602.96 General", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
+        {"n": 1, "en": "602.96 General", "s": "C", "u": ["law-aerodrome-mf-operations"], "gap": ""},
         {"n": 2, "en": "602.97 VFR and IFR operations at uncontrolled aerodromes in an MF area", "s": "P", "u": ["ifr-controlled-uncontrolled-ifr"], "gap": "MF/ATF calls named; required reports not listed."},
         {"n": 3, "en": "602.104 IFR reporting when approaching / landing at an uncontrolled aerodrome", "s": "P", "u": ["ifr-controlled-uncontrolled-ifr"], "gap": "Report points and times absent."}
       ]},
@@ -218,7 +218,7 @@
         {"n": 8, "en": "602.128 Landing minima", "s": "C", "u": ["ifr-landing-minima-visual-reference"], "gap": ""},
         {"n": 9, "en": "602.129 Approach ban, general", "s": "C", "u": ["ifr-approach-ban-rvr-general-aviation"], "gap": ""},
         {"n": 10, "en": "602.137 Two-way radiocommunication failure in IFR flight", "s": "C", "u": ["ifr-lost-comms-general", "ifr-lost-comms-ifr-route-altitude-time"], "gap": ""},
-        {"n": 11, "en": "605.18 Power-driven aircraft, IFR equipment", "s": "E", "u": [], "gap": "Card 04 (no IDs yet; not item-checked)."},
+        {"n": 11, "en": "605.18 Power-driven aircraft, IFR equipment", "s": "C", "u": ["law-ifr-equipment"], "gap": ""},
         {"n": 12, "en": "605.30 De-icing or anti-icing equipment", "s": "P", "u": ["wx-icing"], "gap": "Avoidance gate for non-approved aircraft only; the equipment rule absent."}
       ]},
       {"code": "ATS", "en": "Air traffic services", "fr": "Services de la circulation aérienne", "items": [
@@ -232,20 +232,20 @@
         {"n": 8, "en": "Reduced visibility operations", "s": "M", "u": [], "gap": ""}
       ]},
       {"code": "ASP", "en": "Canadian airspace", "fr": "Espace aérien canadien", "items": [
-        {"n": 1, "en": "Low level controlled airspace: types, dimensions, flight rules", "s": "E", "u": [], "gap": "Cards 01 / 04 (not item-checked)."},
-        {"n": 2, "en": "Classification of airspace", "s": "E", "u": [], "gap": "Cards 01 / 04 (not item-checked)."},
+        {"n": 1, "en": "Low level controlled airspace: types, dimensions, flight rules", "s": "P", "u": ["law-airspace", "law-vfr-minima-controlled"], "gap": "Class memory and control-zone minima; types and dimensions of low-level controlled airspace absent."},
+        {"n": 2, "en": "Classification of airspace", "s": "C", "u": ["law-airspace", "law-airspace-entry-memory"], "gap": ""},
         {"n": 3, "en": "Special use airspace", "s": "M", "u": [], "gap": ""}
       ]},
       {"code": "RFP", "en": "Route and flight planning", "fr": "Planification", "items": [
         {"n": 1, "en": "Publications / charts: requirements and use", "s": "C", "u": ["ifr-current-publication-cycle", "ifr-publication-currency-exam-traps", "ifr-ifr-flight-planning-workflow"], "gap": ""},
         {"n": 2, "en": "Preferred routing, factors affecting the flight plan", "s": "P", "u": ["ifr-ifr-flight-planning-workflow"], "gap": "Named in the route checklist only."},
         {"n": 3, "en": "Navigation plan and flight log", "s": "P", "u": ["ifr-ifr-flight-planning-workflow"], "gap": "Leg formulas; no flight-log method."},
-        {"n": 4, "en": "Altitude selection", "s": "P", "u": ["ifr-ifr-route-altitude-terms"], "gap": "Minimum altitudes only; cruising-altitude rule in card 04 (not item-checked)."},
+        {"n": 4, "en": "Altitude selection", "s": "P", "u": ["ifr-ifr-route-altitude-terms", "law-cruising-altitudes"], "gap": "Minimum altitudes and VFR cruising levels; IFR level selection not set out."},
         {"n": 5, "en": "IFR flight in mountainous regions", "s": "M", "u": [], "gap": "Named in the route checklist only."},
         {"n": 6, "en": "Fuel requirements: aeroplanes, helicopters", "s": "C", "u": ["ifr-ifr-fuel-car-602-88-memory"], "gap": ""},
         {"n": 7, "en": "Weather requirements: take-off, landing, alternate", "s": "C", "u": ["ifr-departure-takeoff-minima", "ifr-landing-minima-visual-reference", "ifr-alternate-minima"], "gap": ""},
         {"n": 8, "en": "NOTAM: classifications and interpretation", "s": "P", "u": ["ifr-publication-currency-exam-traps"], "gap": "Trigger NOTAM / AIP SUP logic; classification and decoding absent."},
-        {"n": 9, "en": "Use of flight computer", "s": "E", "u": [], "gap": "Card 06 (no IDs yet; not item-checked)."},
+        {"n": 9, "en": "Use of flight computer", "s": "P", "u": ["nav-time-speed-distance", "nav-wind-correction-nav-triangle"], "gap": "Formulas only; no flight-computer method."},
         {"n": 10, "en": "Canada Air Pilot: utilization and definitions", "s": "C", "u": ["ifr-cap-plate-read-flow", "ifr-cap-definitions-minima"], "gap": ""}
       ]},
       {"code": "DEP", "en": "Departure procedures", "fr": "Procédures de départ", "items": [
@@ -283,25 +283,25 @@
         {"n": 2, "en": "STARs", "s": "C", "u": ["ifr-enroute-position-reports-atc"], "gap": ""},
         {"n": 3, "en": "Radar vectors", "s": "M", "u": [], "gap": ""},
         {"n": 4, "en": "Speed adjustment", "s": "P", "u": ["ifr-enroute-position-reports-atc"], "gap": "ATC speed vs charted speed only."},
-        {"n": 5, "en": "Transition to approach", "s": "P", "u": ["ifr-cap-plate-read-flow"], "gap": "Fix sequence in the read flow; card 11 not item-checked."},
-        {"n": 6, "en": "Initial approach / procedure turn", "s": "E", "u": [], "gap": "Card 11 / 12 (no IDs yet; not item-checked)."},
-        {"n": 7, "en": "Straight-in approach (No PT)", "s": "E", "u": [], "gap": "Card 11 / 12 (no IDs yet; not item-checked)."},
-        {"n": 8, "en": "Straight-in minima", "s": "P", "u": ["ifr-cap-definitions-minima"], "gap": "HAT / HATh definitions; card 11 not item-checked."},
-        {"n": 9, "en": "Final approach", "s": "E", "u": [], "gap": "Card 11 / 12 (no IDs yet; not item-checked)."},
+        {"n": 5, "en": "Transition to approach", "s": "P", "u": ["ifr-cap-plate-read-flow", "plate-initial-intermediate-segment", "proc-arrival-setup"], "gap": "Setup flow and segment altitudes; transition types not explained."},
+        {"n": 6, "en": "Initial approach / procedure turn", "s": "P", "u": ["plate-initial-intermediate-segment"], "gap": "Segment altitudes and stepdowns; procedure turn absent."},
+        {"n": 7, "en": "Straight-in approach (No PT)", "s": "M", "u": [], "gap": ""},
+        {"n": 8, "en": "Straight-in minima", "s": "C", "u": ["plate-straight-in-vs-circling", "ifr-cap-definitions-minima"], "gap": ""},
+        {"n": 9, "en": "Final approach", "s": "C", "u": ["plate-before-faf-final-gate", "plate-profile-view", "proc-final-approach-callouts-single-pilot"], "gap": ""},
         {"n": 10, "en": "Precision approach: ILS, PAR", "s": "P", "u": ["ifr-approach-types", "ifr-ils-loc-vor-ndb-dme"], "gap": "ILS covered; PAR absent."},
         {"n": 11, "en": "Non-precision approach: NDB, VOR, DME, LOC, RNAV/GNSS", "s": "C", "u": ["ifr-approach-types", "ifr-ils-loc-vor-ndb-dme", "ifr-rnav-gnss"], "gap": ""},
-        {"n": 12, "en": "Stabilized constant descent angle approach", "s": "P", "u": ["ifr-approach-types"], "gap": "Definition and MDA trap; technique in card 12 (not item-checked)."},
+        {"n": 12, "en": "Stabilized constant descent angle approach", "s": "P", "u": ["ifr-approach-types", "plate-profile-view"], "gap": "Definition and MDA trap; no technique."},
         {"n": 13, "en": "Visual / contact approach", "s": "C", "u": ["ifr-ifr-in-vmc-vfr-restriction"], "gap": ""},
         {"n": 14, "en": "Circling approach", "s": "C", "u": ["ifr-circling"], "gap": ""},
         {"n": 15, "en": "Missed approach", "s": "C", "u": ["ifr-missed-approach"], "gap": ""},
         {"n": 16, "en": "Uncontrolled aerodromes: VFR / IFR traffic mix", "s": "P", "u": ["ifr-controlled-uncontrolled-ifr"], "gap": "Broadcast / self-separation only."},
         {"n": 17, "en": "Obstacle clearance: minimum safe altitude, MSA", "s": "C", "u": ["ifr-cap-definitions-minima", "ifr-ifr-route-altitude-terms"], "gap": ""},
-        {"n": 18, "en": "Temperature compensation", "s": "P", "u": ["ifr-rass-remote-altimeter", "ifr-ifr-weather-traps"], "gap": "Effect stated; correction method in cards 06 / 11 (not item-checked)."},
+        {"n": 18, "en": "Temperature compensation", "s": "P", "u": ["plate-cold-temperature", "wx-cold-temperature-altitude-error", "ifr-rass-remote-altimeter"], "gap": "Rough formula and the rule to apply CAP corrections; the CAP correction-table method not shown."},
         {"n": 19, "en": "Approach ban: visibility requirements", "s": "C", "u": ["ifr-approach-ban-rvr-general-aviation"], "gap": ""}
       ]},
       {"code": "CAP", "en": "Canada Air Pilot (CAP GEN)", "fr": "Canada Air Pilot (CAP GEN)", "items": [
-        {"n": 1, "en": "Chart legend: approach, aerodrome, lighting, symbols", "s": "E", "u": [], "gap": "Card 11 / 12 (no IDs yet; not item-checked)."},
-        {"n": 2, "en": "Altitude corrections", "s": "P", "u": ["ifr-rass-remote-altimeter"], "gap": "RASS only; cold-temperature correction in cards 06 / 11 (not item-checked)."},
+        {"n": 1, "en": "Chart legend: approach, aerodrome, lighting, symbols", "s": "P", "u": ["plate-lighting-runway-visual-aids", "proc-chart-symbol-transition"], "gap": "Lighting and PFAF-symbol notes only; no legend walkthrough."},
+        {"n": 2, "en": "Altitude corrections", "s": "P", "u": ["ifr-rass-remote-altimeter", "plate-cold-temperature", "wx-cold-temperature-altitude-error"], "gap": "RASS and rough cold formula; CAP correction table not shown."},
         {"n": 3, "en": "Operating minima", "s": "C", "u": ["ifr-cap-definitions-minima", "ifr-landing-minima-visual-reference", "ifr-alternate-minima", "ifr-departure-takeoff-minima"], "gap": ""},
         {"n": 4, "en": "Aircraft categories", "s": "P", "u": ["ifr-circling"], "gap": "Category named for circling minima; speed ranges absent."}
       ]},

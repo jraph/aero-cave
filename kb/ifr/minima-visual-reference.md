@@ -39,6 +39,14 @@
 - `T:` commercial approach-ban rules are stricter/different; don’t mix GA and 703/704/705 tables.
 - `T:` advisory vis not same as approach-ban controlling visibility. CAP/CAR/operator ops spec wins.
 ***
+#### RVR / visibility quick memory
+<!-- id: ifr-rvr-visibility-quick-memory | from: 06 | also: study-formulas | level: IR -->
+
+- `R non-Part VII aeroplane:` if both measured, below minimum when `RVR A <1200` **or** `RVR B <600`; if only A or B measured, below minimum when that RVR `<1200`. `[CAR 602.129]`
+- Below-minimum RVR normally bars continuation beyond the applicable point, subject to listed exceptions: report received after FAF/final-course intercept, training no-landing, varying RVR, ground visibility ≥`1/4 SM`, or CAT III.
+- Advisory visibility helps planning; DA/MDA visual reference controls descent/landing.
+- `T:` this general rule excludes Part VII operations; ground visibility, runway visibility, RVR, advisory visibility and flight visibility are different.
+***
 #### Pebble
 <!-- id: ifr-minima-visual-reference-pebble | also: study-pebble -->
 

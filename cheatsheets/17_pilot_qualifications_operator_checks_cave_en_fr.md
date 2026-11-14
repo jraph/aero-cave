@@ -1,5 +1,5 @@
 # 17 · Pilot qualifications, operator checks & recency / Qualifications, contrôles et récence
-[Dense CAVE HTML reader](https://jraph.github.io/aero-cave/readers/17_Pilot_Qualifications_Operator_Checks_EN_FR.html) · [Card 04 — authoritative air-law context](04_canadian_air_law_core_av_cave_v0_2_compact.md) · [Index](../README.md)
+[Dense CAVE HTML reader](https://jraph.github.io/aero-cave/readers/17_Pilot_Qualifications_Operator_Checks_EN_FR.html) · [Card 04 — authoritative air-law context](../kb/law/README.md) · [Index](../README.md)
 
 **R · 2026-10-24:** CARs live consolidation current to 2026-09-30, last amended 2026-06-17; TC Standard 421 and TC AIM 2026-2. **CAVE quick-recall companion, not a flight authority.** / **R · 24-10-2026 :** RAC consolidé au 30-09-2026, dernière modification 17-06-2026; norme 421 et AIM 2026-2. **Aide-mémoire, non autorité opérationnelle.**
 

@@ -29,23 +29,33 @@ Readers offer EN / FR / both, search, topic filters, themes, text size and print
 
 ## Content
 
-The collection is moving from numbered cards to **concept files**: one Markdown file per ontology concept, with per-concept Pebbles and a separate exam-traps file. The Meteorology migration is complete; other subjects are still numbered cards.
+Knowledge lives in **concept files**: one Markdown file per ontology concept under `kb/`. Ordered procedures, QRCs, the POH card and the three reader-paired notes stay as numbered cards.
 
-| Subject | Where |
+| Domain | Concept files |
 |---|---|
-| Meteorology | [`kb/met/`](kb/met/README.md): 14 concept files (atmosphere, stability, fog, fronts & wind, icing, carb ice, de-icing, thunderstorms, turbulence, products, METAR, TAF, GFA/SIGMET/PIREP/FB, exam traps) |
+| Air law & procedures | [`kb/law/`](kb/law/README.md) |
+| Navigation | [`kb/nav/`](kb/nav/README.md) |
+| Meteorology | [`kb/met/`](kb/met/README.md) |
+| Aeronautics: theory, performance, W&B, human factors | [`kb/agk/`](kb/agk/README.md) |
+| IFR & INRAT | [`kb/ifr/`](kb/ifr/README.md) |
+| Multi-engine | [`kb/me/`](kb/me/README.md) |
+| Former card Pebbles & source notes | [`kb/study/`](kb/study/README.md) |
+
+| Procedure / reference cards | |
+|---|---|
+| Flight training | [02 · Training procedures](cheatsheets/02_flight_training_procedures_av_cave_v0_2.md) |
 | Weather decisions | [05 · Go/no-go flows & gates](cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md) |
-| Flight theory & training | [01 · Flight theory & VFR](cheatsheets/01_flight_theory_vfr_knowledge_av_cave_v0_6.md) · [02 · Training procedures](cheatsheets/02_flight_training_procedures_av_cave_v0_2.md) |
-| Licensing & air law | [03 · Licensing, performance & ops](cheatsheets/03_licensing_performance_operations_av_cave_v0_2.md) · [04 · Canadian air law](cheatsheets/04_canadian_air_law_core_av_cave_v0_2_compact.md) · [17 · Pilot qualifications](cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md) |
-| Calculations | [06 · Formulas & conversions](cheatsheets/06_aviation_formulas_conversions_av_cave_v0_2.md) |
-| Aircraft | [07 · C150M POH](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md) · [08 · Systems & failures](cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md) · [13 · Multi-engine](cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md) |
-| IFR & INRAT | [`kb/ifr/`](kb/ifr/README.md): 16 concept files (rules & recency, planning & fuel, alternates, departure, enroute, holding, approaches, minima, missed & circling, CAP plates, RASS, lost comms, emergencies, navaid checks, IFR weather, recall) · procedures: [11 · CAP plates](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md) · [12 · IFR procedures](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) |
+| Aircraft | [07 · C150M POH](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md) · [08 · Systems & failures QRC](cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md) |
+| IFR | [11 · CAP plate reading](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md) · [12 · IFR procedures](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) |
+| Reader-paired | [17 · Pilot qualifications](cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md) · [Formulas](cheatsheets/CPAER_Formulas_Recall_EN_FR.md) · [Abbreviations](cheatsheets/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.md) |
+
+Meteorology and IFR are consolidated (duplicates merged, a Pebble per concept). Air law, navigation, aeronautics and multi-engine are moved but **not yet merged or given per-concept Pebbles**.
 
 **What goes where:** knowledge → concept file · ordered procedures, flows and QRCs → numbered card · aircraft-type data → its POH card.
 
 ## Status
 
-- **Coverage:** [CPAER_COVERAGE.md](CPAER_COVERAGE.md) (plan and gates) and [CPAER_COVERAGE_MATRIX.md](CPAER_COVERAGE_MATRIX.md) (group-level audit, 22 Oct 2026). Item-level map: [`explorer/syllabus.json`](explorer/syllabus.json), TP 12881 Meteorology (CPAER) = 51 covered / 33 partial / 26 missing / 1 unchecked; TP 691 (INRAT, all 208 items) = 62 covered / 83 partial / 42 missing / 21 unchecked.
+- **Coverage:** [CPAER_COVERAGE.md](CPAER_COVERAGE.md) (plan and gates) and [CPAER_COVERAGE_MATRIX.md](CPAER_COVERAGE_MATRIX.md) (group-level audit, 22 Oct 2026). Item-level map: [`explorer/syllabus.json`](explorer/syllabus.json), TP 12881 Meteorology (CPAER) = 51 covered / 33 partial / 26 missing / 1 unchecked; TP 691 (INRAT, all 208 items) = 70 covered / 91 partial / 47 missing.
 - **Review log:** [CONTENT_REVIEW.md](CONTENT_REVIEW.md) records sources, editions, what was checked and what was not. A commit date does not establish regulatory currency.
 - **Open conflicts:** see the coverage matrix for X-01 and X-03. V-02 (TAF TEMPO) is closed.
 
