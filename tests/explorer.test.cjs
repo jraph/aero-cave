@@ -22,6 +22,16 @@ test('every section has a valid card, path and concept; every concept link resol
     assert.ok(s.p.length && s.p.every(p => paths.has(p)), s.id); assert.ok(s.md.trim(), s.id);
   }
 });
+test('guide items point at existing stable unit IDs; ID comments never leak into content', () => {
+  const units = new Map(data.sections.filter(s => s.u).map(s => [s.u, s]));
+  assert.equal(units.size, data.sections.filter(s => s.u).length, 'duplicate unit id');
+  assert.ok(data.sections.filter(s => s.card === '16').every(s => s.u || s.h === 'Overview'));
+  for (const s of data.sections) assert.equal(s.md.includes('<!-- id:'), false, s.id);
+  for (const g of data.guides) for (const grp of g.groups) for (const it of grp.items) {
+    assert.ok('CPME'.includes(it.s)); for (const u of it.u) assert.ok(units.has(u), `${grp.code} ${it.n} → ${u}`);
+    if (it.s === 'C' || it.s === 'P') assert.ok(it.u.length, `${grp.code} ${it.n}`);
+  }
+});
 test('no card heading is dropped and the page loads nothing external', () => {
   for (const c of data.cards) {
     const src = fs.readFileSync(path.join(root, c.file), 'utf8');

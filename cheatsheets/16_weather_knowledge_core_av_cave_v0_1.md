@@ -3,6 +3,7 @@
 `RELEASE:` `STUDY-REF PROVISIONAL` | `SRC:` TC AIM 2026-1 + standard aviation meteorology | use current MET products for flight
 ***
 #### Atmosphere / ISA
+<!-- id: wx-isa -->
 
 - ISA SL: `15°C`, `29.92 inHg /1013.25 hPa`, density `1.225 kg/m³`.
 - Standard temp lapse ≈ `2°C/1000 ft` to tropopause.
@@ -11,6 +12,7 @@
 - `T:` ISA is a reference model, not forecast weather.
 ***
 #### Pressure altitude / density altitude
+<!-- id: wx-pa-da -->
 
 - Pressure altitude = altitude with altimeter `29.92`.
 - Density altitude = pressure altitude corrected for non-standard temperature.
@@ -19,6 +21,7 @@
 - `M:` `HOT-HIGH-HUMID = PERFORMANCE LOW`.
 ***
 #### Temperature / dew point
+<!-- id: wx-temp-dewpoint -->
 
 - Dew point = temperature air must cool to reach saturation at constant pressure/water content.
 - Small `T-Td` spread + cooling ⇒ fog/low cloud increasingly likely.
@@ -26,6 +29,7 @@
 - `T:` small spread alone does not guarantee fog.
 ***
 #### Lapse rates / stability
+<!-- id: wx-lapse-stability -->
 
 - `DALR` unsaturated ≈ `3°C/1000 ft`.
 - `SALR` saturated ≈ `1.5°C/1000 ft` average; varies with temp/moisture.
@@ -37,6 +41,7 @@
 - `M:` steep lapse = vertical motion grows.
 ***
 #### Moisture / cloud formation
+<!-- id: wx-moisture-cloud -->
 
 - Need moisture + cooling to saturation.
 - Cooling mechanisms: lifting, radiation, contact/advection, mixing.
@@ -48,6 +53,7 @@
 - `T:` estimates apply to a surface-lifted convective parcel, not every observed ceiling/cloud base; field elevation + AGL = ASL only for same vertical datum.
 ***
 #### Cloud families
+<!-- id: wx-cloud-families -->
 
 | Cloud | Typical significance |
 |---|---|
@@ -62,6 +68,7 @@
 - `T:` cloud type often tells stability/lift mechanism.
 ***
 #### Fog
+<!-- id: wx-fog -->
 
 - **Radiation:** clear/light wind/moist ground/night cooling; burns with heating/mixing.
 - **Advection:** moist air over colder surface; needs wind; can persist.
@@ -72,12 +79,14 @@
 - `M:` radiation = cooling ground; advection = moving moist air.
 ***
 #### Visibility
+<!-- id: wx-visibility -->
 
 - Reduced by fog, mist, haze, smoke, dust, precip, blowing snow.
 - Stable air tends to trap contaminants; unstable mixing often improves general visibility.
 - `!:` whiteout = no discernible horizon/terrain cues over snow/cloud; visual attitude/height judgment can disappear.
 ***
 #### Air masses
+<!-- id: wx-air-masses -->
 
 - Classified by moisture/source: continental `c` dry, maritime `m` moist; Arctic/Polar/Tropical temp source.
 - Weather changes as air mass moves over warmer/colder/moister terrain.
@@ -85,6 +94,7 @@
 - Warm air over cold surface ⇒ stability/fog/stratus.
 ***
 #### Pressure systems
+<!-- id: wx-pressure-systems -->
 
 - Northern Hemisphere:
   - Low: counter-clockwise + inward, rising air, cloud/precip.
@@ -94,6 +104,7 @@
 - Closely spaced isobars ⇒ stronger pressure-gradient wind.
 ***
 #### Wind
+<!-- id: wx-wind -->
 
 - Pressure-gradient force drives high→low.
 - Coriolis deflects right in Northern Hemisphere; increases with latitude/speed.
@@ -102,6 +113,7 @@
 - `M:` surface wind angles **into LOW / out of HIGH**.
 ***
 #### Local winds
+<!-- id: wx-local-winds -->
 
 - Sea breeze day: sea→land; land breeze night: land→sea.
 - Valley/anabatic day: upslope/up-valley.
@@ -110,6 +122,7 @@
 - `T:` airport wind may differ sharply from ridge/pass/valley wind.
 ***
 #### Fronts
+<!-- id: wx-fronts -->
 
 - **Cold:** cold undercuts warm; steeper/narrower; CU/CB, showers, gusts, turbulence, fast wind shift.
 - **Warm:** warm overruns cold; broad layered cloud; lowering ceilings, steady precip, icing/FZRA risk.
@@ -119,6 +132,7 @@
 - `M warm:` `slow-wide-layered`.
 ***
 #### CF — before / passing / after
+<!-- id: wx-cold-front -->
 
 - `K:` surface passage at one location; typical NH mid-latitude low, south of centre. Wind = FROM; directions illustrative.
 
@@ -136,6 +150,7 @@
 - `T:` stable/slow CF may give layered cloud + prolonged precip; passage ≠ instant clearing.
 ***
 #### WF — before / passing / after
+<!-- id: wx-warm-front -->
 
 | Element | Before | Passing | After |
 |---|---|---|---|
@@ -152,11 +167,13 @@
 - `SRC:` [FAA PHAK — Weather Theory, Fronts (NWS-hosted)](https://www.weather.gov/media/zhu/ZHU_Training_Page/Met_Tutorials/Weather_Theory.pdf); [NWS — frontal analysis / pressure tendencies](https://www.weather.gov/media/zhu/ZHU_Training_Page/Met_Tutorials/AF-Trainee.pdf).
 ***
 #### Typical warm-front sequence
+<!-- id: wx-warm-front-sequence -->
 
 - `Ci → Cs → As → Ns → St/fog`, ceilings lower and precip increases approaching front.
 - Warm-layer-over-subfreezing-surface setup can produce `FZRA/PL`.
 ***
 #### Precipitation
+<!-- id: wx-precip -->
 
 - Droplets/crystals grow by collision/coalescence or ice-crystal process.
 - `RA` liquid; `DZ` tiny droplets; `SN`; `PL` ice pellets; `FZRA/FZDZ` supercooled liquid freezing on contact.
@@ -164,6 +181,7 @@
 - Virga = precip evaporates before ground; may indicate downdrafts/microburst potential.
 ***
 #### Structural icing
+<!-- id: wx-icing -->
 
 - Requires visible moisture + aircraft surface at/below freezing.
 - **Rime:** small supercooled drops, rapid freeze, rough/opaque.
@@ -174,6 +192,7 @@
 - `T:` `OAT >0°C` at surface says nothing about cloud icing aloft.
 ***
 #### Carburetor icing
+<!-- id: wx-carb-ice -->
 
 - Fuel vaporization + venturi pressure drop can cool carb throat well below OAT.
 - Possible even in warm weather; risk high with humidity and partial power.
@@ -182,6 +201,7 @@
 - `T:` carb icing ≠ structural icing.
 ***
 #### Thunderstorms — ingredients
+<!-- id: wx-thunderstorms -->
 
 - Moisture + instability + lift.
 - Stages:
@@ -192,6 +212,7 @@
 - `!:` avoid; never use a visual/radar “gap” to thread active cells.
 ***
 #### Microburst / LLWS
+<!-- id: wx-microburst -->
 
 - Microburst = concentrated downdraft spreading outward at surface.
 - Aircraft may see: headwind/IAS↑ → downdraft → tailwind/IAS↓.
@@ -200,6 +221,7 @@
 - `M:` gain first can precede severe loss.
 ***
 #### Turbulence
+<!-- id: wx-turbulence -->
 
 - Mechanical: wind over terrain/buildings; strongest low/lee side.
 - Convective: thermal/CU/TS.
@@ -209,6 +231,7 @@
 - `T:` turbulence intensity depends on aircraft response; same air mass affects light aircraft more.
 ***
 #### Mountain wave
+<!-- id: wx-mountain-wave -->
 
 - Favoured by strong wind roughly perpendicular to ridge + stable layer.
 - Smooth wave aloft; severe rotor/turbulence below/lee; strong up/downdrafts.
@@ -216,6 +239,7 @@
 - `!:` downdraft may exceed climb capability.
 ***
 #### Wind shear
+<!-- id: wx-wind-shear -->
 
 - Rapid wind speed/direction change over short distance.
 - Sources: fronts, inversions/low-level jets, terrain, TS/microbursts.
@@ -223,12 +247,14 @@
 - `T:` surface wind can look acceptable while shear above is severe.
 ***
 #### Jet stream / CAT
+<!-- id: wx-jet-cat -->
 
 - Narrow band of strong upper wind near tropopause, usually strongest horizontal temp gradient.
 - CAT favoured near jet core/shear zones, especially bends/entrance/exit regions.
 - Jet position helps locate fronts/system movement.
 ***
 #### Freezing level
+<!-- id: wx-freezing-level -->
 
 - Altitude where `0°C`; may be multiple levels with inversions.
 - `F exam parcel 0°C:` AGL ≈ `CB_exam + 1000×Td_surface/1.5` ft: assumes cloud-base parcel temperature ≈ surface dew point and SALR≈1.5°C/1000 ft.
@@ -238,6 +264,7 @@
 - Cloud + subzero temp + PIREP/AIRMET icing = stronger evidence.
 ***
 #### Altimetry / pressure traps
+<!-- id: wx-altimetry-traps -->
 
 - From high pressure→low without reset: true altitude lower than indicated.
 - Warm→cold: true altitude lower than indicated.
@@ -245,12 +272,14 @@
 - Cold temperature increases obstacle/terrain error; apply published corrections where required.
 ***
 #### Density / TAS
+<!-- id: wx-density-tas -->
 
 - For same IAS, TAS rises with altitude as density falls.
 - Rule-of-thumb TAS ≈ `IAS + ~2% per 1000 ft` in lower atmosphere.
 - Higher TAS at same IAS ⇒ larger turn radius and more ground distance during manoeuvre.
 ***
 #### Weather trend logic
+<!-- id: wx-trend -->
 
 - Observation = **now**; forecast = **expected**; trend = whether expectation is occurring.
 - Compare several METAR/SPECI, not one snapshot.
@@ -258,6 +287,7 @@
 - `T:` forecast confidence drops when observations repeatedly diverge.
 ***
 #### Canadian product memory
+<!-- id: wx-products -->
 
 - `METAR/SPECI` observed aerodrome conditions.
 - `TAF` terminal forecast.
@@ -269,6 +299,7 @@
 - `T:` use the separate Weather Decoding / Go-No-Go QRC for exact code/timing/alternate logic.
 ***
 #### Exam traps
+<!-- id: wx-exam-traps -->
 
 - Stable ≠ “good”: can mean fog/stratus/poor vis/icing.
 - Unstable ≠ “bad everywhere”: often better vis between showers but more turbulence/CB.
@@ -280,6 +311,7 @@
 - Cloud base units: METAR AGL vs GFA ASL.
 ***
 #### Pebble
+<!-- id: wx-pebble -->
 
 - ISA `15°C /29.92 / -2°C per1000`
 - DA `≈ PA +120×ΔT`
