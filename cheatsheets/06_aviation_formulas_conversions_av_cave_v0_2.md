@@ -74,6 +74,7 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - `T:` DA formula is approximation; POH chart wins.
 ***
 #### Temperature
+<!-- id: calc-temperature -->
 
 - `F:` `°C = (°F - 32) × 5/9`.
 - `F:` `°F = °C × 9/5 + 32`.
