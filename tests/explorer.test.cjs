@@ -25,7 +25,7 @@ test('every section has a valid card, path and concept; every concept link resol
 test('guide items point at existing stable unit IDs; ID comments never leak into content', () => {
   const units = new Map(data.sections.filter(s => s.u).map(s => [s.u, s]));
   assert.equal(units.size, data.sections.filter(s => s.u).length, 'duplicate unit id');
-  assert.ok(data.sections.filter(s => s.card === '16').every(s => s.u || s.h === 'Overview'));
+  assert.ok(data.sections.filter(s => s.card === '16' || s.card === '05').every(s => s.u || s.h === 'Overview'));
   for (const s of data.sections) assert.equal(s.md.includes('<!-- id:'), false, s.id);
   for (const g of data.guides) for (const grp of g.groups) for (const it of grp.items) {
     assert.ok('CPME'.includes(it.s)); for (const u of it.u) assert.ok(units.has(u), `${grp.code} ${it.n} → ${u}`);

@@ -66,7 +66,7 @@ details.sec.hit{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
 #graph .n rect{fill:var(--pill);stroke:var(--line);cursor:pointer}
 #graph .n.c rect{fill:var(--accent)}#graph .n.c text{fill:var(--bg);font-weight:700}
 #graph .n.r rect{fill:var(--panel);stroke-dasharray:4 3}
-#graph .n.b rect{fill:var(--panel)}
+#graph .n.b rect{fill:var(--panel)}#graph .n[data-id=""] rect{stroke-dasharray:none;fill:var(--bg)}
 #graph path{fill:none;stroke:var(--line);stroke-width:1.3}
 #graph path.r{stroke-dasharray:4 3}
 #count{font-size:.8rem;color:var(--muted);margin:.5rem 0 .3rem;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
@@ -307,6 +307,7 @@ function egoGraph(id, counts) {
   const c = C.get(id), W = 360, NW = 168, NH = 32, GAP = 8;
   const rows = []; let y = 4;
   const place = (ids, cls) => { const r = []; ids.forEach((x, i) => { const col = i % 2, row = Math.floor(i / 2); const single = ids.length === 1; r.push({id:x, cls, x: single ? (W - NW) / 2 : (col ? W - NW - 4 : 4), y: y + row * (NH + GAP)}); }); if (ids.length) y += Math.ceil(ids.length / 2) * (NH + GAP) + 14; return r; };
+  const home = place([''], 'b'); y -= 6;
   const top = place(c.broader, 'b');
   const centre = {id, cls:'c', x:(W - 220) / 2, y, w:220}; y += NH + 22;
   const nar = place(c.narrower.filter(x => counts.get(x)), '');
@@ -314,8 +315,10 @@ function egoGraph(id, counts) {
   const cx = W / 2, edges = [], nodes = [];
   for (const n of top) edges.push('<path d="M' + cx + ' ' + centre.y + ' C' + cx + ' ' + (centre.y - 12) + ' ' + (n.x + NW / 2) + ' ' + (n.y + NH + 12) + ' ' + (n.x + NW / 2) + ' ' + (n.y + NH) + '"/>');
   for (const n of nar.concat(rel)) edges.push('<path class="' + n.cls + '" d="M' + cx + ' ' + (centre.y + NH) + ' C' + cx + ' ' + (centre.y + NH + 14) + ' ' + (n.x + NW / 2) + ' ' + (n.y - 14) + ' ' + (n.x + NW / 2) + ' ' + n.y + '"/>');
-  for (const n of top.concat([centre], nar, rel)) {
-    const w = n.w || NW, lines = wrapLabel(L1(C.get(n.id)), n.w ? 36 : 27);
+  if (!top.length) edges.push('<path d="M' + cx + ' ' + centre.y + ' L' + cx + ' ' + (home[0].y + NH) + '"/>');
+  for (const n of top) edges.push('<path d="M' + (n.x + NW / 2) + ' ' + n.y + ' C' + (n.x + NW / 2) + ' ' + (n.y - 10) + ' ' + cx + ' ' + (home[0].y + NH + 10) + ' ' + cx + ' ' + (home[0].y + NH) + '"/>');
+  for (const n of home.concat(top, [centre], nar, rel)) {
+    const w = n.w || NW, lines = wrapLabel(n.id ? L1(C.get(n.id)) : '⌂ ' + t('allC'), n.w ? 36 : 27);
     nodes.push('<g class="n ' + n.cls + '" data-id="' + n.id + '"><rect x="' + n.x + '" y="' + n.y + '" width="' + w + '" height="' + NH + '" rx="7"/>' +
       lines.map((l, i) => '<text x="' + (n.x + w / 2) + '" y="' + (n.y + (lines.length === 1 ? 20 : 13 + i * 12)) + '" text-anchor="middle">' + esc(l) + '</text>').join('') + '</g>');
   }
@@ -336,8 +339,8 @@ function renderConcept(counts) {
   });
   p.appendChild(cr); p.appendChild(el('h3', '', esc(L(c))));
   const row = (label, ids, cls) => { ids = ids.filter(x => counts.get(x)); if (!ids.length) return; const r = el('div', 'rel', '<i>' + esc(t(label)) + '</i>'); ids.forEach(x => r.appendChild(chip(x, cls, counts.get(x)))); p.appendChild(r); };
-  row('nar', c.narrower, ''); row('rel', c.related, 'r'); row('bro', c.broader, 'b');
-  const gOn = store.get('aero-cave-graph') === '1';
+  const gOn = store.get('aero-cave-graph') !== '0';
+  if (!gOn) { row('nar', c.narrower, ''); row('rel', c.related, 'r'); row('bro', c.broader, 'b'); }
   const tg = el('button', 'btn', esc(t('graph')) + (gOn ? ' ▾' : ' ▸')); tg.type = 'button'; tg.style.marginTop = '.45rem'; tg.setAttribute('aria-expanded', gOn);
   tg.onclick = () => { store.set('aero-cave-graph', gOn ? '0' : '1'); render(); };
   p.appendChild(tg); if (gOn) p.appendChild(egoGraph(S.c, counts));
