@@ -1,5 +1,9 @@
 # Content review
 
+## Card 05 stable IDs; Meteorology map completed — 14 November 2026
+
+Card 05: 34 sections given stable IDs (`wxp-…`, invisible comment under each heading); card 06: `calc-temperature` on the Temperature section only. No study text changed. `explorer/syllabus.json` re-judged the 18 formerly unchecked TP 12881 Meteorology items against card 05 and added card 05 evidence to existing rows: now **51 Covered, 33 Partial, 26 Missing, 1 Elsewhere** (weather information from ATS: ATIS mentions in cards 04 / 12 / 13, not checked). Still judged by content read only, not validated against AIM MET. FCST 4 (TAF) carries the open V-02 TEMPO wording conflict as a note. Explorer topic graph opens by default again, replaces the duplicate chip rows while open, and gains an “All topics” node above the broader concepts.
+
 ## Stable unit IDs (card 16) and TP 12881 Meteorology item map — 14 November 2026
 
 Pilot of ID-anchored mapping. Card 16: each of the 32 sections now carries a stable ID as an invisible comment on the line under its heading (`<!-- id: wx-fog -->`); no study text, Pebble or heading changed. IDs are card-independent (`wx-…`), must stay unique, and must not be renamed once referenced.
