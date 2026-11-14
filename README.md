@@ -14,7 +14,7 @@ HTML readers offer search, topic filters, dark/light themes, adjustable text and
 
 ## Knowledge explorer (prototype)
 
-[Open the explorer](https://jraph.github.io/aero-cave/explorer.html): every card section reachable by study path (PPL / CPL / IR / ME), topic graph, source card or full-text search; works offline once cached. `explorer.html` is **generated**: after editing a card or `explorer/ontology.json`, run `python3 explorer/build_explorer.py` (no dependencies) and bump the service-worker VERSION. Path tags and topic links are editorial, not a TC syllabus mapping.
+[Open the explorer](https://jraph.github.io/aero-cave/explorer.html): every card section reachable by training stage, phase of flight, licence level (PPL / CPL / IR / ME), topic graph, source card or full-text search; works offline once cached. `explorer.html` is **generated**: after editing a card or `explorer/ontology.json`, run `python3 explorer/build_explorer.py` (no dependencies) and bump the service-worker VERSION. Path tags and topic links are editorial, not a TC syllabus mapping.
 
 ## Browse by subject
 

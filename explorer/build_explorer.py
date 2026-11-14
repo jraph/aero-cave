@@ -128,8 +128,23 @@ def build():
     if errors:
         sys.exit("ontology errors:\n  " + "\n  ".join(errors))
 
+    vids = set()
+    for v in ont["views"]:
+        if v["id"] in vids or v["id"] in pathset or not re.fullmatch(r"[a-z0-9]+", v["id"]):
+            errors.append(f"view {v['id']}: bad or duplicate id")
+        vids.add(v["id"])
+        if v.get("level") and v["level"] not in pathset:
+            errors.append(f"view {v['id']}: unknown level")
+        for ref in v.get("concepts", []):
+            if ref not in idset:
+                errors.append(f"view {v['id']}: unknown concept {ref}")
+        if v.get("re"):
+            re.compile(v["re"])
+    if errors:
+        sys.exit("ontology errors:\n  " + "\n  ".join(errors))
     data = {
         "paths": ont["paths"],
+        "views": ont["views"],
         "concepts": [{k: c[k] for k in ("id", "en", "fr", "broader", "related")} for c in concepts],
         "cards": cards,
         "sections": sections,
