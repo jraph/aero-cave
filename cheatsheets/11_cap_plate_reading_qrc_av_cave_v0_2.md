@@ -5,7 +5,7 @@
 ***
 #### Current publication cycle
 
-- Current `CAP/CAP GEN/CFS/AIP/DAH/charts` AIRAC cycle: effective `2026-07-09` through `2026-09-03`.
+- AIRAC cycle at last review (14 Nov 2026) for `CAP/CAP GEN/CFS/AIP/DAH/charts`: effective `2026-10-29` through `2026-12-24`. `T:` this line ages every 56 days; read the effective dates printed on the product.
 - These publications update every `56 days`; AIP SUP/AIC publish on a `14-day` cycle.
 - `P preflight:` current publication→NOTAM→AIP SUP/AIC→airport/procedure page→aircraft data.
 - Trigger NOTAM = notice that source material changed; retrieve the referenced amendment/Supplement. It may expire while the underlying AIP SUP remains active.
@@ -13,7 +13,7 @@
 ***
 #### Source / scope
 
-- `SRC:` current CAP/CAP GEN/CFS/NOTAM/AIP SUP win. Current cycle: `2026-07-09` to `2026-09-03`.
+- `SRC:` current CAP/CAP GEN/CFS/NOTAM/AIP SUP win. Cycle at last review (14 Nov 2026): `2026-10-29` to `2026-12-24`.
 - CAP contains IFR arrival/departure information: IAP, SID, STAR, visual approaches, noise abatement and aerodrome/ground charts.
 - CAP is not intended for VFR operations and is regularly amended by NOTAM/AIP SUP.
 - `T:` stale plate = no-go. Trigger NOTAM≠the amendment; retrieve referenced material.
@@ -68,8 +68,8 @@
 ***
 #### PFAF depiction transition
 
-- Current July 2026 cycle: use the symbols actually printed on the plate.
-- From `2026-10-29`, NAV CANADA plans incremental use of a lightning-bolt symbol for the PFAF/glidepath-intercept altitude on vertically guided procedures.
+- Use the symbols actually printed on the plate.
+- From `2026-10-29` (AIC `013/2026`), incremental use of a lightning-bolt symbol for the PFAF/glidepath-intercept altitude on vertically guided procedures.
 - Future co-charted procedures may show both: Maltese cross for non-vertical FAF + lightning bolt for PFAF.
 - `T:` this is a future incremental change, not a blanket reinterpretation of current plates.
 ***

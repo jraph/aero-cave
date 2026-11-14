@@ -4,15 +4,11 @@
 [IFR index / Index IFR](README.md) · concept `ifr` · sources, legend and release status in the index. Unit IDs are stable: never rename one.
 
 ***
-#### IFR in VMC / VFR restriction
-<!-- id: ifr-ifr-in-vmc-vfr-restriction | from: 09 -->
+#### IFR in VMC: VFR restriction, visual & contact approach
+<!-- id: ifr-ifr-in-vmc-vfr-restriction | from: 09, 10 -->
 
 - IFR clearance with VFR restriction may be issued if pilot requests, outside Class A, within applicable B/C/D/E, and weather permits.
 - `T:` during VFR restriction/release, pilot provides own separation incl wake; if unable, advise ATC/request amended clearance.
-***
-#### IFR in VMC / visual restriction
-<!-- id: ifr-ifr-in-vmc-visual-restriction | from: 10 -->
-
 - If IFR clearance includes VFR/visual restriction, pilot accepts own terrain/traffic/wake responsibility as specified.
 - Visual approach: IFR remains IFR; visual reference to airport/traffic; ATC may clear visual; missed usually as coordinated/ATC, not necessarily published IAP missed unless assigned.
 - Contact approach: pilot requests; clear of cloud; flight visibility and reasonable expectation to destination; IFR remains IFR.
@@ -49,4 +45,14 @@
 - `P:` brief before busy segment; set bugs/freqs/GPS/OBS; use flows+checklists; say unable early.
 - Leans/coriolis/graveyard spiral/somatogravic illusion: trust instruments, cross-check, standard-rate turns.
 - `T:` automation can be wrong because pilot loaded it wrong.
+***
+#### Pebble
+<!-- id: ifr-rules-privileges-pebble | also: study-pebble -->
+
+- IFR NEEDS `licence/rating/medical/recency + ACFT equipment + IFR flight plan/clearance where required | G3 single only; G1 all aeroplanes | INRAT pass ≠ rating issued | clearance limit ≠ authorization beyond it`
+- RECENCY `24-month test/IPC/check | from 1st day of 7th month after: six approaches in the six months before the flight, to specified minima | actual or simulated IMC, or approved FFS/FTD | no six-hour rule; 6–6–6 outdated | records 3 years` CAR 401.05(3)–(3.2)
+- VFR RESTRICTION `pilot request + outside Class A + weather permits | pilot provides own separation incl wake | unable → advise ATC`
+- VISUAL / CONTACT `IFR remains IFR | contact = pilot requests, clear of cloud | wandering can remove published segment protection`
+- UNCONTROLLED IFR `self-separation, MF/ATF calls | may be no ATC separation until controlled airspace`
+- SINGLE-PILOT `brief before busy segment | say unable early | trust instruments | automation wrong if loaded wrong`
 ***

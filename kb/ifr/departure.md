@@ -30,3 +30,11 @@
 - If only RVR below minimum and no governing ground visibility at/above minimum, takeoff not authorized.
 - `T:` “variable RVR” and “observed on-the-hour vs now” wording can flip the answer.
 ***
+#### Pebble
+<!-- id: ifr-departure-pebble | also: study-pebble -->
+
+- TKOF VIS CAR 602.126 `RWY RVR when reported at/above minimum | ground visibility when RVR below minimum, varying, or not reported | PIC-observed runway visibility only when neither reported | minimum from AOC/special authorization, else current CAP`
+- T `both lowest RVR and ground vis below minimum → no takeoff | takeoff vis ≠ landing/approach vis | standard takeoff minima ≠ obstacle clearance`
+- GRADIENT `ROC fpm = GS kt × ft/NM / 60 | 3.3% ≈ 200 ft/NM | GS-based: tailwind/high GS raises required fpm`
+- SID / ODP `SID may include altitude/speed/climb gradient | obstacle DP exists → use it unless ATC assigns otherwise`
+***

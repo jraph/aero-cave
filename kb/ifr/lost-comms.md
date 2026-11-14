@@ -5,33 +5,27 @@
 
 ***
 #### Lost comms — general
-<!-- id: ifr-lost-comms-general | from: 09 -->
+<!-- id: ifr-lost-comms-general | from: 09, 10 -->
 
-- `P:` squawk `7600`; listen; try other ATC/aircraft relay; comply with CAP/CFS/specific comm-fail instructions; phone ATS if all else fails.
-- `T:` specific SID/STAR/IAP comm-fail procedure overrides generic. judgment required if uncovered case.
-***
-#### Lost comms — general · INRAT
-<!-- id: ifr-lost-comms-general-inrat | from: 10 -->
-
-- `P:` squawk `7600`; maintain listening watch; try alternate freq/FSS/relay/phone when practical; comply with specific SID/STAR/IAP/CAP comm-fail instructions.
-- `T:` specific published comm-fail procedure overrides generic rules.
+- `P:` squawk `7600`; maintain listening watch; try alternate freq/FSS/other ATC/aircraft relay; comply with specific SID/STAR/IAP/CAP/CFS comm-fail instructions; phone ATS when practical / if all else fails.
+- `T:` specific published SID/STAR/IAP comm-fail procedure overrides generic rules; judgment required if uncovered case.
 - `T:` if ATC says “if no comm by X, expect Y,” that can become expected route/alt/time logic.
 ***
-#### Lost comms — IFR route / altitude / time
-<!-- id: ifr-lost-comms-ifr-route-altitude-time | from: 09 -->
+#### Lost comms — VMC / IMC route, altitude, time
+<!-- id: ifr-lost-comms-ifr-route-altitude-time | from: 09, 10 -->
 
 - VMC after fail: continue VFR, land as soon as practicable. `T:` practicable≠nearest unsuitable field.
 - IMC route: assigned → vectored direct to specified fix/route/airway → expected → filed.
 - IMC altitude: highest of assigned / minimum IFR altitude / expected. If vectored below published IFR altitude, climb immediately to appropriate minimum IFR altitude.
-- Descent: maintain enroute altitude to nav facility/approach fix; start descent at latest of filed/amended ETA, last ATC-ack ETA, or EAT. If holding instruction: hold as directed; approach at EAT/EFC.
+- Descent: maintain enroute altitude to nav facility/approach fix; start descent at latest of filed/amended ETA, last ATC-ack ETA, or EAT. If holding instruction acknowledged: hold as directed; approach at EAT/EFC.
 - `M:` route = `A-V-E-F`; alt = `highest A-M-E`; time = latest `ETA/EAT/EFC`.
-***
-#### Lost comms — VMC / IMC
-<!-- id: ifr-lost-comms-vmc-imc | from: 10 -->
-
-- VMC after failure: continue VFR and land as soon as practicable. `T:` practicable≠nearest unsuitable field.
-- IMC route: `A-V-E-F` = assigned → vectored direct to fix/route/airway → expected → filed.
-- IMC altitude: highest of `A-M-E` = assigned / minimum IFR altitude / expected. If vectored below published IFR altitude, climb immediately to appropriate minimum IFR altitude.
-- Descent: maintain enroute altitude to nav facility/approach fix; descend at latest ETA/EAT/EFC logic. If holding instruction acknowledged, hold as directed and approach at `EAT/EFC`.
 - `M:` lost comm = `7600 + VMC land / IMC AVEF + AME + latest time`.
+***
+#### Pebble
+<!-- id: ifr-lost-comms-pebble | also: study-pebble -->
+
+- LOST COMM `7600 + listening watch + alternate freq/FSS/relay/phone | specific published SID/STAR/IAP procedure overrides generic rules`
+- VMC `continue VFR, land as soon as practicable | practicable ≠ nearest unsuitable field`
+- IMC `route A-V-E-F = assigned → vectored direct to fix/route/airway → expected → filed | altitude = highest of A-M-E = assigned / minimum IFR altitude / expected | vectored below published IFR altitude → climb immediately`
+- DESCENT `maintain enroute altitude to nav facility/approach fix | start at latest of filed/amended ETA, last ATC-acknowledged ETA, or EAT | holding acknowledged: hold as directed, approach at EAT/EFC`
 ***

@@ -22,3 +22,9 @@
 - Low-level wind shear/microburst: go-around may not save you if severe; avoid.
 - `T:` altimetry errors from cold temps affect obstacle clearance, not just indicated altitude comfort.
 ***
+#### Pebble
+<!-- id: ifr-ifr-weather-pebble | also: study-pebble -->
+
+- DECODE `METAR: RVR if vis ≤1 SM and/or RVR ≤6000 ft | ceiling = lowest BKN/OVC/VV | FD: interpolate wind/temp aloft | GFA: time panels and expected movement`
+- T `TAF legal but GFA/SIGMET/PIREP ugly = operational no-go | freezing level + cloud/precip = icing risk | embedded CB in IMC = no-go for light trainer | cold-temp altimetry errors affect obstacle clearance`
+***

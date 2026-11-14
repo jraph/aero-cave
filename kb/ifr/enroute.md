@@ -5,26 +5,15 @@
 
 ***
 #### Clearance / readback
-<!-- id: ifr-clearance-readback | from: 09 | also: law-atc -->
+<!-- id: ifr-clearance-readback | from: 09, 10 | also: law-atc -->
 
-- Clearance memory: `CRAFT-ish` = clearance limit, route, altitude, frequency, transponder, plus void/release/hold-for-release if issued.
-- `T:` clearance ≠ takeoff clearance. “climb/maintain” ≠ terrain clearance on visual/VFR restriction if you accepted separation duties.
-***
-#### Clearance / readback · INRAT
-<!-- id: ifr-clearance-readback-inrat | from: 10 | also: law-atc -->
-
-- Clearance contents: clearance limit, route, altitude, departure/restrictions, frequency, squawk, void/release/hold-for-release if issued.
+- Clearance contents (`M:` `CRAFT-ish`): clearance limit, route, altitude, departure/restrictions, frequency, squawk/transponder, plus void/release/hold-for-release if issued.
 - `P:` read back clearance limit/route/altitude/restrictions/squawk/hold-short/runway.
+- `T:` clearance ≠ takeoff clearance. “climb/maintain” ≠ terrain clearance on visual/VFR restriction if you accepted separation duties.
 - `T:` “cleared for the approach” authorizes IAP but not visual descent below minima; “cleared to airport” may be clearance limit, not landing clearance.
 ***
-#### Minimum altitudes / terrain
-<!-- id: ifr-minimum-altitudes-terrain | from: 09 -->
-
-- MEA = nav+obstacle; MOCA = obstacle + limited nav; MSA = emergency/sector; MVA not published to pilots.
-- `T:` cleared direct ≠ terrain guaranteed unless ATC/radar/MEA logic valid. cold/RASS/temp corrections can raise minima.
-***
-#### IFR route / altitude terms
-<!-- id: ifr-ifr-route-altitude-terms | from: 10 -->
+#### Minimum IFR altitudes / route terms
+<!-- id: ifr-ifr-route-altitude-terms | from: 09, 10 -->
 
 | Term | Memory |
 |---|---|
@@ -36,6 +25,7 @@
 | `MVA` | ATC radar/vector altitude, normally unpublished to pilots |
 
 - `T:` cleared direct ≠ automatically safe at low altitude; compare minimum IFR altitude / terrain / cold temp / MEA logic.
+- `T:` cleared direct ≠ terrain guaranteed unless ATC/radar/MEA logic valid. cold/RASS/temp corrections can raise minima.
 ***
 #### Altimeter-setting / standard-pressure regions
 <!-- id: ifr-altimeter-setting-standard-pressure-regions | from: 10 | also: law-airspace, met-atmos -->
@@ -52,4 +42,14 @@
 - STAR lateral path forms part of route when filed/cleared; descent clearance still needed unless specifically cleared by ATC/procedure.
 - ATC speed assignment supersedes charted speed until prohibited/cancelled; charted restrictions remain unless cancelled.
 - `T:` STAR vertical restrictions above assigned altitude remain mandatory unless cancelled.
+***
+#### Pebble
+<!-- id: ifr-enroute-pebble | also: study-pebble -->
+
+- CLEARANCE `limit, route, altitude, departure/restrictions, frequency, squawk + void/release/hold-for-release | clearance ≠ takeoff clearance | “cleared for the approach” ≠ descent below minima | “cleared to airport” may be a clearance limit, not landing clearance`
+- ALTITUDES `MEA obstacle + nav reception | MOCA obstacle, nav limited near NAVAID | MRA receive fix-defining signal | AMA area minimum (replaced GASA), standard temp/pressure | MSA emergency/sector | MVA ATC radar, normally unpublished`
+- T `cleared direct ≠ terrain guaranteed | cold/RASS/temp corrections can raise minima`
+- ALTIMETER `standard-pressure region 29.92/1013.2 | climbing in: set standard immediately after entering | descending out: set station immediately before descending into altimeter-setting region | FL = standard pressure`
+- STAR `lateral path part of route when filed/cleared; descent clearance still needed | vertical restrictions above assigned altitude remain unless cancelled | ATC speed supersedes charted speed`
+- POSITION REPORT `position, time, altitude, next fix/ETA, ensuing fix, remarks`
 ***

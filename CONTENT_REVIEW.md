@@ -1,5 +1,15 @@
 # Content review
 
+## IFR: merged near-duplicates, per-concept Pebbles, X-01 cycle dates — 14 November 2026
+
+**No fact re-validated against CARs / AIM / CAP**; consolidation of existing text, same rule as Meteorology (keep every distinct fact and qualifier; drop a line only when fully restated).
+
+Merged (survivor ← retired): `ifr-ifr-in-vmc-vfr-restriction` ← `…-visual-restriction`; `ifr-alternate-minima` ← `…-core` (TAF/GFA lines left to `ifr-taf-alternate-logic`; table keeps card 09's `600-2*` / `800-2*`); `ifr-clearance-readback` ← `…-inrat`; `ifr-ifr-route-altitude-terms` ← `ifr-minimum-altitudes-terrain`; `ifr-holding` ← `ifr-holds`; `ifr-approach-types` ← `…-minima`; `ifr-rnav-gnss` ← `ifr-gnss-rnav`; `ifr-landing-minima-visual-reference` ← `…-inrat`; `ifr-approach-ban-rvr-general-aviation` ← `ifr-rvr-approach-ban`; `ifr-missed-approach` ← `…-inrat` (circling-lost-reference line left to `ifr-circling`); `ifr-rass-remote-altimeter` ← `ifr-rass-altimeter`; `ifr-lost-comms-general` ← `…-inrat`; `ifr-lost-comms-ifr-route-altitude-time` ← `ifr-lost-comms-vmc-imc` (adds card 10's “holding instruction **acknowledged**”). Reworded while merging: the clearance-contents line and the lost-comm `P:` line (both lists combined).
+
+Pebbles: 15 per-concept Pebbles (`ifr-<file>-pebble`); the two card Pebbles are retired.
+
+**X-01 (stale cycle):** cycle statements in `kb/ifr` and cards 11 / 12 now read “at last review (14 Nov 2026): 2026-10-29 through 2026-12-24” with a trap that the line ages every 56 days. These dates are **computed** from the 56-day cycle stated in the cards (9 Jul → 3 Sep → 29 Oct → 24 Dec), **not read from the NAV CANADA schedule**. PFAF lightning-bolt lines (AIC 013/2026) no longer call 29 Oct “future”; implementation is flagged `?` as not confirmed on a printed chart. Card 01 and 04 mentions of July 2026 are already marked historical and were left.
+
 ## IFR / INRAT moved to concept files — 14 November 2026
 
 Cards 09 and 10 moved into 16 concept files under `kb/ifr/` (60 units, new permanent IDs `ifr-…`), then deleted. **Unit text unchanged** (machine-compared: every old section's text present; no concept link lost; all other cards byte-identical). Three units identical in both cards kept once: Instrument-rating recency, Current publication cycle, Sources & review status. Card 10 headings that collided with card 09 in the same file carry a `· INRAT` suffix. Six coverage-matrix link definitions re-pointed.

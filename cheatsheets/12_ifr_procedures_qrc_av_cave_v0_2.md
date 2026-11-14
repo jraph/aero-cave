@@ -5,7 +5,7 @@
 ***
 #### Current publication cycle
 
-- Current `CAP/CAP GEN/CFS/AIP/DAH/charts` AIRAC cycle: effective `2026-07-09` through `2026-09-03`.
+- AIRAC cycle at last review (14 Nov 2026) for `CAP/CAP GEN/CFS/AIP/DAH/charts`: effective `2026-10-29` through `2026-12-24`. `T:` this line ages every 56 days; read the effective dates printed on the product.
 - These publications update every `56 days`; AIP SUP/AIC publish on a `14-day` cycle.
 - `P preflight:` current publication→NOTAM→AIP SUP/AIC→airport/procedure page→aircraft data.
 - Trigger NOTAM = notice that source material changed; retrieve the referenced amendment/Supplement. It may expire while the underlying AIP SUP remains active.
@@ -105,7 +105,7 @@
 ***
 #### Chart-symbol transition
 
-- Use current-chart symbology. The future PFAF lightning-bolt depiction begins incrementally `2026-10-29`; do not apply it to July-cycle plates unless printed.
+- Use current-chart symbology. PFAF lightning-bolt depiction is introduced incrementally from `2026-10-29`; apply it only where printed.
 ***
 #### Approach brief — compact
 

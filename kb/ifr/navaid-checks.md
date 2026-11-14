@@ -30,3 +30,9 @@
 - GNSS: current DB, RAIM/WAAS, correct mode, CDI scaling, annunciations.
 - `T:` failed identification = unusable navaid for approach.
 ***
+#### Pebble
+<!-- id: ifr-navaid-checks-pebble | also: study-pebble -->
+
+- VOR CHECK `4 ground — 6 airborne — 4 between receivers | VOT: 000° FROM or 180° TO, ±4° (FAA AIM source) | airborne ±6° from published radial | dual: 4° TOTAL difference, same TO/FROM sense | Canada (TC AIM COM 4.5.1–4.5.2): dual >4° or airborne >6° → not for IFR until corrected`
+- T `±6° = receiver-check tolerance ≠ permission to track off course | failed identification = unusable navaid for approach | do not infer U.S. intervals/recordkeeping for Canada`
+***

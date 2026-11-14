@@ -25,7 +25,7 @@ Flown procedures and QRCs stay in numbered cards: [11 · CAP plate reading](../.
 
 ## Provenance / Provenance
 
-Units moved on 14 November 2026 from cards 09 (IFR knowledge) and 10 (INRAT knowledge) with their text unchanged (`from:` on each unit); both cards were then deleted. Units whose text was identical in both cards are kept once. **Near-duplicate units from the two cards sit side by side and are not merged yet**, and there are no per-concept Pebbles yet: the two card Pebbles are in `recall.md`. Nothing was re-validated against CARs, AIM or CAP. The original card headers still apply:
+Units moved on 14 November 2026 from cards 09 (IFR knowledge) and 10 (INRAT knowledge) with their text unchanged (`from:` on each unit); both cards were then deleted. Units identical in both cards are kept once. Thirteen near-duplicate pairs were then merged into single units (`from: 09, 10`), keeping every distinct fact and qualifier; each concept file ends with a `#### Pebble` recapping only that file. Cycle-dated lines are review-dated (14 Nov 2026). Nothing was re-validated against CARs, AIM or CAP. The original card headers still apply:
 
 - Card 09 (`from: 09`):
   - `SEPTEMBER CPAER REVIEW: retained reference, not freshly revalidated` | use exact aircraft/current operational sources

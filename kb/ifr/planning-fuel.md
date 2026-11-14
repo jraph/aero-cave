@@ -32,3 +32,11 @@
 - `6 Calculations:` GS/ETE/fuel, climb gradient fpm, descent rate, hold timing, alternate minima.
 - `7 Decision:` legal? safe? equipped? current? if no, what changes?
 ***
+#### Pebble
+<!-- id: ifr-planning-fuel-pebble | also: study-pebble -->
+
+- FUEL CAR 602.88 `prop + alternate: dest + approach + missed → alternate + land → 45 min | prop no alternate: dest + approach + missed → 45 min | turbojet/helicopter: 30 min | add foreseeable taxi/delay/met/routing/traffic`
+- T `reserve is after required legs ≠ fuel on board at destination | exam may hide the missed approach before the alternate leg`
+- WORKFLOW `documents → route → weather → fuel → plates → calculations → decision: legal? safe? equipped? current?`
+- LEG `TC±VAR=MC±DEV=CH | time = dist/GS | fuel = time×burn | ETA = dep + ETE`
+***
