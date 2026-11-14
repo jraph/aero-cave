@@ -1,5 +1,11 @@
 # Content review
 
+## Explorer views and card 08 table format — 14 November 2026
+
+Explorer: replaced the single path filter with **views** defined in `explorer/ontology.json`: ten training stages (pre-solo to first commercial seat), eight phase-of-flight quick-access sets, and the four licence-level tags. Each stage names the TC guide it is aimed at (TP 11919, 12880, 13723, 12881, 13462, 219 / 11575, 691, 9939, 13524); TP numbers checked against the TC publications list on 14 Nov 2026. Stage membership is a **topic-based approximation, not an item-by-item mapping** to those guides. Topic graph now starts collapsed; Pebble sections display as wrapped tokens (display only, Markdown unchanged).
+
+Card 08, format only: AVGAS row in the fuel-grade table contained unescaped `|`, so GitHub dropped the 100/130 and 100LL cells; separators changed to `·`. Added a missing closing `|` on one Powerplant row. No fact, qualifier or Pebble changed.
+
 ## Knowledge explorer prototype — 14 November 2026
 
 Added generated `explorer.html` (single offline file) with `explorer/ontology.json`, `template.html` and `build_explorer.py`. 527 sections from all 14 numbered cards plus the formulas and abbreviations Markdown are embedded unchanged and indexed by 92 SKOS-style concepts (broader / narrower / related, polyhierarchy), four study paths (PPL / CPL / IR / ME) and source card. Mapping is heading-regex based and **editorial**: not a TP 12881 item mapping, not a coverage claim, and PPL tagging is by judgment (no PPL syllabus audit). No study content, Pebble or reader changed. Added to index, manifest shortcut, PWA precache (VERSION bumped) and offline test; `tests/explorer.test.cjs` checks ontology integrity and that the generated file is current. Checked in headless Chrome at 390 px and 1100 px; not tested on a device or installed PWA.

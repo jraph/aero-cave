@@ -33,6 +33,8 @@ h2{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu
 .tile span{font-size:.75rem;color:var(--muted)}
 .tile:hover,.chip:hover{border-color:var(--accent)}
 .tile.sel{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+#vpanel{border-left:3px solid var(--accent);padding:.1rem .6rem .3rem;margin-bottom:.6rem}#vpanel h3{margin:.1rem 0 .2rem;font-size:1.05rem;line-height:1.2}
+.pl{margin:.3rem 0;display:flex;flex-wrap:wrap;gap:.22rem}.pt{background:var(--stripe);border:1px solid var(--line);border-radius:.3rem;padding:.05rem .35rem;font-size:.84rem;line-height:1.3}.pt.k{background:var(--pill);font-weight:700;border-color:transparent}
 #cpanel{background:var(--panel);border:1px solid var(--line);border-radius:.6rem;padding:.6rem;margin-bottom:.6rem}
 #cpanel h3{margin:.15rem 0 .35rem;font-size:1.1rem;line-height:1.2}
 .crumbs{font-size:.78rem;color:var(--muted);line-height:1.5}
@@ -101,10 +103,12 @@ footer a{color:var(--accent)}
 </div></div>
 <main class="wrap">
   <div id="home">
-    <h2 data-t="hPath"></h2><div class="tiles" id="tp"></div>
+    <h2 data-t="hStage"></h2><div class="tiles" id="tp"></div>
+    <h2 data-t="hOps"></h2><div class="tiles" id="to"></div>
     <h2 data-t="hSubj"></h2><div class="tiles" id="ts"></div>
     <p class="note" data-t="note"></p>
   </div>
+  <div id="vpanel" hidden></div>
   <div id="cpanel" hidden></div>
   <div id="count" hidden></div>
   <div id="results"></div>
@@ -123,9 +127,9 @@ const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','
 const T = {
   title:['Knowledge explorer','Explorateur de connaissances'], home:['Aero CAVE · Home','Aero CAVE · Accueil'],
   search:['Search topics, rules, codes…','Chercher thèmes, règles, codes…'],
-  allP:['All study paths','Tous les parcours'], allK:['All cards','Toutes les fiches'], allC:['All topics','Tous les thèmes'],
-  hPath:['Start from a study path','Partir d’un parcours'], hSubj:['Or from a subject','Ou d’un sujet'],
-  note:['Path tags (PPL / CPL / IR / ME) and topic links are an editorial study structure, not a Transport Canada syllabus mapping.','Les parcours (PPL / CPL / IFR / ME) et les liens thématiques sont une structure d’étude éditoriale, non une correspondance officielle de Transports Canada.'],
+  allP:['All views','Toutes les vues'], gLevel:['Licence level','Niveau de licence'], gStage:['Training stage','Étape de formation'], gOps:['Quick access by phase of flight','Accès rapide par phase de vol'], hStage:['Where are you in training?','Où en êtes-vous dans la formation ?'], hOps:['Quick access by phase of flight','Accès rapide par phase de vol'], aimed:['Aimed at','Vise'], approx:['topic-based selection, not an item-by-item mapping','sélection par thème, non une correspondance point par point'], narrow:['Narrow by subject','Préciser par sujet'], opsNote:['Study reference, not a checklist: the POH/AFM and current publications govern.','Référence d’étude, non une liste de vérifications : le POH/AFM et les publications en vigueur prévalent.'], allK:['All cards','Toutes les fiches'], allC:['All topics','Tous les thèmes'],
+  hSubj:['Or start from a subject','Ou partir d’un sujet'],
+  note:['Stages, level tags and topic links are an editorial study structure, not a Transport Canada syllabus mapping.','Les étapes, niveaux et liens thématiques sont une structure d’étude éditoriale, non une correspondance officielle de Transports Canada.'],
   topics:['topics','thèmes'],
   secs:['sections','sections'], sec:['section','section'], reset:['Clear filters','Effacer les filtres'],
   nar:['Narrower','Plus précis'], rel:['Related','Associés'], bro:['Broader','Plus large'], graph:['Graph','Graphe'],
@@ -147,6 +151,10 @@ const desc = new Map();
 const getDesc = id => { if (desc.has(id)) return desc.get(id); const s = new Set([id]); desc.set(id, s); for (const n of C.get(id).narrower) for (const x of getDesc(n)) s.add(x); return s; };
 const roots = D.concepts.filter(c => !c.broader.length).map(c => c.id);
 const K = new Map(D.cards.map(c => [c.id, c]));
+const V = new Map();
+for (const p of D.paths) V.set(p.id, {id:p.id, group:'level', en:p.en, fr:p.fr, level:p.id});
+for (const v of D.views) { const set = v.concepts ? new Set() : null; if (set) for (const id of v.concepts) for (const x of getDesc(id)) set.add(x); V.set(v.id, Object.assign({}, v, {set, rx: v.re ? new RegExp(v.re, 'i') : null})); }
+const inView = (s, v) => (!v.level || s.p.includes(v.level)) && ((!v.set && !v.rx) || (v.set && s.c.some(x => v.set.has(x))) || (v.rx && v.rx.test(s.h)));
 for (const s of D.sections) {
   s.t = norm(s.h + ' ' + s.md + ' ' + s.c.map(id => C.get(id).en + ' ' + C.get(id).fr).join(' '));
   s.hn = norm(s.h);
@@ -158,7 +166,7 @@ function readHash() {
   const m = /^#x-([A-Za-z0-9]+)-([A-Za-z0-9]+)-([a-z0-9-]+)$/.exec(location.hash);
   S.p = S.k = S.c = '';
   if (!m) return;
-  if (D.paths.some(p => p.id === m[1])) S.p = m[1];
+  if (V.has(m[1])) S.p = m[1];
   if (K.has(m[2])) S.k = m[2];
   if (C.has(m[3])) S.c = m[3];
 }
@@ -170,7 +178,7 @@ function go(patch, top) { Object.assign(S, patch); writeHash(); render(); if (to
 
 /* ---- filtering ---- */
 function matches(s, skip) {
-  if (skip !== 'p' && S.p && !s.p.includes(S.p)) return false;
+  if (skip !== 'p' && S.p && !inView(s, V.get(S.p))) return false;
   if (skip !== 'k' && S.k && s.card !== S.k) return false;
   if (skip !== 'c' && S.c) { const d = getDesc(S.c); if (!s.c.some(x => d.has(x))) return false; }
   for (const w of tokens) if (!s.t.includes(w)) return false;
@@ -231,6 +239,13 @@ function md(src, card) {
   return out.join('');
 }
 
+function pebble(src) {
+  if (/^\s*\|/m.test(src)) return null;
+  return src.split('\n').map(l => l.trim().replace(/^[-*+]\s+/, '')).filter(l => l && !/^\*\*\*$/.test(l)).map(l => {
+    const m = /^([^`|]{1,24}?)\s*`/.exec(l), key = m ? m[1].trim() : '', rest = (m ? l.slice(m[1].length) : l).replace(/`/g, '');
+    return '<div class="pl">' + (key ? '<span class="pt k">' + esc(key) + '</span>' : '') + rest.split(/\s+\|\s+/).map(x => x.trim()).filter(Boolean).map(x => '<span class="pt">' + fmt(esc(x)) + '</span>').join('') + '</div>';
+  }).join('');
+}
 /* ---- rendering ---- */
 function fillSelect(sel, opts, value) {
   sel.textContent = '';
@@ -295,7 +310,7 @@ function renderConcept(counts) {
   p.appendChild(cr); p.appendChild(el('h3', '', esc(L(c))));
   const row = (label, ids, cls) => { ids = ids.filter(x => counts.get(x)); if (!ids.length) return; const r = el('div', 'rel', '<i>' + esc(t(label)) + '</i>'); ids.forEach(x => r.appendChild(chip(x, cls, counts.get(x)))); p.appendChild(r); };
   row('nar', c.narrower, ''); row('rel', c.related, 'r'); row('bro', c.broader, 'b');
-  const gOn = store.get('aero-cave-graph') !== '0';
+  const gOn = store.get('aero-cave-graph') === '1';
   const tg = el('button', 'btn', esc(t('graph')) + (gOn ? ' ▾' : ' ▸')); tg.type = 'button'; tg.style.marginTop = '.45rem'; tg.setAttribute('aria-expanded', gOn);
   tg.onclick = () => { store.set('aero-cave-graph', gOn ? '0' : '1'); render(); };
   p.appendChild(tg); if (gOn) p.appendChild(egoGraph(S.c, counts));
@@ -314,7 +329,7 @@ function sectionEl(s) {
   d.appendChild(el('summary', '', '<span class="st">' + esc(s.h) + '</span>' + s.p.map(p => '<span class="pb">' + p + '</span>').join('') + snippet(s)));
   d.addEventListener('toggle', () => {
     if (!d.open || d.dataset.done) return; d.dataset.done = 1;
-    const b = el('div', 'body', md(s.md, card)), f = el('div', 'foot', '<span>' + esc(t('also')) + '</span>');
+    const b = el('div', 'body', (/pebble/i.test(s.h) && pebble(s.md)) || md(s.md, card)), f = el('div', 'foot', '<span>' + esc(t('also')) + '</span>');
     s.c.forEach(id => f.appendChild(chip(id, id === S.c ? 'b' : '')));
     if (card.reader) { const r = el('a', '', esc(t('reader'))); r.href = SITE + card.reader; f.appendChild(r); }
     const a = el('a', '', esc(t('open'))); a.href = REPO + card.file + (s.a ? '#' + s.a : ''); a.target = '_blank'; a.rel = 'noopener'; if (card.reader) a.style.marginLeft = '0'; f.appendChild(a);
@@ -330,17 +345,27 @@ function render() {
   $('q').placeholder = t('search'); if ($('q').value !== S.q) $('q').value = S.q;
   const counts = conceptCounts();
   const baseP = D.sections.filter(s => matches(s, 'p')), baseK = D.sections.filter(s => matches(s, 'k'));
-  fillSelect($('fp'), [['', t('allP')]].concat(D.paths.map(p => [p.id, L1(p) + ' (' + baseP.filter(s => s.p.includes(p.id)).length + ')'])), S.p);
+  const vn = new Map(); for (const v of V.values()) vn.set(v.id, baseP.filter(s => inView(s, v)).length);
+  const fp = $('fp'); fp.textContent = ''; fp.appendChild(new Option(t('allP'), ''));
+  for (const [g, key] of [['stage','gStage'],['ops','gOps'],['level','gLevel']]) { const og = document.createElement('optgroup'); og.label = t(key); for (const v of V.values()) if (v.group === g) og.appendChild(new Option(L1(v) + ' (' + vn.get(v.id) + ')', v.id)); fp.appendChild(og); }
+  fp.value = S.p; fp.classList.toggle('on', !!S.p);
   fillSelect($('fk'), [['', t('allK')]].concat(D.cards.map(c => [c.id, (/^\d/.test(c.id) ? c.id + ' · ' : '') + L1(c) + ' (' + baseK.filter(s => s.card === c.id).length + ')'])), S.k);
   fillSelect($('fc'), conceptOptions(counts), S.c);
-  const browsing = !S.c && !S.k && !tokens.length;
+  const browsing = !S.c && !S.k && !tokens.length && !S.p;
   $('home').hidden = !browsing;
   if (browsing) {
-    const tp = $('tp'), ts = $('ts'); tp.textContent = ts.textContent = '';
-    for (const p of D.paths) { const b = el('button', 'tile' + (S.p === p.id ? ' sel' : ''), '<b>' + esc(L(p)) + '</b><span>' + baseP.filter(s => s.p.includes(p.id)).length + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p: S.p === p.id ? '' : p.id}); tp.appendChild(b); }
+    const ts = $('ts'); ts.textContent = '';
+    for (const [g, box] of [['stage', $('tp')], ['ops', $('to')]]) { box.textContent = ''; for (const v of V.values()) if (v.group === g) { const b = el('button', 'tile', '<b>' + esc(L(v)) + '</b><span>' + (v.ref ? esc(v.ref) + ' · ' : '') + vn.get(v.id) + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p:v.id}, true); box.appendChild(b); } }
     for (const r of roots) { const n = counts.get(r); if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(C.get(r))) + '</b><span>' + n + ' ' + t('secs') + ' · ' + C.get(r).narrower.filter(x => counts.get(x)).length + ' ' + t('topics') + '</span>'); b.type = 'button'; b.onclick = () => go({c:r}, true); ts.appendChild(b); }
   }
   renderConcept(counts);
+  const vp = $('vpanel'); vp.textContent = ''; vp.hidden = !S.p;
+  if (S.p) { const v = V.get(S.p);
+    vp.appendChild(el('h3', '', esc(L(v))));
+    if (v.ref) vp.appendChild(el('div', 'crumbs', esc(t('aimed')) + ' <b>' + esc(v.ref) + '</b> — ' + esc(t('approx'))));
+    if (v.group === 'ops') vp.appendChild(el('div', 'crumbs', esc(t('opsNote'))));
+    if (!S.c) { const r = el('div', 'rel', '<i>' + esc(t('narrow')) + '</i>'); let any = 0; for (const id of roots) if (counts.get(id)) { r.appendChild(chip(id, '', counts.get(id))); any++; } if (any > 1) vp.appendChild(r); }
+  }
   const res = $('results'), cnt = $('count'); res.textContent = ''; cnt.hidden = browsing; if (browsing) return;
   let list = D.sections.filter(s => matches(s));
   if (tokens.length) { const sc = s => tokens.every(w => s.hn.includes(w)) ? 0 : tokens.some(w => s.hn.includes(w)) ? 1 : 2; list = list.map((s, i) => [sc(s), i, s]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).map(x => x[2]); }
