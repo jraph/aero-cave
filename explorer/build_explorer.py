@@ -19,7 +19,19 @@ ROOT = Path(__file__).resolve().parent.parent
 ONT = ROOT / "explorer" / "ontology.json"
 TPL = ROOT / "explorer" / "template.html"
 SYL = ROOT / "explorer" / "syllabus.json"
-UID = re.compile(r"^<!--\s*id:\s*([a-z][a-z0-9-]*)\s*-->\s*\n?")
+UID = re.compile(r"^<!--\s*id:\s*([a-z][a-z0-9-]*)\s*((?:\|[^>]*?)?)-->\s*\n?")
+KBHEAD = re.compile(r"^<!--\s*concept:\s*([a-z][a-z0-9-]*)\s*((?:\|[^>]*?)?)-->", re.M)
+STUB = re.compile(r"^→ Moved[^\n]*\]\(([^)#\s]+)#([^)\s]+)\)\s*$")
+
+
+def attrs(raw):
+    """'| also: a, b | level: PPL IR' -> {'also': [...], 'level': [...]}"""
+    out = {}
+    for part in raw.split("|"):
+        if ":" in part:
+            k, v = part.split(":", 1)
+            out[k.strip()] = [x for x in re.split(r"[,\s]+", v.strip()) if x]
+    return out
 OUT = ROOT / "explorer.html"
 HEAD = re.compile(r"^(#{1,4})\s+(.*\S)\s*$")
 BOLD = re.compile(r"^\*\*([^*]+)\*\*$")
@@ -95,16 +107,28 @@ def build():
     matchers = [(c["id"], [parse_match(m) for m in c["match"]]) for c in concepts]
     rules = [(set(r["cards"].split(",")), re.compile(r["re"], re.I), r["paths"]) for r in ont["pathRules"]]
 
-    sections, cards, report, uids = [], [], [], set()
+    sections, cards, report, uids, stubs = [], [], [], set(), []
     for cid, card in ont["cards"].items():
         for p in card["paths"]:
             if p not in pathset:
                 errors.append(f"card {cid}: unknown path {p}")
         text = (ROOT / card["file"]).read_text(encoding="utf-8")
         title, secs = split_card(text, card.get("boldHeadings", False))
+        if card.get("retired"):
+            for head, anchor, body in secs:
+                st = STUB.match(body)
+                if st:
+                    stubs.append({"card": cid, "h": head, "to": st.group(1), "a": st.group(2), "from": card["file"]})
+                elif anchor is not None:
+                    errors.append(f"retired card {cid} still has content under '{head}'")
+            continue
         cards.append({"id": cid, "en": card["en"], "fr": card["fr"], "file": card["file"],
                       "reader": card.get("reader"), "title": title})
         for i, (head, anchor, body) in enumerate(secs):
+            st = STUB.match(body)
+            if st:
+                stubs.append({"card": cid, "h": head, "to": st.group(1), "a": st.group(2), "from": card["file"]})
+                continue
             cs = []
             for conc, ms in matchers:
                 for only, rx in ms:
@@ -133,6 +157,51 @@ def build():
             sec["md"] = body
             sections.append(sec)
 
+    for kid, kb in ont.get("kb", {}).items():
+        files = sorted(p for p in (ROOT / kb["dir"]).glob("*.md") if p.name != "README.md")
+        entry = {"id": kid, "en": kb["en"], "fr": kb["fr"], "file": kb["dir"] + "/README.md", "reader": None,
+                 "title": None, "kb": True, "files": {}}
+        cards.append(entry)
+        n = 0
+        for fp in files:
+            rel = fp.relative_to(ROOT).as_posix()
+            text = fp.read_text(encoding="utf-8")
+            title, secs = split_card(text)
+            hm = KBHEAD.search(text)
+            if not hm or hm.group(1) not in idset:
+                errors.append(f"{rel}: missing or unknown '<!-- concept: … -->' header")
+                continue
+            concept, fa = hm.group(1), attrs(hm.group(2))
+            entry["files"][rel] = title
+            for head, anchor, body in secs:
+                if anchor is None:
+                    continue
+                m = UID.match(body)
+                if not m:
+                    errors.append(f"{rel} · {head}: unit id comment required under the heading")
+                    continue
+                ua = attrs(m.group(2))
+                if m.group(1) in uids:
+                    errors.append(f"duplicate unit id {m.group(1)}")
+                uids.add(m.group(1))
+                cs = [concept] + [c for c in ua.get("also", []) if c != concept]
+                ps = ua.get("level") or fa.get("level") or []
+                for c in cs:
+                    if c not in idset:
+                        errors.append(f"{rel} · {head}: unknown concept {c}")
+                if not ps or any(p not in pathset for p in ps):
+                    errors.append(f"{rel} · {head}: missing or unknown level")
+                sections.append({"id": f"{kid}-{n}", "card": kid, "f": rel, "h": head, "a": anchor, "c": cs,
+                                 "p": ps, "u": m.group(1), "md": body[m.end():].strip()})
+                n += 1
+    for st in stubs:
+        target = (ROOT / st["from"]).parent / st["to"]
+        if not target.exists():
+            errors.append(f"stub {st['card']} · {st['h']}: target {st['to']} not found")
+        else:
+            rel = target.resolve().relative_to(ROOT).as_posix()
+            if not any(s.get("f") == rel and s["a"] == st["a"] for s in sections):
+                errors.append(f"stub {st['card']} · {st['h']}: no heading #{st['a']} in {rel}")
     used = {c for s in sections for c in s["c"]}
     for c in concepts:
         if c["id"] not in used and not any(c["id"] in o["broader"] for o in concepts):
@@ -171,6 +240,7 @@ def build():
         sys.exit("syllabus errors:\n  " + "\n  ".join(errors))
     data = {
         "guides": syl["guides"],
+        "stubs": len(stubs),
         "paths": ont["paths"],
         "views": ont["views"],
         "concepts": [{k: c[k] for k in ("id", "en", "fr", "broader", "related")} for c in concepts],

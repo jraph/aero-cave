@@ -238,7 +238,7 @@ Numbers below refer to the named TP group. Evidence supports only the specific s
 | ID | Evidence | Classification | Required comparison before any correction |
 |---|---|---|---|
 | X-01 | [01 current-cycle section][vfr-cycle] calls July cycle historical; [09][ifr-cycle], [10][inrat-cycle], [11][plate-cycle], [12][proc-cycle] still call 9 July–3 September current and generalize publication intervals. | Confirmed internal currency conflict | Product-specific NAV CANADA schedules/edition dates; separate historical worked examples from current guidance. Do not replace all dates with one universal cycle. |
-| V-02 | [05 TAF][wx-taf] uses total TEMPO duration ≤half; [glossary memory traps][abbr-traps] uses <half. | Wording conflict; authoritative threshold not resolved in this audit | Current TC AIM MET / forecast coding definition; compare Markdown and HTML before updating. |
+| V-02 · closed | [TAF][wx-taf] and bilingual glossary aligned | Each occurrence <1 h; combined duration ≤½ of the TEMPO window | TC AIM 2026-2, MET 7.3, p. 158. |
 | X-03 | [12 unusual attitudes][proc-ua]: nose-high line includes “reduce if near stall?” alongside qualified generic recovery wording. | Needs verification; unresolved instructional ambiguity | Applicable training guidance + exact AFM/instructor procedure; do not compress into a universal memory action. |
 | V-04 | [07 source status][poh-source] says serial/configuration not confirmed. | Applicability unresolved, not proven wrong | Exact aircraft POH revision, supplements, equipment/STCs and W&B before treating example data as fleet authority. |
 | V-05 | [06 VOR][calc-nav] links Canadian and FAA check scopes in [10][ifr-check]. | Qualified cross-reference, **not** an established contradiction | Preserve Canadian versus FAA origin; do not import US intervals/recordkeeping into Canada. |
@@ -248,9 +248,9 @@ Numbers below refer to the named TP group. Evidence supports only the specific s
 
 1. Complete **numbered-item expansion** for Air Law, Navigation, Meteorology, systems/theory/operations; attach precise content evidence to each item, distinguishing no treatment from incomplete depth. This report does not close Gate 1.
 2. Prioritize HF and INST gaps already isolated above; audit authoritative teaching sources before drafting new study facts. Electric propulsion, EFB fire/power, medevac/aerial-work fatigue and chart interpretation are additional explicit gaps.
-3. Resolve X-01 / V-02 / X-03 by source comparison in a separate content change; update all affected Markdown/HTML/Pebbles and review records together.
+3. Resolve X-01 / X-03 by source comparison in a separate content change; update all affected Markdown/HTML/Pebbles and review records together.
 4. For each actual consolidation, record **source A + source B → owner + every retained unique fact/example/qualifier/source/Pebble + links back**. No exact-duplicate deletion is proposed here.
-5. Select one small pilot only after item-level audit and target path/compatibility decisions. Keep card 05 decoding versus 16 theory, card 06 shared formulas, and 07 aircraft-specific examples complementary.
+5. Historical October plan (Meteorology pilot subsequently completed): select one small pilot only after item-level audit and target path/compatibility decisions. Keep card 05 decoding versus 16 theory, card 06 shared formulas, and 07 aircraft-specific examples complementary.
 
 **Change scope:** audit/planning only. No study card, HTML reader, language/search code, manifest, service worker, URL or Pebble changed.
 
@@ -277,26 +277,26 @@ Numbers below refer to the named TP group. Evidence supports only the specific s
 [me-critical]: cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md#critical-engine
 [me-calc]: cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md#performance-calculations-required
 [me-wb]: cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md#wb-me-traps
-[met-isa]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#atmosphere--isa
-[met-pressure]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#pressure-systems
-[met-wind]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#wind
-[met-da]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#pressure-altitude--density-altitude
-[met-alt]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#altimetry--pressure-traps
-[met-temp]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#temperature--dew-point
-[met-cloud]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#moisture--cloud-formation
-[met-precip]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#precipitation
-[met-stability]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#lapse-rates--stability
-[met-families]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#cloud-families
-[met-fog]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#fog
-[met-vis]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#visibility
-[met-turb]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#turbulence
-[met-jet]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#jet-stream--cat
-[met-mass]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#air-masses
-[met-front]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#cf--before--passing--after
-[met-ice]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#structural-icing
-[met-carb]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#carburetor-icing
-[met-ts]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#thunderstorms--ingredients
-[met-micro]: cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md#microburst--llws
+[met-isa]: kb/met/atmosphere-altimetry.md#atmosphere--isa
+[met-pressure]: kb/met/air-masses-fronts-wind.md#pressure-systems
+[met-wind]: kb/met/air-masses-fronts-wind.md#wind
+[met-da]: kb/met/atmosphere-altimetry.md#pressure-altitude--density-altitude
+[met-alt]: kb/met/atmosphere-altimetry.md#altimetry--pressure-traps
+[met-temp]: kb/met/stability-clouds.md#temperature--dew-point
+[met-cloud]: kb/met/stability-clouds.md#moisture--cloud-formation
+[met-precip]: kb/met/stability-clouds.md#precipitation
+[met-stability]: kb/met/stability-clouds.md#lapse-rates--stability
+[met-families]: kb/met/stability-clouds.md#cloud-families
+[met-fog]: kb/met/fog-visibility.md#fog
+[met-vis]: kb/met/fog-visibility.md#visibility
+[met-turb]: kb/met/turbulence-wind-shear.md#turbulence
+[met-jet]: kb/met/turbulence-wind-shear.md#jet-stream--cat
+[met-mass]: kb/met/air-masses-fronts-wind.md#air-masses
+[met-front]: kb/met/air-masses-fronts-wind.md#cf--before--passing--after
+[met-ice]: kb/met/icing.md#structural-icing
+[met-carb]: kb/met/carburettor-icing.md#carburetor-icing
+[met-ts]: kb/met/thunderstorms.md#thunderstorms
+[met-micro]: kb/met/turbulence-wind-shear.md#microburst--llws
 [vfr-cycle]: cheatsheets/01_flight_theory_vfr_knowledge_av_cave_v0_6.md#current-publication-cycle
 [vfr-doc]: cheatsheets/01_flight_theory_vfr_knowledge_av_cave_v0_6.md#docs--legal
 [vfr-nav]: cheatsheets/01_flight_theory_vfr_knowledge_av_cave_v0_6.md#navigation
@@ -345,13 +345,13 @@ Numbers below refer to the named TP group. Evidence supports only the specific s
 [law-ice]: cheatsheets/04_canadian_air_law_core_av_cave_v0_2_compact.md#aircraft-icing--clean-aircraft
 [law-fit]: cheatsheets/04_canadian_air_law_core_av_cave_v0_2_compact.md#fitness--alcohol--drugs
 [law-brief]: cheatsheets/04_canadian_air_law_core_av_cave_v0_2_compact.md#passenger-briefing
-[wx-pirep]: cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md#airmet--sigmet--pirep
+[wx-pirep]: kb/met/gfa-sigmet-pirep-winds.md#airmet--sigmet--pirep
 [wx-fic]: cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md#fic--in-flight-update
-[wx-metar]: cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md#metar--speci-scan
-[wx-taf]: cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md#taf-scan--groups
-[wx-gfa]: cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md#gfa
-[wx-upper]: cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md#upper-winds--temperature
-[wx-hot]: cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md#de-anti-icing--fpd--hot--dégivrage--antigivrage
+[wx-metar]: kb/met/metar.md#metar--speci-scan
+[wx-taf]: kb/met/taf.md#taf-scan--groups
+[wx-gfa]: kb/met/gfa-sigmet-pirep-winds.md#gfa
+[wx-upper]: kb/met/gfa-sigmet-pirep-winds.md#upper-winds--temperature
+[wx-hot]: kb/met/ground-deicing.md#de-anti-icing--fpd--hot--dégivrage--antigivrage
 [wx-night]: cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md#night-weather
 [wx-matrix]: cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md#personal-weather-matrix
 [calc-heading]: cheatsheets/06_aviation_formulas_conversions_av_cave_v0_2.md#true--magnetic--compass

@@ -8,7 +8,7 @@ Default to **CAVE mode** for repository content: super-condensed, scan-first avi
 - Preserve every qualifier that changes legality, applicability or safety; never compress into ambiguity.
 - Explicitly distinguish similar concepts: clearance, separation, conflict resolution, traffic information, authorization, recommendation and memory aid.
 - Use existing tags where useful: `F` formula, `M` memory, `T` trap, `P` procedure, `R` rule, `?` verify.
-- Maintain a `#### Pebble` section in numbered CAVE study cards: ultra-dense final recall of the card’s highest-yield rules, formulas and traps.
+- Maintain a `#### Pebble` section in numbered CAVE study cards and at the end of each concept file (`kb/…`): ultra-dense final recall of the card’s highest-yield rules, formulas and traps.
 - Pebbles summarize facts already explained above; introduce no new rule or qualifier. Use short tokens, `|`, arrows and standard abbreviations.
 - Update the Pebble whenever a material study point changes. Bilingual readers/glossaries may use their existing memory-trap format instead of a Pebble.
 - Match the language pattern of the destination: bilingual EN/FR where already bilingual; otherwise retain the card’s language.
@@ -19,4 +19,7 @@ Default to **CAVE mode** for repository content: super-condensed, scan-first avi
 - When content overlaps a Markdown card and HTML reader, update both in the same change. Record material source/review changes in `CONTENT_REVIEW.md`.
 - For L4 Pebble / compact CAVE note authoring or audit, invoke repo-local `$write-l4-pebble` (`.agents/skills/write-l4-pebble/SKILL.md`) **before drafting**; check MANAB/CFS codes and preserve legal/operational qualifiers.
 - For CAVE reader creation or updates, invoke the repo-local `$build-cave-study-readers` skill and follow its existing-reader vs generator-backed routing.
+- **Concept files (`kb/<domain>/`, pilot: `kb/met/`):** one file per ontology concept; knowledge goes there, ordered procedures/flows/QRCs stay in numbered cards, aircraft-type data stays in its POH card. Follow the header and unit-comment format in `kb/met/README.md`.
+- **Unit IDs** (`<!-- id: … -->` under a heading) are permanent: never rename or reuse; `explorer/syllabus.json` and saved links depend on them. A new unit needs a new unique ID.
+- After editing any card, concept file, `explorer/ontology.json` or `explorer/syllabus.json`, run `python3 explorer/build_explorer.py` and `node --test tests/*.cjs`, then bump the service-worker VERSION.
 - Keep paths and anchors stable when practical. Validate links, counts, examples and HTML structure after edits.

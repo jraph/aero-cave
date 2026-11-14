@@ -25,7 +25,9 @@ test('every section has a valid card, path and concept; every concept link resol
 test('guide items point at existing stable unit IDs; ID comments never leak into content', () => {
   const units = new Map(data.sections.filter(s => s.u).map(s => [s.u, s]));
   assert.equal(units.size, data.sections.filter(s => s.u).length, 'duplicate unit id');
-  assert.ok(data.sections.filter(s => s.card === '16' || s.card === '05').every(s => s.u || s.h === 'Overview'));
+  assert.ok(data.sections.filter(s => s.card === 'MET' || s.card === '05').every(s => s.u || s.h === 'Overview'));
+  assert.equal(data.sections.some(s => s.card === '16'), false, 'card 16 is retired');
+  for (const f of Object.keys(data.cards.find(c => c.id === 'MET').files)) if (!/recall\.md$/.test(f)) assert.equal(data.sections.filter(s => s.f === f && s.h === 'Pebble').length, 1, f + ': one Pebble');
   for (const s of data.sections) assert.equal(s.md.includes('<!-- id:'), false, s.id);
   for (const g of data.guides) for (const grp of g.groups) for (const it of grp.items) {
     assert.ok('CPME'.includes(it.s)); for (const u of it.u) assert.ok(units.has(u), `${grp.code} ${it.n} → ${u}`);
@@ -33,11 +35,15 @@ test('guide items point at existing stable unit IDs; ID comments never leak into
   }
 });
 test('no card heading is dropped and the page loads nothing external', () => {
-  for (const c of data.cards) {
-    const src = fs.readFileSync(path.join(root, c.file), 'utf8');
-    const heads = src.split('\n').filter(l => /^#{2,4}\s+\S/.test(l)).map(l => l.replace(/^#+\s+/, '').trim());
-    const have = new Set(data.sections.filter(s => s.card === c.id).map(s => s.h));
-    for (const h of heads) if (h !== c.title) assert.ok(have.has(h), `${c.id}: ${h}`);
+  for (const c of data.cards) for (const file of c.kb ? Object.keys(c.files) : [c.file]) {
+    const lines = fs.readFileSync(path.join(root, file), 'utf8').split('\n');
+    const have = new Set(data.sections.filter(s => s.card === c.id && (!c.kb || s.f === file)).map(s => s.h));
+    lines.forEach((l, i) => {
+      if (!/^#{2,4}\s+\S/.test(l)) return;
+      const h = l.replace(/^#+\s+/, '').trim(), next = lines.slice(i + 1).find(x => x.trim());
+      if (h === c.title || /^→ Moved/.test(next || '')) return; // title or pointer stub (target checked by the build)
+      assert.ok(have.has(h), `${file}: ${h}`);
+    });
   }
   assert.equal(/<script[^>]+src=|<link[^>]+stylesheet|@import|fetch\(/.test(html), false);
 });
