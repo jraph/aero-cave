@@ -13,7 +13,7 @@ Compact Canadian pilot study notes for **PPL (PPAER) · CPL (CPAER) · instrumen
 | Topic graph | Concepts with broader / narrower / related links; a note can sit under several parents |
 | TC guide coverage | Item-by-item status against TP 12881 (Meteorology) and TP 691 (INRAT) |
 | Search | Full text plus synonyms and abbreviations; **✕ Clear** or Esc resets |
-| Readers | Bilingual HTML readers: pilot qualifications, CPAER formulas, abbreviations |
+| Legacy reader links | Collections transitioning to the explorer: pilot qualifications, CPAER formulas, abbreviations |
 
 ## Repository layout
 
@@ -21,7 +21,7 @@ Compact Canadian pilot study notes for **PPL (PPAER) · CPL (CPAER) · instrumen
 |---|---|
 | [`kb/`](kb/README.md) | Knowledge: one file per concept, each ending with a Pebble |
 | [`cheatsheets/`](cheatsheets/) | Procedures, QRCs, the C150M POH card, and the three reader-paired notes |
-| [`readers/`](readers/) | Bilingual HTML readers |
+| [`readers/`](readers/) | Legacy bilingual HTML pages pending replacement by the explorer |
 | `explorer/ontology.json` | Concepts, levels, stage and phase views |
 | `explorer/syllabus.json` | TC guide items mapped to unit IDs, with status and gap notes |
 | `explorer/template.html`, `build_explorer.py` | Generate `index.html` (all notes embedded) |
@@ -37,7 +37,7 @@ python3 explorer/build_explorer.py   # regenerate index.html (no dependencies)
 node --test tests/*.cjs               # ontology, IDs, staleness, offline cache, layout
 ```
 
-Then bump `VERSION` in `service-worker.js`. Record source or review changes in `CONTENT_REVIEW.md`. When a topic also appears in an HTML reader, update both.
+Then bump `VERSION` in `service-worker.js`. Record source or review changes in `CONTENT_REVIEW.md`. Publish new knowledge in `kb/` and regenerate the explorer. The explorer is replacing the three standalone bilingual readers. Retire each legacy pair after its bilingual content, memory traps, search, deep links and offline access are verified in the explorer. During migration, apply corrections to both published formats.
 
 ## Sources
 

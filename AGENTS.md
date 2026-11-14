@@ -16,9 +16,10 @@ Default to **CAVE mode** for repository content: super-condensed, scan-first avi
 - Do not invent or casually expand MANAB/CFS abbreviations. Preserve source-specific meanings and flag collisions (`S 5 ≠ PF 5`, weather code ≠ CFS code).
 - For CFS examples, mirror published notation (`PF A-1,2 B-5`, hours in UTC, units/qualifiers) and identify edition-sensitive content.
 - Use current authoritative Canadian sources for operational/regulatory claims; keep citations compact and adjacent.
-- When content overlaps a Markdown card and HTML reader, update both in the same change. Record material source/review changes in `CONTENT_REVIEW.md`.
+- Use the human contributor’s configured Git identity. Omit automated tool co-author trailers and generated-by signatures from commits and pull requests. Preserve attribution to human collaborators.
+- Publish new study topics through the knowledge base and explorer. The explorer replaces standalone readers. Migrate each existing pair with its bilingual content, memory traps, search, deep links and offline access. Keep corrections synchronized until that pair is retired. Record material source/review changes in `CONTENT_REVIEW.md`.
 - For L4 Pebble / compact CAVE note authoring or audit, invoke repo-local `$write-l4-pebble` (`.agents/skills/write-l4-pebble/SKILL.md`) **before drafting**; check MANAB/CFS codes and preserve legal/operational qualifiers.
-- For CAVE reader creation or updates, invoke the repo-local `$build-cave-study-readers` skill and follow its existing-reader vs generator-backed routing.
+- For maintenance of a legacy CAVE reader, invoke the repo-local `$build-cave-study-readers` skill and follow its existing-reader vs generator-backed routing.
 - **Knowledge base (`kb/<domain>/`):** one file per ontology concept; knowledge goes there, ordered procedures/flows/QRCs stay in `cheatsheets/`, aircraft-type data stays in its POH card. Format: `kb/README.md`.
 - **Units:** every `####` section carries an ID comment under its heading declaring its concepts and level. IDs are permanent: never rename or reuse. A new unit needs a new unique ID.
 - **Pebbles:** exactly one `#### Pebble` as the last unit of each concept file, recapping that file only. No separate Pebble files.
