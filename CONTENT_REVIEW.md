@@ -1,5 +1,9 @@
 # Content review
 
+## Knowledge explorer prototype — 14 November 2026
+
+Added generated `explorer.html` (single offline file) with `explorer/ontology.json`, `template.html` and `build_explorer.py`. 527 sections from all 14 numbered cards plus the formulas and abbreviations Markdown are embedded unchanged and indexed by 92 SKOS-style concepts (broader / narrower / related, polyhierarchy), four study paths (PPL / CPL / IR / ME) and source card. Mapping is heading-regex based and **editorial**: not a TP 12881 item mapping, not a coverage claim, and PPL tagging is by judgment (no PPL syllabus audit). No study content, Pebble or reader changed. Added to index, manifest shortcut, PWA precache (VERSION bumped) and offline test; `tests/explorer.test.cjs` checks ontology integrity and that the generated file is current. Checked in headless Chrome at 390 px and 1100 px; not tested on a device or installed PWA.
+
 ## CAR 703 single-pilot IFR 50-hour minima — 26 October 2026
 
 Card 17 Markdown/HTML: added a separate, prominently labelled 723.86 single-pilot IFR passenger-operation requirement: 1,000 hours total, 100 hours ME if multi-engine, 50 hours actual/simulated IMC and 50 hours on aeroplane type; PPC autopilot assessment and FL250 limit for pressurized aeroplanes. Explicitly not a blanket CAR 703 PIC requirement. Source: Transport Canada Standard 723.86 (aeroplanes). PWA cache bumped. Visual tests not run.
