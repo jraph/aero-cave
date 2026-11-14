@@ -144,7 +144,7 @@ const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}},
 const norm = t => t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const T = {
-  title:['Canadian pilot study notes','Notes d’étude pour pilotes canadiens'], hRead:['Bilingual readers','Lecteurs bilingues'],
+  title:['Canadian pilot study notes','Notes d’étude pour pilotes canadiens'], hRead:['Bilingual collections','Collections bilingues'],
   search:['Search topics, rules, codes…','Chercher thèmes, règles, codes…'],
   allP:['All views','Toutes les vues'], gLevel:['Licence level','Niveau de licence'], gStage:['Training stage','Étape de formation'], gOps:['Quick access by phase of flight','Accès rapide par phase de vol'], hStage:['Where are you in training?','Où en êtes-vous dans la formation ?'], hOps:['Quick access by phase of flight','Accès rapide par phase de vol'], aimed:['Aimed at','Vise'], approx:['topic-based selection, not an item-by-item mapping','sélection par thème, non une correspondance point par point'], narrow:['Narrow by subject','Préciser par sujet'], opsNote:['Study reference, not a checklist: the POH/AFM and current publications govern.','Référence d’étude, non une liste de vérifications : le POH/AFM et les publications en vigueur prévalent.'], allK:['All cards','Toutes les fiches'], allC:['All topics','Tous les thèmes'],
   hSubj:['Or start from a subject','Ou partir d’un sujet'],
@@ -237,6 +237,9 @@ function fmt(s, card) {
     .replace(/(^|[^*\w])\*([^*\s][^*]*)\*(?![\w*])/g, '$1<em>$2</em>');
 }
 const cells = r => r.trim().replace(/^\|/, '').replace(/\|$/, '').split(/(?<!\\)\|/).map(c => c.trim().replace(/\\\|/g, '|'));
+function formulaColumns(row) {
+  return cells(row).filter((_, i) => i === 0 || lang === 'both' || i === (lang === 'en' ? 1 : 2));
+}
 function md(src, card) {
   const lines = src.split('\n'), out = []; let i = 0, stack = [], para = [];
   const closeLists = n => { while (stack.length > n) out.push('</li></' + stack.pop() + '>'); };
@@ -249,9 +252,10 @@ function md(src, card) {
     if ((m = /^#{5,6}\s+(.*)$/.exec(tr))) { flushP(); closeLists(0); out.push('<h5>' + inline(m[1], card) + '</h5>'); i++; continue; }
     if (tr[0] === '|' && i + 1 < lines.length && /^\|?\s*:?-{2,}/.test(lines[i + 1].trim())) {
       flushP(); closeLists(0);
-      let h = '<div class="tw"><table><thead><tr>' + cells(tr).map(c => '<th>' + inline(c, card) + '</th>').join('') + '</tr></thead><tbody>';
+      const columns = card?.id === 'F' && tr === '| Label | English | Français |' ? formulaColumns : cells;
+      let h = '<div class="tw"><table><thead><tr>' + columns(tr).map(c => '<th>' + inline(c, card) + '</th>').join('') + '</tr></thead><tbody>';
       i += 2;
-      while (i < lines.length && lines[i].trim()[0] === '|') { h += '<tr>' + cells(lines[i]).map(c => '<td>' + inline(c, card) + '</td>').join('') + '</tr>'; i++; }
+      while (i < lines.length && lines[i].trim()[0] === '|') { h += '<tr>' + columns(lines[i]).map(c => '<td>' + inline(c, card) + '</td>').join('') + '</tr>'; i++; }
       out.push(h + '</tbody></table></div>'); continue;
     }
     if ((m = /^(\s*)([-*+]|\d+[.)])\s+(.*)$/.exec(ln))) {
@@ -263,7 +267,10 @@ function md(src, card) {
       out.push(inline(m[3], card)); i++; continue;
     }
     if (stack.length && /^\s{2,}\S/.test(ln)) { out.push('<br>' + inline(tr, card)); i++; continue; }
-    closeLists(0); para.push(inline(tr.replace(/^>\s?/, ''), card)); i++;
+    closeLists(0);
+    const trap = card?.id === 'F' && /^(\*\*.+?\*\* · )(.+?) \/ (.+)$/.exec(tr);
+    if (trap && lang !== 'both') { para.push(inline(trap[1] + trap[lang === 'en' ? 2 : 3], card)); i++; continue; }
+    para.push(inline(tr.replace(/^>\s?/, ''), card)); i++;
   }
   flushP(); closeLists(0);
   return out.join('');
@@ -362,7 +369,7 @@ function sectionEl(s) {
   d.appendChild(el('summary', '', '<span class="st">' + esc(s.h) + '</span>' + s.p.map(p => '<span class="pb">' + p + '</span>').join('') + snippet(s)));
   d.addEventListener('toggle', () => {
     if (!d.open || d.dataset.done) return; d.dataset.done = 1;
-    const b = el('div', 'body', (/pebble/i.test(s.h) && pebble(s.md)) || md(s.md, {file: s.f || card.file})), f = el('div', 'foot', '<span>' + esc(t('also')) + '</span>');
+    const b = el('div', 'body', (/pebble/i.test(s.h) && pebble(s.md)) || md(s.md, {id: card.id, file: s.f || card.file})), f = el('div', 'foot', '<span>' + esc(t('also')) + '</span>');
     s.c.forEach(id => f.appendChild(chip(id, id === S.c ? 'b' : '')));
     if (s.u) { const refs = unitItems.get(s.u) || [], f2 = el('div', 'foot', '<span class="uid">#' + s.u + '</span>');
       const byG = new Map(); for (const r of refs) { if (!byG.has(r.g.id)) byG.set(r.g.id, []); byG.get(r.g.id).push(r.grp.code + ' ' + r.it.n); }
@@ -419,7 +426,7 @@ function render() {
   $('home').hidden = !browsing;
   if (browsing) {
     const ts = $('ts'), tg = $('tg'), tr = $('tr'); ts.textContent = tg.textContent = tr.textContent = '';
-    for (const c of D.cards) if (c.reader) { const a = el('a', 'tile', '<b>' + esc(L(c)) + '</b><span>EN / FR</span>'); a.href = c.reader; a.style.textDecoration = 'none'; a.style.color = 'inherit'; tr.appendChild(a); }
+    for (const c of D.cards) if (c.reader) { const a = el('a', 'tile', '<b>' + esc(L(c)) + '</b><span>EN / FR</span>'); a.href = c.id === 'F' ? '#x-any-F-any' : c.reader; a.style.textDecoration = 'none'; a.style.color = 'inherit'; tr.appendChild(a); }
     for (const g of D.guides) { const all = g.groups.flatMap(x => x.items), n = k => all.filter(i => i.s === k).length; const b = el('button', 'tile', '<b>' + esc(g.guide + ' · ' + L(g)) + '</b><span>' + all.length + ' ' + t('items') + ' · ' + n('C') + ' C · ' + n('P') + ' P · ' + n('M') + ' M · ' + n('E') + ' E</span>'); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); }
     for (const [g, box] of [['stage', $('tp')], ['ops', $('to')]]) { box.textContent = ''; for (const v of V.values()) if (v.group === g) { const b = el('button', 'tile', '<b>' + esc(L(v)) + '</b><span>' + (v.ref ? esc(v.ref) + ' · ' : '') + vn.get(v.id) + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p:v.id}, true); box.appendChild(b); } }
     for (const r of roots) { const n = counts.get(r); if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(C.get(r))) + '</b><span>' + n + ' ' + t('secs') + ' · ' + C.get(r).narrower.filter(x => counts.get(x)).length + ' ' + t('topics') + '</span>'); b.type = 'button'; b.onclick = () => go({c:r}, true); ts.appendChild(b); }
@@ -451,7 +458,11 @@ function render() {
 /* ---- events ---- */
 let timer; $('q').addEventListener('input', e => { clearTimeout(timer); timer = setTimeout(() => { S.q = e.target.value; render(); }, 120); });
 $('fp').onchange = e => go({p:e.target.value}); $('fk').onchange = e => go({k:e.target.value}); $('fc').onchange = e => go({c:e.target.value});
-document.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => { lang = b.dataset.lang; store.set('aero-cave-language', lang); render(); });
+document.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => {
+  const openUnits = new Set(Array.from(document.querySelectorAll('#results details[open]'), d => d.dataset.u));
+  lang = b.dataset.lang; store.set('aero-cave-language', lang); render();
+  for (const d of document.querySelectorAll('#results details')) if (openUnits.has(d.dataset.u)) d.open = true;
+});
 let size = +store.get('aero-cave-explorer-size') || 16; const setSize = n => { size = Math.min(22, Math.max(12, n)); document.documentElement.style.setProperty('--size', size + 'px'); store.set('aero-cave-explorer-size', size); };
 setSize(size); $('fs-').onclick = () => setSize(size - 1); $('fs+').onclick = () => setSize(size + 1);
 const th = store.get('aero-cave-explorer-theme'); if (th) document.documentElement.dataset.theme = th;
