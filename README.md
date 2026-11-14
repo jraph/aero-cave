@@ -1,6 +1,6 @@
 # Aero CAVE
 
-Compact Canadian aviation study notes for **PPL · CPL (CPAER) · INRAT · multi-engine**, in English and French. Personal study aids, not flight authority.
+Compact Canadian aviation study notes for **PPL (PPAER) · CPL (CPAER) · instrument rating (INRAT) · multi-engine**, in English and French. Personal study aids, not flight authority.
 
 ## Start here
 
@@ -8,11 +8,11 @@ Compact Canadian aviation study notes for **PPL · CPL (CPAER) · INRAT · multi
 
 | Entry point | What you get |
 |---|---|
-| **Training stage** | Pre-solo → PPL written / flight test → night & OTT → CPL written / flight test → ME → INRAT → IFR flight test → first commercial seat; each stage names the TC guide it aims at |
+| **Training stage** | Pre-solo (PSTAR) → PPAER / PPL flight test → night & OTT → CPAER / CPL flight test → ME → INRAT → IFR flight test → first commercial seat; each stage names the TC guide it aims at |
 | **Phase of flight** | Weather brief, planning, departure, enroute, approach, emergencies, quick reference, Pebbles |
 | **Licence level** | PPL / CPL / IR / ME tags |
 | **Topic graph** | 92 concepts with broader / narrower / related links; one note can sit under several parents |
-| **TC guide coverage** | Item-by-item status against a TC study guide (so far: TP 12881 Meteorology) |
+| **TC guide coverage** | Item-by-item status against a TC study guide (so far: TP 12881 Meteorology for the CPAER, TP 691 for the INRAT) |
 | **Search** | Full text, accent-insensitive; **✕ Clear** (or Esc) resets every filter |
 
 Stage views and topic links are an editorial study structure, not a Transport Canada mapping.
@@ -45,7 +45,7 @@ The collection is moving from numbered cards to **concept files**: one Markdown 
 
 ## Status
 
-- **Coverage:** [CPAER_COVERAGE.md](CPAER_COVERAGE.md) (plan and gates) and [CPAER_COVERAGE_MATRIX.md](CPAER_COVERAGE_MATRIX.md) (group-level audit, 22 Oct 2026). Item-level map: [`explorer/syllabus.json`](explorer/syllabus.json), TP 12881 Meteorology = 51 covered / 33 partial / 26 missing / 1 unchecked.
+- **Coverage:** [CPAER_COVERAGE.md](CPAER_COVERAGE.md) (plan and gates) and [CPAER_COVERAGE_MATRIX.md](CPAER_COVERAGE_MATRIX.md) (group-level audit, 22 Oct 2026). Item-level map: [`explorer/syllabus.json`](explorer/syllabus.json), TP 12881 Meteorology (CPAER) = 51 covered / 33 partial / 26 missing / 1 unchecked; TP 691 (INRAT, all 208 items) = 62 covered / 83 partial / 42 missing / 21 unchecked.
 - **Review log:** [CONTENT_REVIEW.md](CONTENT_REVIEW.md) records sources, editions, what was checked and what was not. A commit date does not establish regulatory currency.
 - **Open conflicts:** see the coverage matrix for X-01 and X-03. V-02 (TAF TEMPO) is closed.
 

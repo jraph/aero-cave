@@ -1,5 +1,13 @@
 # Content review
 
+## TP 691 (INRAT) item map — 14 November 2026
+
+`explorer/syllabus.json` now maps all 208 items of TP 691E (17th ed., 2013; item list read from the TC HTML edition on 14 Nov 2026) to unit IDs: **62 Covered, 83 Partial, 42 Missing, 21 Elsewhere**. Judged by reading `kb/ifr`, `kb/met` and card 05 only; **not validated against CARs / AIM / CAP**; CAR items judged on study coverage, not legal completeness. *Elsewhere* = cards without IDs (04 air law, 06, 08, 11, 12), not item-checked. Item labels are our own short wording under the guide's order.
+
+Largest gaps: instruments and radio aids (principles of pitot-static, gyro and compass instruments; ILS / GPS principles; RMI, HSI, radar altimeter, flight director, surveillance radar, lightning detection), weather maps and prognostic charts (6), departure and arrival ATC procedures (ATIS, radar / non-radar departure, radar vectors), en route items (changes to flight plan, adherence to TAS, 1,000 on top, shuttle), Class F / special use airspace, reduced visibility operations, PEDs, situational awareness, CFIT.
+
+Naming: exam codes used consistently in the explorer and README (PPAER, CPAER, INRAT).
+
 ## IFR: merged near-duplicates, per-concept Pebbles, X-01 cycle dates — 14 November 2026
 
 **No fact re-validated against CARs / AIM / CAP**; consolidation of existing text, same rule as Meteorology (keep every distinct fact and qualifier; drop a line only when fully restated).
