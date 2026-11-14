@@ -76,3 +76,10 @@
 - `T:` wrong instinct = add power/pull. Correct = reduce asymmetric thrust and increase airspeed.
 - `T:` Vmc demo is not a macho manoeuvre; it is recognition and immediate recovery.
 ***
+#### Pebble
+<!-- id: me-vmc-asymmetric-thrust-critical-engine-pebble | also: study-pebble | level: ME -->
+
+- VMC `control speed with critical engine failed, max rudder, ≤5° bank | conditions: max power, min weight, rearmost CG, gear up, takeoff flap, failed prop windmilling | control speed, not climb speed | below Vmc: reduce live-engine power + lower nose`
+- FACTORS `Vmc↑: live power↑, aft CG, lower weight | Vmc↓: high DA (performance worse), bank into live engine | critical engine: usually left on conventional clockwise props (P-factor, slipstream, torque); counter-rotating may have none`
+- ZERO SIDESLIP `≈2–5° bank toward good engine, rudder to stop yaw, per POH | drag: windmilling prop worst, then gear, flaps, cowl flaps, sideslip`
+***

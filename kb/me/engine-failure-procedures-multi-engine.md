@@ -63,3 +63,10 @@
 - `T:` if unable climb, lower nose and land ahead/within available area. Do not pull below `Vyse` toward `Vmc`.
 - `T:` high power + low speed + dirty config = Vmc trap.
 ***
+#### Pebble
+<!-- id: me-engine-failure-procedures-multi-engine-pebble | also: study-pebble | level: ME -->
+
+- FLOW `Control–Config–Identify–Verify–Feather–Secure–Checklist | dead foot = dead engine | identify before verify; verify before feather | control first, checklist second | clean + feather + blue line`
+- OEI `pitch Vyse/Vxse | bank toward good engine | cannot climb → land under control; do not pull below Vyse toward Vmc | high power + low speed + dirty = Vmc trap | gear/flap only when landing assured | OEI go-around may be unavailable`
+- PROP `piston ME full-feather: oil pressure↑ → fine/RPM↑; oil loss → feather; architecture varies | windmilling drag↑, feather drag↓ | restarting a damaged/fire engine can make it worse`
+***

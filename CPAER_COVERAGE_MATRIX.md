@@ -297,7 +297,7 @@ Numbers below refer to the named TP group. Evidence supports only the specific s
 [met-carb]: kb/met/carburettor-icing.md#carburetor-icing
 [met-ts]: kb/met/thunderstorms.md#thunderstorms
 [met-micro]: kb/met/turbulence-wind-shear.md#microburst--llws
-[vfr-cycle]: kb/study/sources-review-status.md#current-publication-cycle--card-01-flight-theory--vfr-knowledge
+[vfr-cycle]: kb/nav/publications-cfs-cap-notam-currency.md#publication-currency
 [vfr-doc]: kb/law/airworthiness-documents-maintenance.md#docs--legal
 [vfr-nav]: kb/nav/pilot-navigation-dead-reckoning.md#navigation
 [vfr-cfs]: kb/nav/publications-cfs-cap-notam-currency.md#cfs--aerodrome-scan

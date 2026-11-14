@@ -5,10 +5,10 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {spawnSync} = require('node:child_process');
 const root = path.join(__dirname, '..');
-const html = fs.readFileSync(path.join(root, 'explorer.html'), 'utf8');
+const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const data = JSON.parse(/<script id="data" type="application\/json">([\s\S]*?)<\/script>/.exec(html)[1]);
 
-test('explorer.html matches the current cards and ontology', () => {
+test('index.html matches the current cards, concept files and ontology', () => {
   const r = spawnSync('python3', ['explorer/build_explorer.py', '--check'], {cwd: root, encoding: 'utf8'});
   if (r.error) return; // python unavailable: skip
   assert.equal(r.status, 0, r.stderr || r.stdout);
@@ -25,7 +25,7 @@ test('every section has a valid card, path and concept; every concept link resol
 test('guide items point at existing stable unit IDs; ID comments never leak into content', () => {
   const units = new Map(data.sections.filter(s => s.u).map(s => [s.u, s]));
   assert.equal(units.size, data.sections.filter(s => s.u).length, 'duplicate unit id');
-  assert.ok(data.sections.filter(s => data.cards.find(c => c.id === s.card).kb || ['02','05','07','08','11','12'].includes(s.card)).every(s => s.u || s.h === 'Overview'));
+  assert.ok(data.sections.every(s => s.u), 'every unit has a stable ID');
   assert.equal(data.sections.some(s => s.card === '16'), false, 'card 16 is retired');
   for (const c of data.cards.filter(c => c.kb)) for (const f of Object.keys(c.files)) { const us = data.sections.filter(x => x.f === f), n = us.filter(x => x.h === 'Pebble').length; assert.ok(n <= 1, f + ': at most one Pebble'); if (n) assert.equal(us[us.length - 1].h, 'Pebble', f + ': Pebble last'); }
   for (const s of data.sections) assert.equal(s.md.includes('<!-- id:'), false, s.id);

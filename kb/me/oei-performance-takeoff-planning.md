@@ -73,3 +73,11 @@
 - Aft CG worsens Vmc/control. Light weight can worsen Vmc but improves climb; heavy weight may improve Vmc but destroy climb.
 - `T:` Vmc certification worst case is light/aft; performance worst case is heavy/hot/high/dirty.
 ***
+#### Pebble
+<!-- id: me-oei-performance-takeoff-planning-pebble | also: study-pebble | level: CPL ME -->
+
+- SPEEDS `Vmc = min control speed, critical engine failed (red line) | Vsse = safe intentional OEI; Vmc + 10 if POH none | Vyse = OEI best rate, blue line | Vxse = OEI best angle`
+- OEI CLIMB `may be zero or negative | single-engine service ceiling may be below terrain | above Vmc ≠ climb`
+- TAKEOFF `accelerate-stop = accelerate, reject, stop | accelerate-go = continue and clear obstacle OEI | V1/V2 transport-category concepts ≠ automatic for light twins; AFM wins | brief: stop below reject speed/runway remaining; airborne no runway → control, clean, climb if able, land ahead if not`
+- W&B `Vmc worst case light/aft; performance worst case heavy/hot/high/dirty`
+***

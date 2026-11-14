@@ -14,3 +14,8 @@
 - `M:` burn `6 gph` ⇒ `0.1 gal/min`; burn `9 gph` ⇒ `0.15 gal/min`; burn `12 gph` ⇒ `0.2 gal/min`.
 - `T:` IFR reserve starts after required destination/alternate logic, not after takeoff.
 ***
+#### Pebble
+<!-- id: agk-fuel-fuel-systems-pebble | also: study-pebble | level: PPL CPL IR -->
+
+- FUEL `fuel = time(h) × burn | time available = usable fuel / burn | 6 gph = 0.1 gal/min, 9 = 0.15, 12 = 0.2 | IFR reserve starts after destination/alternate logic, not after takeoff`
+***

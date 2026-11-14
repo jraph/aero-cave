@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Build explorer.html: Aero CAVE knowledge explorer (offline, single file).
+"""Build index.html: the Aero CAVE explorer and landing page (offline, single file).
 
 Reads explorer/ontology.json + the Markdown cards, splits cards into sections,
 maps each section to ontology concepts and licence paths, and embeds everything
-into explorer/template.html -> explorer.html.
+into explorer/template.html -> index.html.
 
-  python3 explorer/build_explorer.py            # write explorer.html
-  python3 explorer/build_explorer.py --check    # fail if explorer.html is stale
+  python3 explorer/build_explorer.py            # write index.html
+  python3 explorer/build_explorer.py --check    # fail if index.html is stale
   python3 explorer/build_explorer.py --report   # print mapping report
 
 Markdown stays the editorial source: re-run after any card or ontology change.
@@ -32,7 +32,7 @@ def attrs(raw):
             k, v = part.split(":", 1)
             out[k.strip()] = [x for x in re.split(r"[,\s]+", v.strip()) if x]
     return out
-OUT = ROOT / "explorer.html"
+OUT = ROOT / "index.html"
 HEAD = re.compile(r"^(#{1,4})\s+(.*\S)\s*$")
 BOLD = re.compile(r"^\*\*([^*]+)\*\*$")
 
@@ -104,59 +104,30 @@ def build():
                 errors.append(f"{c['id']}: unknown concept {ref}")
         if c["id"] in c["broader"]:
             errors.append(f"{c['id']}: broader loop")
-    matchers = [(c["id"], [parse_match(m) for m in c["match"]]) for c in concepts]
-    rules = [(set(r["cards"].split(",")), re.compile(r["re"], re.I), r["paths"]) for r in ont["pathRules"]]
-
-    sections, cards, report, uids, stubs = [], [], [], set(), []
+    sections, cards, uids, stubs = [], [], set(), []
     for cid, card in ont["cards"].items():
-        for p in card["paths"]:
-            if p not in pathset:
-                errors.append(f"card {cid}: unknown path {p}")
         text = (ROOT / card["file"]).read_text(encoding="utf-8")
         title, secs = split_card(text, card.get("boldHeadings", False))
-        if card.get("retired"):
-            for head, anchor, body in secs:
-                st = STUB.match(body)
-                if st:
-                    stubs.append({"card": cid, "h": head, "to": st.group(1), "a": st.group(2), "from": card["file"]})
-                elif anchor is not None:
-                    errors.append(f"retired card {cid} still has content under '{head}'")
-            continue
         cards.append({"id": cid, "en": card["en"], "fr": card["fr"], "file": card["file"],
                       "reader": card.get("reader"), "title": title})
         for i, (head, anchor, body) in enumerate(secs):
-            st = STUB.match(body)
-            if st:
-                stubs.append({"card": cid, "h": head, "to": st.group(1), "a": st.group(2), "from": card["file"]})
+            if head == "Overview" and anchor is None:
                 continue
-            cs = []
-            for conc, ms in matchers:
-                for only, rx in ms:
-                    if (only is None or cid in only) and rx.search(head):
-                        cs.append(conc)
-                        break
-            specific = [c for c in cs if c not in ("study-formulas", "study-abbrev", "type-c150")]
-            if not specific:
-                cs += [f for f in card["fallback"] if f not in cs]
-                report.append(f"fallback  {cid} · {head}")
-            paths = card["paths"]
-            for only, rx, ps in rules:
-                if cid in only and rx.search(head):
-                    paths = ps
-                    break
-            sec = {"id": f"{cid}-{i}", "card": cid, "h": head, "a": anchor, "c": cs, "p": paths}
             m = UID.match(body)
-            if m:
-                if m.group(1) in uids:
-                    errors.append(f"duplicate unit id {m.group(1)}")
-                uids.add(m.group(1))
-                sec["u"] = m.group(1)
-                body = body[m.end():].strip()
-            elif "<!-- id:" in body:
-                errors.append(f"{cid} · {head}: unit id must be the first line under the heading")
-            sec["md"] = body
-            sections.append(sec)
-
+            if not m:
+                errors.append(f"{cid} · {head}: unit id comment required under the heading")
+                continue
+            a = attrs(m.group(2))
+            cs, ps = a.get("concepts", []), a.get("level", [])
+            if m.group(1) in uids:
+                errors.append(f"duplicate unit id {m.group(1)}")
+            uids.add(m.group(1))
+            if not cs or any(c not in idset for c in cs):
+                errors.append(f"{cid} · {head}: missing or unknown concepts {cs}")
+            if not ps or any(p not in pathset for p in ps):
+                errors.append(f"{cid} · {head}: missing or unknown level")
+            sections.append({"id": f"{cid}-{i}", "card": cid, "h": head, "a": anchor, "c": cs, "p": ps,
+                             "u": m.group(1), "md": body[m.end():].strip()})
     for kid, kb in ont.get("kb", {}).items():
         files = sorted(p for p in (ROOT / kb["dir"]).glob("*.md") if p.name != "README.md")
         entry = {"id": kid, "en": kb["en"], "fr": kb["fr"], "file": kb["dir"] + "/README.md", "reader": None,
@@ -243,14 +214,14 @@ def build():
         "stubs": len(stubs),
         "paths": ont["paths"],
         "views": ont["views"],
-        "concepts": [{k: c[k] for k in ("id", "en", "fr", "broader", "related")} for c in concepts],
+        "concepts": [{k: c.get(k, []) for k in ("id", "en", "fr", "broader", "related", "alt")} for c in concepts],
         "cards": cards,
         "sections": sections,
     }
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     stamp = hashlib.sha256(payload.encode("utf-8")).hexdigest()[:12]
     html = TPL.read_text(encoding="utf-8").replace("/*__DATA__*/null", payload).replace("__BUILD__", stamp)
-    return html, data, report
+    return html, data, []
 
 
 def main():
@@ -260,14 +231,13 @@ def main():
         n = Counter(c for s in data["sections"] for c in s["c"])
         for c in data["concepts"]:
             print(f"{n[c['id']]:4d}  {c['id']:14s} {c['en']}")
-        print("\n".join(report))
     if "--check" in sys.argv:
         if not OUT.exists() or OUT.read_text(encoding="utf-8") != html:
-            sys.exit("explorer.html is stale: run python3 explorer/build_explorer.py")
-        print("explorer.html is up to date")
+            sys.exit("index.html is stale: run python3 explorer/build_explorer.py")
+        print("index.html is up to date")
         return
     OUT.write_text(html, encoding="utf-8")
-    print(f"explorer.html: {len(data['sections'])} sections, {len(data['concepts'])} concepts, "
+    print(f"index.html: {len(data['sections'])} sections, {len(data['concepts'])} concepts, "
           f"{len(data['cards'])} cards, {len(html)//1024} KiB")
 
 

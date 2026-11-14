@@ -5,11 +5,16 @@
 
 ***
 #### True / magnetic / compass
-<!-- id: nav-true-magnetic-compass | from: 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: nav-true-magnetic-compass | from: 01, 06 | also: study-formulas | level: PPL CPL IR -->
 
 - `F:` `TC ± WCA = TH`; `TH ± variation = MH`; `MH ± deviation = CH`.
 - Alternatively convert TC→MC, then apply WCA to obtain MH before deviation. Never substitute magnetic course for magnetic heading.
 - `M:` true→mag: east is least, west is best.
 - `M:` TVMDC = True Virgins Make Dull Company; reverse = Can Dead Men Vote Twice.
-- `T:` track/course/heading/bearing are different. Track = ground path; heading = nose.
+- `T:` track/course/heading/bearing are different. Track = ground path; heading = nose. Bearing = direction to object; course = planned line.
+***
+#### Pebble
+<!-- id: nav-headings-true-magnetic-compass-pebble | also: study-pebble | level: PPL CPL IR -->
+
+- HEADINGS `TC ± WCA = TH | TH ± variation = MH | MH ± deviation = CH | east is least, west is best | TVMDC | track = ground path, heading = nose, bearing = direction to object, course = planned line | never substitute magnetic course for magnetic heading`
 ***

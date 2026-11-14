@@ -13,3 +13,8 @@
 - `Approach category:` use published `VREF`, or `1.3 VSO` if none is specified, at **maximum certificated landing weight**. Do not lower the category because today’s landing weight is lower. `[TC AIM 2026-1 RAC 9.21]`
 - `T:` a wind/gust additive changes the operational approach target (`VAPP`), not the underlying `VREF`. Aircraft procedures and limitations govern.
 ***
+#### Pebble
+<!-- id: agk-v-speeds-airspeed-limits-pebble | also: study-pebble | level: CPL IR ME -->
+
+- VREF `POH/AFM value; fallback 1.3 × VSO | weight: VREF₂ ≈ VREF₁ × √(W₂/W₁) | approach category at maximum certificated landing weight | gust additive changes VAPP, not VREF`
+***

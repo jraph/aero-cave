@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aero CAVE · Knowledge explorer</title>
+<title>Aero CAVE</title>
 <link rel="manifest" href="./manifest.json"><link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
 <meta name="theme-color" content="#f4f7f8" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#111c24" media="(prefers-color-scheme: dark)">
 <style>
@@ -103,10 +103,10 @@ footer a{color:var(--accent)}
 </style></head>
 <body>
 <header class="wrap">
-  <div class="eyebrow">AERO CAVE · PROTOTYPE</div>
+  <div class="eyebrow">AERO CAVE</div>
   <h1 data-t="title"></h1>
   <div class="top">
-    <a href="https://jraph.github.io/aero-cave/" data-t="home"></a><span class="sp"></span>
+    <span class="sp"></span>
     <button class="btn" data-lang="en">EN</button><button class="btn" data-lang="fr">FR</button><button class="btn" data-lang="both">EN/FR</button>
     <button class="btn" id="fs-">A−</button><button class="btn" id="fs+">A+</button><button class="btn" id="theme" aria-label="Theme / Thème">◐</button>
   </div>
@@ -122,6 +122,7 @@ footer a{color:var(--accent)}
     <h2 data-t="hStage"></h2><div class="tiles" id="tp"></div>
     <h2 data-t="hOps"></h2><div class="tiles" id="to"></div>
     <h2 data-t="hGuide"></h2><div class="tiles" id="tg"></div>
+    <h2 data-t="hRead"></h2><div class="tiles" id="tr"></div>
     <h2 data-t="hSubj"></h2><div class="tiles" id="ts"></div>
     <p class="note" data-t="note"></p>
   </div>
@@ -138,12 +139,12 @@ footer a{color:var(--accent)}
 'use strict';
 const D = JSON.parse(document.getElementById('data').textContent);
 const $ = id => document.getElementById(id);
-const REPO = 'https://github.com/jraph/aero-cave/blob/main/', SITE = 'https://jraph.github.io/aero-cave/';
+const REPO = 'https://github.com/jraph/aero-cave/blob/main/';
 const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 const norm = t => t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const T = {
-  title:['Knowledge explorer','Explorateur de connaissances'], home:['Aero CAVE · Home','Aero CAVE · Accueil'],
+  title:['Canadian pilot study notes','Notes d’étude pour pilotes canadiens'], hRead:['Bilingual readers','Lecteurs bilingues'],
   search:['Search topics, rules, codes…','Chercher thèmes, règles, codes…'],
   allP:['All views','Toutes les vues'], gLevel:['Licence level','Niveau de licence'], gStage:['Training stage','Étape de formation'], gOps:['Quick access by phase of flight','Accès rapide par phase de vol'], hStage:['Where are you in training?','Où en êtes-vous dans la formation ?'], hOps:['Quick access by phase of flight','Accès rapide par phase de vol'], aimed:['Aimed at','Vise'], approx:['topic-based selection, not an item-by-item mapping','sélection par thème, non une correspondance point par point'], narrow:['Narrow by subject','Préciser par sujet'], opsNote:['Study reference, not a checklist: the POH/AFM and current publications govern.','Référence d’étude, non une liste de vérifications : le POH/AFM et les publications en vigueur prévalent.'], allK:['All cards','Toutes les fiches'], allC:['All topics','Tous les thèmes'],
   hSubj:['Or start from a subject','Ou partir d’un sujet'],
@@ -154,7 +155,7 @@ const T = {
   also:['Filed under','Classé sous'], open:['Open card ↗','Ouvrir la fiche ↗'], reader:['Reader ↗','Lecteur ↗'],
   none:['Nothing matches. Remove a filter or shorten the search.','Aucun résultat. Retirez un filtre ou raccourcissez la recherche.'],
   disc:['Study aid only. Use current official publications and the aircraft flight manual for operations.','Aide à l’étude seulement. Utilisez les publications officielles en vigueur et le manuel de vol pour l’exploitation.'],
-  hGuide:['TC guide coverage (pilot)','Couverture des guides TC (pilote)'], items:['items','points'], stC:['Covered','Couvert'], stP:['Partial','Partiel'], stM:['Missing','Manquant'], stE:['Elsewhere, unchecked','Ailleurs, non vérifié'], back:['← Explorer','← Explorateur'], reviewed:['Reviewed','Révisé'], official:['Official guide ↗','Guide officiel ↗'], own:['Item labels are our own short wording; the guide text is authoritative.','Les libellés sont notre formulation abrégée; le texte du guide fait foi.'],
+  hGuide:['TC guide coverage','Couverture des guides TC'], items:['items','points'], stC:['Covered','Couvert'], stP:['Partial','Partiel'], stM:['Missing','Manquant'], stE:['Elsewhere, unchecked','Ailleurs, non vérifié'], back:['← Explorer','← Explorateur'], reviewed:['Reviewed','Révisé'], official:['Official guide ↗','Guide officiel ↗'], own:['Item labels are our own short wording; the guide text is authoritative.','Les libellés sont notre formulation abrégée; le texte du guide fait foi.'],
   clr:['✕ Clear','✕ Effacer'],
   expand:['Expand all','Tout ouvrir'], collapse:['Collapse all','Tout fermer']
 };
@@ -176,7 +177,7 @@ for (const p of D.paths) V.set(p.id, {id:p.id, group:'level', en:p.en, fr:p.fr, 
 for (const v of D.views) { const set = v.concepts ? new Set() : null; if (set) for (const id of v.concepts) for (const x of getDesc(id)) set.add(x); V.set(v.id, Object.assign({}, v, {set, rx: v.re ? new RegExp(v.re, 'i') : null})); }
 const inView = (s, v) => (!v.level || s.p.includes(v.level)) && ((!v.set && !v.rx) || (v.set && s.c.some(x => v.set.has(x))) || (v.rx && v.rx.test(s.h)));
 for (const s of D.sections) {
-  s.t = norm(s.h + ' ' + s.md + ' ' + s.c.map(id => C.get(id).en + ' ' + C.get(id).fr).join(' '));
+  s.t = norm(s.h + ' ' + s.md + ' ' + s.c.map(id => C.get(id).en + ' ' + C.get(id).fr + ' ' + (C.get(id).alt || []).join(' ')).join(' '));
   s.hn = norm(s.h);
 }
 
@@ -367,7 +368,7 @@ function sectionEl(s) {
       const byG = new Map(); for (const r of refs) { if (!byG.has(r.g.id)) byG.set(r.g.id, []); byG.get(r.g.id).push(r.grp.code + ' ' + r.it.n); }
       for (const [gid, list] of byG) { const c = el('button', 'chip b', esc(G.get(gid).guide + ': ' + list.join(', '))); c.type = 'button'; c.onclick = () => go({g:gid}, true); f2.appendChild(c); }
       b.appendChild(f2); }
-    if (card.reader) { const r = el('a', '', esc(t('reader'))); r.href = SITE + card.reader; f.appendChild(r); }
+    if (card.reader) { const r = el('a', '', esc(t('reader'))); r.href = card.reader; f.appendChild(r); }
     const a = el('a', '', esc(t('open'))); a.href = REPO + (s.f || card.file) + (s.a ? '#' + s.a : ''); a.target = '_blank'; a.rel = 'noopener'; if (card.reader) a.style.marginLeft = '0'; f.appendChild(a);
     b.insertBefore(f, b.querySelector('.foot + .foot') || null); d.appendChild(b);
   });
@@ -417,7 +418,8 @@ function render() {
   const browsing = !S.c && !S.k && !tokens.length && !S.p;
   $('home').hidden = !browsing;
   if (browsing) {
-    const ts = $('ts'), tg = $('tg'); ts.textContent = tg.textContent = '';
+    const ts = $('ts'), tg = $('tg'), tr = $('tr'); ts.textContent = tg.textContent = tr.textContent = '';
+    for (const c of D.cards) if (c.reader) { const a = el('a', 'tile', '<b>' + esc(L(c)) + '</b><span>EN / FR</span>'); a.href = c.reader; a.style.textDecoration = 'none'; a.style.color = 'inherit'; tr.appendChild(a); }
     for (const g of D.guides) { const all = g.groups.flatMap(x => x.items), n = k => all.filter(i => i.s === k).length; const b = el('button', 'tile', '<b>' + esc(g.guide + ' · ' + L(g)) + '</b><span>' + all.length + ' ' + t('items') + ' · ' + n('C') + ' C · ' + n('P') + ' P · ' + n('M') + ' M · ' + n('E') + ' E</span>'); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); }
     for (const [g, box] of [['stage', $('tp')], ['ops', $('to')]]) { box.textContent = ''; for (const v of V.values()) if (v.group === g) { const b = el('button', 'tile', '<b>' + esc(L(v)) + '</b><span>' + (v.ref ? esc(v.ref) + ' · ' : '') + vn.get(v.id) + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p:v.id}, true); box.appendChild(b); } }
     for (const r of roots) { const n = counts.get(r); if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(C.get(r))) + '</b><span>' + n + ' ' + t('secs') + ' · ' + C.get(r).narrower.filter(x => counts.get(x)).length + ' ' + t('topics') + '</span>'); b.type = 'button'; b.onclick = () => go({c:r}, true); ts.appendChild(b); }

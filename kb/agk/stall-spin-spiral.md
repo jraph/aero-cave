@@ -21,3 +21,9 @@
 - `F weight:` approximate `VA2≈VA1×√(W2/W1)` if same config/load-factor basis; lighter ⇒ lower speed.
 - `T:` approved POH/AFM `VA` and weight schedule win; `VA` does **not** guarantee protection against multiple/abrupt control inputs or all turbulence.
 ***
+#### Pebble
+<!-- id: agk-stall-spin-spiral-pebble | also: study-pebble | level: PPL CPL IR -->
+
+- LOAD FACTOR `coordinated level turn n = 1/cos(bank) | Vs_bank = Vs × √n | 45° ≈ 1.41 g, stall ×1.19 | 60° = 2 g, stall ×1.41`
+- VA `VA_est ≈ VS(clean) × √n_limit; +3.8 g → ≈1.95 × VS1, not guaranteed published VA | lighter → lower VA | VS0 ≠ VS1 | VA does not protect against multiple/abrupt inputs`
+***

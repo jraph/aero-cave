@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Aero CAVE",
   "short_name": "Aero CAVE",
-  "description": "Canadian aviation study readers · Révisions aéronautiques canadiennes",
+  "description": "Canadian pilot study notes · Notes d’étude pour pilotes canadiens",
   "lang": "en-CA",
   "start_url": "./index.html",
   "scope": "./",
@@ -24,11 +24,6 @@
     }
   ],
   "shortcuts": [
-    {
-      "name": "Knowledge explorer · Explorateur",
-      "short_name": "Explorer",
-      "url": "./explorer.html"
-    },
     {
       "name": "CPAER · Formulas / Formules",
       "short_name": "CPAER",

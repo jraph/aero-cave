@@ -1,6 +1,4 @@
-# IFR & INRAT — concept files / IFR et INRAT — fiches par concept
-
-One file per ontology concept (`explorer/ontology.json`), same format as [`kb/met/`](../met/README.md): each `####` section is a unit with a permanent ID; `also:` lists its other concepts.
+# IFR & INRAT
 
 | Concept file | Concept | Units |
 |---|---|---|
@@ -20,20 +18,3 @@ One file per ontology concept (`explorer/ontology.json`), same format as [`kb/me
 | [RASS / remote altimeter setting / RASS / calage altimétrique éloigné](rass.md) | `ifr-rass` | 2 |
 | [IFR — exam method & traps / IFR — méthode d’examen et pièges](recall.md) | `ifr` | 5 |
 | [IFR rules, privileges & recency / Règles, privilèges et récence IFR](rules-privileges.md) | `ifr` | 6 |
-
-Flown procedures and QRCs stay in numbered cards: [11 · CAP plate reading](../../cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md), [12 · IFR procedures](../../cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md).
-
-## Provenance / Provenance
-
-Units moved on 14 November 2026 from cards 09 (IFR knowledge) and 10 (INRAT knowledge) with their text unchanged (`from:` on each unit); both cards were then deleted. Units identical in both cards are kept once. Thirteen near-duplicate pairs were then merged into single units (`from: 09, 10`), keeping every distinct fact and qualifier; each concept file ends with a `#### Pebble` recapping only that file. Cycle-dated lines are review-dated (14 Nov 2026). Nothing was re-validated against CARs, AIM or CAP. The original card headers still apply:
-
-- Card 09 (`from: 09`):
-  - `SEPTEMBER CPAER REVIEW: retained reference, not freshly revalidated` | use exact aircraft/current operational sources
-  - `R` rule | `P` proc | `T` trap | `M` memory | `!` safety | Canada IFR study; current CAP/NOTAM/POH/SOP win
-  - `RELEASE:` `OPS/EXAM-REF PROVISIONAL` | `CANONICAL SOURCE:` `ifr_knowledge_core_av_cave_v0_2.md` | `NOT FLIGHT AUTHORITY`
-- Card 10 (`from: 10`):
-  - `SEPTEMBER CPAER REVIEW: retained reference, not freshly revalidated` | use exact aircraft/current operational sources
-  - `R` rule | `F` formula | `P` procedure | `T` trap | `M` memory | `!` safety | `?` verify | Canada INRAT exam prep
-  - `RELEASE:` `EXAM/CYCLE-REF PROVISIONAL` | `CANONICAL SOURCE:` `inrat_knowledge_core_av_cave_v0_3.md` | `NOT FLIGHT AUTHORITY`
-
-Units tagged `from: 01 / 03 / 04 / 06 / 13` were added on 14 November 2026 when the remaining knowledge cards were retired; they are unmerged and the file's Pebble does not yet recap them.

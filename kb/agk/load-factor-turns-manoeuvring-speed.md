@@ -13,3 +13,8 @@
 - `M:` at `120 kt`, rate-one bank ≈ `19°`; at `90 kt`, ≈`16°`.
 - `T:` high TAS needs more bank for standard rate.
 ***
+#### Pebble
+<!-- id: agk-load-factor-turns-manoeuvring-speed-pebble | also: study-pebble | level: PPL CPL IR -->
+
+- RATE ONE `3°/s, 360° in 2 min | bank ≈ TAS/10 + 7 | 120 kt ≈ 19°, 90 kt ≈ 16° | higher TAS needs more bank`
+***

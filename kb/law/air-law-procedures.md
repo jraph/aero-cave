@@ -4,6 +4,12 @@
 [Index](README.md) · concept `law` · unit IDs are stable: never rename one.
 
 ***
+#### Sources of authority
+<!-- id: ref-source-authority-c04 | from: 04| level: PPL CPL IR -->
+
+- `A1:` Act/CARs/incorporated Standards = law; `A2:` current AIP/CFS/CAP/NOTAM = operational data; AIM/TP/FTM = guidance.
+- `T:` never rely on expired CAR/CFS/CAP copies.
+***
 #### High-yield traps
 <!-- id: law-high-yield-traps | from: 04 | also: study-traps | level: PPL CPL -->
 

@@ -84,7 +84,7 @@ Do not call a topic Covered from a heading alone. Verify actual content against 
 
 Findings: HF physiology and instrument principles are thin despite useful failure/procedure reminders; electric propulsion, detailed EFB hazards, medevac fatigue and weather-chart interpretation need attention. Internal publication-currency and TEMPO wording conflicts, plus an ambiguous unusual-attitude instruction, are recorded for comparison before correction.
 
-**Historical, before the concept-file migration (14 Nov 2026):** cards 16 and 05 sections carry stable IDs; `explorer/syllabus.json` maps all 111 TP 12881 Meteorology items (after adding card 05: 51 C / 33 P / 26 M / 1 elsewhere-unchecked) and is browsable in the [explorer](https://jraph.github.io/aero-cave/explorer.html#g-tp12881-met). Details in [CONTENT_REVIEW](CONTENT_REVIEW.md).
+**Historical, before the concept-file migration (14 Nov 2026):** cards 16 and 05 sections carry stable IDs; `explorer/syllabus.json` maps all 111 TP 12881 Meteorology items (after adding card 05: 51 C / 33 P / 26 M / 1 elsewhere-unchecked) and is browsable in the [explorer](https://jraph.github.io/aero-cave/#g-tp12881-met). Details in [CONTENT_REVIEW](CONTENT_REVIEW.md).
 
 **14 Nov 2026 — Meteorology concept-file pilot (branch `feat/kb-met-concepts`):** by owner decision, a Gate 4-style pilot ran for Meteorology ahead of Gate 1 closure for other subjects. 54 units from cards 16 and 05 moved to 14 files in `kb/met/`; text identical (machine-compared per unit ID), old headings kept as pointers, card 05 keeps its 12 flow/gate sections. Then eight overlapping units merged, per-concept Pebbles added, card 16 deleted and pointers removed (owner: no backward compatibility needed at this stage). Other subjects untouched.
 

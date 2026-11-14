@@ -6,6 +6,7 @@
 **LEGEND / LÉGENDE:** PIC = pilot-in-command / commandant de bord (CDB); SIC = second-in-command / copilote; PPC = pilot proficiency check / contrôle de la compétence du pilote; CC / VC = competency check / vérification de compétence; SE = single engine / monomoteur; ME = multi-engine / multimoteur; HP = high performance / hautes performances; IR = instrument rating / qualification IFR; TT = total time / heures totales. Validity in months (mo) / validité en mois.
 
 ## OPERATE → SEAT → CHECK / EXPLOITER → SIÈGE → CONTRÔLE
+<!-- id: q17-operate-seat-check-exploiter-si-ge-contr-le | concepts: law-type, law-commercial | level: CPL IR -->
 
 | CAR / Opération | Aircraft applicability · Aéronefs (kg/lb · pax) | Examples · Exemples | PIC / SIC | Licence | Class / Rating · Classe / Qualif. | PPC / CC · PPC / VC | Validity / Validité | Ground / Sol | Condition / Précision | CAR |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -29,12 +30,14 @@
 **Aircraft classification / Classement des aéronefs:** MCTOW = maximum certificated takeoff weight / masse maximale homologuée au décollage (MMHD). MZFW = maximum zero fuel weight / masse maximale sans carburant. **704 turbojet uses MZFW, not MCTOW.** Seating limits exclude pilot seats except where the rule expressly uses type-certificate passenger authorization; 702 aerial work and 604 private operations are defined by purpose/equipment, not one shared seat cut-off. §604.02 applicability is broader than §604.03 registration. Ministerial 703/704/705 authorizations and helicopter-specific conditions may apply. / **704 turboréacteur : masse maxi sans carburant, non masse au décollage.**
 
 ### 703 SINGLE-PILOT IFR + PASSENGERS / IFR MONOPILOTE + PASSAGERS — STD 723.86
+<!-- id: q17-703-single-pilot-ifr-passengers-ifr-monopilo | concepts: law-type, law-commercial | level: CPL IR -->
 
 **Authorized exception to two-pilot IFR / Dispense autorisée de copilote IFR.** In addition to 703 ME PIC **PPC 12 mo**, the PIC needs **1,000 h total**, **100 h ME if operating ME**, **50 h simulated or actual flight in IMC**, **50 h on aeroplane type**. PPC must assess single-pilot procedures including autopilot; for pressurized aeroplanes, **FL250 maximum**. These thresholds do **not** apply to every 703 flight. / En plus du **PPC CDB multimoteur 12 mois** : **1 000 h total**, **100 h multimoteur si appareil ME**, **50 h de vol en IMC réel ou simulé**, **50 h sur type**; PPC monopilote et procédures pilote automatique; avion pressurisé **FL250 max**. **Pas** un minimum universel pour tous les vols 703.
 
 **M:** `703 SP-IFR PAX = 1000 TT / 100 ME / 50 IMC / 50 TYPE + PPC`. [CASS 723.86](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/canadian-aviation-regulations-sor-96-433/standards/standard-723-air-taxi-aeroplanes-canadian-aviation-regulations-cars)
 
 ## LICENCE → TYPE / LICENCE → TYPE
+<!-- id: q17-licence-type-licence-type | concepts: law-lic, law-type | level: CPL IR -->
 
 | Qualification | English | Français |
 |---|---|---|
@@ -47,6 +50,7 @@
 | Two-crew type / Type 2 pilotes | ≥250 h aeroplane (integrated-course exception); type training; IATRA ≥70% within 24 mo OR qualifying SAMRA+SARON/ATPL route; PPC/check for type | ≥250 h avion (exception cours intégré); formation type; IATRA ≥70 % dans les 24 mois OU voie SAMRA+SARON/ATPL admissible; PPC/vérif. du type |
 
 ## RECENCY CLOCKS / HORLOGES DE RÉCENCE
+<!-- id: q17-recency-clocks-horloges-de-r-cence | concepts: law-recency | level: CPL IR -->
 
 | Clock / Exigence | English | Français | CAR |
 |---|---|---|---|
@@ -61,6 +65,7 @@
 | Cat 1 commercial / Médical cat. 1 | 12 months; 6 if age ≥40 single-pilot with passengers or age ≥60 | 12 mois; 6 si ≥40 ans monopilote avec passagers ou ≥60 ans | 404.04 |
 
 ## EXAM TRAPS / PIÈGES D'EXAMEN
+<!-- id: q17-exam-traps-pi-ges-d-examen | concepts: law-type, study-pebble, study-traps | level: CPL IR -->
 
 | Trap / Piège | English | Français |
 |---|---|---|
@@ -74,6 +79,7 @@
 **M · PEBBLE:** `PPL45 → CPL200 → ATPL1500 | IR 50 XC PIC / 40 inst | HP type200 / 2crew type250 + IATRA/SAMRA-SARON | 604 CC24 / ground12 | 702 CC12 or PPC24 (IFR + non-crew PPC) | 703 SE PIC CC12*; ME PIC PPC12; ME SIC PPC/CC12 | 704 PPC12 | 705 PPC6 (exceptions) | general 5y/24m/6m | IFR 24m + 6 approaches/6m after month6`.
 
 ## SOURCES / SOURCES
+<!-- id: q17-sources-sources | concepts: study-src | level: CPL IR -->
 
 - [Air Tractor AT-502B agricultural aircraft](https://airtractor.com/aircraft/)
 - [De Havilland Twin Otter 19-seat specifications](https://dehavilland.com/twin-otter/)

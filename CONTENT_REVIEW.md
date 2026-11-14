@@ -1,5 +1,15 @@
 # Content review
 
+## Consolidation completed; ontology and landing page — 14 November 2026
+
+**Navigation, aeronautics, multi-engine consolidated** (no fact added, none re-validated): `nav-navigation` (01) and `nav-nav-met-systems` (03) retired into `nav-diversion-lost` (new, both divert lines combined), `nav-true-magnetic-compass`, `nav-1-in-60-rule` and `agk-systems-oral-list` (new); the card 03 MET summary line dropped as restated in `kb/met`. `agk-performance-w-b` (01) and `-c03` (03) retired into `agk-weight-balance` and `agk-performance-factors` (new). `agk-human-emergency` / `agk-emerg-human` regrouped as “Human factors / ADM” and “Emergency priorities” (duplicate CO lines combined). 18 per-concept Pebbles added.
+
+**Pebble architecture:** one `#### Pebble` per concept file, nothing else. `kb/study/` removed: whole-card Pebbles (01, 03, 06, 13) and the ME memory atoms retired into the per-concept Pebbles; three units with real content moved (`ref-source-authority-c04` → `kb/law/air-law-procedures.md`, `ref-current-publication-cycle-c01` → `kb/nav/publications…`, `ref-source-rating-frame-c13` → `kb/me/me-training…`), each minus its historical-review sentence. Units added to `kb/met` / `kb/ifr` from cards 01 / 06 remain as separate units.
+
+**Ontology:** heading-regex matching, path rules and per-card fallbacks removed. Every unit (cards included: 17, formulas and abbreviations Markdown gained ID comments) now declares its concepts and level in its ID comment; the build output was identical before and after (528 units: text, concepts, levels). Concepts gained `alt` search terms. Card header blocks (legend / release lines) are no longer indexed.
+
+**Landing page:** `index.html` is now the generated explorer with a readers row; `explorer.html` redirects to it. READMEs reduced to indexes and format; provenance stays in this log.
+
 ## Air law consolidated — 14 November 2026
 
 `kb/law`: six overlapping units retired, 14 per-concept Pebbles added, card 04's whole-card Pebble retired from `kb/study`.

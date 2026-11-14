@@ -4,6 +4,14 @@
 [Index](README.md) · concept `agk-perfcalc` · unit IDs are stable: never rename one.
 
 ***
+#### Performance factors
+<!-- id: agk-performance-factors | from: 01, 03 | also: agk-perf, agk-vspeeds | level: PPL CPL -->
+
+- Vx=altitude/distance. Vy=altitude/time. Best glide=max distance no power. Min sink=max time.
+- Calculate, don’t guess. TO/LDG: weight/temp/pressure/elev/wind/slope/surface/config/technique.
+- `M:` hot-high-heavy-humid-tailwind-soft-uphill TO = bad stack.
+- Headwind helps; tailwind hurts big: small value, large distance penalty. grass/soft/wet/snow roll↑ braking↓.
+***
 #### Climb / descent gradient
 <!-- id: agk-climb-descent-gradient | from: 06 | also: ifr-dep, study-formulas | level: IR -->
 
@@ -47,4 +55,13 @@
 - `F:` speed increase energy factor = `(actual/target)²`.
 - `M:` `+10% speed` ⇒ `+21% energy`; `+20% speed` ⇒ `+44% energy`.
 - `T:` fast final burns runway and brakes. Tailwind hurts more than it feels.
+***
+#### Pebble
+<!-- id: agk-takeoff-climb-cruise-glide-landing-performance-pebble | also: study-pebble | level: PPL CPL IR -->
+
+- FACTORS `Vx = altitude/distance; Vy = altitude/time; best glide = max distance; min sink = max time | hot-high-heavy-humid-tailwind-soft-uphill = bad stack | calculate, don’t guess`
+- GRADIENT `ft/NM = ROC × 60 / GS | fpm = GS × ft/NM / 60 | % = ft/NM / 60.76 | 200 ft/NM ≈ 3.3% | 3° ≈ 318 ft/NM ≈ 5.2% | uses groundspeed`
+- DESCENT `3°: ROD ≈ GS × 5; distance NM ≈ altitude to lose / 300 | add level-offs, stepdowns, tailwind`
+- GLIDE `NM = height AGL × glide ratio / 6076 | height above terrain, not ASL`
+- ENERGY `KE ∝ V² | +10% speed = +21% energy; +20% = +44% | fast final burns runway`
 ***

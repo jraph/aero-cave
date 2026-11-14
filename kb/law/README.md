@@ -1,8 +1,8 @@
-# Air law & procedures / Droit aérien et procédures — concept files
+# Air law & procedures
 
 | Concept file | Concept | Units |
 |---|---|---|
-| [Air law & procedures / Droit aérien et procédures](air-law-procedures.md) | `law` | 1 |
+| [Air law & procedures / Droit aérien et procédures](air-law-procedures.md) | `law` | 2 |
 | [Airspace, VFR minima & cruising altitudes / Espace aérien, minimums VFR et altitudes de croisière](airspace-vfr-minima-cruising-altitudes.md) | `law-airspace` | 10 |
 | [Airworthiness, documents & maintenance / Navigabilité, documents et maintenance](airworthiness-documents-maintenance.md) | `law-airworthy` | 9 |
 | [ATC, radio & transponder / ATC, radio et transpondeur](atc-radio-transponder.md) | `law-atc` | 5 |
@@ -17,5 +17,3 @@
 | [Recency / Mise à jour des connaissances / récence](recency.md) | `law-recency` | 2 |
 | [Required equipment / Équipement exigé](required-equipment.md) | `law-equip` | 4 |
 | [Type ratings, PPC / CC & crew seats / Qualifications de type, CCP / VC et postes](type-ratings-ppc-cc-crew-seats.md) | `law-type` | 2 |
-
-Units moved on 14 November 2026 from cards 01, 03, 04 and 06 (`from:` on each unit). Overlapping units were then merged (details in `CONTENT_REVIEW.md`) and each concept file ends with a `#### Pebble` recapping only that file. Instrument-rating recency lives in [`kb/ifr/rules-privileges.md`](../ifr/rules-privileges.md). Only the rules named in the review log were checked against the CARs; the rest is unverified. Format: see [`kb/met/README.md`](../met/README.md).
