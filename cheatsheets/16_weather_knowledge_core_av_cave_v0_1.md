@@ -1,328 +1,132 @@
 ### WEATHER KNOWLEDGE CORE — AV-CAVE v0.1
 `K` knowledge | `M` memory | `T` trap | `!` hazard | `F` formula | Canada PPL/CPL/INRAT
 `RELEASE:` `STUDY-REF PROVISIONAL` | `SRC:` TC AIM 2026-1 + standard aviation meteorology | use current MET products for flight
+`MOVED 2026-11-14:` knowledge sections now live in concept files under [`kb/met/`](../kb/met/README.md); headings below are kept as pointers so saved links still land. This card holds no study content any more.
 ***
 #### Atmosphere / ISA
-<!-- id: wx-isa -->
 
-- ISA SL: `15°C`, `29.92 inHg /1013.25 hPa`, density `1.225 kg/m³`.
-- Standard temp lapse ≈ `2°C/1000 ft` to tropopause.
-- Pressure/density decrease with altitude; warm air less dense than cold air.
-- `F:` ISA temp ≈ `15 - 2×altitude(1000 ft)`.
-- `T:` ISA is a reference model, not forecast weather.
+→ Moved / Déplacé : [Atmosphere, altimetry & density altitude / Atmosphère, altimétrie et altitude-densité](../kb/met/atmosphere-altimetry.md#atmosphere--isa)
 ***
 #### Pressure altitude / density altitude
-<!-- id: wx-pa-da -->
 
-- Pressure altitude = altitude with altimeter `29.92`.
-- Density altitude = pressure altitude corrected for non-standard temperature.
-- `F rough:` `DA ≈ PA + 120 × (OAT - ISA temp)` ft.
-- High `PA + temp + humidity` ⇒ DA↑ ⇒ takeoff roll↑, climb↓, TAS for same IAS↑.
-- `M:` `HOT-HIGH-HUMID = PERFORMANCE LOW`.
+→ Moved / Déplacé : [Atmosphere, altimetry & density altitude / Atmosphère, altimétrie et altitude-densité](../kb/met/atmosphere-altimetry.md#pressure-altitude--density-altitude)
 ***
 #### Temperature / dew point
-<!-- id: wx-temp-dewpoint -->
 
-- Dew point = temperature air must cool to reach saturation at constant pressure/water content.
-- Small `T-Td` spread + cooling ⇒ fog/low cloud increasingly likely.
-- Temperature inversion = temp increases with height; strongly stable, traps haze/smoke, can create wind shear.
-- `T:` small spread alone does not guarantee fog.
+→ Moved / Déplacé : [Temperature, moisture, stability & cloud / Température, humidité, stabilité et nuages](../kb/met/stability-clouds.md#temperature--dew-point)
 ***
 #### Lapse rates / stability
-<!-- id: wx-lapse-stability -->
 
-- `DALR` unsaturated ≈ `3°C/1000 ft`.
-- `SALR` saturated ≈ `1.5°C/1000 ft` average; varies with temp/moisture.
-- Environment cools faster than DALR ⇒ absolutely unstable.
-- Environment cools slower than SALR / inversion ⇒ absolutely stable.
-- Between SALR/DALR ⇒ conditionally unstable.
-- Stable: stratiform cloud, smooth air, poor vis, steady precip.
-- Unstable: CU/TCU/CB, turbulence, showers, generally better between-cloud vis.
-- `M:` steep lapse = vertical motion grows.
+→ Moved / Déplacé : [Temperature, moisture, stability & cloud / Température, humidité, stabilité et nuages](../kb/met/stability-clouds.md#lapse-rates--stability)
 ***
 #### Moisture / cloud formation
-<!-- id: wx-moisture-cloud -->
 
-- Need moisture + cooling to saturation.
-- Cooling mechanisms: lifting, radiation, contact/advection, mixing.
-- Lift: convection, fronts, terrain, convergence.
-- Condensation nuclei help droplets form.
-- Cloud base often near LCL; rising unsaturated air cools DALR until saturated, then SALR.
-- `F exam CB:` convective cloud base AGL ≈ `1000(T−Td)/3` ft, with surface `T,Td` °C; **simplified course shortcut** assumes Td ≈ constant during unsaturated ascent.
-- `F parcel CB:` LCL/cloud base AGL ≈ `1000(T−Td)/(3−0.5)` ft; parcel T↓ ≈3°C/1000 ft, parcel Td↓ ≈0.5°C/1000 ft; both approximate.
-- `T:` estimates apply to a surface-lifted convective parcel, not every observed ceiling/cloud base; field elevation + AGL = ASL only for same vertical datum.
+→ Moved / Déplacé : [Temperature, moisture, stability & cloud / Température, humidité, stabilité et nuages](../kb/met/stability-clouds.md#moisture--cloud-formation)
 ***
 #### Cloud families
-<!-- id: wx-cloud-families -->
 
-| Cloud | Typical significance |
-|---|---|
-| `Ci/Cs/Cc` | high ice cloud; system/front clues |
-| `As/Ac` | mid-level layered/convective; possible icing |
-| `St/Sc` | low stable layer; ceiling/vis concern |
-| `Ns` | widespread steady precip, low ceilings |
-| `Cu` | convective; benign→growing |
-| `TCU` | strong convection, turbulence/icing |
-| `CB` | TS hazards: turbulence/hail/ice/lightning/shear |
-
-- `T:` cloud type often tells stability/lift mechanism.
+→ Moved / Déplacé : [Temperature, moisture, stability & cloud / Température, humidité, stabilité et nuages](../kb/met/stability-clouds.md#cloud-families)
 ***
 #### Fog
-<!-- id: wx-fog -->
 
-- **Radiation:** clear/light wind/moist ground/night cooling; burns with heating/mixing.
-- **Advection:** moist air over colder surface; needs wind; can persist.
-- **Upslope:** moist air forced uphill and cooled.
-- **Steam:** cold air over warmer water.
-- **Precipitation/frontal:** rain evaporates into cooler air.
-- **Ice fog:** very cold air, ice crystals.
-- `M:` radiation = cooling ground; advection = moving moist air.
+→ Moved / Déplacé : [Fog & visibility / Brouillard et visibilité](../kb/met/fog-visibility.md#fog)
 ***
 #### Visibility
-<!-- id: wx-visibility -->
 
-- Reduced by fog, mist, haze, smoke, dust, precip, blowing snow.
-- Stable air tends to trap contaminants; unstable mixing often improves general visibility.
-- `!:` whiteout = no discernible horizon/terrain cues over snow/cloud; visual attitude/height judgment can disappear.
+→ Moved / Déplacé : [Fog & visibility / Brouillard et visibilité](../kb/met/fog-visibility.md#visibility)
 ***
 #### Air masses
-<!-- id: wx-air-masses -->
 
-- Classified by moisture/source: continental `c` dry, maritime `m` moist; Arctic/Polar/Tropical temp source.
-- Weather changes as air mass moves over warmer/colder/moister terrain.
-- Cold air over warm surface ⇒ instability/showers.
-- Warm air over cold surface ⇒ stability/fog/stratus.
+→ Moved / Déplacé : [Air masses, fronts, pressure systems & wind / Masses d’air, fronts, systèmes de pression et vent](../kb/met/air-masses-fronts-wind.md#air-masses)
 ***
 #### Pressure systems
-<!-- id: wx-pressure-systems -->
 
-- Northern Hemisphere:
-  - Low: counter-clockwise + inward, rising air, cloud/precip.
-  - High: clockwise + outward, sinking air, often fair/stable.
-- Trough = elongated low pressure, often wind shift/cloud/showers.
-- Ridge = elongated high pressure, generally more stable.
-- Closely spaced isobars ⇒ stronger pressure-gradient wind.
+→ Moved / Déplacé : [Air masses, fronts, pressure systems & wind / Masses d’air, fronts, systèmes de pression et vent](../kb/met/air-masses-fronts-wind.md#pressure-systems)
 ***
 #### Wind
-<!-- id: wx-wind -->
 
-- Pressure-gradient force drives high→low.
-- Coriolis deflects right in Northern Hemisphere; increases with latitude/speed.
-- Aloft, pressure gradient + Coriolis ≈ geostrophic/gradient flow, roughly parallel isobars.
-- Surface friction slows wind ⇒ Coriolis↓ ⇒ wind crosses isobars toward low.
-- `M:` surface wind angles **into LOW / out of HIGH**.
+→ Moved / Déplacé : [Air masses, fronts, pressure systems & wind / Masses d’air, fronts, systèmes de pression et vent](../kb/met/air-masses-fronts-wind.md#wind)
 ***
 #### Local winds
-<!-- id: wx-local-winds -->
 
-- Sea breeze day: sea→land; land breeze night: land→sea.
-- Valley/anabatic day: upslope/up-valley.
-- Mountain/katabatic night: downslope/down-valley.
-- Funnel/terrain effects can accelerate and redirect wind.
-- `T:` airport wind may differ sharply from ridge/pass/valley wind.
+→ Moved / Déplacé : [Air masses, fronts, pressure systems & wind / Masses d’air, fronts, systèmes de pression et vent](../kb/met/air-masses-fronts-wind.md#local-winds)
 ***
 #### Fronts
-<!-- id: wx-fronts -->
 
-- **Cold:** cold undercuts warm; steeper/narrower; CU/CB, showers, gusts, turbulence, fast wind shift.
-- **Warm:** warm overruns cold; broad layered cloud; lowering ceilings, steady precip, icing/FZRA risk.
-- **Stationary:** little movement; prolonged cloud/precip.
-- **Occluded:** cold front catches warm front; extensive mixed frontal weather.
-- `M cold:` `fast-steep-convective`.
-- `M warm:` `slow-wide-layered`.
+→ Moved / Déplacé : [Air masses, fronts, pressure systems & wind / Masses d’air, fronts, systèmes de pression et vent](../kb/met/air-masses-fronts-wind.md#fronts)
 ***
 #### CF — before / passing / after
-<!-- id: wx-cold-front -->
 
-- `K:` surface passage at one location; typical NH mid-latitude low, south of centre. Wind = FROM; directions illustrative.
-
-| Element | Before | Passing | After |
-|---|---|---|---|
-| Pressure | ↓ | minimum → sharp ↑ | ↑, then levels |
-| T / Td | warm / relatively high | T↓; Td usually↓ | colder / usually drier |
-| Wind | S–SW; may strengthen | veers W–NW; gusts/squalls | W–NW; often gusty, later eases |
-| Cloud | CU/TCU; CB if unstable | TCU/CB band; low ragged cloud | CU/SC; clearing trend |
-| Precip | SH/TS may precede | brief heavy SH ± TS/hail | showers, then easing |
-| CIG / VIS | deteriorate near band | low CIG / poor in precip | improve between showers |
-| `!` | prefrontal squall line possible | turbulence / shear / icing / TS | gusts / turbulence; snow squalls possible |
-
-- `M:` CF = `T↓ Td↓ P↑ WIND VEERS`.
-- `T:` stable/slow CF may give layered cloud + prolonged precip; passage ≠ instant clearing.
+→ Moved / Déplacé : [Air masses, fronts, pressure systems & wind / Masses d’air, fronts, systèmes de pression et vent](../kb/met/air-masses-fronts-wind.md#cf--before--passing--after)
 ***
 #### WF — before / passing / after
-<!-- id: wx-warm-front -->
 
-| Element | Before | Passing | After |
-|---|---|---|---|
-| Pressure | steady ↓ | fall slows → levels | ~steady / slight ↑; may ↓ toward next low/CF |
-| T / Td | cool / Td tends ↑ | T↑; Td steady→↑ | warmer / moist, Td higher |
-| Wind | E–SE | veers toward S; variable near boundary | S–SW; speed varies |
-| Cloud | Ci → Cs → As → Ns; St/fog below | low St / fog | St/SC; may lift/break; CB if unstable |
-| Precip | widespread steady RA/SN; PL/FZRA possible | RA/DZ; may ease | often eases; DZ/SH may persist |
-| CIG / VIS | progressively ↓ | often low / poor | usually improve; low cloud/haze/fog may persist |
-| `!` | icing / embedded CB; FZRA if warm layer over subzero surface | low CIG / fog / shear | warm-sector low cloud / fog; possible TS |
-
-- `M:` WF = `LAYERS LOWER → T↑ Td↑ WIND VEERS; P FALL STOPS`.
-- `T:` tendencies, not guarantees: track/terrain/stability/season modify sequence. Both fronts can have CB; WF ≠ guaranteed clearing or strong P rise.
-- `SRC:` [FAA PHAK — Weather Theory, Fronts (NWS-hosted)](https://www.weather.gov/media/zhu/ZHU_Training_Page/Met_Tutorials/Weather_Theory.pdf); [NWS — frontal analysis / pressure tendencies](https://www.weather.gov/media/zhu/ZHU_Training_Page/Met_Tutorials/AF-Trainee.pdf).
+→ Moved / Déplacé : [Air masses, fronts, pressure systems & wind / Masses d’air, fronts, systèmes de pression et vent](../kb/met/air-masses-fronts-wind.md#wf--before--passing--after)
 ***
 #### Typical warm-front sequence
-<!-- id: wx-warm-front-sequence -->
 
-- `Ci → Cs → As → Ns → St/fog`, ceilings lower and precip increases approaching front.
-- Warm-layer-over-subfreezing-surface setup can produce `FZRA/PL`.
+→ Moved / Déplacé : [Air masses, fronts, pressure systems & wind / Masses d’air, fronts, systèmes de pression et vent](../kb/met/air-masses-fronts-wind.md#typical-warm-front-sequence)
 ***
 #### Precipitation
-<!-- id: wx-precip -->
 
-- Droplets/crystals grow by collision/coalescence or ice-crystal process.
-- `RA` liquid; `DZ` tiny droplets; `SN`; `PL` ice pellets; `FZRA/FZDZ` supercooled liquid freezing on contact.
-- `!:` freezing rain/drizzle = high-severity icing signal.
-- Virga = precip evaporates before ground; may indicate downdrafts/microburst potential.
+→ Moved / Déplacé : [Temperature, moisture, stability & cloud / Température, humidité, stabilité et nuages](../kb/met/stability-clouds.md#precipitation)
 ***
 #### Structural icing
-<!-- id: wx-icing -->
 
-- Requires visible moisture + aircraft surface at/below freezing.
-- **Rime:** small supercooled drops, rapid freeze, rough/opaque.
-- **Clear:** larger drops, slower freeze/spread, smooth/heavy.
-- **Mixed:** combination.
-- Effects: lift↓, drag↑, stall speed↑, climb↓; prop/intake/static/control contamination.
-- `!:` freezing rain/drizzle and severe icing require immediate escape.
-- `T:` `OAT >0°C` at surface says nothing about cloud icing aloft.
+→ Moved / Déplacé : [Icing / Givrage](../kb/met/icing.md#structural-icing)
 ***
 #### Carburetor icing
-<!-- id: wx-carb-ice -->
 
-- Fuel vaporization + venturi pressure drop can cool carb throat well below OAT.
-- Possible even in warm weather; risk high with humidity and partial power.
-- Fixed-pitch clue: RPM↓ then roughness.
-- Apply carb heat per POH; initial RPM drop/roughness may worsen while ice melts.
-- `T:` carb icing ≠ structural icing.
+→ Moved / Déplacé : [Carburettor icing & induction / Givrage du carburateur et admission](../kb/met/carburettor-icing.md#carburetor-icing)
 ***
 #### Thunderstorms — ingredients
-<!-- id: wx-thunderstorms -->
 
-- Moisture + instability + lift.
-- Stages:
-  1. **Cumulus:** updrafts only.
-  2. **Mature:** up + downdrafts; precip; maximum hazards.
-  3. **Dissipating:** downdrafts dominate.
-- Hazards: extreme turbulence, hail, lightning, heavy precip, icing, tornado, wind shear/microburst.
-- `!:` avoid; never use a visual/radar “gap” to thread active cells.
+→ Moved / Déplacé : [Thunderstorms & convection / Orages et convection](../kb/met/thunderstorms.md#thunderstorms--ingredients)
 ***
 #### Microburst / LLWS
-<!-- id: wx-microburst -->
 
-- Microburst = concentrated downdraft spreading outward at surface.
-- Aircraft may see: headwind/IAS↑ → downdraft → tailwind/IAS↓.
-- Most dangerous low during takeoff/landing.
-- Virga, heavy showers, gust fronts and TS are clues.
-- `M:` gain first can precede severe loss.
+→ Moved / Déplacé : [Turbulence, wind shear & mountain wave / Turbulence, cisaillement et ondes orographiques](../kb/met/turbulence-wind-shear.md#microburst--llws)
 ***
 #### Turbulence
-<!-- id: wx-turbulence -->
 
-- Mechanical: wind over terrain/buildings; strongest low/lee side.
-- Convective: thermal/CU/TS.
-- Frontal: wind/shear + convection.
-- Mountain wave/rotor: strong stable cross-ridge flow.
-- CAT: often near jet stream/strong wind shear, without cloud.
-- `T:` turbulence intensity depends on aircraft response; same air mass affects light aircraft more.
+→ Moved / Déplacé : [Turbulence, wind shear & mountain wave / Turbulence, cisaillement et ondes orographiques](../kb/met/turbulence-wind-shear.md#turbulence)
 ***
 #### Mountain wave
-<!-- id: wx-mountain-wave -->
 
-- Favoured by strong wind roughly perpendicular to ridge + stable layer.
-- Smooth wave aloft; severe rotor/turbulence below/lee; strong up/downdrafts.
-- Lenticular `ACSL` = wave clue; rotor cloud may mark turbulence.
-- `!:` downdraft may exceed climb capability.
+→ Moved / Déplacé : [Turbulence, wind shear & mountain wave / Turbulence, cisaillement et ondes orographiques](../kb/met/turbulence-wind-shear.md#mountain-wave)
 ***
 #### Wind shear
-<!-- id: wx-wind-shear -->
 
-- Rapid wind speed/direction change over short distance.
-- Sources: fronts, inversions/low-level jets, terrain, TS/microbursts.
-- Low-level shear changes IAS/flight path quickly near ground.
-- `T:` surface wind can look acceptable while shear above is severe.
+→ Moved / Déplacé : [Turbulence, wind shear & mountain wave / Turbulence, cisaillement et ondes orographiques](../kb/met/turbulence-wind-shear.md#wind-shear)
 ***
 #### Jet stream / CAT
-<!-- id: wx-jet-cat -->
 
-- Narrow band of strong upper wind near tropopause, usually strongest horizontal temp gradient.
-- CAT favoured near jet core/shear zones, especially bends/entrance/exit regions.
-- Jet position helps locate fronts/system movement.
+→ Moved / Déplacé : [Turbulence, wind shear & mountain wave / Turbulence, cisaillement et ondes orographiques](../kb/met/turbulence-wind-shear.md#jet-stream--cat)
 ***
 #### Freezing level
-<!-- id: wx-freezing-level -->
 
-- Altitude where `0°C`; may be multiple levels with inversions.
-- `F exam parcel 0°C:` AGL ≈ `CB_exam + 1000×Td_surface/1.5` ft: assumes cloud-base parcel temperature ≈ surface dew point and SALR≈1.5°C/1000 ft.
-- `F parcel 0°C:` `T_CB ≈ T_surface−3×CB_parcel/1000`; if `T_CB>0°C`, parcel reaches 0°C at `CB_parcel+1000×T_CB/1.5` ft AGL (approximate/variable SALR).
-- `T:` parcel 0°C height ≠ atmospheric freezing level; use actual environmental temperature profile / GFA / temperatures aloft. Temperature inversions may create multiple 0°C levels.
-- Freezing level ≠ guaranteed icing layer; requires moisture.
-- Cloud + subzero temp + PIREP/AIRMET icing = stronger evidence.
+→ Moved / Déplacé : [Icing / Givrage](../kb/met/icing.md#freezing-level)
 ***
 #### Altimetry / pressure traps
-<!-- id: wx-altimetry-traps -->
 
-- From high pressure→low without reset: true altitude lower than indicated.
-- Warm→cold: true altitude lower than indicated.
-- `M:` `HIGH→LOW / HOT→COLD = LOOK OUT BELOW`.
-- Cold temperature increases obstacle/terrain error; apply published corrections where required.
+→ Moved / Déplacé : [Atmosphere, altimetry & density altitude / Atmosphère, altimétrie et altitude-densité](../kb/met/atmosphere-altimetry.md#altimetry--pressure-traps)
 ***
 #### Density / TAS
-<!-- id: wx-density-tas -->
 
-- For same IAS, TAS rises with altitude as density falls.
-- Rule-of-thumb TAS ≈ `IAS + ~2% per 1000 ft` in lower atmosphere.
-- Higher TAS at same IAS ⇒ larger turn radius and more ground distance during manoeuvre.
+→ Moved / Déplacé : [Atmosphere, altimetry & density altitude / Atmosphère, altimétrie et altitude-densité](../kb/met/atmosphere-altimetry.md#density--tas)
 ***
 #### Weather trend logic
-<!-- id: wx-trend -->
 
-- Observation = **now**; forecast = **expected**; trend = whether expectation is occurring.
-- Compare several METAR/SPECI, not one snapshot.
-- Falling ceiling/vis + pressure + increasing wind/precip often signals approaching system deterioration.
-- `T:` forecast confidence drops when observations repeatedly diverge.
+→ Moved / Déplacé : [Weather products & decoding / Produits météo et décodage](../kb/met/weather-products.md#weather-trend-logic)
 ***
 #### Canadian product memory
-<!-- id: wx-products -->
 
-- `METAR/SPECI` observed aerodrome conditions.
-- `TAF` terminal forecast.
-- `GFA` regional cloud/weather + icing/turb/freezing level.
-- `AIRMET` significant lower-severity/unforecast hazard.
-- `SIGMET` significant hazardous weather.
-- `PIREP` actual pilot-observed conditions.
-- METAR/TAF cloud heights = AGL; GFA heights generally ASL unless stated.
-- `T:` use the separate Weather Decoding / Go-No-Go QRC for exact code/timing/alternate logic.
+→ Moved / Déplacé : [Weather products & decoding / Produits météo et décodage](../kb/met/weather-products.md#canadian-product-memory)
 ***
 #### Exam traps
-<!-- id: wx-exam-traps -->
 
-- Stable ≠ “good”: can mean fog/stratus/poor vis/icing.
-- Unstable ≠ “bad everywhere”: often better vis between showers but more turbulence/CB.
-- Warm front generally broader/layered; cold front narrower/convective.
-- Dew-point spread predicts saturation risk, not certainty.
-- Freezing level alone does not equal icing.
-- Wind direction aloft/surface differs due friction.
-- Density altitude is a performance concept, not an indicated instrument altitude.
-- Cloud base units: METAR AGL vs GFA ASL.
+→ Moved / Déplacé : [Meteorology — exam traps & recall / Météorologie — pièges et rappel](../kb/met/recall.md#exam-traps)
 ***
 #### Pebble
-<!-- id: wx-pebble -->
 
-- ISA `15°C /29.92 / -2°C per1000`
-- DA `≈ PA +120×ΔT`
-- DALR `3°/1000`; SALR `~1.5°/1000`
-- CB exam `AGL=1000(T−Td)/3`; parcel `AGL=1000(T−Td)/(3−0.5)` | parcel 0°C exam `CB+1000Td/1.5`, detailed `CB+1000T_CB/1.5` | environmental FZ≠parcel 0°C
-- stable=`STRATUS-SMOOTH-POOR VIS`; unstable=`CU-TURB-SHOWERS`
-- low=`CCW-IN-RISE`; high=`CW-OUT-SINK`
-- cold front=`FAST-STEEP-CU`; warm=`SLOW-WIDE-LAYERED`
-- fog `RAD COOL / ADVECT MOVE / UPSLOPE LIFT`
-- icing=`MOISTURE + ≤0 SURFACE`; `FZRA/FZDZ RED`
-- TS=`MOISTURE+INSTABILITY+LIFT`; mature=worst
-- microburst=`IAS↑ then ↓`
-- `HIGH→LOW / HOT→COLD = BELOW`
-- METAR/TAF AGL; GFA usually ASL.
+→ Moved / Déplacé : [Meteorology — exam traps & recall / Météorologie — pièges et rappel](../kb/met/recall.md#pebble)

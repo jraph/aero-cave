@@ -14,7 +14,7 @@ HTML readers offer search, topic filters, dark/light themes, adjustable text and
 
 ## Knowledge explorer (prototype)
 
-[Open the explorer](https://jraph.github.io/aero-cave/explorer.html): every card section reachable by training stage, phase of flight, licence level (PPL / CPL / IR / ME), topic graph, source card or full-text search; works offline once cached. `explorer.html` is **generated**: after editing a card or `explorer/ontology.json`, run `python3 explorer/build_explorer.py` (no dependencies) and bump the service-worker VERSION. Stage views and topic links are editorial. Item-level TC guide mapping lives in `explorer/syllabus.json` and points at **stable unit IDs**: an invisible `<!-- id: wx-fog -->` line directly under a section heading (cards 05 and 16 so far). Never rename an ID that the syllabus map references; the build fails on unknown or duplicate IDs.
+[Open the explorer](https://jraph.github.io/aero-cave/explorer.html): every card section reachable by training stage, phase of flight, licence level (PPL / CPL / IR / ME), topic graph, source card or full-text search; works offline once cached. `explorer.html` is **generated**: after editing a card or `explorer/ontology.json`, run `python3 explorer/build_explorer.py` (no dependencies) and bump the service-worker VERSION. Stage views and topic links are editorial. Item-level TC guide mapping lives in `explorer/syllabus.json` and points at **stable unit IDs**: an invisible `<!-- id: wx-fog -->` line directly under a section heading (card 05 and the `kb/met/` concept files so far; see [kb/met/README.md](kb/met/README.md) for the concept-file format). Never rename an ID that the syllabus map references; the build fails on unknown or duplicate IDs.
 
 ## Browse by subject
 
@@ -22,7 +22,7 @@ HTML readers offer search, topic filters, dark/light themes, adjustable text and
 |---|---|
 | Flight theory & training | [01 · Flight Theory & VFR Knowledge](cheatsheets/01_flight_theory_vfr_knowledge_av_cave_v0_6.md) · [02 · Flight Training and Procedures](cheatsheets/02_flight_training_procedures_av_cave_v0_2.md) |
 | Licensing & operations | [17 · Pilot qualifications & checks](cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md) · [03 · Licensing, Performance & Operations](cheatsheets/03_licensing_performance_operations_av_cave_v0_2.md) · [04 · Canadian air law](cheatsheets/04_canadian_air_law_core_av_cave_v0_2_compact.md) |
-| Weather | [05 · Decoding & decisions](cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md) · [16 · Weather knowledge](cheatsheets/16_weather_knowledge_core_av_cave_v0_1.md) |
+| Weather | [Meteorology concept files](kb/met/README.md) (pilot layout: one file per concept) · [05 · Go/no-go flows](cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md) · card 16 is now a pointer page |
 | Calculations | [06 · Formulas & conversions](cheatsheets/06_aviation_formulas_conversions_av_cave_v0_2.md) |
 | Aircraft | [07 · C150M POH](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md) · [08 · Systems & failures](cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md) · [13 · Multi-engine](cheatsheets/13_multi_engine_knowledge_core_av_cave_v0_1.md) |
 | IFR & INRAT | [09 · IFR knowledge](cheatsheets/09_ifr_knowledge_core_av_cave_v0_2.md) · [10 · INRAT](cheatsheets/10_inrat_knowledge_core_av_cave_v0_3.md) · [11 · CAP plates](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md) · [12 · IFR procedures](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) |
