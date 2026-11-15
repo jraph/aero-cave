@@ -31,6 +31,21 @@
 - `P:` compute WCA/GS/fuel→compare freezing level/temp→select altitude balancing wind, terrain, cloud, icing, oxygen/performance.
 - `T:` strongest tailwind route may place you in icing/turbulence/terrain trap.
 ***
+#### Weather maps and prognostic charts — AIM MET 3
+<!-- id: wx-weather-maps-prog-charts | also: ifr-wx | level: CPL IR -->
+
+| Chart | Shows | Times |
+|---|---|---|
+| Surface analysis | MSL pressure (isobars 4 hPa from 1000), fronts, surface precip / obstructions | obs 00/06/12/18Z; out 2–3 h later |
+| Upper analysis `ANAL` 850 / 700 / 500 / 250 hPa | reported wind, temperature, moisture at the level | obs 00Z, 12Z |
+| Upper prog `PROG` FL240/340/390/450 | forecast wind + temperature | issued 12 h before valid; valid 00/06/12/18Z |
+| SigWx prog FL100–240, FL250–630 | surface lows/highs, TS, turbulence, mountain wave | issued 12 h before valid |
+
+- Levels ≈ 850 hPa 5 000 ft · 700 hPa 10 000 ft · 500 hPa 18 000 ft · 250 hPa 34 000 ft. 1 mb = 1 hPa. [AIM MET 3.3]
+- Motion arrow + speed if ≥5 kt, else `STNR`. Symbols as GFA (TS, FZRA, FZDZ, PL red). [MET 4.5]
+- `T:` analysis = observed (past); prog = forecast (future valid time).
+- `?:` chart symbol detail beyond these lines not checked against the full MET 3 / 12 text.
+***
 #### Pebble
 <!-- id: met-gfa-pebble -->
 
@@ -38,4 +53,5 @@
 - AIRMET / SIGMET `AIRMET = moderate ice/turb, low CIG/vis, strong wind, mountain obscuration | SIGMET = TS, severe turb/LLWS/wave/ice, TC, dust/sand, VA; expired ≠ hazard ended`
 - PIREP `match time/place/level/ACFT type | jet “light” may be severe for a trainer`
 - FB `true direction | level nearest route altitude, interpolate | strongest tailwind may = icing/turbulence/terrain trap`
+- CHARTS `surface ANAL 00/06/12/18Z · upper ANAL 850/700/500/250 hPa at 00/12Z · PROG issued 12 h ahead · SigWx FL100–240 / 250–630`
 ***

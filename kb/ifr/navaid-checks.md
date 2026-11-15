@@ -60,9 +60,29 @@
 ***
 - `M VOR checks:` **4–6–4** = ground/VOT ±4° (FAA reference), airborne ±6°, dual receivers ≤4° total difference. Receiver accuracy ≠ tracking allowance. See [VOR receiver checks and Canadian source scope](navaid-checks.md#navigation-aid-checks).
 ***
+#### ILS and VORTAC principles — AIM COM 4
+<!-- id: nav-ils-vortac-principles-com-4 | level: IR -->
+
+- ILS = localizer (course) + glide path + FAF fix (NDB or DME/RNAV). [COM 4.10]
+- LOC 108.1–111.9 MHz; reliable 18 NM within 10°, 10 NM within 35°. False courses 6–35° off: don't couple until within 6°. [COM 4.10.1, 4.10.7]
+- GP 329.3–335 MHz, paired with LOC; ~3°, beam 1.4°. False GP at 2× and 3× angle: check altitude at FAF. [COM 4.10.2, 4.10.7]
+- VOR: 360 radials, Morse ID. VORTAC: civil users get VOR azimuth + TACAN DME; TACAN azimuth not for civil. [COM 4.5, 4.9]
+- DME = slant range; ±0.5 NM or 3 %. [COM 4.7]
+- `T:` intercept GP from below; above = risk of false GP.
+***
+#### Nav displays — RMI, HSI, flight director, radio altimeter
+<!-- id: nav-rmi-hsi-fd-radio-altimeter | also: agk-inst | level: IR -->
+
+- **RMI**: slaved compass card + needles. Head = bearing **to** station, tail = from. No need to add RB to heading.
+- **HSI**: slaved heading card + CDI + course pointer + TO/FROM in one view; set course = picture matches aircraft position. Reverse sensing not a problem on LOC back course with correct course set.
+- **Flight director**: command bars = computed pitch/roll to fly the selected mode. `T:` FD shows what to do, not where you are: cross-check raw data.
+- **Radio (radar) altimeter**: height above surface by radio echo; used for CAT II DH and terrain awareness. `T:` height AGL ≠ altitude ASL.
+- `?:` general avionics knowledge; not checked against a TC source.
+***
 #### Pebble
 <!-- id: ifr-navaid-checks-pebble -->
 
 - VOR CHECK `4 ground — 6 airborne — 4 between receivers | VOT: 000° FROM or 180° TO, ±4° (FAA AIM source) | airborne ±6° from published radial | dual: 4° TOTAL difference, same TO/FROM sense | Canada (TC AIM COM 4.5.1–4.5.2): dual >4° or airborne >6° → not for IFR until corrected`
 - T `±6° = receiver-check tolerance ≠ permission to track off course | failed identification = unusable navaid for approach | do not infer U.S. intervals/recordkeeping for Canada`
+- ILS/DME `LOC 108.1–111.9 · GP 329.3–335, 3°, false GP at 2× and 3× | couple within 6° | DME slant ±0.5 NM or 3 % | RMI head = TO`
 ***

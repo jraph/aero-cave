@@ -80,7 +80,7 @@ details.sec>summary::before{content:"▸";color:var(--accent);font-size:.8rem}
 details.sec[open]>summary::before{content:"▾"}
 details.sec[open]>summary{border-bottom:1px solid var(--line)}
 .st{font-weight:600;flex:1;min-width:9rem;line-height:1.25}
-.pb{font-size:.62rem;font-weight:700;border:1px solid var(--line);border-radius:.3rem;padding:0 .25rem;color:var(--muted);letter-spacing:.03em}.pb.g{border-color:var(--accent);color:var(--accent)}.pb.h{border-style:dashed;font-weight:500;opacity:.8}.ess{color:var(--accent);font-size:.8rem;margin-right:.15rem}.it.dp,.dpb,.dpn{background:color-mix(in srgb,var(--accent) 9%,transparent)}.dpn{padding:.2rem .4rem;border-radius:.3rem}
+.legend{margin:1rem 0 .4rem;font-size:.88rem}.legend summary{cursor:pointer;font-weight:600}.legend dl{display:grid;grid-template-columns:auto 1fr;gap:.2rem .6rem;margin:.4rem 0}.legend dd{margin:0}code.mk{cursor:help}.pb{font-size:.62rem;font-weight:700;border:1px solid var(--line);border-radius:.3rem;padding:0 .25rem;color:var(--muted);letter-spacing:.03em}.pb.g{border-color:var(--accent);color:var(--accent)}.pb.h{border-style:dashed;font-weight:500;opacity:.8}.ess{color:var(--accent);font-size:.8rem;margin-right:.15rem}.it.dp,.dpb,.dpn{background:color-mix(in srgb,var(--accent) 9%,transparent)}.dpn{padding:.2rem .4rem;border-radius:.3rem}
 .snip{flex-basis:100%;font-size:.78rem;color:var(--muted);overflow-wrap:anywhere}
 mark{background:var(--pill);color:inherit;border-radius:.15rem;padding:0 .1rem}
 .body{padding:.45rem .55rem .55rem;font-size:.9rem;line-height:1.3;overflow-wrap:anywhere}
@@ -123,6 +123,7 @@ footer a{color:var(--accent)}
     <h2 data-t="hGuide"></h2><div class="tiles" id="tg"></div>
     <h2 data-t="hOps"></h2><div class="tiles" id="to"></div>
     <h2 data-t="hRead"></h2><div class="tiles" id="tr"></div>
+    <details class="legend"><summary data-t="hLegend"></summary><div id="legend"></div></details>
     <p class="note" data-t="note"></p>
   </div>
   <div id="gpanel" hidden></div>
@@ -147,7 +148,7 @@ const T = {
   search:['Search topics, rules, codes…','Chercher thèmes, règles, codes…'],
   allP:['All views','Toutes les vues'], gLevel:['Licence level','Niveau de licence'], gGuide:['TC exam or flight test','Examen ou test en vol de TC'], gOps:['Quick access by phase of flight','Accès rapide par phase de vol'], hOps:['Quick access by phase of flight','Accès rapide par phase de vol'], narrow:['Narrow by subject','Préciser par sujet'], opsNote:['Study reference, not a checklist: the POH/AFM and current publications govern.','Référence d’étude, non une liste de vérifications : le POH/AFM et les publications en vigueur prévalent.'], allK:['All note types','Tous les types de notes'], allC:['All topics','Tous les thèmes'],
   hSubj:['Subjects','Sujets'],
-  note:['Stages, level tags and topic links are an editorial study structure, not a Transport Canada syllabus mapping.','Les étapes, niveaux et liens thématiques sont une structure d’étude éditoriale, non une correspondance officielle de Transports Canada.'],
+  note:['Topics and links are an editorial study structure. TC guide items are mapped to notes by hand; ✈ and level badges come from those maps.','Les thèmes et liens sont une structure d’étude éditoriale. Les points des guides TC sont reliés aux notes à la main; ✈ et les niveaux en découlent.'], hLegend:['Legend: note markers','Légende : marqueurs des notes'], legIntro:['Markers start a line. In tables the key letter uses the same codes (G there = general). Tap or hover a marker for its meaning.','Les marqueurs débutent une ligne. Dans les tableaux, la lettre-clé suit les mêmes codes (G = général). Toucher ou survoler un marqueur pour sa signification.'], legBadges:['Badges: ✈ = cited by an item TC marks essential · PPL / CPL / IR / ME = levels of the guides that cite the note (dashed = set by hand).','Badges : ✈ = cité par un point que TC juge essentiel · PPL / CPL / IR / ME = niveaux des guides qui citent la note (pointillé = attribué à la main).'],
   topics:['topics','thèmes'],
   secs:['sections','sections'], sec:['section','section'], reset:['Clear filters','Effacer les filtres'],
   nar:['Narrower','Plus précis'], rel:['Related','Associés'], bro:['Broader','Plus large'], graph:['Graph','Graphe'],
@@ -226,9 +227,12 @@ function conceptCounts() {
 function href(u, card) {
   try { const x = new URL(u, REPO + (card ? card.file : '')); return /^https?:$/.test(x.protocol) ? x.href : null; } catch (e) { return null; }
 }
+const MK = {P:['procedure / flow','procédure / séquence'], G:['gate: check before continuing','vérification avant de continuer'], S:['symptom','symptôme'], T:['trap','piège'], M:['memory aid','aide-mémoire'], F:['formula','formule'], R:['rule','règle'], L:['POH limitation','limite du POH'], N:['POH note','note du POH'], K:['diagram key','légende du schéma'], '!':['safety-critical','sécurité critique'], '?':['verify: not checked against a TC source','à vérifier : non contrôlé contre une source TC'], SRC:['source','source']};
+const mkTxt = v => lang === 'fr' ? v[1] : lang === 'en' ? v[0] : v[0] + ' / ' + v[1];
+const mkTitle = p => { const m = /^(SRC|[A-Z!?])(?: [a-z]+)?:$/.exec(p); return m && MK[m[1]] ? mkTxt(MK[m[1]]) : ''; };
 function inline(s, card) {
   const parts = s.split('`'); if (parts.length % 2 === 0) return fmt(esc(s), card);
-  return parts.map((p, i) => i % 2 ? '<code>' + esc(p) + '</code>' : fmt(esc(p), card)).join('');
+  return parts.map((p, i) => { if (!(i % 2)) return fmt(esc(p), card); const tt = mkTitle(p); return tt ? '<code class="mk" title="' + esc(tt) + '">' + esc(p) + '</code>' : '<code>' + esc(p) + '</code>'; }).join('');
 }
 function fmt(s, card) {
   return s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, a, u) => { const h = href(u.replace(/&amp;/g, '&'), card); return h ? '<a href="' + esc(h) + '" target="_blank" rel="noopener">' + a + '</a>' : a; })
@@ -443,6 +447,7 @@ function render() {
   const browsing = !S.c && !S.k && !tokens.length && !S.p;
   $('home').hidden = !browsing;
   if (browsing) {
+    $('legend').innerHTML = '<p>' + esc(t('legIntro')) + '</p><dl>' + Object.entries(MK).map(([k, v]) => '<dt><code class="mk">' + esc(k) + ':</code></dt><dd>' + esc(mkTxt(v)) + '</dd>').join('') + '</dl><p>' + esc(t('legBadges')) + '</p>';
     const ts = $('ts'), tg = $('tg'), tr = $('tr'); ts.textContent = tg.textContent = tr.textContent = '';
     for (const k of D.kinds) { const n = D.sections.filter(x => x.kd === k.id).length; if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(k)) + '</b><span>' + n + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({k:k.id}, true); tr.appendChild(b); }
     D.guides.forEach((g, i) => { const all = g.groups.flatMap(x => x.items), n = k => all.filter(it => it.s === k).length; const b = el('button', 'tile', '<b>' + (i + 1) + ' · ' + esc(L(g)) + '</b><span>' + esc(g.guide) + ' · ' + esc(t(g.kind === 'flight' ? 'kFlight' : 'kWritten')) + '<br>' + all.length + ' ' + t('items') + ' · ' + ['C','P','M','E'].filter(k => n(k)).map(k => n(k) + ' ' + k).join(' · ') + (all.some(x => x.e) ? ' · ' + PLANE + ' ' + all.filter(x => x.e).length : '') + '</span>' + bar(all)); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); });

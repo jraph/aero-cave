@@ -87,6 +87,13 @@
 | Segment 17–25 | 17–25 certificated passenger seats: summer M/X 223, F 187 lb; winter M/X 229, F 193 lb. | 17–25 sièges passagers certifiés : été M/X 223, F 187 lb; hiver M/X 229, F 193 lb. |
 | Actual wins / Réel | If a group is heavier than the assumed average, account for actual weights. Never hide infant, baggage or unusual load in a blanket average. | Si groupe plus lourd que moyenne supposée, tenir compte des masses réelles. Ne pas masquer bébé, bagages ou charge inhabituelle dans moyenne générale. |
 ***
+#### Portable electronic devices — CAR 602.08
+<!-- id: law-ped-car-602-08 | level: PPL CPL IR -->
+
+- Operator shall not permit PED use if it could adversely affect aircraft operation/systems. [CAR 602.08(1)]
+- No person uses a PED on board without operator permission. [CAR 602.08(2)]
+- `T:` rule is "could affect" + operator permission, not a list of banned devices. EFB = operator-approved use.
+***
 #### Pebble
 <!-- id: law-general-operating-rules-pebble | level: PPL CPL IR -->
 
@@ -97,4 +104,5 @@
 - NIGHT CAR 101.01 `end of evening civil twilight → beginning of morning civil twilight ≠ sunset`
 - PAX `brief exits, belts, baggage, oxygen, smoking before takeoff (602.89) | cargo secured (602.86); within weight ≠ secured or within CG`
 - PAX WEIGHTS `adult M/X 206 summer / 212 winter lb | adult F 172 / 178 lb | child 2–11 75 lb | infant 30 lb | 1–4 passenger seats: actual, volunteered or estimated | actual wins`
+- PED `602.08: operator permission + must not affect aircraft systems`
 ***

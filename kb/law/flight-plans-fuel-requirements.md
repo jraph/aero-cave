@@ -39,6 +39,18 @@
 - `T:` reserve begins after all required legs; legal reserve is not a target landing fuel.
 - `T:` CAR text/current ops rules win; this is memory, not dispatch release.
 ***
+#### IFR flight plan contents and changes — CAR 602.74 / 602.76
+<!-- id: law-ifr-flight-plan-contents-changes | also: ifr-plan, ifr-enr | level: IR -->
+
+- Contents: as specified in the CFS (flight planning section). [CAR 602.74; AIM RAC 3.14.2]
+- IFR plan: file preferably ≥30 min before departure; include suitable alternate meeting alternate minima; no intermediate stops in one IFR plan. [RAC 3.5.2, 3.9, 3.13]
+- Route points: where speed, level, track or flight rules change. [RAC 3.15.6.2]
+- Changes to notify (IFR plan/itinerary): cruising altitude/FL, route, destination, **TAS ≥5%** of filed TAS, **Mach ≥0.01**. [CAR 602.76(1)]
+- Notify ATC (or responsible person) as soon as practicable; in controlled airspace get **clearance before** the change. [CAR 602.76(2); RAC 3.6.2, 8.2.2]
+- IFR → VFR without new plan if destination unchanged; cancel IFR only in VMC and outside Class A/B. [RAC 6.2]
+- `M:` `ALT-ROUTE-DEST-TAS5%-MACH.01`.
+- `T:` TAS change counts against **filed** TAS, not last cruise speed.
+***
 #### Pebble
 <!-- id: law-flight-plans-fuel-requirements-pebble | level: PPL CPL IR -->
 
@@ -46,4 +58,5 @@
 - ARRIVAL REPORT `ident + type of plan/itinerary + departure + arrival + date/time`
 - FUEL CAR 602.88 `VFR aeroplane day 30 min / night 45 min at normal cruise | IFR prop: approach + missed (→ alternate + land) + 45 min | turbojet/helicopter IFR 30 min | add taxi + foreseeable delays | reserve begins after all required legs`
 - PLANNING `wx + NOTAM + CFS + fuel + W&B + perf + alternates | POH burn ≠ actual burn`
+- IFR PLAN `contents per CFS | file ≥30 min | no intermediate stops | notify + get clearance for ALT, ROUTE, DEST, TAS ≥5 %, Mach ≥0.01`
 ***

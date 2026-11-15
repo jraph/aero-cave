@@ -19,6 +19,7 @@
 | `Vis` | advisory / approach-ban planning value, not DA/MDA itself |
 
 - `T:` advisory visibility helps probability/ban logic; DA/MDA controls vertical descent.
+- Categories by approach speed: **A** ≤90 kt · **B** 91–120 · **C** 121–140 · **D** 141–165 · **E** >165. Faster than your category → use the higher one; never a lower category. [CAP GEN Minima]
 ***
 #### Landing minima / visual reference
 <!-- id: ifr-landing-minima-visual-reference | from: 09, 10 -->
@@ -69,6 +70,16 @@
 - Check ALS, runway lights, TDZ/centreline lights, PAPI/VASI, RIL, approach lighting penalties, runway length/LDA, slope, displaced threshold.
 - `T:` lighting inoperative can increase minima or make procedure/runway unsuitable. NOTAM can change this.
 ***
+#### Reduced and low visibility operations
+<!-- id: ifr-reduced-low-visibility-operations | also: law-atc | level: IR -->
+
+- **RVO** = below RVR 2600 down to RVR 1200; **LVO** = below RVR 1200 down to RVR 600. Arrivals/departures below RVR 600 not authorized. [CAP GEN Operating minima]
+- RVR 2600 imminent → procedures restrict movement area; ATIS: "LOW / REDUCED VISIBILITY PROCEDURES IN EFFECT". [CAP GEN]
+- LVP in effect → no NPA, APV, CAT I or CAT II approach may be commenced (CAT III ops only). [CAP GEN; CAR 602.129]
+- CAP aerodrome chart shows each runway's level of service (`RVR 1200`, `¼ SM`, `RVR 600`). Below CFS level of service = taxi/landing "below published aerodrome operating visibility" (exceptions: already past FAF, started taxi, ATC-authorized per procedures). [CAP GEN]
+- Start/push: wait for RVR ≥1000 for 1200 take-off minima; ≥600 for 600 minima. "Follow me" on request below RVR 2600. [CAP GEN]
+- `M:` `2600 RVO · 1200 LVO · 600 floor`.
+***
 #### Pebble
 <!-- id: ifr-minima-visual-reference-pebble -->
 
@@ -76,4 +87,5 @@
 - VISUAL REF `no descent below DA/DH/MDA unless required visual reference established AND maintained for safe landing | “some lights” may not be enough | published landing visibilities advisory, subject to approach ban | missed after MAP: obstacle clearance not assured`
 - APPROACH BAN (GA, non-Part VII) CAR 602.129 `both measured: below minimum when RVR A <1200 OR RVR B <600 | one measured: <1200 | exceptions: after FAF, training missed approach, RVR varying, ground vis ≥¼ SM, CAT III as applicable | no RVR reported → criterion may not exist`
 - T `commercial 703/704/705 rules differ: do not mix tables | advisory vis ≠ approach-ban controlling visibility`
+- RVO/LVO `RVO <2600–1200 · LVO <1200–600 · <600 not authorized | LVP in effect → no NPA/APV/CAT I/II start | categories A≤90 B≤120 C≤140 D≤165`
 ***

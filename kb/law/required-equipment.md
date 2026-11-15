@@ -36,6 +36,21 @@
 - `[CAR 605.18]`
 - `T:` “IFR-certified GPS installed” ≠ aircraft/procedure/current-database/RAIM/approval requirements all met.
 ***
+#### Power-driven aircraft equipment — CAR 602.60
+<!-- id: law-602-60-operational-emergency-equipment | level: PPL CPL IR -->
+
+- Before take-off (power-driven, not ultralight), carry: [CAR 602.60(1)]
+  - checklist or placards per AFM/POH limits;
+  - current charts + publications for route + probable diversion — if **VFR OTT, night VFR or IFR**;
+  - current **database** if IFR / VFR OTT / night VFR (604, 702–705) and database-dependent nav used;
+  - hand-held fire extinguisher in cockpit, suitable type, low toxic gas, reachable;
+  - timepiece showing h:min:s, reachable by each crew;
+  - flashlight per crew member at night;
+  - first aid kit.
+- Checklist must cover pre-start, pre-take-off, post-take-off, pre-landing, emergencies (fuel/hyd/elec/mech, instruments/controls, engine-inop). [CAR 602.60(2)–(3)]
+- `M:` `CHECK-CHARTS-DATA-FIRE-CLOCK-LIGHT-AID`.
+- `T:` charts/database requirement is triggered by IFR, VFR OTT or night VFR, not by day VFR.
+***
 #### Pebble
 <!-- id: law-required-equipment-pebble | level: PPL CPL IR -->
 
@@ -43,4 +58,5 @@
 - NIGHT VFR CAR 605.16 `day equipment + sensitive altimeter + turn/slip + electrical supply + spare fuses ≥50% per rating + DG if aerodrome not visible + instrument and aircraft lights | passengers → landing light | commercial (VI-4, VII-2–5) → AI + VSI + ASI anti-ice + OAT, passengers or not`
 - IFR CAR 605.18 `605.16 equipment + attitude indicator + VSI + OAT + nav/comm adequate for route | IFR GPS installed ≠ database/RAIM/approval met`
 - 703 `SE + passengers + IFR or night VFR prohibited unless AOC authorized AND Std 723.22 (turbine) | night VFR ≠ IFR equipment`
+- 602.60 `checklist · charts + database if IFR / VFR OTT / night VFR · extinguisher · timepiece h:m:s · flashlight at night · first aid`
 ***

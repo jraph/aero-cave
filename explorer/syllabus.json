@@ -2113,7 +2113,7 @@
 ]},
 {"id": "tp691", "guide": "TP 691", "kind": "written", "level": "IR", "edition": "17th edition, 2013", "en": "INRAT", "fr": "INRAT", "url": "https://tc.canada.ca/en/aviation/publications/tp-691e-study-reference-guide-written-examinations-instrument-rating-aeroplane-helicopter", "reviewed": "2026-11-14", "method": {"en": "Read item by item against all concept files and procedure cards.", "fr": "Lu point par point avec toutes les fiches par concept et les fiches de procédures."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit. CAR items are judged on study coverage, not legal completeness.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité. Les points RAC sont jugés sur la couverture d'étude, pas sur l'exhaustivité juridique."}, "groups": [
   {"code": "LIC", "concept": "law-lic", "section": "", "section_fr": "", "en": "CARs Parts I & IV: definitions, licensing", "fr": "RAC parties I et IV", "items": [
-    {"n": 1, "en": "101.01 Interpretation (definitions)", "s": "M", "u": [], "gap": "No definitions unit."},
+    {"n": 1, "en": "101.01 Interpretation (definitions)", "s": "P", "u": ["law-car-101-01-key-definitions"], "gap": "IFR-relevant terms only."},
     {"n": 2, "en": "401.03 Requirement to hold a permit, licence or rating", "s": "P", "u": ["ifr-air-law-ifr-privileges"], "gap": "General statement only."},
     {"n": 3, "en": "401.05 Recency requirements", "s": "C", "u": ["ifr-instrument-rating-recency"], "gap": ""},
     {"n": 4, "en": "Std 421.46 Instrument rating aircraft groups", "s": "C", "u": ["ifr-source-exam-frame", "ifr-air-law-ifr-privileges"], "gap": ""},
@@ -2123,24 +2123,24 @@
   {"code": "GEN", "concept": "law-oprules", "section": "", "section_fr": "", "en": "CARs 601 / 602: airspace, ATC compliance, altimeter", "fr": "RAC 601 / 602", "items": [
     {"n": 1, "en": "601.01 Airspace structure", "s": "P", "u": ["law-airspace-entry-memory"], "gap": "Class table only; structure of Canadian airspace absent."},
     {"n": 2, "en": "601.02 Airspace classification", "s": "C", "u": ["law-airspace-entry-memory"], "gap": ""},
-    {"n": 3, "en": "601.03 Transponder airspace", "s": "M", "u": [], "gap": "Transponder codes only (law-radio-transponder); transponder airspace not defined."},
-    {"n": 4, "en": "601.04 IFR or VFR flight in Class F", "s": "M", "u": [], "gap": ""},
+    {"n": 3, "en": "601.03 Transponder airspace", "s": "C", "u": ["law-transponder-airspace-car-601-03"], "gap": ""},
+    {"n": 4, "en": "601.04 IFR or VFR flight in Class F", "s": "C", "u": ["law-class-f-special-use-car-601-04"], "gap": ""},
     {"n": 5, "en": "601.05 IFR flight in Class A–E / Class F controlled", "s": "P", "u": ["ifr-controlled-uncontrolled-ifr"], "gap": "Clearance requirement stated generally only."},
-    {"n": 6, "en": "602.08 Portable electronic devices", "s": "M", "u": [], "gap": ""},
+    {"n": 6, "en": "602.08 Portable electronic devices", "s": "C", "u": ["law-ped-car-602-08"], "gap": ""},
     {"n": 7, "en": "602.31 Compliance with ATC instructions and clearances", "s": "P", "u": ["ifr-clearance-readback"], "gap": "Readback and clearance meaning; the compliance / deviation rule itself absent."},
     {"n": 8, "en": "602.34 Cruising altitudes and flight levels", "s": "P", "u": ["law-cruising-altitudes"], "gap": "VFR levels and track rule; IFR levels not listed."},
     {"n": 9, "en": "602.35 Altimeter-setting region procedures", "s": "C", "u": ["ifr-altimeter-setting-standard-pressure-regions"], "gap": ""},
     {"n": 10, "en": "602.36 Standard pressure region procedures", "s": "C", "u": ["ifr-altimeter-setting-standard-pressure-regions"], "gap": ""},
     {"n": 11, "en": "602.37 Transition between regions", "s": "C", "u": ["ifr-altimeter-setting-standard-pressure-regions"], "gap": ""},
-    {"n": 12, "en": "602.60 Equipment requirements, power-driven aircraft", "s": "M", "u": [], "gap": ""}
+    {"n": 12, "en": "602.60 Equipment requirements, power-driven aircraft", "s": "C", "u": ["law-602-60-operational-emergency-equipment"], "gap": ""}
   ]},
   {"code": "FPL", "concept": "ifr-plan", "section": "", "section_fr": "", "en": "CARs: flight preparation, flight plans, fuel", "fr": "RAC : préparation, plans de vol, carburant", "items": [
     {"n": 1, "en": "602.71 Pre-flight information", "s": "C", "u": ["law-pre-flight-information"], "gap": ""},
     {"n": 2, "en": "602.72 Weather information", "s": "P", "u": ["law-pre-flight-information"], "gap": "Weather named within pre-flight information; 602.72 not treated."},
     {"n": 3, "en": "602.73 Requirement to file a flight plan / itinerary", "s": "C", "u": ["law-flight-plan-itinerary"], "gap": ""},
-    {"n": 4, "en": "602.74 Contents of a flight plan / itinerary", "s": "M", "u": [], "gap": ""},
+    {"n": 4, "en": "602.74 Contents of a flight plan / itinerary", "s": "P", "u": ["law-ifr-flight-plan-contents-changes"], "gap": "Points to the CFS list; contents not reproduced."},
     {"n": 5, "en": "602.75 Filing", "s": "P", "u": ["law-flight-plan-itinerary"], "gap": "Who to file with only."},
-    {"n": 6, "en": "602.76 Changes in the flight plan", "s": "P", "u": ["law-flight-plan-itinerary"], "gap": "One line citing 602.76–602.78."},
+    {"n": 6, "en": "602.76 Changes in the flight plan", "s": "C", "u": ["law-ifr-flight-plan-contents-changes"], "gap": ""},
     {"n": 7, "en": "602.77 Arrival report", "s": "P", "u": ["law-flight-plan-itinerary"], "gap": "Report contents; filing deadline not stated."},
     {"n": 8, "en": "602.88 Fuel requirements", "s": "C", "u": ["ifr-ifr-fuel-car-602-88-memory"], "gap": ""}
   ]},
@@ -2168,22 +2168,22 @@
     {"n": 2, "en": "FSS / FIC", "s": "P", "u": ["wxp-fic"], "gap": "In-flight update flow only; roles not described."},
     {"n": 3, "en": "Clearances and instructions", "s": "C", "u": ["ifr-clearance-readback"], "gap": ""},
     {"n": 4, "en": "Communication procedures: departure / en route / arrival", "s": "P", "u": ["ifr-clearance-readback", "ifr-enroute-position-reports-atc"], "gap": "No phraseology or frequency-change procedures."},
-    {"n": 5, "en": "Radar services: departure / en route / arrival", "s": "M", "u": [], "gap": "Vectors mentioned only."},
-    {"n": 6, "en": "Transponder operation", "s": "P", "u": ["ifr-lost-comms-general", "ifr-ifr-emergencies"], "gap": "7600 / 7700 only."},
+    {"n": 5, "en": "Radar services: departure / en route / arrival", "s": "C", "u": ["law-radar-service-vectors-rac-1-5", "ifr-sid-radar-non-radar-departures", "ifr-radar-vectors-to-final-rac-9-7"], "gap": ""},
+    {"n": 6, "en": "Transponder operation", "s": "C", "u": ["law-transponder-ssr-psr-ads-b-com-7-8"], "gap": ""},
     {"n": 7, "en": "Wake turbulence separation", "s": "P", "u": ["ifr-ifr-in-vmc-vfr-restriction"], "gap": "Pilot responsibility under a VFR restriction only; separation minima absent."},
-    {"n": 8, "en": "Reduced visibility operations", "s": "M", "u": [], "gap": ""}
+    {"n": 8, "en": "Reduced visibility operations", "s": "C", "u": ["ifr-reduced-low-visibility-operations"], "gap": ""}
   ]},
   {"code": "ASP", "concept": "law-airspace", "section": "", "section_fr": "", "en": "Canadian airspace", "fr": "Espace aérien canadien", "items": [
     {"n": 1, "en": "Low level controlled airspace: types, dimensions, flight rules", "s": "P", "u": ["law-airspace-entry-memory", "law-vfr-minima-controlled"], "gap": "Class memory and control-zone minima; types and dimensions of low-level controlled airspace absent."},
     {"n": 2, "en": "Classification of airspace", "s": "C", "u": ["law-airspace-entry-memory"], "gap": ""},
-    {"n": 3, "en": "Special use airspace", "s": "M", "u": [], "gap": ""}
+    {"n": 3, "en": "Special use airspace", "s": "C", "u": ["law-class-f-special-use-car-601-04"], "gap": ""}
   ]},
   {"code": "RFP", "concept": "ifr-plan", "section": "", "section_fr": "", "en": "Route and flight planning", "fr": "Planification", "items": [
     {"n": 1, "en": "Publications / charts: requirements and use", "s": "C", "u": ["ifr-current-publication-cycle", "ifr-publication-currency-exam-traps", "ifr-ifr-flight-planning-workflow"], "gap": ""},
     {"n": 2, "en": "Preferred routing, factors affecting the flight plan", "s": "P", "u": ["ifr-ifr-flight-planning-workflow"], "gap": "Named in the route checklist only."},
     {"n": 3, "en": "Navigation plan and flight log", "s": "P", "u": ["ifr-ifr-flight-planning-workflow"], "gap": "Leg formulas; no flight-log method."},
     {"n": 4, "en": "Altitude selection", "s": "P", "u": ["ifr-ifr-route-altitude-terms", "law-cruising-altitudes"], "gap": "Minimum altitudes and VFR cruising levels; IFR level selection not set out."},
-    {"n": 5, "en": "IFR flight in mountainous regions", "s": "M", "u": [], "gap": "Named in the route checklist only."},
+    {"n": 5, "en": "IFR flight in mountainous regions", "s": "C", "u": ["ifr-designated-mountainous-regions"], "gap": ""},
     {"n": 6, "en": "Fuel requirements: aeroplanes, helicopters", "s": "C", "u": ["ifr-ifr-fuel-car-602-88-memory"], "gap": ""},
     {"n": 7, "en": "Weather requirements: take-off, landing, alternate", "s": "C", "u": ["ifr-departure-takeoff-minima", "ifr-landing-minima-visual-reference", "ifr-alternate-minima"], "gap": ""},
     {"n": 8, "en": "NOTAM: classifications and interpretation", "s": "P", "u": ["ifr-publication-currency-exam-traps"], "gap": "Trigger NOTAM / AIP SUP logic; classification and decoding absent."},
@@ -2192,21 +2192,21 @@
   ]},
   {"code": "DEP", "concept": "ifr-dep", "section": "", "section_fr": "", "en": "Departure procedures", "fr": "Procédures de départ", "items": [
     {"n": 1, "en": "ATIS", "s": "P", "u": ["fx-communications-weather-communications-m-t-o"], "gap": "Defined in a table only."},
-    {"n": 2, "en": "Radar departure", "s": "M", "u": [], "gap": ""},
-    {"n": 3, "en": "Non-radar departure", "s": "M", "u": [], "gap": ""},
+    {"n": 2, "en": "Radar departure", "s": "C", "u": ["ifr-sid-radar-non-radar-departures"], "gap": ""},
+    {"n": 3, "en": "Non-radar departure", "s": "C", "u": ["ifr-sid-radar-non-radar-departures", "ifr-departure-uncontrolled-aerodrome-rac-7-10"], "gap": ""},
     {"n": 4, "en": "Standard instrument departure (SID)", "s": "C", "u": ["ifr-sid-odp-climb-gradient"], "gap": ""},
-    {"n": 5, "en": "Departure at an uncontrolled aerodrome", "s": "P", "u": ["ifr-controlled-uncontrolled-ifr"], "gap": "One trap line; no procedure."},
+    {"n": 5, "en": "Departure at an uncontrolled aerodrome", "s": "C", "u": ["ifr-departure-uncontrolled-aerodrome-rac-7-10"], "gap": ""},
     {"n": 6, "en": "Obstacle clearance", "s": "C", "u": ["ifr-sid-odp-climb-gradient", "ifr-departure-takeoff-minima"], "gap": ""},
     {"n": 7, "en": "Visibility requirements / RVR", "s": "C", "u": ["ifr-departure-takeoff-minima", "ifr-takeoff-visibility-rvr-trap"], "gap": ""}
   ]},
   {"code": "ENR", "concept": "ifr-enr", "section": "", "section_fr": "", "en": "En route procedures", "fr": "Procédures en route", "items": [
     {"n": 1, "en": "Position reports", "s": "C", "u": ["ifr-enroute-position-reports-atc"], "gap": ""},
     {"n": 2, "en": "Clearance limits", "s": "P", "u": ["ifr-air-law-ifr-privileges", "ifr-clearance-readback"], "gap": "Traps only; no procedure on reaching a clearance limit."},
-    {"n": 3, "en": "Changes to flight plan", "s": "M", "u": [], "gap": ""},
+    {"n": 3, "en": "Changes to flight plan", "s": "C", "u": ["law-ifr-flight-plan-contents-changes"], "gap": ""},
     {"n": 4, "en": "Altitude limitations: MEA, MOCA, MRA, GASA", "s": "C", "u": ["ifr-ifr-route-altitude-terms"], "gap": ""},
-    {"n": 5, "en": "Adherence to TAS", "s": "M", "u": [], "gap": ""},
-    {"n": 6, "en": "Fixes / waypoints", "s": "M", "u": [], "gap": ""},
-    {"n": 7, "en": "1,000 feet on top IFR flight", "s": "M", "u": [], "gap": ""},
+    {"n": 5, "en": "Adherence to TAS", "s": "C", "u": ["law-ifr-flight-plan-contents-changes"], "gap": ""},
+    {"n": 6, "en": "Fixes / waypoints", "s": "C", "u": ["ifr-position-reports-fixes-rac-8"], "gap": ""},
+    {"n": 7, "en": "1,000 feet on top IFR flight", "s": "C", "u": ["ifr-1000-on-top-rac-8-7"], "gap": ""},
     {"n": 8, "en": "IFR from controlled to uncontrolled airspace", "s": "P", "u": ["ifr-controlled-uncontrolled-ifr"], "gap": "Contrast only; no transition procedure."},
     {"n": 9, "en": "IFR from uncontrolled to controlled airspace", "s": "P", "u": ["ifr-controlled-uncontrolled-ifr"], "gap": "Contrast only; no transition procedure."}
   ]},
@@ -2216,18 +2216,18 @@
     {"n": 3, "en": "Standard holding pattern", "s": "C", "u": ["ifr-holding"], "gap": ""},
     {"n": 4, "en": "Non-standard holding pattern", "s": "C", "u": ["ifr-holding"], "gap": ""},
     {"n": 5, "en": "Timing", "s": "C", "u": ["ifr-holding"], "gap": ""},
-    {"n": 6, "en": "Speed limitations", "s": "P", "u": ["ifr-holding"], "gap": "“Published max speed wins” only; speed limits absent."},
-    {"n": 7, "en": "DME", "s": "P", "u": ["ifr-holding"], "gap": "One clause."},
-    {"n": 8, "en": "Shuttle", "s": "M", "u": [], "gap": ""}
+    {"n": 6, "en": "Speed limitations", "s": "C", "u": ["ifr-holding", "ifr-shuttle-procedure"], "gap": ""},
+    {"n": 7, "en": "DME", "s": "C", "u": ["ifr-holding"], "gap": ""},
+    {"n": 8, "en": "Shuttle", "s": "C", "u": ["ifr-shuttle-procedure"], "gap": ""}
   ]},
   {"code": "APP", "concept": "ifr-app-fly", "section": "", "section_fr": "", "en": "Approach procedures", "fr": "Procédures d’approche", "items": [
     {"n": 1, "en": "ATIS", "s": "P", "u": ["proc-arrival-setup", "fx-communications-weather-communications-m-t-o"], "gap": "Named in the arrival flow only."},
     {"n": 2, "en": "STARs", "s": "C", "u": ["ifr-enroute-position-reports-atc"], "gap": ""},
-    {"n": 3, "en": "Radar vectors", "s": "M", "u": [], "gap": ""},
+    {"n": 3, "en": "Radar vectors", "s": "C", "u": ["ifr-radar-vectors-to-final-rac-9-7"], "gap": ""},
     {"n": 4, "en": "Speed adjustment", "s": "P", "u": ["ifr-enroute-position-reports-atc"], "gap": "ATC speed vs charted speed only."},
     {"n": 5, "en": "Transition to approach", "s": "P", "u": ["ifr-cap-plate-read-flow", "plate-initial-intermediate-segment", "proc-arrival-setup"], "gap": "Setup flow and segment altitudes; transition types not explained."},
     {"n": 6, "en": "Initial approach / procedure turn", "s": "P", "u": ["plate-initial-intermediate-segment"], "gap": "Segment altitudes and stepdowns; procedure turn absent."},
-    {"n": 7, "en": "Straight-in approach (No PT)", "s": "M", "u": [], "gap": ""},
+    {"n": 7, "en": "Straight-in approach (No PT)", "s": "C", "u": ["ifr-straight-in-no-pt-rac-9-15"], "gap": ""},
     {"n": 8, "en": "Straight-in minima", "s": "C", "u": ["plate-straight-in-vs-circling", "ifr-cap-definitions-minima"], "gap": ""},
     {"n": 9, "en": "Final approach", "s": "C", "u": ["proc-before-faf-fawp-gate", "plate-profile-view", "proc-final-approach-callouts-single-pilot"], "gap": ""},
     {"n": 10, "en": "Precision approach: ILS, PAR", "s": "P", "u": ["ifr-approach-types", "ifr-ils-loc-vor-ndb-dme"], "gap": "ILS covered; PAR absent."},
@@ -2238,14 +2238,14 @@
     {"n": 15, "en": "Missed approach", "s": "C", "u": ["ifr-missed-approach"], "gap": ""},
     {"n": 16, "en": "Uncontrolled aerodromes: VFR / IFR traffic mix", "s": "P", "u": ["ifr-controlled-uncontrolled-ifr"], "gap": "Broadcast / self-separation only."},
     {"n": 17, "en": "Obstacle clearance: minimum safe altitude, MSA", "s": "C", "u": ["ifr-cap-definitions-minima", "ifr-ifr-route-altitude-terms"], "gap": ""},
-    {"n": 18, "en": "Temperature compensation", "s": "P", "u": ["plate-cold-temperature", "wx-cold-temperature-altitude-error", "ifr-rass-remote-altimeter"], "gap": "Rough formula and the rule to apply CAP corrections; the CAP correction-table method not shown."},
+    {"n": 18, "en": "Temperature compensation", "s": "C", "u": ["plate-cold-temperature", "wx-cold-temperature-altitude-error"], "gap": ""},
     {"n": 19, "en": "Approach ban: visibility requirements", "s": "C", "u": ["ifr-approach-ban-rvr-general-aviation"], "gap": ""}
   ]},
   {"code": "CAP", "concept": "ifr-plates", "section": "", "section_fr": "", "en": "Canada Air Pilot (CAP GEN)", "fr": "Canada Air Pilot (CAP GEN)", "items": [
     {"n": 1, "en": "Chart legend: approach, aerodrome, lighting, symbols", "s": "P", "u": ["plate-lighting-runway-visual-aids", "proc-chart-symbol-transition"], "gap": "Lighting and PFAF-symbol notes only; no legend walkthrough."},
-    {"n": 2, "en": "Altitude corrections", "s": "P", "u": ["ifr-rass-remote-altimeter", "plate-cold-temperature", "wx-cold-temperature-altitude-error"], "gap": "RASS and rough cold formula; CAP correction table not shown."},
+    {"n": 2, "en": "Altitude corrections", "s": "C", "u": ["plate-cold-temperature", "ifr-rass-remote-altimeter"], "gap": ""},
     {"n": 3, "en": "Operating minima", "s": "C", "u": ["ifr-cap-definitions-minima", "ifr-landing-minima-visual-reference", "ifr-alternate-minima", "ifr-departure-takeoff-minima"], "gap": ""},
-    {"n": 4, "en": "Aircraft categories", "s": "P", "u": ["ifr-circling"], "gap": "Category named for circling minima; speed ranges absent."}
+    {"n": 4, "en": "Aircraft categories", "s": "C", "u": ["ifr-cap-definitions-minima"], "gap": ""}
   ]},
   {"code": "EMG", "concept": "ifr-emerg", "section": "", "section_fr": "", "en": "Emergencies", "fr": "Urgences", "items": [
     {"n": 1, "en": "Declaration of an emergency", "s": "C", "u": ["ifr-ifr-emergencies"], "gap": ""},
@@ -2281,7 +2281,7 @@
   {"code": "TS", "concept": "met-ts", "section": "", "section_fr": "", "en": "Meteorology: thunderstorms", "fr": "Météo : orages", "items": [
     {"n": 1, "en": "Conditions for development", "s": "C", "u": ["wx-thunderstorms"], "gap": ""},
     {"n": 2, "en": "Structure", "s": "C", "u": ["wx-thunderstorms"], "gap": ""},
-    {"n": 3, "en": "Classification", "s": "M", "u": [], "gap": ""},
+    {"n": 3, "en": "Classification", "s": "C", "u": ["wx-thunderstorm-types-lightning-detection"], "gap": ""},
     {"n": 4, "en": "Hazards: macrobursts, microbursts", "s": "P", "u": ["wx-thunderstorms", "wx-microburst"], "gap": "Microburst covered; macroburst absent."},
     {"n": 5, "en": "Squall lines", "s": "P", "u": ["wx-cold-front", "wx-thunderstorms"], "gap": "Named only."},
     {"n": 6, "en": "Flight precautions", "s": "C", "u": ["wx-thunderstorms"], "gap": ""}
@@ -2300,12 +2300,12 @@
     {"n": 6, "en": "SIGMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep"], "gap": ""}
   ]},
   {"code": "CHT", "concept": "met-gfa", "section": "", "section_fr": "", "en": "Meteorology: weather maps and prognostic charts", "fr": "Météo : cartes et pronostics", "items": [
-    {"n": 1, "en": "Surface weather chart", "s": "M", "u": [], "gap": ""},
-    {"n": 2, "en": "Upper level charts, analysis to 700 mb", "s": "M", "u": [], "gap": ""},
-    {"n": 3, "en": "Prognostic surface chart", "s": "M", "u": [], "gap": ""},
-    {"n": 4, "en": "Significant weather prognostic chart (700–400 mb)", "s": "M", "u": [], "gap": ""},
-    {"n": 5, "en": "Times issued and validity", "s": "M", "u": [], "gap": ""},
-    {"n": 6, "en": "Symbols and decoding", "s": "M", "u": [], "gap": ""}
+    {"n": 1, "en": "Surface weather chart", "s": "C", "u": ["wx-weather-maps-prog-charts"], "gap": ""},
+    {"n": 2, "en": "Upper level charts, analysis to 700 mb", "s": "C", "u": ["wx-weather-maps-prog-charts"], "gap": ""},
+    {"n": 3, "en": "Prognostic surface chart", "s": "P", "u": ["wx-weather-maps-prog-charts"], "gap": "SigWx prog shows surface highs/lows; no surface prog chart detail."},
+    {"n": 4, "en": "Significant weather prognostic chart (700–400 mb)", "s": "C", "u": ["wx-weather-maps-prog-charts"], "gap": ""},
+    {"n": 5, "en": "Times issued and validity", "s": "C", "u": ["wx-weather-maps-prog-charts"], "gap": ""},
+    {"n": 6, "en": "Symbols and decoding", "s": "P", "u": ["wx-weather-maps-prog-charts"], "gap": "A few symbols only."}
   ]},
   {"code": "WXI", "concept": "ifr-wx", "section": "", "section_fr": "", "en": "Meteorology: weather interpretation", "fr": "Météo : interprétation", "items": [
     {"n": 1, "en": "Weather systems affecting preferred routes and altitudes", "s": "P", "u": ["ifr-ifr-weather-traps", "wxp-ifr-flow"], "gap": "Hazard traps and go/no-go flow; no route / altitude selection method."}
@@ -2319,17 +2319,17 @@
     {"n": 6, "en": "Blockage", "s": "C", "u": ["ifr-instrument-failures"], "gap": ""}
   ]},
   {"code": "PSI", "concept": "agk-pitot", "section": "", "section_fr": "", "en": "Pitot-static instruments", "fr": "Instruments anémobarométriques", "items": [
-    {"n": 1, "en": "Principles", "s": "M", "u": [], "gap": "No operating-principles unit."},
-    {"n": 2, "en": "Errors", "s": "P", "u": ["ifr-instrument-failures"], "gap": "Blockage errors only."}
+    {"n": 1, "en": "Principles", "s": "C", "u": ["agk-pitot-static-instrument-principles"], "gap": ""},
+    {"n": 2, "en": "Errors", "s": "C", "u": ["agk-pitot-static-instrument-principles", "ifr-instrument-failures"], "gap": ""}
   ]},
   {"code": "GYR", "concept": "agk-gyro", "section": "", "section_fr": "", "en": "Gyroscopic systems and instruments", "fr": "Instruments gyroscopiques", "items": [
-    {"n": 1, "en": "Principles", "s": "M", "u": [], "gap": ""},
-    {"n": 2, "en": "Power sources", "s": "P", "u": ["ifr-instrument-failures"], "gap": "Vacuum failure only."},
-    {"n": 3, "en": "Errors", "s": "M", "u": [], "gap": ""}
+    {"n": 1, "en": "Principles", "s": "C", "u": ["agk-gyro-instruments-principles-errors"], "gap": ""},
+    {"n": 2, "en": "Power sources", "s": "C", "u": ["agk-gyro-instruments-principles-errors"], "gap": ""},
+    {"n": 3, "en": "Errors", "s": "C", "u": ["agk-gyro-instruments-principles-errors"], "gap": ""}
   ]},
   {"code": "CMP", "concept": "nav-compass", "section": "", "section_fr": "", "en": "Magnetic compass", "fr": "Compas magnétique", "items": [
-    {"n": 1, "en": "Principles", "s": "M", "u": [], "gap": ""},
-    {"n": 2, "en": "Use of the magnetic compass", "s": "M", "u": [], "gap": ""},
+    {"n": 1, "en": "Principles", "s": "C", "u": ["nav-magnetic-compass-principle-use"], "gap": ""},
+    {"n": 2, "en": "Use of the magnetic compass", "s": "C", "u": ["nav-magnetic-compass-principle-use"], "gap": ""},
     {"n": 3, "en": "Errors", "s": "P", "u": ["ifr-instrument-failures"], "gap": "Error list and ANDS/UNOS; no explanation."}
   ]},
   {"code": "VOR", "concept": "nav-radio", "section": "", "section_fr": "", "en": "VOR", "fr": "VOR", "items": [
@@ -2343,34 +2343,34 @@
     {"n": 3, "en": "Limitations", "s": "P", "u": ["ifr-navigation-aid-checks"], "gap": "Error sources listed without explanation."}
   ]},
   {"code": "ILS", "concept": "nav-radio", "section": "", "section_fr": "", "en": "ILS", "fr": "ILS", "items": [
-    {"n": 1, "en": "Basic components, air and ground", "s": "P", "u": ["ifr-ils-loc-vor-ndb-dme", "ifr-navigation-aid-checks"], "gap": "LOC / GS / markers named; no component description."},
-    {"n": 2, "en": "Principles of operation", "s": "M", "u": [], "gap": ""},
-    {"n": 3, "en": "Limitations", "s": "P", "u": ["ifr-ils-loc-vor-ndb-dme"], "gap": "False glideslope only."},
+    {"n": 1, "en": "Basic components, air and ground", "s": "C", "u": ["nav-ils-vortac-principles-com-4"], "gap": ""},
+    {"n": 2, "en": "Principles of operation", "s": "C", "u": ["nav-ils-vortac-principles-com-4"], "gap": ""},
+    {"n": 3, "en": "Limitations", "s": "C", "u": ["nav-ils-vortac-principles-com-4"], "gap": ""},
     {"n": 4, "en": "Localizer only", "s": "C", "u": ["ifr-ils-loc-vor-ndb-dme"], "gap": ""}
   ]},
   {"code": "GNS", "concept": "nav-gnss", "section": "", "section_fr": "", "en": "GNSS", "fr": "GNSS", "items": [
-    {"n": 1, "en": "GPS basic principles, air and ground", "s": "M", "u": [], "gap": ""},
+    {"n": 1, "en": "GPS basic principles, air and ground", "s": "C", "u": ["nav-gnss-principles-com-5"], "gap": ""},
     {"n": 2, "en": "Limitations", "s": "P", "u": ["ifr-rnav-gnss"], "gap": "Operational traps only."},
     {"n": 3, "en": "Equipment", "s": "P", "u": ["ifr-rnav-gnss"], "gap": "Database / mode checks only."},
     {"n": 4, "en": "Interpretation", "s": "P", "u": ["ifr-rnav-gnss"], "gap": "CDI sensitivity and sequencing only."},
-    {"n": 5, "en": "RAIM, fault detection and exclusion", "s": "P", "u": ["ifr-rnav-gnss"], "gap": "RAIM check named; FDE absent."},
-    {"n": 6, "en": "WAAS", "s": "P", "u": ["ifr-rnav-gnss"], "gap": "Named only."}
+    {"n": 5, "en": "RAIM, fault detection and exclusion", "s": "C", "u": ["nav-gnss-principles-com-5"], "gap": ""},
+    {"n": 6, "en": "WAAS", "s": "C", "u": ["nav-gnss-principles-com-5"], "gap": ""}
   ]},
   {"code": "XPD", "concept": "law-atc", "section": "", "section_fr": "", "en": "Transponder", "fr": "Transpondeur", "items": [
-    {"n": 1, "en": "Principles of operation", "s": "M", "u": [], "gap": ""},
-    {"n": 2, "en": "Phraseology and use", "s": "P", "u": ["ifr-lost-comms-general", "ifr-ifr-emergencies"], "gap": "7600 / 7700 only."}
+    {"n": 1, "en": "Principles of operation", "s": "C", "u": ["law-transponder-ssr-psr-ads-b-com-7-8"], "gap": ""},
+    {"n": 2, "en": "Phraseology and use", "s": "P", "u": ["law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Codes and IDENT use; no phraseology."}
   ]},
   {"code": "OTH", "concept": "nav-radio", "section": "", "section_fr": "", "en": "Other systems: basic principles and use", "fr": "Autres systèmes", "items": [
-    {"n": 1, "en": "DME", "s": "P", "u": ["ifr-ils-loc-vor-ndb-dme"], "gap": "Slant range and arcs only."},
-    {"n": 2, "en": "VORTAC", "s": "M", "u": [], "gap": ""},
+    {"n": 1, "en": "DME", "s": "C", "u": ["nav-ils-vortac-principles-com-4", "nav-navigation-aids-adf-vor-dme-intercepts"], "gap": ""},
+    {"n": 2, "en": "VORTAC", "s": "C", "u": ["nav-ils-vortac-principles-com-4"], "gap": ""},
     {"n": 3, "en": "Area navigation (RNAV)", "s": "P", "u": ["ifr-rnav-gnss"], "gap": "GNSS procedures only."},
-    {"n": 4, "en": "RMI", "s": "M", "u": [], "gap": ""},
-    {"n": 5, "en": "HSI", "s": "M", "u": [], "gap": ""},
-    {"n": 6, "en": "Radio / radar altimeter", "s": "M", "u": [], "gap": ""},
-    {"n": 7, "en": "Flight director system", "s": "M", "u": [], "gap": ""},
-    {"n": 8, "en": "Surveillance radar, primary and secondary", "s": "M", "u": [], "gap": ""},
+    {"n": 4, "en": "RMI", "s": "C", "u": ["nav-rmi-hsi-fd-radio-altimeter"], "gap": ""},
+    {"n": 5, "en": "HSI", "s": "C", "u": ["nav-rmi-hsi-fd-radio-altimeter"], "gap": ""},
+    {"n": 6, "en": "Radio / radar altimeter", "s": "C", "u": ["nav-rmi-hsi-fd-radio-altimeter"], "gap": ""},
+    {"n": 7, "en": "Flight director system", "s": "C", "u": ["nav-rmi-hsi-fd-radio-altimeter"], "gap": ""},
+    {"n": 8, "en": "Surveillance radar, primary and secondary", "s": "C", "u": ["law-transponder-ssr-psr-ads-b-com-7-8"], "gap": ""},
     {"n": 9, "en": "Airborne weather radar", "s": "P", "u": ["wx-thunderstorms"], "gap": "Attenuation / datalink-delay traps only."},
-    {"n": 10, "en": "Lightning detection equipment", "s": "M", "u": [], "gap": ""}
+    {"n": 10, "en": "Lightning detection equipment", "s": "C", "u": ["wx-thunderstorm-types-lightning-detection"], "gap": ""}
   ]},
   {"code": "PHY", "concept": "agk-hf", "section": "", "section_fr": "", "en": "Human factors: aviation physiology", "fr": "Facteurs humains : physiologie", "items": [
     {"n": 1, "en": "Hypoxia / hyperventilation", "s": "P", "u": ["ifr-human-factors-single-pilot-ifr"], "gap": "Hypoxia named as a threat only."},
@@ -2380,11 +2380,11 @@
   {"code": "PSY", "concept": "agk-hf", "section": "", "section_fr": "", "en": "Human factors: aviation psychology", "fr": "Facteurs humains : psychologie", "items": [
     {"n": 1, "en": "Decision-making process", "s": "P", "u": ["wxp-gates", "ifr-simulated-ifr-flight-workflow"], "gap": "Go/no-go gates and workflow; no decision model."},
     {"n": 2, "en": "Factors that influence decision-making", "s": "P", "u": ["ifr-human-factors-single-pilot-ifr"], "gap": "Threat list only."},
-    {"n": 3, "en": "Situational awareness", "s": "M", "u": [], "gap": ""}
+    {"n": 3, "en": "Situational awareness", "s": "C", "u": ["agk-situational-awareness-cockpit-setup"], "gap": ""}
   ]},
   {"code": "PEQ", "concept": "agk-hf", "section": "", "section_fr": "", "en": "Human factors: pilot–equipment relationship", "fr": "Facteurs humains : pilote–équipement", "items": [
     {"n": 1, "en": "Controls and displays: interpretation errors (ADF / VOR / RMI)", "s": "P", "u": ["ifr-ils-loc-vor-ndb-dme"], "gap": "Reverse-sensing and ADF needle traps only."},
-    {"n": 2, "en": "Cockpit visibility, seat position", "s": "M", "u": [], "gap": ""},
+    {"n": 2, "en": "Cockpit visibility, seat position", "s": "C", "u": ["agk-situational-awareness-cockpit-setup"], "gap": ""},
     {"n": 3, "en": "Correct use of charts, checklists, manuals", "s": "P", "u": ["ifr-human-factors-single-pilot-ifr"], "gap": "“Flows + checklists” only."},
     {"n": 4, "en": "Automation advantages / threats", "s": "P", "u": ["ifr-human-factors-single-pilot-ifr"], "gap": "One trap line."}
   ]},

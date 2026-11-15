@@ -90,6 +90,24 @@
 - DME arc: lead radial/turn anticipation; station passage/DME switch can confuse.
 - `T:` unserviceable navaid or no identification = no approach using that navaid.
 ***
+#### Straight-in approaches and NoPT
+<!-- id: ifr-straight-in-no-pt-rac-9-15 | level: IR -->
+
+- Straight-in approach = positioned on final **without a procedure turn**. ATC uses the phrase in that sense. [AIM RAC 9.15]
+- `NO PT` / `NoPT` on chart (usually at the IF or a TAA sector) = no PT or HILPT required from there. [RAC 9.16; CAP GEN TAA]
+- Badly placed after straight-in clearance → go to FAF, request PT. FAF behind you → missed approach + new clearance. [RAC 9.16]
+- Cleared straight-in on simultaneous parallels → PT not permitted. Big airports: vectors, PT never flown. [RAC 9.27, 9.7.2]
+- `T:` NoPT applies from the marked point/sector only; outside it, course reversal may be required.
+***
+#### Radar vectors to final
+<!-- id: ifr-radar-vectors-to-final-rac-9-7 | also: law-atc | level: IR -->
+
+- Vectored to intercept final ≈ **2 NM** before final descent point. [AIM RAC 9.7.1]
+- "ATS SURVEILLANCE REQUIRED" procedures: initial segment provided by vectors; may have no published initial segment. [RAC 9.7.2]
+- Approach clearance while vectored to final = resume own navigation. [RAC 1.5.2]
+- Comm failure while vectored: squawk `7600`; climb to published minimum altitude unless VMC. [RAC 1.5.5, 6.3.2]
+- `T:` vector altitudes are ATC-temperature-corrected; no pilot cold correction on assigned vector altitudes. [CAP GEN altitude correction]
+***
 #### Pebble
 <!-- id: ifr-approaches-pebble -->
 
@@ -98,4 +116,5 @@
 - NAVAIDS `ILS: beware false GS from above | LOC: no glideslope, LOC minima/MDA | VOR radials FROM station | ADF needle points to station, not necessarily desired track | DME slant range`
 - GNSS `database current, correct procedure/transition, RAIM/WAAS, mode/sensitivity enroute → terminal → approach, missed sequencing | direct-to FAF may delete sequencing/protection | OBS/SUSP misuse | “GPS direct” ≠ cleared route`
 - MATH `3° ≈ 300 ft/NM | ROD ≈ GS × 5 | fpm = GS × ft/NM / 60 | groundspeed, not IAS`
+- STRAIGHT-IN `NoPT from marked point/sector | misplaced → FAF + request PT | vectors to final ≈2 NM before descent point | approach clearance = resume own nav`
 ***

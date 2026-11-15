@@ -30,6 +30,27 @@
 - If only RVR below minimum and no governing ground visibility at/above minimum, takeoff not authorized.
 - `T:` “variable RVR” and “observed on-the-hour vs now” wording can flip the answer.
 ***
+#### SIDs, radar and non-radar departures — AIM RAC 7
+<!-- id: ifr-sid-radar-non-radar-departures | level: IR -->
+
+- First contact: destination + planned initial cruise altitude. Clearance via CLNC DEL if listed, else ground after taxi auth. [RAC 7.3–7.4]
+- SID types: **vector SID** (radar: ATC vectors to filed route/termination fix) · **pilot-nav SID** (non-radar: fly published tracks yourself) · PBN SID. Clearance names SID, transition, when to expect climb. [RAC 7.6; CAP GEN]
+- SID in clearance → readback only call sign + code (+ amended altitude). Can refuse SID and ask for detailed clearance. Amended altitude does not cancel SID. [RAC 6.1, 7.6]
+- No SID: departure procedure (ODP) or take-off minima premise: 35 ft at DER → straight to **400 AAE** → **200 ft/NM** to enroute altitude. `NOT ASSESSED` = pilot owns obstacles. [RAC 7.8; CAP GEN]
+- "Right turn, climb on course" is not a departure procedure. [RAC 7.8]
+- Release from tower: inside TCA tower hands off; outside, tell tower next agency/freq unless already given. [RAC 7.9]
+- `T:` vector SID = expect vectors; still fly the published initial heading/altitude until vectored.
+***
+#### IFR departure from an uncontrolled aerodrome — AIM RAC 7.10
+<!-- id: ifr-departure-uncontrolled-aerodrome-rac-7-10 | level: IR -->
+
+- Into controlled airspace: get ATC clearance first (often via FIC/RCO or phone). [RAC 7.10]
+- Broadcast departure intentions on MF/ATF before entering runway; confirm no conflict by radio + visually. [RAC 7.10]
+- Keep listening watch on MF until beyond its distance/altitude; then contact ATC/en route frequency (second radio helps). [RAC 7.10]
+- Clearance may be time-limited: "CLEARANCE CANCELLED IF NOT AIRBORNE BEFORE 1349". Not departing within 60 min of proposed time → tell ATC. [RAC 7.10]
+- IFR clearance with VFR climb, or VFR release until IFR clearance: only on request, weather permitting. [RAC 6.2.1–6.2.2]
+- `T:` uncontrolled departure = your own obstacle + traffic separation until in controlled airspace.
+***
 #### Pebble
 <!-- id: ifr-departure-pebble -->
 
@@ -37,4 +58,5 @@
 - T `both lowest RVR and ground vis below minimum → no takeoff | takeoff vis ≠ landing/approach vis | standard takeoff minima ≠ obstacle clearance`
 - GRADIENT `ROC fpm = GS kt × ft/NM / 60 | 3.3% ≈ 200 ft/NM | GS-based: tailwind/high GS raises required fpm`
 - SID / ODP `SID may include altitude/speed/climb gradient | obstacle DP exists → use it unless ATC assigns otherwise`
+- DEPARTURE `vector SID = radar · pilot-nav SID = own nav | no SID: 35 ft DER → 400 AAE → 200 ft/NM | uncontrolled: clearance first, broadcast, MF watch, void time`
 ***

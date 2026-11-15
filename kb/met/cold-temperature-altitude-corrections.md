@@ -18,4 +18,6 @@
 - Check CAP cold-temp notes / temperature limits / uncompensated Baro-VNAV restrictions.
 - Apply required altitude corrections to procedure altitudes as applicable; ATC cleared altitude may need coordination if correction affects assigned altitude.
 - `T:` cold correction protects obstacle clearance; it does not change aircraft altimeter reading.
+- Apply when surface temp ≤**0 °C**, or ≤**+10 °C** when MDA/DA ≥1 000 ft HAA; add CAP table values to MSA/TAA, initial, intermediate, final, missed, MDA/DA. [CAP GEN Altitude correction chart]
+- Accepted ATC-assigned altitudes: not corrected (refuse if unsafe). Vector altitudes: already corrected. Corrected mandatory/missed-hold altitude: tell ATC before the fix. [CAP GEN]
 ***

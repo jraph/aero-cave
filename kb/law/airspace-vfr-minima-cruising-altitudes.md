@@ -90,6 +90,31 @@
 - `T:` clearance/TFC/flight following ≠ collision-avoidance transfer. Lookout + right-of-way remain.
 - Sources: [TC AIM 2026-2 RAC 2.8.1–2.8.7](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_rac_en.pdf) · [Standard 821.01 definitions](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/sor-96-433/standards/standard-821-canadian-domestic-air-traffic-control-separation-standards-canadian-aviation-regulations-cars)
 ***
+#### Transponder airspace — CAR 601.03
+<!-- id: law-transponder-airspace-car-601-03 | also: law-atc | level: PPL CPL IR -->
+
+- Transponder airspace = all Class **A, B, C** + any Class **D or E** specified as transponder airspace in the DAH. [CAR 601.03]
+- Need transponder + automatic pressure-altitude reporting there (Class A also ADS-B per AIM). [AIM RAC 2.8.1–2.8.5]
+- `T:` Class D/E only if DAH says so. Check chart/DAH, not class letter alone.
+- `M:` `ABC always · D/E if DAH`.
+***
+#### Class F special use airspace — CAR 601.04
+<!-- id: law-class-f-special-use-car-601-04 | level: PPL CPL IR -->
+
+| Type | Rule |
+|---|---|
+| CYR restricted | no flight unless authorized by user agency in DAH [CAR 601.04(2)] |
+| CYA advisory | non-participants may enter; avoid unless participating; extra vigilance [RAC 2.8.6.3] |
+| CYD danger (intl waters) | no ATC clearance for non-participants [RAC 2.8.6.2] |
+| MOA | ATC won't clear non-participating IFR through active MOA unless IFR separation possible; VFR need not avoid [RAC 2.9.4] |
+| Joint-use | ops authorized by controlling agency [RAC 2.8.6.5] |
+
+- ID: `CY` + `R/A/D` + 3 digits; advisory activity letter in brackets, e.g. `CYA113(A)`. [RAC 2.8.6.1]
+- IFR vs active Class F: ATC separates unless pilot states permission, ALTRV APVL, or contact/visual approach. IFR gets 500 ft vertical from active CYA (wake may need 1000). [RAC 2.8.6.1, 2.8.6.3]
+- NOTAM-activated CYR: NOTAM ≥24 h before activation. [RAC 2.8.6.6]
+- `T:` MSA/TAA ignore CYA, CYR, blasting areas: pilot stays clear. [CAP GEN]
+- Activity letters: A acro · F test · H hang glider · M military · P parachute · S soaring · T training. [CAP GEN symbol legend]
+***
 #### Pebble
 <!-- id: law-airspace-vfr-minima-cruising-altitudes-pebble | level: PPL CPL IR -->
 
@@ -101,4 +126,5 @@
 - VFR OTT `day cruise only | ≥1000 ft vertical from cloud | ≥5000 ft between layers | flight vis ≥5 SM | not automatic with PPL`
 - CRUISE CAR 602.34 `>3000 ft AGL | VFR 000–179° odd +500 / 180–359° even +500 | SDA magnetic track, NDA true track | track ≠ heading`
 - AERODROME `left turns unless CFS/ATC says right | no flight below 2000 ft over an aerodrome except listed operations | ATF calls ≠ MF mandatory reports`
+- XPDR/CLASS F `601.03: ABC always, D/E if DAH | CYR = authorization · CYA = avoid unless participating · CYD no clearance · MOA no IFR through unless separated | IFR 500 ft from active CYA | CYR NOTAM ≥24 h`
 ***

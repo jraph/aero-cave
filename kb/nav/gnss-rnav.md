@@ -21,3 +21,13 @@
 - Do not use expired database for IFR approach unless explicitly permitted/verified by approved procedure and data.
 - `T:` `Direct-To FAF` can destroy sequencing; missed approach may not auto-sequence until SUSP cancelled correctly.
 ***
+#### GNSS principles — AIM COM 5
+<!-- id: nav-gnss-principles-com-5 | level: IR -->
+
+- GNSS = worldwide position + time: satellites + aircraft receivers + integrity monitoring. [COM 5.1]
+- Space: GPS design 24 satellites, 6 planes × 4. Control: USAF centre + global monitor/uplink stations. User: receiver computes position. [COM 5.2.1]
+- Position: time-of-arrival → pseudoranges; **4** needed for 3-D position + clock. [COM 5.2.1]
+- **RAIM** ≥5 satellites (detect); **FDE** ≥6 (exclude). [COM 5.3.1]
+- **WAAS** (SBAS): ground stations → corrections + integrity via geostationary satellites; enables vertical guidance (LPV). [COM 5.3.2]
+- `M:` `4 FIX · 5 DETECT · 6 EXCLUDE`.
+***

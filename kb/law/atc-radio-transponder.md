@@ -93,6 +93,32 @@
 | Whitehorse | FIC for flight-plan processing/alerting; Kamloops provides telephone pilot briefings | FIC pour traitement plans de vol/alerte; Kamloops assure exposés téléphoniques |
 | Five areas | Course shorthand: Pacific, Edmonton, Ontario, Québec, Atlantic; London serves Ontario + Atlantic. These are not the seven FIRs. | Raccourci pédagogique : Pacifique, Edmonton, Ontario, Québec, Atlantique; London dessert Ontario + Atlantique. Ce ne sont pas les sept FIR. |
 ***
+#### Radar service and vectors — AIM RAC 1.5
+<!-- id: law-radar-service-vectors-rac-1-5 | also: ifr-enr | level: IR -->
+
+- Vectoring IFR (and CVFR, IFR arrivals): ATC assumes terrain/obstacle clearance until normal nav resumes. [RAC 1.5.2, 1.5.5(a)]
+- ATC tells you when vectors end — except vectors to final or circuit: approach clearance = resume own nav. [RAC 1.5.2]
+- Identified ≠ relieved of see-and-avoid or terrain responsibility. [RAC 1.5.2]
+- Comm failure on low vector: climb to published minimum altitude unless VMC. [RAC 1.5.5(a)]
+- VFR on vectors: pilot keeps terrain, traffic, VFR weather responsibility. [RAC 1.5.4, 1.5.5(b)]
+- Identified: position reports over compulsory points no longer required until told to resume. [RAC 8.1]
+- `T:` "radar contact" ≠ terrain clearance for VFR.
+***
+#### Transponder, SSR, PSR, ADS-B — AIM COM 7–8
+<!-- id: law-transponder-ssr-psr-ads-b-com-7-8 | also: nav-radio | level: PPL CPL IR -->
+
+| System | Principle | Limit |
+|---|---|---|
+| PSR | range + azimuth from reflected RF | no transponder needed; no altitude/ID |
+| SSR | interrogates transponder 1030 MHz, reply 1090 MHz; range by timing | sees only aircraft with working transponder |
+| Mode C | adds pressure altitude | |
+| Mode S | selective address; base for ADS-B Out + TCAS II | |
+| ADS-B | aircraft broadcasts own position (1090 ES via Mode S) | ATS matches flight ID to flight plan |
+
+- Codes: VFR `1200` ≤12 500 ASL · `1400` above · IFR high level `2000` unless assigned · `7500` unlawful (only once ATC told) · `7600` comm · `7700` emergency. [COM 8.2–8.8]
+- IDENT only when ATS asks. [COM 8.5]
+- `T:` SSR has longer range + positive ID; PSR still sees non-transponder targets. [COM 7.1–7.2]
+***
 #### Pebble
 <!-- id: law-atc-radio-transponder-pebble | level: PPL CPL IR -->
 
@@ -100,4 +126,5 @@
 - ATC CAR 602.31 `comply with clearances/instructions received and accepted, except emergency authority or amended clearance | unable → advise immediately | “roger” ≠ cleared`
 - LIGHTS `in flight: steady green = LDG clearance / flashing green = return for landing / steady red = give way, circle / flashing red = unsafe, no landing | ground: steady green = TKOF / flashing green = taxi / steady red = STOP / flashing red = taxi clear / flashing white = return to start`
 - ATS / WAKE `surveillance 5 NM standard / 3 NM authorized terminal | 1,000 ft below FL290; RVSM FL290–FL410 1,000 ft approved ACFT | wake S→S/H/M/L 4/6/7/8 NM · H→H/M/L 4/5/6 · M→L 4 | H ahead: 2 min same threshold, 3 min intersection`
+- RADAR `IFR vectors: ATC owns terrain until vectors end · approach clearance = own nav | VFR keeps terrain | identified → no compulsory reports | SSR 1030/1090 needs XPDR · PSR sees all · IDENT only on request`
 ***

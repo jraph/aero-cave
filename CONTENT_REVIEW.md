@@ -14,6 +14,18 @@ Carried from the retired CPAER coverage matrix; still open on 14 November 2026. 
 
 The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json` and the explorer's guide pages; `python3 explorer/build_explorer.py --audit` lists concepts with TC items but no knowledge note.
 
+## INRAT (TP 691) gaps filled — 15 November 2026
+
+All 43 Missing items in the INRAT guide now cite a note; 16 Partial items upgraded to covered. INRAT: 128 covered / 80 partial / 0 missing. Written short (caveman style), from: CARs consolidation (SOR/96-433 XML), CAP GEN (October 2025), TC AIM 2026-2 (RAC, COM, MET, AIR).
+
+- **New units (26):** `law-car-101-01-key-definitions`, `law-transponder-airspace-car-601-03`, `law-class-f-special-use-car-601-04`, `law-ped-car-602-08`, `law-602-60-operational-emergency-equipment`, `law-ifr-flight-plan-contents-changes`, `law-radar-service-vectors-rac-1-5`, `law-transponder-ssr-psr-ads-b-com-7-8`, `ifr-reduced-low-visibility-operations`, `ifr-designated-mountainous-regions`, `ifr-position-reports-fixes-rac-8`, `ifr-1000-on-top-rac-8-7`, `ifr-sid-radar-non-radar-departures`, `ifr-departure-uncontrolled-aerodrome-rac-7-10`, `ifr-shuttle-procedure`, `ifr-straight-in-no-pt-rac-9-15`, `ifr-radar-vectors-to-final-rac-9-7`, `wx-weather-maps-prog-charts`, `wx-thunderstorm-types-lightning-detection`, `agk-pitot-static-instrument-principles`, `agk-gyro-instruments-principles-errors` (new file `kb/agk/gyro-instruments.md`), `nav-magnetic-compass-principle-use`, `nav-ils-vortac-principles-com-4`, `nav-rmi-hsi-fd-radio-altimeter`, `nav-gnss-principles-com-5`, `agk-situational-awareness-cockpit-setup`.
+- **Lines added:** holding speeds and DME holds (`ifr-holding`), aircraft approach categories (`ifr-cap-definitions-minima`), CAP cold-temperature correction rules (`plate-cold-temperature`); one Pebble line in each of 15 edited files.
+- **Still partial on purpose:** CFS flight-plan list not reproduced (FPL4); IFR-relevant definitions only (LIC1); surface prog charts and chart symbols thin (CHT3, CHT6).
+- **Flagged `?:` (general knowledge, not checked against a TC source):** gyro instruments, pitot-static mechanics, compass mechanics, RMI/HSI/FD/radio altimeter, thunderstorm types and airborne detectors, situational-awareness definition, chart-symbol detail. First targets for the fact-check pass.
+- **Explorer:** home page gains a note-marker legend; markers in notes show their meaning on hover. Same legend in `kb/README.md`.
+
+533 units (was 507).
+
 ## Citations at the item's level — 15 November 2026
 
 PPAER and CPAER items that cited an IFR note next to a PPL/CPL-level note no longer cite the IFR one (20 citations: 602.88 fuel, 401.03, 401.05 recency, ATC clearances, altimeter settings, ATIS, pitot/static, compass errors). Coverage status unchanged. Result: the IFR fuel, IR recency and IFR clearance notes now show IR only. IFR notes stay cited where they are the only evidence (e.g. altimeter-setting regions for 602.35–602.37, which are general rules).

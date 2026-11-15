@@ -18,3 +18,17 @@
 
 - `P:` heat→alternate static per POH→attitude/power/GPS trend→ATC→land. Exact errors vary.
 ***
+#### Pitot-static instruments — principles
+<!-- id: agk-pitot-static-instrument-principles | also: ifr-emerg | level: PPL CPL IR -->
+
+| Instrument | Senses | Principle |
+|---|---|---|
+| ASI | pitot (total) − static | dynamic pressure → IAS |
+| Altimeter | static | aneroid capsule expands as pressure falls; subscale = pressure datum |
+| VSI | static | capsule vs calibrated leak: rate of pressure change → trend + rate, with lag |
+
+- Altimeter calibrated to ISA true altitude, ±20 ft at sea level; ground check ±50 ft of field elevation. [AIM AIR 1.5.1–1.5.2]
+- Setting too high → reads too high. Cold → true lower: ~4 % per 11 °C below ISA. [AIR 1.5.3–1.5.4]
+- Errors: ASI position, compressibility, density; VSI lag; blockage patterns in `sys-pitot-static`.
+- `?:` instrument mechanics = general knowledge; not checked against a TC source.
+***

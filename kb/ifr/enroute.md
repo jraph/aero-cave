@@ -43,6 +43,38 @@
 - ATC speed assignment supersedes charted speed until prohibited/cancelled; charted restrictions remain unless cancelled.
 - `T:` STAR vertical restrictions above assigned altitude remain mandatory unless cancelled.
 ***
+#### Designated mountainous regions — IFR altitudes
+<!-- id: ifr-designated-mountainous-regions | also: ifr-plan | level: IR -->
+
+- Outside established minimum IFR altitudes (incl. min vectoring altitudes): **2000 ft** above highest obstacle within **5 NM** in areas **1 and 5**; **1500 ft** in areas **2, 3, 4**. [AIM RAC 2.12; CAP GEN]
+- On airways / air routes: published MEA/MOCA; in winter cold, fly ≥1000 ft above MEA/MOCA. [CAP GEN; RAC 2.12]
+- Cold + mountain wave → altimeter may over-read by up to **3000 ft**. [AIM AIR 1.5.6–1.5.8; CAP GEN]
+- Safe Altitude 100 NM uses 1500/2000 ft clearance in mountainous regions (1000 elsewhere). [CAP GEN]
+- `M:` `1-5 = 2000 · 2-3-4 = 1500 · within 5 NM`.
+***
+#### Position reports, reporting points, fixes
+<!-- id: ifr-position-reports-fixes-rac-8 | level: IR -->
+
+- Report contents in CFS order (CAR 602.125): ident, position, time (UTC), altitude/FL, flight plan type, next point + ETA. [AIM RAC 8.1]
+- Compulsory point = **solid triangle**; "on request" point = report only if ATC asks. [RAC 8.1]
+- Non-radar without DCPC: report via FIC/nearest station. Identified on radar: compulsory reports stop until told to resume. [RAC 8.1]
+- Altitude reports: reaching initial cleared altitude (outside surveillance); leaving / reaching assigned altitudes; to nearest 100 ft. [RAC 8.3]
+- Fix terms: **intersection** = point from radials/bearings/DME of ground aids; **waypoint** = geographic point for RNAV; **significant point** = point defining ATS route/flight path; DME fixes on an airway may allow lower MEA for DME-equipped aircraft. [CAP GEN definitions; RAC 8.6.1.1]
+- `T:` radar identification removes compulsory reports, not altitude-leaving reports unless told.
+***
+#### 1000-ft-on-top IFR — AIM RAC 8.7
+<!-- id: ifr-1000-on-top-rac-8-7 | level: IR -->
+
+- IFR "at least 1 000-ft-on-top" only if all: [RAC 8.7]
+  - ≥1000 ft above all cloud, haze, smoke or other formation;
+  - flight visibility above formation ≥3 miles;
+  - top of formation well defined;
+  - altitude appropriate to direction of flight when cruising level;
+  - ATC authorized;
+  - in Class B ≤12 500 ASL, or Class C, D, E.
+- `M:` `1000 · 3 SM · TOPS CLEAR · CRUISE ALT · ATC · B≤125/C/D/E`.
+- `T:` still IFR (clearance, reports) — not VFR OTT.
+***
 #### Pebble
 <!-- id: ifr-enroute-pebble -->
 
@@ -52,4 +84,5 @@
 - ALTIMETER `standard-pressure region 29.92/1013.2 | climbing in: set standard immediately after entering | descending out: set station immediately before descending into altimeter-setting region | FL = standard pressure`
 - STAR `lateral path part of route when filed/cleared; descent clearance still needed | vertical restrictions above assigned altitude remain unless cancelled | ATC speed supersedes charted speed`
 - POSITION REPORT `position, time, altitude, next fix/ETA, ensuing fix, remarks`
+- ENROUTE `mountain areas 1/5 = 2000, 2/3/4 = 1500 above obstacle within 5 NM | compulsory point = solid triangle | identified → reports stop | 1000-on-top: 1000 above, 3 SM, ATC auth, B≤12 500/C/D/E`
 ***

@@ -7,9 +7,31 @@ One Markdown file per ontology concept (`explorer/ontology.json`), grouped by do
 | [Air law & procedures](law/README.md) | 16 |
 | [Navigation](nav/README.md) | 5 |
 | [Meteorology](met/README.md) | 16 |
-| [Aeronautics: general knowledge](agk/README.md) | 13 |
+| [Aeronautics: general knowledge](agk/README.md) | 14 |
 | [IFR & INRAT](ifr/README.md) | 16 |
 | [Multi-engine](me/README.md) | 4 |
+
+## Note markers
+
+A marker starts a line, in backticks. Table key letters use the same codes (`G` in a table = general). The explorer shows the meaning on hover and in the home-page legend.
+
+| Marker | Meaning | Sens |
+|---|---|---|
+| `P:` | procedure / flow | procédure / séquence |
+| `G:` | gate: check before continuing | vérification avant de continuer |
+| `S:` | symptom | symptôme |
+| `T:` | trap | piège |
+| `M:` | memory aid | aide-mémoire |
+| `F:` | formula | formule |
+| `R:` | rule | règle |
+| `L:` | POH limitation | limite du POH |
+| `N:` | POH note | note du POH |
+| `K:` | diagram key | légende du schéma |
+| `!:` | safety-critical | sécurité critique |
+| `?:` | verify: not checked against a TC source | à vérifier : non contrôlé contre une source TC |
+| `SRC:` | source | source |
+
+A marker may carry a short qualifier (`P stall:`, `F rough:`).
 
 ## File format
 
