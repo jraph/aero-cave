@@ -32,7 +32,7 @@
 
 - Snow reduces visibility rapidly; blowing snow may create whiteout/false horizon; contamination harms acceleration/braking/lift.
 - Ice pellets imply warm layer aloft and possible nearby freezing rain/mixed icing.
-- `!:` freezing rain = severe icing/ground contamination risk; avoid.
+- `!:` freezing rain: avoid (in-flight escape rule: `wx-icing`); also contaminates aircraft/runway on ground (`wxp-deice-hot`).
 - `T:` light snow code can still produce unacceptable visual contrast/visibility.
 ***
 #### Pebble

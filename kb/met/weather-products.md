@@ -22,7 +22,7 @@
 | `RSC/CRFI` | runway contamination/condition/friction information |
 
 - `T:` radar gap ≠ clear air. no PIREPs ≠ no hazard.
-- METAR/TAF cloud heights = AGL; GFA heights generally ASL unless stated.
+- Cloud-height datum (METAR/TAF AGL vs GFA ASL): `wxp-gfa`, `wxp-cloud-groups`.
 ***
 #### Weather trend logic
 <!-- id: wx-trend | from: 16 | also: met-decide -->
@@ -36,6 +36,5 @@
 <!-- id: met-products-pebble -->
 
 - PRODUCTS `METAR now | SPECI significant change | TAF aerodrome forecast | GFA regional + icing/turb/freezing level | AIRMET below SIGMET severity | SIGMET hazardous | PIREP actual | FB wind/temp aloft`
-- HEIGHTS `METAR/TAF cloud = AGL | GFA generally ASL unless stated`
 - T `radar gap ≠ clear air | no PIREPs ≠ no hazard | observation = now / forecast = expected / trend = is the forecast happening | repeated divergence → confidence↓`
 ***

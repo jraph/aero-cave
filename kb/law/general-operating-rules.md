@@ -117,7 +117,6 @@
 - CLEAN AIRCRAFT CAR 602.11 `no takeoff with frost, ice or snow adhering to critical surfaces`
 - MIN ALT CAR 602.14 `built-up area/open-air assembly: 1000 ft above highest obstacle within 2000 ft horizontally + able to land without hazard | elsewhere 500 ft FROM person, vessel, vehicle, structure ≠ 500 AGL`
 - RIGHT OF WAY `distress first | converging: traffic on right | head-on: both right | overtaking: pass right | landing ACFT has ROW, lower may not cut in | ATC clearance ≠ end of see-and-avoid`
-- NIGHT CAR 101.01 `end of evening civil twilight → beginning of morning civil twilight ≠ sunset`
 - PAX `brief exits, belts, baggage, oxygen, smoking before takeoff (602.89) | cargo secured (602.86); within weight ≠ secured or within CG`
 - PAX WEIGHTS `adult M/X 206 summer / 212 winter lb | adult F 172 / 178 lb | child 2–11 75 lb | infant 30 lb | 1–4 passenger seats: actual, volunteered or estimated | actual wins`
 - PED `602.08: operator permission + must not affect aircraft systems`

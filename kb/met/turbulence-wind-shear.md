@@ -44,7 +44,7 @@
 - TAF wind shear group describes significant shear in lowest `1500 ft AGL`.
 - Clues / red flags: virga, heavy showers, gust fronts, TS, strong inversion/low-level jet, large surface-vs-aloft wind difference.
 - `!:` postpone/avoid severe shear; go-around may enter worse performance.
-- `T:` increasing airspeed followed by rapid loss can be microburst signature (`M:` gain first can precede severe loss); follow aircraft procedure.
+- `T:` initial IAS gain can precede severe loss; follow aircraft procedure.
 ***
 #### Jet stream / CAT
 <!-- id: wx-jet-cat | from: 16 | also: met-systems -->

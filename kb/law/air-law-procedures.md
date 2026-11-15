@@ -27,7 +27,7 @@
 | RVR | range pilot on centreline can expect to see rwy markings / lights |
 | MDA | ASL, non-precision; no descent below until required visual reference |
 | DH | height (CAP/RCAP) for precision approach: missed if no visual ref |
-| night | end of evening civil twilight → start of morning civil twilight |
+| night | → `law-night-definition` |
 | transponder | Mode S ATC transponder (CAN-TSO-C112) |
 
 - `T:` MDA = altitude (ASL); DH = height. CAP: DA = altitude, DH = DA above TDZE/threshold.
@@ -78,7 +78,7 @@
 <!-- id: law-air-law-procedures-pebble | level: PPL CPL IR -->
 
 - AUTHORITY `Act/CARs/Standards = law | AIP/CFS/CAP/NOTAM = current data | AIM/TP = guidance | no expired copies`
-- DEFS `MDA = altitude ASL | DH = height | IMC = below VMC minima, not "in cloud" | night = civil twilight to civil twilight`
+- DEFS `MDA = altitude ASL | DH = height | IMC = below VMC minima, not "in cloud"`
 - ENTRY `first landing at CUST A/D | private: no permission, FPL required | transborder FPL always | ≤15 POB phone CBSA 2–48 h before`
 - CTA `air service → Agency licence + Canadian aviation document (AOC) + liability insurance | no selling without licence`
 - LABOUR CODE `on board "in operation" = flying or doors closed + moving | know, participate, refuse (tell person in charge) | death/≥2 injured → TC ≤24 h`

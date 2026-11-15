@@ -86,7 +86,7 @@
 - Two vented wing tanks→gravity feed→shutoff valve→strainer→carburetor.
 - Cross-feeding occurs; re-top both tanks after refuelling to assure maximum capacity.
 - Approved fuels: `80/87 red`, `100LL blue`, `100/130 green`.
-- `T:` visually verify quantity; gauges + clock/burn tracking, not gauges alone.
+- `T:` visually verify quantity; gauges vs time/burn → `see sys-fuel-starvation-contamination`.
 ***
 #### Oil
 <!-- id: c150-oil | concepts: agk-engine | level: PPL CPL -->
@@ -322,7 +322,7 @@
 <!-- id: c150-spin-vs-spiral-memory | concepts: agk-stall | level: PPL CPL -->
 
 - Spin: stalled, low AS, rotation.
-- Spiral: AS increasing; recovery = throttle idle→wings level→smooth pullout.
+- Spiral: AS increasing; recovery flow → `see trn-spiral-stall`.
 ***
 #### Electrical system
 <!-- id: c150-electrical-system | concepts: agk-elec | level: PPL CPL -->
@@ -404,8 +404,8 @@
 <!-- id: c150-maximum-glide | concepts: agk-perfcalc | level: PPL CPL -->
 
 - Conditions: `60 KIAS`, flaps UP, propeller windmilling, zero wind.
-- Approx memory: `6000 ft` height above terrain ≈ `10 NM`; about `1.67 NM/1000 ft`.
-- `T:` use height above terrain, not altitude ASL; wind materially changes ground range.
+- Approx memory: `6000 ft` height above terrain ≈ `10 NM`; about `1.67 NM/1000 ft`. `[C150M POH 1977 Fig. 3-1]`
+- `T:` height above terrain, wind, config → `see agk-glide`.
 ***
 #### Cruise sample — not universal
 <!-- id: c150-cruise-sample-not-universal | concepts: agk-perfcalc | level: PPL CPL -->

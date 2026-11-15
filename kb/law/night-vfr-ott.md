@@ -27,7 +27,7 @@
 | CFS UTC−5(4) | Normal UTC−5; daylight UTC−4. No parentheses may indicate a year-round offset; follow REF entry. | Heure normale UTC−5; avancée UTC−4. Sans parenthèses peut indiquer décalage annuel; suivre rubrique REF. |
 | CFS ‡ | 10–04Z‡ →09–03Z during DST: subtract ONE hour from the listed UTC schedule. This maintains the same local clock hours. | 10–04Z‡ →09–03Z en heure avancée : soustraire UNE heure à l’horaire UTC publié. Les heures locales restent identiques. |
 | CFS explicit DT | If separate DT hours are printed, use them. If no ‡ or DT schedule, do not invent a seasonal UTC shift. | Si horaire DT distinct, l’utiliser. Sans ‡ ni horaire DT, ne pas inventer un décalage saisonnier UTC. |
-| Night / Nuit | Canadian night: end of evening civil twilight to beginning of morning civil twilight. Not simply sunset→sunrise. | Nuit canadienne : fin du crépuscule civil du soir au début du crépuscule civil du matin. Pas simplement coucher→lever du Soleil. |
+| Night / Nuit | Legal definition → `law-night-definition`; use civil twilight, not sunset/sunrise. | Définition légale → `law-night-definition`; crépuscule civil, pas coucher/lever du Soleil. |
 | Exceptions | Civil time is jurisdiction-specific. Use current CFS REF and authoritative local rules; standard/daylight pairs are not a claim that every region changes clocks. | Heure civile propre à la juridiction. Utiliser REF CFS courant et règles locales; les paires normale/avancée ne signifient pas que toutes les régions changent d’heure. |
 ***
 #### Night definition
@@ -41,4 +41,13 @@
 
 - Day cruise only; vertical cloud separation `≥1000 ft`; between layers at least `5000 ft`; flight visibility `≥5 SM`; destination weather and rating/equipment conditions apply. `[CAR 602.116; 401.44–401.45; 605.15]`
 - `T:` PPL alone does not automatically include VFR OTT privilege.
+***
+***
+#### Pebble
+<!-- id: law-night-vfr-ott-pebble | level: PPL CPL -->
+
+- NIGHT CAR 101.01 `end of evening civil twilight → beginning of morning civil twilight ≠ sunset`
+- TWILIGHT `4 min per ° longitude | chart at zone standard meridian: WEST +, EAST − | chart → longitude → local standard → +1 h DST → UTC | don't correct twice`
+- TIME `UTC = local − signed offset | EST UTC−5 / EDT UTC−4 | NST UTC−3:30 | CFS ‡ → subtract 1 h from UTC schedule in DST | no ‡ or DT → no seasonal shift`
+- VFR OTT `day cruise only | ≥1000 ft vertical from cloud | ≥5000 ft between layers | flight vis ≥5 SM | not automatic with PPL`
 ***

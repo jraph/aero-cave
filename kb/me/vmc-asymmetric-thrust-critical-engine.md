@@ -9,7 +9,7 @@
 
 - Two engines = thrust + yaw + roll problem after failure, not “half a single-engine airplane.”
 - Failed engine side: thrust↓ + drag↑. Operating engine creates yaw toward failed engine.
-- `T:` asymmetry increases with power on live engine, low speed, high AoA, aft CG, low weight, windmilling prop, gear/flaps drag.
+- `T:` asymmetry worsens with live-engine power↑, low speed/high AoA, windmilling prop; per-factor Vmc effects: `see me-vmc-factors`.
 - `M:` CONTROL before CHECKLIST; drag reduction before diagnosis obsession.
 ***
 #### Critical engine
@@ -72,7 +72,7 @@
 <!-- id: me-vmc-demo-reduced-speed-training | from: 13 | also: me-train | level: ME -->
 
 - Setup per POH/instructor/test guide; safe altitude; clearing; no real hazard; recover at first sign of loss of directional control/stall buffet/warning or prebriefed minimum.
-- Recovery: reduce live-engine power enough to regain control + lower pitch/increase speed + wings/bank controlled.
+- Recovery (`see me-vmc-definition-certification-memory`): reduce live-engine power enough to regain control + lower pitch/increase speed; keep wings/bank controlled.
 - `T:` wrong instinct = add power/pull. Correct = reduce asymmetric thrust and increase airspeed.
 - `T:` Vmc demo is not a macho manoeuvre; it is recognition and immediate recovery.
 ***
@@ -81,5 +81,6 @@
 
 - VMC `control speed with critical engine failed, max rudder, ≤5° bank | conditions: max power, min weight, rearmost CG, gear up, takeoff flap, failed prop windmilling | control speed, not climb speed | below Vmc: reduce live-engine power + lower nose`
 - FACTORS `Vmc↑: live power↑, aft CG, lower weight | Vmc↓: high DA (performance worse), bank into live engine | critical engine: usually left on conventional clockwise props (P-factor, slipstream, torque); counter-rotating may have none`
-- ZERO SIDESLIP `≈2–5° bank toward good engine, rudder to stop yaw, per POH | drag: windmilling prop worst, then gear, flaps, cowl flaps, sideslip`
+- ZERO SIDESLIP `≈2–5° bank toward good engine, rudder to stop yaw, per POH | drag: windmilling prop worst, then gear, flaps, cowl flaps, sideslip | clean + feather + blue line`
+- IDENTIFY `dead foot = dead engine | verify by reducing suspected throttle; never feather unverified | Vmc demo: recover at first sign; reduce power + lower nose, never add power/pull`
 ***

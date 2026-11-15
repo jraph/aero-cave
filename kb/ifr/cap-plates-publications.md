@@ -16,25 +16,15 @@
 #### CAP transition watch
 <!-- id: ifr-cap-transition-watch | from: 09 | also: nav-pubs -->
 
-- AIC `013/2026`: PFAF/glidepath-intercept depiction using a lightning-bolt symbol.
-- Incremental implementation from `2026-10-29`, the cycle current at last review (14 Nov 2026). `?` not yet confirmed on a printed chart.
-- Conversion is incremental: read the symbols printed on the chart in hand; do not assume either convention.
-***
-#### Publication cycle
-<!-- id: ifr-current-publication-cycle | from: 09 | also: nav-pubs | kind: source -->
-
-- AIRAC cycle at last review (14 Nov 2026) for `CAP/CAP GEN/CFS/AIP/DAH/charts`: effective `2026-10-29` through `2026-12-24`. `T:` this line ages every 56 days; read the effective dates printed on the product.
-- These publications update every `56 days`; AIP SUP/AIC publish on a `14-day` cycle.
-- `P preflight:` current publication→NOTAM→AIP SUP/AIC→airport/procedure page→aircraft data.
-- Trigger NOTAM = notice that source material changed; retrieve the referenced amendment/Supplement. It may expire while the underlying AIP SUP remains active.
-- `[NAV CANADA publication schedule; AIC 009/2026]`
+- AIC `013/2026`: lightning-bolt symbol for the PFAF/glidepath-intercept altitude on vertically guided procedures.
+- Incremental implementation from `2026-10-29`. `?` not yet confirmed on a printed chart.
+- Co-charted procedures may show both: Maltese cross for the non-vertical FAF + lightning bolt for the PFAF.
+- Conversion is incremental: read the symbols printed on the chart in hand; do not assume either convention or reinterpret existing plates.
 ***
 #### Publication-currency exam traps
 <!-- id: ifr-publication-currency-exam-traps | from: 10 | also: nav-pubs | kind: trap -->
 
-- Check effective date/cycle first. Then NOTAM and AIP SUP; Trigger NOTAM only points to changed material.
-- AIP SUP can remain active with no current Trigger NOTAM.
-- PFAF lightning-bolt depiction is an incremental standard from `2026-10-29`; answer from the symbology printed on the chart given.
+- Check effective date/cycle first, then NOTAM and AIP SUP: cycle, Trigger NOTAM and AIP SUP rules in `ref-current-publication-cycle-c01`; PFAF symbol in `ifr-cap-transition-watch`.
 - `T:` wrong-cycle plate may produce a numerically correct but operationally invalid answer.
 - `G:` chart effective/current→procedure not cancelled/replaced→NOTAM reviewed→AIP SUP reviewed→NAVAIDs/runway/lights available→database current.
 - `T:` a plate matching the current 56-day cycle can still be amended or unavailable.
@@ -42,10 +32,10 @@
 #### Source / scope
 <!-- id: plate-source-scope | from: 11 | kind: source | level: IR -->
 
-- `SRC:` current CAP/CAP GEN/CFS/NOTAM/AIP SUP win. Cycle at last review (14 Nov 2026): `2026-10-29` to `2026-12-24`.
+- `SRC:` current CAP/CAP GEN/CFS/NOTAM/AIP SUP win; cycle and Trigger NOTAM: see `ref-current-publication-cycle-c01`.
 - CAP contains IFR arrival/departure information: IAP, SID, STAR, visual approaches, noise abatement and aerodrome/ground charts.
 - CAP is not intended for VFR operations and is regularly amended by NOTAM/AIP SUP.
-- `T:` stale plate = no-go. Trigger NOTAM≠the amendment; retrieve referenced material.
+- `T:` stale plate = no-go (see `ifr-publication-currency-exam-traps`).
 ***
 #### Title block
 <!-- id: plate-title-block | from: 11 | level: IR -->
@@ -66,7 +56,7 @@
 
 - Read IAF/IF/FAF/FAP, transitions, arcs, bearings/radials/tracks, distances, holds, MSA/Safe 100 NM/sector altitudes, terrain, restricted areas.
 - `T:` plan view gives lateral path; profile gives vertical constraints. Need both.
-- `T:` arc/radial orientation: VOR radials are FROM station; bearings to NDB are TO station.
+- `T:` arc/radial orientation: see `ifr-ils-loc-vor-ndb-dme`.
 ***
 #### MSA / Safe altitude / terrain
 <!-- id: plate-msa-safe-altitude-terrain | from: 11 | level: IR -->
@@ -91,9 +81,9 @@
 #### Pebble
 <!-- id: ifr-cap-plates-publications-pebble -->
 
-- CYCLE `publications every 56 days; AIP SUP/AIC every 14 days | cycle dates age: read the effective dates printed on the product | preflight: current publication → NOTAM → AIP SUP/AIC → airport/procedure page → ACFT data`
-- TRIGGER NOTAM `only announces changed source material: open the referenced source | AIP SUP can remain active after the Trigger NOTAM expires`
+- CYCLE `cycle, preflight order, Trigger NOTAM/AIP SUP → ref-current-publication-cycle-c01 | stale plate = no-go`
+- GATE `chart effective → procedure not cancelled → NOTAM → AIP SUP → NAVAIDs/RWY/lights → database current | current-cycle plate can still be amended/unavailable`
 - PLATE `title/effective → airport/RWY/proc → nav source/freq/course → MSA → RASS/cold temp → fixes → stepdowns → minima → MAP → missed → lighting/RWY → notes | plan-view altitude not enough: profile and minima notes can modify it`
-- T `wrong-cycle plate = numerically correct, operationally invalid | PFAF lightning-bolt (AIC 013/2026): incremental from 2026-10-29, use the symbols printed on the chart`
+- T `wrong-cycle plate = numerically correct, operationally invalid | PFAF lightning-bolt (AIC 013/2026): incremental from 2026-10-29, vertically guided procedures; co-charted Maltese cross + bolt; use the symbols printed on the chart`
 - TRAPS `category first | the note block can kill the approach | RASS adds to altitudes / may force circling | cold temp protects obstacle clearance | MAP timing uses GS | LPV≠ILS | LOC line≠ILS line | wrong CDI source kills | legal approach≠landing distance OK`
 ***

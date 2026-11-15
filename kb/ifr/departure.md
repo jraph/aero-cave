@@ -18,9 +18,7 @@
 
 - SID = published ATC/obstacle/departure routing; may include altitude/speed/climb gradient.
 - Diverse departure assumes obstacle environment supports generic departure; if obstacle DP exists, use it unless ATC assigns otherwise.
-- Climb gradient: `ft/NM`; required ROC ≈ `GS × ft/NM / 60`.
-- Common 3.3% ≈ `200 ft/NM`. `F:` `ROC fpm = GS kt × gradient(ft/NM)/60`.
-- `T:` climb gradient is ground-speed based; tailwind/high GS raises required fpm.
+- Climb gradient in `ft/NM`; common 3.3% ≈ `200 ft/NM`. Formula (`ROC fpm = GS × ft/NM / 60`) and GS/tailwind trap: see `agk-climb-descent-gradient`.
 ***
 #### Takeoff visibility / RVR trap
 <!-- id: ifr-takeoff-visibility-rvr-trap | from: 10 | also: ifr-minima -->
@@ -56,7 +54,7 @@
 
 - TKOF VIS CAR 602.126 `RWY RVR when reported at/above minimum | ground visibility when RVR below minimum, varying, or not reported | PIC-observed runway visibility only when neither reported | minimum from AOC/special authorization, else current CAP`
 - T `both lowest RVR and ground vis below minimum → no takeoff | takeoff vis ≠ landing/approach vis | standard takeoff minima ≠ obstacle clearance`
-- GRADIENT `ROC fpm = GS kt × ft/NM / 60 | 3.3% ≈ 200 ft/NM | GS-based: tailwind/high GS raises required fpm`
+- GRADIENT `ft/NM | 3.3% ≈ 200 ft/NM | formula → agk-climb-descent-gradient`
 - SID / ODP `SID may include altitude/speed/climb gradient | obstacle DP exists → use it unless ATC assigns otherwise`
 - DEPARTURE `vector SID = radar · pilot-nav SID = own nav | no SID: 35 ft DER → 400 AAE → 200 ft/NM | uncontrolled: clearance first, broadcast, MF watch, void time`
 ***

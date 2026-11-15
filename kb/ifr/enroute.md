@@ -24,8 +24,7 @@
 | `MSA` | emergency/sector altitude near facility/ARP/waypoint |
 | `MVA` | ATC radar/vector altitude, normally unpublished to pilots |
 
-- `T:` cleared direct ≠ automatically safe at low altitude; compare minimum IFR altitude / terrain / cold temp / MEA logic.
-- `T:` cleared direct ≠ terrain guaranteed unless ATC/radar/MEA logic valid. cold/RASS/temp corrections can raise minima.
+- `T:` cleared direct ≠ terrain guaranteed unless ATC/radar/MEA logic valid; compare minimum IFR altitude / terrain / MEA. Cold/RASS/temp corrections can raise minima.
 ***
 #### Altimeter-setting / standard-pressure regions
 <!-- id: ifr-altimeter-setting-standard-pressure-regions | from: 10 | also: law-airspace, met-atmos -->

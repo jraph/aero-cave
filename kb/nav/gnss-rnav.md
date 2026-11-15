@@ -9,17 +9,16 @@
 
 - Verify database current, correct airport/runway/procedure/transition, RAIM/WAAS, mode/sensitivity, OBS/SUSP, missed approach sequencing.
 - CDI sensitivity: enroute → terminal → approach; ensure unit arms/activates correct mode.
-- Alternate planning with GNSS: verify availability/integrity and current Canadian rules; ground NAVAID fallback may be required depending equipment/approval.
-- Alternate with satellite approach: verify expected RAIM/WAAS integrity at ETA; destination+alternate satellite-use separation rules may apply.
+- Alternate planning with GNSS / satellite approach: verify expected RAIM/WAAS availability/integrity at ETA and current Canadian rules; destination+alternate satellite-use separation rules may apply; ground NAVAID fallback may be required depending equipment/approval.
 - `T:` “direct-to FAF” may delete procedure sequencing/protection. `OBS/SUSP` misuse is an INRAT classic.
 - `T:` “GPS direct” ≠ cleared route unless ATC cleared.
 ***
 #### GNSS / RNAV plate traps
 <!-- id: plate-gnss-rnav-plate-traps | from: 11 | also: ifr-app-fly, ifr-plates | kind: trap | level: IR -->
 
-- Verify database current, correct airport/runway/procedure/transition, approach mode armed/active, RAIM/WAAS, CDI sensitivity, OBS/SUSP.
+- Setup checks (database, procedure/transition, RAIM/WAAS, mode, CDI sensitivity, OBS/SUSP, direct-to FAF): see `ifr-rnav-gnss`. Plate-specific: approach mode must be armed/active.
 - Do not use expired database for IFR approach unless explicitly permitted/verified by approved procedure and data.
-- `T:` `Direct-To FAF` can destroy sequencing; missed approach may not auto-sequence until SUSP cancelled correctly.
+- `T:` missed approach may not auto-sequence until SUSP cancelled correctly.
 ***
 #### GNSS principles — AIM COM 5
 <!-- id: nav-gnss-principles-com-5 | level: IR -->
@@ -34,8 +33,16 @@
 #### T-routes
 <!-- id: nav-t-routes-rnav | level: CPL -->
 
-- T-route = **low-level controlled fixed RNAV route**. Obstacle protection 4 NM primary + 2 NM secondary each side; associated airspace **10 NM** each side; **no splay** (unlike VOR/NDB airways).
+- T-route = **low-level controlled fixed RNAV route**. Protection widths, airspace and no-splay: see `nav-airways-air-routes-rac-2-7`.
 - `?:` T-route equipment/GNSS requirements not read for this note: check RAC 2.7.1(c) and the CFS before flight planning.
 
 - Sources: [TC AIM RAC](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_rac_en.pdf) 2.7.1(c).
+***
+#### Pebble
+<!-- id: nav-gnss-rnav-pebble -->
+
+- RNAV `database current, correct procedure/transition, RAIM/WAAS, mode/sensitivity enroute → terminal → approach, OBS/SUSP, missed sequencing | expired database: no IFR approach unless approved | GNSS alternate: RAIM/WAAS at ETA, separation rules, NAVAID fallback`
+- T `direct-to FAF may delete sequencing/protection | missed may not sequence until SUSP cancelled | “GPS direct” ≠ cleared route`
+- GNSS `4 FIX · 5 DETECT (RAIM) · 6 EXCLUDE (FDE) | WAAS = SBAS corrections + integrity → LPV`
+- T-ROUTE `low-level controlled fixed RNAV route | check RAC 2.7.1(c) + CFS for equipment`
 ***

@@ -18,7 +18,7 @@
 - `P:` recognize → control → power/config/drag in proper order → identify/verify → bank good engine → maintain heading ± practical → positive climb if capable → `Vxse` obstacle or `Vyse` rate → trim.
 - TC test tolerances: heading control within about `±20°`; speed `Vxse/Vyse +10/-5` for overshoot scenario.
 - `T:` gear/flap movement during power change is high workload; control first.
-- `T:` OEI go-around may not climb. If not climbing, land under control.
+- `T:` OEI go-around may not climb → `see me-oei-missed-go-around`.
 ***
 #### Engine failure in cruise
 <!-- id: me-engine-failure-in-cruise | from: 13 | also: emg-engine | level: ME -->
@@ -37,10 +37,9 @@
 #### PROP governor / feather — L4 cross-ref
 <!-- id: me-prop-governor-feather-l4-cross-ref | from: 13 | also: agk-prop | level: ME -->
 
-- `M` Typical **piston SE CS non-feather**: governor oil P↑→COARSE/pitch↑→RPM↓ | **piston ME CS full-feather**: oil P↑→FINE/pitch↓→RPM↑; oil P↓→counterweights/springs→FEATHER; **architecture varies**.
-- `T` FINE low blade angle ≠ low RPM: low angle→RPM tendency↑ | COARSE high angle→RPM tendency↓ | FEATHER near airflow→drag↓; REVERSE negative thrust (ground only if approved).
-- `!` OEI: windmilling low-pitch PROP→drag↑/climb↓ | **IDENTIFY→VERIFY→FEATHER** per POH; feather locks, unfeather pumps, accumulators ACFT-specific.
-- `SRC:` [FAA AFH · ME propeller](https://www.faasafety.gov/files/events/SO/SO15/2022/SO15118118/TransitionToMultiengineAirplanes.pdf) | [08 Aircraft Systems · Powerplant / PROP](../../cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md).
+- Pitch/RPM logic, SE vs ME governor oil (ME: oil P↑→fine; oil P loss→feather), feather ≠ reverse: `see sys-powerplant-prop-l4-cave`.
+- `!` OEI: windmilling low-pitch PROP→drag↑/climb↓ | **IDENTIFY→VERIFY→FEATHER** per POH (`see me-dead-foot-dead-engine`); feather locks, unfeather pumps, accumulators ACFT-specific.
+- `SRC:` [FAA AFH · ME propeller](https://www.faasafety.gov/files/events/SO/SO15/2022/SO15118118/TransitionToMultiengineAirplanes.pdf).
 ***
 #### Restart / unfeather
 <!-- id: me-restart-unfeather | from: 13 | also: agk-prop | level: ME -->
@@ -66,7 +65,7 @@
 #### Pebble
 <!-- id: me-engine-failure-procedures-multi-engine-pebble | level: ME -->
 
-- FLOW `Control–Config–Identify–Verify–Feather–Secure–Checklist | dead foot = dead engine | identify before verify; verify before feather | control first, checklist second | clean + feather + blue line`
-- OEI `pitch Vyse/Vxse | bank toward good engine | cannot climb → land under control; do not pull below Vyse toward Vmc | high power + low speed + dirty = Vmc trap | gear/flap only when landing assured | OEI go-around may be unavailable`
-- PROP `piston ME full-feather: oil pressure↑ → fine/RPM↑; oil loss → feather; architecture varies | windmilling drag↑, feather drag↓ | restarting a damaged/fire engine can make it worse`
+- FLOW `Control–Config–Identify–Verify–Feather–Secure–Checklist | memory items first, full checklist after control + drag clean-up | simulate feather below safe altitude if procedure says`
+- OEI `TKOF/overshoot test: heading ±20°, Vxse/Vyse +10/−5 | cruise turns ≤30° bank (test) | cannot hold altitude → descend | pitch Vyse/Vxse | bank toward good engine | cannot climb → land under control; do not pull below Vyse toward Vmc | high power + low speed + dirty = Vmc trap | gear/flap only when landing assured | OEI go-around may be unavailable`
+- PROP `windmilling low-pitch PROP → drag↑, climb↓ | identify → verify → feather | feather hardware ACFT-specific | restarting a damaged/fire engine can make it worse | precautionary shutdown: decide by fire/damage/controllability`
 ***

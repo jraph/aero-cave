@@ -8,7 +8,7 @@
 <!-- id: agk-load-factor-accelerated-stall | from: 06 | also: agk-load | kind: formula | level: PPL CPL IR -->
 
 - `F:` in a coordinated, constant-altitude turn, `n = 1 / cos(bank)`. The bank-only equation does not apply to every manoeuvre.
-- `F:` `Vs_bank = Vs × √n`.
+- `F:` `Vs_bank = Vs × √n` (same config/weight).
 - `M:` `45°` bank ≈ `1.41g`, stall ×`1.19`; `60°` bank = `2g`, stall ×`1.41`.
 - `T:` accelerated stall depends load factor/AoA, not just bank; POH chart wins.
 ***

@@ -7,7 +7,7 @@
 #### Radio / transponder
 <!-- id: law-radio-transponder | from: 01 | level: PPL CPL -->
 
-- XPDR: `1200 ≤12500` | `1400 >12500` | `7600 comm` | `7700 emerg` | `7500 hijack`.
+- XPDR codes: see `law-transponder-ssr-psr-ads-b-com-7-8`.
 - Call: who-called | who-you-are | where | what-want. Readback: clearance/runway/hold-short/alt/hdg/squawk.
 - `T:` “roger”≠cleared. listen before transmit. aviate before radio.
 ***
@@ -158,11 +158,11 @@
 #### Pebble
 <!-- id: law-atc-radio-transponder-pebble | level: PPL CPL IR -->
 
-- XPDR `1200 ≤12,500 | 1400 >12,500 | 7600 comm | 7700 emergency | 7500 hijack`
+- XPDR `1200 ≤12,500 | 1400 >12,500 | IFR high 2000 unless assigned | 7600 comm | 7700 emergency | 7500 unlawful | IDENT only on request`
 - ATC CAR 602.31 `comply with clearances/instructions received and accepted, except emergency authority or amended clearance | unable → advise immediately | “roger” ≠ cleared`
 - LIGHTS `in flight: steady green = LDG clearance / flashing green = return for landing / steady red = give way, circle / flashing red = unsafe, no landing | ground: steady green = TKOF / flashing green = taxi / steady red = STOP / flashing red = taxi clear / flashing white = return to start`
 - ATS / WAKE `surveillance 5 NM standard / 3 NM authorized terminal | 1,000 ft below FL290; RVSM FL290–FL410 1,000 ft approved ACFT | wake S→S/H/M/L 4/6/7/8 NM · H→H/M/L 4/5/6 · M→L 4 | H ahead: 2 min same threshold, 3 min intersection`
-- RADAR `IFR vectors: ATC owns terrain until vectors end · approach clearance = own nav | VFR keeps terrain | identified → no compulsory reports | SSR 1030/1090 needs XPDR · PSR sees all · IDENT only on request`
+- RADAR `IFR vectors: ATC owns terrain until vectors end · approach clearance = own nav | VFR keeps terrain | identified → no compulsory reports | SSR 1030/1090 needs XPDR · PSR sees all`
 - NOISE `CAP/CFS procedures binding | turbojet >34000 kg on listed RWY → noise certificate on board, not in emergency`
 - ADIZ `FPL/FIT before entry | VFR: entry time + point, position report after TKOF | revise if >±5 min or >20 NM`
 - CFA `published frequency, any ACFT, air-to-air awareness | not airspace class | not ATC-monitored | not for uncontrolled A/D (MF/ATF)`

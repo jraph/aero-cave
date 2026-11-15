@@ -28,3 +28,9 @@
 
 - Sources: [TP 2076](https://www.phoenixaviation.ca/IPM%20tp2076e.pdf) 2.3.1.
 ***
+#### Pebble
+<!-- id: agk-gyro-instruments-pebble | level: PPL CPL IR -->
+
+- GYRO `rigidity → AI, HI | precession → turn coordinator, drift, tumble | AI + HI usually vacuum, turn instrument electric = redundancy | AI: accel → false pitch-up, decel → false pitch-down; ball shows coordination | HI: no north-seeking, align with compass ≤15 min | TC: roll + yaw rate, then rate only; wing on index = 3°/s`
+- ATTITUDE FLYING `control = attitude + power; performance = result (lags) | set → trim → cross-check → adjust | attitude + power = performance`
+***

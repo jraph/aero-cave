@@ -15,10 +15,10 @@
     {"n": 4, "en": "Hazard and obstruction markings", "s": "M", "u": [], "gap": "No obstruction-marking unit."}
   ]},
   {"code": "S3", "concept": "law-atc", "section": "PSTAR", "section_fr": "PSTAR", "en": "Communications", "fr": "Communications", "items": [
-    {"n": 1, "en": "Call signs and phraseology", "s": "P", "u": ["law-radio-transponder"], "gap": "Call format only; call-sign rules absent."},
+    {"n": 1, "en": "Call signs and phraseology", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Call format only; call-sign rules absent."},
     {"n": 2, "en": "MF procedures", "s": "P", "u": ["law-aerodrome-mf-operations"], "gap": "CAR references only; report sequence absent."},
     {"n": 3, "en": "Distress and urgency", "s": "C", "u": ["trn-mayday-pax-secure", "agk-emerg-human"], "gap": ""},
-    {"n": 4, "en": "Taxi and take-off clearances", "s": "P", "u": ["law-aerodrome-mf-operations", "law-radio-transponder"], "gap": "“Clearance required” and readback items only."},
+    {"n": 4, "en": "Taxi and take-off clearances", "s": "P", "u": ["law-aerodrome-mf-operations", "law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "“Clearance required” and readback items only."},
     {"n": 5, "en": "NOTAM validity", "s": "P", "u": ["fx-notam-header-q-line-en-t-te-et-ligne-q"], "gap": "NOTAM format only."},
     {"n": 6, "en": "Readability scale", "s": "M", "u": [], "gap": ""},
     {"n": 7, "en": "Contacting FSS / FIC", "s": "P", "u": ["wxp-fic", "fx-communications-weather-communications-m-t-o"], "gap": "Services named only."}
@@ -27,7 +27,7 @@
     {"n": 1, "en": "Wind direction indicators", "s": "M", "u": [], "gap": ""},
     {"n": 2, "en": "Runway numbering", "s": "M", "u": [], "gap": "No runway-designation unit."},
     {"n": 3, "en": "Closed runway and taxiway markings", "s": "M", "u": [], "gap": ""},
-    {"n": 4, "en": "Holding position", "s": "P", "u": ["law-radio-transponder"], "gap": "Hold-short readback only."},
+    {"n": 4, "en": "Holding position", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Hold-short readback only."},
     {"n": 5, "en": "Overflying aerodromes", "s": "C", "u": ["law-aerodrome-mf-operations"], "gap": ""}
   ]},
   {"code": "S5", "concept": "law-equip", "section": "PSTAR", "section_fr": "PSTAR", "en": "Aircraft equipment and documents", "fr": "Équipement et documents", "items": [
@@ -41,7 +41,7 @@
   {"code": "S6", "concept": "law-oprules", "section": "PSTAR", "section_fr": "PSTAR", "en": "Pilot responsibilities", "fr": "Responsabilités du pilote", "items": [
     {"n": 1, "en": "Joining the circuit", "s": "P", "u": ["trn-circuit", "law-aerodrome-mf-operations"], "gap": "Circuit pattern and left-hand rule; join procedure absent."},
     {"n": 2, "en": "Special VFR", "s": "C", "u": ["law-special-vfr"], "gap": ""},
-    {"n": 3, "en": "Transponder codes", "s": "C", "u": ["law-radio-transponder"], "gap": ""},
+    {"n": 3, "en": "Transponder codes", "s": "C", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": ""},
     {"n": 4, "en": "Student pilot permit privileges", "s": "M", "u": [], "gap": "No student-permit unit."},
     {"n": 5, "en": "Intersection take-offs", "s": "P", "u": ["law-ats-surveillance-wake-rvsm"], "gap": "Wake spacing only."},
     {"n": 6, "en": "Circuit height and weather", "s": "P", "u": ["trn-circuit", "law-vfr-minima-controlled", "law-vfr-minima-uncontrolled-aeroplane"], "gap": "Circuit height and VFR minima; combined rule not stated."}
@@ -81,7 +81,7 @@
     {"n": 5, "en": "Intersecting runway operations", "s": "M", "u": [], "gap": ""}
   ]},
   {"code": "S12", "concept": "law-airspace", "section": "PSTAR", "section_fr": "PSTAR", "en": "Regulations and airspace", "fr": "Règlements et espace aérien", "items": [
-    {"n": 1, "en": "ADIZ and Class F", "s": "P", "u": ["law-airspace-entry-memory"], "gap": "Class F letter codes only; ADIZ absent."},
+    {"n": 1, "en": "ADIZ and Class F", "s": "P", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": "Class F letter codes only; ADIZ absent."},
     {"n": 2, "en": "VFR weather minima", "s": "C", "u": ["law-vfr-minima-controlled", "law-vfr-minima-uncontrolled-aeroplane"], "gap": ""},
     {"n": 3, "en": "Minimum altitudes and distances", "s": "C", "u": ["law-minimum-altitudes-distances"], "gap": ""},
     {"n": 4, "en": "Day and night definitions", "s": "C", "u": ["law-night-definition"], "gap": ""},
@@ -93,8 +93,8 @@
   {"code": "S13", "concept": "law-airspace", "section": "PSTAR", "section_fr": "PSTAR", "en": "Controlled airspace", "fr": "Espace aérien contrôlé", "items": [
     {"n": 1, "en": "VFR minima in controlled airspace", "s": "C", "u": ["law-vfr-minima-controlled"], "gap": ""},
     {"n": 2, "en": "SVFR in a control zone", "s": "C", "u": ["law-special-vfr"], "gap": ""},
-    {"n": 3, "en": "Class B and C entry", "s": "C", "u": ["law-airspace-entry-memory"], "gap": ""},
-    {"n": 4, "en": "Control zone radio contact", "s": "C", "u": ["law-airspace-entry-memory"], "gap": ""}
+    {"n": 3, "en": "Class B and C entry", "s": "C", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": ""},
+    {"n": 4, "en": "Control zone radio contact", "s": "C", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": ""}
   ]},
   {"code": "S14", "concept": "law-report", "section": "PSTAR", "section_fr": "PSTAR", "en": "Aviation occurrences", "fr": "Événements aéronautiques", "items": [
     {"n": 1, "en": "Purpose of the TSB", "s": "M", "u": [], "gap": ""},
@@ -148,10 +148,10 @@
   ]},
   {"code": "LASP", "concept": "law-airspace", "section": "Air law", "section_fr": "Réglementation", "en": "CARs 601: airspace", "fr": "RAC 601 : espace aérien", "items": [
     {"n": 1, "en": "600.01 Interpretation", "s": "M", "u": [], "gap": ""},
-    {"n": 2, "en": "601.01 Airspace structure", "s": "P", "u": ["law-airspace-entry-memory"], "gap": "Class table only; structure of Canadian airspace absent."},
+    {"n": 2, "en": "601.01 Airspace structure", "s": "P", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": "Class table only; structure of Canadian airspace absent."},
     {"n": 3, "en": "601.02 Airspace classification", "s": "C", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": ""},
     {"n": 4, "en": "601.03 Transponder airspace", "s": "P", "u": ["sys-transponder-failure"], "gap": "Cited in the transponder-failure QRC; transponder airspace not defined.", "e": 1},
-    {"n": 5, "en": "601.04 Class F restricted / advisory", "s": "P", "u": ["law-airspace-entry-memory"], "gap": "Class F in one line; restricted / advisory / danger rules absent.", "e": 1},
+    {"n": 5, "en": "601.04 Class F restricted / advisory", "s": "P", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": "Class F in one line; restricted / advisory / danger rules absent.", "e": 1},
     {"n": 6, "en": "601.06 VFR in Class A", "s": "C", "u": ["law-vfr-separation-conflict-resolution-by-class", "law-airspace-entry-memory"], "gap": ""},
     {"n": 7, "en": "601.07 VFR in Class B", "s": "C", "u": ["law-vfr-separation-conflict-resolution-by-class", "law-airspace-entry-memory"], "gap": ""},
     {"n": 8, "en": "601.08 VFR in Class C", "s": "C", "u": ["law-vfr-separation-conflict-resolution-by-class", "law-airspace-entry-memory"], "gap": "", "e": 1},
@@ -240,7 +240,7 @@
     {"n": 2, "en": "602.134 Request for air traffic services", "s": "M", "u": [], "gap": ""},
     {"n": 3, "en": "602.136 Continuous listening watch", "s": "M", "u": [], "gap": ""},
     {"n": 4, "en": "602.138 Two-way radio failure in VFR", "s": "P", "u": ["sys-radio-failure", "law-twr-light-signals-nordo"], "gap": "Radio-failure QRC and light signals; 602.138 procedure not set out.", "e": 1},
-    {"n": 5, "en": "602.143 Emergency radio frequency capability", "s": "P", "u": ["law-radio-transponder"], "gap": "Squawk codes only."},
+    {"n": 5, "en": "602.143 Emergency radio frequency capability", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Squawk codes only."},
     {"n": 6, "en": "602.144 Interception", "s": "M", "u": [], "gap": ""},
     {"n": 7, "en": "602.145 ADIZ", "s": "C", "u": ["law-adiz-602-145"], "gap": ""},
     {"n": 8, "en": "602.146 ESCAT plan", "s": "M", "u": [], "gap": ""}
@@ -262,7 +262,7 @@
     {"n": 14, "en": "605.29 Flight control locks", "s": "P", "u": ["c150-preflight-poh-highlights"], "gap": "Removal at preflight only."},
     {"n": 15, "en": "605.31 Oxygen equipment and supply", "s": "C", "u": ["law-oxygen-oxyg-ne-car-605-31-32"], "gap": ""},
     {"n": 16, "en": "605.32 Use of oxygen", "s": "C", "u": ["law-oxygen-oxyg-ne-car-605-31-32"], "gap": "", "e": 1},
-    {"n": 17, "en": "605.35 Transponder and altitude reporting", "s": "P", "u": ["law-radio-transponder"], "gap": "Codes only; equipment requirement absent.", "e": 1},
+    {"n": 17, "en": "605.35 Transponder and altitude reporting", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Codes only; equipment requirement absent.", "e": 1},
     {"n": 18, "en": "605.38 ELT", "s": "C", "u": ["law-elt-car-605-38-40"], "gap": "", "e": 1},
     {"n": 19, "en": "605.40 ELT activation", "s": "P", "u": ["law-elt-car-605-38-40", "sys-elt-emergency-equipment"], "gap": "Testing and use only.", "e": 1},
     {"n": 20, "en": "606.02 Liability insurance", "s": "P", "u": ["law-core-aircraft-documents"], "gap": "Insurance as a carry question only."}
@@ -285,7 +285,7 @@
   ]},
   {"code": "LATS", "concept": "law-atc", "section": "Air law", "section_fr": "Réglementation", "en": "Air traffic services and procedures (AIM RAC)", "fr": "Services de la circulation aérienne (AIM RAC)", "items": [
     {"n": 1, "en": "ATS and advisory services", "s": "P", "u": ["law-vfr-separation-conflict-resolution-by-class"], "gap": "Service levels by class only.", "e": 1},
-    {"n": 2, "en": "Communication procedures", "s": "P", "u": ["law-radio-transponder"], "gap": "Call format and readback only.", "e": 1},
+    {"n": 2, "en": "Communication procedures", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Call format and readback only.", "e": 1},
     {"n": 3, "en": "Radar service: clock position system", "s": "P", "u": ["law-ats-surveillance-wake-rvsm"], "gap": "Surveillance separation minima only.", "e": 1},
     {"n": 4, "en": "ATC clearances and instructions", "s": "C", "u": ["law-atc-clearances-instructions"], "gap": "", "e": 1},
     {"n": 5, "en": "Wake turbulence separation", "s": "C", "u": ["law-ats-surveillance-wake-rvsm"], "gap": ""},
@@ -307,7 +307,7 @@
     {"n": 7, "en": "Variation", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 8, "en": "Isogonal", "s": "M", "u": [], "gap": ""},
     {"n": 9, "en": "Agonic line", "s": "M", "u": [], "gap": ""},
-    {"n": 10, "en": "Deviation", "s": "C", "u": ["nav-true-magnetic-compass", "sys-magnetic-compass"], "gap": ""},
+    {"n": 10, "en": "Deviation", "s": "C", "u": ["nav-true-magnetic-compass", "nav-magnetic-compass-principle-use"], "gap": ""},
     {"n": 11, "en": "Track", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 12, "en": "Heading", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 13, "en": "Airspeed", "s": "P", "u": ["wx-density-tas"], "gap": "IAS vs TAS only."},
@@ -356,8 +356,8 @@
     {"n": 20, "en": "True, magnetic and compass headings", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 21, "en": "IAS and CAS", "s": "P", "u": ["c150-airspeed-calibration-snapshots"], "gap": "C150M calibration only."},
     {"n": 22, "en": "TAS and ground speed", "s": "P", "u": ["wx-density-tas"], "gap": "TAS rule of thumb only."},
-    {"n": 23, "en": "Compass errors", "s": "C", "u": ["sys-magnetic-compass"], "gap": ""},
-    {"n": 24, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder"], "gap": "Call format only."}
+    {"n": 23, "en": "Compass errors", "s": "C", "u": ["nav-magnetic-compass-principle-use"], "gap": ""},
+    {"n": 24, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Call format only."}
   ]},
   {"code": "NCMP", "concept": "nav-dr", "section": "Navigation", "section_fr": "Navigation", "en": "Navigation computer", "fr": "Calculateur de navigation", "items": [
     {"n": 1, "en": "Heading and ground speed", "s": "P", "u": ["nav-wind-correction-nav-triangle"], "gap": "Formula only; no flight-computer method.", "e": 1},
@@ -396,7 +396,7 @@
     {"n": 1, "en": "GNSS principles, use and limits", "s": "M", "u": [], "gap": "", "e": 1}
   ]},
   {"code": "NOTH", "concept": "nav-radio", "section": "Navigation", "section_fr": "Navigation", "en": "Other radio and surveillance aids", "fr": "Autres aides radio et de surveillance", "items": [
-    {"n": 1, "en": "Transponder", "s": "P", "u": ["law-radio-transponder"], "gap": "Codes only.", "e": 1},
+    {"n": 1, "en": "Transponder", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Codes only.", "e": 1},
     {"n": 2, "en": "ADS-B", "s": "M", "u": [], "gap": ""},
     {"n": 3, "en": "ELT", "s": "M", "u": [], "gap": "", "e": 1},
     {"n": 4, "en": "PSR and SSR", "s": "M", "u": [], "gap": "", "e": 1},
@@ -530,7 +530,7 @@
     {"n": 1, "en": "Issue times and validity", "s": "P", "u": ["wxp-gfa", "wxp-taf"], "gap": "GFA issue / valid times given; TAF, FB, AIRMET and SIGMET issue and validity periods absent.", "e": 1},
     {"n": 2, "en": "Decoding", "s": "C", "u": ["wxp-taf", "wxp-gfa", "wxp-upper-winds"], "gap": "", "e": 1},
     {"n": 3, "en": "GFA", "s": "C", "u": ["wxp-gfa", "wx-products", "wx-freezing-level"], "gap": "", "e": 1},
-    {"n": 4, "en": "TAF", "s": "C", "u": ["wxp-taf", "wxp-taf-alternate", "wx-products"], "gap": "", "e": 1},
+    {"n": 4, "en": "TAF", "s": "C", "u": ["wxp-taf", "wxp-taf-alternate", "ifr-taf-alternate-logic", "wx-products"], "gap": "", "e": 1},
     {"n": 5, "en": "FB upper winds and temperatures", "s": "P", "u": ["wxp-upper-winds"], "gap": "Use and interpolation; FB coding format, levels and issue times absent.", "e": 1},
     {"n": 6, "en": "AIRMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wx-products"], "gap": ""},
     {"n": 7, "en": "SIGMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wx-products"], "gap": "", "e": 1}
@@ -694,8 +694,8 @@
   ]},
   {"code": "ICMP", "concept": "nav-compass", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Magnetic compass", "fr": "Compas magnétique", "items": [
     {"n": 1, "en": "Compass principle", "s": "M", "u": [], "gap": ""},
-    {"n": 2, "en": "Magnetic dip", "s": "P", "u": ["sys-magnetic-compass"], "gap": "Mentioned only.", "e": 1},
-    {"n": 3, "en": "Turning, acceleration and deceleration errors", "s": "C", "u": ["sys-magnetic-compass"], "gap": "", "e": 1},
+    {"n": 2, "en": "Magnetic dip", "s": "P", "u": ["nav-magnetic-compass-principle-use"], "gap": "Mentioned only.", "e": 1},
+    {"n": 3, "en": "Turning, acceleration and deceleration errors", "s": "C", "u": ["nav-magnetic-compass-principle-use"], "gap": "", "e": 1},
     {"n": 4, "en": "Deviation", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 5, "en": "Compass correction card", "s": "P", "u": ["nav-true-magnetic-compass"], "gap": "Applying deviation only."},
     {"n": 6, "en": "Compass serviceability", "s": "M", "u": [], "gap": ""}
@@ -748,7 +748,7 @@
     {"n": 9, "en": "Visual approach slope indicators", "s": "P", "u": ["plate-lighting-runway-visual-aids"], "gap": "Approach context only.", "e": 1},
     {"n": 10, "en": "Obstruction marking and lighting", "s": "M", "u": [], "gap": ""},
     {"n": 11, "en": "Units and conversions", "s": "C", "u": ["nav-units-constants", "calc-temperature"], "gap": ""},
-    {"n": 12, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder"], "gap": "Call format only."},
+    {"n": 12, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Call format only."},
     {"n": 13, "en": "Wheelbarrowing", "s": "M", "u": [], "gap": "", "e": 1},
     {"n": 14, "en": "Porpoising", "s": "C", "u": ["agk-porpoising-seaplane"], "gap": "", "e": 1},
     {"n": 15, "en": "Hydroplaning", "s": "P", "u": ["fx-radio-runway-radio-piste"], "gap": "Dynamic hydroplaning speed formula only.", "e": 1},
@@ -939,7 +939,7 @@
     {"n": 1, "en": "Emergencies and malfunctions", "s": "C", "u": ["c150-emergency-speeds", "c150-engine-fire-in-flight", "c150-electrical-fire", "sys-electrical-alternator-failure"], "gap": ""}
   ]},
   {"code": "F30", "concept": "law-atc", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 30 · Radio communications", "fr": "Ex 30 · Communications radio", "items": [
-    {"n": 1, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder", "law-aerodrome-mf-operations"], "gap": "Call format and MF references only."}
+    {"n": 1, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8", "law-aerodrome-mf-operations"], "gap": "Call format and MF references only."}
   ]}
 ]},
 {"id": "tp12881", "guide": "TP 12881", "kind": "written", "level": "CPL", "edition": "7th edition, August 2026", "en": "CPAER", "fr": "CPAER", "url": "https://tc.canada.ca/en/aviation/publications/study-reference-guide-written-examinations-commercial-pilot-licence-aeroplane-tp-12881", "reviewed": "2026-11-14", "method": {"en": "Meteorology: read item by item against kb/met and card 05. Air law, navigation and aeronautics: decided by hand from CAR citations, unit headings and matched text, without a line-by-line read of every unit. Nothing is validated against the CARs or the AIM.", "fr": "Météorologie : lu point par point avec kb/met et la fiche 05. Réglementation, navigation et connaissances générales : décidé à la main d'après les citations des RAC, les titres et le texte des unités, sans relecture ligne par ligne. Rien n'est validé contre le RAC ou l'AIM."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité."}, "marks": {"e": {"en": "Essential knowledge for the commercial applicant (aeroplane icon in the guide).", "fr": "Connaissances essentielles pour le candidat professionnel (icône d'avion dans le guide)."}, "d": {"en": "Added at commercial level or needing more depth than the PPL (shaded in the guide).", "fr": "Ajouté au niveau professionnel ou exigeant plus de profondeur qu'au PPL (ombré dans le guide)."}}, "groups": [
@@ -991,10 +991,10 @@
   ]},
   {"code": "LASP", "concept": "law-airspace", "section": "Air law", "section_fr": "Réglementation", "en": "CARs 601: airspace and restrictions", "fr": "RAC 601 : espace aérien", "items": [
     {"n": 1, "en": "600.01 Interpretation", "s": "M", "u": [], "gap": ""},
-    {"n": 2, "en": "601.01 Airspace structure", "s": "P", "u": ["law-airspace-entry-memory"], "gap": "Class table only; structure of Canadian airspace absent."},
+    {"n": 2, "en": "601.01 Airspace structure", "s": "P", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": "Class table only; structure of Canadian airspace absent."},
     {"n": 3, "en": "601.02 Airspace classification", "s": "C", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": "", "e": 1},
     {"n": 4, "en": "601.03 Transponder airspace", "s": "P", "u": ["sys-transponder-failure"], "gap": "Cited in the transponder-failure QRC; transponder airspace not defined."},
-    {"n": 5, "en": "601.04 Class F special use airspace", "s": "P", "u": ["law-airspace-entry-memory"], "gap": "Class F in one line; restricted / advisory / danger rules absent.", "e": 1},
+    {"n": 5, "en": "601.04 Class F special use airspace", "s": "P", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": "Class F in one line; restricted / advisory / danger rules absent.", "e": 1},
     {"n": 6, "en": "601.06 VFR flight in Class A", "s": "C", "u": ["law-vfr-separation-conflict-resolution-by-class", "law-airspace-entry-memory"], "gap": ""},
     {"n": 7, "en": "601.07 VFR flight in Class B", "s": "C", "u": ["law-vfr-separation-conflict-resolution-by-class", "law-airspace-entry-memory"], "gap": "", "e": 1},
     {"n": 8, "en": "601.08 VFR flight in Class C", "s": "C", "u": ["law-vfr-separation-conflict-resolution-by-class", "law-airspace-entry-memory"], "gap": "", "e": 1},
@@ -1043,7 +1043,7 @@
     {"n": 34, "en": "602.37 Transition between regions", "s": "C", "u": ["ifr-altimeter-setting-standard-pressure-regions"], "gap": "", "e": 1},
     {"n": 35, "en": "602.40 Landing or takeoff at night", "s": "M", "u": [], "gap": ""},
     {"n": 36, "en": "602.46 Refusal to transport", "s": "M", "u": [], "gap": ""},
-    {"n": 37, "en": "602.47 Suitable accommodation", "s": "P", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service"], "gap": "Named in rest rules only."}
+    {"n": 37, "en": "602.47 Suitable accommodation", "s": "P", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service", "law-fdp-extensions-split-unforeseen-car-604-vs-700-d"], "gap": "Named in rest rules only."}
   ]},
   {"code": "LEQP", "concept": "law-equip", "section": "Air law", "section_fr": "Réglementation", "en": "CARs 602: operational and emergency equipment", "fr": "RAC 602 : équipement", "items": [
     {"n": 1, "en": "602.58 Equipment prohibition", "s": "M", "u": [], "gap": ""},
@@ -1092,7 +1092,7 @@
     {"n": 2, "en": "602.134 Request for air traffic services", "s": "M", "u": [], "gap": ""},
     {"n": 3, "en": "602.136 Continuous listening watch", "s": "M", "u": [], "gap": ""},
     {"n": 4, "en": "602.138 Two-way radio failure in VFR flight", "s": "P", "u": ["sys-radio-failure", "law-twr-light-signals-nordo"], "gap": "Radio-failure QRC and light signals; 602.138 procedure not set out."},
-    {"n": 5, "en": "602.143 Emergency radio frequency capability", "s": "P", "u": ["law-radio-transponder"], "gap": "Squawk codes only."},
+    {"n": 5, "en": "602.143 Emergency radio frequency capability", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Squawk codes only."},
     {"n": 6, "en": "602.144 Interception signals", "s": "M", "u": [], "gap": ""},
     {"n": 7, "en": "602.145 ADIZ", "s": "C", "u": ["law-adiz-602-145"], "gap": "", "e": 1},
     {"n": 8, "en": "602.146 ESCAT plan", "s": "M", "u": [], "gap": ""}
@@ -1118,14 +1118,14 @@
     {"n": 11, "en": "604.84 Fuelling with passengers and engine running", "s": "C", "u": ["law-604-cabin-safety-fuelling-safety-card"], "gap": "", "d": 1},
     {"n": 12, "en": "604.85 Passenger briefing", "s": "P", "u": ["law-passenger-briefing"], "gap": "General 602.89 briefing only.", "d": 1},
     {"n": 13, "en": "604.86 Safety features card", "s": "C", "u": ["law-604-cabin-safety-fuelling-safety-card"], "gap": "", "d": 1},
-    {"n": 14, "en": "604.98 Flight time limits", "s": "C", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service"], "gap": "", "e": 1, "d": 1},
+    {"n": 14, "en": "604.98 Flight time limits", "s": "C", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service", "law-fdp-extensions-split-unforeseen-car-604-vs-700-d"], "gap": "", "e": 1, "d": 1},
     {"n": 15, "en": "604.99 Flight duty period and rest", "s": "C", "u": ["law-fdp-extensions-split-unforeseen-car-604-vs-700-d", "law-flight-time-fdt-fdp-temps-de-vol-service"], "gap": "", "e": 1, "d": 1},
     {"n": 16, "en": "604.100 Split flight duty period", "s": "C", "u": ["law-fdp-extensions-split-unforeseen-car-604-vs-700-d", "law-flight-time-fdt-fdp-temps-de-vol-service"], "gap": "", "e": 1, "d": 1},
     {"n": 17, "en": "604.101 Extension of flight duty period", "s": "P", "u": ["law-fdp-extensions-split-unforeseen-car-604-vs-700-d"], "gap": "Extension conditions only (15 h case).", "e": 1, "d": 1},
     {"n": 18, "en": "604.102 Unforeseen operational circumstances", "s": "C", "u": ["law-fdp-extensions-split-unforeseen-car-604-vs-700-d", "law-flight-time-fdt-fdp-temps-de-vol-service"], "gap": "", "e": 1, "d": 1},
     {"n": 19, "en": "604.103 Delayed reporting time", "s": "C", "u": ["law-604-delayed-reporting-time-off-controlled-rest"], "gap": "", "e": 1, "d": 1},
     {"n": 20, "en": "604.104 Time with no assigned duties", "s": "C", "u": ["law-604-delayed-reporting-time-off-controlled-rest"], "gap": "", "e": 1, "d": 1},
-    {"n": 21, "en": "604.105 Rest period, positioning", "s": "P", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service"], "gap": "Not treated for 604.", "d": 1},
+    {"n": 21, "en": "604.105 Rest period, positioning", "s": "P", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service", "law-fdp-extensions-split-unforeseen-car-604-vs-700-d"], "gap": "Not treated for 604.", "d": 1},
     {"n": 22, "en": "604.106 Controlled rest on flight deck", "s": "C", "u": ["law-604-delayed-reporting-time-off-controlled-rest"], "gap": "", "d": 1},
     {"n": 23, "en": "604.128 Maintenance, elementary work, servicing", "s": "C", "u": ["law-604-maintenance-validity-manual-sms"], "gap": "", "d": 1},
     {"n": 24, "en": "604.139 Validity periods", "s": "C", "u": ["law-604-maintenance-validity-manual-sms"], "gap": "", "d": 1},
@@ -1157,7 +1157,7 @@
     {"n": 21, "en": "605.30 De-icing or anti-icing equipment", "s": "C", "u": ["law-605-06-equipment-serviceable-605-30-icing"], "gap": "", "d": 1},
     {"n": 22, "en": "605.31 Oxygen equipment and supply", "s": "C", "u": ["law-oxygen-oxyg-ne-car-605-31-32"], "gap": "", "e": 1},
     {"n": 23, "en": "605.32 Use of oxygen", "s": "C", "u": ["law-oxygen-oxyg-ne-car-605-31-32"], "gap": "", "d": 1},
-    {"n": 24, "en": "605.35 Transponder and altitude reporting", "s": "P", "u": ["law-radio-transponder"], "gap": "Codes only; equipment requirement absent.", "d": 1},
+    {"n": 24, "en": "605.35 Transponder and altitude reporting", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Codes only; equipment requirement absent.", "d": 1},
     {"n": 25, "en": "605.38 ELT", "s": "C", "u": ["law-elt-car-605-38-40"], "gap": "", "d": 1},
     {"n": 26, "en": "605.39 Use of ELTs", "s": "C", "u": ["law-elt-car-605-38-40"], "gap": "", "d": 1},
     {"n": 27, "en": "605.40 ELT activation", "s": "P", "u": ["law-elt-car-605-38-40", "sys-elt-emergency-equipment"], "gap": "Testing and use only.", "e": 1}
@@ -1182,12 +1182,12 @@
     {"n": 3, "en": "700.19 Fatigue: non-application, interpretation", "s": "C", "u": ["law-700-ped-scope-records-home-base-meals"], "gap": "", "d": 1},
     {"n": 4, "en": "700.20 Fatigue monitoring and records", "s": "C", "u": ["law-700-ped-scope-records-home-base-meals"], "gap": "", "d": 1},
     {"n": 5, "en": "700.26 Fitness for duty", "s": "P", "u": ["law-fitness-alcohol-drugs"], "gap": "General fitness (602.02) only.", "d": 1},
-    {"n": 6, "en": "700.27 Maximum flight time", "s": "C", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service"], "gap": "", "e": 1, "d": 1},
-    {"n": 7, "en": "700.28 Maximum flight duty period", "s": "C", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service"], "gap": "", "e": 1, "d": 1},
-    {"n": 8, "en": "700.29 Maximum hours of work", "s": "C", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service"], "gap": "", "d": 1},
+    {"n": 6, "en": "700.27 Maximum flight time", "s": "C", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service", "law-fdp-extensions-split-unforeseen-car-604-vs-700-d"], "gap": "", "e": 1, "d": 1},
+    {"n": 7, "en": "700.28 Maximum flight duty period", "s": "C", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service", "law-fdp-extensions-split-unforeseen-car-604-vs-700-d"], "gap": "", "e": 1, "d": 1},
+    {"n": 8, "en": "700.29 Maximum hours of work", "s": "C", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service", "law-fdp-extensions-split-unforeseen-car-604-vs-700-d"], "gap": "", "d": 1},
     {"n": 9, "en": "700.36 Home base", "s": "C", "u": ["law-700-ped-scope-records-home-base-meals"], "gap": "", "d": 1},
     {"n": 10, "en": "700.37 Nutrition break", "s": "C", "u": ["law-700-ped-scope-records-home-base-meals"], "gap": "", "d": 1},
-    {"n": 11, "en": "700.40 Rest periods, general", "s": "C", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service"], "gap": "", "e": 1, "d": 1},
+    {"n": 11, "en": "700.40 Rest periods, general", "s": "C", "u": ["law-flight-time-fdt-fdp-temps-de-vol-service", "law-fdp-extensions-split-unforeseen-car-604-vs-700-d"], "gap": "", "e": 1, "d": 1},
     {"n": 12, "en": "700.41 Disruptive schedules", "s": "C", "u": ["law-700-disruptive-schedules-time-zones-positioning-nights"], "gap": "", "d": 1},
     {"n": 13, "en": "700.42 Rest, time zone differences", "s": "C", "u": ["law-700-disruptive-schedules-time-zones-positioning-nights"], "gap": "", "d": 1},
     {"n": 14, "en": "700.43 Rest, positioning", "s": "C", "u": ["law-700-disruptive-schedules-time-zones-positioning-nights"], "gap": "", "d": 1},
@@ -1286,7 +1286,7 @@
   {"code": "LATS", "concept": "law-atc", "section": "Air law", "section_fr": "Réglementation", "en": "Air traffic services and procedures (AIM RAC)", "fr": "Services ATS (AIM RAC)", "items": [
     {"n": 1, "en": "Air traffic and information services", "s": "P", "u": ["law-vfr-separation-conflict-resolution-by-class"], "gap": "Service levels by class only."},
     {"n": 2, "en": "FSS and FIC", "s": "P", "u": ["wxp-fic"], "gap": "In-flight FIC update only."},
-    {"n": 3, "en": "Communication procedures", "s": "P", "u": ["law-radio-transponder"], "gap": "Call format and readback only.", "d": 1},
+    {"n": 3, "en": "Communication procedures", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Call format and readback only.", "d": 1},
     {"n": 4, "en": "ATS surveillance service", "s": "P", "u": ["law-ats-surveillance-wake-rvsm"], "gap": "Surveillance separation minima only."},
     {"n": 5, "en": "ATC clearances, instructions, readback", "s": "C", "u": ["law-atc-clearances-instructions"], "gap": "", "d": 1},
     {"n": 6, "en": "Wake turbulence separation", "s": "C", "u": ["law-ats-surveillance-wake-rvsm"], "gap": ""},
@@ -1316,7 +1316,7 @@
     {"n": 8, "en": "Variation", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 9, "en": "Isogonal", "s": "M", "u": [], "gap": ""},
     {"n": 10, "en": "Agonic line", "s": "M", "u": [], "gap": ""},
-    {"n": 11, "en": "Deviation", "s": "C", "u": ["nav-true-magnetic-compass", "sys-magnetic-compass"], "gap": ""},
+    {"n": 11, "en": "Deviation", "s": "C", "u": ["nav-true-magnetic-compass", "nav-magnetic-compass-principle-use"], "gap": ""},
     {"n": 12, "en": "Track", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 13, "en": "Heading", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 14, "en": "Airspeed", "s": "P", "u": ["wx-density-tas"], "gap": "IAS vs TAS only."},
@@ -1371,8 +1371,8 @@
     {"n": 23, "en": "True, magnetic and compass headings", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 24, "en": "IAS and CAS", "s": "P", "u": ["c150-airspeed-calibration-snapshots"], "gap": "C150M calibration only."},
     {"n": 25, "en": "TAS and groundspeed", "s": "P", "u": ["wx-density-tas"], "gap": "TAS rule of thumb only."},
-    {"n": 26, "en": "Compass errors", "s": "C", "u": ["sys-magnetic-compass"], "gap": ""},
-    {"n": 27, "en": "Radio communications (navigation)", "s": "P", "u": ["law-radio-transponder"], "gap": "Call format only."}
+    {"n": 26, "en": "Compass errors", "s": "C", "u": ["nav-magnetic-compass-principle-use"], "gap": ""},
+    {"n": 27, "en": "Radio communications (navigation)", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Call format only."}
   ]},
   {"code": "NTRI", "concept": "nav-dr", "section": "Navigation", "section_fr": "Navigation", "en": "Triangle of velocities", "fr": "Triangle des vitesses", "items": [
     {"n": 1, "en": "TAS and heading vector", "s": "P", "u": ["nav-wind-correction-nav-triangle"], "gap": "Formula approach; vector triangle not drawn."},
@@ -1446,7 +1446,7 @@
   ]},
   {"code": "NOTH", "concept": "nav-radio", "section": "Navigation", "section_fr": "Navigation", "en": "Other radio and surveillance aids", "fr": "Autres aides", "items": [
     {"n": 1, "en": "DME", "s": "P", "u": ["ifr-ils-loc-vor-ndb-dme", "plate-vor-ndb-dme-traps"], "gap": "Slant range and arcs only.", "e": 1, "d": 1},
-    {"n": 2, "en": "Transponder", "s": "P", "u": ["law-radio-transponder"], "gap": "Codes only.", "e": 1},
+    {"n": 2, "en": "Transponder", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Codes only.", "e": 1},
     {"n": 3, "en": "ADS-B", "s": "M", "u": [], "gap": ""},
     {"n": 4, "en": "ELT (radio aid)", "s": "M", "u": [], "gap": ""},
     {"n": 5, "en": "PSR and SSR", "s": "M", "u": [], "gap": ""},
@@ -1595,7 +1595,7 @@
     {"n": 1, "en": "Issue times and validity", "s": "P", "u": ["wxp-gfa", "wxp-taf"], "gap": "GFA issue / valid times given; TAF, FB, AIRMET and SIGMET issue and validity periods absent.", "d": 1},
     {"n": 2, "en": "Decoding", "s": "C", "u": ["wxp-taf", "wxp-gfa", "wxp-upper-winds"], "gap": "", "e": 1, "d": 1},
     {"n": 3, "en": "GFA", "s": "C", "u": ["wxp-gfa", "wx-products", "wx-freezing-level"], "gap": "", "d": 1},
-    {"n": 4, "en": "TAF", "s": "C", "u": ["wxp-taf", "wxp-taf-alternate", "wx-products"], "gap": "", "d": 1},
+    {"n": 4, "en": "TAF", "s": "C", "u": ["wxp-taf", "wxp-taf-alternate", "ifr-taf-alternate-logic", "wx-products"], "gap": "", "d": 1},
     {"n": 5, "en": "Upper winds and temperatures (FB)", "s": "P", "u": ["wxp-upper-winds"], "gap": "Use and interpolation; FB coding format, levels and issue times absent."},
     {"n": 6, "en": "AIRMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wx-products"], "gap": ""},
     {"n": 7, "en": "SIGMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wx-products"], "gap": ""}
@@ -1790,13 +1790,13 @@
   ]},
   {"code": "ICMP", "concept": "nav-compass", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Magnetic compass", "fr": "Compas magnétique", "items": [
     {"n": 1, "en": "Compass operating principles", "s": "M", "u": [], "gap": ""},
-    {"n": 2, "en": "Magnetic dip", "s": "P", "u": ["sys-magnetic-compass"], "gap": "Mentioned only."},
+    {"n": 2, "en": "Magnetic dip", "s": "P", "u": ["nav-magnetic-compass-principle-use"], "gap": "Mentioned only."},
     {"n": 3, "en": "Variation (compass)", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 4, "en": "Factors affecting compass operation", "s": "M", "u": [], "gap": ""},
     {"n": 5, "en": "Reading the compass", "s": "P", "u": ["ifr-instrument-failures"], "gap": "Compass errors only."},
     {"n": 6, "en": "Deviation (compass)", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 7, "en": "Compass correction card", "s": "P", "u": ["nav-true-magnetic-compass"], "gap": "Applying deviation only."},
-    {"n": 8, "en": "Turning and acceleration errors", "s": "C", "u": ["sys-magnetic-compass"], "gap": ""},
+    {"n": 8, "en": "Turning and acceleration errors", "s": "C", "u": ["nav-magnetic-compass-principle-use"], "gap": ""},
     {"n": 9, "en": "Compass serviceability checks", "s": "M", "u": [], "gap": ""},
     {"n": 10, "en": "Compass swing", "s": "M", "u": [], "gap": ""},
     {"n": 11, "en": "Heading checks, ground and air", "s": "M", "u": [], "gap": ""}
@@ -1857,7 +1857,7 @@
     {"n": 15, "en": "Obstruction marking and lighting", "s": "M", "u": [], "gap": ""},
     {"n": 16, "en": "Aerodrome operations and runway incursions", "s": "P", "u": ["law-aerodrome-mf-operations"], "gap": "Aerodrome rules only; incursion prevention absent."},
     {"n": 17, "en": "Units and conversions", "s": "C", "u": ["nav-units-constants", "calc-temperature"], "gap": ""},
-    {"n": 18, "en": "Radio communications (operations)", "s": "P", "u": ["law-radio-transponder"], "gap": "Call format only."},
+    {"n": 18, "en": "Radio communications (operations)", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8"], "gap": "Call format only."},
     {"n": 19, "en": "Wheelbarrowing", "s": "M", "u": [], "gap": ""},
     {"n": 20, "en": "Porpoising", "s": "C", "u": ["agk-porpoising-seaplane"], "gap": "", "e": 1},
     {"n": 21, "en": "Hydroplaning", "s": "P", "u": ["fx-radio-runway-radio-piste"], "gap": "Dynamic hydroplaning speed formula only.", "d": 1},
@@ -2058,7 +2058,7 @@
     {"n": 1, "en": "Emergencies and malfunctions", "s": "C", "u": ["c150-emergency-speeds", "c150-engine-fire-in-flight", "c150-electrical-fire", "sys-electrical-alternator-failure"], "gap": ""}
   ]},
   {"code": "K30", "concept": "law-atc", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 30 · Radio communications", "fr": "Ex 30 · Communications radio", "items": [
-    {"n": 1, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder", "law-aerodrome-mf-operations"], "gap": "Call format and MF references only."}
+    {"n": 1, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder", "law-transponder-ssr-psr-ads-b-com-7-8", "law-aerodrome-mf-operations"], "gap": "Call format and MF references only."}
   ]}
 ]},
 {"id": "tp219", "guide": "TP 219", "kind": "flight", "level": "ME", "edition": "11th edition, January 2021", "en": "Multi-engine flight test", "fr": "Test en vol multimoteur", "url": "https://tc.canada.ca/en/aviation/publications/flight-test-guide-multi-engine-class-rating-aeroplane-tp-219e", "reviewed": "2026-11-14", "method": {"en": "Exercises are matched to procedure units (flows, QRCs, POH notes). A unit supports practice and the oral; it does not replace the guide's performance criteria. Pass mark 73 (70 %).", "fr": "Les exercices sont reliés aux unités de procédure (séquences, QRC, notes du POH). Une unité aide à la pratique et à l'oral; elle ne remplace pas les critères de performance du guide. Note de passage 73 (70 %)."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité."}, "groups": [
@@ -2121,8 +2121,8 @@
     {"n": 6, "en": "401.48 Instrument rating period of validity", "s": "P", "u": ["ifr-instrument-rating-recency"], "gap": "24-month test cycle given; validity period not stated as such."}
   ]},
   {"code": "GEN", "concept": "law-oprules", "section": "", "section_fr": "", "en": "CARs 601 / 602: airspace, ATC compliance, altimeter", "fr": "RAC 601 / 602", "items": [
-    {"n": 1, "en": "601.01 Airspace structure", "s": "P", "u": ["law-airspace-entry-memory"], "gap": "Class table only; structure of Canadian airspace absent."},
-    {"n": 2, "en": "601.02 Airspace classification", "s": "C", "u": ["law-airspace-entry-memory"], "gap": ""},
+    {"n": 1, "en": "601.01 Airspace structure", "s": "P", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": "Class table only; structure of Canadian airspace absent."},
+    {"n": 2, "en": "601.02 Airspace classification", "s": "C", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": ""},
     {"n": 3, "en": "601.03 Transponder airspace", "s": "C", "u": ["law-transponder-airspace-car-601-03"], "gap": ""},
     {"n": 4, "en": "601.04 IFR or VFR flight in Class F", "s": "C", "u": ["law-class-f-special-use-car-601-04"], "gap": ""},
     {"n": 5, "en": "601.05 IFR flight in Class A–E / Class F controlled", "s": "P", "u": ["ifr-controlled-uncontrolled-ifr"], "gap": "Clearance requirement stated generally only."},
@@ -2174,12 +2174,12 @@
     {"n": 8, "en": "Reduced visibility operations", "s": "C", "u": ["ifr-reduced-low-visibility-operations"], "gap": ""}
   ]},
   {"code": "ASP", "concept": "law-airspace", "section": "", "section_fr": "", "en": "Canadian airspace", "fr": "Espace aérien canadien", "items": [
-    {"n": 1, "en": "Low level controlled airspace: types, dimensions, flight rules", "s": "P", "u": ["law-airspace-entry-memory", "law-vfr-minima-controlled"], "gap": "Class memory and control-zone minima; types and dimensions of low-level controlled airspace absent."},
-    {"n": 2, "en": "Classification of airspace", "s": "C", "u": ["law-airspace-entry-memory"], "gap": ""},
+    {"n": 1, "en": "Low level controlled airspace: types, dimensions, flight rules", "s": "P", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class", "law-vfr-minima-controlled"], "gap": "Class memory and control-zone minima; types and dimensions of low-level controlled airspace absent."},
+    {"n": 2, "en": "Classification of airspace", "s": "C", "u": ["law-airspace-entry-memory", "law-vfr-separation-conflict-resolution-by-class"], "gap": ""},
     {"n": 3, "en": "Special use airspace", "s": "C", "u": ["law-class-f-special-use-car-601-04"], "gap": ""}
   ]},
   {"code": "RFP", "concept": "ifr-plan", "section": "", "section_fr": "", "en": "Route and flight planning", "fr": "Planification", "items": [
-    {"n": 1, "en": "Publications / charts: requirements and use", "s": "C", "u": ["ifr-current-publication-cycle", "ifr-publication-currency-exam-traps", "ifr-ifr-flight-planning-workflow"], "gap": ""},
+    {"n": 1, "en": "Publications / charts: requirements and use", "s": "C", "u": ["ref-current-publication-cycle-c01", "ifr-publication-currency-exam-traps", "ifr-ifr-flight-planning-workflow"], "gap": ""},
     {"n": 2, "en": "Preferred routing, factors affecting the flight plan", "s": "P", "u": ["ifr-ifr-flight-planning-workflow"], "gap": "Named in the route checklist only."},
     {"n": 3, "en": "Navigation plan and flight log", "s": "P", "u": ["ifr-ifr-flight-planning-workflow"], "gap": "Leg formulas; no flight-log method."},
     {"n": 4, "en": "Altitude selection", "s": "P", "u": ["ifr-ifr-route-altitude-terms", "law-cruising-altitudes"], "gap": "Minimum altitudes and VFR cruising levels; IFR level selection not set out."},
@@ -2242,7 +2242,7 @@
     {"n": 19, "en": "Approach ban: visibility requirements", "s": "C", "u": ["ifr-approach-ban-rvr-general-aviation"], "gap": ""}
   ]},
   {"code": "CAP", "concept": "ifr-plates", "section": "", "section_fr": "", "en": "Canada Air Pilot (CAP GEN)", "fr": "Canada Air Pilot (CAP GEN)", "items": [
-    {"n": 1, "en": "Chart legend: approach, aerodrome, lighting, symbols", "s": "P", "u": ["plate-lighting-runway-visual-aids", "proc-chart-symbol-transition"], "gap": "Lighting and PFAF-symbol notes only; no legend walkthrough."},
+    {"n": 1, "en": "Chart legend: approach, aerodrome, lighting, symbols", "s": "P", "u": ["plate-lighting-runway-visual-aids", "ifr-cap-transition-watch"], "gap": "Lighting and PFAF-symbol notes only; no legend walkthrough."},
     {"n": 2, "en": "Altitude corrections", "s": "C", "u": ["plate-cold-temperature", "ifr-rass-remote-altimeter"], "gap": ""},
     {"n": 3, "en": "Operating minima", "s": "C", "u": ["ifr-cap-definitions-minima", "ifr-landing-minima-visual-reference", "ifr-alternate-minima", "ifr-departure-takeoff-minima"], "gap": ""},
     {"n": 4, "en": "Aircraft categories", "s": "C", "u": ["ifr-cap-definitions-minima"], "gap": ""}

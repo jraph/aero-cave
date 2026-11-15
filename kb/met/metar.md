@@ -49,14 +49,13 @@
 <!-- id: wxp-temp-dewpoint | from: 05 | also: met-stab -->
 
 - Format `TT/DD`; `M` means minus. Spread small ⇒ saturation/fog/low cloud risk, especially cooling/night.
-- `T:` dew-point spread alone does not predict fog; consider wind, cloud, moisture, terrain, advection and precipitation.
-- `M:` freezing level + visible moisture/precip = icing analysis required.
+- `T:` spread alone ≠ fog: `wx-temp-dewpoint`. Icing with freezing level: `wx-freezing-level`.
 ***
 #### Altimeter / pressure trend
 <!-- id: wxp-altimeter | from: 05 | also: met-atmos -->
 
 - `A2992` = 29.92 inHg. Remarks may show sea-level pressure and rapid rise/fall.
-- `M:` high→low or warm→cold = actual lower than indicated.
+- Pressure/temperature altimetry trap: `wx-altimetry-traps`.
 - `T:` rapidly falling pressure often accompanies strengthening system/wind/weather deterioration.
 ***
 #### Pebble

@@ -1,0 +1,15 @@
+{
+ "ifr-alternate-minima-memory": "ifr-alternate-minima",
+ "ifr-approach-brief": "proc-approach-brief-compact",
+ "ifr-current-publication-cycle": "ref-current-publication-cycle-c01",
+ "ifr-descent-approach-math": "agk-descent-planning",
+ "ifr-holding-c06": "ifr-holding",
+ "ifr-rvr-visibility-quick-memory": "ifr-approach-ban-rvr-general-aviation",
+ "plate-pfaf-depiction-transition": "ifr-cap-transition-watch",
+ "proc-chart-symbol-transition": "ifr-cap-transition-watch",
+ "proc-lost-communications-route-altitude-time": "ifr-lost-comms-ifr-route-altitude-time",
+ "sys-magnetic-compass": "nav-magnetic-compass-principle-use",
+ "wx-altimetry-density-altitude": "wx-pa-da",
+ "wx-pressure-altitude-density-altitude": "wx-pa-da",
+ "wx-taf-change-groups": "ifr-taf-alternate-logic"
+}

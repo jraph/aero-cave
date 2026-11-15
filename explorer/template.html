@@ -195,7 +195,8 @@ function readHash() {
   const m = /^#x-([A-Za-z0-9]+)-([A-Za-z0-9]+)-([a-z0-9-]+)$/.exec(location.hash);
   S.p = S.k = S.c = S.g = '';
   const mg = /^#g-([a-z0-9-]+)$/.exec(location.hash); if (mg && G.has(mg[1])) { S.g = mg[1]; return; }
-  const mu = /^#u-([a-z0-9-]+)$/.exec(location.hash); if (mu && U.has(mu[1])) { S.c = U.get(mu[1]).c[0]; focusUnit = mu[1]; return; }
+  const mu = /^#u-([a-z0-9-]+)$/.exec(location.hash); if (mu && !U.has(mu[1]) && (D.retired || {})[mu[1]]) mu[1] = D.retired[mu[1]];
+  if (mu && U.has(mu[1])) { S.c = U.get(mu[1]).c[0]; focusUnit = mu[1]; return; }
   if (!m) return;
   if (V.has(m[1])) S.p = m[1];
   const k0 = {F:'formula', A:'glossary'}[m[2]] || m[2]; if (KIND.has(k0)) S.k = k0;

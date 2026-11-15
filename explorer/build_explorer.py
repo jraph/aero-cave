@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ONT = ROOT / "explorer" / "ontology.json"
 TPL = ROOT / "explorer" / "template.html"
 SYL = ROOT / "explorer" / "syllabus.json"
+RETIRED = ROOT / "explorer" / "retired.json"
 UID = re.compile(r"^<!--\s*id:\s*([a-z][a-z0-9-]*)\s*((?:\|[^>]*?)?)-->\s*\n?")
 KBHEAD = re.compile(r"^<!--\s*concept:\s*([a-z][a-z0-9-]*)\s*((?:\|[^>]*?)?)-->", re.M)
 STUB = re.compile(r"^→ Moved[^\n]*\]\(([^)#\s]+)#([^)\s]+)\)\s*$")
@@ -186,6 +187,18 @@ def build():
     for c in concepts:
         if c["id"] not in used and not any(c["id"] in o["broader"] for o in concepts):
             errors.append(f"concept {c['id']} has no sections and no narrower concepts")
+    # retired unit IDs: never reused, always redirect to a live unit
+    retired = json.loads(RETIRED.read_text(encoding="utf-8")) if RETIRED.exists() else {}
+    live = {s["u"] for s in sections if s.get("u")}
+    for old, new in retired.items():
+        if old in live:
+            errors.append(f"retired id {old} is used again")
+        tgt, seen = new, set()
+        while tgt in retired and tgt not in seen:
+            seen.add(tgt); tgt = retired[tgt]
+        if tgt not in live:
+            errors.append(f"retired id {old} redirects to unknown unit {new}")
+        retired[old] = tgt
     if errors:
         sys.exit("ontology errors:\n  " + "\n  ".join(errors))
 
@@ -232,6 +245,8 @@ def build():
                 if it["s"] == "P" and not it["gap"]:
                     errors.append(f"{g['id']} {grp['code']} {it['n']}: P needs a gap note")
                 for u in it["u"]:
+                    if u in retired:
+                        errors.append(f"{g['id']} {grp['code']} {it['n']}: cites retired unit {u} (now {retired[u]})")
                     if u not in uids:
                         errors.append(f"{g['id']} {grp['code']} {it['n']}: unknown unit {u}")
     if errors:
@@ -306,6 +321,7 @@ def build():
         "concepts": [{k: c.get(k, []) for k in ("id", "en", "fr", "broader", "related", "alt")} for c in concepts],
         "cards": cards,
         "sections": sections,
+        "retired": retired,
     }
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     stamp = hashlib.sha256(payload.encode("utf-8")).hexdigest()[:12]

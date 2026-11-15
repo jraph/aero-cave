@@ -7,23 +7,22 @@
 #### Missed approach
 <!-- id: ifr-missed-approach | from: 09, 10 -->
 
-- At DA/MDA/MAP without required visual reference, or unstable/unsafe, execute missed. Fly published lateral/vertical exactly.
+- At DA/MDA/MAP without required visual reference, or unstable/unsafe, execute missed.
 - Precision/APV: at DA/DH without visual refs → missed.
 - NPA: at MAP or when unable to continue safely/legally → missed; do not descend below MDA before visual refs.
 - Fly published missed exactly: climb, turn limits, nav source, altitude, hold. If missed after MAP, obstacle clearance may not be assured.
 - `T:` power/attitude/config first; then nav. brief missed before FAF.
 - `T:` missed point is obstacle-clearance origin.
-- Brief before FAF: initial climb, turn direction/altitude, fix/hold, nav source, frequencies, climb gradient, special notes.
+- Brief before FAF: see `proc-missed-approach-setup`.
 - `T:` do not continue level past the MAP hunting for the runway.
 ***
 #### Circling
 <!-- id: ifr-circling | from: 10 -->
 
-- Circling minima based on category; maintain visual reference; remain within protected area; use published restrictions.
+- Circling minima by category (prohibited sectors, day/night restrictions, lighting, terrain/obstacles, wx/wind); maintain visual reference; remain within protected area; use published restrictions.
 - If visual reference lost while circling: initiate missed; generally turn toward landing runway and intercept published missed unless procedure/SOP says otherwise.
 - `T:` circling at night/marginal wx is high risk; exam may test category/speed/minima mismatch.
-- Check circling minima/category, prohibited sectors, day/night restrictions, runway lighting, terrain/obstacles, weather/wind.
-- `T:` circling area depends on category/speed: faster than the category means the higher category.
+- `T:` circling area depends on category/speed: see `ifr-cap-definitions-minima`.
 ***
 #### MAP identification
 <!-- id: plate-map-identification | from: 11 | also: ifr-plates | level: IR -->

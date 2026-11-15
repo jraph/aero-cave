@@ -11,19 +11,10 @@
 - Standard = right turns; non-standard = left. Published max speed inside hold wins.
 - Entries: direct / teardrop / parallel. `T:` entry is a method; protected airspace matters.
 - Timing: standard outbound leg `1 min` at/below `14,000 ft ASL`; `1.5 min` above. Adjust outbound to achieve the corresponding inbound time; DME holds use specified distances. `[AIM 2026-1 RAC 10.3/10.6]`
-- Wind: outbound correction about `3×` inbound drift. `T:` EFC and fuel are exam-critical.
-- `T:` no EFC? ask. fuel clock starts early.
+- Wind: outbound correction about `3×` inbound drift.
+- `T:` EFC and fuel are exam-critical: no EFC? ask. Fuel clock starts early.
 - Max holding IAS (unless charted): ≤6 000 ft ASL **200** · 6 001–14 000 **230** · above 14 000 **265** · shuttle climb **310**. Need more → tell ATC at once. [AIM RAC 10.7; CAP GEN]
-- DME hold: end of each leg by DME, not time. [RAC 10.8]
-***
-#### Holding · card 06
-<!-- id: ifr-holding-c06 | from: 06 | kind: formula | level: IR -->
-
-- `F:` outbound timing adjusted to make inbound leg time.
-- `R:` standard hold: outbound `1 min` at/below `14,000 ft ASL`; `1.5 min` above `14,000 ft ASL`. For DME holding, ATC/published procedure specifies distance instead of time. `[AIM 2026-1 RAC 10.3/10.6]`
-- `M:` outbound wind correction ≈ `3×` inbound drift.
-- `F:` DME leg time = leg distance / GS × 60.
-- `T:` hold speed limits/published leg distances override memory.
+- DME hold: end of each leg by DME, not time. [RAC 10.8] `F:` DME leg time = leg distance / GS × 60.
 ***
 #### Shuttle procedure
 <!-- id: ifr-shuttle-procedure | level: IR -->

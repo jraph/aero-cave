@@ -32,3 +32,9 @@
 - Setting too high → reads too high. Cold → true lower: ~4 % per 11 °C below ISA. Mountain wave + cold → overread up to 3 000 ft. [AIR 1.5.3–1.5.8]
 - Blockage patterns: `sys-pitot-static`.
 ***
+#### Pebble
+<!-- id: agk-pitot-static-instruments-pebble | level: PPL CPL IR -->
+
+- BLOCKAGE `pitot → ASI only; static → ASI/ALT/VSI | pitot blocked, drain open: ASI → 0 | pitot + drain blocked: ASI high in climb, low in descent | static blocked: ALT frozen, VSI 0, ASI climb low | alternate static per POH | pitot heat ≠ static heat`
+- PRINCIPLES `ASI pitot vs static | ALT aneroid on static | VSI calibrated leak, lags 6–9 s; IVSI near-zero lag | lead level-off ~10% of VS | ALT ±20 ft SL calibration, ±50 ft ground check | setting too high → reads high | cold: true lower ~4%/11 °C below ISA`
+***

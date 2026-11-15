@@ -95,7 +95,7 @@
 #### EFATO
 <!-- id: trn-efato | concepts: emg-engine | level: PPL CPL -->
 
-- `P:` nose down `Vg/POH`→landing path→small turns only→land. below safe turnback alt: NOSE–FIELD–LAND.
+- `P:` nose down `Vg/POH`→landing path→small turns only→land. below safe turnback alt: NOSE–FIELD–LAND; turnback only with trained/proven margin + suitable conditions.
 - `T:` impossible turn = pull+bank+low AS⇒spin.
 ***
 #### Engine fail in circuit / from altitude
@@ -108,7 +108,7 @@
 #### Mayday / pax / secure
 <!-- id: trn-mayday-pax-secure | concepts: emg, emg-engine | level: PPL CPL -->
 
-- `P:` MAYDAY×3→ident→problem→position→intention→POB/fuel if time. xpdr `7700`; comm fail `7600`; unlawful `7500`.
+- `P:` MAYDAY×3→ident→problem→position/altitude→intention→POB/fuel/assistance if time. xpdr `7700`; comm fail `7600`; unlawful `7500`.
 - `P:` pax: glasses/sharp off→loose secure→belts tight→brace. secure: fuel off→mixture ICO→mags off→alt/gen off→master off after flaps set.
 - `T:` master off before electric flaps set = self-own.
 ***
@@ -116,7 +116,7 @@
 <!-- id: trn-spiral-stall | concepts: agk-stall, emg-ua | level: PPL CPL -->
 
 - `P spiral:` throttle closed→wings level→ease out→power after AS normal. `T:` pulling first=tighter/high-g.
-- `P stall:` AoA↓ NOW→wings coordinated→power as req/full if low→recover attitude. `T:` stall=AoA, not speed; yaw aggravates spin.
+- `P stall:` AoA↓ NOW→wings coordinated→power as req/full if low→recover attitude. `T:` stall=AoA, not speed (`see agk-aerodynamics-lift-drag-equilibrium`); yaw aggravates spin.
 ***
 #### VFR nav / diversion / lost
 <!-- id: trn-vfr-nav-diversion-lost | concepts: nav-dr | level: PPL CPL -->

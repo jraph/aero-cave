@@ -23,7 +23,7 @@
 #### Wind / runway gate
 <!-- id: wxp-wind-runway | concepts: met-decide | level: PPL CPL IR -->
 
-- Compute steady + gust XW/HW/TW; compare POH/SOP/personal limits.
+- Compute steady + gust XW/HW/TW (→ kb: `wxp-wind`); compare POH/SOP/personal limits.
 - Add runway length/slope/surface/RSC/CRFI, obstacles, mechanical turbulence, wind shear.
 - `T:` gusty XW + wet/contaminated short runway = compounded risk, not separate minor issues.
 ***
@@ -52,7 +52,7 @@
 <!-- id: wxp-trend | concepts: met-decide | level: PPL CPL IR -->
 
 - Compare last `3` METAR/SPECI + TAF + GFA panels + radar/satellite + PIREPs; mark CIG/vis/wind/pressure `↑/↓` and precip/cell motion.
-- `M:` observation=now; forecast=expected; trend=forecast performance. Worse observations→confidence↓.
+- → kb: `wx-trend` (now / expected / trend logic; divergence → confidence↓).
 ***
 #### Personal weather matrix
 <!-- id: wxp-personal-matrix | concepts: met-decide | level: PPL CPL IR -->
@@ -85,10 +85,10 @@
 <!-- id: wxp-inrat-method | concepts: ifr-wx | kind: trap | level: IR -->
 
 - `1` locate ETA/time window; `2` decode prevailing/change groups; `3` identify legal threshold; `4` include TEMPO/PROB/BECMG rule; `5` check GFA/AIRMET/SIGMET/NOTAM; `6` calculate wind/fuel/temperature; `7` select legal answer, then note operational risk.
-- `T:` common distractors use wrong time, AGL vs ASL, BKN vs SCT, prevailing vs TEMPO, alternate vs landing minima.
+- `T:` common distractors use wrong time, AGL vs ASL, BKN vs SCT, prevailing vs TEMPO, alternate vs landing minima. → kb: `wx-exam-traps`, `ifr-taf-alternate-logic`.
 ***
 #### Pebble
 <!-- id: wxp-pebble | concepts: met | kind: pebble | level: PPL CPL IR -->
 
-- weather scan `SYNOPTIC-GFA-HAZARDS-TERMINALS-PIREP-WINDS-RUNWAY-TREND` | gates `LEGAL-AIRCRAFT-PILOT-OPTIONS`; legal + no options = fragile | observations worse than forecast=confidence↓ | many amber=red | `UPDATE-FUEL-OPTIONS-DECIDE EARLY` | scud running = shrinking options; turn around early | decoding and hazard recall: concept Pebbles in `kb/met/`.
+- weather scan `SYNOPTIC-GFA-HAZARDS-TERMINALS-PIREP-WINDS-RUNWAY-TREND` | gates `LEGAL-AIRCRAFT-PILOT-OPTIONS`; legal + no options = fragile | many amber=red | `UPDATE-FUEL-OPTIONS-DECIDE EARLY` | scud running = shrinking options; turn around early | decoding and hazard recall: concept Pebbles in `kb/met/`.
 ***

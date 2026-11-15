@@ -18,7 +18,7 @@
 <!-- id: ifr-air-law-ifr-privileges | from: 10 | also: law-lic -->
 
 - IFR needs appropriate licence/rating/medical/recency + aircraft equipment + IFR flight plan/clearance where required.
-- IFR rating privilege depends on group/class/category and aircraft. `G3` single only; `G1` covers all aeroplanes.
+- IFR rating privilege depends on group/class/category and aircraft. Standard 421 IR groups: `G1` multi-engine aeroplane flight test = all aeroplanes; `G2` centreline thrust + single; `G3` single-engine; `G4` helicopter.
 - `T:` INRAT pass≠rating issued; written + experience + skill + admin still needed.
 - `T:` clearance limit is not destination authorization beyond that point; expect hold/further clearance.
 ***
@@ -49,7 +49,7 @@
 #### Pebble
 <!-- id: ifr-rules-privileges-pebble -->
 
-- IFR NEEDS `licence/rating/medical/recency + ACFT equipment + IFR flight plan/clearance where required | G3 single only; G1 all aeroplanes | INRAT pass ≠ rating issued | clearance limit ≠ authorization beyond it`
+- IFR NEEDS `licence/rating/medical/recency + ACFT equipment + IFR flight plan/clearance where required | G1 all aeroplanes · G2 centreline thrust + single · G3 single only · G4 helicopter | INRAT pass ≠ rating issued | clearance limit ≠ authorization beyond it`
 - RECENCY `24-month test/IPC/check | from 1st day of 7th month after: six approaches in the six months before the flight, to specified minima | actual or simulated IMC, or approved FFS/FTD | no six-hour rule; 6–6–6 outdated | records 3 years` CAR 401.05(3)–(3.2)
 - VFR RESTRICTION `pilot request + outside Class A + weather permits | pilot provides own separation incl wake | unable → advise ATC`
 - VISUAL / CONTACT `IFR remains IFR | contact = pilot requests, clear of cloud | wandering can remove published segment protection`

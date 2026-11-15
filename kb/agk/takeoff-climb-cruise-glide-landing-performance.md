@@ -17,7 +17,7 @@
 
 - `F:` `ft/NM = ROC(fpm) × 60 / GS`.
 - `F:` `ROC/ROD(fpm)=GS × gradient(ft/NM)/60`.
-- `M:` `200 ft/NM ≈ 3.3%`.
+- `M:` % conversions (`200 ft/NM ≈ 3.3%`): `see agk-percent-gradient`.
 - `M:` at `90 kt`, `300 ft/NM` needs `450 fpm`; at `120 kt`, needs `600 fpm`.
 - `T:` gradient uses groundspeed. Tailwind increases GS and required fpm.
 ***
@@ -45,7 +45,7 @@
 - `F:` glide distance `NM = height AGL(ft) × glide ratio / 6076`.
 - Example: `9:1` glide ratio ⇒ `1000 ft AGL ≈ 1.48 NM` still-air.
 - `F:` time aloft ≈ height to lose / descent rate.
-- `M C150M:` POH Fig. 3-1 shows approx `6000 ft AGL → 10 NM`; therefore `1000 ft ≈ 1.67 NM` at `60 KIAS`, flaps UP, prop windmilling, zero wind. `[C150M POH 1977 Fig. 3-1]`
+- C150M POH glide data: `see c150-maximum-glide`.
 - `T:` use height above terrain, not altitude ASL. Wind, configuration, propeller, speed and aircraft condition change actual range.
 ***
 #### Runway / landing energy

@@ -9,7 +9,7 @@
 
 - PPL asks “can I fly?” CPL asks “should I accept/continue as paid PIC?”
 - `T:` legal≠professional. customer/time/weather/fuel/runway pressure = threat multipliers.
-- ADM: PAVE before start; 5P enroute; DECIDE abnormal.
+- ADM models and when to use each: `see agk-human-emergency`.
 ***
 #### Systems oral list
 <!-- id: agk-systems-oral-list | from: 03 | also: agk-systems | level: CPL -->
@@ -37,7 +37,7 @@
 #### Pebble
 <!-- id: agk-flight-operations-handling-pebble | level: CPL -->
 
-- CPL MINDSET `PPL: can I fly? CPL: should I accept/continue as paid PIC? | legal ≠ professional | PAVE before start; 5P enroute; DECIDE abnormal | checklist item without system model = weak oral`
-- WILDLIFE `birds <500 ft, migration 2500–3000 (to 20000) | ≥2000 AGL over farms, herds, sanctuaries, parks | no harassing; park landings only where prescribed`
+- CPL MINDSET `PPL: can I fly? CPL: should I accept/continue as paid PIC? | legal ≠ professional | customer/time/weather/fuel/runway pressure = threat multipliers | checklist item without system model = weak oral`
+- WILDLIFE `birds <500 ft, migration 2500–3000 (to 20000) | ≥2000 AGL over farms, herds, sanctuaries, parks | no killing migratory birds with ACFT; sanctuary TKOF/LDG may need permit; national parks only at prescribed places`
 - PORPOISING `pitch oscillation on step from wrong attitude | hold correct attitude, else throttle closed (TKOF) or go around (LDG)`
 ***

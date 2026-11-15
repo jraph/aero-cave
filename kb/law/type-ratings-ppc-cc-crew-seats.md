@@ -178,5 +178,5 @@
 
 - TYPE `blanket: single-pilot non-high-performance | HP: single-pilot AND VNE ≥250 KIAS OR VSO ≥80 KIAS | complex ≠ HP | HP individual type: ≥200 h + qualifying flight within 12 mo`
 - TWO-CREW `≥250 h (or integrated ATP(A) course) | IATRA ≥70% within 24 mo, or SAMRA + SARON | PPC within 12 mo before application | three clocks: IATRA 24 mo / PPC 12 mo / operational PPC currency | type endorsement ≠ operator authorization`
-- OPERATOR CHECKS `PPL45 → CPL200 → ATPL1500 | IR 50 XC PIC / 40 inst | HP type200 / 2crew type250 + IATRA/SAMRA-SARON | 604 CC24 / ground12 | 702 CC12 or PPC24 (IFR + non-crew PPC) | 703 SE PIC CC12*; ME PIC PPC12; ME SIC PPC/CC12 | 704 PPC12 | 705 PPC6 (exceptions) | general 5y/24m/6m | IFR 24m + 6 approaches/6m after month6`.
+- OPERATOR CHECKS `604 CC24 / ground12 | 702 CC12 or PPC24 (IFR + non-crew PPC) | 703 SE PIC CC12*; ME PIC PPC12; ME SIC PPC/CC12 | 704 PPC12 | 705 PPC6 (exceptions) | 604.02 any one of large / turbine / pressurized / ME; 604.03 registration only large, turbojet, or pressurized turbine >6 pax seats | 703 SP-IFR PAX 1000 TT / 100 ME / 50 IMC / 50 type + PPC`
 ***

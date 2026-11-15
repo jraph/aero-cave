@@ -25,10 +25,10 @@
 - **Sources:** [TC AIM 2026-1, COM 4.5.1–4.5.2](https://tc.canada.ca/en/aviation/publications/transport-canada-aeronautical-information-manual-tc-aim-tp-14371); [FAA AIM 1-1-4, VOR Receiver Check](https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap1_section_1.html). Reviewed 2026-10-19.
 
 
-- ILS: identify LOC; set front course; GS alive from below; marker/DME/fixes per plate.
-- NDB: identify; station passage/needle swing; ADF errors near TS/coast/night/mountain.
-- GNSS: current DB, RAIM/WAAS, correct mode, CDI scaling, annunciations.
-- `T:` failed identification = unusable navaid for approach.
+- ILS: setup traps in `plate-ils-loc-traps`; marker/DME/fixes per plate.
+- NDB: identify; station passage/needle swing; ADF errors: see `nav-radio-propagation-vor-ndb-principles`.
+- GNSS: annunciations; setup checks in `ifr-rnav-gnss`.
+- `T:` unserviceable navaid or failed identification = unusable navaid for approach.
 ***
 #### Navigation aids — ADF / VOR / DME / intercepts
 <!-- id: nav-navigation-aids-adf-vor-dme-intercepts | from: 06 | kind: formula | level: CPL IR -->
@@ -58,8 +58,6 @@
 | DME ground range | Ground NM = √(DME² − height NM²). DME 5 NM, height 6076 ft → √24 ≈4.90 NM. DME speed/time meaningful toward/away from station; unreliable for along-track speed on an arc. | Distance horizontale NM = √(DME² − hauteur NM²). DME 5 NM, hauteur 6076 ft → √24 ≈4,90 NM. Vitesse/temps DME pertinents vers/depuis station; pas la vitesse le long d’un arc. |
 | 30° closing time | For a 30° GROUND-track intercept: closing speed = GS × sin30 = GS/2. Time(min)=120 × lateral NM/GS. 2 NM off at 120 kt → 2 min. Wind-correct heading to obtain that ground track. | Interception à 30° de ROUTE SOL : vitesse de rapprochement = GS/2. Temps(min)=120 × écart NM/GS. Écart 2 NM à 120 kt → 2 min. Corriger le cap pour obtenir cette route sol. |
 ***
-- `M VOR checks:` **4–6–4** = ground/VOT ±4° (FAA reference), airborne ±6°, dual receivers ≤4° total difference. Receiver accuracy ≠ tracking allowance. See [VOR receiver checks and Canadian source scope](navaid-checks.md#navigation-aid-checks).
-***
 #### ILS and VORTAC principles — AIM COM 4
 <!-- id: nav-ils-vortac-principles-com-4 | level: IR -->
 
@@ -73,7 +71,7 @@
 #### Nav displays — RMI, HSI, flight director, radio altimeter
 <!-- id: nav-rmi-hsi-fd-radio-altimeter | also: agk-inst | level: IR -->
 
-- **RMI**: slaved heading card + bearing pointer. Head = magnetic bearing **to** station, tail = reciprocal (from). Read directly: no RB + heading sum (that is fixed-card ADF). [TP 2076 2.2.6]
+- **RMI**: see `nav-rmi-advantages-limitations`.
 - **HSI**: rotating heading card, bearing pointer, aircraft symbol with track (deviation) bar, TO/FROM in one view. Dots: VOR ~5° / 10°, ILS ~1¼° / 2½°. [TP 2076 2.1.5 C]
 - **Flight director**: FDI command bars = computed pitch/bank to fly selected mode (HDG, VOR/LOC, APP, G/S, GA, ALT). Computer takes nav receivers, attitude gyro, radar altimeter, compass, air data. `T:` FD shows what to do, not where you are: cross-check raw data. [TP 2076 2.1.5 A–D]
 - **Radio (radar) altimeter**: absolute height by timed radio echo; less accurate over ice, deep snow, rapidly changing terrain. CAT II DH based on radio altimeter. `T:` height AGL ≠ altitude ASL. [TP 2076 2.1.2 F.3; CAP GEN CAT II/III chart legend]
@@ -88,7 +86,7 @@
 | 3–30 MHz (HF) | **sky wave**, skip zones | HF comms |
 | >30 MHz (VHF and up) | **line of sight** | VOR 112.0–117.95 MHz, DME (UHF) |
 
-- **VOR**: 360 radials (magnetic) to/from station · identified by 3-letter Morse · published radials **±3°** · range with altitude: ~**50 NM at 1 500 ft AGL**, **≥150 NM above 30 000 ft** · terrain shadow. Dual VOR check >**4°** apart → suspect; airborne check >**±6°** off published radial → not for IFR.
+- **VOR**: 360 radials (magnetic) to/from station · identified by 3-letter Morse · published radials **±3°** · range with altitude: ~**50 NM at 1 500 ft AGL**, **≥150 NM above 30 000 ft** · terrain shadow. Receiver checks (dual 4°, airborne ±6°): see `ifr-navigation-aid-checks`.
 - **NDB/ADF**: loop antenna senses signal direction; needle = **relative bearing**. Ident 2–3 characters Morse. Flight-checked **±5° approach, ±10° en route**. Classes: H ≥2 000 W · M 50–<2 000 W · L <50 W.
 - ADF errors: **night (twilight) effect** (sky-wave, worst near sunrise/sunset; little below 350 kHz) · **mountain** reflection · **coastal refraction** (shoreline crossed at <30°) · **thunderstorm** (needle points to lightning) · **bank error** in turns · AM receivers / calculators within 5 ft of antenna (200–450 kHz).
 - `T` ADF ± 10° en route vs VOR ± 3°: never treat NDB tracks as precise.
@@ -123,8 +121,8 @@
 #### RMI — uses and limitations
 <!-- id: nav-rmi-advantages-limitations | level: CPL -->
 
-- RMI: slaved heading card + pointer = magnetic bearing **to** station (tail = from); tracking on **one instrument**; wind-correction heading does not change the bearing while on track.
-- Limitations follow the sensors: pointer inherits ADF/VOR errors (night effect, terrain, coastal, bank); card depends on the slaved compass (fail → card wrong, set by hand where a free mode exists).
+- RMI: slaved heading card + pointer = magnetic bearing **to** station (tail = from); read directly: no RB + heading sum (that is fixed-card ADF); tracking on **one instrument**; wind-correction heading does not change the bearing while on track. [TP 2076 2.2.6]
+- Limitations follow the sensors: pointer inherits ADF/VOR errors (see `nav-radio-propagation-vor-ndb-principles`); card depends on the slaved compass (fail → card wrong, set by hand where a free mode exists).
 
 - Sources: [TP 2076](https://www.phoenixaviation.ca/IPM%20tp2076e.pdf) 2.2.6, 2.1.3 D.4.
 ***

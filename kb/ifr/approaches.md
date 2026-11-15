@@ -4,13 +4,6 @@
 [IFR index / Index IFR](README.md) · concept `ifr-app-fly` · sources, legend and release status in the index. Unit IDs are stable: never rename one.
 
 ***
-#### Approach brief
-<!-- id: ifr-approach-brief | from: 09 -->
-
-- `P:` plate/eff date→airport/runway/proc→freq/nav source→MSA/RASS/cold temp→IAF/IF/FAF→altitudes/stepdowns→DA/MDA/HAT/HAA/vis→MAP→missed→runway/LDA/lights→threats.
-- `M:` plate-wx-nav-alt-min-MAP-missed-rwy-threats.
-- `T:` CDI source errors kill. brief both lateral/vertical mode and missed nav setup.
-***
 #### Approach types
 <!-- id: ifr-approach-types | from: 09, 10 -->
 
@@ -25,20 +18,12 @@
 #### ILS / LOC / VOR / NDB / DME
 <!-- id: ifr-ils-loc-vor-ndb-dme | from: 10 | also: nav-radio -->
 
-- ILS: localizer lateral + glideslope vertical; identify frequency/course; beware false GS from above.
+- ILS: localizer lateral + glideslope vertical; identify frequency/course; false GS from above: see `nav-ils-vortac-principles-com-4`.
 - LOC: localizer lateral only; no glideslope; use LOC minima/MDA.
 - VOR: radials FROM station; set correct course; TO/FROM flag matters.
 - NDB/ADF: bearing to station; wind correction/relative bearing; high workload; needle points to station, not necessarily desired track.
 - DME: slant range; DME arcs require lead/radial orientation.
 - `T:` reverse sensing only if display/source/course logic mishandled; know equipment.
-***
-#### Descent / approach math
-<!-- id: ifr-descent-approach-math | from: 10 | kind: formula -->
-
-- `F:` 3° path ≈ `300 ft/NM`; required ROD ≈ `GS × 5`.
-- `F:` descent gradient ft/NM → `ROC/ROD fpm = GS × ft/NM / 60`.
-- `F:` descent distance NM ≈ altitude to lose / `300` for 3°. `T:` add level segments, stepdowns, wind, configuration.
-- `F:` time min = distance/GS×60. `T:` groundspeed, not IAS.
 ***
 #### Initial / intermediate segment
 <!-- id: plate-initial-intermediate-segment | from: 11 | also: ifr-plates | level: IR -->
@@ -47,19 +32,11 @@
 - Stepdown fixes: confirm fix source and altitude. If fix cannot be identified, stepdown may be unusable.
 - `T:` “at or above” altitude is a floor, not a target to duck under early.
 ***
-#### PFAF depiction transition
-<!-- id: plate-pfaf-depiction-transition | from: 11 | also: nav-pubs, ifr-plates | level: IR -->
-
-- Use the symbols actually printed on the plate.
-- From `2026-10-29` (AIC `013/2026`), incremental use of a lightning-bolt symbol for the PFAF/glidepath-intercept altitude on vertically guided procedures.
-- Future co-charted procedures may show both: Maltese cross for non-vertical FAF + lightning bolt for PFAF.
-- `T:` this is a future incremental change, not a blanket reinterpretation of current plates.
-***
 #### FAF / FAP
 <!-- id: plate-faf-fap | from: 11 | also: ifr-plates | level: IR -->
 
 - FAF often Maltese-cross-like symbol on NPA; FAP for precision/APV intercept of final descent path.
-- `P:` before FAF/FAP: correct nav source, approach mode, altimeter, brief complete, landing config plan, missed set, timer if required.
+- `P:` before FAF/FAP flow: see `proc-before-faf-fawp-gate`.
 - `T:` after FAF, workload jumps; if not configured/briefed, go around or delay.
 ***
 #### Profile view
@@ -67,28 +44,28 @@
 
 - Read inbound course, crossing altitudes, stepdowns, descent angle, distance to threshold/MAP, MDA/DA relationship.
 - For NPA: manage MDA, MAP, timing/DME/fix. For precision/APV: manage DA and vertical path.
-- `T:` advisory descent angle/CDFA does not authorize descent below MDA without required visual reference.
+- `T:` advisory descent angle/CDFA ≠ permission below MDA: see `ifr-approach-types`.
 ***
 #### Timing
 <!-- id: plate-timing | from: 11 | also: ifr-plates | level: IR -->
 
 - Timing required if MAP based on time or as backup when published.
-- `F:` time(min)=distance/GS×60.
-- `T:` use ground speed, not IAS. Wind change on final can make timing inaccurate; use primary MAP if available.
+- `F:` time from distance and GS: see `nav-time-speed-distance`.
+- `T:` wind change on final can make timing inaccurate; use primary MAP if available.
 ***
 #### ILS / LOC traps
 <!-- id: plate-ils-loc-traps | from: 11 | also: nav-radio, ifr-plates | kind: trap | level: IR -->
 
 - Identify LOC frequency, set front course, intercept from below glidepath, verify GS alive/captured, monitor raw data.
-- LOC-only approach uses LOC minima and MDA, not ILS DA.
-- `T:` false glideslope if intercept from above; back-course/reverse sensing depends equipment and procedure.
+- LOC-only minima: see `ifr-ils-loc-vor-ndb-dme`; false GS: see `nav-ils-vortac-principles-com-4`.
+- `T:` back-course/reverse sensing depends equipment and procedure.
 ***
 #### VOR / NDB / DME traps
 <!-- id: plate-vor-ndb-dme-traps | from: 11 | also: nav-radio, ifr-plates | kind: trap | level: IR -->
 
-- VOR radials are FROM; NDB bearing is TO; DME is slant range.
+- Radial/bearing/DME geometry: see `ifr-ils-loc-vor-ndb-dme`.
 - DME arc: lead radial/turn anticipation; station passage/DME switch can confuse.
-- `T:` unserviceable navaid or no identification = no approach using that navaid.
+- `T:` unserviceable/unidentified navaid: see `ifr-navigation-aid-checks`.
 ***
 #### Straight-in approaches and NoPT
 <!-- id: ifr-straight-in-no-pt-rac-9-15 | level: IR -->
@@ -111,10 +88,8 @@
 #### Pebble
 <!-- id: ifr-approaches-pebble -->
 
-- BRIEF `plate-wx-nav-alt-min-MAP-missed-rwy-threats | CDI source errors kill`
 - TYPES `precision = ILS, lateral + vertical, DA/DH | APV = LPV, LNAV/VNAV, vertical guidance but not precision, DA | NPA = LOC/VOR/NDB/LNAV, MDA | SCDA/CDFA ≠ permission below MDA | LPV ≠ ILS | uncompensated Baro-VNAV: temperature limits`
-- NAVAIDS `ILS: beware false GS from above | LOC: no glideslope, LOC minima/MDA | VOR radials FROM station | ADF needle points to station, not necessarily desired track | DME slant range`
-- GNSS `database current, correct procedure/transition, RAIM/WAAS, mode/sensitivity enroute → terminal → approach, missed sequencing | direct-to FAF may delete sequencing/protection | OBS/SUSP misuse | “GPS direct” ≠ cleared route`
-- MATH `3° ≈ 300 ft/NM | ROD ≈ GS × 5 | fpm = GS × ft/NM / 60 | groundspeed, not IAS`
+- NAVAIDS `LOC: no glideslope, LOC minima/MDA | VOR radials FROM station | ADF needle points to station, not necessarily desired track | DME slant range | DME arc: lead the turn | stepdown fix unidentified → stepdown unusable`
+- FAF / MAP `“at or above” = floor, not target | after FAF workload jumps: not configured/briefed → go around or delay | timing: wind change on final, use primary MAP`
 - STRAIGHT-IN `NoPT from marked point/sector | misplaced → FAF + request PT | vectors to final ≈2 NM before descent point | approach clearance = resume own nav`
 ***

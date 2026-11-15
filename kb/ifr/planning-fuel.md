@@ -9,7 +9,7 @@
 
 - Route: CFS/CAP/LO chart/preferred routes/airways/direct fixes/MEA/MOCA/AMA/MSA/mountainous region/controlled airspace.
 - Weather: METAR/SPECI actual; TAF legality; GFA area; FD winds/temp; SIGMET/AIRMET/PIREP; NOTAM; RSC/CRFI; freezing level.
-- Leg calc: `TC±VAR=MC±DEV=CH`; `time=dist/GS`; `fuel=time×burn`; `ETA=dep+ETE`; `wind correction` and actual GS.
+- Leg calc: `TC ± WCA = TH ± VAR = MH ± DEV = CH` (see `nav-true-magnetic-compass`; never apply deviation to MC); `time=dist/GS`; `fuel=time×burn`; `ETA=dep+ETE`; `wind correction` and actual GS.
 - `T:` simulated flight questions often test route feasibility, not one isolated fact.
 ***
 #### IFR fuel — CAR 602.88 memory
@@ -38,5 +38,5 @@
 - FUEL CAR 602.88 `prop + alternate: dest + approach + missed → alternate + land → 45 min | prop no alternate: dest + approach + missed → 45 min | turbojet/helicopter: 30 min | add foreseeable taxi/delay/met/routing/traffic`
 - T `reserve is after required legs ≠ fuel on board at destination | exam may hide the missed approach before the alternate leg`
 - WORKFLOW `documents → route → weather → fuel → plates → calculations → decision: legal? safe? equipped? current?`
-- LEG `TC±VAR=MC±DEV=CH | time = dist/GS | fuel = time×burn | ETA = dep + ETE`
+- LEG `TC±WCA=TH±VAR=MH±DEV=CH | time = dist/GS | fuel = time×burn | ETA = dep + ETE`
 ***

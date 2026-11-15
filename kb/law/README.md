@@ -15,7 +15,7 @@
 | [General operating rules / Règles générales d’utilisation](general-operating-rules.md) | `law-oprules` | 14 |
 | [Licences, medicals & privileges / Licences, médicaux et privilèges](licences-medicals-privileges.md) | `law-lic` | 8 |
 | [Medical & fitness / Médical et aptitude](medical-fitness.md) | `law-medical` | 3 |
-| [Night & VFR over-the-top / Vol de nuit et VFR OTT](night-vfr-ott.md) | `law-night` | 3 |
+| [Night & VFR over-the-top / Vol de nuit et VFR OTT](night-vfr-ott.md) | `law-night` | 4 |
 | [Occurrence reporting (TSB) / Déclaration des événements (BST)](occurrence-reporting-tsb.md) | `law-report` | 2 |
 | [Oxygen requirements / Exigences d’oxygène](oxygen-requirements.md) | `law-oxygen` | 2 |
 | [Private operators (CAR 604) / Exploitants privés (RAC 604)](private-operators-604.md) | `law-604` | 6 |

@@ -36,15 +36,15 @@
 #### Complete engine failure
 <!-- id: sys-complete-engine-failure | concepts: emg-engine, emg-sys | level: PPL CPL -->
 
-- `P:` nose→best glide `[POH]`→field/landing path→restart flow if time→MAYDAY/7700→pax/secure→land.
+- `P:` best glide `[POH]` immediately→forced-landing sequence `see trn-forced-landing`; restart flow below if time; MAYDAY/7700 `see trn-mayday-pax-secure`.
 - Restart generic: carb heat→fuel selector→mixture→pump→primer→mags/start as applicable.
 - `T:` best glide gives options only if established immediately.
-- `!:` after takeoff: lower nose and land ahead-ish; turnback only with trained/proven margin and suitable conditions.
+- `!:` after takeoff → `see trn-efato`.
 ***
 #### Propeller / governor — constant-speed
 <!-- id: sys-propeller-governor-constant-speed | concepts: agk-prop | level: CPL ME -->
 
-- Throttle controls manifold pressure; prop control governs RPM/blade angle; mixture controls fuel-air ratio.
+- Control roles (throttle→MP, prop→RPM) → `see sys-powerplant-prop-l4-cave`, `sys-manifold-pressure-mp-l4`; mixture → `see sys-mixture`.
 - `S overspeed:` RPM↑, noise↑. `P:` throttle reduce→prop control reduce RPM if effective→airspeed/power manage→land.
 - `S underspeed/governor fault:` RPM low/unresponsive. Use power setting that avoids vibration/limits; land.
 - `T:` power-setting order and manifold-pressure/RPM limitations are aircraft-specific.
@@ -87,14 +87,14 @@
 #### Altimeter failure / unreliable altitude
 <!-- id: sys-altimeter-failure-unreliable-altitude | concepts: agk-pitot, emg-sys | level: PPL CPL IR -->
 
-- Cross-check against genuinely independent sources. GPS altitude differs from barometric altitude; ATC-displayed pressure altitude may share the aircraft static-system fault. ALT/VSI/ASI can all share one blocked static source.
+- Cross-check against genuinely independent sources. GPS altitude differs from barometric altitude; ATC-displayed pressure altitude may share the aircraft static-system fault. Blockage patterns → `see sys-pitot-static`.
 - `P IFR:` declare→request block altitude/vectors→use reliable backup/standby→avoid terrain/icing→land.
 - `T:` GPS altitude is not barometric altitude and normally cannot replace required altimeter.
 ***
 #### Vacuum / gyro failure
 <!-- id: sys-vacuum-gyro-failure | concepts: agk-gyro, emg-sys | level: PPL CPL IR -->
 
-- Legacy vacuum often powers AI+DG; turn coordinator often electric. `S:` low suction, slow/precessing/frozen or conflicting indications.
+- Instrument power sources → `see agk-gyro-instruments-principles-errors`. `S:` low suction, slow/precessing/frozen or conflicting indications.
 - `P:` identify/cover→use reliable pitot-static/turn/compass/power cues→ATC/no-gyro vectors→land.
 - AI failed: ASI/ALT/VSI/turn/compass/power; DG failed: compass/timed turns/GPS supplementary; TC failed: AI/DG/compass.
 - `T:` gradual failure looks plausible; know common power sources.
@@ -169,7 +169,7 @@
 
 - Often uses exhaust-shroud heat; exhaust crack can introduce CO.
 - `S:` exhaust smell, headache, detector alert.
-- `P:` heat/defrost off→fresh air→land.
+- `P:` heat/defrost off→fresh air→land; full CO flow → `see sys-carbon-monoxide`.
 - `T:` windshield fogging may compete with CO response; safety of occupants first, land promptly.
 ***
 #### Radio failure
@@ -189,7 +189,7 @@
 <!-- id: sys-checklist-declaration | concepts: emg | level: PPL CPL -->
 
 - Memory items stop immediate threat; flow organizes; current checklist verifies/finishes. Outdated memorization is hazardous.
-- `PAN PAN` urgent/reduced safety; `MAYDAY` serious/imminent danger. State callsign/problem/position-altitude/intentions/fuel/persons/assistance.
+- `PAN PAN` urgent/reduced safety; `MAYDAY` serious/imminent danger. Call content → `see trn-mayday-pax-secure`.
 - `T:` declaration is a resource, not failure.
 ***
 #### Symptom quick map
@@ -214,9 +214,6 @@
 #### Pebble
 <!-- id: sys-pebble | concepts: agk-systems | kind: pebble | level: PPL CPL IR -->
 
-- PRESSURIZATION `outflow CLOSE→cabin P↑/ALT↓; OPEN→P↓/ALT↑ | ΔP=cabin−ambient | +relief excess internal P; −relief excess external P | decompression→O₂/emergency DESC per AFM; O₂ rules card 04`
-- FUEL `octane=knock resistance | AVGAS 80/87 RED; 100/130 GREEN (lean/rich); 100LL BLUE (LL=low lead) | JET A max freeze −40°C / A-1 −47°C; B wide-cut | FSII water-ice inhibitor ≠ fuel/airframe de-ice | approved fuel/grade per POH; colour alone≠proof`
-- MP `absolute intake P inHg | OFF≈ambient→IDLE↓↓ | throttle↑ MP↑ | non-turbo ALT↑→MPmax↓; turbo may hold MP to critical ALT | CS throttle→MP/PROP→RPM | carb ice CS MP↓ vs fixed RPM↓ | over-square=MP>RPM/100 (may be OK); overboost=MP>approved limit (RPM-dependent); POH wins`
-- POWERPLANT `JET exhaust | FAN bypass/core; BPR≠AFR | T-PROP gearbox→PROP | T-SHAFT output | STAGE≠SPOOL | fine low pitch/high RPM ↔ coarse high pitch/low RPM | feather drag↓ ≠ reverse | constant-speed governor holds RPM within stops | turboprop ALPHA=governed RPM / BETA=ground blade-angle lever (ground fine→reverse); BETA≠REVERSE; AFM limits | typical piston SE oil→coarse, ME oil→fine/feather on oil loss; POH wins`
-- `CONTROL-DIAGNOSE-MEMORY-CHECKLIST-DECLARE-LAND` | engine=`AIR-FUEL-SPARK-COMPRESSION` | rough=`HEAT-MIX-FUEL-PRIMER-MAGS` | mags independent of master | carb ice: full heat, worse→better | fuel gauges + clock, not gauges alone | low oil P+high T=land ASAP | alternator fail=`SHED-CALCULATE-COMMUNICATE-LAND` | pitot affects ASI; static affects ASI/ALT/VSI | vacuum often AI+DG | smoke/fire=land now | CO heat off/fresh air/land | flap asymmetry stop movement | controls first, checklist second | POH wins.
+- Pressurization, fuel grades, MP, powerplant/PROP, engine basics, pitot-static recaps live in kb: `see agk-pressurization-pebble`, `agk-fuel-fuel-systems-pebble`, `agk-engines-powerplant-pebble`, `agk-pitot-static-instruments-pebble`.
+- `CONTROL-DIAGNOSE-MEMORY-CHECKLIST-DECLARE-LAND` | rough=`HEAT-MIX-FUEL-PRIMER-MAGS`, one diagnostic pass then land | mag check: return BOTH if worse | low oil P+high T=lubrication failure | alternator fail=`SHED-CALCULATE-COMMUNICATE-LAND` | ASI odd only=pitot; ASI+ALT+VSI odd=static | AI+DG disagree + low suction=vacuum | smoke/fire=land now | CO heat off/fresh air/land | flap asymmetry stop movement, don't reverse | trim runaway: hold control, disconnect | controls first, checklist second | POH wins.
 ***

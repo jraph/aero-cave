@@ -57,19 +57,9 @@
 #### Airspace classes / entry
 <!-- id: law-airspace-entry-memory | from: 01, 04 | level: PPL CPL -->
 
-| Class | VFR memory |
-|---|---|
-| A | IFR only |
-| B | ATC clearance + specified equipment/qualification |
-| C | ATC clearance before entry |
-| D | establish two-way communication before entry |
-| E | no VFR clearance generally; IFR controlled |
-| F | special-use rules: `CYR/CYA/CYD` |
-| G | uncontrolled; CARs still apply |
-
+- Class-by-class VFR entry and ATC service: see `law-vfr-separation-conflict-resolution-by-class` ([matrix](#vfr-separation--conflict-resolution-by-class)).
 - Check current chart/CFS for floor, ceiling, transponder and communication requirements.
 - `T:` class rules≠weather minima.
-- See the [VFR separation / conflict-resolution matrix](#vfr-separation--conflict-resolution-by-class) for who ATC separates in Classes B–E.
 ***
 #### VFR separation / conflict resolution by class
 <!-- id: law-vfr-separation-conflict-resolution-by-class | from: 04 | also: law-atc | level: PPL CPL -->
@@ -77,12 +67,12 @@
 | Class | VFR entry | Airborne ATC service |
 |---|---|---|
 | A | prohibited | IFR only; `SEP ALL` |
-| B | clearance; `CVFR` | `SEP ALL`, incl VFR–VFR |
-| C | clearance | `SEP` IFR–IFR; `CR` IFR–VFR as needed; `TFC` all; VFR–VFR `CR O/R` after TFC |
-| D | 2-way comm | `SEP` IFR–IFR only; `TFC` all; workload/equipment permitting: IFR–VFR `CR`, VFR–VFR `CR O/R` |
-| E | none generally; MF/XPDR rules may apply | `SEP` IFR–IFR only; VFR `TFC O/R` workload/equipment permitting; may stop without notice |
+| B | clearance + specified equipment/qualification; `CVFR` | `SEP ALL`, incl VFR–VFR |
+| C | clearance before entry | `SEP` IFR–IFR; `CR` IFR–VFR as needed; `TFC` all; VFR–VFR `CR O/R` after TFC |
+| D | 2-way comm established before entry | `SEP` IFR–IFR only; `TFC` all; workload/equipment permitting: IFR–VFR `CR`, VFR–VFR `CR O/R` |
+| E | no VFR clearance generally; IFR controlled; MF/XPDR rules may apply | `SEP` IFR–IFR only; VFR `TFC O/R` workload/equipment permitting; may stop without notice |
 | F | obey `CYR/CYA/CYD` | surrounding class unless specified; may be controlled, uncontrolled or both |
-| G | none | no ATC control/`SEP`; see-and-avoid + CARs |
+| G | none; uncontrolled, CARs still apply | no ATC control/`SEP`; see-and-avoid + CARs |
 
 - `SEP` formal separation | `CR` conflict resolution for identified aircraft in ATC comm | `TFC` traffic information | `O/R` on request.
 - `C/D → E` when ATC unit closed: check published hours + NOTAM.
@@ -131,7 +121,6 @@
 - VFR CONTROLLED CAR 602.114 `visual reference to surface | flight vis ≥3 SM | cloud 500 ft vertical + 1 SM horizontal | control zone: ground vis ≥3 SM, ≥500 ft from surface except TKOF/LDG`
 - VFR UNCONTROLLED CAR 602.115 `≥1000 AGL: day 1 SM / night 3 SM, cloud 500 ft vert / 2000 ft horiz | <1000 AGL aeroplane: day 2 SM / night 3 SM, clear of cloud`
 - SVFR `control zone only | pilot requests | aeroplane flight vis ≥1 SM | clear of cloud, visual reference to surface | night aeroplane: to land at destination`
-- VFR OTT `day cruise only | ≥1000 ft vertical from cloud | ≥5000 ft between layers | flight vis ≥5 SM | not automatic with PPL`
 - CRUISE CAR 602.34 `>3000 ft AGL | VFR 000–179° odd +500 / 180–359° even +500 | SDA magnetic track, NDA true track | track ≠ heading`
 - AERODROME `left turns unless CFS/ATC says right | no flight below 2000 ft over an aerodrome except listed operations | ATF calls ≠ MF mandatory reports`
 - XPDR/CLASS F `601.03: ABC always, D/E if DAH | CYR = authorization · CYA = avoid unless participating · CYD no clearance · MOA no IFR through unless separated | IFR 500 ft from active CYA | CYR NOTAM ≥24 h`

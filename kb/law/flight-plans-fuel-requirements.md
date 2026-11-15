@@ -7,8 +7,8 @@
 #### Planning / fuel / go-no-go
 <!-- id: law-planning-fuel-go-no-go | from: 03 | also: met-decide | level: CPL -->
 
-- Plan: wx+NOTAM+CFS+fuel+W&B+perf+alternates/options+daylight/night+terrain/airspace.
-- Fuel: taxi/start + trip + contingency + reserve + alternate/diversion + unusable.
+- Pre-flight information (602.71): see `law-pre-flight-information`; add daylight/night, terrain and CFS review.
+- Planning fuel build-up: taxi/start + trip + contingency + reserve + alternate/diversion + unusable. Legal minimum reserve: see `law-fuel-requirements`.
 - `T:` POH burn≠actual burn. marginal VFR + commercial pressure + unfamiliar terrain = trap.
 ***
 #### Flight plan / itinerary
@@ -65,7 +65,7 @@
 - PLAN CAR 602.73 `IFR: flight plan (itinerary only in specified cases) | VFR: plan or itinerary unless within 25 NM of departure aerodrome | international: flight plan | itinerary needs responsible person | landing does not automatically close a plan`
 - ARRIVAL REPORT `ident + type of plan/itinerary + departure + arrival + date/time`
 - FUEL CAR 602.88 `VFR aeroplane day 30 min / night 45 min at normal cruise | IFR prop: approach + missed (→ alternate + land) + 45 min | turbojet/helicopter IFR 30 min | add taxi + foreseeable delays | reserve begins after all required legs`
-- PLANNING `wx + NOTAM + CFS + fuel + W&B + perf + alternates | POH burn ≠ actual burn`
+- PLANNING `fuel = taxi + trip + contingency + reserve + alternate + unusable | POH burn ≠ actual burn`
 - IFR PLAN `contents per CFS | file ≥30 min | no intermediate stops | notify + get clearance for ALT, ROUTE, DEST, TAS ≥5 %, Mach ≥0.01`
 - CREW INSTRUCTIONS `602.87: before acting as crew → duties + exits + emergency equipment`
 ***

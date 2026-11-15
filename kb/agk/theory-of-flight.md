@@ -15,12 +15,12 @@
 | `DRAG` | Total = parasite + induced; parasite = form/pressure + skin friction + interference; induced = drag due to lift/downwash. |
 | `SPD / DRAG` | At given GW/config/ALT in steady level FLT, IAS↓→AOA/induced drag↑; IAS↑→parasite drag↑; minimum total drag ≈ max `L/D`. |
 | `EQUIL` | Straight/level/constant-speed simplified: `L=W; T=D; ΣM=0`; requires aligned thrust & negligible vertical thrust/tail geometry effects. |
-| `BANK` | Coordinated level turn: `L cosφ=W`, `n=1/cosφ`, `Vs(turn)=Vs(level)√n` (same config/weight). |
+| `BANK` | Coordinated level turn: `L cosφ=W` → load factor and stall-speed increase: `see agk-load-factor-accelerated-stall`. |
 | `AIRFOIL` | Wing cross-section: chord = LE→TE straight line; camber = curvature; thickness = upper/lower separation; `CL` varies with AOA up to critical AOA. |
 | `WASHOUT` | Geometric twist: wingtip incidence < root incidence → generally promotes root-first stall/longer aileron effectiveness; not guaranteed. |
 | `AR` | Aspect ratio `AR=b²/S` (span²/wing area); rectangular wing `AR=b/c` (span/chord). |
 | `INDUCED / AR` | At equal `CL` and span efficiency, `AR↑→CDi↓`; `CDi=CL²/(πeAR)` (e = span-efficiency factor). |
-| `T` | Washout ≠ dihedral; AR ≠ wing area; cambered airfoil may lift at geometric AOA 0°; stall at critical AOA. |
+| `T` | Washout ≠ dihedral; AR ≠ wing area; cambered airfoil may lift at geometric AOA 0°. |
 | `T` | CP ≠ CG ≠ AC; lift vector ⟂ relative wind, not necessarily vertical; stall = critical AOA, not a fixed IAS. |
 
 - `SRC:` [FAA PHAK, Ch. 4–5 · Principles/Aerodynamics of Flight](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak); general theory; aircraft POH/AFM governs performance.
@@ -46,6 +46,6 @@
 #### Pebble
 <!-- id: agk-theory-of-flight-pebble | level: PPL CPL -->
 
-- AERO `L ⟂ relative airflow; L = ½ρV²S·CL | CP ≠ CG ≠ AC (≈25% chord) | trim: ΣM(CG) = 0 | drag = parasite (form + friction + interference) + induced | IAS↓ → induced↑; IAS↑ → parasite↑; min drag ≈ max L/D | level: L = W, T = D | level turn n = 1/cosφ, Vs × √n | washout: tip incidence < root → root-first stall generally | AR = b²/S; AR↑ → induced drag↓ | stall = critical AOA, not a fixed IAS`
+- AERO `L ⟂ relative airflow; L = ½ρV²S·CL | CP ≠ CG ≠ AC (≈25% chord) | trim: ΣM(CG) = 0 | drag = parasite (form + friction + interference) + induced | IAS↓ → induced↑; IAS↑ → parasite↑; min drag ≈ max L/D | level: L = W, T = D | level turn L cosφ = W | washout: tip incidence < root → root-first stall generally | AR = b²/S; AR↑ → induced drag↓ | stall = critical AOA, not a fixed IAS`
 - WING DEVICES `sweepback: high Mach, tip stall | fence + stall strip: root stalls first | spoilers: roll or descent | VGs: delay separation | winglets: less induced drag | balance: mass vs flutter, horn vs forces`
 ***

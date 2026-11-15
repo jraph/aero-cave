@@ -8,7 +8,7 @@
 <!-- id: sys-engine-essentials | from: 08 | level: PPL CPL -->
 
 - Piston engine needs: air + fuel + ignition + compression + correct timing.
-- Power loss scan: throttle/mixture/carb heat/fuel selector/quantity/primer/mags/boost pump as installed.
+- Power-loss / roughness scan flow: `see sys-engine-roughness-generic-flow`.
 - `M:` `AIR-FUEL-SPARK-COMPRESSION`.
 - `T:` partial power may be temporary. Keep a landing area continuously available.
 ***
@@ -62,10 +62,9 @@
 | `R` REVERSE | Further BETA→negative blade angle→reverse thrust for ground deceleration; **BETA ≠ REVERSE** (reverse ⊂ beta, on equipped ACFT). |
 | `!` BETA LIMIT | Normally **ground only**; observe FLT-idle gate and AFM limits; in-FLT BETA may cause loss of control/overspeed. |
 | `T` SE vs ME | **Typical piston** SE non-feathering: governor oil P↑→pitch↑/RPM↓; **typical piston** ME full-feathering: oil P↑→pitch↓/RPM↑; oil P loss→counterweights/springs drive feather. **Not universal**; POH/AFM wins. |
-| `!` OEI | Windmilling unfeathered failed PROP→large drag / climb loss; **control→identify→verify→feather→secure per POH**, never feather unverified ENG; feather locks/accumulator/prop architecture vary. |
+| `!` OEI | Windmilling unfeathered failed PROP→large drag / climb loss; never feather unverified ENG. Flow + feather hardware: `see me-engine-failure-flow-generic`, `me-prop-governor-feather-l4-cross-ref`. |
 
 - `SRC:` [FAA AFH Ch 15 · Alpha/Beta](https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/16_afh_ch15.pdf) · [FAA PHAK · engines/PROP](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/faa-h-8083-25c.pdf) · [FAA AFH · ME governor/feather](https://www.faasafety.gov/files/events/SO/SO15/2022/SO15118118/TransitionToMultiengineAirplanes.pdf) · [FAA AMT Powerplant · PROP](https://www.faa.gov/sites/faa.gov/files/09_amtp_ch7.pdf); aircraft POH/AFM controls.
-- `M · L4` **JET=exhaust | FAN=bypass+core | T-PROP=gearbox+PROP | T-SHAFT=shaft | BPR=bypass/core ≠ AFR=air/fuel | STAGE≠SPOOL | FINE=angle↓/RPM↑; COARSE=angle↑/RPM↓ | FEATHER drag↓ ≠ REVERSE | TURBOPROP ALPHA=governed RPM; BETA=ground lever→blade angle; GROUND FINE=low thrust; REVERSE=negative thrust⊂BETA; AFM limits | SE oil→coarse vs ME oil→fine (typical piston only) | verify ENG before feather.**
 
 ***
 #### Manifold pressure · MP — L4
@@ -81,7 +80,6 @@
 | `T` SQUARE / BOOST | **Over-square:** MP(inHg) > RPM/100 (25 inHg / 2300 RPM → 25>23); numerical only, often permitted. **Overboost:** MP above approved limit **for operating conditions / RPM** (may occur below redline); damaging. POH/AFM MP–RPM limits + sequence win. |
 
 - `SRC:` [FAA PHAK · manifold pressure / constant-speed PROP](https://www.faa.gov/sites/faa.gov/files/pilot_handbook_1.pdf) · POH/AFM governs.
-- `M · L4` **MP absolute inHg | OFF≈ambient→IDLE↓↓ | throttle↑ MP↑ | non-turbo ALT↑→MPmax↓ | CS PROP→RPM | carb ice: CS MP↓ / fixed RPM↓ | over-square=MP>RPM/100 (may be OK) | overboost=MP>approved limit (RPM-dependent) | POH wins.**
 
 ***
 #### Diesel engines, FADEC, oil system venting
@@ -93,4 +91,13 @@
 - `?:` general knowledge; no free TC or NAV CANADA text found. Check against a TC-recognized text (e.g. *From the Ground Up*, TC Flight Training Manual) in the fact-check pass.
 
 
+***
+#### Pebble
+<!-- id: agk-engines-powerplant-pebble | level: PPL CPL ME -->
+
+- ENGINE `AIR-FUEL-SPARK-COMPRESSION + timing | partial power may be temporary: keep a landing area | mags independent of master; bad P-lead = live mag | too rich: rough/fouling; too lean: high temps/detonation at high power; full rich may be over-rich at high DA`
+- OIL `low P + high T → reduce power, land ASAP | gauge fault = diagnosis of exclusion | noise/vibration + oil indication = land now`
+- POWERPLANT `JET exhaust | FAN bypass + core; BPR = bypass/core ≠ AFR = air/fuel | T-PROP gearbox → PROP | T-SHAFT shaft | STAGE ≠ SPOOL | FINE angle↓/RPM↑; COARSE angle↑/RPM↓ | CS governor holds RPM within stops | FEATHER drag↓ ≠ REVERSE | ALPHA governed RPM; BETA ground blade-angle lever; REVERSE ⊂ BETA; AFM limits | typical piston SE oil→coarse, ME oil→fine, oil loss→feather; POH wins | verify ENG before feather`
+- MP `absolute inHg; MP ≠ MAP | OFF ≈ ambient → IDLE↓↓ | throttle↑ MP↑ | non-turbo ALT↑ → MPmax↓; turbo holds MP to critical ALT | carb ice: CS MP↓ / fixed RPM↓ | over-square = MP > RPM/100 (may be OK) | overboost = MP > approved limit (RPM-dependent)`
+- DIESEL `compression ignition, Jet-A, FADEC single lever: no mixture, mags or carb ice | blocked/frozen breather → oil forced out`
 ***

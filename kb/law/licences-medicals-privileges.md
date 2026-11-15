@@ -26,8 +26,7 @@
 #### Privileges / ops
 <!-- id: law-privileges-ops | from: 03 | also: law-commercial | level: CPL -->
 
-- CPL privileges depend on rating/medical/recency/aircraft/category/class/ops rules.
-- `T:` CPL≠703/704/705 authorization by itself. Hire/reward usually triggers operator/OC/ops rules unless exception.
+- Privilege stack: see `law-licence-validity-stack`; licence vs AOC: see `law-ppl-cpl-commercial-boundary`.
 - PIC remains responsible for briefing, load, CG, fuel, documents, insurance.
 ***
 #### Licence validity stack
@@ -43,7 +42,7 @@
 - Cost-share: owner/operator + non-commercial purpose + incidental passengers + reimbursement only for fuel/oil/aircraft fees. Employer/volunteer reimbursement has separate strict conditions.
 - `CPL-A:` PPL/VFR-OTT privileges; PIC single-pilot rated aeroplane or co-pilot in commercial service; instruction needs instructor qualification. Day-only restriction applies if issued without night requirement. `[CAR 401.30]`
 - Air transport and listed aerial work generally require an authorizing AOC. `[CAR 700.02]`
-- `M:` licence qualifies pilot; AOC authorizes service. `T:` equal cost split alone is insufficient.
+- `M:` licence qualifies pilot; AOC authorizes service (CPL ≠ 703/704/705 authorization by itself; hire/reward usually triggers operator/AOC rules unless an exception applies). `T:` equal cost split alone is insufficient.
 ***
 #### Licence → type requirements / Exigences licence → type
 <!-- id: q17-licence-type-licence-type | from: 17 | also: law-type | level: CPL IR -->
@@ -51,12 +50,11 @@
 | Label | English | Français |
 |---|---|---|
 | PPL(A) | 17 yr; 45 h TT; PPAER ≥60%; medical Cat 1/3 | 17 ans; 45 h total; PPAER ≥60 %; médical cat. 1/3 |
-| CPL(A) | 18 yr; 200 h aeroplane; 100 PIC incl 20 XC PIC; 65 h post-PPL training (35 dual + 30 solo); CPAER ≥60%; Cat 1 | 18 ans; 200 h avion; 100 h CDB dont 20 en navigation; 65 h après PPL (35 double + 30 solo); CPAER ≥60 %; cat. 1 |
+| CPL(A) | 18 yr; 200 h aeroplane: full requirements → `law-cpl-a-requirements` | 18 ans; 200 h avion : exigences complètes → `law-cpl-a-requirements` |
 | ATPL(A) | 21 yr; 1,500 h total; ≥900 aeroplane; ≥250 PIC/PICUS (max 100 PICUS); 100 night; 75 instrument; XC sub-minima; SAMRA + SARON + INRAT ≥70%; Group 1 IR; Cat 1 | 21 ans; 1 500 h total; ≥900 avion; ≥250 CDB/CDB sous supervision (max 100 supervisées); 100 nuit; 75 instruments; détails navigation; SAMRA + SARON + INRAT ≥70 %; IFR G1; cat. 1 |
 | ME class / Classe multimoteur | No fixed training-hour minimum; ME flight test; class rating is not an individual type rating | Pas d'heures de formation minimales fixes; test multimoteur; classe ≠ qualification de type individuelle |
 | Group 1 IR / IFR G1 | 50 h PIC cross-country + 40 h instrument (≤20 approved ground); INRAT ≥70% + flight test | 50 h nav CDB + 40 h instruments (≤20 entraîneur approuvé); INRAT ≥70 % + test en vol |
-| HP individual type / Type HP | ≥200 h aeroplane; type-specific ground/flight training; qualifying flight within 12 months | ≥200 h avion; formation sol/vol propre au type; vol de qualification dans les 12 mois |
-| Two-crew type / Type 2 pilotes | ≥250 h aeroplane (integrated-course exception); type training; IATRA ≥70% within 24 mo OR qualifying SAMRA+SARON/ATPL route; PPC/check for type | ≥250 h avion (exception cours intégré); formation type; IATRA ≥70 % dans les 24 mois OU voie SAMRA+SARON/ATPL admissible; PPC/vérif. du type |
+| HP / two-crew type / Type HP / 2 pilotes | → `law-acft-type-ratings-hp-two-crew-iatra-ppc-oct-2026` | → `law-acft-type-ratings-hp-two-crew-iatra-ppc-oct-2026` |
 ***
 #### Flight training units — 406.02 / 406.03
 <!-- id: law-ftu-406-02-03-operator-certificate | level: CPL -->
@@ -74,6 +72,7 @@
 
 - VALIDITY `LICENCE-RATING-MEDICAL-RECENCY-AIRCRAFT-OPERATION`
 - CPL-A `age 18 | Cat 1 | 80 h ground school | CPAER 60% each subject + overall | 200 h TT incl 100 PIC + 20 PIC XC | 65 h post-PPL = 35 dual + 30 solo | dual: 5 night incl 2 XC, 5 XC, 20 instrument (max 10 sim) | solo: 300 NM XC with 3 full stops, one ≥250 NM straight-line; 5 h night with 10 TKOF/LDG | flight test within 12 mo`
+- LADDER `PPL 17 yr, 45 h, PPAER ≥60%, Cat 1/3 | ATPL 21 yr, 1,500 h (≥900 aeroplane, ≥250 PIC/PICUS, 100 night, 75 instrument), SAMRA + SARON + INRAT ≥70%, G1 IR, Cat 1 | G1 IR 50 h PIC XC + 40 h instrument (≤20 ground), INRAT ≥70% + flight test | ME class: no fixed hours, flight test`
 - PPL-A `no hire/reward except CAR 401.28 cases | cost-share: owner/operator + non-commercial purpose + incidental passengers + fuel/oil/aircraft fees only | equal split alone insufficient`
 - CPL-A `licence qualifies pilot; AOC authorizes service | CPL ≠ 703/704/705 authorization | day-only if issued without night requirement`
 - FLIGHT TEST `instructor letter ≤30 d | stable VFR approach: ROD ≤1000 fpm, speed +10/−5, stable by 200 AGL or overshoot (test criterion, not a CAR minimum)`

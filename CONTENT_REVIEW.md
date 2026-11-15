@@ -14,6 +14,16 @@ Carried from the retired CPAER coverage matrix; still open on 14 November 2026. 
 
 The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json` and the explorer's guide pages; `python3 explorer/build_explorer.py --audit` lists concepts with TC items but no knowledge note.
 
+## De-duplication pass — 15 November 2026
+
+Semantic duplicates (same fact restated) reviewed in four batches: law, IFR + navigation (+ card 12), meteorology (+ card 05), aeronautics + multi-engine (+ cards 02, 07, 08). 109 duplicate clusters; each fact kept in one canonical unit, other places trimmed to a pointer (`→ unit-id`). Extra qualifiers moved into the canonical before trimming.
+
+- **Retired (13), redirected in `explorer/retired.json`:** `ifr-current-publication-cycle`, `plate-pfaf-depiction-transition`, `proc-chart-symbol-transition`, `proc-lost-communications-route-altitude-time`, `sys-magnetic-compass`, `ifr-descent-approach-math`, `ifr-approach-brief`, `ifr-holding-c06`, `ifr-rvr-visibility-quick-memory`, `ifr-alternate-minima-memory`, `wx-altimetry-density-altitude`, `wx-pressure-altitude-density-altitude` (both into new `wx-pa-da`), `wx-taf-change-groups`. TC citations moved to the redirect targets; trimmed units keep their citations plus the new canonical.
+- **Kept on purpose:** recall/memory units with recall value; 702 vs 703 crew rules (different regulations); `wx-met` (only note of the go/no-go topic); bilingual recency rows (only French version of CAR 401.05 clocks).
+- **Corrections found:** IFR planning leg chain (`TC±WCA=TH±VAR=MH±DEV=CH`); ME physics line contradicting the Vmc factors; C150M glide figures moved to the POH card; wildlife and HF Pebble lines that did not match their files; rate-one bank (exact `atan(3·TAS/1091)`: 90 kt ≈ 14°, 120 kt ≈ 18°; `TAS/10 + 7` overestimates 1–2°).
+- **New Pebbles:** cold-temperature, night/VFR OTT, engines, pressurization, gyro, pitot-static, GNSS, IFR recall.
+- **Open:** `ifr-takeoff-visibility-rvr-trap` "inverse also possible" line to check against CAR 602.126; formulas/abbreviations collections still restate some kb formulas and definitions (reference collections, left as is); topic placement: `nav-radio` file sits in kb/ifr, load factor / VA notes in the stall file.
+
 ## CPAER essential and commercial-depth gaps filled — 15 November 2026
 
 All 165 CPAER (TP 12881, 7th ed.) items marked essential (✈) or commercial depth that were Missing now cite a note: 160 covered, 5 partial. CPAER: 415 covered / 258 partial / 182 missing (missing items left are neither ✈ nor depth). 17 identical PPAER items take the same citations (CPAER-first rule); 33 PPAER ✈ items stay missing.

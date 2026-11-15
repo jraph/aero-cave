@@ -8,12 +8,12 @@
 <!-- id: agk-handling-landings | from: 03 | also: agk-ops | level: CPL -->
 
 - Steep turn: clearing→entry speed/pwr→bank→back pressure→scan→rollout lead. `T:` altitude by attitude first.
-- Slow flight: coord critical. Stall: AoA↓ first, power as req, coord. Spiral: idle→wings level→ease.
-- Precision/P180: key positions + wind + energy. `T:` high fixable, low usually not.
-- Short LDG: stable speed/profile/touchdown zone; fast final eats runway. Soft LDG: protect nose, keep moving, yoke back.
+- Slow flight: coord critical. Stall / spiral recovery flows: `see trn-spiral-stall`.
+- Precision/P180: key positions + wind + energy; key-position flow + high-vs-low trap: `see trn-engine-fail-in-circuit-from-altitude`.
+- Short LDG: stable speed/profile/touchdown zone; fast-final energy penalty: `see agk-runway-landing-energy`. Soft LDG: protect nose, keep moving, yoke back.
 ***
 #### Pebble
 <!-- id: agk-circuit-approach-landing-pebble | level: CPL -->
 
-- HANDLING `steep turn: altitude by attitude first | stall: AoA↓ first, power as required, coordinate | spiral: idle → wings level → ease | P180: high fixable, low usually not | short LDG: fast final eats runway | soft LDG: protect nose, keep moving, yoke back`
+- HANDLING `steep turn: altitude by attitude first | slow flight: coordination critical | P180: key positions + wind + energy | short LDG: stable profile, touchdown zone | soft LDG: protect nose, keep moving, yoke back`
 ***

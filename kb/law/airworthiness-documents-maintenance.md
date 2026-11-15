@@ -42,7 +42,7 @@
 | Journey log | carried unless a listed exception applies `[CAR 605.95]` |
 | Radio licence | carried if one has been issued for onboard apparatus `[CAR 605.03.1]` |
 
-- Journey-log exception: may remain behind when no landing and shutdown is planned anywhere other than departure, subject to exact CAR conditions.
+- Journey-log carriage exception: see `law-journey-log-technical-records-car-605-92-97`.
 - `T:` proof of insurance is required by CAR 606.02, but “must be carried on board” is not stated as a universal CAR 202/605 document rule.
 - PIC responsible. Also onboard as applicable: required licences/medical.
 - `T:` valid document≠current pilot or airworthy aircraft. Current CFS/AIP/NOTAM/POH wins.

@@ -10,7 +10,7 @@
 - Most probable conditions ≤`24,000 ft`; issued `4×/day` approx `2330/0530/1130/1730Z`, valid `0000/0600/1200/1800Z`.
 - Six charts: C&W + icing/turb/freezing at valid/`+6 h/+12 h`; final C&W adds `12 h` IFR outlook.
 - `P:` region/time→system/motion→cloud bases/tops→vis/WX/wind→icing/turb/freezing→comments/outlook; interpolate snapshots with buffer.
-- Heights hundreds ft `ASL` unless `CIG/AGL`; METAR/TAF clouds AGL. `LCA≤25% | PTCHY 26–50% | XTNSV/INTMT>50%`; `P6SM`=>6 SM.
+- Heights hundreds ft `ASL` unless `CIG/AGL`; METAR/TAF clouds AGL. `LCA≤25% | PTCHY 26–50% | XTNSV/INTMT>50%`.
 - Movement/`6 h`: `5 kt≈30 NM`, `10 kt≈60 NM`, `20 kt≈120 NM`. `T:` local/patchy hazard may sit on route.
 ***
 #### AIRMET / SIGMET / PIREP

@@ -10,7 +10,7 @@
 - Dew point = temperature air must cool to reach saturation at constant pressure/water content.
 - Small `T-Td` spread + cooling ⇒ fog/low cloud increasingly likely.
 - Temperature inversion = temp increases with height; strongly stable, traps haze/smoke, can create wind shear.
-- `T:` small spread alone does not guarantee fog.
+- `T:` small spread alone does not guarantee fog; consider wind, cloud, moisture, terrain, advection and precipitation.
 ***
 #### Lapse rates / stability
 <!-- id: wx-lapse-stability | from: 16 -->
@@ -56,7 +56,7 @@
 
 - Droplets/crystals grow by collision/coalescence or ice-crystal process.
 - `RA` liquid; `DZ` tiny droplets; `SN`; `PL` ice pellets; `FZRA/FZDZ` supercooled liquid freezing on contact.
-- `!:` freezing rain/drizzle = high-severity icing signal.
+- `!:` freezing rain/drizzle = high-severity icing signal → `wx-icing`.
 - Virga = precip evaporates before ground; may indicate downdrafts/microburst potential.
 ***
 #### Change of state and latent heat

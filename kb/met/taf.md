@@ -14,21 +14,12 @@
 #### TAF alternate / risk
 <!-- id: wxp-taf-alternate | from: 05 | also: ifr-alt | level: IR -->
 
-- `BECMG` improve=end, deteriorate=start; `TEMPO`≥alternate minima; `PROB`≥landing minima.
+- Alternate TAF rule (`BECMG` end/start, `TEMPO`≥alternate, `PROB`≥landing): `ifr-taf-alternate-logic`.
 - `T:` alternate≠landing≠approach-ban minima. `TEMPO` near ETA and `PROB30/40` high-consequence `TS/FZRA/low vis` require fuel/options; many short groups reduce confidence.
-***
-#### TAF change groups
-<!-- id: wx-taf-change-groups | from: 06 | kind: formula | level: PPL CPL IR -->
-
-- `BECMG` improving: use new condition at end of period.
-- `BECMG` deteriorating: use new condition at start of period.
-- `TEMPO` must stay ≥ alternate minima.
-- `PROB` must stay ≥ landing minima.
-- `T:` alternate minima ≠ landing minima ≠ approach ban.
 ***
 #### Pebble
 <!-- id: met-taf-pebble -->
 
 - TAF `FM = permanent from the minute, new self-contained period | BECMG = gradual permanent | TEMPO = each <1 h, combined ≤½ TEMPO window | PROB30/40 | do not average groups`
-- ALTERNATE `BECMG improve = end / deteriorate = start | TEMPO ≥ alternate minima | PROB ≥ landing minima | alternate ≠ landing ≠ approach-ban minima`
+- ALTERNATE `rule: ifr-taf-alternate-logic | alternate ≠ landing ≠ approach-ban minima | TEMPO near ETA / PROB30/40 TS-FZRA-low vis → fuel + options`
 ***

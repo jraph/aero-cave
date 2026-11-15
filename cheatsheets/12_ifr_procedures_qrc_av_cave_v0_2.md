@@ -24,7 +24,7 @@
 - `M:` `CRAFT+` = clearance limit | route | altitude | frequency | transponder | release/void/EFC/restrictions.
 - `P:` copy verbatim→compare filed/expected→mark initial altitude and top altitude→identify SID/transition→read back limit/route/altitude/restrictions/squawk.
 - Ask immediately if ambiguous, impossible, below safe altitude, equipment-incompatible or route not understood.
-- `T:` takeoff clearance is separate. “Expect” altitude is not authorization to climb.
+- `T:` “Expect” altitude is not authorization to climb. Clearance contents/traps → kb: `ifr-clearance-readback`.
 ***
 #### IFR cockpit / instrument check
 <!-- id: proc-ifr-cockpit-instrument-check | concepts: agk-inst | level: IR -->
@@ -59,9 +59,8 @@
 #### Climb gradient check
 <!-- id: proc-climb-gradient-check | concepts: ifr-dep | level: IR -->
 
-- `F:` required `fpm = GS × ft/NM ÷ 60`.
-- `P:` compare expected GS/ROC with published requirement before departure; monitor actual performance.
-- `T:` tailwind raises GS and required fpm. If unable, advise ATC before takeoff or immediately when recognized.
+- `P:` compare expected GS/ROC with published requirement before departure; monitor actual performance. Formula/tailwind trap → kb: `agk-climb-descent-gradient`.
+- If unable, advise ATC before takeoff or immediately when recognized.
 ***
 #### Enroute flow
 <!-- id: proc-enroute-flow | concepts: ifr-enr | level: IR -->
@@ -90,15 +89,14 @@
 <!-- id: proc-hold-clearance-copy | concepts: law-atc, ifr-enr, ifr-hold | level: IR -->
 
 - `M:` `F-D-C-L-A-E` = fix | direction | course/radial/bearing | leg length/time | altitude | EFC.
-- `P:` copy/read back→slow before fix→determine inbound course/turn direction→choose safe entry→brief wind/timing/fuel/EFC→report entry if required.
+- `P:` copy/read back→slow before fix→determine inbound course/turn direction→choose safe entry→brief wind/timing/fuel/EFC→report entry if required. → kb: `ifr-holding`.
 - `T:` no EFC or fuel ambiguity? ask.
 ***
 #### Hold entry / execution
 <!-- id: proc-hold-entry-execution | concepts: ifr-hold | level: IR -->
 
 - `P:` cross fix→entry→correct side/protected airspace→time outbound abeam/wings-level as appropriate→intercept inbound→adjust timing/wind.
-- Entry: direct / teardrop / parallel; any suitable entry that remains protected is acceptable.
-- Wind rough rule: outbound drift correction ≈ `3×` inbound correction; adjust outbound time to achieve inbound target.
+- Entries, timing, wind `3×` rule, speeds → kb: `ifr-holding`. Any suitable entry that remains protected is acceptable.
 - TC test targets: track/course `±10°` or within ½-scale, airspeed `±10 kt`, altitude `±100 ft`.
 - `T:` perfect entry sketch with poor fuel awareness is failure. Continuously compute max holding time and alternate fuel.
 ***
@@ -108,11 +106,6 @@
 - `P:` hear approach/runway/route/altitude→read back→verify clearance does not descend below published/assigned minimum→set intercept heading/course/source→arm correct mode only when appropriate.
 - On vectors: maintain last assigned altitude until cleared lower or established as required by clearance/procedure.
 - `T:` approach clearance ≠ landing clearance.
-***
-#### Chart-symbol transition
-<!-- id: proc-chart-symbol-transition | concepts: nav-pubs, ifr-plates | level: IR -->
-
-- Use current-chart symbology. PFAF lightning-bolt depiction is introduced incrementally from `2026-10-29`; apply it only where printed.
 ***
 #### Frequencies / nav source
 <!-- id: plate-frequencies-nav-source | concepts: nav-radio, ifr-plates | level: IR -->
@@ -142,7 +135,6 @@
 - RNAV: confirm approach-active mode within `2 NM` before FAWP inbound when required by TC test criteria.
 - `G:` stable enough to continue; if behind, request delay/vector or go missed.
 - `T:` do not descend because vertical guidance appears unless correct mode/procedure/altitude intercept conditions are verified.
-- Also before FAF: altimeter set/cross-checked, missed loaded/briefed, minimums bugged.
 ***
 #### Stable approach guide
 <!-- id: proc-stable-approach-guide | concepts: ifr-app-fly | level: IR -->
@@ -157,7 +149,7 @@
 
 - Prefer CDFA when practical for NPA with suitable slope.
 - `P:` calculate descent→cross FAF at/above altitude→constant descent→respect every stepdown→level at/above MDA if required or treat MDA as decision-style altitude when visual references not imminent.
-- No descent below MDA without required visual reference; no missed-approach turn before MAP.
+- No missed-approach turn before MAP. Visual-reference rule → kb: `ifr-landing-minima-visual-reference`.
 - `T:` CDFA does not turn MDA into a legal DA. Prevent momentum from carrying below MDA.
 ***
 #### ILS / LPV / LNAV-VNAV
@@ -165,7 +157,7 @@
 
 - `P:` intercept lateral course→vertical path from valid position/below as applicable→confirm correct annunciation→small corrections→cross-check altitude/distance→DA decision.
 - ILS/LPV: maintain no more than ½-scale deviations for test standard; at DH/DA without required visual reference→missed.
-- `T:` false glideslope from above; LPV≠ILS; LNAV/VNAV temperature limits; automation downgrade can change minima.
+- `T:` automation downgrade can change minima. False GS / LPV≠ILS / LNAV/VNAV temp limits → kb: `nav-ils-vortac-principles-com-4`, `ifr-approach-types`.
 ***
 #### LNAV / VOR / LOC / NDB
 <!-- id: proc-lnav-vor-loc-ndb | concepts: nav-radio, nav-gnss, ifr-app-fly | level: IR -->
@@ -188,7 +180,7 @@
 - Initiate promptly at MAP/MAWP or DH/DA, or earlier if unstable/unsafe/unable.
 - Follow published missed or ATC modification; report missed; climb to published/cleared altitude; advise if unable climb gradient/restriction.
 - TC test targets: airspeed `+10/-5`, heading/track `±10°`, altitude `±100 ft`.
-- `T:` first turn no earlier than published/MAP requirements. Do not level beyond MAP searching for runway.
+- `T:` first turn no earlier than published/MAP requirements. → kb: `ifr-missed-approach`.
 ***
 #### Missed approach setup
 <!-- id: proc-missed-approach-setup | concepts: ifr-app-fly, ifr-missed | level: IR -->
@@ -201,24 +193,15 @@
 <!-- id: proc-circling | concepts: ifr-missed | level: IR -->
 
 - `P:` use correct category/minima→identify runway/traffic→remain visual/protected→configure conservatively→bank ≤aircraft/SOP limits→stable normal descent.
-- Lost visual: execute missed; initially manoeuvre toward landing runway as appropriate, then intercept published missed per plate/SOP.
-- `T:` speed above category may require higher category. Night/marginal circling deserves higher personal minima.
+- Lost visual / category vs speed → kb: `ifr-circling`, `ifr-cap-definitions-minima`.
+- `T:` night/marginal circling deserves higher personal minima.
 ***
 #### Lost communications — immediate
 <!-- id: proc-lost-communications-immediate | concepts: emg-comms | level: IR -->
 
 - `P:` maintain control/clearance→check volume/squelch/audio panel/mic/PTT/frequency/circuit breakers per POH→try last/next/121.5/FSS/relay→listen on NAV/voice→squawk `7600`.
 - Transmit blind with intentions/position/altitude; monitor for light signals if applicable; use phone after landing.
-- `T:` specific SID/STAR/IAP comm-fail instructions override generic memory.
-***
-#### Lost communications — route / altitude / time
-<!-- id: proc-lost-communications-route-altitude-time | concepts: emg-comms | level: IR -->
-
-- VMC after failure: continue VFR and land as soon as practicable.
-- IMC route: `A-V-E-F` = assigned→vectored direct to specified fix/route/airway→expected→filed.
-- IMC altitude: highest `A-M-E` = assigned / minimum IFR altitude / expected.
-- Descent/approach timing: use applicable latest ETA/EAT/EFC logic and published procedure.
-- `T:` generic mnemonic cannot answer every uncovered scenario; exercise judgment and comply with published instructions.
+- Then route `A-V-E-F` / altitude highest `A-M-E` / latest ETA-EAT-EFC → kb: `ifr-lost-comms-ifr-route-altitude-time`; published comm-fail instructions override → kb: `ifr-lost-comms-general`.
 ***
 #### Vacuum / attitude-heading failure
 <!-- id: proc-vacuum-attitude-heading-failure | concepts: agk-gyro, emg-sys, ifr-emerg | level: IR -->
@@ -237,7 +220,7 @@
 #### Pitot/static failure
 <!-- id: proc-pitot-static-failure | concepts: agk-pitot, emg-sys, ifr-emerg | level: IR -->
 
-- Pitot blocked + drain open: ASI→zero. Pitot+drain blocked: ASI altitude-like. Static blocked: ALT freezes; VSI zero; ASI errors with altitude changes.
+- Symptoms → kb: `sys-pitot-static`.
 - `P:` pitot heat→alternate static per POH→use attitude/power/GPS/known settings→advise ATC→land.
 - `T:` alternate static may change indications; know aircraft correction.
 ***

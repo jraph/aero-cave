@@ -7,7 +7,7 @@
 #### Commercial scope / flight-time comparison — September 2026
 <!-- id: law-commercial-scope-flight-time-comparison-septembe | from: 04 | level: CPL -->
 
-- PORD: CAR 604.03 covers transport of passengers/goods in specified Canadian aircraft: large aeroplane, turbojet, or pressurized turbine aeroplane certificated for more than six passenger seats, subject to its exceptions. No fare payment is needed to trigger this test.
+- PORD: 604.02 scope and 604.03 registration criteria → `q17-operate-seat-check-exploiter-si-ge-contr-le` (604 scope vs registration). No fare payment is needed to trigger the 604.03 test.
 - Ordinary private C150 flying does not automatically become Subpart 604 operation.
 
 The shared flight/duty section below contains current limits and applicability.
@@ -39,15 +39,7 @@ The shared flight/duty section below contains current limits and applicability.
 | Work / Travail 700.29 | 60 h/7 d or qualifying 70 h/7 d option; 192 h/28 d; 2200 h/365 d. Each option has its own time-off conditions. | 60 h/7 j ou option admissible 70 h/7 j; 192 h/28 j; 2200 h/365 j. Conditions de congé propres à chaque option. |
 | Rest / Repos 700.40 | Home: 12 h OR 11 h + travel to/from rest OR 10 h in operator-provided suitable accommodation. Away: 10 h in suitable accommodation. Special schedules may require more. | Base : 12 h OU 11 h + trajets aller-retour repos OU 10 h en hébergement convenable fourni. Hors base : 10 h en hébergement convenable. Horaires particuliers : repos supplémentaire possible. |
 | Fatigue trap | Being under a numeric limit does not establish fitness. Acclimatization, reserve/standby, split duty, extensions and augmented crews require their specific rules. | Respecter limite numérique ne prouve pas aptitude. Acclimatation, réserve/attente, service fractionné, prolongations et équipage renforcé : règles spécifiques. |
-| 604 FDP base | 604.99: 14 h/24 h; 15 h only if preceding 30 d total FDP ≤70 h OR preceding REST ≥24 h. | 604.99 : 14 h/24 h ; 15 h si FDP total des 30 j précédents ≤70 h OU repos précédent ≥24 h. |
-| 604 split 604.100 | Break ≥4 consecutive h in suitable accommodation + notice before first FLT/standby → FDP extension MIN(½ break,4 h). | Pause ≥4 h consécutives en hébergement convenable + préavis avant premier vol/veille → prolongation FDP MIN(½ pause,4 h). |
-| 604 split REST | Next minimum REST += at least split FDP extension; break stays INSIDE FDP; flight time limits unchanged. | Repos minimal suivant augmenté d'au moins la prolongation ; pause DANS le FDP ; limites de temps de vol inchangées. |
-| 604 UOC 604.102 | Unexpected operational circumstance AFTER FDP starts; PIC consults crew → safe FDP extension ≤3 h; next min REST += extension; PIC advises operator, retained 5 y. | Circonstance opérationnelle imprévue APRÈS début FDP ; CDB consulte équipage → prolongation sûre ≤3 h ; repos minimal suivant + prolongation ; avis exploitant, conservation 5 ans. |
-| 700 split 700.50 | Break ≥60 min in suitable accommodation; deduct 45 min THEN credit 100% at 00:00–05:59 / 50% at 06:00–23:59 (acclimatized time). | Pause ≥60 min en hébergement convenable ; retrancher 45 min PUIS crédit 100 % à 00:00–05:59 / 50 % à 06:00–23:59 (heure acclimatée). |
-| 700 split special | UOC replanning after FDP begins → 50% credit after 45-min deduction; night duty split ≤3 consecutive nights; reserve extension +2 h only with ≤2 FLTs after break. | Replanification pour imprévu après début FDP → crédit 50 % après déduction 45 min ; service de nuit ≤3 nuits consécutives ; réserve +2 h seulement si ≤2 vols après pause. |
-| 700 UOC 700.63 | UOC within 60 min after FDP starts; PIC consults ALL crew; max FDP +1 h single / +2 h unaugmented / +3 h augmented 1 FLT / +2 h augmented 2–3 FLTs. | Imprévu dans les 60 min après début FDP ; CDB consulte TOUT équipage ; max +1 h solo / +2 h non renforcé / +3 h renforcé 1 vol / +2 h renforcé 2–3 vols. |
-| 700 UOC REST / 700.64 | 700.63 extension → following REST += extension; PIC notifies operator at FDP end. 700.64 post-start split only on PIC agreement BEFORE ground break. | Prolongation 700.63 → repos suivant + prolongation ; CDB avise exploitant à fin FDP. 700.64 : fractionnement en cours seulement avec accord CDB AVANT pause au sol. |
-| FDP vs FLT trap | SPLIT/UOC increases permitted FDP, NOT flight-time allowance (604.98/700.27); split + UOC not automatically cumulative; Part 700 Division IV MEDEVAC differs. | Fractionnement/imprévu prolonge FDP, PAS temps de vol permis (604.98/700.27) ; crédits non automatiquement cumulables ; Division IV MEDEVAC différente. |
+| 604 FDP · split · UOC / 700 split · UOC | 604.99–.102 and 700.50 / .63 / .64 → `law-fdp-extensions-split-unforeseen-car-604-vs-700-d`. | 604.99–.102 et 700.50 / .63 / .64 → `law-fdp-extensions-split-unforeseen-car-604-vs-700-d`. |
 ***
 #### FDP extensions / split / unforeseen — CAR 604 vs 700 (Division III)
 <!-- id: law-fdp-extensions-split-unforeseen-car-604-vs-700-d | from: 04 | level: CPL -->
@@ -64,7 +56,7 @@ The shared flight/duty section below contains current limits and applicability.
 | `R` UOC special | PIC informs private operator of UOC + EXT; operator retains notification **5 yr**. | Further UOC **after TKOF of final FLT already extended** → PIC may continue to DESTN/ALTN; PIC notifies operator **at FDP end**. [700.63(2),(4)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-700.63.html) |
 | `R` UOC REST | **Next minimum REST += ≥actual FDP extension**. | **REST after extended FDP += ≥actual extension**. [700.63(3)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-700.63.html) |
 | `R` UOC→split | `604.102` unexpected EXT ≠ `604.100` planned split. | **700.64:** post-start UOC may trigger split **only if PIC agrees before scheduled ground break**; after consulting crew, refuse if fatigue jeopardizes safety; waiting **before decision ≠ credited break**. [700.64](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-700.64.html) |
-| `T` | Extension changes **FDP MAX**, **not FLT time** limits under 604.98; split/UOC credits **not automatically stackable**. | Extension changes **FDP MAX**, **not FLT time** limits under 700.27; night split ≠ UOC night credit; no invented universal split cap. |
+| `T` | Extension changes **FDP MAX**, **not FLT time** limits under 604.98; split/UOC credits **not automatically stackable**; split break stays **inside** the FDP. | Extension changes **FDP MAX**, **not FLT time** limits under 700.27; night split ≠ UOC night credit; no invented universal split cap; Division IV medevac differs (`law-700-medevac-rest-split-time-off-reserve`). |
 
 - `M · L4` **604: 14h | 15h if 30d FDP≤70h OR prior REST≥24h | SPLIT≥4h→+MIN(½break,4h) + next REST≥EXT | UOC after start +3h MAX + next REST≥EXT, PIC→operator, 5yr record.**
 - `M · L4` **700 Div III: FDP 700.28 matrix | SPLIT≥60min→deduct45min, remaining ×100% (00–0559) / ×50% (06–2359 or UOC replan) | UOC ≤60min from FDP start→+1h single/+2h unaug/+3h aug1FLT/+2h aug2–3FLT + next REST≥EXT | 700.64 post-start split only before break + PIC consent.**
@@ -75,10 +67,11 @@ Shared additions reviewed 19 October 2026: [source editions and scope](../../CON
 #### Pebble
 <!-- id: law-commercial-ops-604-702-705-duty-time-pebble | level: CPL -->
 
-- 604 `large aeroplane, turbojet, or pressurized turbine >6 passenger seats | no fare needed | ordinary private C150 flying ≠ 604`
+- 604 `no fare needed for 604.03 | ordinary private C150 flying ≠ 604`
 - FLIGHT TIME `700.27: 112 h/28 d, 300 h/90 d, 1000 h/365 d, single-pilot 8 h/24 h | 604.98: 120 h/30 d, 300 h/90 d, 1200 h/12 mo, single-pilot IFR 8 h/24 h`
 - FDP 700.28 `9–13 h by start time + flights + average duration | no universal 14 h | all day VFR → column A | positioning not a flight for the count`
 - 604 FDP `14 h/24 h; 15 h iff previous 30 d FDP ≤70 h OR previous rest ≥24 h`
 - WORK / REST `700.29: 60 h/7 d (or qualifying 70 h option), 192 h/28 d, 2200 h/365 d | 700.40 home: 12 h, or 11 h + travel, or 10 h in operator accommodation; away: 10 h`
-- UOC `604.102: +3 h | 700.63: +1 h single-pilot, +2 h non-augmented | next rest += actual extension`
+- SPLIT `604.100: ≥4 h break → +MIN(½ break, 4 h) | 700.50: ≥60 min, deduct 45 min, 100% 00–0559 / 50% 06–2359 or UOC replan`
+- UOC `604.102: after FDP start, +3 h | 700.63: within 60 min of FDP start, +1 h single-pilot, +2 h non-augmented, +3/+2 h augmented | next rest += actual extension | extensions ≠ more flight time`
 ***
