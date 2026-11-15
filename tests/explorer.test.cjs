@@ -19,7 +19,8 @@ test('every section has a valid card, path and concept; every concept link resol
   for (const c of data.concepts) for (const ref of [...c.broader, ...c.related]) assert.ok(ids.has(ref), `${c.id} → ${ref}`);
   for (const s of data.sections) {
     assert.ok(cards.has(s.card)); assert.ok(s.c.length && s.c.every(c => ids.has(c)), s.id);
-    assert.ok(s.p.length && s.p.every(p => paths.has(p)), s.id); assert.ok(s.md.trim(), s.id);
+    const lv = s.p.length ? s.p : s.ph || []; assert.ok(lv.length && lv.every(p => paths.has(p)), s.id); assert.ok(s.md.trim(), s.id);
+    assert.ok(!(s.p.length && s.ph), s.id + ': hand level only as a fallback');
   }
 });
 test('guide items point at existing stable unit IDs; ID comments never leak into content', () => {

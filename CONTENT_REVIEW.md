@@ -1,5 +1,11 @@
 # Content review
 
+## TC essential marks; levels from the guides — 14 November 2026
+
+**Essential and depth marks** read from the TC HTML editions on this date (aeroplane icon = essential; shading = commercial depth): TP 12881 CPAER 181 essential items (93 C / 56 P / 32 M) and 303 shaded; TP 12880 PPAER 221 essential (112 C / 74 P / 35 M). Item positions matched the guides one-to-one (CAR numbers and per-group counts). TP 691, PSTAR and the flight test guides carry no such marks. Guide pages show ✈ and shading with filters; 167 notes cited by an essential item carry ✈ in result lists.
+
+**Levels:** PPL / CPL / IR / ME badges now come from the guides citing a note (PSTAR, PPAER, PPL flight test → PPL; CPAER, CPL flight test → CPL; INRAT, IFR flight test → IR; ME flight test → ME); Pebbles take their file's levels. 388 notes derived; 140 not cited by any guide keep the hand tag, shown dashed. The licence-level views were removed from the views list (the guides replace them).
+
 ## Training stages replaced by the TC guides — 14 November 2026
 
 The ten hand-made "training stage" views are removed. The home page now opens with the ontology's subjects, then the eight TC guides in training order (PSTAR, PPAER, PPL flight test, CPAER, CPL flight test, ME flight test, INRAT, IFR flight test), then phases of flight and the bilingual collections. Each guide is also a view: the units its items cite (e.g. INRAT 96 sections, where the old stage's concept list gave 297), so a guide view shows only what the syllabus mapping found. The two stages with no TC guide moved into the ontology: night and VFR OTT is a new concept `law-night` (five units tagged: VFR OTT, night definition, night VFR equipment, night go/no-go, twilight formulas); first commercial seat was already `law-commercial`.

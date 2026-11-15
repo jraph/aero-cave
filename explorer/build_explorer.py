@@ -202,6 +202,8 @@ def build():
         if v.get("guide") and v["guide"] not in gids:
             errors.append(f"view {v['id']}: unknown guide {v['guide']}")
     for g in syl["guides"]:
+        if g.get("level") not in pathset:
+            errors.append(f"{g['id']}: level must be one of the paths")
         if g.get("kind") not in ("written", "flight"):
             errors.append(f"{g['id']}: kind must be written or flight")
         for key in ("method", "scope"):
@@ -220,6 +222,28 @@ def build():
                         errors.append(f"{g['id']} {grp['code']} {it['n']}: unknown unit {u}")
     if errors:
         sys.exit("syllabus errors:\n  " + "\n  ".join(errors))
+    # levels come from the guides that cite a unit; Pebbles take their concept file's levels;
+    # a unit no guide cites keeps its hand-set level as a fallback ("ph")
+    order = [p["id"] for p in ont["paths"]]
+    cited, essential = {}, set()
+    for g in syl["guides"]:
+        for grp in g["groups"]:
+            for it in grp["items"]:
+                for u in it["u"]:
+                    cited.setdefault(u, set()).add(g["level"])
+                    if it.get("e"):
+                        essential.add(u)
+    by_file = {}
+    for s in sections:
+        by_file.setdefault(s.get("f") or s["card"], set()).update(cited.get(s["u"], ()))
+    for s in sections:
+        lv = cited.get(s["u"]) or (by_file[s.get("f") or s["card"]] if s["h"] == "Pebble" else set())
+        hand = s.pop("p")
+        s["p"] = [p for p in order if p in lv]
+        if not s["p"]:
+            s["ph"] = hand
+        if s["u"] in essential:
+            s["e"] = 1
     # each TC guide is also a view: the units its items cite
     for g in syl["guides"]:
         units = sorted({u for grp in g["groups"] for it in grp["items"] for u in it["u"]})

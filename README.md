@@ -11,6 +11,7 @@ Compact Canadian pilot study notes for **PPL (PPAER) · CPL (CPAER) · instrumen
 | Subjects | Top concepts of the ontology; the topic graph links broader / narrower / related, and a note can sit under several parents |
 | Training path | TC guides in training order: PSTAR → PPAER → PPL flight test → CPAER → CPL flight test → ME flight test → INRAT → IFR flight test. Each opens its item-by-item coverage and the sections its items cite |
 | Phase of flight | Weather brief, planning, departure, enroute, approach, emergencies, quick reference, Pebbles |
+| Badges | ✈ = cited by an item TC marks essential; PPL / CPL / IR / ME = levels of the guides that cite the note (dashed = set by hand, no guide cites it yet) |
 | Search | Full text plus synonyms and abbreviations; **✕ Clear** or Esc resets |
 | Legacy reader links | Collections transitioning to the explorer: pilot qualifications, CPAER formulas, abbreviations |
 

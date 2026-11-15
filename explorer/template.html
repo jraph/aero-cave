@@ -80,7 +80,7 @@ details.sec>summary::before{content:"▸";color:var(--accent);font-size:.8rem}
 details.sec[open]>summary::before{content:"▾"}
 details.sec[open]>summary{border-bottom:1px solid var(--line)}
 .st{font-weight:600;flex:1;min-width:9rem;line-height:1.25}
-.pb{font-size:.62rem;font-weight:700;border:1px solid var(--line);border-radius:.3rem;padding:0 .25rem;color:var(--muted);letter-spacing:.03em}
+.pb{font-size:.62rem;font-weight:700;border:1px solid var(--line);border-radius:.3rem;padding:0 .25rem;color:var(--muted);letter-spacing:.03em}.pb.g{border-color:var(--accent);color:var(--accent)}.pb.h{border-style:dashed;font-weight:500;opacity:.8}.ess{color:var(--accent);font-size:.8rem;margin-right:.15rem}.it.dp,.dpb,.dpn{background:color-mix(in srgb,var(--accent) 9%,transparent)}.dpn{padding:.2rem .4rem;border-radius:.3rem}
 .snip{flex-basis:100%;font-size:.78rem;color:var(--muted);overflow-wrap:anywhere}
 mark{background:var(--pill);color:inherit;border-radius:.15rem;padding:0 .1rem}
 .body{padding:.45rem .55rem .55rem;font-size:.9rem;line-height:1.3;overflow-wrap:anywhere}
@@ -154,7 +154,7 @@ const T = {
   also:['Filed under','Classé sous'], open:['Open card ↗','Ouvrir la fiche ↗'], reader:['Reader ↗','Lecteur ↗'],
   none:['Nothing matches. Remove a filter or shorten the search.','Aucun résultat. Retirez un filtre ou raccourcissez la recherche.'],
   disc:['Study aid only. Use current official publications and the aircraft flight manual for operations.','Aide à l’étude seulement. Utilisez les publications officielles en vigueur et le manuel de vol pour l’exploitation.'],
-  hGuide:['Training path: TC exams and flight tests','Parcours : examens et tests en vol de TC'], items:['items','points'], stC:['Covered','Couvert'], stP:['Partial','Partiel'], stM:['Missing','Manquant'], stE:['Elsewhere, unchecked','Ailleurs, non vérifié'], back:['← Explorer','← Explorateur'], reviewed:['Reviewed','Révisé'], official:['Official guide ↗','Guide officiel ↗'], kWritten:['Written exam','Examen écrit'], kFlight:['Flight test','Test en vol'], study:['Study the mapped sections','Étudier les sections reliées'], mapped:['sections mapped','sections reliées'], method:['Method','Méthode'], toGuide:['Item-by-item coverage →','Couverture point par point →'], own:['Item labels are our own short wording; the guide text is authoritative.','Les libellés sont notre formulation abrégée; le texte du guide fait foi.'],
+  hGuide:['Training path: TC exams and flight tests','Parcours : examens et tests en vol de TC'], items:['items','points'], stC:['Covered','Couvert'], stP:['Partial','Partiel'], stM:['Missing','Manquant'], stE:['Elsewhere, unchecked','Ailleurs, non vérifié'], back:['← Explorer','← Explorateur'], reviewed:['Reviewed','Révisé'], official:['Official guide ↗','Guide officiel ↗'], ess:['Essential','Essentiel'], depth:['Commercial depth','Niveau professionnel'], essU:['Cited by an item Transport Canada marks essential','Cité par un point que Transports Canada juge essentiel'], handLv:['Level set by hand: no TC item cites this note yet','Niveau attribué à la main : aucun point TC ne cite encore cette note'], kWritten:['Written exam','Examen écrit'], kFlight:['Flight test','Test en vol'], study:['Study the mapped sections','Étudier les sections reliées'], mapped:['sections mapped','sections reliées'], method:['Method','Méthode'], toGuide:['Item-by-item coverage →','Couverture point par point →'], own:['Item labels are our own short wording; the guide text is authoritative.','Les libellés sont notre formulation abrégée; le texte du guide fait foi.'],
   clr:['✕ Clear','✕ Effacer'],
   expand:['Expand all','Tout ouvrir'], collapse:['Collapse all','Tout fermer']
 };
@@ -172,7 +172,6 @@ const getDesc = id => { if (desc.has(id)) return desc.get(id); const s = new Set
 const roots = D.concepts.filter(c => !c.broader.length).map(c => c.id);
 const K = new Map(D.cards.map(c => [c.id, c]));
 const V = new Map();
-for (const p of D.paths) V.set(p.id, {id:p.id, group:'level', en:p.en, fr:p.fr, level:p.id});
 for (const v of D.views) { const set = v.concepts ? new Set() : null; if (set) for (const id of v.concepts) for (const x of getDesc(id)) set.add(x); V.set(v.id, Object.assign({}, v, {set, uset: v.units ? new Set(v.units) : null, rx: v.re ? new RegExp(v.re, 'i') : null})); }
 const inView = (s, v) => (!v.level || s.p.includes(v.level)) && (v.uset ? v.uset.has(s.u) : ((!v.set && !v.rx) || (v.set && s.c.some(x => v.set.has(x))) || (v.rx && v.rx.test(s.h))));
 for (const s of D.sections) {
@@ -185,6 +184,8 @@ const G = new Map(D.guides.map(g => [g.id, g]));
 const unitItems = new Map();
 for (const g of D.guides) for (const grp of g.groups) for (const it of grp.items) for (const u of it.u) { if (!unitItems.has(u)) unitItems.set(u, []); unitItems.get(u).push({g, grp, it}); }
 let gFilter = '';
+const PLANE = '✈\uFE0E';
+const gHit = i => !gFilter || (gFilter === 'e' ? i.e : gFilter === 'd' ? i.d : i.s === gFilter);
 /* ---- state + routing: #x-PATH-CARD-CONCEPT ---- */
 const S = {q:'', p:'', k:'', c:'', g:''};
 let focusUnit = '';
@@ -370,7 +371,7 @@ function snippet(s) {
 }
 function sectionEl(s) {
   const d = el('details', 'sec'), card = K.get(s.card); if (s.u) d.dataset.u = s.u;
-  d.appendChild(el('summary', '', '<span class="st">' + esc(s.h) + '</span>' + s.p.map(p => '<span class="pb">' + p + '</span>').join('') + snippet(s)));
+  d.appendChild(el('summary', '', '<span class="st">' + esc(s.h) + '</span>' + (s.e ? '<span class="ess" title="' + esc(t('essU')) + '">' + PLANE + '</span>' : '') + s.p.map(p => '<span class="pb g">' + p + '</span>').join('') + (s.ph || []).map(p => '<span class="pb h" title="' + esc(t('handLv')) + '">' + p + '</span>').join('') + snippet(s)));
   d.addEventListener('toggle', () => {
     if (!d.open || d.dataset.done) return; d.dataset.done = 1;
     const b = el('div', 'body', (/pebble/i.test(s.h) && pebble(s.md)) || md(s.md, {id: card.id, heading: s.h, file: s.f || card.file})), f = el('div', 'foot', '<span>' + esc(t('also')) + '</span>');
@@ -397,16 +398,18 @@ function renderGuide() {
   p.insertAdjacentHTML('beforeend', bar(all));
   const leg = el('div', 'leg');
   for (const k of ['C','P','M','E']) { if (!n(k)) continue; const b = el('button', 'btn', '<span class="dot s' + k + '"></span>' + esc(t('st' + k)) + ' <b>' + n(k) + '</b>'); b.type = 'button'; b.setAttribute('aria-pressed', gFilter === k); b.onclick = () => { gFilter = gFilter === k ? '' : k; render(); }; leg.appendChild(b); }
+  for (const [k, lab] of [['e', PLANE + ' ' + t('ess')], ['d', t('depth')]]) { const m = all.filter(i => i[k]).length; if (!m) continue; const b = el('button', 'btn' + (k === 'd' ? ' dpb' : ''), esc(lab) + ' <b>' + m + '</b>'); b.type = 'button'; b.setAttribute('aria-pressed', gFilter === k); b.onclick = () => { gFilter = gFilter === k ? '' : k; render(); }; leg.appendChild(b); }
   p.appendChild(leg);
+  if (g.marks) for (const [k, pre] of [['e', PLANE + ' '], ['d', '']]) if (g.marks[k]) p.appendChild(el('div', 'crumbs' + (k === 'd' ? ' dpn' : ''), esc(pre + L(g.marks[k]))));
   let sec = ''; const oneSec = new Set(g.groups.map(x => x.section)).size < 2, ft = g.kind === 'flight';
   for (const grp of g.groups) {
-    const items = grp.items.filter(i => !gFilter || i.s === gFilter); if (!items.length) continue;
+    const items = grp.items.filter(gHit); if (!items.length) continue;
     const sn = lang === 'fr' && grp.section_fr ? grp.section_fr : grp.section;
     if (sn && sn !== sec && !oneSec) { const secItems = g.groups.filter(x => x.section === grp.section).flatMap(x => x.items); p.appendChild(el('h4', 'gsec', esc(sn) + ' <small>' + secItems.length + '</small>' + bar(secItems))); sec = sn; }
     const d = el('details', 'grp'); d.open = !!gFilter;
     d.appendChild(el('summary', '', '<span>' + esc((ft ? '' : grp.code + ' · ') + L(grp)) + '</span><small style="color:var(--muted);font-weight:400">' + items.length + '</small>' + bar(grp.items)));
     for (const it of items) {
-      const r = el('div', 'it', '<span class="sb s' + it.s + '" title="' + esc(t('st' + it.s)) + '">' + it.s + '</span><span>' + (ft ? '' : '<b>' + grp.code + ' ' + it.n + '</b> · ') + esc(it.en) + '</span>' + (it.gap ? '<span class="gap">' + esc(it.gap) + '</span>' : ''));
+      const r = el('div', 'it' + (it.d ? ' dp' : ''), '<span class="sb s' + it.s + '" title="' + esc(t('st' + it.s)) + '">' + it.s + '</span><span>' + (it.e ? '<span class="ess" title="' + esc(t('ess')) + '">' + PLANE + '</span> ' : '') + (ft ? '' : '<b>' + grp.code + ' ' + it.n + '</b> · ') + esc(it.en) + '</span>' + (it.gap ? '<span class="gap">' + esc(it.gap) + '</span>' : ''));
       if (it.u.length) { const us = el('div', 'us'); for (const u of it.u) { const c = el('button', 'chip', esc(U.get(u).h)); c.type = 'button'; c.onclick = () => openUnit(u); us.appendChild(c); } r.appendChild(us); }
       d.appendChild(r);
     }
@@ -424,7 +427,7 @@ function render() {
   const baseP = D.sections.filter(s => matches(s, 'p')), baseK = D.sections.filter(s => matches(s, 'k'));
   const vn = new Map(); for (const v of V.values()) vn.set(v.id, baseP.filter(s => inView(s, v)).length);
   const fp = $('fp'); fp.textContent = ''; fp.appendChild(new Option(t('allP'), ''));
-  for (const [g, key] of [['guide','gGuide'],['ops','gOps'],['level','gLevel']]) { const og = document.createElement('optgroup'); og.label = t(key); for (const v of V.values()) if (v.group === g) og.appendChild(new Option(L1(v) + ' (' + vn.get(v.id) + ')', v.id)); fp.appendChild(og); }
+  for (const [g, key] of [['guide','gGuide'],['ops','gOps']]) { const og = document.createElement('optgroup'); og.label = t(key); for (const v of V.values()) if (v.group === g) og.appendChild(new Option(L1(v) + ' (' + vn.get(v.id) + ')', v.id)); fp.appendChild(og); }
   fp.value = S.p; fp.classList.toggle('on', !!S.p);
   fillSelect($('fk'), [['', t('allK')]].concat(D.cards.map(c => [c.id, (/^\d/.test(c.id) ? c.id + ' · ' : '') + L1(c) + ' (' + baseK.filter(s => s.card === c.id).length + ')'])), S.k);
   fillSelect($('fc'), conceptOptions(counts), S.c);
@@ -435,7 +438,7 @@ function render() {
   if (browsing) {
     const ts = $('ts'), tg = $('tg'), tr = $('tr'); ts.textContent = tg.textContent = tr.textContent = '';
     for (const c of D.cards) if (c.reader) { const a = el('a', 'tile', '<b>' + esc(L(c)) + '</b><span>EN / FR</span>'); a.href = ['F', 'A'].includes(c.id) ? '#x-any-' + c.id + '-any' : c.reader; a.style.textDecoration = 'none'; a.style.color = 'inherit'; tr.appendChild(a); }
-    D.guides.forEach((g, i) => { const all = g.groups.flatMap(x => x.items), n = k => all.filter(it => it.s === k).length; const b = el('button', 'tile', '<b>' + (i + 1) + ' · ' + esc(L(g)) + '</b><span>' + esc(g.guide) + ' · ' + esc(t(g.kind === 'flight' ? 'kFlight' : 'kWritten')) + '<br>' + all.length + ' ' + t('items') + ' · ' + ['C','P','M','E'].filter(k => n(k)).map(k => n(k) + ' ' + k).join(' · ') + '</span>' + bar(all)); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); });
+    D.guides.forEach((g, i) => { const all = g.groups.flatMap(x => x.items), n = k => all.filter(it => it.s === k).length; const b = el('button', 'tile', '<b>' + (i + 1) + ' · ' + esc(L(g)) + '</b><span>' + esc(g.guide) + ' · ' + esc(t(g.kind === 'flight' ? 'kFlight' : 'kWritten')) + '<br>' + all.length + ' ' + t('items') + ' · ' + ['C','P','M','E'].filter(k => n(k)).map(k => n(k) + ' ' + k).join(' · ') + (all.some(x => x.e) ? ' · ' + PLANE + ' ' + all.filter(x => x.e).length : '') + '</span>' + bar(all)); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); });
     for (const [g, box] of [['ops', $('to')]]) { box.textContent = ''; for (const v of V.values()) if (v.group === g) { const b = el('button', 'tile', '<b>' + esc(L(v)) + '</b><span>' + (v.ref ? esc(v.ref) + ' · ' : '') + vn.get(v.id) + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p:v.id}, true); box.appendChild(b); } }
     for (const r of roots) { const n = counts.get(r); if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(C.get(r))) + '</b><span>' + n + ' ' + t('secs') + ' · ' + C.get(r).narrower.filter(x => counts.get(x)).length + ' ' + t('topics') + '</span>'); b.type = 'button'; b.onclick = () => go({c:r}, true); ts.appendChild(b); }
   }
