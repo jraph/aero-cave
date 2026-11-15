@@ -144,7 +144,7 @@ const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}},
 const norm = t => t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const T = {
-  title:['Canadian pilot study notes','Notes d’étude pour pilotes canadiens'], hRead:['By type of note','Par type de note'], tcItems:['TC items under this topic','Points TC sous ce thème'], tcGaps:['Missing or partial items','Points manquants ou partiels'],
+  title:['Canadian pilot study notes','Notes d’étude pour pilotes canadiens'], hRead:['By type of note','Par type de note'], tcItems:['TC items under this topic','Points TC sous ce thème'], tcGaps:['Missing or partial items','Points manquants ou partiels'], tcEss:['Essential items (all statuses)','Points essentiels (tous statuts)'],
   search:['Search topics, rules, codes…','Chercher thèmes, règles, codes…'],
   allP:['All views','Toutes les vues'], gLevel:['Licence level','Niveau de licence'], gGuide:['TC exam or flight test','Examen ou test en vol de TC'], gOps:['Quick access by phase of flight','Accès rapide par phase de vol'], hOps:['Quick access by phase of flight','Accès rapide par phase de vol'], narrow:['Narrow by subject','Préciser par sujet'], opsNote:['Study reference, not a checklist: the POH/AFM and current publications govern.','Référence d’étude, non une liste de vérifications : le POH/AFM et les publications en vigueur prévalent.'], allK:['All note types','Tous les types de notes'], allC:['All topics','Tous les thèmes'],
   hSubj:['Subjects','Sujets'],
@@ -359,12 +359,15 @@ function renderConcept(counts) {
   });
   p.appendChild(cr); p.appendChild(el('h3', '', esc(L(c))));
   const row = (label, ids, cls) => { ids = ids.filter(x => counts.get(x)); if (!ids.length) return; const r = el('div', 'rel', '<i>' + esc(t(label)) + '</i>'); ids.forEach(x => r.appendChild(chip(x, cls, counts.get(x)))); p.appendChild(r); };
-  const dset = getDesc(S.c), tc = []; for (const g of D.guides) for (const grp of g.groups) if (dset.has(grp.concept)) for (const it of grp.items) tc.push({g, grp, it});
+  const vw = S.p && V.get(S.p), gOk = g => !vw || (vw.guide ? g.id === vw.guide : vw.level ? g.level === vw.level : true);
+  const dset = getDesc(S.c), tc = []; for (const g of D.guides) if (gOk(g)) for (const grp of g.groups) if (dset.has(grp.concept)) for (const it of grp.items) tc.push({g, grp, it});
   if (tc.length) { const arr = tc.map(x => x.it), n = k => arr.filter(i => i.s === k).length;
-    p.appendChild(el('div', 'crumbs', esc(t('tcItems')) + ': <b>' + arr.length + '</b> · ' + ['C','P','M'].filter(n).map(k => n(k) + ' ' + k).join(' · ') + (arr.some(i => i.e) ? ' · ' + PLANE + ' ' + arr.filter(i => i.e).length : ''))); p.insertAdjacentHTML('beforeend', bar(arr));
-    const gaps = tc.filter(x => x.it.s !== 'C'); if (gaps.length) { const d = el('details', 'grp'); d.appendChild(el('summary', '', '<span>' + esc(t('tcGaps')) + '</span><small style="color:var(--muted);font-weight:400">' + gaps.length + '</small>'));
-      for (const x of gaps) { const r = el('div', 'it', '<span class="sb s' + x.it.s + '">' + x.it.s + '</span><span>' + (x.it.e ? '<span class="ess">' + PLANE + '</span> ' : '') + esc(x.it.en) + ' <button class="chip" type="button">' + esc(L(x.g)) + '</button></span>' + (x.it.gap ? '<span class="gap">' + esc(x.it.gap) + '</span>' : '')); r.querySelector('button').onclick = () => go({g:x.g.id}, true); d.appendChild(r); }
-      p.appendChild(d); } }
+    p.appendChild(el('div', 'crumbs', esc(t('tcItems')) + (vw && (vw.guide || vw.level) ? ' (' + esc(L(vw)) + ')' : '') + ': <b>' + arr.length + '</b> · ' + ['C','P','M','E'].filter(n).map(k => n(k) + ' ' + k).join(' · ') + (arr.some(i => i.e) ? ' · ' + PLANE + ' ' + arr.filter(i => i.e).length : ''))); p.insertAdjacentHTML('beforeend', bar(arr));
+    const list = (label, xs) => { if (!xs.length) return; const d = el('details', 'grp'); d.appendChild(el('summary', '', '<span>' + label + '</span><small style="color:var(--muted);font-weight:400">' + xs.length + '</small>'));
+      for (const x of xs) { const r = el('div', 'it', '<span class="sb s' + x.it.s + '" title="' + esc(t('st' + x.it.s)) + '">' + x.it.s + '</span><span>' + (x.it.e ? '<span class="ess" title="' + esc(x.g.level + ' · ' + t('ess')) + '">' + PLANE + '</span> ' : '') + esc(x.it.en) + ' <button class="chip" type="button">' + esc(x.g.guide + ' ' + x.grp.code + ' ' + x.it.n) + '</button></span>' + (x.it.gap ? '<span class="gap">' + esc(x.it.gap) + '</span>' : '')); r.querySelector('button').onclick = () => go({g:x.g.id}, true); d.appendChild(r); }
+      p.appendChild(d); };
+    list(PLANE + ' ' + esc(t('tcEss')), tc.filter(x => x.it.e));
+    list(esc(t('tcGaps')), tc.filter(x => x.it.s !== 'C')); }
   const gOn = store.get('aero-cave-graph') !== '0';
   if (!gOn) { row('nar', c.narrower, ''); row('rel', c.related, 'r'); row('bro', c.broader, 'b'); }
   const tg = el('button', 'btn', esc(t('graph')) + (gOn ? ' ▾' : ' ▸')); tg.type = 'button'; tg.style.marginTop = '.45rem'; tg.setAttribute('aria-expanded', gOn);
