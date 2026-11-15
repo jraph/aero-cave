@@ -38,7 +38,8 @@ h2{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu
 .pl{margin:.3rem 0;display:flex;flex-wrap:wrap;gap:.22rem}.pt{background:var(--stripe);border:1px solid var(--line);border-radius:.3rem;padding:.05rem .35rem;font-size:.84rem;line-height:1.3}.pt.k{background:var(--pill);font-weight:700;border-color:transparent}
 @media (min-width:64rem){#gpanel{width:min(96vw,96rem);margin-left:calc((100% - min(96vw,96rem))/2)}.g2{display:grid;grid-template-columns:minmax(22rem,2fr) 3fr;gap:1rem;align-items:start}.gout{position:sticky;top:3.6rem;max-height:calc(100vh - 4.2rem);overflow:auto;padding-right:.3rem}}
 .gnotes{min-width:0;scroll-margin-top:4rem}.gnotes h4{margin:.2rem 0 .4rem;font-size:1rem}.it .gnotes,.grp>.gnotes{grid-column:1/-1;padding:.3rem .5rem .5rem;border-top:1px solid var(--line);background:var(--bg)}.it+.gnotes{padding:.3rem .5rem .5rem;border-top:1px dashed var(--line);background:var(--bg)}
-.it+.gnotes h4{display:none}.it[role=button]{cursor:pointer}.it.sel,details.grp>summary.sel{box-shadow:inset 3px 0 0 var(--accent)}.cby{font-size:.75rem;color:var(--muted);margin:-.1rem 0 .5rem .2rem;display:flex;flex-wrap:wrap;gap:.25rem;align-items:center}.gmiss{font-size:.85rem;margin:.6rem 0;padding:.5rem .6rem;border:1px dashed var(--line);border-radius:.5rem}.gmiss div{color:var(--muted);margin-top:.15rem}
+.it+.gnotes h4{display:none}.it[role=button]{cursor:pointer}.it.sel,details.grp>summary.sel{box-shadow:inset 3px 0 0 var(--accent)}.frow{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;margin:.3rem 0 .5rem}.frow .btn{padding:.2rem .55rem;font-size:.82rem}.frow select{font:inherit;font-size:.82rem;padding:.2rem .3rem;border:1px solid var(--line);border-radius:.4rem;background:var(--panel);color:var(--ink);max-width:16rem}.frow select.on{border-color:var(--accent)}#count .frow{flex-basis:100%;margin:.3rem 0 0}.cit{font-size:.7rem;color:var(--muted);margin-left:.4rem;white-space:nowrap}details.beyond{margin-top:1rem}details.beyond>.sec{margin:.3rem .4rem}
+.cby{font-size:.75rem;color:var(--muted);margin:-.1rem 0 .5rem .2rem;display:flex;flex-wrap:wrap;gap:.25rem;align-items:center}.gmiss{font-size:.85rem;margin:.6rem 0;padding:.5rem .6rem;border:1px dashed var(--line);border-radius:.5rem}.gmiss div{color:var(--muted);margin-top:.15rem}
 #gpanel h3{margin:.2rem 0 .2rem;font-size:1.1rem}
 .bars{display:flex;height:.55rem;border-radius:.3rem;overflow:hidden;margin:.5rem 0 .4rem;background:var(--line)}
 .bars span{display:block}.sC{background:var(--ok)}.sP{background:var(--part)}.sM{background:var(--miss)}.sE{background:var(--muted)}
@@ -158,6 +159,7 @@ const T = {
   also:['Filed under','Classé sous'], open:['Open card ↗','Ouvrir la fiche ↗'], reader:['Reader ↗','Lecteur ↗'],
   none:['Nothing matches. Remove a filter or shorten the search.','Aucun résultat. Retirez un filtre ou raccourcissez la recherche.'],
   disc:['Study aid only. Use current official publications and the aircraft flight manual for operations.','Aide à l’étude seulement. Utilisez les publications officielles en vigueur et le manuel de vol pour l’exploitation.'],
+  allLv:['All levels','Tous niveaux'], byGuide:['Guide','Guide'], anyGuide:['Any guide','Tous les guides'], essOnly:['Essential only','Essentiels seulement'], beyond:['Beyond this guide','Hors de ce guide'],
   gHint:['Select a group or an item: its notes open here, in the guide’s order.','Choisir un groupe ou un point : ses notes s’ouvrent ici, dans l’ordre du guide.'], gNone:['No note yet for this item.','Aucune note pour ce point.'], gGaps:['Items without a note','Points sans note'], citedBy:['Cited by','Cité par'],
   hGuide:['Training path: TC exams and flight tests','Parcours : examens et tests en vol de TC'], items:['items','points'], stC:['Covered','Couvert'], stP:['Partial','Partiel'], stM:['Missing','Manquant'], stE:['Elsewhere, unchecked','Ailleurs, non vérifié'], back:['← Explorer','← Explorateur'], reviewed:['Reviewed','Révisé'], official:['Official guide ↗','Guide officiel ↗'], ess:['Essential','Essentiel'], depth:['Commercial depth','Niveau professionnel'], essU:['% essential: cited by an item the % guide marks ✈','Essentiel %: cité par un point marqué ✈ dans le guide %'], handLv:['Level set by hand: no TC item cites this note yet','Niveau attribué à la main : aucun point TC ne cite encore cette note'], kWritten:['Written exam','Examen écrit'], kFlight:['Flight test','Test en vol'], study:['Study the mapped sections','Étudier les sections reliées'], mapped:['sections mapped','sections reliées'], method:['Method','Méthode'], toGuide:['Item-by-item coverage →','Couverture point par point →'], own:['Item labels are our own short wording; the guide text is authoritative.','Les libellés sont notre formulation abrégée; le texte du guide fait foi.'],
   clr:['✕ Clear','✕ Effacer'],
@@ -187,17 +189,18 @@ for (const s of D.sections) {
 
 const U = new Map(D.sections.filter(s => s.u).map(s => [s.u, s]));
 const G = new Map(D.guides.map(g => [g.id, g]));
-const unitItems = new Map();
+const unitItems = new Map(), essG = new Map(), posG = new Map();
+for (const g of D.guides) { const es = new Set(), pos = new Map(); g.groups.forEach((grp, gi) => grp.items.forEach((it, ii) => it.u.forEach(u => { if (it.e) es.add(u); if (!pos.has(u)) pos.set(u, [gi, ii]); }))); essG.set(g.id, es); posG.set(g.id, pos); }
 for (const g of D.guides) for (const grp of g.groups) for (const it of grp.items) for (const u of it.u) { if (!unitItems.has(u)) unitItems.set(u, []); unitItems.get(u).push({g, grp, it}); }
 let gFilter = '', gSel = null;
 const PLANE = '✈\uFE0E';
 const gHit = i => !gFilter || (gFilter === 'e' ? i.e : gFilter === 'd' ? i.d : i.s === gFilter);
 /* ---- state + routing: #x-VIEW-KIND-CONCEPT (k = note kind) ---- */
-const S = {q:'', p:'', k:'', c:'', g:''};
+const S = {q:'', p:'', k:'', c:'', g:'', l:'', e:''};
 let focusUnit = '';
 function readHash() {
-  const m = /^#x-([A-Za-z0-9]+)-([A-Za-z0-9]+)-([a-z0-9-]+)$/.exec(location.hash);
-  S.p = S.k = S.c = S.g = '';
+  const m = /^#x-([A-Za-z0-9]+)-([A-Za-z0-9]+)-([a-z0-9-]+?)(?:\.(PPL|CPL|IR|ME))?(\.e)?$/.exec(location.hash);
+  S.p = S.k = S.c = S.g = S.l = S.e = '';
   const mg = /^#g-([a-z0-9-]+)$/.exec(location.hash); if (mg && G.has(mg[1])) { S.g = mg[1]; return; }
   const mu = /^#u-([a-z0-9-]+)$/.exec(location.hash); if (mu && !U.has(mu[1]) && (D.retired || {})[mu[1]]) mu[1] = D.retired[mu[1]];
   if (mu && U.has(mu[1])) { S.c = U.get(mu[1]).c[0]; focusUnit = mu[1]; return; }
@@ -205,9 +208,10 @@ function readHash() {
   if (V.has(m[1])) S.p = m[1];
   const k0 = {F:'formula', A:'glossary'}[m[2]] || m[2]; if (KIND.has(k0)) S.k = k0;
   if (C.has(m[3])) S.c = m[3];
+  S.l = m[4] || ''; S.e = m[5] ? '1' : '';
 }
 function writeHash(push) {
-  const h = S.g ? '#g-' + S.g : (S.p || S.k || S.c) ? '#x-' + (S.p || 'any') + '-' + (S.k || 'any') + '-' + (S.c || 'any') : '';
+  const h = S.g ? '#g-' + S.g : (S.p || S.k || S.c || S.l || S.e) ? '#x-' + (S.p || 'any') + '-' + (S.k || 'any') + '-' + (S.c || 'any') + (S.l ? '.' + S.l : '') + (S.e ? '.e' : '') : '';
   if (h !== location.hash) { const url = h || location.pathname + location.search; try { if (push) { history.replaceState({y: window.scrollY}, '', location.href); history.pushState(null, '', url); } else history.replaceState(null, '', url); } catch (e) { location.hash = h; } }
 }
 function openUnit(u) { focusUnit = u; go({q:'', p:'', k:'', g:'', c:U.get(u).c[0]}); }
@@ -217,6 +221,8 @@ function go(patch, top) { if (!('g' in patch)) S.g = ''; Object.assign(S, patch)
 function matches(s, skip) {
   if (skip !== 'p' && S.p && !inView(s, V.get(S.p))) return false;
   if (skip !== 'k' && S.k && s.kd !== S.k) return false;
+  if (skip !== 'l' && S.l && !(s.p.length ? s.p : (s.ph || [])).includes(S.l)) return false;
+  if (skip !== 'e' && S.e) { const v = S.p && V.get(S.p); if (v && v.guide ? !essG.get(v.guide).has(s.u) : !(s.e || []).some(x => !S.l || x === S.l)) return false; }
   if (skip !== 'c' && S.c) { const d = getDesc(S.c); if (!s.c.some(x => d.has(x))) return false; }
   for (const w of tokens) if (!s.t.includes(w)) return false;
   return true;
@@ -352,6 +358,15 @@ function egoGraph(id, counts) {
   box.onclick = e => { const g = e.target.closest('.n'); if (g && g.dataset.id !== id) go({c:g.dataset.id}, true); };
   return box;
 }
+function filterRow() {
+  const r = el('div', 'frow');
+  const lv = (id, lab) => { const b = el('button', 'btn', esc(lab)); b.type = 'button'; b.setAttribute('aria-pressed', S.l === id); b.onclick = () => go({l: S.l === id ? '' : id}); r.appendChild(b); };
+  lv('', t('allLv')); for (const x of D.paths) lv(x.id, x.id);
+  const gs = el('select', 'fg'); gs.setAttribute('aria-label', t('byGuide')); gs.appendChild(new Option(t('anyGuide'), '')); for (const g of D.guides) gs.appendChild(new Option(g.guide + ' · ' + L1(g), g.id));
+  const v = S.p && V.get(S.p); gs.value = v && v.guide ? v.guide : ''; gs.classList.toggle('on', !!gs.value); gs.onchange = e => go({p: e.target.value}); r.appendChild(gs);
+  const eb = el('button', 'btn', PLANE + ' ' + esc(t('essOnly'))); eb.type = 'button'; eb.setAttribute('aria-pressed', !!S.e); eb.onclick = () => go({e: S.e ? '' : '1'}); r.appendChild(eb);
+  return r;
+}
 function renderConcept(counts) {
   const p = $('cpanel'); p.textContent = ''; p.hidden = !S.c; if (!S.c) return;
   const c = C.get(S.c);
@@ -362,9 +377,9 @@ function renderConcept(counts) {
     if (path.length === 1) { const b = el('button', '', esc(t('allC'))); b.type = 'button'; b.onclick = () => go({c:''}, true); cr.appendChild(b); cr.appendChild(document.createTextNode(' › ')); }
     cr.appendChild(document.createTextNode(L1(c)));
   });
-  p.appendChild(cr); p.appendChild(el('h3', '', esc(L(c))));
+  p.appendChild(cr); p.appendChild(el('h3', '', esc(L(c)))); p.appendChild(filterRow());
   const row = (label, ids, cls) => { ids = ids.filter(x => counts.get(x)); if (!ids.length) return; const r = el('div', 'rel', '<i>' + esc(t(label)) + '</i>'); ids.forEach(x => r.appendChild(chip(x, cls, counts.get(x)))); p.appendChild(r); };
-  const vw = S.p && V.get(S.p), gOk = g => !vw || (vw.guide ? g.id === vw.guide : vw.level ? g.level === vw.level : true);
+  const vw = S.p && V.get(S.p), gOk = g => (!vw || !vw.guide || g.id === vw.guide) && (!S.l || g.level === S.l);
   const dset = getDesc(S.c), tc = []; for (const g of D.guides) if (gOk(g)) for (const grp of g.groups) if (dset.has(grp.concept)) for (const it of grp.items) tc.push({g, grp, it});
   if (tc.length) { const arr = tc.map(x => x.it), n = k => arr.filter(i => i.s === k).length;
     p.appendChild(el('div', 'crumbs', esc(t('tcItems')) + (vw && (vw.guide || vw.level) ? ' (' + esc(L(vw)) + ')' : '') + ': <b>' + arr.length + '</b> · ' + ['C','P','M','E'].filter(n).map(k => n(k) + ' ' + k).join(' · ') + (arr.some(i => i.e) ? ' · ' + PLANE + ' ' + arr.filter(i => i.e).length : ''))); p.insertAdjacentHTML('beforeend', bar(arr));
@@ -462,7 +477,7 @@ function render() {
   document.querySelectorAll('[data-t]').forEach(n => n.textContent = t(n.dataset.t));
   document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
   $('q').placeholder = t('search'); if ($('q').value !== S.q) $('q').value = S.q;
-  const clr = $('clr'); clr.textContent = lang === 'fr' ? T.clr[1] : T.clr[0]; clr.hidden = !(S.q || S.p || S.k || S.c || S.g);
+  const clr = $('clr'); clr.textContent = lang === 'fr' ? T.clr[1] : T.clr[0]; clr.hidden = !(S.q || S.p || S.k || S.c || S.g || S.l || S.e);
   const counts = conceptCounts();
   const baseP = D.sections.filter(s => matches(s, 'p')), baseK = D.sections.filter(s => matches(s, 'k'));
   const vn = new Map(); for (const v of V.values()) vn.set(v.id, baseP.filter(s => inView(s, v)).length);
@@ -496,11 +511,20 @@ function render() {
   if (tokens.length) { const sc = s => tokens.every(w => s.hn.includes(w)) ? 0 : tokens.some(w => s.hn.includes(w)) ? 1 : 2; list = list.map((s, i) => [sc(s), i, s]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).map(x => x[2]); }
   cnt.textContent = '';
   cnt.appendChild(el('span', '', '<b>' + list.length + '</b> ' + t(list.length === 1 ? 'sec' : 'secs')));
-  const rs = el('button', 'btn', esc(t('reset'))); rs.type = 'button'; rs.onclick = () => go({q:'', p:'', k:'', c:'', g:''}, true); cnt.appendChild(rs);
+  const rs = el('button', 'btn', esc(t('reset'))); rs.type = 'button'; rs.onclick = () => go({q:'', p:'', k:'', c:'', g:'', l:'', e:''}, true); cnt.appendChild(rs);
   if (list.length) { const ex = el('button', 'btn', esc(t('expand'))); ex.type = 'button'; let open = false; ex.onclick = () => { open = !open; res.querySelectorAll('details').forEach(d => d.open = open); ex.textContent = t(open ? 'collapse' : 'expand'); }; cnt.appendChild(ex); }
+  if (!S.c) cnt.appendChild(filterRow());
   if (!list.length) { res.appendChild(el('p', 'empty', esc(t('none')))); return; }
   const frag = document.createDocumentFragment();
   if (tokens.length) { list.forEach(s => { const d = sectionEl(s); d.querySelector('.st').insertAdjacentHTML('beforebegin', '<span class="pb" style="color:var(--accent)">' + s.card + '</span>'); frag.appendChild(d); }); }
+  else if (S.c && S.p && V.get(S.p).guide) { const g = G.get(V.get(S.p).guide), pos = posG.get(g.id);
+    const ord = list.slice().sort((a, b) => { const x = pos.get(a.u) || [1e9, 0], y = pos.get(b.u) || [1e9, 0]; return x[0] - y[0] || x[1] - y[1]; });
+    let cur = -1; for (const s of ord) { const gi = (pos.get(s.u) || [-1])[0]; if (gi !== cur) { cur = gi; const grp = g.groups[gi]; if (grp) { const h = el('div', 'gh', esc((g.kind === 'flight' ? '' : grp.code + ' · ') + L(grp)) + ' <small>' + ord.filter(x => (pos.get(x.u) || [-1])[0] === gi).length + '</small>'); frag.appendChild(h); } }
+      const d = sectionEl(s), its = (unitItems.get(s.u) || []).filter(r => r.g.id === g.id && r.grp === g.groups[gi]).map(r => r.it.n);
+      if (its.length) d.querySelector('summary').insertAdjacentHTML('beforeend', '<span class="cit">' + esc(g.groups[gi].code + ' ' + its.join(', ')) + '</span>');
+      frag.appendChild(d); }
+    const more = D.sections.filter(s => matches(s, 'p') && !V.get(S.p).uset.has(s.u) && (!S.e));
+    if (more.length) { const b = el('details', 'grp beyond'); b.appendChild(el('summary', '', '<span>' + esc(t('beyond')) + '</span><small style="color:var(--muted);font-weight:400">' + more.length + '</small>')); more.forEach(s => b.appendChild(sectionEl(s))); frag.appendChild(b); } }
   else if (S.c && !S.k) { const ord = list.map((x, i) => [KIND.get(x.kd).i, i, x]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).map(x => x[2]); let cur = null; for (const s of ord) { if (s.kd !== cur) { cur = s.kd; frag.appendChild(el('div', 'gh', esc(L(KIND.get(cur))) + ' <small>' + ord.filter(x => x.kd === cur).length + '</small>')); } frag.appendChild(sectionEl(s)); } }
   else { let cur = null; const key = x => x.f || x.card; for (const s of list) { if (key(s) !== cur) { cur = key(s); const c = K.get(s.card), n = list.filter(x => key(x) === cur).length; frag.appendChild(el('div', 'gh', esc(s.f ? c.id + ' › ' + c.files[s.f] : (/^\d/.test(c.id) ? c.id + ' · ' : '') + L(c)) + ' <small>' + n + '</small>')); } frag.appendChild(sectionEl(s)); } }
   res.appendChild(frag);
@@ -520,9 +544,9 @@ let size = +store.get('aero-cave-explorer-size') || 16; const setSize = n => { s
 setSize(size); $('fs-').onclick = () => setSize(size - 1); $('fs+').onclick = () => setSize(size + 1);
 const th = store.get('aero-cave-explorer-theme'); if (th) document.documentElement.dataset.theme = th;
 $('theme').onclick = () => { const dark = document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme:dark)').matches); const v = dark ? 'light' : 'dark'; document.documentElement.dataset.theme = v; store.set('aero-cave-explorer-theme', v); };
-const clearAll = () => { gFilter = ''; go({q:'', p:'', k:'', c:'', g:''}, true); };
+const clearAll = () => { gFilter = ''; go({q:'', p:'', k:'', c:'', g:'', l:'', e:''}, true); };
 $('clr').onclick = clearAll;
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && (S.q || S.p || S.k || S.c || S.g)) clearAll(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && (S.q || S.p || S.k || S.c || S.g || S.l || S.e)) clearAll(); });
 let popY = null;
 window.addEventListener('popstate', e => { popY = e.state && typeof e.state.y === 'number' ? e.state.y : 0; readHash(); render(); requestAnimationFrame(() => { window.scrollTo(0, popY); popY = null; }); });
 window.addEventListener('hashchange', () => { if (popY !== null) return; readHash(); render(); });
