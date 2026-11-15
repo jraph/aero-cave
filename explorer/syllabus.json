@@ -133,9 +133,9 @@
   ]},
   {"code": "LLIC", "concept": "law-lic", "section": "Air law", "section_fr": "Réglementation", "en": "CARs Part IV: licensing and medical", "fr": "RAC partie IV : licences et certificat médical", "items": [
     {"n": 1, "en": "400.01 Interpretation", "s": "P", "u": ["law-acft-type-ratings-hp-two-crew-iatra-ppc-oct-2026"], "gap": "High-performance definition only."},
-    {"n": 2, "en": "401.03 Requirement to hold a permit, licence or rating", "s": "P", "u": ["law-licence-validity-stack", "ifr-air-law-ifr-privileges"], "gap": "Validity stack only; 401.03 not set out.", "e": 1},
+    {"n": 2, "en": "401.03 Requirement to hold a permit, licence or rating", "s": "P", "u": ["law-licence-validity-stack"], "gap": "Validity stack only; 401.03 not set out.", "e": 1},
     {"n": 3, "en": "401.04 Crew of aircraft registered in other contracting states", "s": "M", "u": [], "gap": ""},
-    {"n": 4, "en": "401.05 Recency requirements", "s": "C", "u": ["law-recency", "q17-recency-clocks-horloges-de-r-cence", "ifr-instrument-rating-recency"], "gap": "", "e": 1},
+    {"n": 4, "en": "401.05 Recency requirements", "s": "C", "u": ["law-recency", "q17-recency-clocks-horloges-de-r-cence"], "gap": "", "e": 1},
     {"n": 5, "en": "401.08 Personal logs", "s": "M", "u": [], "gap": ""},
     {"n": 6, "en": "401.26 PPL aeroplane privileges", "s": "P", "u": ["law-ppl-cpl-commercial-boundary"], "gap": "PPL vs CPL boundary only.", "e": 1},
     {"n": 7, "en": "401.28 Reimbursement of flight costs", "s": "C", "u": ["law-ppl-cpl-commercial-boundary"], "gap": ""},
@@ -215,7 +215,7 @@
     {"n": 9, "en": "602.78 Contents of an arrival report", "s": "C", "u": ["law-flight-plan-itinerary"], "gap": ""},
     {"n": 10, "en": "602.79 Overdue aircraft report", "s": "M", "u": [], "gap": ""},
     {"n": 11, "en": "602.86 Carry-on baggage, equipment and cargo", "s": "C", "u": ["law-baggage-cargo"], "gap": ""},
-    {"n": 12, "en": "602.88 Fuel requirements", "s": "C", "u": ["law-fuel-requirements", "ifr-ifr-fuel-car-602-88-memory"], "gap": "", "e": 1},
+    {"n": 12, "en": "602.88 Fuel requirements", "s": "C", "u": ["law-fuel-requirements"], "gap": "", "e": 1},
     {"n": 13, "en": "602.89 Passenger briefings", "s": "C", "u": ["law-passenger-briefing"], "gap": ""}
   ]},
   {"code": "LAD", "concept": "law-atc", "section": "Air law", "section_fr": "Réglementation", "en": "CARs 602: aerodrome operations and MF", "fr": "RAC 602 : opérations aux aérodromes et MF", "items": [
@@ -287,7 +287,7 @@
     {"n": 1, "en": "ATS and advisory services", "s": "P", "u": ["law-vfr-separation-conflict-resolution-by-class"], "gap": "Service levels by class only.", "e": 1},
     {"n": 2, "en": "Communication procedures", "s": "P", "u": ["law-radio-transponder"], "gap": "Call format and readback only.", "e": 1},
     {"n": 3, "en": "Radar service: clock position system", "s": "P", "u": ["law-ats-surveillance-wake-rvsm"], "gap": "Surveillance separation minima only.", "e": 1},
-    {"n": 4, "en": "ATC clearances and instructions", "s": "C", "u": ["law-atc-clearances-instructions", "ifr-clearance-readback"], "gap": "", "e": 1},
+    {"n": 4, "en": "ATC clearances and instructions", "s": "C", "u": ["law-atc-clearances-instructions"], "gap": "", "e": 1},
     {"n": 5, "en": "Wake turbulence separation", "s": "C", "u": ["law-ats-surveillance-wake-rvsm"], "gap": ""},
     {"n": 6, "en": "Controlled and uncontrolled aerodrome operations", "s": "C", "u": ["law-aerodrome-mf-operations", "law-twr-light-signals-nordo"], "gap": "", "e": 1},
     {"n": 7, "en": "MF and ATF", "s": "P", "u": ["law-aerodrome-mf-operations"], "gap": "“ATF calls ≠ MF mandatory reports” only.", "e": 1},
@@ -420,7 +420,7 @@
   {"code": "ALT", "concept": "met-atmos", "section": "Meteorology", "section_fr": "Météorologie", "en": "Altimetry (MET aspects)", "fr": "Altimétrie (aspects MÉTÉO)", "items": [
     {"n": 1, "en": "Pressure altitude", "s": "C", "u": ["wx-pa-da"], "gap": "", "e": 1},
     {"n": 2, "en": "Density altitude", "s": "C", "u": ["wx-pa-da"], "gap": "", "e": 1},
-    {"n": 3, "en": "Altimeter settings", "s": "C", "u": ["wxp-altimeter", "ifr-altimeter-setting-standard-pressure-regions"], "gap": "", "e": 1},
+    {"n": 3, "en": "Altimeter settings", "s": "C", "u": ["wxp-altimeter"], "gap": "", "e": 1},
     {"n": 4, "en": "Flying from high to low pressure or temperature", "s": "C", "u": ["wx-altimetry-traps"], "gap": "", "e": 1}
   ]},
   {"code": "TMP", "concept": "met-atmos", "section": "Meteorology", "section_fr": "Météorologie", "en": "Temperature", "fr": "Température", "items": [
@@ -519,7 +519,7 @@
     {"n": 2, "en": "AWBS", "s": "P", "u": ["wxp-master-scan", "wx-products"], "gap": "Products and briefing flow covered; who provides which service and how to access it not set out."},
     {"n": 3, "en": "FSS and FIC", "s": "P", "u": ["wxp-fic"], "gap": "In-flight FIC update flow; FSS vs FIC roles and services not described.", "e": 1},
     {"n": 4, "en": "CFPS", "s": "M", "u": [], "gap": "No CFPS mention.", "e": 1},
-    {"n": 5, "en": "ATIS", "s": "P", "u": ["fx-communications-weather-communications-m-t-o", "proc-arrival-setup"], "gap": "ATIS defined and named in the arrival flow; ATS weather services not described."}
+    {"n": 5, "en": "ATIS", "s": "P", "u": ["fx-communications-weather-communications-m-t-o"], "gap": "ATIS defined and named in the arrival flow; ATS weather services not described."}
   ]},
   {"code": "RPT", "concept": "met-metar", "section": "Meteorology", "section_fr": "Météorologie", "en": "Weather reports", "fr": "Messages d'observation", "items": [
     {"n": 1, "en": "METAR decoding", "s": "C", "u": ["wxp-metar", "wx-products"], "gap": "", "e": 1},
@@ -672,10 +672,10 @@
     {"n": 6, "en": "Trim and trim devices", "s": "P", "u": ["sys-trim-runaway-jam"], "gap": "Runaway QRC only."}
   ]},
   {"code": "IPS", "concept": "agk-pitot", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Pitot-static system", "fr": "Système anémobarométrique", "items": [
-    {"n": 1, "en": "Pitot", "s": "C", "u": ["sys-pitot-static", "ifr-instrument-failures"], "gap": "", "e": 1},
-    {"n": 2, "en": "Static", "s": "C", "u": ["sys-pitot-static", "ifr-instrument-failures"], "gap": "", "e": 1},
+    {"n": 1, "en": "Pitot", "s": "C", "u": ["sys-pitot-static"], "gap": "", "e": 1},
+    {"n": 2, "en": "Static", "s": "C", "u": ["sys-pitot-static"], "gap": "", "e": 1},
     {"n": 3, "en": "Anti-icing", "s": "P", "u": ["sys-pitot-static"], "gap": "Pitot heat as a remedy only."},
-    {"n": 4, "en": "Alternate static source and errors", "s": "C", "u": ["sys-pitot-static", "ifr-instrument-failures"], "gap": ""}
+    {"n": 4, "en": "Alternate static source and errors", "s": "C", "u": ["sys-pitot-static"], "gap": ""}
   ]},
   {"code": "IASI", "concept": "agk-pitot", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Airspeed indicator", "fr": "Anémomètre", "items": [
     {"n": 1, "en": "ASI principle", "s": "M", "u": [], "gap": ""},
@@ -695,7 +695,7 @@
   {"code": "ICMP", "concept": "nav-compass", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Magnetic compass", "fr": "Compas magnétique", "items": [
     {"n": 1, "en": "Compass principle", "s": "M", "u": [], "gap": ""},
     {"n": 2, "en": "Magnetic dip", "s": "P", "u": ["sys-magnetic-compass"], "gap": "Mentioned only.", "e": 1},
-    {"n": 3, "en": "Turning, acceleration and deceleration errors", "s": "C", "u": ["sys-magnetic-compass", "ifr-instrument-failures"], "gap": "", "e": 1},
+    {"n": 3, "en": "Turning, acceleration and deceleration errors", "s": "C", "u": ["sys-magnetic-compass"], "gap": "", "e": 1},
     {"n": 4, "en": "Deviation", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 5, "en": "Compass correction card", "s": "P", "u": ["nav-true-magnetic-compass"], "gap": "Applying deviation only."},
     {"n": 6, "en": "Compass serviceability", "s": "M", "u": [], "gap": ""}
@@ -973,9 +973,9 @@
   ]},
   {"code": "LLIC", "concept": "law-lic", "section": "Air law", "section_fr": "Réglementation", "en": "CARs Part IV: licensing, medical, FTUs", "fr": "RAC partie IV : licences, médical", "items": [
     {"n": 1, "en": "400.01 Interpretation", "s": "P", "u": ["law-acft-type-ratings-hp-two-crew-iatra-ppc-oct-2026"], "gap": "High-performance definition only."},
-    {"n": 2, "en": "401.03 Requirement to hold permit, licence or rating", "s": "P", "u": ["law-licence-validity-stack", "ifr-air-law-ifr-privileges"], "gap": "Validity stack only; 401.03 not set out."},
+    {"n": 2, "en": "401.03 Requirement to hold permit, licence or rating", "s": "P", "u": ["law-licence-validity-stack"], "gap": "Validity stack only; 401.03 not set out."},
     {"n": 3, "en": "401.04 Crew of foreign-registered aircraft", "s": "M", "u": [], "gap": ""},
-    {"n": 4, "en": "401.05 Recency requirements", "s": "C", "u": ["law-recency", "q17-recency-clocks-horloges-de-r-cence", "ifr-instrument-rating-recency"], "gap": ""},
+    {"n": 4, "en": "401.05 Recency requirements", "s": "C", "u": ["law-recency", "q17-recency-clocks-horloges-de-r-cence"], "gap": ""},
     {"n": 5, "en": "401.08 Personal logs", "s": "M", "u": [], "gap": ""},
     {"n": 6, "en": "401.28 PPL cost reimbursement", "s": "C", "u": ["law-ppl-cpl-commercial-boundary"], "gap": ""},
     {"n": 7, "en": "401.30 CPL aeroplane privileges and requirements", "s": "C", "u": ["law-ppl-cpl-commercial-boundary", "law-cpl-a-requirements", "law-privileges-ops"], "gap": "", "e": 1, "d": 1},
@@ -1066,7 +1066,7 @@
     {"n": 10, "en": "602.79 Overdue aircraft report", "s": "M", "u": [], "gap": ""},
     {"n": 11, "en": "602.86 Carry-on baggage, equipment, cargo", "s": "C", "u": ["law-baggage-cargo"], "gap": ""},
     {"n": 12, "en": "602.87 Crew member instructions", "s": "M", "u": [], "gap": "", "d": 1},
-    {"n": 13, "en": "602.88 Fuel requirements", "s": "C", "u": ["law-fuel-requirements", "ifr-ifr-fuel-car-602-88-memory"], "gap": "", "e": 1},
+    {"n": 13, "en": "602.88 Fuel requirements", "s": "C", "u": ["law-fuel-requirements"], "gap": "", "e": 1},
     {"n": 14, "en": "602.89 Passenger briefings", "s": "C", "u": ["law-passenger-briefing"], "gap": ""}
   ]},
   {"code": "LAD", "concept": "law-atc", "section": "Air law", "section_fr": "Réglementation", "en": "CARs 602: aerodrome operations and MF", "fr": "RAC 602 : aérodromes et MF", "items": [
@@ -1288,7 +1288,7 @@
     {"n": 2, "en": "FSS and FIC", "s": "P", "u": ["wxp-fic"], "gap": "In-flight FIC update only."},
     {"n": 3, "en": "Communication procedures", "s": "P", "u": ["law-radio-transponder"], "gap": "Call format and readback only.", "d": 1},
     {"n": 4, "en": "ATS surveillance service", "s": "P", "u": ["law-ats-surveillance-wake-rvsm"], "gap": "Surveillance separation minima only."},
-    {"n": 5, "en": "ATC clearances, instructions, readback", "s": "C", "u": ["law-atc-clearances-instructions", "ifr-clearance-readback"], "gap": "", "d": 1},
+    {"n": 5, "en": "ATC clearances, instructions, readback", "s": "C", "u": ["law-atc-clearances-instructions"], "gap": "", "d": 1},
     {"n": 6, "en": "Wake turbulence separation", "s": "C", "u": ["law-ats-surveillance-wake-rvsm"], "gap": ""},
     {"n": 7, "en": "Controlled and uncontrolled aerodrome operations", "s": "C", "u": ["law-aerodrome-mf-operations", "law-twr-light-signals-nordo"], "gap": "", "e": 1},
     {"n": 8, "en": "MF and ATF", "s": "P", "u": ["law-aerodrome-mf-operations"], "gap": "“ATF calls ≠ MF mandatory reports” only.", "e": 1},
@@ -1478,7 +1478,7 @@
   {"code": "ALT", "concept": "met-atmos", "section": "Meteorology", "section_fr": "Météorologie", "en": "Altimetry (MET aspects)", "fr": "Altimétrie (aspects MET)", "items": [
     {"n": 1, "en": "Pressure altitude", "s": "C", "u": ["wx-pa-da"], "gap": "", "e": 1},
     {"n": 2, "en": "Density altitude", "s": "C", "u": ["wx-pa-da"], "gap": "", "e": 1},
-    {"n": 3, "en": "Altimeter settings", "s": "C", "u": ["wxp-altimeter", "ifr-altimeter-setting-standard-pressure-regions"], "gap": ""},
+    {"n": 3, "en": "Altimeter settings", "s": "C", "u": ["wxp-altimeter"], "gap": ""},
     {"n": 4, "en": "High↔low pressure / temperature areas", "s": "C", "u": ["wx-altimetry-traps"], "gap": "", "e": 1}
   ]},
   {"code": "TMP", "concept": "met-atmos", "section": "Meteorology", "section_fr": "Météorologie", "en": "Temperature", "fr": "Température", "items": [
@@ -1582,7 +1582,7 @@
   {"code": "SVC", "concept": "met-products", "section": "Meteorology", "section_fr": "Météorologie", "en": "MET services for pilots", "fr": "Services MET", "items": [
     {"n": 1, "en": "Aviation weather services", "s": "P", "u": ["wxp-master-scan", "wx-products"], "gap": "Products and briefing flow covered; who provides which service and how to access it not set out."},
     {"n": 2, "en": "Collaborative Flight Planning Services (CFPS)", "s": "M", "u": [], "gap": "No CFPS mention."},
-    {"n": 3, "en": "Weather information from ATS", "s": "P", "u": ["fx-communications-weather-communications-m-t-o", "proc-arrival-setup"], "gap": "ATIS defined and named in the arrival flow; ATS weather services not described."},
+    {"n": 3, "en": "Weather information from ATS", "s": "P", "u": ["fx-communications-weather-communications-m-t-o"], "gap": "ATIS defined and named in the arrival flow; ATS weather services not described."},
     {"n": 4, "en": "FSS and FIC", "s": "P", "u": ["wxp-fic"], "gap": "In-flight FIC update flow; FSS vs FIC roles and services not described."}
   ]},
   {"code": "RPT", "concept": "met-metar", "section": "Meteorology", "section_fr": "Météorologie", "en": "Weather reports", "fr": "Observations", "items": [
@@ -1764,10 +1764,10 @@
     {"n": 7, "en": "Autopilot modes", "s": "P", "u": ["proc-autopilot-trim-runaway"], "gap": "Failure QRC only."}
   ]},
   {"code": "IPS", "concept": "agk-pitot", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Pitot-static system", "fr": "Circuit anémobarométrique", "items": [
-    {"n": 1, "en": "Pitot", "s": "C", "u": ["sys-pitot-static", "ifr-instrument-failures"], "gap": ""},
-    {"n": 2, "en": "Static", "s": "C", "u": ["sys-pitot-static", "ifr-instrument-failures"], "gap": ""},
+    {"n": 1, "en": "Pitot", "s": "C", "u": ["sys-pitot-static"], "gap": ""},
+    {"n": 2, "en": "Static", "s": "C", "u": ["sys-pitot-static"], "gap": ""},
     {"n": 3, "en": "Pitot anti-icing", "s": "P", "u": ["sys-pitot-static"], "gap": "Pitot heat as a remedy only."},
-    {"n": 4, "en": "Alternate static source and errors", "s": "C", "u": ["sys-pitot-static", "ifr-instrument-failures"], "gap": ""}
+    {"n": 4, "en": "Alternate static source and errors", "s": "C", "u": ["sys-pitot-static"], "gap": ""}
   ]},
   {"code": "IASI", "concept": "agk-pitot", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Airspeed indicator", "fr": "Anémomètre", "items": [
     {"n": 1, "en": "ASI operating principles", "s": "M", "u": [], "gap": ""},
@@ -1796,7 +1796,7 @@
     {"n": 5, "en": "Reading the compass", "s": "P", "u": ["ifr-instrument-failures"], "gap": "Compass errors only."},
     {"n": 6, "en": "Deviation (compass)", "s": "C", "u": ["nav-true-magnetic-compass"], "gap": ""},
     {"n": 7, "en": "Compass correction card", "s": "P", "u": ["nav-true-magnetic-compass"], "gap": "Applying deviation only."},
-    {"n": 8, "en": "Turning and acceleration errors", "s": "C", "u": ["sys-magnetic-compass", "ifr-instrument-failures"], "gap": ""},
+    {"n": 8, "en": "Turning and acceleration errors", "s": "C", "u": ["sys-magnetic-compass"], "gap": ""},
     {"n": 9, "en": "Compass serviceability checks", "s": "M", "u": [], "gap": ""},
     {"n": 10, "en": "Compass swing", "s": "M", "u": [], "gap": ""},
     {"n": 11, "en": "Heading checks, ground and air", "s": "M", "u": [], "gap": ""}

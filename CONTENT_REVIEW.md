@@ -14,6 +14,10 @@ Carried from the retired CPAER coverage matrix; still open on 14 November 2026. 
 
 The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json` and the explorer's guide pages; `python3 explorer/build_explorer.py --audit` lists concepts with TC items but no knowledge note.
 
+## Citations at the item's level — 15 November 2026
+
+PPAER and CPAER items that cited an IFR note next to a PPL/CPL-level note no longer cite the IFR one (20 citations: 602.88 fuel, 401.03, 401.05 recency, ATC clearances, altimeter settings, ATIS, pitot/static, compass errors). Coverage status unchanged. Result: the IFR fuel, IR recency and IFR clearance notes now show IR only. IFR notes stay cited where they are the only evidence (e.g. altimeter-setting regions for 602.35–602.37, which are general rules).
+
 ## Ontology as hub; formulas and card 17 reworked — 14 November 2026
 
 Text moved or re-laid out, not re-validated; unit IDs kept unless a repeat was retired.
