@@ -11,7 +11,7 @@ Compact Canadian pilot study notes for **PPL (PPAER) · CPL (CPAER) · instrumen
 | Training stage | Pre-solo (PSTAR) → PPAER / PPL flight test → night & OTT → CPAER / CPL flight test → ME → INRAT → IFR flight test → first commercial seat |
 | Phase of flight | Weather brief, planning, departure, enroute, approach, emergencies, quick reference, Pebbles |
 | Topic graph | Concepts with broader / narrower / related links; a note can sit under several parents |
-| TC guide coverage | Item-by-item status against TP 12881 (Meteorology) and TP 691 (INRAT) |
+| TC guide coverage | Item-by-item status against the written exams (PSTAR TP 11919, PPAER TP 12880, CPAER TP 12881, INRAT TP 691) and flight tests (TP 13723, TP 13462, TP 219, TP 9939) |
 | Search | Full text plus synonyms and abbreviations; **✕ Clear** or Esc resets |
 | Legacy reader links | Collections transitioning to the explorer: pilot qualifications, CPAER formulas, abbreviations |
 
@@ -43,6 +43,7 @@ Then bump `VERSION` in `service-worker.js`. Record source or review changes in `
 
 Use current official publications and the aircraft POH/AFM for any operational decision. A commit date does not establish regulatory currency.
 
+- [TC flight test guides](https://tc.canada.ca/en/aviation/licensing-pilots-personnel/getting-trained-pilot-crew-member/flight-test-guides)
 - [TC study & reference guides](https://tc.canada.ca/en/aviation/licensing-pilots-personnel/flight-crew-licences-permits-ratings/study-reference-guides-sample-examinations)
 - [Transport Canada Aeronautical Information Manual](https://tc.canada.ca/en/aviation/publications/transport-canada-aeronautical-information-manual-tc-aim)
 - [Canadian Aviation Regulations](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/)

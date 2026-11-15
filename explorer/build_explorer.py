@@ -195,7 +195,18 @@ def build():
     if errors:
         sys.exit("ontology errors:\n  " + "\n  ".join(errors))
     syl = json.loads(SYL.read_text(encoding="utf-8"))
+    gids = [g["id"] for g in syl["guides"]]
+    if len(gids) != len(set(gids)):
+        errors.append("duplicate guide id")
+    for v in ont["views"]:
+        if v.get("guide") and v["guide"] not in gids:
+            errors.append(f"view {v['id']}: unknown guide {v['guide']}")
     for g in syl["guides"]:
+        if g.get("kind") not in ("written", "flight"):
+            errors.append(f"{g['id']}: kind must be written or flight")
+        for key in ("method", "scope"):
+            if not (g.get(key) or {}).get("en") or not g[key].get("fr"):
+                errors.append(f"{g['id']}: {key} needs en and fr")
         for grp in g["groups"]:
             for it in grp["items"]:
                 if it["s"] not in "CPME":

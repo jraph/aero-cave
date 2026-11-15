@@ -1,5 +1,19 @@
 # Content review
 
+## TC guide maps extended to all exams and flight tests — 14 November 2026
+
+`explorer/syllabus.json` now holds eight guides. Item counts (Covered / Partial / Missing):
+
+- **TP 12881 CPAER**, all four subjects in one guide (`tp12881`, replaces `tp12881-met`): 855 items, 254 / 254 / 347. Air law 318, Navigation 125, Meteorology 111, Aeronautics 301.
+- **TP 12880 PPAER** (6th ed., May 2025): 605 items, 215 / 202 / 188.
+- **TP 11919 PSTAR** (7th ed., Dec 2022): 73 topic items, 39 / 15 / 19. The guide is a question bank; items are the topics its 14 sections test.
+- **Flight tests:** TP 13723 PPL 32 items (25 / 7 / 0); TP 13462 CPL 32 (24 / 8 / 0); TP 219 ME 24 (16 / 6 / 2); TP 9939 IFR 16 (16 / 0 / 0). Exercises are matched to procedure units; a unit supports practice and the oral, it does not replace the guide's performance criteria.
+- **TP 691 INRAT:** unchanged except stale "card without IDs" notes resolved (ATIS, pitot-static, CFIT now point to units).
+
+**Method, stated plainly:** CPAER air law, navigation and aeronautics, and PSTAR, were decided by hand from CAR-number citations, unit headings and matched text, **without a line-by-line read of every unit**. That is lighter than the Meteorology and INRAT reads. PPAER items reuse the CPAER decision for the same item (matched by CAR number or label within the section); PPAER-only items (301.06, 401.26, 606.02, electric motors, battery types, unapproved information) were decided by hand. The CPAER Meteorology "Elsewhere" status is gone: ATIS, hoar frost and altimeter settings re-judged against units. Item lists were read from the TC HTML editions on this date; nothing is validated against the CARs or AIM.
+
+Topics found in no unit (text search): ADS-B, hyperventilation, situational awareness, wildlife areas, Bernoulli / Newton, radar clock position, rotating beacon, readability scale, student-permit privileges, how runways are numbered. Explorer: guide tiles grouped as written exams / flight tests, section headers and method line in each guide, and stage views 1–3 and 5–9 link to their guide.
+
 ## Abbreviations in the explorer — 14 November 2026
 
 The abbreviations tile and PWA shortcut open collection A. The explorer selects EN/FR/both columns for MANAB/CFS and supplementary TC exam entries. All 54 individually labelled bilingual memory reminders from the legacy reader are available in the memory-traps unit, alongside its original grouped examples, which contain additional context. The existing reader URL remains published. Migration only; source editions and aviation wording carried forward.

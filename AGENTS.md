@@ -25,5 +25,6 @@ Default to **CAVE mode** for repository content: super-condensed, scan-first avi
 - **Pebbles:** exactly one `#### Pebble` as the last unit of each concept file, recapping that file only. No separate Pebble files.
 - **Ontology (`explorer/ontology.json`):** concepts (labels EN/FR, broader, related, alt search terms), levels and views only. Do not add content or status notes there. Add a concept only with at least one unit; give it a broader concept unless it is a domain root.
 - **READMEs** hold indexes and format only: no migration notes, status or review commentary (those go in `CONTENT_REVIEW.md`).
+- `explorer/syllabus.json`: one guide per TC study or flight test guide (`kind`: `written` or `flight`; `method` and `scope` in EN and FR). Items: `s` = C / P / M; C and P cite unit IDs; P needs a gap note. Item labels are our own short wording.
 - After editing any card, concept file, `explorer/ontology.json` or `explorer/syllabus.json`, run `python3 explorer/build_explorer.py` and `node --test tests/*.cjs`, then bump the service-worker VERSION. `index.html` is generated: never edit it by hand.
 - Keep paths and anchors stable when practical. Validate links, counts, examples and HTML structure after edits.

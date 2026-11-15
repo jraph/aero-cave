@@ -34,7 +34,7 @@ h2{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu
 .tile span{font-size:.75rem;color:var(--muted)}
 .tile:hover,.chip:hover{border-color:var(--accent)}
 .tile.sel{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
-#vpanel{border-left:3px solid var(--accent);padding:.1rem .6rem .3rem;margin-bottom:.6rem}#vpanel h3{margin:.1rem 0 .2rem;font-size:1.05rem;line-height:1.2}
+#tg .tsub{grid-column:1/-1;font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:.3rem 0 -.1rem}.gsec{margin:.9rem 0 .3rem;font-size:.95rem}.gsec small{color:var(--muted);font-weight:400}#vpanel{border-left:3px solid var(--accent);padding:.1rem .6rem .3rem;margin-bottom:.6rem}#vpanel h3{margin:.1rem 0 .2rem;font-size:1.05rem;line-height:1.2}
 .pl{margin:.3rem 0;display:flex;flex-wrap:wrap;gap:.22rem}.pt{background:var(--stripe);border:1px solid var(--line);border-radius:.3rem;padding:.05rem .35rem;font-size:.84rem;line-height:1.3}.pt.k{background:var(--pill);font-weight:700;border-color:transparent}
 #gpanel h3{margin:.2rem 0 .2rem;font-size:1.1rem}
 .bars{display:flex;height:.55rem;border-radius:.3rem;overflow:hidden;margin:.5rem 0 .4rem;background:var(--line)}
@@ -155,7 +155,7 @@ const T = {
   also:['Filed under','Classé sous'], open:['Open card ↗','Ouvrir la fiche ↗'], reader:['Reader ↗','Lecteur ↗'],
   none:['Nothing matches. Remove a filter or shorten the search.','Aucun résultat. Retirez un filtre ou raccourcissez la recherche.'],
   disc:['Study aid only. Use current official publications and the aircraft flight manual for operations.','Aide à l’étude seulement. Utilisez les publications officielles en vigueur et le manuel de vol pour l’exploitation.'],
-  hGuide:['TC guide coverage','Couverture des guides TC'], items:['items','points'], stC:['Covered','Couvert'], stP:['Partial','Partiel'], stM:['Missing','Manquant'], stE:['Elsewhere, unchecked','Ailleurs, non vérifié'], back:['← Explorer','← Explorateur'], reviewed:['Reviewed','Révisé'], official:['Official guide ↗','Guide officiel ↗'], own:['Item labels are our own short wording; the guide text is authoritative.','Les libellés sont notre formulation abrégée; le texte du guide fait foi.'],
+  hGuide:['TC guide coverage','Couverture des guides TC'], items:['items','points'], stC:['Covered','Couvert'], stP:['Partial','Partiel'], stM:['Missing','Manquant'], stE:['Elsewhere, unchecked','Ailleurs, non vérifié'], back:['← Explorer','← Explorateur'], reviewed:['Reviewed','Révisé'], official:['Official guide ↗','Guide officiel ↗'], kWritten:['Written exams','Examens écrits'], kFlight:['Flight tests','Tests en vol'], method:['Method','Méthode'], toGuide:['Item-by-item coverage →','Couverture point par point →'], own:['Item labels are our own short wording; the guide text is authoritative.','Les libellés sont notre formulation abrégée; le texte du guide fait foi.'],
   clr:['✕ Clear','✕ Effacer'],
   expand:['Expand all','Tout ouvrir'], collapse:['Collapse all','Tout fermer']
 };
@@ -392,18 +392,21 @@ function renderGuide() {
   p.appendChild(el('h3', '', esc(g.guide + ' · ' + L(g))));
   const all = g.groups.flatMap(x => x.items), n = k => all.filter(i => i.s === k).length;
   p.appendChild(el('div', 'crumbs', esc(g.edition) + ' · ' + esc(t('reviewed')) + ' ' + esc(g.reviewed) + ' · <a href="' + esc(g.url) + '" target="_blank" rel="noopener" style="color:var(--accent)">' + esc(t('official')) + '</a>'));
-  p.appendChild(el('div', 'crumbs', esc(L(g.scope)) + ' ' + esc(t('own'))));
+  p.appendChild(el('div', 'crumbs', '<b>' + esc(t('method')) + '.</b> ' + esc(L(g.method)) + ' ' + esc(L(g.scope)) + ' ' + esc(t('own'))));
   const bar = arr => '<div class="bars">' + ['C','P','M','E'].map(k => '<span class="s' + k + '" style="flex:' + arr.filter(i => i.s === k).length + '"></span>').join('') + '</div>';
   p.insertAdjacentHTML('beforeend', bar(all));
   const leg = el('div', 'leg');
-  for (const k of ['C','P','M','E']) { const b = el('button', 'btn', '<span class="dot s' + k + '"></span>' + esc(t('st' + k)) + ' <b>' + n(k) + '</b>'); b.type = 'button'; b.setAttribute('aria-pressed', gFilter === k); b.onclick = () => { gFilter = gFilter === k ? '' : k; render(); }; leg.appendChild(b); }
+  for (const k of ['C','P','M','E']) { if (!n(k)) continue; const b = el('button', 'btn', '<span class="dot s' + k + '"></span>' + esc(t('st' + k)) + ' <b>' + n(k) + '</b>'); b.type = 'button'; b.setAttribute('aria-pressed', gFilter === k); b.onclick = () => { gFilter = gFilter === k ? '' : k; render(); }; leg.appendChild(b); }
   p.appendChild(leg);
+  let sec = ''; const oneSec = new Set(g.groups.map(x => x.section)).size < 2, ft = g.kind === 'flight';
   for (const grp of g.groups) {
     const items = grp.items.filter(i => !gFilter || i.s === gFilter); if (!items.length) continue;
+    const sn = lang === 'fr' && grp.section_fr ? grp.section_fr : grp.section;
+    if (sn && sn !== sec && !oneSec) { const secItems = g.groups.filter(x => x.section === grp.section).flatMap(x => x.items); p.appendChild(el('h4', 'gsec', esc(sn) + ' <small>' + secItems.length + '</small>' + bar(secItems))); sec = sn; }
     const d = el('details', 'grp'); d.open = !!gFilter;
-    d.appendChild(el('summary', '', '<span>' + esc(grp.code + ' · ' + L(grp)) + '</span><small style="color:var(--muted);font-weight:400">' + items.length + '</small>' + bar(grp.items)));
+    d.appendChild(el('summary', '', '<span>' + esc((ft ? '' : grp.code + ' · ') + L(grp)) + '</span><small style="color:var(--muted);font-weight:400">' + items.length + '</small>' + bar(grp.items)));
     for (const it of items) {
-      const r = el('div', 'it', '<span class="sb s' + it.s + '" title="' + esc(t('st' + it.s)) + '">' + it.s + '</span><span><b>' + grp.code + ' ' + it.n + '</b> · ' + esc(it.en) + '</span>' + (it.gap ? '<span class="gap">' + esc(it.gap) + '</span>' : ''));
+      const r = el('div', 'it', '<span class="sb s' + it.s + '" title="' + esc(t('st' + it.s)) + '">' + it.s + '</span><span>' + (ft ? '' : '<b>' + grp.code + ' ' + it.n + '</b> · ') + esc(it.en) + '</span>' + (it.gap ? '<span class="gap">' + esc(it.gap) + '</span>' : ''));
       if (it.u.length) { const us = el('div', 'us'); for (const u of it.u) { const c = el('button', 'chip', esc(U.get(u).h)); c.type = 'button'; c.onclick = () => openUnit(u); us.appendChild(c); } r.appendChild(us); }
       d.appendChild(r);
     }
@@ -432,7 +435,7 @@ function render() {
   if (browsing) {
     const ts = $('ts'), tg = $('tg'), tr = $('tr'); ts.textContent = tg.textContent = tr.textContent = '';
     for (const c of D.cards) if (c.reader) { const a = el('a', 'tile', '<b>' + esc(L(c)) + '</b><span>EN / FR</span>'); a.href = ['F', 'A'].includes(c.id) ? '#x-any-' + c.id + '-any' : c.reader; a.style.textDecoration = 'none'; a.style.color = 'inherit'; tr.appendChild(a); }
-    for (const g of D.guides) { const all = g.groups.flatMap(x => x.items), n = k => all.filter(i => i.s === k).length; const b = el('button', 'tile', '<b>' + esc(g.guide + ' · ' + L(g)) + '</b><span>' + all.length + ' ' + t('items') + ' · ' + n('C') + ' C · ' + n('P') + ' P · ' + n('M') + ' M · ' + n('E') + ' E</span>'); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); }
+    for (const [kind, key] of [['written','kWritten'],['flight','kFlight']]) { tg.appendChild(el('div', 'tsub', esc(t(key)))); for (const g of D.guides) if (g.kind === kind) { const all = g.groups.flatMap(x => x.items), n = k => all.filter(i => i.s === k).length; const b = el('button', 'tile', '<b>' + esc(g.guide + ' · ' + L(g)) + '</b><span>' + all.length + ' ' + t('items') + ' · ' + ['C','P','M','E'].filter(k => n(k)).map(k => n(k) + ' ' + k).join(' · ') + '</span>'); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); } }
     for (const [g, box] of [['stage', $('tp')], ['ops', $('to')]]) { box.textContent = ''; for (const v of V.values()) if (v.group === g) { const b = el('button', 'tile', '<b>' + esc(L(v)) + '</b><span>' + (v.ref ? esc(v.ref) + ' · ' : '') + vn.get(v.id) + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p:v.id}, true); box.appendChild(b); } }
     for (const r of roots) { const n = counts.get(r); if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(C.get(r))) + '</b><span>' + n + ' ' + t('secs') + ' · ' + C.get(r).narrower.filter(x => counts.get(x)).length + ' ' + t('topics') + '</span>'); b.type = 'button'; b.onclick = () => go({c:r}, true); ts.appendChild(b); }
   }
@@ -441,6 +444,7 @@ function render() {
   if (S.p) { const v = V.get(S.p);
     vp.appendChild(el('h3', '', esc(L(v))));
     if (v.ref) vp.appendChild(el('div', 'crumbs', esc(t('aimed')) + ' <b>' + esc(v.ref) + '</b> — ' + esc(t('approx'))));
+    if (v.guide && G.has(v.guide)) { const gb = el('button', 'btn', esc(G.get(v.guide).guide + ' · ' + t('toGuide'))); gb.type = 'button'; gb.onclick = () => go({g:v.guide}, true); vp.appendChild(gb); }
     if (v.group === 'ops') vp.appendChild(el('div', 'crumbs', esc(t('opsNote'))));
     if (!S.c) { const r = el('div', 'rel', '<i>' + esc(t('narrow')) + '</i>'); let any = 0; for (const id of roots) if (counts.get(id)) { r.appendChild(chip(id, '', counts.get(id))); any++; } if (any > 1) vp.appendChild(r); }
   }
