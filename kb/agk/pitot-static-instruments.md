@@ -23,12 +23,12 @@
 
 | Instrument | Senses | Principle |
 |---|---|---|
-| ASI | pitot (total) − static | dynamic pressure → IAS |
-| Altimeter | static | aneroid capsule expands as pressure falls; subscale = pressure datum |
-| VSI | static | capsule vs calibrated leak: rate of pressure change → trend + rate, with lag |
+| ASI | pitot + static | diaphragm fed pitot pressure, case vented static → IAS |
+| Altimeter | static | sealed aneroid in case vented to static expands as altitude increases; subscale = pressure datum |
+| VSI | static | calibrated leak between case and static → rate of change; rate lags, settles 6–9 s after level-off |
 
-- Altimeter calibrated to ISA true altitude, ±20 ft at sea level; ground check ±50 ft of field elevation. [AIM AIR 1.5.1–1.5.2]
-- Setting too high → reads too high. Cold → true lower: ~4 % per 11 °C below ISA. [AIR 1.5.3–1.5.4]
-- Errors: ASI position, compressibility, density; VSI lag; blockage patterns in `sys-pitot-static`.
-- `?:` instrument mechanics = general knowledge; not checked against a TC source.
+- Altimeter lags in climb/descent: lead level-off by ~10 % of vertical speed. IVSI adds accelerometers → near-zero lag. [TP 2076 2.1.2 F]
+- Altimeter calibrated ±20 ft at sea level; ground check ±50 ft of known elevation. [AIM AIR 1.5.1–1.5.2]
+- Setting too high → reads too high. Cold → true lower: ~4 % per 11 °C below ISA. Mountain wave + cold → overread up to 3 000 ft. [AIR 1.5.3–1.5.8]
+- Blockage patterns: `sys-pitot-static`.
 ***

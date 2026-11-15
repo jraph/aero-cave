@@ -14,6 +14,21 @@ Carried from the retired CPAER coverage matrix; still open on 14 November 2026. 
 
 The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json` and the explorer's guide pages; `python3 explorer/build_explorer.py --audit` lists concepts with TC items but no knowledge note.
 
+## `?:` notes checked against TC sources — 15 November 2026
+
+Seven notes flagged `?:` in the INRAT work were checked; five are now fully sourced, two keep a single flagged line.
+
+- **Sources:** TC *Instrument Procedures Manual* TP 2076 (4th ed., 1997; still TC's own instrument text, read from a mirror of the TC PDF because the publications.gc.ca copy is behind an archive notice), TC AIM 2026-2 AIR 1.5, 2.7 and MET 3, 4.11, 5.2, 6.2, 10–12, CAP GEN (CAT II/III chart legend), CARs 703.65/704.64, TC *Aviation Safety Letter* 1/2019, TC *Human Factors for Aviation* handbooks (TP 12863/12864), ECCC *Severe Weather in Canada* ch. 4, NAV CANADA AvMet thunderstorm reference.
+- **Corrected:**
+  - Heading indicator: the "~15°/h × sin latitude" drift rate is removed (TP 2076 gives no rate; it says check against the compass at least every 15 min).
+  - Attitude indicator: replaced vague errors with TP 2076 turn/acceleration errors and tumble limits; "slow erect after start" removed.
+  - Thunderstorm coverage: `ISOL/OCNL/FRQ` percentages are those of the GFA (MET 4.11) and AIRMET (5.2); high-level SigWx uses different ones (<50 / 50–75 / >75 %, MET 12.2). Trap added; Pebble updated.
+  - Thunderstorm types: "nocturnal (Prairies)" removed (no source); lake-breeze and east-slope storms added from ECCC.
+  - Surface analysis: "isobars 4 hPa from 1000" removed (AIM gives that interval for the GFA, not the surface chart).
+  - Situational awareness: own definition and loss-cue list replaced with TC wording (HF handbook, ASL 1/2019).
+- **Explorer:** the essential mark moved onto the level badge (`PPL ✈`, `CPL ✈`) so PPL-essential and CPL-essential are told apart; today only TP 12880 (PPL) and TP 12881 (CPL) carry marks.
+- **Still flagged:** airborne strike finders (no TC text found); HSI back-course sensing (not in TP 2076).
+
 ## INRAT (TP 691) gaps filled — 15 November 2026
 
 All 43 Missing items in the INRAT guide now cite a note; 16 Partial items upgraded to covered. INRAT: 128 covered / 80 partial / 0 missing. Written short (caveman style), from: CARs consolidation (SOR/96-433 XML), CAP GEN (October 2025), TC AIM 2026-2 (RAC, COM, MET, AIR).
@@ -21,7 +36,7 @@ All 43 Missing items in the INRAT guide now cite a note; 16 Partial items upgrad
 - **New units (26):** `law-car-101-01-key-definitions`, `law-transponder-airspace-car-601-03`, `law-class-f-special-use-car-601-04`, `law-ped-car-602-08`, `law-602-60-operational-emergency-equipment`, `law-ifr-flight-plan-contents-changes`, `law-radar-service-vectors-rac-1-5`, `law-transponder-ssr-psr-ads-b-com-7-8`, `ifr-reduced-low-visibility-operations`, `ifr-designated-mountainous-regions`, `ifr-position-reports-fixes-rac-8`, `ifr-1000-on-top-rac-8-7`, `ifr-sid-radar-non-radar-departures`, `ifr-departure-uncontrolled-aerodrome-rac-7-10`, `ifr-shuttle-procedure`, `ifr-straight-in-no-pt-rac-9-15`, `ifr-radar-vectors-to-final-rac-9-7`, `wx-weather-maps-prog-charts`, `wx-thunderstorm-types-lightning-detection`, `agk-pitot-static-instrument-principles`, `agk-gyro-instruments-principles-errors` (new file `kb/agk/gyro-instruments.md`), `nav-magnetic-compass-principle-use`, `nav-ils-vortac-principles-com-4`, `nav-rmi-hsi-fd-radio-altimeter`, `nav-gnss-principles-com-5`, `agk-situational-awareness-cockpit-setup`.
 - **Lines added:** holding speeds and DME holds (`ifr-holding`), aircraft approach categories (`ifr-cap-definitions-minima`), CAP cold-temperature correction rules (`plate-cold-temperature`); one Pebble line in each of 15 edited files.
 - **Still partial on purpose:** CFS flight-plan list not reproduced (FPL4); IFR-relevant definitions only (LIC1); surface prog charts and chart symbols thin (CHT3, CHT6).
-- **Flagged `?:` (general knowledge, not checked against a TC source):** gyro instruments, pitot-static mechanics, compass mechanics, RMI/HSI/FD/radio altimeter, thunderstorm types and airborne detectors, situational-awareness definition, chart-symbol detail. First targets for the fact-check pass.
+- **Flagged `?:` (general knowledge, not checked against a TC source):** gyro instruments, pitot-static mechanics, compass mechanics, RMI/HSI/FD/radio altimeter, thunderstorm types and airborne detectors, situational-awareness definition, chart-symbol detail. Checked the same day (entry above).
 - **Explorer:** home page gains a note-marker legend; markers in notes show their meaning on hover. Same legend in `kb/README.md`.
 
 533 units (was 507).

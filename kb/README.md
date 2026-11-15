@@ -52,7 +52,7 @@ A marker may carry a short qualifier (`P stall:`, `F rough:`).
 
 - **Unit** = one `####` section. Its comment sits on the line under the heading.
 - `id` is required and permanent: never rename or reuse one. `explorer/syllabus.json` and saved links depend on it.
-- The file's `concept:` is every unit's primary concept. `also:` adds other concepts; `level:` overrides the file's level (PPL, CPL, IR, ME). The explorer shows a unit's level from the TC guides that cite it; the hand-set `level:` is shown (dashed) only when no guide cites the unit.
+- The file's `concept:` is every unit's primary concept. `also:` adds other concepts; `level:` overrides the file's level (PPL, CPL, IR, ME). The explorer shows a unit's level from the TC guides that cite it; the hand-set `level:` is shown (dashed) only when no guide cites the unit. A ✈ on a level badge (`PPL ✈`, `CPL ✈`) means that level's guide marks a citing item essential; each guide's marks stay with its own level.
 - `kind:` says what the note is: `knowledge` (default in kb), `procedure`, `formula`, `trap`, `pebble` (default for a Pebble), `glossary`, `aircraft`, `source`. The subject is the concept; the kind is never a concept.
 - A table headed `| Label | English | Français |` is bilingual: the explorer shows the column for the chosen language.
 - `from:` (optional) records which retired card a unit came from.

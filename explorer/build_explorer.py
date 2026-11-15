@@ -239,14 +239,14 @@ def build():
     # levels come from the guides that cite a unit; Pebbles take their concept file's levels;
     # a unit no guide cites keeps its hand-set level as a fallback ("ph")
     order = [p["id"] for p in ont["paths"]]
-    cited, essential = {}, set()
+    cited, essential = {}, {}
     for g in syl["guides"]:
         for grp in g["groups"]:
             for it in grp["items"]:
                 for u in it["u"]:
                     cited.setdefault(u, set()).add(g["level"])
                     if it.get("e"):
-                        essential.add(u)
+                        essential.setdefault(u, set()).add(g["level"])
     by_file = {}
     for s in sections:
         by_file.setdefault(s.get("f") or s["card"], set()).update(cited.get(s["u"], ()))
@@ -256,8 +256,9 @@ def build():
         s["p"] = [p for p in order if p in lv]
         if not s["p"]:
             s["ph"] = hand
-        if s["u"] in essential:
-            s["e"] = 1
+        ess = [p for p in s["p"] if p in essential.get(s["u"], ())]
+        if ess:
+            s["e"] = ess
     # related links: hand-set ones plus derived ones (a unit tagged with both concepts, or
     # two or more TC items citing units of both); never between a concept and its ancestors
     byid = {c["id"]: c for c in concepts}

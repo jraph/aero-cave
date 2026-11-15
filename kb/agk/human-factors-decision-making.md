@@ -22,11 +22,11 @@
 #### Situational awareness and cockpit setup
 <!-- id: agk-situational-awareness-cockpit-setup | also: ifr | level: PPL CPL IR -->
 
-- Situational awareness = knowing where you are, what the aircraft and system are doing, and what comes next (position, altitude, energy, clearance, weather, fuel, automation mode).
-- Lost SA cues: surprise, fixation, unresolved discrepancy, "what's it doing now?", falling behind checklist. Fix: aviate → verify position/mode → slow down / request hold or vectors.
+- Situational awareness = awareness of all information relevant to the current situation; first step of decision-making. [TC Human Factors for Aviation, Advanced Handbook TP 12864]
+- Perceive → understand → project (what comes next). Low SA precedes most accidents (CFIT, LOC-I, mid-air). Fatigue, stress and environment shrink SA capacity day to day. [TC ASL 1/2019]
+- Keep SA: split the flight into segments; before each, name the top threats + countermeasures; re-prioritize at each segment change; checklists cover equipment, not this flight's threats; ask yourself "how is my SA?" [ASL 1/2019]
 - Seat: eyes at **Design Eye Reference Point** (manufacturer marks, e.g. glare-shield balls); instruments + warning lights unobscured; full control travel; nose not blocking view on approach. [AIM AIR 4.12]
 - Disorientation: rely on flight instruments; never senses alone. [AIR 3.7]
-- `?:` SA definition and cues = general human-factors knowledge.
 ***
 #### Pebble
 <!-- id: agk-human-factors-decision-making-pebble | level: PPL CPL -->

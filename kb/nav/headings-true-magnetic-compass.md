@@ -23,12 +23,12 @@
 #### Magnetic compass — principle and use
 <!-- id: nav-magnetic-compass-principle-use | also: agk-inst | level: PPL CPL IR -->
 
-- Magnetized bar on float in fluid aligns with Earth's field; card read against lubber line. Liquid damps swing.
-- Use: read in straight, level, unaccelerated flight; correct with deviation card; HI set from it.
-- Errors: variation, deviation, dip (strongest near poles), acceleration (`ANDS`), turning (`UNOS`), oscillation.
+- Float with two or more magnets aligns with Earth's field; case filled with kerosene damps oscillation; card tilts up to 18°. [TP 2076 2.1.4 B, D]
+- Dip: field lines ~parallel to surface near equator, steep near magnetic poles → dip errors. [2.1.4 C]
+- Errors: **deviation** (aircraft electrics, ferrous parts → swing compass, correction card) · **turning** (from north: card first shows turn the wrong way/lags; from south: leads; only while turning) · **acceleration** `ANDS` (most on E/W headings). Variation = chart, not instrument. [2.1.4 E]
+- Use: read only wings-level, steady, unaccelerated; let card settle a few seconds after roll-out; HI set from it. [2.1.4 F]
 - Lightning can induce permanent compass error. [AIM AIR 2.7.1]
-- Timed turns: rate one = 3°/s when compass unreliable mid-turn.
-- `?:` mechanics = general knowledge; errors already in `sys-magnetic-compass`.
+- Timed turns: rate one = 3°/s (180° per minute) when compass unreliable mid-turn. [TP 2076 2.1.3 D.3]
 ***
 #### Pebble
 <!-- id: nav-headings-true-magnetic-compass-pebble | level: PPL CPL IR -->

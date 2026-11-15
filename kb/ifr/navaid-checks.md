@@ -73,11 +73,11 @@
 #### Nav displays — RMI, HSI, flight director, radio altimeter
 <!-- id: nav-rmi-hsi-fd-radio-altimeter | also: agk-inst | level: IR -->
 
-- **RMI**: slaved compass card + needles. Head = bearing **to** station, tail = from. No need to add RB to heading.
-- **HSI**: slaved heading card + CDI + course pointer + TO/FROM in one view; set course = picture matches aircraft position. Reverse sensing not a problem on LOC back course with correct course set.
-- **Flight director**: command bars = computed pitch/roll to fly the selected mode. `T:` FD shows what to do, not where you are: cross-check raw data.
-- **Radio (radar) altimeter**: height above surface by radio echo; used for CAT II DH and terrain awareness. `T:` height AGL ≠ altitude ASL.
-- `?:` general avionics knowledge; not checked against a TC source.
+- **RMI**: slaved heading card + bearing pointer. Head = magnetic bearing **to** station, tail = reciprocal (from). Read directly: no RB + heading sum (that is fixed-card ADF). [TP 2076 2.2.6]
+- **HSI**: rotating heading card, bearing pointer, aircraft symbol with track (deviation) bar, TO/FROM in one view. Dots: VOR ~5° / 10°, ILS ~1¼° / 2½°. [TP 2076 2.1.5 C]
+- **Flight director**: FDI command bars = computed pitch/bank to fly selected mode (HDG, VOR/LOC, APP, G/S, GA, ALT). Computer takes nav receivers, attitude gyro, radar altimeter, compass, air data. `T:` FD shows what to do, not where you are: cross-check raw data. [TP 2076 2.1.5 A–D]
+- **Radio (radar) altimeter**: absolute height by timed radio echo; less accurate over ice, deep snow, rapidly changing terrain. CAT II DH based on radio altimeter. `T:` height AGL ≠ altitude ASL. [TP 2076 2.1.2 F.3; CAP GEN CAT II/III chart legend]
+- `?:` HSI back course: set front (inbound) course → normal sensing; not in TP 2076, check aircraft AFM/avionics guide.
 ***
 #### Pebble
 <!-- id: ifr-navaid-checks-pebble -->
