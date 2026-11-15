@@ -1,5 +1,16 @@
 # Content review
 
+## Cards 08, 11 and 12 consolidated into kb — 14 November 2026
+
+Text moved, not re-validated; unit IDs kept.
+
+- **Card 08:** 14 system-knowledge units moved to concept files: `kb/agk/engines-powerplant.md` (new: engine essentials, magnetos, mixture, oil pressure/temperature, powerplant, manifold pressure), `kb/agk/pitot-static-instruments.md` (new), `kb/agk/pressurization.md` (new), fuel grades and starvation to `agk-fuel`, carburettor icing and alternate air to `carb-ice`, magnetic compass to `nav-compass`, ELT equipment to `law-elt`. The 27 failure QRCs stay in card 08. The three new files have no Pebble yet.
+- **Card 11 retired.** 21 knowledge units moved to `kb/ifr` (plate anatomy to `ifr-plates`, segments/FAF/profile/timing/navaid traps to `ifr-app-fly`, minima box/straight-in/lighting to `ifr-minima`, MAP to `ifr-missed`, INRAT plate method to the recall file), cold temperature to `met-cold`, landing distance to `agk-perfcalc`. "Frequencies / nav source" moved to card 12. 14 units were repeats and were retired into their `kb/ifr` or card 12 twin; lines not already present were carried into the survivor (minima `Vis` row, circling row in approach types, RASS source line, missed-approach brief and level-past-MAP trap, circling checks and category trap, plate-scan mnemonic, currency gate, spoken brief, before-FAF items, plate Pebble traps). Guide items and coverage-matrix links re-pointed.
+- **Card 12:** its publication-cycle unit (identical to `kb/ifr`) retired.
+- **Kept as cards after review:** 17 (bilingual operator-check tables with their own reader and tests) and the formulas collection, whose four air-law rows (oxygen, passenger weights, flight duty time, over-water) are the EN/FR versions of EN-only `kb/law` units; removing them would lose the French.
+
+513 units (was 528).
+
 ## TC essential marks; levels from the guides — 14 November 2026
 
 **Essential and depth marks** read from the TC HTML editions on this date (aeroplane icon = essential; shading = commercial depth): TP 12881 CPAER 181 essential items (93 C / 56 P / 32 M) and 303 shaded; TP 12880 PPAER 221 essential (112 C / 74 P / 35 M). Item positions matched the guides one-to-one (CAR numbers and per-group counts). TP 691, PSTAR and the flight test guides carry no such marks. Guide pages show ✈ and shading with filters; 167 notes cited by an essential item carry ✈ in result lists.
@@ -361,7 +372,7 @@ Moved from the study cards on 19 October 2026. These are historical review recor
 
 - Navigation: TC TP 975, Exercise 24 (September 2004 edition), checked 19 October 2026; FAA Instrument Flying Handbook Ch. 9 (2012). Intercept, lateral-distance and DME examples are derived geometry, not operational clearances.
 
-### [11_cap_plate_reading_qrc_av_cave_v0_2.md](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md)
+### [11_cap_plate_reading_qrc_av_cave_v0_2.md](kb/ifr/README.md)
 
 ##### Current-source notes — v0.2
 

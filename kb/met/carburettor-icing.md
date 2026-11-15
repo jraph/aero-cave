@@ -13,6 +13,23 @@
 - `P:` apply carb heat per POH; initial RPM drop/roughness may worsen while ice melts, then recovery.
 - `T:` carb icing ≠ structural icing; structural icing forecast and carb icing risk are different.
 ***
+#### Carburetor icing
+<!-- id: sys-carburetor-icing | from: 08 | level: PPL CPL -->
+
+- Can occur in moist air from about `-13°C to +38°C`; risk high in humid partial-power operation.
+- `S:` fixed-pitch: unexplained RPM↓, then roughness/airspeed↓. Constant-speed: manifold pressure↓.
+- `P:` full carb heat→expect initial power loss/roughness→leave full hot until ice clears→re-adjust power/mixture per POH.
+- `M:` initial worse, then better = ice melting.
+- `T:` partial heat without carb-air-temperature guidance may place air in icing range. Heated air is usually unfiltered and reduces power.
+- `T:` structural icing conditions and carb-ice conditions are related but not identical.
+***
+#### Induction / alternate air
+<!-- id: sys-induction-alternate-air | from: 08 | level: PPL CPL -->
+
+- Fuel-injected engines may use alternate induction air instead of carb heat.
+- `S:` intake filter blockage/ice → power loss; alternate air may restore.
+- `T:` alternate air often warmer/unfiltered and changes mixture/power.
+***
 #### Pebble
 <!-- id: carb-ice-pebble | also: study-pebble -->
 

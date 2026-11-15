@@ -3,15 +3,6 @@
 `P` procedure | `G` gate | `T` trap | `M` memory | `!` safety | `?` verify | Canada IFR; POH/AFM/SOP/current CAP/NOTAM win
 `RELEASE:` `OPS/STUDY-REF / AIRCRAFT-DEPENDENT` | `CANONICAL SOURCE:` `ifr_procedures_qrc_av_cave_v0_2.md` | `NOT FLIGHT AUTHORITY`
 ***
-#### Current publication cycle
-<!-- id: proc-current-publication-cycle | concepts: nav-pubs, study-src | level: IR -->
-
-- AIRAC cycle at last review (14 Nov 2026) for `CAP/CAP GEN/CFS/AIP/DAH/charts`: effective `2026-10-29` through `2026-12-24`. `T:` this line ages every 56 days; read the effective dates printed on the product.
-- These publications update every `56 days`; AIP SUP/AIC publish on a `14-day` cycle.
-- `P preflight:` current publication→NOTAM→AIP SUP/AIC→airport/procedure page→aircraft data.
-- Trigger NOTAM = notice that source material changed; retrieve the referenced amendment/Supplement. It may expire while the underlying AIP SUP remains active.
-- `[NAV CANADA publication schedule; AIC 009/2026]`
-***
 #### Scope / discipline
 <!-- id: proc-scope-discipline | concepts: ifr, study-src | level: IR -->
 
@@ -123,12 +114,20 @@
 
 - Use current-chart symbology. PFAF lightning-bolt depiction is introduced incrementally from `2026-10-29`; apply it only where printed.
 ***
+#### Frequencies / nav source
+<!-- id: plate-frequencies-nav-source | concepts: nav-radio, ifr-plates | level: IR -->
+
+- `P:` set/identify nav aid; verify Morse/voice where applicable; set inbound course/front course; cross-check GPS/database.
+- `T:` wrong CDI source is lethal: green needles vs magenta needles vs raw data.
+- `T:` ILS front course set even when autopilot/GPS displays course automatically; know equipment.
+***
 #### Approach brief — compact
 <!-- id: proc-approach-brief-compact | concepts: ifr-app-fly | level: IR -->
 
 - `P:` “[procedure/runway], current plate; nav/freq/course; IAF/FAF altitudes; RASS/cold correction; category/minima/vis; MAP; missed climb-turn-fix-altitude; runway/LDA/lights; threats.”
 - `M:` `PROC-NAV-ALT-MIN-MAP-MISSED-RWY-THREATS`.
 - Pilot-monitoring/self-brief challenge: source? mode? next altitude? next fix? missed action?
+- Spoken form: “This is [procedure/runway] at [airport], plate current. Nav [source/freq/course], minima [line/category/DA-MDA/vis], altimeter/RASS [source/correction], FAF [fix/alt], MAP [fix/time/DME], missed [climb/turn/fix/hold], runway [LDA/lights], threats [wx/terrain/wind/icing/NOTAM].”
 ***
 #### Approach setup gate
 <!-- id: proc-approach-setup-gate | concepts: ifr-app-fly | level: IR -->
@@ -143,6 +142,7 @@
 - RNAV: confirm approach-active mode within `2 NM` before FAWP inbound when required by TC test criteria.
 - `G:` stable enough to continue; if behind, request delay/vector or go missed.
 - `T:` do not descend because vertical guidance appears unless correct mode/procedure/altitude intercept conditions are verified.
+- Also before FAF: altimeter set/cross-checked, missed loaded/briefed, minimums bugged.
 ***
 #### Stable approach guide
 <!-- id: proc-stable-approach-guide | concepts: ifr-app-fly | level: IR -->
@@ -318,3 +318,4 @@
 <!-- id: proc-sources-review-status | concepts: study-src | level: IR -->
 
 See the [separate review record](../CONTENT_REVIEW.md#historical-source-review-notes) for source editions, check dates and earlier validation notes.
+***

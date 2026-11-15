@@ -7,7 +7,7 @@
 | [Airworthiness, documents & maintenance / Navigabilité, documents et maintenance](airworthiness-documents-maintenance.md) | `law-airworthy` | 9 |
 | [ATC, radio & transponder / ATC, radio et transpondeur](atc-radio-transponder.md) | `law-atc` | 5 |
 | [Commercial ops (604 / 702–705) & duty time / Exploitation commerciale (604 / 702–705) et temps de service](commercial-ops-604-702-705-duty-time.md) | `law-commercial` | 4 |
-| [ELT & survival equipment / ELT et équipement de survie](elt-survival-equipment.md) | `law-elt` | 3 |
+| [ELT & survival equipment / ELT et équipement de survie](elt-survival-equipment.md) | `law-elt` | 4 |
 | [Flight plans & fuel requirements / Plans de vol et exigences de carburant](flight-plans-fuel-requirements.md) | `law-plan` | 4 |
 | [General operating rules / Règles générales d’utilisation](general-operating-rules.md) | `law-oprules` | 12 |
 | [Licences, medicals & privileges / Licences, médicaux et privilèges](licences-medicals-privileges.md) | `law-lic` | 6 |

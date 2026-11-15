@@ -12,3 +12,10 @@
 - Example rough: `2000 ft above station`, `20°C colder than ISA` ⇒ `4×2×20=160 ft` low.
 - `T:` use approved cold-temperature/CAP correction tables when required; rough formula is memory aid only.
 ***
+#### Cold temperature
+<!-- id: plate-cold-temperature | from: 11 | also: ifr-plates | level: IR -->
+
+- Check CAP cold-temp notes / temperature limits / uncompensated Baro-VNAV restrictions.
+- Apply required altitude corrections to procedure altitudes as applicable; ATC cleared altitude may need coordination if correction affects assigned altitude.
+- `T:` cold correction protects obstacle clearance; it does not change aircraft altimeter reading.
+***

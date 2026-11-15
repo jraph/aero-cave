@@ -7,7 +7,7 @@ One Markdown file per ontology concept (`explorer/ontology.json`), grouped by do
 | [Air law & procedures](law/README.md) | 15 |
 | [Navigation](nav/README.md) | 4 |
 | [Meteorology](met/README.md) | 16 |
-| [Aeronautics: general knowledge](agk/README.md) | 10 |
+| [Aeronautics: general knowledge](agk/README.md) | 13 |
 | [IFR & INRAT](ifr/README.md) | 16 |
 | [Multi-engine](me/README.md) | 4 |
 

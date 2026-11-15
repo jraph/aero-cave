@@ -30,6 +30,12 @@
 - `M:` source order = CAR/STD → CAP/CFS/NOTAM → AIM/TP guide → school notes.
 - `T:` many wrong answers are “operationally plausible but legally wrong” or “legal but unsafe.”
 ***
+#### INRAT plate question method
+<!-- id: plate-inrat-plate-question-method | from: 11 | also: ifr-plates, study-traps | level: IR -->
+
+- `1` identify procedure/minima line; `2` check category; `3` read notes/RASS/cold; `4` check altimeter source; `5` apply lighting/runway/NOTAM; `6` compare weather/RVR; `7` determine legal/safe action.
+- `T:` exam distractors often ignore a note or use wrong category/minima line.
+***
 #### INRAT high-yield traps
 <!-- id: ifr-inrat-high-yield-traps | from: 10 | also: study-traps -->
 

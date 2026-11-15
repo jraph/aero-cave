@@ -13,6 +13,13 @@
 - `M:` TVMDC = True Virgins Make Dull Company; reverse = Can Dead Men Vote Twice.
 - `T:` track/course/heading/bearing are different. Track = ground path; heading = nose. Bearing = direction to object; course = planned line.
 ***
+#### Magnetic compass
+<!-- id: sys-magnetic-compass | from: 08 | level: PPL CPL -->
+
+- Errors: variation/deviation, oscillation, acceleration/turning/dip.
+- Northern hemisphere: on east/west headings, acceleration causes a false north indication and deceleration a false south indication (`ANDS`); turning-error rollout memory is `UNOS`: undershoot north/overshoot south.
+- `T:` turbulence and turns make compass difficult; roll out using timed/lead technique.
+***
 #### Pebble
 <!-- id: nav-headings-true-magnetic-compass-pebble | also: study-pebble | level: PPL CPL IR -->
 

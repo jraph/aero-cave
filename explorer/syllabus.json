@@ -2229,7 +2229,7 @@
     {"n": 6, "en": "Initial approach / procedure turn", "s": "P", "u": ["plate-initial-intermediate-segment"], "gap": "Segment altitudes and stepdowns; procedure turn absent."},
     {"n": 7, "en": "Straight-in approach (No PT)", "s": "M", "u": [], "gap": ""},
     {"n": 8, "en": "Straight-in minima", "s": "C", "u": ["plate-straight-in-vs-circling", "ifr-cap-definitions-minima"], "gap": ""},
-    {"n": 9, "en": "Final approach", "s": "C", "u": ["plate-before-faf-final-gate", "plate-profile-view", "proc-final-approach-callouts-single-pilot"], "gap": ""},
+    {"n": 9, "en": "Final approach", "s": "C", "u": ["proc-before-faf-fawp-gate", "plate-profile-view", "proc-final-approach-callouts-single-pilot"], "gap": ""},
     {"n": 10, "en": "Precision approach: ILS, PAR", "s": "P", "u": ["ifr-approach-types", "ifr-ils-loc-vor-ndb-dme"], "gap": "ILS covered; PAR absent."},
     {"n": 11, "en": "Non-precision approach: NDB, VOR, DME, LOC, RNAV/GNSS", "s": "C", "u": ["ifr-approach-types", "ifr-ils-loc-vor-ndb-dme", "ifr-rnav-gnss"], "gap": ""},
     {"n": 12, "en": "Stabilized constant descent angle approach", "s": "P", "u": ["ifr-approach-types", "plate-profile-view"], "gap": "Definition and MDA trap; no technique."},

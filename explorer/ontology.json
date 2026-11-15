@@ -14,7 +14,6 @@
     "05": {"file": "cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md", "en": "Weather decoding & go/no-go", "fr": "Décodage météo et décision"},
     "07": {"file": "cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md", "en": "C150M POH", "fr": "POH C150M"},
     "08": {"file": "cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md", "en": "Aircraft systems & failures", "fr": "Systèmes et pannes"},
-    "11": {"file": "cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md", "en": "CAP plate reading", "fr": "Lecture des cartes CAP"},
     "12": {"file": "cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md", "en": "IFR procedures", "fr": "Procédures IFR"},
     "17": {"file": "cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md", "en": "Pilot qualifications & operator checks", "fr": "Qualifications et contrôles", "reader": "readers/17_Pilot_Qualifications_Operator_Checks_EN_FR.html"},
     "F": {"file": "cheatsheets/CPAER_Formulas_Recall_EN_FR.md", "en": "CPAER formulas & quick recall", "fr": "Formules et rappels CPAER", "reader": "readers/CPAER_Formulas_Recall_EN_FR.html"},

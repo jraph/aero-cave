@@ -56,6 +56,12 @@
 - `M:` `+10% speed` ⇒ `+21% energy`; `+20% speed` ⇒ `+44% energy`.
 - `T:` fast final burns runway and brakes. Tailwind hurts more than it feels.
 ***
+#### Runway / landing distance
+<!-- id: plate-runway-landing-distance | from: 11 | also: ifr-plates | level: IR -->
+
+- Use LDA/declared distances, slope, surface condition/RSC, wind, temperature, aircraft landing performance.
+- `T:` approach legal does not mean landing distance acceptable.
+***
 #### Pebble
 <!-- id: agk-takeoff-climb-cruise-glide-landing-performance-pebble | also: study-pebble | level: PPL CPL IR -->
 

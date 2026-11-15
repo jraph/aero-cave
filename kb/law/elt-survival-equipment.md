@@ -34,6 +34,13 @@
 | Land survival / Survie terre | 602.61: FIRE + SHELTER + WATER + SIGNAL, for everyone and climate. 25-NM exception requires staying within 25 NM of departure aerodrome AND surface-station radio capability throughout. Other listed exceptions exist. |
 | Planning / Préparation | Recommendation: wear suitable inflatable flotation, brief evacuation and inflate only outside; assess cold-water exposure and rescue delay. Equipment carriage alone does not make a crossing safe. |
 ***
+#### ELT / emergency equipment
+<!-- id: sys-elt-emergency-equipment | from: 08 | level: PPL CPL -->
+
+- Know activation, remote switch, antenna, battery/inspection status, survival equipment and extinguisher.
+- After forced landing: ELT confirm ON, evacuate, fire risk, first aid, shelter/signalling.
+- `T:` ELT does not replace flight plan/itinerary closure or survival planning.
+***
 #### Pebble
 <!-- id: law-elt-survival-equipment-pebble | also: study-pebble | level: PPL CPL IR -->
 

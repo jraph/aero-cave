@@ -13,6 +13,8 @@
 - Fly published missed exactly: climb, turn limits, nav source, altitude, hold. If missed after MAP, obstacle clearance may not be assured.
 - `T:` power/attitude/config first; then nav. brief missed before FAF.
 - `T:` missed point is obstacle-clearance origin.
+- Brief before FAF: initial climb, turn direction/altitude, fix/hold, nav source, frequencies, climb gradient, special notes.
+- `T:` do not continue level past the MAP hunting for the runway.
 ***
 #### Circling
 <!-- id: ifr-circling | from: 10 -->
@@ -20,6 +22,15 @@
 - Circling minima based on category; maintain visual reference; remain within protected area; use published restrictions.
 - If visual reference lost while circling: initiate missed; generally turn toward landing runway and intercept published missed unless procedure/SOP says otherwise.
 - `T:` circling at night/marginal wx is high risk; exam may test category/speed/minima mismatch.
+- Check circling minima/category, prohibited sectors, day/night restrictions, runway lighting, terrain/obstacles, weather/wind.
+- `T:` circling area depends on category/speed: faster than the category means the higher category.
+***
+#### MAP identification
+<!-- id: plate-map-identification | from: 11 | also: ifr-plates | level: IR -->
+
+- Precision/APV: DA/DH on glidepath is decision point.
+- NPA: MAP may be timing, DME, waypoint, station passage, runway threshold, or defined fix.
+- `T:` if timer/DME/GPS not set before FAF, MAP identification can fail under workload.
 ***
 #### Pebble
 <!-- id: ifr-missed-approach-circling-pebble | also: study-pebble -->

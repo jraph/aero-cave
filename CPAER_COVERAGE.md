@@ -35,7 +35,7 @@
 | 08 Systems & failures | [Open](cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md) | Aeronautics / Airframes, Engines and Systems; Flight Instruments; Operations | Owner candidate for aircraft systems; check overlapping POH procedures |
 | 09 IFR knowledge (retired 14 Nov 2026) | [kb/ifr](kb/ifr/README.md) | INRAT; CPAER cross-reference only | Advanced IFR companion, not default CPAER content home |
 | 10 INRAT knowledge (retired 14 Nov 2026) | [kb/ifr](kb/ifr/README.md) | INRAT | Keep exam-specific IFR scope intact |
-| 11 CAP plate reading | [Open](cheatsheets/11_cap_plate_reading_qrc_av_cave_v0_2.md) | INRAT | Keep chart-reading companion |
+| 11 CAP plate reading (retired 14 Nov 2026) | [kb/ifr](kb/ifr/README.md) | INRAT | Knowledge in kb/ifr; procedures in card 12 |
 | 12 IFR procedures | [Open](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md) | INRAT | Keep procedural companion |
 | 13 Multi-engine knowledge (retired 14 Nov 2026) | [kb/](kb/) | Multi-engine; Aeronautics cross-reference | Keep rating/type-specific matters separate; link generic theory |
 | 17 Pilot qualifications & checks | [Open](cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md) | Air Law / INRAT + ATPL recap | Condensed bilingual lookup; Card 04 remains canonical legal source; do not treat this as a migrated authoritative rule collection |

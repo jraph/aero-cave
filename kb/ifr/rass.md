@@ -13,6 +13,7 @@
 - `When using CYND add 160. Circling minima apply`: final descent gradient exceeded after RASS; straight-in minima not usable.
 - `T:` RASS/cold temperature corrections can change stepdowns, MDA/DA, and missed segment altitudes; do not just add to the final line mentally.
 - `T:` cold/remote/falling pressure corrections affect obstacle margin.
+- Read the altimeter source line before the minima: the approved source drives procedure protection.
 ***
 #### Pebble
 <!-- id: ifr-rass-pebble | also: study-pebble -->

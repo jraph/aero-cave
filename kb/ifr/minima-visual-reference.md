@@ -16,6 +16,7 @@
 | `HAT/HATh` | DA/MDA above TDZE/threshold, straight-in |
 | `MSA` | min 1000 ft clearance in sector, standard temp/pressure |
 | `RVR` | runway centreline visual range of markings/lights |
+| `Vis` | advisory / approach-ban planning value, not DA/MDA itself |
 
 - `T:` advisory visibility helps probability/ban logic; DA/MDA controls vertical descent.
 ***
@@ -46,6 +47,27 @@
 - Below-minimum RVR normally bars continuation beyond the applicable point, subject to listed exceptions: report received after FAF/final-course intercept, training no-landing, varying RVR, ground visibility ≥`1/4 SM`, or CAT III.
 - Advisory visibility helps planning; DA/MDA visual reference controls descent/landing.
 - `T:` this general rule excludes Part VII operations; ground visibility, runway visibility, RVR, advisory visibility and flight visibility are different.
+***
+#### Minima box scan
+<!-- id: plate-minima-box-scan | from: 11 | also: ifr-plates | level: IR -->
+
+- Read aircraft category first: `A/B/C/D/E` by final approach speed category.
+- Identify line: `ILS/LOC/LNAV/LNAV-VNAV/LPV/VOR/NDB/circling`.
+- Extract: `DA/DH` or `MDA`; `HAT/HATh/HAA`; advisory visibility; notes/lighting penalties; RASS/cold-temp impacts.
+- `T:` wrong category = wrong protected area/minima. Faster circling speed can force higher category.
+***
+#### Straight-in vs circling
+<!-- id: plate-straight-in-vs-circling | from: 11 | also: ifr-missed, ifr-plates | level: IR -->
+
+- Straight-in minima require alignment/descent/visual environment adequate for landing on that runway.
+- If runway not suitable/visual manoeuvre required, use circling minima unless procedure provides straight-in authorized minima.
+- `T:` “approach to runway” does not guarantee straight-in landing is sensible.
+***
+#### Lighting / runway / visual aids
+<!-- id: plate-lighting-runway-visual-aids | from: 11 | also: ifr-plates | level: IR -->
+
+- Check ALS, runway lights, TDZ/centreline lights, PAPI/VASI, RIL, approach lighting penalties, runway length/LDA, slope, displaced threshold.
+- `T:` lighting inoperative can increase minima or make procedure/runway unsuitable. NOTAM can change this.
 ***
 #### Pebble
 <!-- id: ifr-minima-visual-reference-pebble | also: study-pebble -->
