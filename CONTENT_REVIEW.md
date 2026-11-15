@@ -14,6 +14,16 @@ Carried from the retired CPAER coverage matrix; still open on 14 November 2026. 
 
 The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json` and the explorer's guide pages; `python3 explorer/build_explorer.py --audit` lists concepts with TC items but no knowledge note.
 
+## Ontology review by reading — 15 November 2026
+
+The topic check in the de-duplication pass used word-overlap scores; redone by reading every concept, its parents, children and links.
+
+- `law-commercial` relabelled "Commercial & private operations (604, 702–705)" / "Exploitation commerciale et privée (604, 702–705)": duty time now has its own child (`law-fatigue`).
+- Links added: `law-604`, `law-702`, `law-703` ↔ `law-fatigue` (each subpart has its own fatigue rules); `me-train` ↔ `law-lic` (ME rating requirements).
+- `agk-manoeuvring-speed-stall-speed-notation` moved from the stall file to the load-factor / manoeuvring-speed file (its subject); `agk-load-factor-accelerated-stall` stays under stall (accelerated stall), linked to load factor.
+- Gap noted: the stall concept has no note on stall, spin and spiral themselves (recovery flows live in card 02).
+- Placement kept: `nav-radio` file in kb/ifr (moving it would change source links); the hierarchy otherwise reads correctly (e.g. carb ice under icing and engines, de-icing under icing and operating rules, cold-temperature corrections under atmosphere and approaches).
+
 ## De-duplication pass — 15 November 2026
 
 Semantic duplicates (same fact restated) reviewed in four batches: law, IFR + navigation (+ card 12), meteorology (+ card 05), aeronautics + multi-engine (+ cards 02, 07, 08). 109 duplicate clusters; each fact kept in one canonical unit, other places trimmed to a pointer (`→ unit-id`). Extra qualifiers moved into the canonical before trimming.

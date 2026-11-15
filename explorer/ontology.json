@@ -45,11 +45,11 @@
     {"id": "law-recency", "en": "Recency", "fr": "Mise à jour des connaissances / récence", "broader": ["law-lic"], "related": ["law-type"], "alt": ["currency", "5 takeoffs landings", "IPC", "6 approaches"]},
     {"id": "law-type", "en": "Type ratings, PPC / CC & crew seats", "fr": "Qualifications de type, CCP / VC et postes", "broader": ["law-lic", "law-commercial"], "related": ["law-recency"], "alt": ["PPC", "IATRA", "high performance", "two-crew", "PCC"]},
     {"id": "law-night", "en": "Night & VFR over-the-top", "fr": "Vol de nuit et VFR OTT", "broader": ["law"], "related": ["law-equip", "met-decide"], "alt": ["night", "twilight", "OTT", "over-the-top", "night rating", "nuit"]},
-    {"id": "law-commercial", "en": "Commercial ops (604 / 702–705) & duty time", "fr": "Exploitation commerciale (604 / 702–705) et temps de service", "broader": ["law"], "related": ["agk-hf"], "alt": ["FDP", "duty time", "604", "703", "704", "705", "AOC", "rest"]},
-    {"id": "law-604", "en": "Private operators (CAR 604)", "fr": "Exploitants privés (RAC 604)", "broader": ["law-commercial"], "related": [], "alt": ["604", "private operator", "flight data sheet", "fuelling with passengers"]},
+    {"id": "law-commercial", "en": "Commercial & private operations (604, 702–705)", "fr": "Exploitation commerciale et privée (604, 702–705)", "broader": ["law"], "related": ["agk-hf"], "alt": ["FDP", "duty time", "604", "703", "704", "705", "AOC", "rest"]},
+    {"id": "law-604", "en": "Private operators (CAR 604)", "fr": "Exploitants privés (RAC 604)", "broader": ["law-commercial"], "related": ["law-fatigue"], "alt": ["604", "private operator", "flight data sheet", "fuelling with passengers"]},
     {"id": "law-fatigue", "en": "Flight crew fatigue rules (CAR 700)", "fr": "Gestion de la fatigue (RAC 700)", "broader": ["law-commercial"], "related": ["agk-hf"], "alt": ["fatigue", "medevac", "controlled rest", "positioning", "standby", "reserve"]},
-    {"id": "law-702", "en": "Aerial work (CAR 702)", "fr": "Travail aérien (RAC 702)", "broader": ["law-commercial"], "related": [], "alt": ["702", "aerial work", "external load", "towing", "parachute"]},
-    {"id": "law-703", "en": "Air taxi (CAR 703) & maintenance control (706)", "fr": "Taxi aérien (RAC 703) et contrôle de la maintenance (706)", "broader": ["law-commercial"], "related": ["law-airworthy"], "alt": ["703", "air taxi", "706", "elementary work", "single-pilot IMC"]},
+    {"id": "law-702", "en": "Aerial work (CAR 702)", "fr": "Travail aérien (RAC 702)", "broader": ["law-commercial"], "related": ["law-fatigue"], "alt": ["702", "aerial work", "external load", "towing", "parachute"]},
+    {"id": "law-703", "en": "Air taxi (CAR 703) & maintenance control (706)", "fr": "Taxi aérien (RAC 703) et contrôle de la maintenance (706)", "broader": ["law-commercial"], "related": ["law-airworthy", "law-fatigue"], "alt": ["703", "air taxi", "706", "elementary work", "single-pilot IMC"]},
     {"id": "law-airworthy", "en": "Airworthiness, documents & maintenance", "fr": "Navigabilité, documents et maintenance", "broader": ["law"], "related": ["agk-systems"], "alt": ["CofA", "CofR", "journey log", "AME", "AMO", "AAIR", "C of A"]},
     {"id": "law-equip", "en": "Required equipment", "fr": "Équipement exigé", "broader": ["law"], "related": ["law-airworthy"], "alt": ["605.14", "605.16", "605.18", "night VFR equipment"]},
     {"id": "law-elt", "en": "ELT & survival equipment", "fr": "ELT et équipement de survie", "broader": ["law-equip"], "related": ["emg-engine"], "alt": ["life raft", "life preserver", "406", "121.5", "survival"]},
@@ -128,6 +128,6 @@
     {"id": "me-vmc", "en": "Vmc, asymmetric thrust & critical engine", "fr": "Vmc, poussée asymétrique et moteur critique", "broader": ["me"], "related": ["agk-vspeeds"], "alt": ["Vmc", "critical engine", "red line", "zero sideslip"]},
     {"id": "me-oei", "en": "OEI performance & takeoff planning", "fr": "Performances OEI et planification du décollage", "broader": ["me", "agk-perf"], "related": [], "alt": ["Vyse", "Vxse", "blue line", "accelerate-stop", "accelerate-go", "Vsse"]},
     {"id": "me-fail", "en": "Engine-failure procedures (multi-engine)", "fr": "Procédures de panne moteur (multimoteur)", "broader": ["me", "emg"], "related": ["emg-engine", "agk-prop"], "alt": ["feather", "identify verify feather", "dead foot"]},
-    {"id": "me-train", "en": "ME training, systems & flight test", "fr": "Formation ME, systèmes et test en vol", "broader": ["me"], "related": []}
+    {"id": "me-train", "en": "ME training, systems & flight test", "fr": "Formation ME, systèmes et test en vol", "broader": ["me"], "related": ["law-lic"]}
   ]
 }
