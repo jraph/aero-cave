@@ -3,7 +3,7 @@
 | Concept file | Concept | Units |
 |---|---|---|
 | [Alternate minima / Minimums de dégagement](alternate-minima.md) | `ifr-alt` | 4 |
-| [Approach types, briefing & flying the approach / Types d’approche, exposé et exécution](approaches.md) | `ifr-app-fly` | 14 |
+| [Approach types, briefing & flying the approach / Types d’approche, exposé et exécution](approaches.md) | `ifr-app-fly` | 12 |
 | [CAP plate reading / Lecture des cartes CAP](cap-plates-publications.md) | `ifr-plates` | 12 |
 | [Departure: takeoff minima, SID / ODP & climb gradient / Départ : minimums de décollage, SID / ODP et pente de montée](departure.md) | `ifr-dep` | 4 |
 | [IFR emergencies & instrument failures / Urgences IFR et pannes d’instruments](emergencies-instrument-failures.md) | `ifr-emerg` | 3 |

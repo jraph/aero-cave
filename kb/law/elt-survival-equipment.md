@@ -21,18 +21,18 @@
 #### Over water · survival / Survol de l’eau · survie
 <!-- id: law-over-water-survival-survol-de-l-eau-survie | from: 04 | level: PPL CPL -->
 
-| Memory | Rule / example |
-|---|---|
-| Flotation trigger | Water takeoff/landing OR unable to reach shore after engine failure: one life preserver, individual flotation device or PFD per person. [602.62(1)] |
-| 50 NM / Shore | Landplane >50 NM from shore: LIFE PRESERVER for each person, even if engine-out shore reach is possible. Accessible while seated. [602.62(2),(4)] |
-| Raft / Radeau — SE | Single engine, or multi unable to maintain flight with any engine failed: rafts beyond lesser of 100 NM or 30 min at FILED cruise speed from suitable emergency landing site. [602.63(1)] |
-| Raft / Radeau — ME | Multi able to maintain flight with any engine failed: lesser of 200 NM/60 min. Transport-category aeroplane exception: up to lesser of 400 NM/120 min. [602.63(2)–(3)] |
-| Calculation / Calcul | SE threshold = min(100, filed kt ×0.5) NM. Filed 120 kt →60 NM; 180 kt →90 NM; 240 kt →100 NM. Beyond threshold triggers raft carriage. |
-| Capacity / Capacité | Total raft rated capacity covers everyone. Stow accessible, visibly marked near exit; attached kit: shelter, water/purification, visual distress signals, suited to area/season. [602.63(6)] |
-| Shore ≠ landing site | Flotation test uses shore reach/distance; raft test uses a SUITABLE EMERGENCY LANDING SITE. Crossing width is not automatically distance from that site. |
-| 703 seaplane | 703.83: inflatable flotation worn on/above water; COM procedures and PIC instruction. Exception: person on stretcher, incubator or similar device. Not a blanket rule for every private landplane. |
-| Land survival / Survie terre | 602.61: FIRE + SHELTER + WATER + SIGNAL, for everyone and climate. 25-NM exception requires staying within 25 NM of departure aerodrome AND surface-station radio capability throughout. Other listed exceptions exist. |
-| Planning / Préparation | Recommendation: wear suitable inflatable flotation, brief evacuation and inflate only outside; assess cold-water exposure and rescue delay. Equipment carriage alone does not make a crossing safe. |
+| Label | English | Français |
+|---|---|---|
+| Flotation trigger | Water takeoff/landing OR unable to reach shore after engine failure: one life preserver, individual flotation device or PFD per person. [602.62(1)] | Décollage/amerrissage OU rive inaccessible après panne moteur : un gilet, dispositif individuel de flottaison ou VFI par personne. [602.62(1)] |
+| 50 NM / Shore | Landplane >50 NM from shore: LIFE PRESERVER for each person, even if engine-out shore reach is possible. Accessible while seated. [602.62(2),(4)] | Avion terrestre >50 NM rive : GILET DE SAUVETAGE par personne, même si rive accessible après panne. Accessible depuis siège. [602.62(2),(4)] |
+| Raft / Radeau — SE | Single engine, or multi unable to maintain flight with any engine failed: rafts beyond lesser of 100 NM or 30 min at FILED cruise speed from suitable emergency landing site. [602.63(1)] | Monomoteur, ou multi incapable de maintenir vol avec panne d’un moteur : radeaux au-delà du moindre de 100 NM ou 30 min à vitesse croisière DÉPOSÉE depuis lieu convenable d’atterrissage d’urgence. [602.63(1)] |
+| Raft / Radeau — ME | Multi able to maintain flight with any engine failed: lesser of 200 NM/60 min. Transport-category aeroplane exception: up to lesser of 400 NM/120 min. [602.63(2)–(3)] | Multi capable de maintenir vol avec panne d’un moteur : moindre de 200 NM/60 min. Exception avion catégorie transport : jusqu’au moindre de 400 NM/120 min. [602.63(2)–(3)] |
+| Calculation / Calcul | SE threshold = min(100, filed kt ×0.5) NM. Filed 120 kt →60 NM; 180 kt →90 NM; 240 kt →100 NM. Beyond threshold triggers raft carriage. | Seuil monomoteur = min(100, kt déposés ×0,5) NM. 120 kt →60 NM; 180 kt →90 NM; 240 kt →100 NM. Au-delà : radeau requis. |
+| Capacity / Capacité | Total raft rated capacity covers everyone. Stow accessible, visibly marked near exit; attached kit: shelter, water/purification, visual distress signals, suited to area/season. [602.63(6)] | Capacité nominale totale radeaux pour tous. Accessibles, emplacement signalé près sortie; trousse attachée : abri, eau/purification, signaux visuels, adaptée région/saison. [602.63(6)] |
+| Shore ≠ landing site | Flotation test uses shore reach/distance; raft test uses a SUITABLE EMERGENCY LANDING SITE. Crossing width is not automatically distance from that site. | Flottaison : rive accessible/distance rive; radeaux : LIEU CONVENABLE D’ATTERRISSAGE D’URGENCE. Largeur traversée pas automatiquement distance de ce lieu. |
+| 703 seaplane | 703.83: inflatable flotation worn on/above water; COM procedures and PIC instruction. Exception: person on stretcher, incubator or similar device. Not a blanket rule for every private landplane. | 703.83 : dispositif gonflable porté sur/au-dessus eau; procédures manuel exploitation et instruction CdB. Exception : civière, incubateur ou dispositif similaire. Pas règle universelle avion terrestre privé. |
+| Land survival / Survie terre | 602.61: FIRE + SHELTER + WATER + SIGNAL, for everyone and climate. 25-NM exception requires staying within 25 NM of departure aerodrome AND surface-station radio capability throughout. Other listed exceptions exist. | 602.61 : FEU + ABRI + EAU + SIGNAL, pour tous selon climat. Exception 25 NM : rester à 25 NM aérodrome départ ET capacité radio avec station au sol tout le vol. Autres exceptions prévues. |
+| Planning / Préparation | Recommendation: wear suitable inflatable flotation, brief evacuation and inflate only outside; assess cold-water exposure and rescue delay. Equipment carriage alone does not make a crossing safe. | Recommandation : porter dispositif gonflable adapté, expliquer évacuation et gonfler seulement dehors; évaluer eau froide et délai secours. Emport seul ne rend pas traversée sûre. |
 ***
 #### ELT / emergency equipment
 <!-- id: sys-elt-emergency-equipment | from: 08 | level: PPL CPL -->

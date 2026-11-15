@@ -52,10 +52,10 @@ test('no card heading is dropped and the page loads nothing external', () => {
 test('formula tables and memory traps render in each selected language', () => {
   const vm = require('node:vm');
   const renderer = html.slice(html.indexOf('function href('), html.indexOf('function pebble('));
-  const formulas = data.sections.filter(s => s.card === 'F');
+  const formulas = data.sections.filter(s => s.card === 'F' || s.md.includes('| Label | English | Français |'));
   const tableLines = formulas.flatMap(s => s.md.split('\n')).filter(line => line.startsWith('|') && !line.startsWith('| Label') && !line.startsWith('|---'));
   const traps = formulas.flatMap(s => s.md.split('\n')).filter(line => /^\*\*.+?\*\* · /.test(line));
-  assert.equal(tableLines.length, 251);
+  assert.equal(tableLines.length, 273);
   assert.equal(traps.length, 11);
   for (const lang of ['en', 'fr', 'both']) {
     const render = vm.runInNewContext(renderer + '\nmd', {lang, esc: s => s, URL, REPO: 'https://example.org/'});

@@ -48,6 +48,51 @@
 - `T:` Flash GN ≠ LDG CLNC; **steady GN** = LDG CLNC.
 - `M:` **IN FLT GN steady=LDG/flash=return · RED steady=circle/flash=unsafe | GND GN steady=TKOF/flash=taxi · RED steady=STOP/flash=clear · WHITE=return**.
 ***
+#### Communications · weather / Communications · météo
+<!-- id: fx-communications-weather-communications-m-t-o | from: F | also: met-products | kind: glossary | level: PPL CPL -->
+
+| Label | English | Français |
+|---|---|---|
+| RADIO | FSS/FIC information and advisories | Information et conseils FSS/FIC |
+| RCO | Remote radio link to FSS/FIC: FISE or RAAS | Liaison radio distante FSS/FIC : FISE ou RAAS |
+| DRCO | Dial-up RCO; 4 deliberate mic clicks | RCO à liaison téléphonique; 4 pressions délibérées |
+| FISE | Flight Information Service En Route | Service d’information de vol en route |
+| RAAS | Remote Aerodrome Advisory Service | Service consultatif télécommandé d’aérodrome |
+| ATIS | Recorded terminal weather and operational information; note letter | Information météo et opérationnelle enregistrée; noter lettre |
+| CLNC DEL | Clearance delivery | Délivrance des autorisations |
+| APRON | Apron movement management/advisory | Gestion/conseils des mouvements sur aire de trafic |
+| GND | Ground control: taxi instructions | Contrôle sol : instructions de circulation |
+| GND ADV | Ground advisory at certain MF sites; may relay pre-taxi clearances | Conseils au sol à certains sites MF; relais possible d’autorisations avant circulation |
+| TWR | Tower: runway and local airborne control | Tour : contrôle piste et circulation aérienne locale |
+| MF | Mandatory Frequency; mandatory reporting area, not necessarily controlled | Fréquence obligatoire; comptes rendus obligatoires, pas nécessairement contrôlé |
+| ATF | Aerodrome Traffic Frequency for uncontrolled traffic coordination | Fréquence de trafic d’aérodrome pour coordination non contrôlée |
+| TML | Terminal ATC | Contrôle terminal |
+| ARR / DEP | Arrival / departure ATC | Contrôle des arrivées / départs |
+| VFR ADV | VFR advisory service | Service consultatif VFR |
+| PAL | Peripheral station: remote ATC radio site | Station périphérique : site radio ATC distant |
+| UNICOM | Private airport information/advisory radio | Radio privée d’information/conseils d’aéroport |
+| APRT RDO | Airport Radio, usually CARS observer/communicator | Radio d’aéroport, généralement observateur/communicateur CARS |
+| A/G | Air/Ground communications | Communications air-sol |
+| MIL | Military frequency; read named unit | Fréquence militaire; lire unité indiquée |
+| VDF / UDF | VHF / UHF direction finding: bearing from your transmission | Radiogoniométrie VHF / UHF : relèvement de votre émission |
+| INTL AIR | International air-carrier communications, commonly HF | Communications transporteurs internationaux, souvent HF |
+| AWOS | Automated Weather Observation System | Système automatisé d’observation météorologique |
+| LWIS | Limited Weather Information System: wind, temperature, dew point, altimeter | Système limité : vent, température, point de rosée, calage |
+| AUTO | Local automated weather; does not meet METAR/SPECI/LWIS reporting requirements | Météo automatisée locale; ne satisfait pas exigences METAR/SPECI/LWIS |
+| PMSV | Pilot to Metro Service: military meteorological personnel | Liaison pilote–service météo militaire |
+| VOLMET | Weather for aircraft in flight: voice broadcast | Météo pour aéronefs en vol : diffusion vocale |
+| D-VOLMET | Weather via data link; D = data link | Météo par liaison de données; D = données |
+***
+#### FIR · FIC
+<!-- id: fx-fir-fic | from: F | also: law-airspace | level: PPL CPL -->
+
+| Label | English | Français |
+|---|---|---|
+| 7 FIR | Vancouver, Edmonton, Winnipeg, Toronto, Montréal, Moncton, Gander | Vancouver, Edmonton, Winnipeg, Toronto, Montréal, Moncton, Gander |
+| 4 briefing FIC | Kamloops, Edmonton, London, Québec | Kamloops, Edmonton, London, Québec |
+| Whitehorse | FIC for flight-plan processing/alerting; Kamloops provides telephone pilot briefings | FIC pour traitement plans de vol/alerte; Kamloops assure exposés téléphoniques |
+| Five areas | Course shorthand: Pacific, Edmonton, Ontario, Québec, Atlantic; London serves Ontario + Atlantic. These are not the seven FIRs. | Raccourci pédagogique : Pacifique, Edmonton, Ontario, Québec, Atlantique; London dessert Ontario + Atlantique. Ce ne sont pas les sept FIR. |
+***
 #### Pebble
 <!-- id: law-atc-radio-transponder-pebble | level: PPL CPL IR -->
 

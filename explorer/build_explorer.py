@@ -130,7 +130,7 @@ def build():
             kd = (a.get("kind") or [card.get("kind", "procedure")])[0]
             if kd not in kindset:
                 errors.append(f"{cid} · {head}: unknown kind {kd}")
-            if kd == "knowledge" and cid not in ("17",):
+            if kd == "knowledge":
                 errors.append(f"{cid} · {head}: knowledge notes live in kb/, not in a card")
             sections.append({"id": f"{cid}-{i}", "card": cid, "h": head, "a": anchor, "c": cs, "p": ps, "kd": kd,
                              "u": m.group(1), "md": body[m.end():].strip()})

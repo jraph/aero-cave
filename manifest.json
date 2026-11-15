@@ -27,17 +27,17 @@
     {
       "name": "CPAER · Formulas / Formules",
       "short_name": "CPAER",
-      "url": "./index.html#x-any-F-any"
+      "url": "./index.html#x-any-formula-any"
     },
     {
       "name": "Aviation abbreviations · EN / FR",
       "short_name": "Aviation codes",
-      "url": "./index.html#x-any-A-any"
+      "url": "./index.html#x-any-glossary-any"
     },
     {
       "name": "Pilot qualifications · Qualifications",
       "short_name": "Pilot qualifications",
-      "url": "./readers/17_Pilot_Qualifications_Operator_Checks_EN_FR.html"
+      "url": "./index.html#x-any-any-law-type"
     }
   ]
 }

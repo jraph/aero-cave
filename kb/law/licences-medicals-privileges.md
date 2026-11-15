@@ -45,6 +45,19 @@
 - Air transport and listed aerial work generally require an authorizing AOC. `[CAR 700.02]`
 - `M:` licence qualifies pilot; AOC authorizes service. `T:` equal cost split alone is insufficient.
 ***
+#### Licence → type requirements / Exigences licence → type
+<!-- id: q17-licence-type-licence-type | from: 17 | also: law-type | level: CPL IR -->
+
+| Label | English | Français |
+|---|---|---|
+| PPL(A) | 17 yr; 45 h TT; PPAER ≥60%; medical Cat 1/3 | 17 ans; 45 h total; PPAER ≥60 %; médical cat. 1/3 |
+| CPL(A) | 18 yr; 200 h aeroplane; 100 PIC incl 20 XC PIC; 65 h post-PPL training (35 dual + 30 solo); CPAER ≥60%; Cat 1 | 18 ans; 200 h avion; 100 h CDB dont 20 en navigation; 65 h après PPL (35 double + 30 solo); CPAER ≥60 %; cat. 1 |
+| ATPL(A) | 21 yr; 1,500 h total; ≥900 aeroplane; ≥250 PIC/PICUS (max 100 PICUS); 100 night; 75 instrument; XC sub-minima; SAMRA + SARON + INRAT ≥70%; Group 1 IR; Cat 1 | 21 ans; 1 500 h total; ≥900 avion; ≥250 CDB/CDB sous supervision (max 100 supervisées); 100 nuit; 75 instruments; détails navigation; SAMRA + SARON + INRAT ≥70 %; IFR G1; cat. 1 |
+| ME class / Classe multimoteur | No fixed training-hour minimum; ME flight test; class rating is not an individual type rating | Pas d'heures de formation minimales fixes; test multimoteur; classe ≠ qualification de type individuelle |
+| Group 1 IR / IFR G1 | 50 h PIC cross-country + 40 h instrument (≤20 approved ground); INRAT ≥70% + flight test | 50 h nav CDB + 40 h instruments (≤20 entraîneur approuvé); INRAT ≥70 % + test en vol |
+| HP individual type / Type HP | ≥200 h aeroplane; type-specific ground/flight training; qualifying flight within 12 months | ≥200 h avion; formation sol/vol propre au type; vol de qualification dans les 12 mois |
+| Two-crew type / Type 2 pilotes | ≥250 h aeroplane (integrated-course exception); type training; IATRA ≥70% within 24 mo OR qualifying SAMRA+SARON/ATPL route; PPC/check for type | ≥250 h avion (exception cours intégré); formation type; IATRA ≥70 % dans les 24 mois OU voie SAMRA+SARON/ATPL admissible; PPC/vérif. du type |
+***
 #### Pebble
 <!-- id: law-licences-medicals-privileges-pebble | level: PPL CPL -->
 

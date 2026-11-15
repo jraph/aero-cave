@@ -32,16 +32,6 @@
 - DME: slant range; DME arcs require lead/radial orientation.
 - `T:` reverse sensing only if display/source/course logic mishandled; know equipment.
 ***
-#### RNAV / GNSS
-<!-- id: ifr-rnav-gnss | from: 09, 10 | also: nav-gnss -->
-
-- Verify database current, correct airport/runway/procedure/transition, RAIM/WAAS, mode/sensitivity, OBS/SUSP, missed approach sequencing.
-- CDI sensitivity: enroute → terminal → approach; ensure unit arms/activates correct mode.
-- Alternate planning with GNSS: verify availability/integrity and current Canadian rules; ground NAVAID fallback may be required depending equipment/approval.
-- Alternate with satellite approach: verify expected RAIM/WAAS integrity at ETA; destination+alternate satellite-use separation rules may apply.
-- `T:` “direct-to FAF” may delete procedure sequencing/protection. `OBS/SUSP` misuse is an INRAT classic.
-- `T:` “GPS direct” ≠ cleared route unless ATC cleared.
-***
 #### Descent / approach math
 <!-- id: ifr-descent-approach-math | from: 10 | kind: formula -->
 
@@ -85,13 +75,6 @@
 - Timing required if MAP based on time or as backup when published.
 - `F:` time(min)=distance/GS×60.
 - `T:` use ground speed, not IAS. Wind change on final can make timing inaccurate; use primary MAP if available.
-***
-#### GNSS / RNAV plate traps
-<!-- id: plate-gnss-rnav-plate-traps | from: 11 | also: nav-gnss, ifr-plates | kind: trap | level: IR -->
-
-- Verify database current, correct airport/runway/procedure/transition, approach mode armed/active, RAIM/WAAS, CDI sensitivity, OBS/SUSP.
-- Do not use expired database for IFR approach unless explicitly permitted/verified by approved procedure and data.
-- `T:` `Direct-To FAF` can destroy sequencing; missed approach may not auto-sequence until SUSP cancelled correctly.
 ***
 #### ILS / LOC traps
 <!-- id: plate-ils-loc-traps | from: 11 | also: nav-radio, ifr-plates | kind: trap | level: IR -->

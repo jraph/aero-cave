@@ -408,8 +408,8 @@ Numbers below refer to the named TP group. Evidence supports only the specific s
 [sys-checklist]: cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md#checklist--declaration
 [ifr-cycle]: kb/ifr/cap-plates-publications.md#current-publication-cycle
 [ifr-emerg]: kb/ifr/emergencies-instrument-failures.md#ifr-emergencies
-[recall-fic]: cheatsheets/CPAER_Formulas_Recall_EN_FR.md#fir--fic
-[recall-time]: cheatsheets/CPAER_Formulas_Recall_EN_FR.md#twilight--time-zones--dst--crépuscule--fuseaux--heure-avancée
-[recall-stall]: cheatsheets/CPAER_Formulas_Recall_EN_FR.md#stall--airspeed--décrochage--vitesse
-[recall-weather]: cheatsheets/CPAER_Formulas_Recall_EN_FR.md#altitude--weather--altitude--météo
+[recall-fic]: kb/law/atc-radio-transponder.md#fir--fic
+[recall-time]: kb/law/night-vfr-ott.md#twilight--time-zones--dst--crépuscule--fuseaux--heure-avancée
+[recall-stall]: cheatsheets/Formulas_Calculations_EN_FR.md#stall--airspeed--décrochage--vitesse
+[recall-weather]: cheatsheets/Formulas_Calculations_EN_FR.md#altitude--weather--altitude--météo
 [abbr-traps]: https://github.com/jraph/aero-cave/blob/3dbd013ba1e93160727d40b6fde8f4a0e50ca0f4/cheatsheets/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.md#L477

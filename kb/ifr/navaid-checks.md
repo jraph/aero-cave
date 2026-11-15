@@ -33,30 +33,30 @@
 #### Navigation aids — ADF / VOR / DME / intercepts
 <!-- id: nav-navigation-aids-adf-vor-dme-intercepts | from: 06 | kind: formula | level: CPL IR -->
 
-| Memory | Calculation / example |
-|---|---|
-| Conventions | MH = magnetic heading; RB = clockwise relative bearing from nose; BTS/BFS = bearing TO/FROM station. Use one north reference throughout. |
-| Wrap / Normaliser | wrap(x) = x modulo 360; add/subtract 360 until 0–359°. North may be written 000° or 360°. |
-| BTS = MH + RB | BTS = wrap(MH + RB). MH 350°, RB 040° → BTS 030°. |
-| BFS = BTS ±180 | BFS = wrap(BTS +180°). BTS 030° → BFS 210°: aircraft southwest of station. |
-| RB = BTS − MH | RB = wrap(BTS − MH). BTS 020°, MH 080° → RB 300° (60° left of nose). |
-| MH = BTS − RB | MH = wrap(BTS − RB). BTS 100°, RB 250° → MH 210°. |
-| ADF card / Rose | Fixed card: read RB. Movable card: set current MH under index to read magnetic BTS. RMI: correctly referenced needle head = BTS, tail = BFS. |
-| Turn / Virage | At essentially unchanged position, right turn +30° → RB decreases 30°; left turn → RB increases. BTS stays nearly unchanged. |
-| Homing ≠ tracking | RB 000° points the nose at the station. In crosswind, holding RB 000° gives a curved homing path. Tracking needs wind correction. |
-| VOR radial | Radial = bearing FROM station. On R-090: outbound course 090°; inbound course 270°. Identify aid and north reference (true-reference exceptions exist in Canada). |
-| TO / FROM | With CDI centred: selected course toward station → TO; reciprocal → FROM. Flag describes selected-course geometry, not aircraft heading or actual travel. |
-| 30° intercept setup | C = desired direction of travel, NOT always radial. Choose H = C ±30° toward the course line. Sketch station, current BFS and target line first; heading alone cannot select the side. No-wind examples below. |
-| Capture: inbound | At capture BTS = C; RB = wrap(C − H). H=C+30 → RB330; H=C−30 → RB030. Start rollout with appropriate lead. |
-| Capture: outbound | At capture BTS = wrap(C+180); RB = wrap(C+180−H). H=C+30 → RB150; H=C−30 → RB210. |
-| Inbound example | Aircraft west-northwest of NDB (BFS285), intercept C090 inbound: H120 toward line. At capture BTS090, RB330. Turn left toward 090, then correct wind. |
-| Outbound example | Aircraft northeast (BFS045), intercept C090 outbound: H120. At capture BFS090, BTS270, RB150. Turn left toward 090, then correct wind. |
-| Wind trap / Vent | 30° is a chosen training intercept, not a universal rule. Wind changes the ground intercept angle. Always compute capture RB from actual heading; after capture fly the wind-corrected heading. |
-| Cross-track distance | Lateral offset = ground range × sin(angular error); small angle ≈ range × error°/60. At 30 NM, 4° → about 2 NM. |
-| VOR dots | Conventional VOR CDI: normally 2° per dot, ±10° full scale. Two dots at 30 NM ≈ 2 NM. LOC and GNSS scales differ; check equipment/mode. |
-| DME geometry | Slant NM = √(ground NM² + height NM²); height NM = height above station(ft)/6076. Over station at 6076 ft above it → about 1 DME, not zero. |
-| DME ground range | Ground NM = √(DME² − height NM²). DME 5 NM, height 6076 ft → √24 ≈4.90 NM. DME speed/time meaningful toward/away from station; unreliable for along-track speed on an arc. |
-| 30° closing time | For a 30° GROUND-track intercept: closing speed = GS × sin30 = GS/2. Time(min)=120 × lateral NM/GS. 2 NM off at 120 kt → 2 min. Wind-correct heading to obtain that ground track. |
+| Label | English | Français |
+|---|---|---|
+| Conventions | MH = magnetic heading; RB = clockwise relative bearing from nose; BTS/BFS = bearing TO/FROM station. Use one north reference throughout. | MH = cap magnétique; RB = gisement horaire depuis le nez; BTS/BFS = relèvement VERS/DEPUIS la station. Même référence nord pour tous les angles. |
+| Wrap / Normaliser | wrap(x) = x modulo 360; add/subtract 360 until 0–359°. North may be written 000° or 360°. | wrap(x) = x modulo 360; ajouter/soustraire 360 pour obtenir 0–359°. Nord : 000° ou 360°. |
+| BTS = MH + RB | BTS = wrap(MH + RB). MH 350°, RB 040° → BTS 030°. | BTS = wrap(MH + RB). MH 350°, RB 040° → BTS 030°. |
+| BFS = BTS ±180 | BFS = wrap(BTS +180°). BTS 030° → BFS 210°: aircraft southwest of station. | BFS = wrap(BTS +180°). BTS 030° → BFS 210° : avion au sud-ouest de la station. |
+| RB = BTS − MH | RB = wrap(BTS − MH). BTS 020°, MH 080° → RB 300° (60° left of nose). | RB = wrap(BTS − MH). BTS 020°, MH 080° → RB 300° (60° à gauche du nez). |
+| MH = BTS − RB | MH = wrap(BTS − RB). BTS 100°, RB 250° → MH 210°. | MH = wrap(BTS − RB). BTS 100°, RB 250° → MH 210°. |
+| ADF card / Rose | Fixed card: read RB. Movable card: set current MH under index to read magnetic BTS. RMI: correctly referenced needle head = BTS, tail = BFS. | Rose fixe : lire RB. Rose mobile : afficher MH à l’index pour lire BTS magnétique. RMI correctement référencé : pointe = BTS, queue = BFS. |
+| Turn / Virage | At essentially unchanged position, right turn +30° → RB decreases 30°; left turn → RB increases. BTS stays nearly unchanged. | À position pratiquement constante, virage droite +30° → RB diminue de 30°; gauche → RB augmente. BTS reste presque constant. |
+| Homing ≠ tracking | RB 000° points the nose at the station. In crosswind, holding RB 000° gives a curved homing path. Tracking needs wind correction. | RB 000° pointe le nez vers la station. Par vent traversier, maintenir RB 000° produit une trajectoire courbe. Suivre une route exige une correction de dérive. |
+| VOR radial | Radial = bearing FROM station. On R-090: outbound course 090°; inbound course 270°. Identify aid and north reference (true-reference exceptions exist in Canada). | Radiale = relèvement DEPUIS station. Sur R-090 : route éloignement 090°; rapprochement 270°. Identifier aide et référence nord (exceptions au nord vrai au Canada). |
+| TO / FROM | With CDI centred: selected course toward station → TO; reciprocal → FROM. Flag describes selected-course geometry, not aircraft heading or actual travel. | CDI centré : route sélectionnée vers station → TO; réciproque → FROM. Le drapeau décrit la géométrie sélectionnée, pas le cap ni le déplacement réel. |
+| 30° intercept setup | C = desired direction of travel, NOT always radial. Choose H = C ±30° toward the course line. Sketch station, current BFS and target line first; heading alone cannot select the side. No-wind examples below. | C = route désirée, PAS toujours radiale. Choisir H = C ±30° vers la ligne. Dessiner station, BFS actuel et ligne cible; le cap seul ne donne pas le côté. Exemples sans vent ci-dessous. |
+| Capture: inbound | At capture BTS = C; RB = wrap(C − H). H=C+30 → RB330; H=C−30 → RB030. Start rollout with appropriate lead. | À l’interception BTS = C; RB = wrap(C − H). H=C+30 → RB330; H=C−30 → RB030. Anticiper la sortie du virage. |
+| Capture: outbound | At capture BTS = wrap(C+180); RB = wrap(C+180−H). H=C+30 → RB150; H=C−30 → RB210. | À l’interception BTS = wrap(C+180); RB = wrap(C+180−H). H=C+30 → RB150; H=C−30 → RB210. |
+| Inbound example | Aircraft west-northwest of NDB (BFS285), intercept C090 inbound: H120 toward line. At capture BTS090, RB330. Turn left toward 090, then correct wind. | Avion au ouest-nord-ouest du NDB (BFS285), intercepter C090 en rapprochement : H120 vers ligne. À l’interception BTS090, RB330. Virer gauche vers 090, puis corriger le vent. |
+| Outbound example | Aircraft northeast (BFS045), intercept C090 outbound: H120. At capture BFS090, BTS270, RB150. Turn left toward 090, then correct wind. | Avion au nord-est (BFS045), intercepter C090 en éloignement : H120. À l’interception BFS090, BTS270, RB150. Virer gauche vers 090, puis corriger le vent. |
+| Wind trap / Vent | 30° is a chosen training intercept, not a universal rule. Wind changes the ground intercept angle. Always compute capture RB from actual heading; after capture fly the wind-corrected heading. | 30° est un choix pédagogique, pas une règle universelle. Le vent modifie l’angle au sol. Calculer RB à partir du cap réel; après interception appliquer la correction de dérive. |
+| Cross-track distance | Lateral offset = ground range × sin(angular error); small angle ≈ range × error°/60. At 30 NM, 4° → about 2 NM. | Écart latéral = distance horizontale × sin(erreur angulaire); petit angle ≈ distance × erreur°/60. À 30 NM, 4° → environ 2 NM. |
+| VOR dots | Conventional VOR CDI: normally 2° per dot, ±10° full scale. Two dots at 30 NM ≈ 2 NM. LOC and GNSS scales differ; check equipment/mode. | CDI VOR classique : normalement 2° par point, ±10° pleine échelle. Deux points à 30 NM ≈ 2 NM. Échelles LOC/GNSS différentes; vérifier équipement/mode. |
+| DME geometry | Slant NM = √(ground NM² + height NM²); height NM = height above station(ft)/6076. Over station at 6076 ft above it → about 1 DME, not zero. | Distance oblique NM = √(distance horizontale NM² + hauteur NM²); hauteur NM = pieds au-dessus station/6076. À la verticale à 6076 ft au-dessus → environ 1 DME, pas zéro. |
+| DME ground range | Ground NM = √(DME² − height NM²). DME 5 NM, height 6076 ft → √24 ≈4.90 NM. DME speed/time meaningful toward/away from station; unreliable for along-track speed on an arc. | Distance horizontale NM = √(DME² − hauteur NM²). DME 5 NM, hauteur 6076 ft → √24 ≈4,90 NM. Vitesse/temps DME pertinents vers/depuis station; pas la vitesse le long d’un arc. |
+| 30° closing time | For a 30° GROUND-track intercept: closing speed = GS × sin30 = GS/2. Time(min)=120 × lateral NM/GS. 2 NM off at 120 kt → 2 min. Wind-correct heading to obtain that ground track. | Interception à 30° de ROUTE SOL : vitesse de rapprochement = GS/2. Temps(min)=120 × écart NM/GS. Écart 2 NM à 120 kt → 2 min. Corriger le cap pour obtenir cette route sol. |
 ***
 - `M VOR checks:` **4–6–4** = ground/VOT ±4° (FAA reference), airborne ±6°, dual receivers ≤4° total difference. Receiver accuracy ≠ tracking allowance. See [VOR receiver checks and Canadian source scope](navaid-checks.md#navigation-aid-checks).
 ***

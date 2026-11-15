@@ -69,29 +69,23 @@
 - Aircraft POH/category/W&B limitations also apply.
 - `T:` POH-approved spin ≠ legal anywhere/any altitude/with passengers.
 ***
-#### Night definition
-<!-- id: law-night-definition | from: 04 | also: law-night | level: PPL CPL -->
-
-- `Night` = period from end of evening civil twilight to beginning of morning civil twilight. `[CAR 101.01]`
-- `T:` sunset is not the legal start of night; use official twilight data.
-***
 #### Passenger weights / Masse des passagers — AIM 2026-1 RAC 3.4.7
 <!-- id: law-passenger-weights-masse-des-passagers-aim-2026-1 | from: 04 | also: agk-wb | level: CPL -->
 
-| Memory | Rule / example |
-|---|---|
-| Scope / Portée | Standard averages require the applicable approved W&B method. 703 uses actual/volunteered/estimated or approved segmented/survey methods; do not apply airline averages to a small private aircraft. |
-| Adult M / X ≥12 | Summer 206 lb (93.4 kg); winter 212 lb (96.2 kg). |
-| Adult F ≥12 | Summer 172 lb (78.1 kg); winter 178 lb (80.7 kg). Adult winter increment =6 lb. |
-| Children / Enfants | Age 2–11: 75 lb (34 kg), both seasons. Infant <2: 30 lb (13.6 kg); standard-method infant allowance note applies when infant count exceeds 10% of adults. |
-| Baggage / Bagages | Standard adult weights include clothing/carry-on. No carry-on: permitted reduction 13 lb (5.9 kg). Checked baggage and cargo: actual weights. |
-| Small sample / Petit groupe | 1–4 maximum certificated passenger seats: actual, volunteered or estimated weights. Segmented weights depend on certificated capacity, not passengers aboard. |
-| Segment 5 | 5 certificated passenger seats: summer M/X 243, F 204 lb; winter M/X 249, F 210 lb. |
-| Segment 6–8 | 6–8 certificated passenger seats: summer M/X 238, F 200 lb; winter M/X 244, F 206 lb. |
-| Segment 9–11 | 9–11 certificated passenger seats: summer M/X 230, F 193 lb; winter M/X 236, F 199 lb. |
-| Segment 12–16 | 12–16 certificated passenger seats: summer M/X 227, F 190 lb; winter M/X 233, F 196 lb. |
-| Segment 17–25 | 17–25 certificated passenger seats: summer M/X 223, F 187 lb; winter M/X 229, F 193 lb. |
-| Actual wins / Réel | If a group is heavier than the assumed average, account for actual weights. Never hide infant, baggage or unusual load in a blanket average. |
+| Label | English | Français |
+|---|---|---|
+| Scope / Portée | Standard averages require the applicable approved W&B method. 703 uses actual/volunteered/estimated or approved segmented/survey methods; do not apply airline averages to a small private aircraft. | Moyennes standard selon méthode masse/centrage approuvée applicable. En 703 : masses réelles/déclarées/estimées ou segmentées/enquête approuvées; pas de moyennes compagnie pour petit avion privé. |
+| Adult M / X ≥12 | Summer 206 lb (93.4 kg); winter 212 lb (96.2 kg). | Été 206 lb (93,4 kg); hiver 212 lb (96,2 kg). |
+| Adult F ≥12 | Summer 172 lb (78.1 kg); winter 178 lb (80.7 kg). Adult winter increment =6 lb. | Été 172 lb (78,1 kg); hiver 178 lb (80,7 kg). Supplément adulte hiver =6 lb. |
+| Children / Enfants | Age 2–11: 75 lb (34 kg), both seasons. Infant <2: 30 lb (13.6 kg); standard-method infant allowance note applies when infant count exceeds 10% of adults. | 2–11 ans : 75 lb (34 kg), deux saisons. Bébé <2 : 30 lb (13,6 kg); note de la méthode standard si nombre de bébés dépasse 10 % des adultes. |
+| Baggage / Bagages | Standard adult weights include clothing/carry-on. No carry-on: permitted reduction 13 lb (5.9 kg). Checked baggage and cargo: actual weights. | Masses standard adultes incluent vêtements/bagage cabine. Sans bagage cabine : réduction permise 13 lb (5,9 kg). Bagages enregistrés/fret : masses réelles. |
+| Small sample / Petit groupe | 1–4 maximum certificated passenger seats: actual, volunteered or estimated weights. Segmented weights depend on certificated capacity, not passengers aboard. | 1–4 sièges passagers max certifiés : masses réelles, déclarées ou estimées. Masses segmentées selon capacité certifiée, pas nombre à bord. |
+| Segment 5 | 5 certificated passenger seats: summer M/X 243, F 204 lb; winter M/X 249, F 210 lb. | 5 sièges passagers certifiés : été M/X 243, F 204 lb; hiver M/X 249, F 210 lb. |
+| Segment 6–8 | 6–8 certificated passenger seats: summer M/X 238, F 200 lb; winter M/X 244, F 206 lb. | 6–8 sièges passagers certifiés : été M/X 238, F 200 lb; hiver M/X 244, F 206 lb. |
+| Segment 9–11 | 9–11 certificated passenger seats: summer M/X 230, F 193 lb; winter M/X 236, F 199 lb. | 9–11 sièges passagers certifiés : été M/X 230, F 193 lb; hiver M/X 236, F 199 lb. |
+| Segment 12–16 | 12–16 certificated passenger seats: summer M/X 227, F 190 lb; winter M/X 233, F 196 lb. | 12–16 sièges passagers certifiés : été M/X 227, F 190 lb; hiver M/X 233, F 196 lb. |
+| Segment 17–25 | 17–25 certificated passenger seats: summer M/X 223, F 187 lb; winter M/X 229, F 193 lb. | 17–25 sièges passagers certifiés : été M/X 223, F 187 lb; hiver M/X 229, F 193 lb. |
+| Actual wins / Réel | If a group is heavier than the assumed average, account for actual weights. Never hide infant, baggage or unusual load in a blanket average. | Si groupe plus lourd que moyenne supposée, tenir compte des masses réelles. Ne pas masquer bébé, bagages ou charge inhabituelle dans moyenne générale. |
 ***
 #### Pebble
 <!-- id: law-general-operating-rules-pebble | level: PPL CPL IR -->

@@ -1,5 +1,18 @@
 # Content review
 
+## Ontology as hub; formulas and card 17 reworked — 14 November 2026
+
+Text moved or re-laid out, not re-validated; unit IDs kept unless a repeat was retired.
+
+- **Ontology:** note types (`study-*`, `type-c150`) are no longer concepts; each note has a `kind`. Every TC guide group names its concept, so a concept page shows its TC coverage and gaps. Related links are derived from shared notes and TC items. Build rejects a knowledge note in a card, an unknown kind, a guide group without a concept and a concept with no note and no narrower concept; `--audit` reports the rest.
+- **Formulas collection** renamed `Formulas_Calculations_EN_FR.md` ("Formulas & calculations") and reduced to 11 formula sections. Six sections replaced their English-only twin in `kb` with the bilingual text (same rows; flight duty time gains 9 rows the twin lacked): ADF/VOR/DME intercepts, oxygen, passenger weights, flight duty time, de-/anti-icing, over-water survival. Six moved as bilingual units: twilight/time zones to `law-night`; CFS servicing, NOTAM header and NOTAM codes to `nav-pubs`; communications/weather services and FIR/FIC to `law-atc`.
+- **Card 17 retired** into `kb/law`: licence → type requirements to `law-lic`; recency clocks to `law-recency` (CAR column folded into the label); operator checks, 703 single-pilot IFR, traps and sources to `law-type`; its Pebble line joined that file's Pebble. The 11-column operator table is now one block per operation with a PIC / SIC table (same cells, re-arranged). Source basis as recorded on the card: CARs consolidation current to 2026-09-30, Standard 421, TC AIM 2026-2 (reviewed 2026-10-24).
+- **Readers:** the formulas and qualifications HTML pages now redirect to the explorer; the card 17 layout test is removed; the `MANAB_CFS_Essential` pointer stub is deleted. The abbreviations readers are unchanged.
+- **New concept files:** `kb/law/night-vfr-ott.md` (twilight, night definition, VFR OTT) and `kb/nav/gnss-rnav.md`.
+- **Open gaps from `--audit`:** no knowledge note yet for electrical systems, gyro instruments, other weather hazards, load factor (formulas only) or takeoff; airframe systems, propellers and the emergency concepts hold procedures only.
+
+507 units (was 513).
+
 ## Cards 08, 11 and 12 consolidated into kb — 14 November 2026
 
 Text moved, not re-validated; unit IDs kept.
