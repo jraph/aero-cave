@@ -36,6 +36,9 @@ h2{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu
 .tile.sel{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
 .gsec{margin:.9rem 0 .3rem;font-size:.95rem}.gsec small{color:var(--muted);font-weight:400}#tg .bars{margin-top:.35rem}#vpanel{border-left:3px solid var(--accent);padding:.1rem .6rem .3rem;margin-bottom:.6rem}#vpanel h3{margin:.1rem 0 .2rem;font-size:1.05rem;line-height:1.2}
 .pl{margin:.3rem 0;display:flex;flex-wrap:wrap;gap:.22rem}.pt{background:var(--stripe);border:1px solid var(--line);border-radius:.3rem;padding:.05rem .35rem;font-size:.84rem;line-height:1.3}.pt.k{background:var(--pill);font-weight:700;border-color:transparent}
+@media (min-width:64rem){#gpanel{width:min(96vw,96rem);margin-left:calc((100% - min(96vw,96rem))/2)}.g2{display:grid;grid-template-columns:minmax(22rem,2fr) 3fr;gap:1rem;align-items:start}.gout{position:sticky;top:3.6rem;max-height:calc(100vh - 4.2rem);overflow:auto;padding-right:.3rem}}
+.gnotes{min-width:0;scroll-margin-top:4rem}.gnotes h4{margin:.2rem 0 .4rem;font-size:1rem}.it .gnotes,.grp>.gnotes{grid-column:1/-1;padding:.3rem .5rem .5rem;border-top:1px solid var(--line);background:var(--bg)}.it+.gnotes{padding:.3rem .5rem .5rem;border-top:1px dashed var(--line);background:var(--bg)}
+.it+.gnotes h4{display:none}.it[role=button]{cursor:pointer}.it.sel,details.grp>summary.sel{box-shadow:inset 3px 0 0 var(--accent)}.cby{font-size:.75rem;color:var(--muted);margin:-.1rem 0 .5rem .2rem;display:flex;flex-wrap:wrap;gap:.25rem;align-items:center}.gmiss{font-size:.85rem;margin:.6rem 0;padding:.5rem .6rem;border:1px dashed var(--line);border-radius:.5rem}.gmiss div{color:var(--muted);margin-top:.15rem}
 #gpanel h3{margin:.2rem 0 .2rem;font-size:1.1rem}
 .bars{display:flex;height:.55rem;border-radius:.3rem;overflow:hidden;margin:.5rem 0 .4rem;background:var(--line)}
 .bars span{display:block}.sC{background:var(--ok)}.sP{background:var(--part)}.sM{background:var(--miss)}.sE{background:var(--muted)}
@@ -155,6 +158,7 @@ const T = {
   also:['Filed under','Classé sous'], open:['Open card ↗','Ouvrir la fiche ↗'], reader:['Reader ↗','Lecteur ↗'],
   none:['Nothing matches. Remove a filter or shorten the search.','Aucun résultat. Retirez un filtre ou raccourcissez la recherche.'],
   disc:['Study aid only. Use current official publications and the aircraft flight manual for operations.','Aide à l’étude seulement. Utilisez les publications officielles en vigueur et le manuel de vol pour l’exploitation.'],
+  gHint:['Select a group or an item: its notes open here, in the guide’s order.','Choisir un groupe ou un point : ses notes s’ouvrent ici, dans l’ordre du guide.'], gNone:['No note yet for this item.','Aucune note pour ce point.'], gGaps:['Items without a note','Points sans note'], citedBy:['Cited by','Cité par'],
   hGuide:['Training path: TC exams and flight tests','Parcours : examens et tests en vol de TC'], items:['items','points'], stC:['Covered','Couvert'], stP:['Partial','Partiel'], stM:['Missing','Manquant'], stE:['Elsewhere, unchecked','Ailleurs, non vérifié'], back:['← Explorer','← Explorateur'], reviewed:['Reviewed','Révisé'], official:['Official guide ↗','Guide officiel ↗'], ess:['Essential','Essentiel'], depth:['Commercial depth','Niveau professionnel'], essU:['% essential: cited by an item the % guide marks ✈','Essentiel %: cité par un point marqué ✈ dans le guide %'], handLv:['Level set by hand: no TC item cites this note yet','Niveau attribué à la main : aucun point TC ne cite encore cette note'], kWritten:['Written exam','Examen écrit'], kFlight:['Flight test','Test en vol'], study:['Study the mapped sections','Étudier les sections reliées'], mapped:['sections mapped','sections reliées'], method:['Method','Méthode'], toGuide:['Item-by-item coverage →','Couverture point par point →'], own:['Item labels are our own short wording; the guide text is authoritative.','Les libellés sont notre formulation abrégée; le texte du guide fait foi.'],
   clr:['✕ Clear','✕ Effacer'],
   expand:['Expand all','Tout ouvrir'], collapse:['Collapse all','Tout fermer']
@@ -185,7 +189,7 @@ const U = new Map(D.sections.filter(s => s.u).map(s => [s.u, s]));
 const G = new Map(D.guides.map(g => [g.id, g]));
 const unitItems = new Map();
 for (const g of D.guides) for (const grp of g.groups) for (const it of grp.items) for (const u of it.u) { if (!unitItems.has(u)) unitItems.set(u, []); unitItems.get(u).push({g, grp, it}); }
-let gFilter = '';
+let gFilter = '', gSel = null;
 const PLANE = '✈\uFE0E';
 const gHit = i => !gFilter || (gFilter === 'e' ? i.e : gFilter === 'd' ? i.d : i.s === gFilter);
 /* ---- state + routing: #x-VIEW-KIND-CONCEPT (k = note kind) ---- */
@@ -417,18 +421,39 @@ function renderGuide() {
   p.appendChild(leg);
   if (g.marks) for (const [k, pre] of [['e', PLANE + ' '], ['d', '']]) if (g.marks[k]) p.appendChild(el('div', 'crumbs' + (k === 'd' ? ' dpn' : ''), esc(pre + L(g.marks[k]))));
   let sec = ''; const oneSec = new Set(g.groups.map(x => x.section)).size < 2, ft = g.kind === 'flight';
+  const g2 = el('div', 'g2'), out = el('div', 'gout'), pane = el('div', 'gnotes'); g2.appendChild(out); g2.appendChild(pane); p.appendChild(g2);
+  const wide = () => matchMedia('(min-width:64rem)').matches;
+  const label = (grp, it) => (ft ? '' : grp.code + (it ? ' ' + it.n : '') + ' · ') + (it ? it.en : L(grp));
+  const select = (grp, it, d, row, openU) => {
+    gSel = {g: g.id, grp: grp.code, n: it ? it.n : null};
+    out.querySelectorAll('.sel').forEach(x => x.classList.remove('sel')); (row || d.querySelector('summary')).classList.add('sel');
+    pane.textContent = ''; pane.appendChild(el('h4', '', esc(label(grp, it))));
+    const its = it ? [it] : grp.items.filter(gHit), seen = new Map();
+    for (const i of its) for (const u of i.u) { if (!seen.has(u)) seen.set(u, []); seen.get(u).push(i); }
+    for (const i of its) if (i.gap && it) pane.appendChild(el('div', 'crumbs', esc(i.gap)));
+    for (const [u, by] of seen) { const n = sectionEl(U.get(u)); pane.appendChild(n);
+      if (!it) { const c = el('div', 'cby', esc(t('citedBy')) + ' '); for (const i of by) { const b = el('button', 'chip', esc(grp.code + ' ' + i.n)); b.type = 'button'; b.title = i.en; b.onclick = () => { const r = d.querySelector('[data-n="' + i.n + '"]'); if (r) r.click(); }; c.appendChild(b); } pane.appendChild(c); }
+      if (u === openU || (it && seen.size === 1)) n.open = true; }
+    const miss = its.filter(i => !i.u.length);
+    if (miss.length) { pane.appendChild(el('div', 'gmiss', '<b>' + esc(t(it ? 'gNone' : 'gGaps')) + (it ? '' : ' (' + miss.length + ')') + '</b>' + (it ? '' : miss.map(i => '<div>' + (i.e ? PLANE + ' ' : '') + esc(grp.code + ' ' + i.n + ' · ' + i.en) + '</div>').join(''))));  }
+    if (wide()) { g2.appendChild(pane); pane.scrollIntoView({block:'nearest'}); } else if (row) row.after(pane); else d.appendChild(pane);
+  };
+  pane.appendChild(el('div', 'crumbs', esc(t('gHint'))));
   for (const grp of g.groups) {
     const items = grp.items.filter(gHit); if (!items.length) continue;
     const sn = lang === 'fr' && grp.section_fr ? grp.section_fr : grp.section;
-    if (sn && sn !== sec && !oneSec) { const secItems = g.groups.filter(x => x.section === grp.section).flatMap(x => x.items); p.appendChild(el('h4', 'gsec', esc(sn) + ' <small>' + secItems.length + '</small>' + bar(secItems))); sec = sn; }
+    if (sn && sn !== sec && !oneSec) { const secItems = g.groups.filter(x => x.section === grp.section).flatMap(x => x.items); out.appendChild(el('h4', 'gsec', esc(sn) + ' <small>' + secItems.length + '</small>' + bar(secItems))); sec = sn; }
     const d = el('details', 'grp'); d.open = !!gFilter;
     d.appendChild(el('summary', '', '<span>' + esc((ft ? '' : grp.code + ' · ') + L(grp)) + '</span><small style="color:var(--muted);font-weight:400">' + items.length + '</small>' + bar(grp.items)));
     for (const it of items) {
       const r = el('div', 'it' + (it.d ? ' dp' : ''), '<span class="sb s' + it.s + '" title="' + esc(t('st' + it.s)) + '">' + it.s + '</span><span>' + (it.e ? '<span class="ess" title="' + esc(t('ess')) + '">' + PLANE + '</span> ' : '') + (ft ? '' : '<b>' + grp.code + ' ' + it.n + '</b> · ') + esc(it.en) + '</span>' + (it.gap ? '<span class="gap">' + esc(it.gap) + '</span>' : ''));
-      if (it.u.length) { const us = el('div', 'us'); for (const u of it.u) { const c = el('button', 'chip', esc(U.get(u).h)); c.type = 'button'; c.onclick = () => openUnit(u); us.appendChild(c); } r.appendChild(us); }
+      r.dataset.n = it.n; r.tabIndex = 0; r.setAttribute('role', 'button'); r.onclick = () => select(grp, it, d, r); r.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); r.click(); } };
+      if (it.u.length) { const us = el('div', 'us'); for (const u of it.u) { const c = el('button', 'chip', esc(U.get(u).h)); c.type = 'button'; c.onclick = e => { e.stopPropagation(); select(grp, it, d, r, u); }; us.appendChild(c); } r.appendChild(us); }
       d.appendChild(r);
     }
-    p.appendChild(d);
+    d.querySelector('summary').addEventListener('click', () => { if (!d.open) select(grp, null, d, null); });
+    out.appendChild(d);
+    if (gSel && gSel.g === g.id && gSel.grp === grp.code) { d.open = true; const it = items.find(i => i.n === gSel.n); if (wide() || it) select(grp, it || null, d, it ? d.querySelector('[data-n="' + it.n + '"]') : null); }
   }
 }
 function render() {

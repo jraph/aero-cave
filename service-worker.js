@@ -1,6 +1,6 @@
 /* Bump VERSION whenever a reader, layout, icon or app shell changes. */
 'use strict';
-const VERSION = '2026-11-15-08';
+const VERSION = '2026-11-15-09';
 const BASE = new URL('./', self.location.href);
 const PREFIX = 'aero-cave:' + BASE.pathname + ':';
 const CACHE = PREFIX + VERSION;
