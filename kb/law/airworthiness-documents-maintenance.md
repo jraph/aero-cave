@@ -120,6 +120,15 @@
 - PIC cannot fly if safety is affected regardless of deferral mechanics. `[CAR 605.08]`
 - `M:` `REQUIRED? → SERVICEABLE? → DEFER LEGALLY? → SAFE?`
 ***
+#### Synthetic flight training equipment — 606.03
+<!-- id: law-synthetic-training-equipment-606-03 | level: CPL -->
+
+- `R` Training or skills assessment under Part IV, VI or VII on a simulator/FTD only with a **flight simulator** or **flight training device certificate** (or recognized foreign equivalent). Not RPAS.
+- `R` Certificate shows operator, ACFT type/model represented, qualification level, issue date. Stays valid only if performance kept (except per SCIG), maintained per the Simulator Manual, updated for ADs/rule changes affecting training.
+- `R` Re-evaluation: **simulator every 6 months** (valid to 1st day of **7th** month) · **FTD every 12 months** (to 1st day of **13th** month). Minister may extend **≤60 days**.
+
+- Sources: [606.03](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-606.03.html).
+***
 #### Pebble
 <!-- id: law-airworthiness-documents-maintenance-pebble | level: PPL CPL IR -->
 
@@ -130,4 +139,5 @@
 - RECORDS `journey log + airframe + each ENG + each variable-pitch PROP + W&B | no separate fixed-pitch PROP record | title transfer → all records`
 - AAIR `owner → TC ≤MAR 30 after JAN–DEC period, or pre-agreed date | AAIR ≠ annual inspection`
 - UNSERVICEABLE `REQUIRED? → SERVICEABLE? → DEFER LEGALLY? → SAFE? | required equipment unserviceable → no takeoff (605.10)`
+- SIM/FTD `certificate required | sim re-eval 6 mo (7th mo) | FTD 12 mo (13th mo) | +60 d max`
 ***

@@ -13,7 +13,7 @@
 | [Lost communications / NORDO / Panne de communications / NORDO](lost-comms.md) | `emg-comms` | 3 |
 | [Minima, visual reference, RVR & approach ban / Minimums, références visuelles, RVR et interdiction d’approche](minima-visual-reference.md) | `ifr-minima` | 9 |
 | [Missed approach & circling / Approche interrompue et approche indirecte](missed-approach-circling.md) | `ifr-missed` | 4 |
-| [Radio navigation (VOR / ADF / DME / ILS) / Radionavigation (VOR / ADF / DME / ILS)](navaid-checks.md) | `nav-radio` | 5 |
+| [Radio navigation (VOR / ADF / DME / ILS) / Radionavigation (VOR / ADF / DME / ILS)](navaid-checks.md) | `nav-radio` | 9 |
 | [IFR planning, fuel & alternates / Planification IFR, carburant et dégagement](planning-fuel.md) | `ifr-plan` | 4 |
 | [RASS / remote altimeter setting / RASS / calage altimétrique éloigné](rass.md) | `ifr-rass` | 2 |
 | [IFR — exam method & traps / IFR — méthode d’examen et pièges](recall.md) | `ifr` | 6 |

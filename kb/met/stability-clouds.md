@@ -59,6 +59,24 @@
 - `!:` freezing rain/drizzle = high-severity icing signal.
 - Virga = precip evaporates before ground; may indicate downdrafts/microburst potential.
 ***
+#### Change of state and latent heat
+<!-- id: wx-change-of-state-latent-heat | level: CPL -->
+
+| Change | Name | Latent heat |
+|---|---|---|
+| liquid → vapour | evaporation | absorbed (cools surroundings) |
+| vapour → liquid | condensation | **released** (warms air) |
+| solid → liquid | melting | absorbed |
+| liquid → solid | freezing | released |
+| solid → vapour | sublimation | absorbed |
+| vapour → solid | deposition | released |
+
+- Condensation in rising air releases heat → saturated air cools slower (SALR < DALR) → feeds cloud and thunderstorm growth.
+- `T` Evaporation of precipitation cools air below cloud → downdraft/microburst strength.
+- `?:` general knowledge; no free TC or NAV CANADA text found. Check against a TC-recognized text (e.g. *From the Ground Up*, TC Flight Training Manual) in the fact-check pass.
+
+
+***
 #### Pebble
 <!-- id: met-stab-pebble -->
 
@@ -67,4 +85,5 @@
 - CLOUD BASE `exam AGL = 1000(T−Td)/3 | parcel AGL = 1000(T−Td)/(3−0.5) | surface-lifted convective parcel only ≠ every ceiling`
 - DEW POINT `small T−Td + cooling → fog/low cloud more likely, not guaranteed | inversion = temp↑ with height: strongly stable, traps haze/smoke, possible wind shear`
 - PRECIP `FZRA/FZDZ = supercooled liquid, freezes on contact → high-severity icing | virga → possible downdraft/microburst`
+- CHANGE OF STATE `heat absorbed: evaporation, melting, sublimation | released: condensation, freezing, deposition | condensation heat → SALR < DALR → storms`
 ***

@@ -14,6 +14,15 @@ Carried from the retired CPAER coverage matrix; still open on 14 November 2026. 
 
 The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json` and the explorer's guide pages; `python3 explorer/build_explorer.py --audit` lists concepts with TC items but no knowledge note.
 
+## CPAER essential and commercial-depth gaps filled — 15 November 2026
+
+All 165 CPAER (TP 12881, 7th ed.) items marked essential (✈) or commercial depth that were Missing now cite a note: 160 covered, 5 partial. CPAER: 415 covered / 258 partial / 182 missing (missing items left are neither ✈ nor depth). 17 identical PPAER items take the same citations (CPAER-first rule); 33 PPAER ✈ items stay missing.
+
+- **Commercial regulations (92 items):** four new concept files under `law-commercial`, written from the CARs (project copy current to 2026-02-18; thresholds checked mechanically against the cited sections): `private-operators-604.md` (`law-604`), `fatigue-700.md` (`law-fatigue`, Division III extras + Division IV medevac), `aerial-work-702.md` (`law-702`), `air-taxi-703-706.md` (`law-703`). Caught in review: medevac 7-day flight-time limit is 40 h for 704/705 aeroplanes and 60 h for 703 or helicopters (700.103), not the reverse.
+- **Other air law (23 items):** units for 406.02–.03, 601.15–.17, 602.30, 602.87, 602.105–.106, 602.145, 603 SFOCs, 605.06/605.30, 606.03; CFA (TC AIM GEN glossary, AC 100-001); LAHSO (RAC 4.4.9); entry/transit (AIP Canada GEN 1.2, 2 Oct 2025); Canada Transportation Act s. 57 (ATR Parts I and VII not read → partial); Canada Labour Code Part II on board (TC TP 14215, 13537, 14793); dangerous goods (RAC 12.3). `air-law-procedures.md` gained its Pebble.
+- **Navigation, met, aeronautics, HF (50 items):** sourced from TC AIM COM 4.4–4.7, RAC 1.10 / 2.7.1 / 2.8.7, AIR 1.3 / 2.4.1, MET 2.2.2 / 10.0, TP 2076 (2.2.x, 2.3.1), NAV CANADA AvMet (cold front, trowal) and *Fit for Purpose* guide, TC AC 700-020 (EFB), AC 700-005 (PED), AC 700-042 (TEM), TC Human Factors handbook. Partial: navaid chart symbols, SigWx symbols, turn-instrument errors.
+- **Flagged `?:` (general knowledge, no free TC/NAV CANADA text found):** change of state, gradient wind, frontogenesis/frontolysis, wing devices + control balancing + roll upset, diesel/FADEC/oil venting, fuel heater, porpoising, flight log form, T-route equipment requirements, Labour Code ss. 124–126 wording, ATR. First targets for the fact-check pass.
+
 ## `?:` notes checked against TC sources — 15 November 2026
 
 Seven notes flagged `?:` in the INRAT work were checked; five are now fully sourced, two keep a single flagged line.

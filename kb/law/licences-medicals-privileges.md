@@ -58,6 +58,17 @@
 | HP individual type / Type HP | ≥200 h aeroplane; type-specific ground/flight training; qualifying flight within 12 months | ≥200 h avion; formation sol/vol propre au type; vol de qualification dans les 12 mois |
 | Two-crew type / Type 2 pilotes | ≥250 h aeroplane (integrated-course exception); type training; IATRA ≥70% within 24 mo OR qualifying SAMRA+SARON/ATPL route; PPC/check for type | ≥250 h avion (exception cours intégré); formation type; IATRA ≥70 % dans les 24 mois OU voie SAMRA+SARON/ATPL admissible; PPC/vérif. du type |
 ***
+#### Flight training units — 406.02 / 406.03
+<!-- id: law-ftu-406-02-03-operator-certificate | level: CPL -->
+
+- `R` 406 covers flight training services toward: aeroplane PPL, CPL, land/sea rating, instructor (incl. aerobatic), IR, multi-engine, night, VFR OTT, recreational permit, aerobatic experience (similar lists for helicopter, glider, balloon, gyroplane, ultra-light).
+- `R` Flight training service with aeroplane or helicopter in Canada → **FTU operator certificate** + its conditions and ops specs.
+- `R` Exceptions, no FTU certificate: private operator or AOC holder (ACFT on AOC), training **not** toward recreational permit / PPL / CPL / instructor rating · trainee is **owner or owner's family** · director of owning corporation (not toward permit/PPL) · ACFT from an arm's-length person (not toward permit/PPL).
+- `R` Arm's-length case: instructor notifies Minister in writing (trainee, ACFT registration, training type, location, instructor licence) **before** training, **≤10 working days** after any change, and at end.
+- `T` Owner/family exception covers **any** licence; corporation-director and arm's-length exceptions exclude **permit and PPL** training.
+
+- Sources: [406.02](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-406.02.html), [406.03](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-406.03.html).
+***
 #### Pebble
 <!-- id: law-licences-medicals-privileges-pebble | level: PPL CPL -->
 
@@ -66,4 +77,5 @@
 - PPL-A `no hire/reward except CAR 401.28 cases | cost-share: owner/operator + non-commercial purpose + incidental passengers + fuel/oil/aircraft fees only | equal split alone insufficient`
 - CPL-A `licence qualifies pilot; AOC authorizes service | CPL ≠ 703/704/705 authorization | day-only if issued without night requirement`
 - FLIGHT TEST `instructor letter ≤30 d | stable VFR approach: ROD ≤1000 fpm, speed +10/−5, stable by 200 AGL or overshoot (test criterion, not a CAR minimum)`
+- FTU `aeroplane/heli training service → FTU certificate | no cert: owner/family any licence; director or arm's-length not permit/PPL (notify Minister ≤10 working days of change); AOC/private operator not permit/PPL/CPL/instructor`
 ***

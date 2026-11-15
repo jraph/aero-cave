@@ -79,10 +79,63 @@
 - **Radio (radar) altimeter**: absolute height by timed radio echo; less accurate over ice, deep snow, rapidly changing terrain. CAT II DH based on radio altimeter. `T:` height AGL ≠ altitude ASL. [TP 2076 2.1.2 F.3; CAP GEN CAT II/III chart legend]
 - `?:` HSI back course: set front (inbound) course → normal sensing; not in TP 2076, check aircraft AFM/avionics guide.
 ***
+#### Radio propagation, VOR and NDB/ADF principles and limitations
+<!-- id: nav-radio-propagation-vor-ndb-principles | level: CPL -->
+
+| Band | Propagation | Navaid |
+|---|---|---|
+| <3 MHz (LF/MF) | **ground wave** dominant | NDB 190–415 / 510–535 kHz |
+| 3–30 MHz (HF) | **sky wave**, skip zones | HF comms |
+| >30 MHz (VHF and up) | **line of sight** | VOR 112.0–117.95 MHz, DME (UHF) |
+
+- **VOR**: 360 radials (magnetic) to/from station · identified by 3-letter Morse · published radials **±3°** · range with altitude: ~**50 NM at 1 500 ft AGL**, **≥150 NM above 30 000 ft** · terrain shadow. Dual VOR check >**4°** apart → suspect; airborne check >**±6°** off published radial → not for IFR.
+- **NDB/ADF**: loop antenna senses signal direction; needle = **relative bearing**. Ident 2–3 characters Morse. Flight-checked **±5° approach, ±10° en route**. Classes: H ≥2 000 W · M 50–<2 000 W · L <50 W.
+- ADF errors: **night (twilight) effect** (sky-wave, worst near sunrise/sunset; little below 350 kHz) · **mountain** reflection · **coastal refraction** (shoreline crossed at <30°) · **thunderstorm** (needle points to lightning) · **bank error** in turns · AM receivers / calculators within 5 ft of antenna (200–450 kHz).
+- `T` ADF ± 10° en route vs VOR ± 3°: never treat NDB tracks as precise.
+
+- Sources: [TC AIM COM 4.4–4.7](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_com_en.pdf); [TP 2076](https://www.phoenixaviation.ca/IPM%20tp2076e.pdf) 2.2.2, 2.2.3, 2.2.5.
+***
+#### Time and distance to station — VOR / ADF
+<!-- id: nav-time-distance-to-station-vor-adf | level: CPL -->
+
+- `F` **Time to station (min) = seconds for the bearing change ÷ degrees of change.** Distance = time × groundspeed (or TAS) per minute.
+- `P` ADF: turn to put the pointer at **090° or 270°** relative, hold heading, time a **10°** change. VOR: turn ~90° to the radial, time the radial change.
+- Example: 120 s for 10° → **12 min**; 45 s for 10° → 4.5 min. Very fast needle swing → very close to the station.
+
+- Sources: [TP 2076](https://www.phoenixaviation.ca/IPM%20tp2076e.pdf) 2.2.3 E.3, 2.2.5 D.5.
+***
+#### VHF / LF airways, air routes, T-routes — RAC 2.7.1 / 2.8.7
+<!-- id: nav-airways-air-routes-rac-2-7 | level: CPL -->
+
+| Route | Width each side of centreline | Splay | Base |
+|---|---|---|---|
+| VHF/UHF (Victor) airway | **4 NM** | lines **4.5°** from each facility | 2 200 ft AGL (low-level controlled) |
+| LF/MF airway | **4.34 NM** | lines **5°** | 2 200 ft AGL |
+| T-route (RNAV) | 4 NM primary + 2 NM secondary obstacle protection; airspace **10 NM** | **none** | low-level controlled |
+| Low-level air route | as a low-level airway | as airway | **surface** (Class G) |
+
+- Low-level controlled airspace: **2 200 ft AGL to <18 000 ft ASL**.
+- Victor airway using VOR/VORTAC + NDB → LF/MF airway boundaries.
+- `T` Air route = uncontrolled, **no ATC separation** for IFR or VFR.
+
+- Sources: [TC AIM RAC](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_rac_en.pdf) 2.7.1, 2.8.7.
+***
+#### RMI — uses and limitations
+<!-- id: nav-rmi-advantages-limitations | level: CPL -->
+
+- RMI: slaved heading card + pointer = magnetic bearing **to** station (tail = from); tracking on **one instrument**; wind-correction heading does not change the bearing while on track.
+- Limitations follow the sensors: pointer inherits ADF/VOR errors (night effect, terrain, coastal, bank); card depends on the slaved compass (fail → card wrong, set by hand where a free mode exists).
+
+- Sources: [TP 2076](https://www.phoenixaviation.ca/IPM%20tp2076e.pdf) 2.2.6, 2.1.3 D.4.
+***
 #### Pebble
 <!-- id: ifr-navaid-checks-pebble -->
 
 - VOR CHECK `4 ground — 6 airborne — 4 between receivers | VOT: 000° FROM or 180° TO, ±4° (FAA AIM source) | airborne ±6° from published radial | dual: 4° TOTAL difference, same TO/FROM sense | Canada (TC AIM COM 4.5.1–4.5.2): dual >4° or airborne >6° → not for IFR until corrected`
 - T `±6° = receiver-check tolerance ≠ permission to track off course | failed identification = unusable navaid for approach | do not infer U.S. intervals/recordkeeping for Canada`
 - ILS/DME `LOC 108.1–111.9 · GP 329.3–335, 3°, false GP at 2× and 3× | couple within 6° | DME slant ±0.5 NM or 3 % | RMI head = TO`
+- RADIO `LF/MF ground wave | HF sky wave | VHF line of sight (~50 NM at 1500 AGL) | VOR ±3° published, dual >4° suspect, airborne >±6° no IFR | NDB ±5° app/±10° enroute | ADF errors: night, mountain, coastal <30°, TS, bank`
+- TIME TO STN `sec ÷ deg = min | wingtip (090/270) 10° change | distance = time × GS`
+- AIRWAYS `Victor 4 NM, splay 4.5° | LF/MF 4.34 NM, splay 5° | T-route 4+2 NM, airspace 10 NM, no splay | base 2200 AGL | air route: surface, Class G, no separation`
+- RMI `one-instrument tracking | inherits ADF/VOR + slaved compass errors`
 ***

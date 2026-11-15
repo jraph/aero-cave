@@ -84,3 +84,13 @@
 - `M · L4` **MP absolute inHg | OFF≈ambient→IDLE↓↓ | throttle↑ MP↑ | non-turbo ALT↑→MPmax↓ | CS PROP→RPM | carb ice: CS MP↓ / fixed RPM↓ | over-square=MP>RPM/100 (may be OK) | overboost=MP>approved limit (RPM-dependent) | POH wins.**
 
 ***
+#### Diesel engines, FADEC, oil system venting
+<!-- id: agk-diesel-fadec-oil-venting | level: CPL -->
+
+- **Diesel (compression ignition)**: high compression heats air; injected fuel ignites without spark plugs. Usually Jet-A / diesel, turbocharged, single power lever, FADEC-controlled. No mixture, no magnetos, no carb ice.
+- **FADEC** (full authority digital engine control): computer meters fuel, timing and (if equipped) prop for a single power lever setting; redundant channels + backup battery; failure → reverts to backup channel/mode per AFM.
+- **Oil system venting** (breather): vents crankcase pressure (blow-by) overboard; blocked breather → pressure → oil forced out / seal failure; in cold, breather can **freeze** (moisture).
+- `?:` general knowledge; no free TC or NAV CANADA text found. Check against a TC-recognized text (e.g. *From the Ground Up*, TC Flight Training Manual) in the fact-check pass.
+
+
+***

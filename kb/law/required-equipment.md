@@ -51,6 +51,15 @@
 - `M:` `CHECK-CHARTS-DATA-FIRE-CLOCK-LIGHT-AID`.
 - `T:` charts/database requirement is triggered by IFR, VFR OTT or night VFR, not by day VFR.
 ***
+#### Equipment standards, serviceability; icing equipment — 605.06 / 605.30
+<!-- id: law-605-06-equipment-serviceable-605-30-icing | level: CPL -->
+
+- `R` No TKOF (or permitting one) unless **required equipment** meets airworthiness standards **and is serviceable** and, where operations need it, **functioning** — except as allowed by 605.08 (unserviceable equipment), 605.09 (MEL) or 605.10.
+- `R` Icing reported or forecast on route → no TKOF or continuing unless PIC determines ACFT is **adequately equipped per its type-certificate airworthiness standards**, **or** current reports/PIREPs show icing no longer exists.
+- `T` "Has de-icing boots" ≠ certified for flight into known icing.
+
+- Sources: [605.06](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.06.html), [605.08](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.08.html), [605.09](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.09.html), [605.30](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-605.30.html).
+***
 #### Pebble
 <!-- id: law-required-equipment-pebble | level: PPL CPL IR -->
 
@@ -59,4 +68,6 @@
 - IFR CAR 605.18 `605.16 equipment + attitude indicator + VSI + OAT + nav/comm adequate for route | IFR GPS installed ≠ database/RAIM/approval met`
 - 703 `SE + passengers + IFR or night VFR prohibited unless AOC authorized AND Std 723.22 (turbine) | night VFR ≠ IFR equipment`
 - 602.60 `checklist · charts + database if IFR / VFR OTT / night VFR · extinguisher · timepiece h:m:s · flashlight at night · first aid`
+- 605.06 `required equipment airworthy + serviceable (+ functioning when needed), else 605.08/.09/.10`
+- 605.30 `icing reported/forecast → ACFT equipped per its type certificate OR reports say icing gone`
 ***

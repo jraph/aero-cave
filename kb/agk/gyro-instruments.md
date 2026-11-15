@@ -19,3 +19,12 @@
 - **Slaved (gyrosyn) compass**: remote magnetic sensor slaves the heading gyro; free/non-slaved mode for high latitudes (set by hand). [TP 2076 2.1.3 D.4]
 - `T:` HI has no north-seeking ability: re-align every ≤15 min.
 ***
+#### Control and performance instruments — attitude instrument flying
+<!-- id: agk-control-performance-instrument-flying | also: agk-inst | level: CPL -->
+
+- **Control** instruments: **attitude indicator + power** (RPM, MP, EPR) — set directly, in known amounts. **Performance**: airspeed, VSI, altimeter, HI, turn coordinator/turn-and-slip, compass — show the result, lag a little. **Navigation**: track/position.
+- `P` Establish attitude + power on control instruments → **trim** (pressures neutral; ball centred with rudder trim) → **cross-check** performance → **adjust**.
+- `M` **Attitude + power = performance.**
+
+- Sources: [TP 2076](https://www.phoenixaviation.ca/IPM%20tp2076e.pdf) 2.3.1.
+***

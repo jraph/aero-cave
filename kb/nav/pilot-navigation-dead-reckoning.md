@@ -80,6 +80,28 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - Divert: decide early→dest→line feature→MTRK/dist/GS/ETA/fuel→terrain/airspace/wx→inform/advise.
 - Lost: climb safe→communicate→conserve→confess→comply.
 ***
+#### EFB and PEDs — principles, power, distraction
+<!-- id: nav-efb-ped-principles-power-distraction | level: CPL -->
+
+- EFB = electronic display mainly for flight deck use: aviation data or calculations (performance, fuel). **Portable** EFB = PED, not part of ACFT type design; **installed** EFB = TC/STC approved.
+- Apps: **Type A** = no safety effect if failed (manuals, MEL, forms) · **Type B** = minor failure condition (AFM, charts, performance, checklists). Own-ship position = situational awareness only, not for navigation or taxi.
+- Power and backup: battery life and replacement interval known; charging from aircraft power via a certified source after load analysis; a way to de-power other than a circuit breaker. Plan for total/partial failure (redundant, ideally dissimilar EFB; crew procedures). Lithium battery: overheating → thermal runaway, smoke/fire → crew training + firefighting procedure.
+- Distraction: avoid multi-step data entry in TKOF, LDG and other critical phases · alerts inhibited in critical phases · mount within 90° of line of sight, no glare, not blocking controls/egress (suction cups can fail on decompression) · cables secured.
+- PEDs: intentional transmitters (phones, tablets, Bluetooth) and non-intentional (cameras, e-readers) can both interfere. **Airplane mode ≠ non-transmitting** unless transmitters are off. 5G C-band (3 450–3 900 MHz) near radio altimeter band (4 200–4 400 MHz).
+- `P` Suspected PED interference: identify users → stop use → prohibit → recheck systems → report (703/704/705 operators must report to TC).
+
+- Sources: [TC AC 700-020](https://tc.canada.ca/en/aviation/reference-centre/advisory-circulars/advisory-circular-ac-no-700-020); [TC AC 700-005](https://tc.canada.ca/sites/default/files/2023-08/ac_700-005_issue_04.pdf); CAR 602.08, 700.12.
+***
+#### Flight log (navigation log) form
+<!-- id: nav-flight-log-form | level: CPL -->
+
+- Columns, per leg: checkpoint (from/to) · altitude · TAS · W/V · TT / variation / MT · drift/WCA → MH · deviation → CH · distance · GS · ETE / ETA · fuel per leg and remaining; then actual ATA, revised GS/ETA in flight.
+- Header: flight plan/itinerary details, frequencies, alternates, fuel reserve.
+- `T` Variation turns TRUE into MAGNETIC; deviation turns MAGNETIC into COMPASS.
+- `?:` general knowledge; no free TC or NAV CANADA text found. Check against a TC-recognized text (e.g. *From the Ground Up*, TC Flight Training Manual) in the fact-check pass.
+
+
+***
 #### Pebble
 <!-- id: nav-pilot-navigation-dead-reckoning-pebble | level: PPL CPL IR -->
 
@@ -88,4 +110,7 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - 1-IN-60 `track error° ≈ off × 60 / distance flown | closing° ≈ off × 60 / distance remaining | total = error + closing | double-track-error ≠ destination correction`
 - MAP / TIME `1° latitude = 60 NM, 1' = 1 NM | longitude = 60 NM × cos(latitude) | 0.1 h = 6 min | decimal minutes ≠ minutes:seconds`
 - DIVERT / LOST `decide early → MTRK/dist/GS/ETA/fuel → terrain/airspace/wx → advise | lost: climb, communicate, conserve, confess, comply`
+- EFB `portable = PED | Type A no safety effect, Type B minor | backup for total failure | no multi-step entry in critical phases | Li battery fire`
+- PED `airplane mode ≠ non-transmitting | interference: identify, stop, prohibit, recheck, report`
+- NAV LOG `TT ± var = MT ± WCA = MH ± dev = CH | distance, GS, ETE, fuel per leg | update ATA/ETA in flight`
 ***

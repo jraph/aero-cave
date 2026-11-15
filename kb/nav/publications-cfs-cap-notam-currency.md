@@ -71,8 +71,19 @@
 | QOBCE | Obstacle erected | Obstacle érigé |
 | QOLAS | Obstacle lights unserviceable | Feux d’obstacle hors service |
 ***
+#### Enroute low altitude (LO) chart
+<!-- id: nav-lo-chart-navaid-depiction | level: CPL -->
+
+- LO charts: IFR navigation along ATS routes **below 18 000 ft ASL**; show radio aids, airways, controlled/uncontrolled airspace, special use airspace, communication stations, selected aerodromes. 10-chart series.
+- `T` **Not for VFR navigation**: no obstacles, terrain or roads. Check NOTAM and AIP Supplements: data current only to the effective date.
+- VNC (1:500 000) limits: not for low ceiling/visibility, not all obstacles shown, updated every 1–5 years → VTA where available; new data appears first by NOTAM/AIP SUP, then CFS, then chart.
+- `?:` navaid symbols (VOR, VORTAC, NDB, DME) not described here: read the chart legend.
+
+- Sources: [NAV CANADA, Fit for Purpose (B1, B7)](https://www.navcanada.ca/en/publications/_localised-assets/files/14-403_aeronautical-publications-guide_e3.pdf).
+***
 #### Pebble
 <!-- id: nav-publications-cfs-cap-notam-currency-pebble | level: PPL CPL -->
 
 - CFS `ID/elevation → RWY → circuit → FREQ/MF/ATF → lighting/PCL → PRO → CAUTION → services/fuel → airspace | sections: General, Aerodrome Directory, Planning, Radio Nav/Comm, Military, Emergency | CFS page still needs current NOTAM/AIP SUP | Trigger NOTAM = pointer only | schedules differ by product`
+- LO `IFR <18000 ASL | airways + radio aids + airspace | not for VFR (no terrain/obstacles) | check NOTAM + AIP SUP`
 ***

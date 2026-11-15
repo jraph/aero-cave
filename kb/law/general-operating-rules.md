@@ -94,6 +94,22 @@
 - No person uses a PED on board without operator permission. [CAR 602.08(2)]
 - `T:` rule is "could affect" + operator permission, not a list of banned devices. EFB = operator-approved use.
 ***
+#### Fuel dumping — 602.30
+<!-- id: law-fuel-dumping-602-30 | level: CPL -->
+
+- `R` Jettison fuel in flight only if **necessary for aviation safety** and all appropriate measures taken to minimize danger to life and environmental damage, as circumstances permit.
+
+- Sources: [602.30](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-602.30.html).
+***
+#### Special flight operations certificates — 603.01 / .36 / .37 / .65 / .66
+<!-- id: law-special-flight-operations-603 | level: CPL -->
+
+- `R` **Special aviation event** (air show etc., **not a fly-in**) → special flight operations certificate (SFOC) — special aviation event.
+- `R` **Parachute descent** in/into controlled airspace or an air route, or over/into a built-up area or open-air assembly → SFOC — parachuting (otherwise prohibited by 602.26).
+- `R` Other operations not under Part VII needing an SFOC: TKOF/LDG in a **built-up area** away from an airport/heliport/military A/D (not balloons) · aerial application, inspection or photography below 602.14(2)(a) distances · heli Class B/C/D external loads over built-up area or assembly · persons entering or leaving a powered ACFT in flight (except parachuting) · **aerobatics below 2 000 ft AGL**.
+
+- Sources: [603.01](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-603.01.html), [603.36](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-603.36.html), [603.37](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-603.37.html), [603.65](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-603.65.html), [603.66](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-603.66.html), [602.26](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-602.26.html).
+***
 #### Pebble
 <!-- id: law-general-operating-rules-pebble | level: PPL CPL IR -->
 
@@ -105,4 +121,6 @@
 - PAX `brief exits, belts, baggage, oxygen, smoking before takeoff (602.89) | cargo secured (602.86); within weight ≠ secured or within CG`
 - PAX WEIGHTS `adult M/X 206 summer / 212 winter lb | adult F 172 / 178 lb | child 2–11 75 lb | infant 30 lb | 1–4 passenger seats: actual, volunteered or estimated | actual wins`
 - PED `602.08: operator permission + must not affect aircraft systems`
+- FUEL DUMP `only if needed for safety + minimize danger to life and environment`
+- SFOC `special aviation event (not fly-in) | parachuting into controlled airspace, air route, built-up area | built-up TKOF/LDG off airport | aerial work below 602.14 | aerobatics <2000 AGL`
 ***

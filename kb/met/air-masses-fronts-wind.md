@@ -92,6 +92,27 @@
 - `Ci → Cs → As → Ns → St/fog`, ceilings lower and precip increases approaching front.
 - Warm-layer-over-subfreezing-surface setup can produce `FZRA/PL`.
 ***
+#### Front formation, trowal, upper fronts
+<!-- id: wx-front-formation-trowal-upper-fronts | level: CPL -->
+
+- Cold front = transition zone where cold air **advances and replaces** warm air. Forms as cold dense air wraps cyclonically (counter-clockwise) around a developing low, undercuts warm moist air → lift → often convective cloud and precipitation. Weakens as the low occludes.
+- **Occlusion**: cold front overtakes warm front (fronts move at different speeds); warm air lifted aloft.
+- **Trowal** (trough of warm air aloft): mid-level ribbon of warm air lifted over cooler air after occlusion → **elevated convective precipitation**, low visibility, heavy accumulation; winter: **freezing precipitation** at low levels beneath it. Chart: trowal symbol (red/blue hooks on Canadian surface charts) marks the weather aloft, not surface winds.
+- **Upper front**: front aloft not reaching the surface (dashed on surface charts); turbulence possible in an upper cold front.
+- `?:` frontogenesis (front forming/strengthening) / frontolysis (weakening/dissipating): standard meteorology terms, not found in a TC/NAV CANADA text.
+
+- Sources: [NAV CANADA AvMet: cold front](https://avmet.navcanada.ca/en/cold-front.aspx), [trowal](https://avmet.navcanada.ca/en/trowal.aspx); [TC AIM MET](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_met_en.pdf) 10.0.
+***
+#### Centrifugal force and gradient wind
+<!-- id: wx-centrifugal-force-gradient-wind | level: CPL -->
+
+- Around curved isobars, centrifugal force adds to the pressure-gradient / Coriolis balance → **gradient wind**.
+- **Low** (cyclonic): centrifugal force acts with Coriolis against pressure gradient → wind **slower** than geostrophic for the same isobar spacing. **High** (anticyclonic): wind **faster** than geostrophic.
+- `T` Same isobar spacing ≠ same wind around a high and a low.
+- `?:` general knowledge; no free TC or NAV CANADA text found. Check against a TC-recognized text (e.g. *From the Ground Up*, TC Flight Training Manual) in the fact-check pass.
+
+
+***
 #### Pebble
 <!-- id: met-systems-pebble -->
 
@@ -102,4 +123,6 @@
 - COLD FRONT `FAST-STEEP-CU | T↓ Td↓ P↑ WIND VEERS | passage ≠ instant clearing`
 - WARM FRONT `SLOW-WIDE-LAYERED | Ci→Cs→As→Ns→St/fog | T↑ Td↑ WIND VEERS; P FALL STOPS | FZRA/PL if warm layer over subfreezing surface`
 - T `tendencies, not guarantees | both fronts can have CB`
+- FRONTS `cold front: cold replaces warm, undercuts | occlusion: cold overtakes warm | TROWAL: warm air aloft → heavy elevated precip, FZ precip below | upper front dashed, turbulence`
+- GRADIENT WIND `centrifugal force on curved flow | low: < geostrophic | high: > geostrophic`
 ***

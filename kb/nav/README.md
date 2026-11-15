@@ -2,8 +2,8 @@
 
 | Concept file | Concept | Units |
 |---|---|---|
-| [GNSS / RNAV](gnss-rnav.md) | `nav-gnss` | 3 |
+| [GNSS / RNAV](gnss-rnav.md) | `nav-gnss` | 4 |
 | [Headings: true / magnetic / compass / Caps : vrai / magnétique / compas](headings-true-magnetic-compass.md) | `nav-compass` | 4 |
-| [Pilot navigation & dead reckoning / Navigation à l’estime](pilot-navigation-dead-reckoning.md) | `nav-dr` | 9 |
-| [Publications: CFS / CAP / NOTAM & currency / Publications : CFS / CAP / NOTAM et validité](publications-cfs-cap-notam-currency.md) | `nav-pubs` | 6 |
+| [Pilot navigation & dead reckoning / Navigation à l’estime](pilot-navigation-dead-reckoning.md) | `nav-dr` | 11 |
+| [Publications: CFS / CAP / NOTAM & currency / Publications : CFS / CAP / NOTAM et validité](publications-cfs-cap-notam-currency.md) | `nav-pubs` | 7 |
 | [Units & conversions / Unités et conversions](units-conversions.md) | `nav-units` | 3 |

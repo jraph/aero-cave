@@ -42,8 +42,28 @@
 - Drain all POH sumps after required events; one clear sample proves only that point. Wrong/contaminated fuel=no-go.
 - `T:` gauges≠measured fuel+time/burn; late tank changes may add delay/air.
 ***
+#### Fuelling: static, bonding and grounding — AIR 1.3
+<!-- id: agk-fuelling-static-bonding-grounding | level: CPL -->
+
+- `R` **Bond and ground the ACFT before the nozzle nears the tank**, any temperature or fuel. Over-wing: nozzle bonded to ACFT **before the cap comes off**; funnels/filters bonded too; drums: bond pump to drum before removing bungs.
+- Bonding equalizes potentials (no spark); it does **not** remove charge already in the fuel. Jet fuel builds more static than AVGAS (low conductivity) → let it rest; anti-static additive helps.
+- `T` **Plastic jerry cans cannot be bonded or grounded.** Empty-tank vapour = most flammable. Blower heaters in cold dry air, enclosed spaces → charged dust; injuries and deaths reported.
+- No fuelling with thunderstorms nearby; control ignition sources (smoking, portable electronics). Jet A-1 auto-ignites at **220 °C** (hot brakes, exhausts).
+
+- Sources: [TC AIM AIR](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_air_en.pdf) 1.3.2, 1.3.4.1.
+***
+#### Fuel heater
+<!-- id: agk-fuel-heater | level: CPL -->
+
+- Turbine fuel can hold water that **freezes** into ice crystals at low temperature → blocked filters. **Fuel heater** (often oil-to-fuel heat exchanger) keeps fuel above freezing at the filter; filter-bypass/icing warning in some types.
+- `?:` general knowledge; no free TC or NAV CANADA text found. Check against a TC-recognized text (e.g. *From the Ground Up*, TC Flight Training Manual) in the fact-check pass.
+
+
+***
 #### Pebble
 <!-- id: agk-fuel-fuel-systems-pebble | level: PPL CPL IR -->
 
 - FUEL `fuel = time(h) × burn | time available = usable fuel / burn | 6 gph = 0.1 gal/min, 9 = 0.15, 12 = 0.2 | IFR reserve starts after destination/alternate logic, not after takeoff`
+- FUELLING `bond + ground before nozzle near tank | nozzle bonded before cap off | plastic jerry can = no bond | no fuelling near TS | Jet A-1 220 °C`
+- FUEL HEATER `turbine fuel water → ice crystals at filter | oil-to-fuel heat exchanger`
 ***

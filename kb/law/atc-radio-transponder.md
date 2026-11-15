@@ -119,6 +119,42 @@
 - IDENT only when ATS asks. [COM 8.5]
 - `T:` SSR has longer range + positive ID; PSR still sees non-transponder targets. [COM 7.1–7.2]
 ***
+#### Noise abatement and noise-restricted runways — 602.105 / .106
+<!-- id: law-noise-abatement-602-105-106 | level: CPL -->
+
+- `R` At or near an A/D, follow noise abatement procedures and requirements published in the **CAP or CFS**: preferential RWYs · minimum noise routes · hours with operations prohibited/restricted · ARR/DEP procedures · flight duration · training flight restrictions · VFR/visual approaches · simulated approaches · minimum altitude near the A/D.
+- `R` **Subsonic turbojet aeroplane >34 000 kg MCTOW** taking off from a listed noise-restricted RWY → **noise compliance certificate on board** (or validated foreign one). Not when PIC declared an emergency, medevac/other emergency air operation, or departing after an emergency landing. Listed: Vancouver, Calgary, Edmonton (Blatchford, International), Winnipeg, Hamilton, Toronto Pearson, Ottawa, Montréal Trudeau (all RWYs at Blatchford and Trudeau).
+
+- Sources: [602.105](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-602.105.html), [602.106](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-602.106.html).
+***
+#### ADIZ — 602.145
+<!-- id: law-adiz-602-145 | level: CPL -->
+
+- `R` Before entering and within the **ADIZ** (dimensions in the Designated Airspace Handbook): flight plan or itinerary filed with an ATS unit or CARS station.
+- `R` DEP point has filing facilities → file **before TKOF**. VFR from outside ADIZ: include **estimated time and point of ADIZ entry**, and ASAP after TKOF radio a position report (position, altitude, DEP A/D, entry time and point) to ATC, FSS or CARS. VFR departing inside ADIZ: same report without entry data.
+- `R` No filing facilities → file **by radio ASAP after TKOF** (VFR: include entry estimate).
+- `R` VFR revises and reports when not expected within **±5 min** of a reporting point, entry point or destination inside the ADIZ, or within **20 NM** of the entry point or route centreline.
+
+- Sources: [602.145](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-602.145.html).
+***
+#### Common frequency area (CFA)
+<!-- id: law-common-frequency-area-cfa | level: CPL -->
+
+- `R` CFA = area with a designated frequency published for use by **any aircraft**, for **air-to-air** traffic awareness.
+- `T` CFA is **not a class of airspace**, its frequency is **not monitored by ATC**, and it is **not for use at uncontrolled aerodromes** (those use MF / ATF; 123.2 MHz where none is published).
+
+- Sources: [TC AC 100-001 glossary](https://tc.canada.ca/en/aviation/reference-centre/advisory-circulars/advisory-circular-ac-no-100-001); TC AIM GEN 5.1 glossary; RAC 4.5.
+***
+#### Operations on intersecting runways, LAHSO — RAC 4.4.9
+<!-- id: law-intersecting-runways-lahso | level: CPL -->
+
+- `R` LAHSO needs pilot participation: accept **only if the ACFT can land and stop within the available landing distance**. PIC has **complete authority to accept or decline**; must decline if safety compromised; unsure → tell ATC immediately.
+- `R` Conditions: runway **dry** (no wet/contaminated RSC, no precipitation observed or reported) · no TS, turbulence or wind shear affecting hold-short · LDA (THR to **200 ft** short of intersecting RWY) published in **CAP and CFS** · advisories on ATIS/voice early · **ceiling ≥1 000 ft, visibility ≥3 SM** · crosswind ≤**25 kt**, tailwind **<5 kt** (ATC may allow ≤10 kt tactically: include in landing distance or decline).
+- `R` Hold-short line **200 ft** before the intersecting RWY edge (red/white mandatory signs, LAHSO lights where installed). ACFT grouped by stopping distance (groups 1–6); not cleared if group distance > LDA.
+- `R` Pilot reads back the **hold-short instruction**, stops 200 ft short; rejected landing → keep separation, tell ATC ASAP.
+
+- Sources: [TC AIM RAC 4.4.9](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_rac_en.pdf).
+***
 #### Pebble
 <!-- id: law-atc-radio-transponder-pebble | level: PPL CPL IR -->
 
@@ -127,4 +163,8 @@
 - LIGHTS `in flight: steady green = LDG clearance / flashing green = return for landing / steady red = give way, circle / flashing red = unsafe, no landing | ground: steady green = TKOF / flashing green = taxi / steady red = STOP / flashing red = taxi clear / flashing white = return to start`
 - ATS / WAKE `surveillance 5 NM standard / 3 NM authorized terminal | 1,000 ft below FL290; RVSM FL290–FL410 1,000 ft approved ACFT | wake S→S/H/M/L 4/6/7/8 NM · H→H/M/L 4/5/6 · M→L 4 | H ahead: 2 min same threshold, 3 min intersection`
 - RADAR `IFR vectors: ATC owns terrain until vectors end · approach clearance = own nav | VFR keeps terrain | identified → no compulsory reports | SSR 1030/1090 needs XPDR · PSR sees all · IDENT only on request`
+- NOISE `CAP/CFS procedures binding | turbojet >34000 kg on listed RWY → noise certificate on board, not in emergency`
+- ADIZ `FPL/FIT before entry | VFR: entry time + point, position report after TKOF | revise if >±5 min or >20 NM`
+- CFA `published frequency, any ACFT, air-to-air awareness | not airspace class | not ATC-monitored | not for uncontrolled A/D (MF/ATF)`
+- LAHSO `PIC may decline | dry RWY, ceiling 1000, vis 3 SM, xwind ≤25, tailwind <5 (≤10 tactical) | stop 200 ft short | read back hold short`
 ***

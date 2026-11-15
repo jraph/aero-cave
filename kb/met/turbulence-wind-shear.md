@@ -53,6 +53,19 @@
 - CAT favoured near jet core/shear zones, especially bends/entrance/exit regions.
 - Jet position helps locate fronts/system movement.
 ***
+#### Turbulence reporting criteria — MET 2.2.2
+<!-- id: wx-turbulence-reporting-criteria-met-2-2-2 | level: CPL -->
+
+| Intensity | Aircraft | Inside |
+|---|---|---|
+| **Light** | momentary slight, erratic changes in altitude/attitude | mild pressure from belts; loose items may shift slightly |
+| **Moderate** | altitude/attitude changes, **positive control at all times** | clear pressure from belts; unsecured objects dislodged; walking/serving difficult |
+| **Severe** | **large, abrupt** changes in altitude/attitude | forced hard against belts; unsecured objects thrown about; walking/serving impossible |
+
+- Frequency: **occasional <⅓** of the time · **intermittent ⅓–⅔** · **continuous >⅔**.
+
+- Sources: [TC AIM MET](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_met_en.pdf) 2.2.2, Table 2.2.
+***
 #### Pebble
 <!-- id: met-turb-pebble -->
 
@@ -61,4 +74,5 @@
 - SHEAR `rapid speed/direction change over short distance | fronts, inversions/low-level jets, terrain, TS/microbursts | TAF wind shear group = lowest 1500 ft AGL | acceptable surface wind ≠ no shear above`
 - MICROBURST `IAS↑ then ↓ (headwind → downdraft → tailwind) | most dangerous low on TKOF/LDG | virga / gust front / TS clues | go-around may enter worse performance`
 - JET `near tropopause, strongest horizontal temp gradient | CAT near core/shear zones, bends/entrance/exit`
+- TURB REPORT `light slight/momentary | moderate changes, positive control | severe large abrupt | occasional <⅓, intermittent ⅓–⅔, continuous >⅔`
 ***

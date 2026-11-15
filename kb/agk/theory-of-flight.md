@@ -25,8 +25,27 @@
 
 - `SRC:` [FAA PHAK, Ch. 4–5 · Principles/Aerodynamics of Flight](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak); general theory; aircraft POH/AFM governs performance.
 ***
+#### Wing design devices, control balancing, roll upset
+<!-- id: agk-wing-design-devices-control-balance | level: CPL -->
+
+| Device | Effect | Trade-off |
+|---|---|---|
+| **Sweepback** | delays compressibility (high Mach); adds lateral stability | tip stalls first, pitch-up tendency; less lift at low speed |
+| **Wing fence** | blocks spanwise flow on swept wing | delays tip stall |
+| **Stall strip** | small wedge on inboard leading edge | forces **root stall first** → aileron control kept |
+| **Spoilers** | spoil lift: roll control (one side) and/or descent/braking (both) | lift loss, drag |
+| **Vortex generators** | re-energize boundary layer | delay separation, better low-speed control |
+| **Winglets** | reduce wingtip vortices → **induced drag** | weight, structure |
+
+- **Static balance**: mass ahead of hinge so the surface's CG is at/near the hinge line. **Dynamic (aerodynamic) balance**: horn or inset hinge reduces stick forces. Both guard against **flutter**.
+- **Roll upset** (e.g. wake turbulence, asymmetric flap, aileron trim/runaway): unload, roll wings level with ailerons (rudder as needed) before pulling; then recover pitch and power.
+- `?:` general knowledge; no free TC or NAV CANADA text found. Check against a TC-recognized text (e.g. *From the Ground Up*, TC Flight Training Manual) in the fact-check pass.
+
+
+***
 #### Pebble
 <!-- id: agk-theory-of-flight-pebble | level: PPL CPL -->
 
 - AERO `L ⟂ relative airflow; L = ½ρV²S·CL | CP ≠ CG ≠ AC (≈25% chord) | trim: ΣM(CG) = 0 | drag = parasite (form + friction + interference) + induced | IAS↓ → induced↑; IAS↑ → parasite↑; min drag ≈ max L/D | level: L = W, T = D | level turn n = 1/cosφ, Vs × √n | washout: tip incidence < root → root-first stall generally | AR = b²/S; AR↑ → induced drag↓ | stall = critical AOA, not a fixed IAS`
+- WING DEVICES `sweepback: high Mach, tip stall | fence + stall strip: root stalls first | spoilers: roll or descent | VGs: delay separation | winglets: less induced drag | balance: mass vs flutter, horn vs forces`
 ***

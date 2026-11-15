@@ -51,6 +51,14 @@
 - `M:` `ALT-ROUTE-DEST-TAS5%-MACH.01`.
 - `T:` TAS change counts against **filed** TAS, not last cruise speed.
 ***
+#### Crew member instructions — 602.87
+<!-- id: law-crew-member-instructions-602-87 | level: CPL -->
+
+- `R` PIC ensures every crew member, before acting as crew, is instructed on **their duties** and the **location and use of all normal and emergency exits and all emergency equipment** on board.
+- `T` 602.87 = crew instructions ≠ 602.89 passenger briefing.
+
+- Sources: [602.87](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-602.87.html), [602.89](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-602.89.html).
+***
 #### Pebble
 <!-- id: law-flight-plans-fuel-requirements-pebble | level: PPL CPL IR -->
 
@@ -59,4 +67,5 @@
 - FUEL CAR 602.88 `VFR aeroplane day 30 min / night 45 min at normal cruise | IFR prop: approach + missed (→ alternate + land) + 45 min | turbojet/helicopter IFR 30 min | add taxi + foreseeable delays | reserve begins after all required legs`
 - PLANNING `wx + NOTAM + CFS + fuel + W&B + perf + alternates | POH burn ≠ actual burn`
 - IFR PLAN `contents per CFS | file ≥30 min | no intermediate stops | notify + get clearance for ALT, ROUTE, DEST, TAS ≥5 %, Mach ≥0.01`
+- CREW INSTRUCTIONS `602.87: before acting as crew → duties + exits + emergency equipment`
 ***

@@ -115,6 +115,14 @@
 - `T:` MSA/TAA ignore CYA, CYR, blasting areas: pilot stays clear. [CAP GEN]
 - Activity letters: A acro · F test · H hang glider · M military · P parachute · S soaring · T training. [CAP GEN symbol legend]
 ***
+#### Forest fire areas — 601.15–.17
+<!-- id: law-forest-fire-601-15-17 | level: CPL -->
+
+- `R` No flight **over or within 5 NM of a forest fire area below 3 000 ft AGL**, nor in airspace described in a forest fire **NOTAM** (location + dimensions of fire area, airspace of fire control operations).
+- `R` Exempt: aircraft operating at the request or with authorization of the **fire control authority** · with Minister's **written authorization** (for public safety or to support an A/D in/near the fire area; conditions apply; authorization **on board**) · TC enforcement/surveillance staff.
+
+- Sources: [601.15](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-601.15.html), [601.16](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-601.16.html), [601.17](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-601.17.html).
+***
 #### Pebble
 <!-- id: law-airspace-vfr-minima-cruising-altitudes-pebble | level: PPL CPL IR -->
 
@@ -127,4 +135,5 @@
 - CRUISE CAR 602.34 `>3000 ft AGL | VFR 000–179° odd +500 / 180–359° even +500 | SDA magnetic track, NDA true track | track ≠ heading`
 - AERODROME `left turns unless CFS/ATC says right | no flight below 2000 ft over an aerodrome except listed operations | ATF calls ≠ MF mandatory reports`
 - XPDR/CLASS F `601.03: ABC always, D/E if DAH | CYR = authorization · CYA = avoid unless participating · CYD no clearance · MOA no IFR through unless separated | IFR 500 ft from active CYA | CYR NOTAM ≥24 h`
+- FOREST FIRE `no flight <3000 AGL over or ≤5 NM | NOTAM airspace | exempt: fire authority, Minister written authorization on board, TC`
 ***

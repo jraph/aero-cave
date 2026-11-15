@@ -31,3 +31,11 @@
 - **WAAS** (SBAS): ground stations → corrections + integrity via geostationary satellites; enables vertical guidance (LPV). [COM 5.3.2]
 - `M:` `4 FIX · 5 DETECT · 6 EXCLUDE`.
 ***
+#### T-routes
+<!-- id: nav-t-routes-rnav | level: CPL -->
+
+- T-route = **low-level controlled fixed RNAV route**. Obstacle protection 4 NM primary + 2 NM secondary each side; associated airspace **10 NM** each side; **no splay** (unlike VOR/NDB airways).
+- `?:` T-route equipment/GNSS requirements not read for this note: check RAC 2.7.1(c) and the CFS before flight planning.
+
+- Sources: [TC AIM RAC](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_rac_en.pdf) 2.7.1(c).
+***
