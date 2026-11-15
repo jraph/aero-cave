@@ -1,5 +1,19 @@
 # Content review
 
+## Open verification items
+
+Carried from the retired CPAER coverage matrix; still open on 14 November 2026. Resolve each by source comparison in its own change.
+
+| ID | Where | Issue | Compare against |
+|---|---|---|---|
+| X-01 | [`kb/ifr/cap-plates-publications.md`](kb/ifr/cap-plates-publications.md#publication-cycle) vs [`kb/nav/publications-cfs-cap-notam-currency.md`](kb/nav/publications-cfs-cap-notam-currency.md) | One says these publications update every 56 days; the other says schedules differ by product. | NAV CANADA product-specific schedules and edition dates. |
+| X-03 | [Card 12 · unusual attitude, nose high](cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md#unusual-attitude--nose-high) | "reduce if near stall?" sits inside a generic memory flow. | Applicable TC training guidance and the AFM/instructor procedure; do not make it a universal memory action. |
+| V-04 | [Card 07 · source / status](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md#source--status) | C150M serial and configuration not confirmed. | Exact POH revision, supplements, equipment/STCs and W&B before treating figures as fleet data. |
+| V-05 | [`kb/ifr/navaid-checks.md`](kb/ifr/navaid-checks.md) | Canadian and FAA VOR-check scopes are cross-referenced. | Keep the origins separate; do not import US intervals or recordkeeping. Not a contradiction. |
+| V-06 | `kb/met` cloud base / freezing level and the formulas collection | Classroom and parcel models given side by side. | Keep both assumptions and the environmental freezing-level caveat. Not a contradiction. |
+
+The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json` and the explorer's guide pages; `python3 explorer/build_explorer.py --audit` lists concepts with TC items but no knowledge note.
+
 ## Ontology as hub; formulas and card 17 reworked — 14 November 2026
 
 Text moved or re-laid out, not re-validated; unit IDs kept unless a repeat was retired.
@@ -176,7 +190,7 @@ Added Card 17 as a **bilingual CAVE quick-reference** (standalone Markdown + HTM
 
 ## CPAER Phase 2 content audit — 22 October 2026
 
-Added [CPAER coverage matrix](CPAER_COVERAGE_MATRIX.md), based on repository commit `3dbd013ba1e93160727d40b6fde8f4a0e50ca0f4` and official TC TP 12881 seventh edition, August 2026 (HTML/PDF edition verified). Topic-group screening across the syllabus; individual rows for 52 Flight Instruments and 40 Human Factors items. Active Markdown evidence inspected, including all 14 numbered cards and supplementary bilingual recall/glossary content. Not a fresh regulatory/medical/POH validation or an exam-completeness claim.
+Added CPAER coverage matrix (since removed), based on repository commit `3dbd013ba1e93160727d40b6fde8f4a0e50ca0f4` and official TC TP 12881 seventh edition, August 2026 (HTML/PDF edition verified). Topic-group screening across the syllabus; individual rows for 52 Flight Instruments and 40 Human Factors items. Active Markdown evidence inspected, including all 14 numbered cards and supplementary bilingual recall/glossary content. Not a fresh regulatory/medical/POH validation or an exam-completeness claim.
 
 Logged publication-currency conflict in cards 09–12 versus 01; TEMPO ≤half/<half wording difference; ambiguous nose-high recovery wording in card 12. Authoritative resolution remains pending. Distinguished qualified VOR source scopes and cloud/freezing calculation models from harmful duplication. Gate 1 remains open for other numbered-item expansion; no study facts, Pebbles, reader code, HTML or PWA assets changed.
 
