@@ -220,6 +220,10 @@ def build():
                         errors.append(f"{g['id']} {grp['code']} {it['n']}: unknown unit {u}")
     if errors:
         sys.exit("syllabus errors:\n  " + "\n  ".join(errors))
+    # each TC guide is also a view: the units its items cite
+    for g in syl["guides"]:
+        units = sorted({u for grp in g["groups"] for it in grp["items"] for u in it["u"]})
+        ont["views"].append({"id": g["id"], "group": "guide", "en": g["guide"] + " · " + g["en"], "fr": g["guide"] + " · " + g["fr"], "guide": g["id"], "kind": g["kind"], "units": units})
     data = {
         "guides": syl["guides"],
         "stubs": len(stubs),

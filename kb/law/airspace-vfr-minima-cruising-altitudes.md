@@ -48,7 +48,7 @@
 - `T:` SVFR is not permission to enter cloud/IMC; ATC traffic capacity and conditions still apply.
 ***
 #### VFR OTT
-<!-- id: law-vfr-ott | from: 04 | level: PPL CPL -->
+<!-- id: law-vfr-ott | from: 04 | also: law-night | level: PPL CPL -->
 
 - Day cruise only; vertical cloud separation `≥1000 ft`; between layers at least `5000 ft`; flight visibility `≥5 SM`; destination weather and rating/equipment conditions apply. `[CAR 602.116; 401.44–401.45; 605.15]`
 - `T:` PPL alone does not automatically include VFR OTT privilege.

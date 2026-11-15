@@ -70,7 +70,7 @@
 - `T:` POH-approved spin ≠ legal anywhere/any altitude/with passengers.
 ***
 #### Night definition
-<!-- id: law-night-definition | from: 04 | level: PPL CPL -->
+<!-- id: law-night-definition | from: 04 | also: law-night | level: PPL CPL -->
 
 - `Night` = period from end of evening civil twilight to beginning of morning civil twilight. `[CAR 101.01]`
 - `T:` sunset is not the legal start of night; use official twilight data.

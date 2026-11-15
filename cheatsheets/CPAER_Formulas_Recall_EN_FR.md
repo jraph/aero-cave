@@ -284,7 +284,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Twilight · time zones · DST / Crépuscule · fuseaux · heure avancée
-<!-- id: fx-twilight-time-zones-dst-cr-puscule-fuseaux-h | concepts: law-oprules, nav-dr, study-formulas | level: PPL CPL -->
+<!-- id: fx-twilight-time-zones-dst-cr-puscule-fuseaux-h | concepts: law-oprules, law-night, nav-dr, study-formulas | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|

@@ -876,6 +876,72 @@
     {"n": 2, "en": "Family, peer pressure, goal conflicts", "s": "P", "u": ["agk-cpl-mindset"], "gap": "Pressure named only."}
   ]}
 ]},
+{"id": "tp13723", "guide": "TP 13723", "kind": "flight", "edition": "6th edition (revised), March 2021", "en": "PPL flight test", "fr": "Test en vol PPL", "url": "https://tc.canada.ca/en/aviation/publications/flight-test-guide-private-pilot-licence-aeroplane-tp-13723e", "reviewed": "2026-11-14", "method": {"en": "Exercises are matched to procedure units (flows, QRCs, POH notes). A unit supports practice and the oral; it does not replace the guide's performance criteria. Pass mark 62 (50 %).", "fr": "Les exercices sont reliés aux unités de procédure (séquences, QRC, notes du POH). Une unité aide à la pratique et à l'oral; elle ne remplace pas les critères de performance du guide. Note de passage 62 (50 %)."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité."}, "groups": [
+  {"code": "F2", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 2 · Pre-flight", "fr": "Ex 2 · Avant le vol", "items": [
+    {"n": 1, "en": "A Documents and airworthiness", "s": "C", "u": ["law-core-aircraft-documents", "law-unserviceable-equipment-no-mel"], "gap": ""},
+    {"n": 2, "en": "B Performance", "s": "C", "u": ["c150-performance-chart-rules", "agk-performance-factors"], "gap": ""},
+    {"n": 3, "en": "C Weight and balance", "s": "C", "u": ["agk-weight-balance", "c150-weight-cg-baggage"], "gap": ""},
+    {"n": 4, "en": "D Pre-flight inspection", "s": "C", "u": ["c150-preflight-poh-highlights"], "gap": ""},
+    {"n": 5, "en": "E Start, run-up, checklists", "s": "C", "u": ["c150-before-start", "c150-start", "c150-before-takeoff"], "gap": ""},
+    {"n": 6, "en": "F Aircraft systems", "s": "P", "u": ["agk-systems-oral-list"], "gap": "Oral list; full systems in card 08 failure units."}
+  ]},
+  {"code": "F4", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 4 · Taxiing", "fr": "Ex 4 · Circulation au sol", "items": [
+    {"n": 1, "en": "Taxiing", "s": "C", "u": ["trn-taxi-pre-takeoff", "c150-taxi"], "gap": ""}
+  ]},
+  {"code": "F9", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 9 · Steep turns", "fr": "Ex 9 · Virages serrés", "items": [
+    {"n": 1, "en": "Steep turns", "s": "C", "u": ["agk-handling-landings", "agk-load-factor-accelerated-stall"], "gap": ""}
+  ]},
+  {"code": "F11", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 11 · Slow flight", "fr": "Ex 11 · Vol lent", "items": [
+    {"n": 1, "en": "Slow flight", "s": "P", "u": ["agk-handling-landings"], "gap": "One handling line."}
+  ]},
+  {"code": "F12", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 12 · Stalls", "fr": "Ex 12 · Décrochages", "items": [
+    {"n": 1, "en": "A Power-off stall", "s": "C", "u": ["trn-spiral-stall"], "gap": ""},
+    {"n": 2, "en": "B Power-on stall", "s": "C", "u": ["trn-spiral-stall"], "gap": ""}
+  ]},
+  {"code": "F14", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 14 · Spiral", "fr": "Ex 14 · Spirale", "items": [
+    {"n": 1, "en": "Spiral recovery", "s": "C", "u": ["trn-spiral-stall", "c150-spin-vs-spiral-memory"], "gap": ""}
+  ]},
+  {"code": "F15", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 15 · Slipping", "fr": "Ex 15 · Glissade", "items": [
+    {"n": 1, "en": "Slipping", "s": "C", "u": ["trn-slip"], "gap": ""}
+  ]},
+  {"code": "F16", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 16 · Take-off", "fr": "Ex 16 · Décollage", "items": [
+    {"n": 1, "en": "Normal take-off", "s": "C", "u": ["trn-normal-takeoff", "c150-normal-takeoff"], "gap": ""},
+    {"n": 2, "en": "Short-field take-off", "s": "C", "u": ["trn-short-obstacle-takeoff", "c150-short-field-takeoff"], "gap": ""},
+    {"n": 3, "en": "Soft-field take-off", "s": "C", "u": ["trn-soft-rough-takeoff", "c150-soft-rough-field-flap-logic"], "gap": ""}
+  ]},
+  {"code": "F17", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 17 · Circuit", "fr": "Ex 17 · Circuit", "items": [
+    {"n": 1, "en": "Circuit", "s": "C", "u": ["trn-circuit"], "gap": ""}
+  ]},
+  {"code": "F18", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 18 · Approach and landing", "fr": "Ex 18 · Approche et atterrissage", "items": [
+    {"n": 1, "en": "Normal approach and landing", "s": "C", "u": ["trn-normal-landing", "c150-normal-landing"], "gap": ""},
+    {"n": 2, "en": "Short-field landing over an obstacle", "s": "C", "u": ["c150-short-field-landing", "agk-handling-landings"], "gap": ""},
+    {"n": 3, "en": "Soft-field landing", "s": "P", "u": ["agk-handling-landings"], "gap": "One handling line."},
+    {"n": 4, "en": "Overshoot", "s": "C", "u": ["trn-go-around", "c150-balked-landing"], "gap": ""}
+  ]},
+  {"code": "F21", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 21 · Precautionary landing", "fr": "Ex 21 · Atterrissage de précaution", "items": [
+    {"n": 1, "en": "Precautionary landing", "s": "C", "u": ["trn-precautionary-landing", "c150-precautionary-landing-with-power"], "gap": ""}
+  ]},
+  {"code": "F22", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 22 · Forced landing", "fr": "Ex 22 · Atterrissage forcé", "items": [
+    {"n": 1, "en": "A Control and approach", "s": "C", "u": ["trn-forced-landing", "c150-forced-landing-without-power"], "gap": ""},
+    {"n": 2, "en": "B Cockpit management", "s": "C", "u": ["trn-mayday-pax-secure", "c150-engine-failure-in-flight-restart"], "gap": ""}
+  ]},
+  {"code": "F23", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 23 · Navigation", "fr": "Ex 23 · Navigation", "items": [
+    {"n": 1, "en": "A Pre-flight planning", "s": "C", "u": ["wxp-vfr-flow", "law-planning-fuel-go-no-go", "nav-cfs-aerodrome-scan"], "gap": ""},
+    {"n": 2, "en": "B Departure", "s": "P", "u": ["nav-quick-ete-table", "trn-climb"], "gap": "No set-heading procedure."},
+    {"n": 3, "en": "C En route", "s": "P", "u": ["nav-1-in-60-rule", "nav-time-speed-distance"], "gap": "Track and GS checks only; log keeping absent."},
+    {"n": 4, "en": "D Diversion", "s": "C", "u": ["nav-diversion-lost", "trn-vfr-nav-diversion-lost"], "gap": ""}
+  ]},
+  {"code": "F24", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 24 · Instrument flying", "fr": "Ex 24 · Vol aux instruments", "items": [
+    {"n": 1, "en": "A Full panel", "s": "P", "u": ["c150-vacuum-system-failure-cloud"], "gap": "Inadvertent-cloud QRC only."},
+    {"n": 2, "en": "B Unusual attitudes", "s": "C", "u": ["proc-unusual-attitude-nose-high", "proc-unusual-attitude-nose-low"], "gap": ""}
+  ]},
+  {"code": "F29", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 29 · Emergencies and malfunctions", "fr": "Ex 29 · Urgences et pannes", "items": [
+    {"n": 1, "en": "Emergencies and malfunctions", "s": "C", "u": ["c150-emergency-speeds", "c150-engine-fire-in-flight", "c150-electrical-fire", "sys-electrical-alternator-failure"], "gap": ""}
+  ]},
+  {"code": "F30", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 30 · Radio communications", "fr": "Ex 30 · Communications radio", "items": [
+    {"n": 1, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder", "law-aerodrome-mf-operations"], "gap": "Call format and MF references only."}
+  ]}
+]},
 {"id": "tp12881", "guide": "TP 12881", "kind": "written", "edition": "7th edition, August 2026", "en": "CPAER", "fr": "CPAER", "url": "https://tc.canada.ca/en/aviation/publications/study-reference-guide-written-examinations-commercial-pilot-licence-aeroplane-tp-12881", "reviewed": "2026-11-14", "method": {"en": "Meteorology: read item by item against kb/met and card 05. Air law, navigation and aeronautics: decided by hand from CAR citations, unit headings and matched text, without a line-by-line read of every unit. Nothing is validated against the CARs or the AIM.", "fr": "Météorologie : lu point par point avec kb/met et la fiche 05. Réglementation, navigation et connaissances générales : décidé à la main d'après les citations des RAC, les titres et le texte des unités, sans relecture ligne par ligne. Rien n'est validé contre le RAC ou l'AIM."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité."}, "groups": [
   {"code": "LGEN", "section": "Air law", "section_fr": "Réglementation", "en": "CARs Part I: general", "fr": "RAC partie I : généralités", "items": [
     {"n": 1, "en": "101.01 Interpretation (definitions)", "s": "P", "u": ["law-night-definition"], "gap": "Only the night definition is treated."},
@@ -1929,6 +1995,122 @@
     {"n": 4, "en": "TEM, CRM and single-pilot resource management", "s": "M", "u": [], "gap": ""}
   ]}
 ]},
+{"id": "tp13462", "guide": "TP 13462", "kind": "flight", "edition": "6th edition, January 2021", "en": "CPL flight test", "fr": "Test en vol CPL", "url": "https://tc.canada.ca/en/aviation/publications/flight-test-guide-commercial-pilot-licence-aeroplane-tp-13462e", "reviewed": "2026-11-14", "method": {"en": "Exercises are matched to procedure units (flows, QRCs, POH notes). A unit supports practice and the oral; it does not replace the guide's performance criteria. Pass mark 93, or 81 for integrated candidates.", "fr": "Les exercices sont reliés aux unités de procédure (séquences, QRC, notes du POH). Une unité aide à la pratique et à l'oral; elle ne remplace pas les critères de performance du guide. Note de passage 93, ou 81 pour les candidats d'un cours intégré."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité."}, "groups": [
+  {"code": "K2", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 2 · Pre-flight", "fr": "Ex 2 · Avant le vol", "items": [
+    {"n": 1, "en": "A Documents and airworthiness", "s": "C", "u": ["law-core-aircraft-documents", "law-unserviceable-equipment-no-mel"], "gap": ""},
+    {"n": 2, "en": "B Performance", "s": "C", "u": ["c150-performance-chart-rules", "agk-performance-factors"], "gap": ""},
+    {"n": 3, "en": "C Weight and balance", "s": "C", "u": ["agk-weight-balance", "c150-weight-cg-baggage"], "gap": ""},
+    {"n": 4, "en": "D Pre-flight inspection", "s": "C", "u": ["c150-preflight-poh-highlights"], "gap": ""},
+    {"n": 5, "en": "E Start, run-up, checklists", "s": "C", "u": ["c150-before-start", "c150-start", "c150-before-takeoff"], "gap": ""},
+    {"n": 6, "en": "F Aircraft systems", "s": "P", "u": ["agk-systems-oral-list"], "gap": "Oral list; full systems in card 08 failure units."}
+  ]},
+  {"code": "K4", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 4 · Taxiing", "fr": "Ex 4 · Circulation au sol", "items": [
+    {"n": 1, "en": "Taxiing", "s": "C", "u": ["trn-taxi-pre-takeoff", "c150-taxi"], "gap": ""}
+  ]},
+  {"code": "K9", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 9 · Steep turns", "fr": "Ex 9 · Virages serrés", "items": [
+    {"n": 1, "en": "Steep turns", "s": "C", "u": ["agk-handling-landings", "agk-load-factor-accelerated-stall"], "gap": ""}
+  ]},
+  {"code": "K11", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 11 · Slow flight", "fr": "Ex 11 · Vol lent", "items": [
+    {"n": 1, "en": "Slow flight", "s": "P", "u": ["agk-handling-landings"], "gap": "One handling line."}
+  ]},
+  {"code": "K12", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 12 · Stalls", "fr": "Ex 12 · Décrochages", "items": [
+    {"n": 1, "en": "Stalls", "s": "C", "u": ["trn-spiral-stall"], "gap": ""}
+  ]},
+  {"code": "K13", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 13 · Spins", "fr": "Ex 13 · Vrilles", "items": [
+    {"n": 1, "en": "Spin entry and recovery", "s": "C", "u": ["c150-spin-recovery", "c150-spin-vs-spiral-memory"], "gap": ""}
+  ]},
+  {"code": "K15", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 15 · Slipping", "fr": "Ex 15 · Glissade", "items": [
+    {"n": 1, "en": "Slipping", "s": "C", "u": ["trn-slip"], "gap": ""}
+  ]},
+  {"code": "K16", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 16 · Take-off", "fr": "Ex 16 · Décollage", "items": [
+    {"n": 1, "en": "Soft-field take-off", "s": "C", "u": ["trn-soft-rough-takeoff", "c150-soft-rough-field-flap-logic"], "gap": ""},
+    {"n": 2, "en": "Short-field take-off", "s": "C", "u": ["trn-short-obstacle-takeoff", "c150-short-field-takeoff"], "gap": ""}
+  ]},
+  {"code": "K17", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 17 · Circuit", "fr": "Ex 17 · Circuit", "items": [
+    {"n": 1, "en": "Circuit", "s": "C", "u": ["trn-circuit"], "gap": ""}
+  ]},
+  {"code": "K18", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 18 · Approach and landing", "fr": "Ex 18 · Approche et atterrissage", "items": [
+    {"n": 1, "en": "Power-off 180° accuracy landing", "s": "P", "u": ["agk-handling-landings"], "gap": "Key positions line only."},
+    {"n": 2, "en": "Short-field landing over an obstacle", "s": "C", "u": ["c150-short-field-landing", "agk-handling-landings"], "gap": ""},
+    {"n": 3, "en": "Soft-field landing", "s": "P", "u": ["agk-handling-landings"], "gap": "One handling line."},
+    {"n": 4, "en": "Overshoot", "s": "C", "u": ["trn-go-around", "c150-balked-landing"], "gap": ""}
+  ]},
+  {"code": "K21", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 21 · Precautionary landing", "fr": "Ex 21 · Atterrissage de précaution", "items": [
+    {"n": 1, "en": "Precautionary landing", "s": "C", "u": ["trn-precautionary-landing", "c150-precautionary-landing-with-power"], "gap": ""}
+  ]},
+  {"code": "K22", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 22 · Forced landing", "fr": "Ex 22 · Atterrissage forcé", "items": [
+    {"n": 1, "en": "A Control and approach", "s": "C", "u": ["trn-forced-landing", "c150-forced-landing-without-power"], "gap": ""},
+    {"n": 2, "en": "B Cockpit management", "s": "C", "u": ["trn-mayday-pax-secure", "c150-engine-failure-in-flight-restart"], "gap": ""}
+  ]},
+  {"code": "K23", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 23 · Navigation", "fr": "Ex 23 · Navigation", "items": [
+    {"n": 1, "en": "A Pre-flight planning", "s": "C", "u": ["wxp-vfr-flow", "law-planning-fuel-go-no-go", "nav-cfs-aerodrome-scan"], "gap": ""},
+    {"n": 2, "en": "B Departure", "s": "P", "u": ["nav-quick-ete-table", "trn-climb"], "gap": "No set-heading procedure."},
+    {"n": 3, "en": "C En route", "s": "P", "u": ["nav-1-in-60-rule", "nav-time-speed-distance"], "gap": "Track and GS checks only; log keeping absent."},
+    {"n": 4, "en": "D Diversion", "s": "C", "u": ["nav-diversion-lost", "trn-vfr-nav-diversion-lost"], "gap": ""}
+  ]},
+  {"code": "K24", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 24 · Instrument flying", "fr": "Ex 24 · Vol aux instruments", "items": [
+    {"n": 1, "en": "A Full panel", "s": "P", "u": ["proc-ifr-cockpit-instrument-check"], "gap": "Instrument check only; scan absent."},
+    {"n": 2, "en": "B Limited panel", "s": "C", "u": ["proc-vacuum-attitude-heading-failure", "proc-no-gyro-vectors"], "gap": ""},
+    {"n": 3, "en": "C Unusual attitudes", "s": "C", "u": ["proc-unusual-attitude-nose-high", "proc-unusual-attitude-nose-low"], "gap": ""},
+    {"n": 4, "en": "D Radio navigation", "s": "C", "u": ["nav-navigation-aids-adf-vor-dme-intercepts", "ifr-ils-loc-vor-ndb-dme"], "gap": ""}
+  ]},
+  {"code": "K29", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 29 · Emergencies and malfunctions", "fr": "Ex 29 · Urgences et pannes", "items": [
+    {"n": 1, "en": "Emergencies and malfunctions", "s": "C", "u": ["c150-emergency-speeds", "c150-engine-fire-in-flight", "c150-electrical-fire", "sys-electrical-alternator-failure"], "gap": ""}
+  ]},
+  {"code": "K30", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 30 · Radio communications", "fr": "Ex 30 · Communications radio", "items": [
+    {"n": 1, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder", "law-aerodrome-mf-operations"], "gap": "Call format and MF references only."}
+  ]}
+]},
+{"id": "tp219", "guide": "TP 219", "kind": "flight", "edition": "11th edition, January 2021", "en": "Multi-engine flight test", "fr": "Test en vol multimoteur", "url": "https://tc.canada.ca/en/aviation/publications/flight-test-guide-multi-engine-class-rating-aeroplane-tp-219e", "reviewed": "2026-11-14", "method": {"en": "Exercises are matched to procedure units (flows, QRCs, POH notes). A unit supports practice and the oral; it does not replace the guide's performance criteria. Pass mark 73 (70 %).", "fr": "Les exercices sont reliés aux unités de procédure (séquences, QRC, notes du POH). Une unité aide à la pratique et à l'oral; elle ne remplace pas les critères de performance du guide. Note de passage 73 (70 %)."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité."}, "groups": [
+  {"code": "ME1", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 1 · Pre-flight", "fr": "Ex 1 · Avant le vol", "items": [
+    {"n": 1, "en": "A Documents", "s": "C", "u": ["law-core-aircraft-documents"], "gap": ""},
+    {"n": 2, "en": "B Performance and limitations", "s": "C", "u": ["me-performance-calculations-required", "me-essential-speeds-to-know-cold"], "gap": ""},
+    {"n": 3, "en": "C OEI flight principles", "s": "C", "u": ["me-core-me-physics", "me-critical-engine", "me-vmc-factors", "me-zero-sideslip-best-oei-performance"], "gap": ""},
+    {"n": 4, "en": "D Weight and balance", "s": "C", "u": ["me-w-b-me-traps", "agk-weight-balance"], "gap": ""},
+    {"n": 5, "en": "E Pre-flight inspection", "s": "M", "u": [], "gap": "No ME pre-flight unit."},
+    {"n": 6, "en": "F Start, run-up, checklists", "s": "P", "u": ["me-takeoff-briefing-me"], "gap": "Take-off briefing only."}
+  ]},
+  {"code": "ME2", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 2 · Ancillary controls and systems", "fr": "Ex 2 · Commandes et systèmes", "items": [
+    {"n": 1, "en": "Ancillary controls and systems", "s": "C", "u": ["me-systems-focus-for-me", "me-prop-governor-feather-l4-cross-ref"], "gap": ""}
+  ]},
+  {"code": "ME3", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 3 · Taxiing", "fr": "Ex 3 · Circulation au sol", "items": [
+    {"n": 1, "en": "Taxiing", "s": "P", "u": ["trn-taxi-pre-takeoff"], "gap": "Single-engine flow only; differential power absent."}
+  ]},
+  {"code": "ME4", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 4 · Take-off, circuit, landing", "fr": "Ex 4 · Décollage, circuit, atterrissage", "items": [
+    {"n": 1, "en": "A Take-off", "s": "C", "u": ["me-takeoff-briefing-me", "me-accelerate-stop-accelerate-go"], "gap": ""},
+    {"n": 2, "en": "B Circuit", "s": "P", "u": ["trn-circuit"], "gap": "Single-engine circuit only."},
+    {"n": 3, "en": "C Approach and landing", "s": "P", "u": ["agk-vref-landing-reference-speed"], "gap": "VREF only."}
+  ]},
+  {"code": "ME5", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 5 · Cruising flight", "fr": "Ex 5 · Vol en croisière", "items": [
+    {"n": 1, "en": "Cruising flight", "s": "M", "u": [], "gap": ""}
+  ]},
+  {"code": "ME6", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 6 · Engine failure in cruise", "fr": "Ex 6 · Panne moteur en croisière", "items": [
+    {"n": 1, "en": "A Control", "s": "C", "u": ["me-engine-failure-flow-generic", "me-dead-foot-dead-engine"], "gap": ""},
+    {"n": 2, "en": "B Cockpit checks", "s": "C", "u": ["me-engine-failure-in-cruise"], "gap": ""},
+    {"n": 3, "en": "C OEI manoeuvring", "s": "C", "u": ["me-zero-sideslip-best-oei-performance", "me-oei-climb"], "gap": ""}
+  ]},
+  {"code": "ME7", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 7 · Reduced airspeed (VMC)", "fr": "Ex 7 · Vitesse réduite (VMC)", "items": [
+    {"n": 1, "en": "Flight at reduced airspeed", "s": "C", "u": ["me-vmc-demo-reduced-speed-training", "me-vmc-definition-certification-memory"], "gap": ""}
+  ]},
+  {"code": "ME8", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 8 · Stalls", "fr": "Ex 8 · Décrochages", "items": [
+    {"n": 1, "en": "A Stall", "s": "C", "u": ["me-stall-slow-flight-me"], "gap": ""},
+    {"n": 2, "en": "B Approach to stall", "s": "C", "u": ["me-stall-slow-flight-me"], "gap": ""}
+  ]},
+  {"code": "ME9", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 9 · Steep turns", "fr": "Ex 9 · Virages serrés", "items": [
+    {"n": 1, "en": "Steep turns", "s": "P", "u": ["agk-handling-landings"], "gap": "Single-engine handling line only."}
+  ]},
+  {"code": "ME10", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 10 · Engine failure on overshoot", "fr": "Ex 10 · Panne moteur en remise des gaz", "items": [
+    {"n": 1, "en": "A Control", "s": "C", "u": ["me-engine-failure-on-takeoff-overshoot", "me-dead-foot-dead-engine"], "gap": ""},
+    {"n": 2, "en": "B Cockpit checks", "s": "C", "u": ["me-engine-failure-on-takeoff-overshoot", "me-oei-missed-go-around"], "gap": ""}
+  ]},
+  {"code": "ME11", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 11 · OEI operations", "fr": "Ex 11 · Opérations un moteur inopérant", "items": [
+    {"n": 1, "en": "A Precautionary shutdown", "s": "C", "u": ["me-precautionary-shutdown", "me-restart-unfeather"], "gap": ""},
+    {"n": 2, "en": "B OEI arrival, approach, landing", "s": "C", "u": ["me-oei-approach-landing"], "gap": ""}
+  ]},
+  {"code": "ME12", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 12 · Emergencies", "fr": "Ex 12 · Urgences", "items": [
+    {"n": 1, "en": "Emergencies", "s": "P", "u": ["me-systems-focus-for-me", "sys-electrical-alternator-failure"], "gap": "Generic system QRCs only; no ME-specific emergency set."}
+  ]}
+]},
 {"id": "tp691", "guide": "TP 691", "kind": "written", "edition": "17th edition, 2013", "en": "INRAT", "fr": "INRAT", "url": "https://tc.canada.ca/en/aviation/publications/tp-691e-study-reference-guide-written-examinations-instrument-rating-aeroplane-helicopter", "reviewed": "2026-11-14", "method": {"en": "Read item by item against all concept files and procedure cards.", "fr": "Lu point par point avec toutes les fiches par concept et les fiches de procédures."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit. CAR items are judged on study coverage, not legal completeness.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité. Les points RAC sont jugés sur la couverture d'étude, pas sur l'exhaustivité juridique."}, "groups": [
   {"code": "LIC", "section": "", "section_fr": "", "en": "CARs Parts I & IV: definitions, licensing", "fr": "RAC parties I et IV", "items": [
     {"n": 1, "en": "101.01 Interpretation (definitions)", "s": "M", "u": [], "gap": "No definitions unit."},
@@ -2211,188 +2393,6 @@
   ]},
   {"code": "TEM", "section": "", "section_fr": "", "en": "Threat and error management", "fr": "Gestion des menaces et des erreurs", "items": [
     {"n": 1, "en": "Threats and errors in IFR flight", "s": "P", "u": ["ifr-human-factors-single-pilot-ifr"], "gap": "Threat list; no TEM framework."}
-  ]}
-]},
-{"id": "tp13723", "guide": "TP 13723", "kind": "flight", "edition": "6th edition (revised), March 2021", "en": "PPL flight test", "fr": "Test en vol PPL", "url": "https://tc.canada.ca/en/aviation/publications/flight-test-guide-private-pilot-licence-aeroplane-tp-13723e", "reviewed": "2026-11-14", "method": {"en": "Exercises are matched to procedure units (flows, QRCs, POH notes). A unit supports practice and the oral; it does not replace the guide's performance criteria. Pass mark 62 (50 %).", "fr": "Les exercices sont reliés aux unités de procédure (séquences, QRC, notes du POH). Une unité aide à la pratique et à l'oral; elle ne remplace pas les critères de performance du guide. Note de passage 62 (50 %)."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité."}, "groups": [
-  {"code": "F2", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 2 · Pre-flight", "fr": "Ex 2 · Avant le vol", "items": [
-    {"n": 1, "en": "A Documents and airworthiness", "s": "C", "u": ["law-core-aircraft-documents", "law-unserviceable-equipment-no-mel"], "gap": ""},
-    {"n": 2, "en": "B Performance", "s": "C", "u": ["c150-performance-chart-rules", "agk-performance-factors"], "gap": ""},
-    {"n": 3, "en": "C Weight and balance", "s": "C", "u": ["agk-weight-balance", "c150-weight-cg-baggage"], "gap": ""},
-    {"n": 4, "en": "D Pre-flight inspection", "s": "C", "u": ["c150-preflight-poh-highlights"], "gap": ""},
-    {"n": 5, "en": "E Start, run-up, checklists", "s": "C", "u": ["c150-before-start", "c150-start", "c150-before-takeoff"], "gap": ""},
-    {"n": 6, "en": "F Aircraft systems", "s": "P", "u": ["agk-systems-oral-list"], "gap": "Oral list; full systems in card 08 failure units."}
-  ]},
-  {"code": "F4", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 4 · Taxiing", "fr": "Ex 4 · Circulation au sol", "items": [
-    {"n": 1, "en": "Taxiing", "s": "C", "u": ["trn-taxi-pre-takeoff", "c150-taxi"], "gap": ""}
-  ]},
-  {"code": "F9", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 9 · Steep turns", "fr": "Ex 9 · Virages serrés", "items": [
-    {"n": 1, "en": "Steep turns", "s": "C", "u": ["agk-handling-landings", "agk-load-factor-accelerated-stall"], "gap": ""}
-  ]},
-  {"code": "F11", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 11 · Slow flight", "fr": "Ex 11 · Vol lent", "items": [
-    {"n": 1, "en": "Slow flight", "s": "P", "u": ["agk-handling-landings"], "gap": "One handling line."}
-  ]},
-  {"code": "F12", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 12 · Stalls", "fr": "Ex 12 · Décrochages", "items": [
-    {"n": 1, "en": "A Power-off stall", "s": "C", "u": ["trn-spiral-stall"], "gap": ""},
-    {"n": 2, "en": "B Power-on stall", "s": "C", "u": ["trn-spiral-stall"], "gap": ""}
-  ]},
-  {"code": "F14", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 14 · Spiral", "fr": "Ex 14 · Spirale", "items": [
-    {"n": 1, "en": "Spiral recovery", "s": "C", "u": ["trn-spiral-stall", "c150-spin-vs-spiral-memory"], "gap": ""}
-  ]},
-  {"code": "F15", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 15 · Slipping", "fr": "Ex 15 · Glissade", "items": [
-    {"n": 1, "en": "Slipping", "s": "C", "u": ["trn-slip"], "gap": ""}
-  ]},
-  {"code": "F16", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 16 · Take-off", "fr": "Ex 16 · Décollage", "items": [
-    {"n": 1, "en": "Normal take-off", "s": "C", "u": ["trn-normal-takeoff", "c150-normal-takeoff"], "gap": ""},
-    {"n": 2, "en": "Short-field take-off", "s": "C", "u": ["trn-short-obstacle-takeoff", "c150-short-field-takeoff"], "gap": ""},
-    {"n": 3, "en": "Soft-field take-off", "s": "C", "u": ["trn-soft-rough-takeoff", "c150-soft-rough-field-flap-logic"], "gap": ""}
-  ]},
-  {"code": "F17", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 17 · Circuit", "fr": "Ex 17 · Circuit", "items": [
-    {"n": 1, "en": "Circuit", "s": "C", "u": ["trn-circuit"], "gap": ""}
-  ]},
-  {"code": "F18", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 18 · Approach and landing", "fr": "Ex 18 · Approche et atterrissage", "items": [
-    {"n": 1, "en": "Normal approach and landing", "s": "C", "u": ["trn-normal-landing", "c150-normal-landing"], "gap": ""},
-    {"n": 2, "en": "Short-field landing over an obstacle", "s": "C", "u": ["c150-short-field-landing", "agk-handling-landings"], "gap": ""},
-    {"n": 3, "en": "Soft-field landing", "s": "P", "u": ["agk-handling-landings"], "gap": "One handling line."},
-    {"n": 4, "en": "Overshoot", "s": "C", "u": ["trn-go-around", "c150-balked-landing"], "gap": ""}
-  ]},
-  {"code": "F21", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 21 · Precautionary landing", "fr": "Ex 21 · Atterrissage de précaution", "items": [
-    {"n": 1, "en": "Precautionary landing", "s": "C", "u": ["trn-precautionary-landing", "c150-precautionary-landing-with-power"], "gap": ""}
-  ]},
-  {"code": "F22", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 22 · Forced landing", "fr": "Ex 22 · Atterrissage forcé", "items": [
-    {"n": 1, "en": "A Control and approach", "s": "C", "u": ["trn-forced-landing", "c150-forced-landing-without-power"], "gap": ""},
-    {"n": 2, "en": "B Cockpit management", "s": "C", "u": ["trn-mayday-pax-secure", "c150-engine-failure-in-flight-restart"], "gap": ""}
-  ]},
-  {"code": "F23", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 23 · Navigation", "fr": "Ex 23 · Navigation", "items": [
-    {"n": 1, "en": "A Pre-flight planning", "s": "C", "u": ["wxp-vfr-flow", "law-planning-fuel-go-no-go", "nav-cfs-aerodrome-scan"], "gap": ""},
-    {"n": 2, "en": "B Departure", "s": "P", "u": ["nav-quick-ete-table", "trn-climb"], "gap": "No set-heading procedure."},
-    {"n": 3, "en": "C En route", "s": "P", "u": ["nav-1-in-60-rule", "nav-time-speed-distance"], "gap": "Track and GS checks only; log keeping absent."},
-    {"n": 4, "en": "D Diversion", "s": "C", "u": ["nav-diversion-lost", "trn-vfr-nav-diversion-lost"], "gap": ""}
-  ]},
-  {"code": "F24", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 24 · Instrument flying", "fr": "Ex 24 · Vol aux instruments", "items": [
-    {"n": 1, "en": "A Full panel", "s": "P", "u": ["c150-vacuum-system-failure-cloud"], "gap": "Inadvertent-cloud QRC only."},
-    {"n": 2, "en": "B Unusual attitudes", "s": "C", "u": ["proc-unusual-attitude-nose-high", "proc-unusual-attitude-nose-low"], "gap": ""}
-  ]},
-  {"code": "F29", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 29 · Emergencies and malfunctions", "fr": "Ex 29 · Urgences et pannes", "items": [
-    {"n": 1, "en": "Emergencies and malfunctions", "s": "C", "u": ["c150-emergency-speeds", "c150-engine-fire-in-flight", "c150-electrical-fire", "sys-electrical-alternator-failure"], "gap": ""}
-  ]},
-  {"code": "F30", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 30 · Radio communications", "fr": "Ex 30 · Communications radio", "items": [
-    {"n": 1, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder", "law-aerodrome-mf-operations"], "gap": "Call format and MF references only."}
-  ]}
-]},
-{"id": "tp13462", "guide": "TP 13462", "kind": "flight", "edition": "6th edition, January 2021", "en": "CPL flight test", "fr": "Test en vol CPL", "url": "https://tc.canada.ca/en/aviation/publications/flight-test-guide-commercial-pilot-licence-aeroplane-tp-13462e", "reviewed": "2026-11-14", "method": {"en": "Exercises are matched to procedure units (flows, QRCs, POH notes). A unit supports practice and the oral; it does not replace the guide's performance criteria. Pass mark 93, or 81 for integrated candidates.", "fr": "Les exercices sont reliés aux unités de procédure (séquences, QRC, notes du POH). Une unité aide à la pratique et à l'oral; elle ne remplace pas les critères de performance du guide. Note de passage 93, ou 81 pour les candidats d'un cours intégré."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité."}, "groups": [
-  {"code": "K2", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 2 · Pre-flight", "fr": "Ex 2 · Avant le vol", "items": [
-    {"n": 1, "en": "A Documents and airworthiness", "s": "C", "u": ["law-core-aircraft-documents", "law-unserviceable-equipment-no-mel"], "gap": ""},
-    {"n": 2, "en": "B Performance", "s": "C", "u": ["c150-performance-chart-rules", "agk-performance-factors"], "gap": ""},
-    {"n": 3, "en": "C Weight and balance", "s": "C", "u": ["agk-weight-balance", "c150-weight-cg-baggage"], "gap": ""},
-    {"n": 4, "en": "D Pre-flight inspection", "s": "C", "u": ["c150-preflight-poh-highlights"], "gap": ""},
-    {"n": 5, "en": "E Start, run-up, checklists", "s": "C", "u": ["c150-before-start", "c150-start", "c150-before-takeoff"], "gap": ""},
-    {"n": 6, "en": "F Aircraft systems", "s": "P", "u": ["agk-systems-oral-list"], "gap": "Oral list; full systems in card 08 failure units."}
-  ]},
-  {"code": "K4", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 4 · Taxiing", "fr": "Ex 4 · Circulation au sol", "items": [
-    {"n": 1, "en": "Taxiing", "s": "C", "u": ["trn-taxi-pre-takeoff", "c150-taxi"], "gap": ""}
-  ]},
-  {"code": "K9", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 9 · Steep turns", "fr": "Ex 9 · Virages serrés", "items": [
-    {"n": 1, "en": "Steep turns", "s": "C", "u": ["agk-handling-landings", "agk-load-factor-accelerated-stall"], "gap": ""}
-  ]},
-  {"code": "K11", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 11 · Slow flight", "fr": "Ex 11 · Vol lent", "items": [
-    {"n": 1, "en": "Slow flight", "s": "P", "u": ["agk-handling-landings"], "gap": "One handling line."}
-  ]},
-  {"code": "K12", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 12 · Stalls", "fr": "Ex 12 · Décrochages", "items": [
-    {"n": 1, "en": "Stalls", "s": "C", "u": ["trn-spiral-stall"], "gap": ""}
-  ]},
-  {"code": "K13", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 13 · Spins", "fr": "Ex 13 · Vrilles", "items": [
-    {"n": 1, "en": "Spin entry and recovery", "s": "C", "u": ["c150-spin-recovery", "c150-spin-vs-spiral-memory"], "gap": ""}
-  ]},
-  {"code": "K15", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 15 · Slipping", "fr": "Ex 15 · Glissade", "items": [
-    {"n": 1, "en": "Slipping", "s": "C", "u": ["trn-slip"], "gap": ""}
-  ]},
-  {"code": "K16", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 16 · Take-off", "fr": "Ex 16 · Décollage", "items": [
-    {"n": 1, "en": "Soft-field take-off", "s": "C", "u": ["trn-soft-rough-takeoff", "c150-soft-rough-field-flap-logic"], "gap": ""},
-    {"n": 2, "en": "Short-field take-off", "s": "C", "u": ["trn-short-obstacle-takeoff", "c150-short-field-takeoff"], "gap": ""}
-  ]},
-  {"code": "K17", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 17 · Circuit", "fr": "Ex 17 · Circuit", "items": [
-    {"n": 1, "en": "Circuit", "s": "C", "u": ["trn-circuit"], "gap": ""}
-  ]},
-  {"code": "K18", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 18 · Approach and landing", "fr": "Ex 18 · Approche et atterrissage", "items": [
-    {"n": 1, "en": "Power-off 180° accuracy landing", "s": "P", "u": ["agk-handling-landings"], "gap": "Key positions line only."},
-    {"n": 2, "en": "Short-field landing over an obstacle", "s": "C", "u": ["c150-short-field-landing", "agk-handling-landings"], "gap": ""},
-    {"n": 3, "en": "Soft-field landing", "s": "P", "u": ["agk-handling-landings"], "gap": "One handling line."},
-    {"n": 4, "en": "Overshoot", "s": "C", "u": ["trn-go-around", "c150-balked-landing"], "gap": ""}
-  ]},
-  {"code": "K21", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 21 · Precautionary landing", "fr": "Ex 21 · Atterrissage de précaution", "items": [
-    {"n": 1, "en": "Precautionary landing", "s": "C", "u": ["trn-precautionary-landing", "c150-precautionary-landing-with-power"], "gap": ""}
-  ]},
-  {"code": "K22", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 22 · Forced landing", "fr": "Ex 22 · Atterrissage forcé", "items": [
-    {"n": 1, "en": "A Control and approach", "s": "C", "u": ["trn-forced-landing", "c150-forced-landing-without-power"], "gap": ""},
-    {"n": 2, "en": "B Cockpit management", "s": "C", "u": ["trn-mayday-pax-secure", "c150-engine-failure-in-flight-restart"], "gap": ""}
-  ]},
-  {"code": "K23", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 23 · Navigation", "fr": "Ex 23 · Navigation", "items": [
-    {"n": 1, "en": "A Pre-flight planning", "s": "C", "u": ["wxp-vfr-flow", "law-planning-fuel-go-no-go", "nav-cfs-aerodrome-scan"], "gap": ""},
-    {"n": 2, "en": "B Departure", "s": "P", "u": ["nav-quick-ete-table", "trn-climb"], "gap": "No set-heading procedure."},
-    {"n": 3, "en": "C En route", "s": "P", "u": ["nav-1-in-60-rule", "nav-time-speed-distance"], "gap": "Track and GS checks only; log keeping absent."},
-    {"n": 4, "en": "D Diversion", "s": "C", "u": ["nav-diversion-lost", "trn-vfr-nav-diversion-lost"], "gap": ""}
-  ]},
-  {"code": "K24", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 24 · Instrument flying", "fr": "Ex 24 · Vol aux instruments", "items": [
-    {"n": 1, "en": "A Full panel", "s": "P", "u": ["proc-ifr-cockpit-instrument-check"], "gap": "Instrument check only; scan absent."},
-    {"n": 2, "en": "B Limited panel", "s": "C", "u": ["proc-vacuum-attitude-heading-failure", "proc-no-gyro-vectors"], "gap": ""},
-    {"n": 3, "en": "C Unusual attitudes", "s": "C", "u": ["proc-unusual-attitude-nose-high", "proc-unusual-attitude-nose-low"], "gap": ""},
-    {"n": 4, "en": "D Radio navigation", "s": "C", "u": ["nav-navigation-aids-adf-vor-dme-intercepts", "ifr-ils-loc-vor-ndb-dme"], "gap": ""}
-  ]},
-  {"code": "K29", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 29 · Emergencies and malfunctions", "fr": "Ex 29 · Urgences et pannes", "items": [
-    {"n": 1, "en": "Emergencies and malfunctions", "s": "C", "u": ["c150-emergency-speeds", "c150-engine-fire-in-flight", "c150-electrical-fire", "sys-electrical-alternator-failure"], "gap": ""}
-  ]},
-  {"code": "K30", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 30 · Radio communications", "fr": "Ex 30 · Communications radio", "items": [
-    {"n": 1, "en": "Radio communications", "s": "P", "u": ["law-radio-transponder", "law-aerodrome-mf-operations"], "gap": "Call format and MF references only."}
-  ]}
-]},
-{"id": "tp219", "guide": "TP 219", "kind": "flight", "edition": "11th edition, January 2021", "en": "Multi-engine flight test", "fr": "Test en vol multimoteur", "url": "https://tc.canada.ca/en/aviation/publications/flight-test-guide-multi-engine-class-rating-aeroplane-tp-219e", "reviewed": "2026-11-14", "method": {"en": "Exercises are matched to procedure units (flows, QRCs, POH notes). A unit supports practice and the oral; it does not replace the guide's performance criteria. Pass mark 73 (70 %).", "fr": "Les exercices sont reliés aux unités de procédure (séquences, QRC, notes du POH). Une unité aide à la pratique et à l'oral; elle ne remplace pas les critères de performance du guide. Note de passage 73 (70 %)."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité."}, "groups": [
-  {"code": "ME1", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 1 · Pre-flight", "fr": "Ex 1 · Avant le vol", "items": [
-    {"n": 1, "en": "A Documents", "s": "C", "u": ["law-core-aircraft-documents"], "gap": ""},
-    {"n": 2, "en": "B Performance and limitations", "s": "C", "u": ["me-performance-calculations-required", "me-essential-speeds-to-know-cold"], "gap": ""},
-    {"n": 3, "en": "C OEI flight principles", "s": "C", "u": ["me-core-me-physics", "me-critical-engine", "me-vmc-factors", "me-zero-sideslip-best-oei-performance"], "gap": ""},
-    {"n": 4, "en": "D Weight and balance", "s": "C", "u": ["me-w-b-me-traps", "agk-weight-balance"], "gap": ""},
-    {"n": 5, "en": "E Pre-flight inspection", "s": "M", "u": [], "gap": "No ME pre-flight unit."},
-    {"n": 6, "en": "F Start, run-up, checklists", "s": "P", "u": ["me-takeoff-briefing-me"], "gap": "Take-off briefing only."}
-  ]},
-  {"code": "ME2", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 2 · Ancillary controls and systems", "fr": "Ex 2 · Commandes et systèmes", "items": [
-    {"n": 1, "en": "Ancillary controls and systems", "s": "C", "u": ["me-systems-focus-for-me", "me-prop-governor-feather-l4-cross-ref"], "gap": ""}
-  ]},
-  {"code": "ME3", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 3 · Taxiing", "fr": "Ex 3 · Circulation au sol", "items": [
-    {"n": 1, "en": "Taxiing", "s": "P", "u": ["trn-taxi-pre-takeoff"], "gap": "Single-engine flow only; differential power absent."}
-  ]},
-  {"code": "ME4", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 4 · Take-off, circuit, landing", "fr": "Ex 4 · Décollage, circuit, atterrissage", "items": [
-    {"n": 1, "en": "A Take-off", "s": "C", "u": ["me-takeoff-briefing-me", "me-accelerate-stop-accelerate-go"], "gap": ""},
-    {"n": 2, "en": "B Circuit", "s": "P", "u": ["trn-circuit"], "gap": "Single-engine circuit only."},
-    {"n": 3, "en": "C Approach and landing", "s": "P", "u": ["agk-vref-landing-reference-speed"], "gap": "VREF only."}
-  ]},
-  {"code": "ME5", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 5 · Cruising flight", "fr": "Ex 5 · Vol en croisière", "items": [
-    {"n": 1, "en": "Cruising flight", "s": "M", "u": [], "gap": ""}
-  ]},
-  {"code": "ME6", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 6 · Engine failure in cruise", "fr": "Ex 6 · Panne moteur en croisière", "items": [
-    {"n": 1, "en": "A Control", "s": "C", "u": ["me-engine-failure-flow-generic", "me-dead-foot-dead-engine"], "gap": ""},
-    {"n": 2, "en": "B Cockpit checks", "s": "C", "u": ["me-engine-failure-in-cruise"], "gap": ""},
-    {"n": 3, "en": "C OEI manoeuvring", "s": "C", "u": ["me-zero-sideslip-best-oei-performance", "me-oei-climb"], "gap": ""}
-  ]},
-  {"code": "ME7", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 7 · Reduced airspeed (VMC)", "fr": "Ex 7 · Vitesse réduite (VMC)", "items": [
-    {"n": 1, "en": "Flight at reduced airspeed", "s": "C", "u": ["me-vmc-demo-reduced-speed-training", "me-vmc-definition-certification-memory"], "gap": ""}
-  ]},
-  {"code": "ME8", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 8 · Stalls", "fr": "Ex 8 · Décrochages", "items": [
-    {"n": 1, "en": "A Stall", "s": "C", "u": ["me-stall-slow-flight-me"], "gap": ""},
-    {"n": 2, "en": "B Approach to stall", "s": "C", "u": ["me-stall-slow-flight-me"], "gap": ""}
-  ]},
-  {"code": "ME9", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 9 · Steep turns", "fr": "Ex 9 · Virages serrés", "items": [
-    {"n": 1, "en": "Steep turns", "s": "P", "u": ["agk-handling-landings"], "gap": "Single-engine handling line only."}
-  ]},
-  {"code": "ME10", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 10 · Engine failure on overshoot", "fr": "Ex 10 · Panne moteur en remise des gaz", "items": [
-    {"n": 1, "en": "A Control", "s": "C", "u": ["me-engine-failure-on-takeoff-overshoot", "me-dead-foot-dead-engine"], "gap": ""},
-    {"n": 2, "en": "B Cockpit checks", "s": "C", "u": ["me-engine-failure-on-takeoff-overshoot", "me-oei-missed-go-around"], "gap": ""}
-  ]},
-  {"code": "ME11", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 11 · OEI operations", "fr": "Ex 11 · Opérations un moteur inopérant", "items": [
-    {"n": 1, "en": "A Precautionary shutdown", "s": "C", "u": ["me-precautionary-shutdown", "me-restart-unfeather"], "gap": ""},
-    {"n": 2, "en": "B OEI arrival, approach, landing", "s": "C", "u": ["me-oei-approach-landing"], "gap": ""}
-  ]},
-  {"code": "ME12", "section": "Flight test", "section_fr": "Test en vol", "en": "Ex 12 · Emergencies", "fr": "Ex 12 · Urgences", "items": [
-    {"n": 1, "en": "Emergencies", "s": "P", "u": ["me-systems-focus-for-me", "sys-electrical-alternator-failure"], "gap": "Generic system QRCs only; no ME-specific emergency set."}
   ]}
 ]},
 {"id": "tp9939", "guide": "TP 9939", "kind": "flight", "edition": "12th edition, January 2021", "en": "IFR flight test", "fr": "Test en vol IFR", "url": "https://tc.canada.ca/en/aviation/publications/flight-test-guide-instrument-rating-groups-1-2-3-aeroplane-tp-9939e", "reviewed": "2026-11-14", "method": {"en": "Exercises are matched to procedure units (flows, QRCs, POH notes). A unit supports practice and the oral; it does not replace the guide's performance criteria. Pass mark 39.", "fr": "Les exercices sont reliés aux unités de procédure (séquences, QRC, notes du POH). Une unité aide à la pratique et à l'oral; elle ne remplace pas les critères de performance du guide. Note de passage 39."}, "scope": {"en": "Each item is judged against the unit text: C = a unit treats it; P = it is named or treated in part (the note says what is missing); M = no unit.", "fr": "Chaque point est jugé d'après le texte des unités : C = une unité le traite; P = mentionné ou traité en partie (la note précise le manque); M = aucune unité."}, "groups": [

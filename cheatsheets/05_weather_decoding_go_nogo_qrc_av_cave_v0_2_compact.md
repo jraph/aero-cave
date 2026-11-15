@@ -28,7 +28,7 @@
 - `T:` gusty XW + wet/contaminated short runway = compounded risk, not separate minor issues.
 ***
 #### Night weather
-<!-- id: wxp-night | concepts: met-decide | level: PPL CPL IR -->
+<!-- id: wxp-night | concepts: met-decide, law-night | level: PPL CPL IR -->
 
 - Raise minima for cloud/vis/terrain/precip. Horizon and cloud boundaries disappear; snow/black-hole effects worsen.
 - Moon illumination, terrain lighting and cloud cover affect visual navigation.

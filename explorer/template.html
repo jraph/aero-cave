@@ -34,7 +34,7 @@ h2{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu
 .tile span{font-size:.75rem;color:var(--muted)}
 .tile:hover,.chip:hover{border-color:var(--accent)}
 .tile.sel{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
-#tg .tsub{grid-column:1/-1;font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:.3rem 0 -.1rem}.gsec{margin:.9rem 0 .3rem;font-size:.95rem}.gsec small{color:var(--muted);font-weight:400}#vpanel{border-left:3px solid var(--accent);padding:.1rem .6rem .3rem;margin-bottom:.6rem}#vpanel h3{margin:.1rem 0 .2rem;font-size:1.05rem;line-height:1.2}
+.gsec{margin:.9rem 0 .3rem;font-size:.95rem}.gsec small{color:var(--muted);font-weight:400}#tg .bars{margin-top:.35rem}#vpanel{border-left:3px solid var(--accent);padding:.1rem .6rem .3rem;margin-bottom:.6rem}#vpanel h3{margin:.1rem 0 .2rem;font-size:1.05rem;line-height:1.2}
 .pl{margin:.3rem 0;display:flex;flex-wrap:wrap;gap:.22rem}.pt{background:var(--stripe);border:1px solid var(--line);border-radius:.3rem;padding:.05rem .35rem;font-size:.84rem;line-height:1.3}.pt.k{background:var(--pill);font-weight:700;border-color:transparent}
 #gpanel h3{margin:.2rem 0 .2rem;font-size:1.1rem}
 .bars{display:flex;height:.55rem;border-radius:.3rem;overflow:hidden;margin:.5rem 0 .4rem;background:var(--line)}
@@ -119,11 +119,10 @@ footer a{color:var(--accent)}
 </div></div>
 <main class="wrap">
   <div id="home">
-    <h2 data-t="hStage"></h2><div class="tiles" id="tp"></div>
-    <h2 data-t="hOps"></h2><div class="tiles" id="to"></div>
-    <h2 data-t="hGuide"></h2><div class="tiles" id="tg"></div>
-    <h2 data-t="hRead"></h2><div class="tiles" id="tr"></div>
     <h2 data-t="hSubj"></h2><div class="tiles" id="ts"></div>
+    <h2 data-t="hGuide"></h2><div class="tiles" id="tg"></div>
+    <h2 data-t="hOps"></h2><div class="tiles" id="to"></div>
+    <h2 data-t="hRead"></h2><div class="tiles" id="tr"></div>
     <p class="note" data-t="note"></p>
   </div>
   <div id="gpanel" hidden></div>
@@ -146,8 +145,8 @@ const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','
 const T = {
   title:['Canadian pilot study notes','Notes d’étude pour pilotes canadiens'], hRead:['Bilingual collections','Collections bilingues'],
   search:['Search topics, rules, codes…','Chercher thèmes, règles, codes…'],
-  allP:['All views','Toutes les vues'], gLevel:['Licence level','Niveau de licence'], gStage:['Training stage','Étape de formation'], gOps:['Quick access by phase of flight','Accès rapide par phase de vol'], hStage:['Where are you in training?','Où en êtes-vous dans la formation ?'], hOps:['Quick access by phase of flight','Accès rapide par phase de vol'], aimed:['Aimed at','Vise'], approx:['topic-based selection, not an item-by-item mapping','sélection par thème, non une correspondance point par point'], narrow:['Narrow by subject','Préciser par sujet'], opsNote:['Study reference, not a checklist: the POH/AFM and current publications govern.','Référence d’étude, non une liste de vérifications : le POH/AFM et les publications en vigueur prévalent.'], allK:['All cards','Toutes les fiches'], allC:['All topics','Tous les thèmes'],
-  hSubj:['Or start from a subject','Ou partir d’un sujet'],
+  allP:['All views','Toutes les vues'], gLevel:['Licence level','Niveau de licence'], gGuide:['TC exam or flight test','Examen ou test en vol de TC'], gOps:['Quick access by phase of flight','Accès rapide par phase de vol'], hOps:['Quick access by phase of flight','Accès rapide par phase de vol'], narrow:['Narrow by subject','Préciser par sujet'], opsNote:['Study reference, not a checklist: the POH/AFM and current publications govern.','Référence d’étude, non une liste de vérifications : le POH/AFM et les publications en vigueur prévalent.'], allK:['All cards','Toutes les fiches'], allC:['All topics','Tous les thèmes'],
+  hSubj:['Subjects','Sujets'],
   note:['Stages, level tags and topic links are an editorial study structure, not a Transport Canada syllabus mapping.','Les étapes, niveaux et liens thématiques sont une structure d’étude éditoriale, non une correspondance officielle de Transports Canada.'],
   topics:['topics','thèmes'],
   secs:['sections','sections'], sec:['section','section'], reset:['Clear filters','Effacer les filtres'],
@@ -155,7 +154,7 @@ const T = {
   also:['Filed under','Classé sous'], open:['Open card ↗','Ouvrir la fiche ↗'], reader:['Reader ↗','Lecteur ↗'],
   none:['Nothing matches. Remove a filter or shorten the search.','Aucun résultat. Retirez un filtre ou raccourcissez la recherche.'],
   disc:['Study aid only. Use current official publications and the aircraft flight manual for operations.','Aide à l’étude seulement. Utilisez les publications officielles en vigueur et le manuel de vol pour l’exploitation.'],
-  hGuide:['TC guide coverage','Couverture des guides TC'], items:['items','points'], stC:['Covered','Couvert'], stP:['Partial','Partiel'], stM:['Missing','Manquant'], stE:['Elsewhere, unchecked','Ailleurs, non vérifié'], back:['← Explorer','← Explorateur'], reviewed:['Reviewed','Révisé'], official:['Official guide ↗','Guide officiel ↗'], kWritten:['Written exams','Examens écrits'], kFlight:['Flight tests','Tests en vol'], method:['Method','Méthode'], toGuide:['Item-by-item coverage →','Couverture point par point →'], own:['Item labels are our own short wording; the guide text is authoritative.','Les libellés sont notre formulation abrégée; le texte du guide fait foi.'],
+  hGuide:['Training path: TC exams and flight tests','Parcours : examens et tests en vol de TC'], items:['items','points'], stC:['Covered','Couvert'], stP:['Partial','Partiel'], stM:['Missing','Manquant'], stE:['Elsewhere, unchecked','Ailleurs, non vérifié'], back:['← Explorer','← Explorateur'], reviewed:['Reviewed','Révisé'], official:['Official guide ↗','Guide officiel ↗'], kWritten:['Written exam','Examen écrit'], kFlight:['Flight test','Test en vol'], study:['Study the mapped sections','Étudier les sections reliées'], mapped:['sections mapped','sections reliées'], method:['Method','Méthode'], toGuide:['Item-by-item coverage →','Couverture point par point →'], own:['Item labels are our own short wording; the guide text is authoritative.','Les libellés sont notre formulation abrégée; le texte du guide fait foi.'],
   clr:['✕ Clear','✕ Effacer'],
   expand:['Expand all','Tout ouvrir'], collapse:['Collapse all','Tout fermer']
 };
@@ -174,8 +173,8 @@ const roots = D.concepts.filter(c => !c.broader.length).map(c => c.id);
 const K = new Map(D.cards.map(c => [c.id, c]));
 const V = new Map();
 for (const p of D.paths) V.set(p.id, {id:p.id, group:'level', en:p.en, fr:p.fr, level:p.id});
-for (const v of D.views) { const set = v.concepts ? new Set() : null; if (set) for (const id of v.concepts) for (const x of getDesc(id)) set.add(x); V.set(v.id, Object.assign({}, v, {set, rx: v.re ? new RegExp(v.re, 'i') : null})); }
-const inView = (s, v) => (!v.level || s.p.includes(v.level)) && ((!v.set && !v.rx) || (v.set && s.c.some(x => v.set.has(x))) || (v.rx && v.rx.test(s.h)));
+for (const v of D.views) { const set = v.concepts ? new Set() : null; if (set) for (const id of v.concepts) for (const x of getDesc(id)) set.add(x); V.set(v.id, Object.assign({}, v, {set, uset: v.units ? new Set(v.units) : null, rx: v.re ? new RegExp(v.re, 'i') : null})); }
+const inView = (s, v) => (!v.level || s.p.includes(v.level)) && (v.uset ? v.uset.has(s.u) : ((!v.set && !v.rx) || (v.set && s.c.some(x => v.set.has(x))) || (v.rx && v.rx.test(s.h))));
 for (const s of D.sections) {
   s.t = norm(s.h + ' ' + s.md + ' ' + s.c.map(id => C.get(id).en + ' ' + C.get(id).fr + ' ' + (C.get(id).alt || []).join(' ')).join(' '));
   s.hn = norm(s.h);
@@ -386,14 +385,15 @@ function sectionEl(s) {
   });
   return d;
 }
+const bar = arr => '<div class="bars">' + ['C','P','M','E'].map(k => '<span class="s' + k + '" style="flex:' + arr.filter(i => i.s === k).length + '"></span>').join('') + '</div>';
 function renderGuide() {
   const g = G.get(S.g), p = $('gpanel'); p.textContent = '';
   const bk = el('button', 'btn', esc(t('back'))); bk.type = 'button'; bk.onclick = () => go({g:''}, true); p.appendChild(bk);
   p.appendChild(el('h3', '', esc(g.guide + ' · ' + L(g))));
+  const sb = el('button', 'btn', esc(t('study')) + ' (' + V.get(g.id).uset.size + ') →'); sb.type = 'button'; sb.style.margin = '0 0 .4rem'; sb.onclick = () => go({p:g.id, g:''}, true); p.appendChild(sb);
   const all = g.groups.flatMap(x => x.items), n = k => all.filter(i => i.s === k).length;
   p.appendChild(el('div', 'crumbs', esc(g.edition) + ' · ' + esc(t('reviewed')) + ' ' + esc(g.reviewed) + ' · <a href="' + esc(g.url) + '" target="_blank" rel="noopener" style="color:var(--accent)">' + esc(t('official')) + '</a>'));
   p.appendChild(el('div', 'crumbs', '<b>' + esc(t('method')) + '.</b> ' + esc(L(g.method)) + ' ' + esc(L(g.scope)) + ' ' + esc(t('own'))));
-  const bar = arr => '<div class="bars">' + ['C','P','M','E'].map(k => '<span class="s' + k + '" style="flex:' + arr.filter(i => i.s === k).length + '"></span>').join('') + '</div>';
   p.insertAdjacentHTML('beforeend', bar(all));
   const leg = el('div', 'leg');
   for (const k of ['C','P','M','E']) { if (!n(k)) continue; const b = el('button', 'btn', '<span class="dot s' + k + '"></span>' + esc(t('st' + k)) + ' <b>' + n(k) + '</b>'); b.type = 'button'; b.setAttribute('aria-pressed', gFilter === k); b.onclick = () => { gFilter = gFilter === k ? '' : k; render(); }; leg.appendChild(b); }
@@ -424,7 +424,7 @@ function render() {
   const baseP = D.sections.filter(s => matches(s, 'p')), baseK = D.sections.filter(s => matches(s, 'k'));
   const vn = new Map(); for (const v of V.values()) vn.set(v.id, baseP.filter(s => inView(s, v)).length);
   const fp = $('fp'); fp.textContent = ''; fp.appendChild(new Option(t('allP'), ''));
-  for (const [g, key] of [['stage','gStage'],['ops','gOps'],['level','gLevel']]) { const og = document.createElement('optgroup'); og.label = t(key); for (const v of V.values()) if (v.group === g) og.appendChild(new Option(L1(v) + ' (' + vn.get(v.id) + ')', v.id)); fp.appendChild(og); }
+  for (const [g, key] of [['guide','gGuide'],['ops','gOps'],['level','gLevel']]) { const og = document.createElement('optgroup'); og.label = t(key); for (const v of V.values()) if (v.group === g) og.appendChild(new Option(L1(v) + ' (' + vn.get(v.id) + ')', v.id)); fp.appendChild(og); }
   fp.value = S.p; fp.classList.toggle('on', !!S.p);
   fillSelect($('fk'), [['', t('allK')]].concat(D.cards.map(c => [c.id, (/^\d/.test(c.id) ? c.id + ' · ' : '') + L1(c) + ' (' + baseK.filter(s => s.card === c.id).length + ')'])), S.k);
   fillSelect($('fc'), conceptOptions(counts), S.c);
@@ -435,16 +435,15 @@ function render() {
   if (browsing) {
     const ts = $('ts'), tg = $('tg'), tr = $('tr'); ts.textContent = tg.textContent = tr.textContent = '';
     for (const c of D.cards) if (c.reader) { const a = el('a', 'tile', '<b>' + esc(L(c)) + '</b><span>EN / FR</span>'); a.href = ['F', 'A'].includes(c.id) ? '#x-any-' + c.id + '-any' : c.reader; a.style.textDecoration = 'none'; a.style.color = 'inherit'; tr.appendChild(a); }
-    for (const [kind, key] of [['written','kWritten'],['flight','kFlight']]) { tg.appendChild(el('div', 'tsub', esc(t(key)))); for (const g of D.guides) if (g.kind === kind) { const all = g.groups.flatMap(x => x.items), n = k => all.filter(i => i.s === k).length; const b = el('button', 'tile', '<b>' + esc(g.guide + ' · ' + L(g)) + '</b><span>' + all.length + ' ' + t('items') + ' · ' + ['C','P','M','E'].filter(k => n(k)).map(k => n(k) + ' ' + k).join(' · ') + '</span>'); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); } }
-    for (const [g, box] of [['stage', $('tp')], ['ops', $('to')]]) { box.textContent = ''; for (const v of V.values()) if (v.group === g) { const b = el('button', 'tile', '<b>' + esc(L(v)) + '</b><span>' + (v.ref ? esc(v.ref) + ' · ' : '') + vn.get(v.id) + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p:v.id}, true); box.appendChild(b); } }
+    D.guides.forEach((g, i) => { const all = g.groups.flatMap(x => x.items), n = k => all.filter(it => it.s === k).length; const b = el('button', 'tile', '<b>' + (i + 1) + ' · ' + esc(L(g)) + '</b><span>' + esc(g.guide) + ' · ' + esc(t(g.kind === 'flight' ? 'kFlight' : 'kWritten')) + '<br>' + all.length + ' ' + t('items') + ' · ' + ['C','P','M','E'].filter(k => n(k)).map(k => n(k) + ' ' + k).join(' · ') + '</span>' + bar(all)); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); });
+    for (const [g, box] of [['ops', $('to')]]) { box.textContent = ''; for (const v of V.values()) if (v.group === g) { const b = el('button', 'tile', '<b>' + esc(L(v)) + '</b><span>' + (v.ref ? esc(v.ref) + ' · ' : '') + vn.get(v.id) + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p:v.id}, true); box.appendChild(b); } }
     for (const r of roots) { const n = counts.get(r); if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(C.get(r))) + '</b><span>' + n + ' ' + t('secs') + ' · ' + C.get(r).narrower.filter(x => counts.get(x)).length + ' ' + t('topics') + '</span>'); b.type = 'button'; b.onclick = () => go({c:r}, true); ts.appendChild(b); }
   }
   renderConcept(counts);
   const vp = $('vpanel'); vp.textContent = ''; vp.hidden = !S.p;
   if (S.p) { const v = V.get(S.p);
     vp.appendChild(el('h3', '', esc(L(v))));
-    if (v.ref) vp.appendChild(el('div', 'crumbs', esc(t('aimed')) + ' <b>' + esc(v.ref) + '</b> — ' + esc(t('approx'))));
-    if (v.guide && G.has(v.guide)) { const gb = el('button', 'btn', esc(G.get(v.guide).guide + ' · ' + t('toGuide'))); gb.type = 'button'; gb.onclick = () => go({g:v.guide}, true); vp.appendChild(gb); }
+    if (v.guide && G.has(v.guide)) { const gg = G.get(v.guide), all = gg.groups.flatMap(x => x.items); vp.insertAdjacentHTML('beforeend', bar(all)); const gb = el('button', 'btn', esc(t('toGuide'))); gb.type = 'button'; gb.onclick = () => go({g:v.guide}, true); vp.appendChild(gb); }
     if (v.group === 'ops') vp.appendChild(el('div', 'crumbs', esc(t('opsNote'))));
     if (!S.c) { const r = el('div', 'rel', '<i>' + esc(t('narrow')) + '</i>'); let any = 0; for (const id of roots) if (counts.get(id)) { r.appendChild(chip(id, '', counts.get(id))); any++; } if (any > 1) vp.appendChild(r); }
   }

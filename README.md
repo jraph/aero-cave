@@ -8,10 +8,9 @@ Compact Canadian pilot study notes for **PPL (PPAER) · CPL (CPAER) · instrumen
 
 | Entry point | What you get |
 |---|---|
-| Training stage | Pre-solo (PSTAR) → PPAER / PPL flight test → night & OTT → CPAER / CPL flight test → ME → INRAT → IFR flight test → first commercial seat |
+| Subjects | Top concepts of the ontology; the topic graph links broader / narrower / related, and a note can sit under several parents |
+| Training path | TC guides in training order: PSTAR → PPAER → PPL flight test → CPAER → CPL flight test → ME flight test → INRAT → IFR flight test. Each opens its item-by-item coverage and the sections its items cite |
 | Phase of flight | Weather brief, planning, departure, enroute, approach, emergencies, quick reference, Pebbles |
-| Topic graph | Concepts with broader / narrower / related links; a note can sit under several parents |
-| TC guide coverage | Item-by-item status against the written exams (PSTAR TP 11919, PPAER TP 12880, CPAER TP 12881, INRAT TP 691) and flight tests (TP 13723, TP 13462, TP 219, TP 9939) |
 | Search | Full text plus synonyms and abbreviations; **✕ Clear** or Esc resets |
 | Legacy reader links | Collections transitioning to the explorer: pilot qualifications, CPAER formulas, abbreviations |
 
@@ -22,7 +21,7 @@ Compact Canadian pilot study notes for **PPL (PPAER) · CPL (CPAER) · instrumen
 | [`kb/`](kb/README.md) | Knowledge: one file per concept, each ending with a Pebble |
 | [`cheatsheets/`](cheatsheets/) | Procedures, QRCs, the C150M POH card, and the three reader-paired notes |
 | [`readers/`](readers/) | Legacy bilingual HTML pages pending replacement by the explorer |
-| `explorer/ontology.json` | Concepts, levels, stage and phase views |
+| `explorer/ontology.json` | Concepts, levels, phase-of-flight views |
 | `explorer/syllabus.json` | TC guide items mapped to unit IDs, with status and gap notes |
 | `explorer/template.html`, `build_explorer.py` | Generate `index.html` (all notes embedded) |
 | [`CONTENT_REVIEW.md`](CONTENT_REVIEW.md) | Review log: sources, editions, what was and was not verified |

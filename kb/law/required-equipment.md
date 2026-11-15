@@ -11,7 +11,7 @@
 - `T:` GPS/tablet does not replace required instruments.
 ***
 #### Night VFR equipment — PAX / commercial
-<!-- id: law-night-vfr-equipment-pax-commercial | from: 04 | level: PPL CPL -->
+<!-- id: law-night-vfr-equipment-pax-commercial | from: 04 | also: law-night | level: PPL CPL -->
 
 | CAVE | Rule / trap |
 |---|---|

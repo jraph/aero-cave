@@ -1,5 +1,9 @@
 # Content review
 
+## Training stages replaced by the TC guides — 14 November 2026
+
+The ten hand-made "training stage" views are removed. The home page now opens with the ontology's subjects, then the eight TC guides in training order (PSTAR, PPAER, PPL flight test, CPAER, CPL flight test, ME flight test, INRAT, IFR flight test), then phases of flight and the bilingual collections. Each guide is also a view: the units its items cite (e.g. INRAT 96 sections, where the old stage's concept list gave 297), so a guide view shows only what the syllabus mapping found. The two stages with no TC guide moved into the ontology: night and VFR OTT is a new concept `law-night` (five units tagged: VFR OTT, night definition, night VFR equipment, night go/no-go, twilight formulas); first commercial seat was already `law-commercial`.
+
 ## TC guide maps extended to all exams and flight tests — 14 November 2026
 
 `explorer/syllabus.json` now holds eight guides. Item counts (Covered / Partial / Missing):
