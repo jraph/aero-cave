@@ -201,12 +201,12 @@ function readHash() {
   const k0 = {F:'formula', A:'glossary'}[m[2]] || m[2]; if (KIND.has(k0)) S.k = k0;
   if (C.has(m[3])) S.c = m[3];
 }
-function writeHash() {
+function writeHash(push) {
   const h = S.g ? '#g-' + S.g : (S.p || S.k || S.c) ? '#x-' + (S.p || 'any') + '-' + (S.k || 'any') + '-' + (S.c || 'any') : '';
-  if (h !== location.hash) { try { history.replaceState(null, '', h || location.pathname + location.search); } catch (e) { location.hash = h; } }
+  if (h !== location.hash) { const url = h || location.pathname + location.search; try { if (push) { history.replaceState({y: window.scrollY}, '', location.href); history.pushState(null, '', url); } else history.replaceState(null, '', url); } catch (e) { location.hash = h; } }
 }
 function openUnit(u) { focusUnit = u; go({q:'', p:'', k:'', g:'', c:U.get(u).c[0]}); }
-function go(patch, top) { if (!('g' in patch)) S.g = ''; Object.assign(S, patch); writeHash(); render(); if (top) window.scrollTo({top:0}); }
+function go(patch, top) { if (!('g' in patch)) S.g = ''; Object.assign(S, patch); writeHash(true); render(); if (top) window.scrollTo({top:0}); }
 
 /* ---- filtering ---- */
 function matches(s, skip) {
@@ -471,7 +471,7 @@ function render() {
   cnt.textContent = '';
   cnt.appendChild(el('span', '', '<b>' + list.length + '</b> ' + t(list.length === 1 ? 'sec' : 'secs')));
   const rs = el('button', 'btn', esc(t('reset'))); rs.type = 'button'; rs.onclick = () => go({q:'', p:'', k:'', c:'', g:''}, true); cnt.appendChild(rs);
-  if (list.length && list.length <= 40) { const ex = el('button', 'btn', esc(t('expand'))); ex.type = 'button'; let open = false; ex.onclick = () => { open = !open; res.querySelectorAll('details').forEach(d => d.open = open); ex.textContent = t(open ? 'collapse' : 'expand'); }; cnt.appendChild(ex); }
+  if (list.length) { const ex = el('button', 'btn', esc(t('expand'))); ex.type = 'button'; let open = false; ex.onclick = () => { open = !open; res.querySelectorAll('details').forEach(d => d.open = open); ex.textContent = t(open ? 'collapse' : 'expand'); }; cnt.appendChild(ex); }
   if (!list.length) { res.appendChild(el('p', 'empty', esc(t('none')))); return; }
   const frag = document.createDocumentFragment();
   if (tokens.length) { list.forEach(s => { const d = sectionEl(s); d.querySelector('.st').insertAdjacentHTML('beforebegin', '<span class="pb" style="color:var(--accent)">' + s.card + '</span>'); frag.appendChild(d); }); }
@@ -497,7 +497,9 @@ $('theme').onclick = () => { const dark = document.documentElement.dataset.theme
 const clearAll = () => { gFilter = ''; go({q:'', p:'', k:'', c:'', g:''}, true); };
 $('clr').onclick = clearAll;
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && (S.q || S.p || S.k || S.c || S.g)) clearAll(); });
-window.addEventListener('hashchange', () => { readHash(); render(); });
+let popY = null;
+window.addEventListener('popstate', e => { popY = e.state && typeof e.state.y === 'number' ? e.state.y : 0; readHash(); render(); requestAnimationFrame(() => { window.scrollTo(0, popY); popY = null; }); });
+window.addEventListener('hashchange', () => { if (popY !== null) return; readHash(); render(); });
 readHash(); render();
 window.__explorer = {D, S, go, md};
 })();
