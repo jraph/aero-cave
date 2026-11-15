@@ -7,7 +7,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Time · fuel / Temps · carburant
-<!-- id: fx-time-fuel-temps-carburant | concepts: nav-dr, agk-fuel, study-formulas | level: PPL CPL -->
+<!-- id: fx-time-fuel-temps-carburant | concepts: nav-dr, agk-fuel | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -19,7 +19,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Wind · navigation / Vent · navigation
-<!-- id: fx-wind-navigation-vent-navigation | concepts: nav-dr, study-formulas | level: PPL CPL -->
+<!-- id: fx-wind-navigation-vent-navigation | concepts: nav-dr | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -33,7 +33,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## ADF · VOR · DME · intercepts / Interceptions
-<!-- id: fx-adf-vor-dme-intercepts-interceptions | concepts: nav-radio, study-formulas | level: CPL IR -->
+<!-- id: fx-adf-vor-dme-intercepts-interceptions | concepts: nav-radio | level: CPL IR -->
 
 | Label | English | Français |
 |---|---|---|
@@ -62,7 +62,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Weight · balance / Masse · centrage
-<!-- id: fx-weight-balance-masse-centrage | concepts: agk-wb, study-formulas | level: PPL CPL -->
+<!-- id: fx-weight-balance-masse-centrage | concepts: agk-wb | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -75,7 +75,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Altitude · weather / Altitude · météo
-<!-- id: fx-altitude-weather-altitude-m-t-o | concepts: met-atmos, study-formulas | level: PPL CPL -->
+<!-- id: fx-altitude-weather-altitude-m-t-o | concepts: met-atmos | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -95,7 +95,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Stall · airspeed / Décrochage · vitesse
-<!-- id: fx-stall-airspeed-d-crochage-vitesse | concepts: agk-stall, agk-vspeeds, study-formulas | level: PPL CPL -->
+<!-- id: fx-stall-airspeed-d-crochage-vitesse | concepts: agk-stall, agk-vspeeds | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -114,7 +114,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Climb · descent / Montée · descente
-<!-- id: fx-climb-descent-mont-e-descente | concepts: agk-perfcalc, study-formulas | level: PPL CPL -->
+<!-- id: fx-climb-descent-mont-e-descente | concepts: agk-perfcalc | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -131,7 +131,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Turns / Virages
-<!-- id: fx-turns-virages | concepts: agk-load, study-formulas | level: PPL CPL -->
+<!-- id: fx-turns-virages | concepts: agk-load | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -144,7 +144,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Radio · runway / Radio · piste
-<!-- id: fx-radio-runway-radio-piste | concepts: agk-perfcalc, ifr-minima, study-formulas | level: PPL CPL -->
+<!-- id: fx-radio-runway-radio-piste | concepts: agk-perfcalc, ifr-minima | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -156,7 +156,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Conversions
-<!-- id: fx-conversions | concepts: nav-units, study-formulas | level: PPL CPL -->
+<!-- id: fx-conversions | concepts: nav-units | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -167,7 +167,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Timing shortcuts / Estimation du temps
-<!-- id: fx-timing-shortcuts-estimation-du-temps | concepts: nav-dr, study-formulas | level: PPL CPL -->
+<!-- id: fx-timing-shortcuts-estimation-du-temps | concepts: nav-dr | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -182,7 +182,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## CFS servicing · public facilities / Services · installations publiques CFS
-<!-- id: fx-cfs-servicing-public-facilities-services-ins | concepts: nav-pubs, agk-stall, study-formulas | level: PPL CPL -->
+<!-- id: fx-cfs-servicing-public-facilities-services-ins | concepts: nav-pubs, agk-stall | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -200,7 +200,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Communications · weather / Communications · météo
-<!-- id: fx-communications-weather-communications-m-t-o | concepts: law-atc, met-products, study-formulas | level: PPL CPL -->
+<!-- id: fx-communications-weather-communications-m-t-o | concepts: law-atc, met-products | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -236,7 +236,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## FIR · FIC
-<!-- id: fx-fir-fic | concepts: law-airspace, law-atc, study-formulas | level: PPL CPL -->
+<!-- id: fx-fir-fic | concepts: law-airspace, law-atc | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -247,7 +247,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## NOTAM · header & Q-line / En-tête et ligne Q
-<!-- id: fx-notam-header-q-line-en-t-te-et-ligne-q | concepts: nav-pubs, study-formulas | level: PPL CPL -->
+<!-- id: fx-notam-header-q-line-en-t-te-et-ligne-q | concepts: nav-pubs | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -265,7 +265,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Common NOTAM codes / Codes NOTAM courants
-<!-- id: fx-common-notam-codes-codes-notam-courants | concepts: nav-pubs, study-formulas, study-abbrev | level: PPL CPL -->
+<!-- id: fx-common-notam-codes-codes-notam-courants | concepts: nav-pubs | kind: glossary | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -284,7 +284,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Twilight · time zones · DST / Crépuscule · fuseaux · heure avancée
-<!-- id: fx-twilight-time-zones-dst-cr-puscule-fuseaux-h | concepts: law-oprules, law-night, nav-dr, study-formulas | level: PPL CPL -->
+<!-- id: fx-twilight-time-zones-dst-cr-puscule-fuseaux-h | concepts: law-oprules, law-night, nav-dr | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -311,7 +311,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Oxygen / Oxygène — CAR 605.31–32
-<!-- id: fx-oxygen-oxyg-ne-car-605-31-32 | concepts: law-oxygen, study-formulas | level: PPL CPL -->
+<!-- id: fx-oxygen-oxyg-ne-car-605-31-32 | concepts: law-oxygen | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -324,7 +324,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Passenger weights / Masse des passagers — AIM 2026-1 RAC 3.4.7
-<!-- id: fx-passenger-weights-masse-des-passagers-aim-20 | concepts: agk-wb, study-formulas | level: CPL -->
+<!-- id: fx-passenger-weights-masse-des-passagers-aim-20 | concepts: agk-wb | level: CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -343,7 +343,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Flight time · FDT · FDP / Temps de vol · service
-<!-- id: fx-flight-time-fdt-fdp-temps-de-vol-service | concepts: law-commercial, study-formulas | level: CPL -->
+<!-- id: fx-flight-time-fdt-fdp-temps-de-vol-service | concepts: law-commercial | level: CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -379,7 +379,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## De-/anti-icing · FPD · HOT / Dégivrage · antigivrage
-<!-- id: fx-de-anti-icing-fpd-hot-d-givrage-antigivrage | concepts: deice, study-formulas | level: CPL -->
+<!-- id: fx-de-anti-icing-fpd-hot-d-givrage-antigivrage | concepts: deice | level: CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -395,7 +395,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Over water · survival / Survol de l’eau · survie
-<!-- id: fx-over-water-survival-survol-de-l-eau-survie | concepts: law-elt, study-formulas | level: PPL CPL -->
+<!-- id: fx-over-water-survival-survol-de-l-eau-survie | concepts: law-elt | level: PPL CPL -->
 
 | Label | English | Français |
 |---|---|---|
@@ -413,7 +413,7 @@ Navigation and operational additions reviewed 19 Oct 2026; source editions and s
 ***
 
 ## Memory traps & examples / Pièges et exemples
-<!-- id: fx-memory-traps-examples-pi-ges-et-exemples | concepts: study-pebble, study-traps, study-formulas | level: PPL CPL -->
+<!-- id: fx-memory-traps-examples-pi-ges-et-exemples | concepts: nav-dr | kind: trap | level: PPL CPL -->
 
 **60 ≠ 60** · Rate/gradient: 60 converts hours→minutes. 1-in-60: rounded radians→degrees. / Taux/pente : conversion heures→minutes. 1 sur 60 : radians→degrés arrondis.
 

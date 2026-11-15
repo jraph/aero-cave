@@ -18,7 +18,7 @@
 - Instrument recency detail: [IFR rules, privileges & recency](../ifr/rules-privileges.md#instrument-rating-recency).
 ***
 #### Pebble
-<!-- id: law-recency-pebble | also: study-pebble | level: PPL CPL -->
+<!-- id: law-recency-pebble | level: PPL CPL -->
 
 - RECENCY CAR 401.05 `5 y: PIC/co-pilot, or review + exam | 24 mo: recurrent activity | passengers: 5 TKOF + 5 LDG in 6 mo, same category/class; night passengers → all at night | instrument: test/check within 24 mo, then 6 approaches in preceding 6 mo; no 6 h rule | separate clocks; solo legality ≠ passenger legality`
 ***

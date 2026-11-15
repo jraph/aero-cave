@@ -5,7 +5,7 @@
 
 ***
 #### Weight / balance
-<!-- id: agk-weight-balance | from: 01, 03, 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: agk-weight-balance | from: 01, 03, 06 | kind: formula | level: PPL CPL IR -->
 
 - `F:` `moment = weight × arm`.
 - `F:` `CG = Σmoment / Σweight`.
@@ -16,7 +16,7 @@
 - FWD CG: stable↑ stall↑ elevator/flare↓. AFT CG: stable↓ stall/spin recovery worse.
 ***
 #### Pebble
-<!-- id: agk-weight-balance-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: agk-weight-balance-pebble | level: PPL CPL IR -->
 
 - W&B `moment = weight × arm | CG = Σmoment / Σweight | shift: weight × distance shifted | within max gross ≠ within CG | check takeoff + landing + zero-fuel | FWD CG: stable↑ stall↑ flare authority↓ | AFT CG: stable↓, stall/spin recovery worse`
 ***

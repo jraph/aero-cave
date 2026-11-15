@@ -5,7 +5,7 @@
 
 ***
 #### True / magnetic / compass
-<!-- id: nav-true-magnetic-compass | from: 01, 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: nav-true-magnetic-compass | from: 01, 06 | kind: formula | level: PPL CPL IR -->
 
 - `F:` `TC ± WCA = TH`; `TH ± variation = MH`; `MH ± deviation = CH`.
 - Alternatively convert TC→MC, then apply WCA to obtain MH before deviation. Never substitute magnetic course for magnetic heading.
@@ -21,7 +21,7 @@
 - `T:` turbulence and turns make compass difficult; roll out using timed/lead technique.
 ***
 #### Pebble
-<!-- id: nav-headings-true-magnetic-compass-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: nav-headings-true-magnetic-compass-pebble | level: PPL CPL IR -->
 
 - HEADINGS `TC ± WCA = TH | TH ± variation = MH | MH ± deviation = CH | east is least, west is best | TVMDC | track = ground path, heading = nose, bearing = direction to object, course = planned line | never substitute magnetic course for magnetic heading`
 ***

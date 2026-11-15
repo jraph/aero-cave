@@ -4,7 +4,7 @@
 `RELEASE:` `OPS/STUDY-REF / AIRCRAFT-DEPENDENT` | `CANONICAL SOURCE:` `ifr_procedures_qrc_av_cave_v0_2.md` | `NOT FLIGHT AUTHORITY`
 ***
 #### Scope / discipline
-<!-- id: proc-scope-discipline | concepts: ifr, study-src | level: IR -->
+<!-- id: proc-scope-discipline | concepts: ifr | kind: source | level: IR -->
 
 - `SRC:` current CARs/TC AIM/CAP/CFS/NOTAM + aircraft POH/AFM/SOP. TC flight-test guide = training/evaluation guidance, not legal authority.
 - `M:` aviate→navigate→communicate; configure early; verify source/mode; brief missed before FAF.
@@ -309,13 +309,13 @@
 - `T:` do not reconfigure heads-down while still on runway.
 ***
 #### Pebble
-<!-- id: proc-pebble | concepts: ifr, study-pebble | level: IR -->
+<!-- id: proc-pebble | concepts: ifr | kind: pebble | level: IR -->
 
 - preflight `legal-equipped-current-fuel-performance-options` | clearance `CRAFT+` | dep brief `RWY-PATH-ALT-FREQ-GRAD-THREATS-FAIL` | gate source/course/alt/freq/squawk | hold `F-D-C-L-A-E` | approach `PROC-NAV-ALT-MIN-MAP-MISSED-RWY-THREATS` | before FAF source-mode-alt-min-missed | stable guide `1000 IMC/500 VMC` | NPA CDFA but never below MDA | missed `POWER-ATT-CONFIG-TRACK-NAV-TALK` | lost comm `7600 + AVEF + highest AME` | partial panel reliable instruments + ATC help | icing exit now | unable early.
 
 ***
 #### Sources & review status
-<!-- id: proc-sources-review-status | concepts: study-src | level: IR -->
+<!-- id: proc-sources-review-status | concepts: ifr | kind: source | level: IR -->
 
 See the [separate review record](../CONTENT_REVIEW.md#historical-source-review-notes) for source editions, check dates and earlier validation notes.
 ***

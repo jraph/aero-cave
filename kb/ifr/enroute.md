@@ -44,7 +44,7 @@
 - `T:` STAR vertical restrictions above assigned altitude remain mandatory unless cancelled.
 ***
 #### Pebble
-<!-- id: ifr-enroute-pebble | also: study-pebble -->
+<!-- id: ifr-enroute-pebble -->
 
 - CLEARANCE `limit, route, altitude, departure/restrictions, frequency, squawk + void/release/hold-for-release | clearance ≠ takeoff clearance | “cleared for the approach” ≠ descent below minima | “cleared to airport” may be a clearance limit, not landing clearance`
 - ALTITUDES `MEA obstacle + nav reception | MOCA obstacle, nav limited near NAVAID | MRA receive fix-defining signal | AMA area minimum (replaced GASA), standard temp/pressure | MSA emergency/sector | MVA ATC radar, normally unpublished`

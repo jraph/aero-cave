@@ -31,7 +31,7 @@
 - `T:` alternate air often warmer/unfiltered and changes mixture/power.
 ***
 #### Pebble
-<!-- id: carb-ice-pebble | also: study-pebble -->
+<!-- id: carb-ice-pebble -->
 
 - CARB ICE `fuel vaporization + venturi → throat well below OAT | possible in warm weather, well above freezing | humid + partial power/descent | fixed pitch: RPM↓ then roughness | carb heat per POH: RPM drop/roughness may worsen first | ≠ structural icing`
 ***

@@ -5,7 +5,7 @@
 
 ***
 #### Source / mindset
-<!-- id: ifr-source-mindset | from: 09 | also: study-traps, study-src -->
+<!-- id: ifr-source-mindset | from: 09 | kind: trap -->
 
 - AIM = guidance, not law. Current CAP/CAP GEN, CFS, AIP SUP and NOTAM govern published operational data.
 - Local `CAP_GEN_03-19-2026.pdf` is expired; cycle at last review (14 Nov 2026) began `2026-10-29`.
@@ -13,7 +13,7 @@
 - IFR = clearance + obstacle clearance + nav accuracy + comms + fuel/alternate logic + workload discipline.
 ***
 #### Source / exam frame
-<!-- id: ifr-source-exam-frame | from: 10 | also: study-traps, study-src -->
+<!-- id: ifr-source-exam-frame | from: 10 | kind: trap -->
 
 - `SRC:` TP 691E topic anchor; CARs/STD 421 legal req; TC AIM + current CAP/CFS/AIP SUP/NOTAM for procedures.
 - CAP/CFS cycle at last review (14 Nov 2026): `2026-10-29` to `2026-12-24`; local March/2025 copies are reference-only.
@@ -23,7 +23,7 @@
 - IR knowledge req: CARs, IFR rules/procedures, met, instruments, radio/radar, nav. Experience/skill are separate from exam.
 ***
 #### INRAT attack method
-<!-- id: ifr-inrat-attack-method | from: 10 | also: study-traps -->
+<!-- id: ifr-inrat-attack-method | from: 10 | kind: trap -->
 
 - Read question stem first: asks `legal?`, `safe?`, `next?`, `minimum?`, `forecast?`, `plate?`, `lost comm?`.
 - Extract: aircraft category, equipment, departure/dest/alternate, ETA, route, freezing level, winds, NOTAM, CAP note, RASS, lighting, RVR/vis, TAF change group.
@@ -31,13 +31,13 @@
 - `T:` many wrong answers are “operationally plausible but legally wrong” or “legal but unsafe.”
 ***
 #### INRAT plate question method
-<!-- id: plate-inrat-plate-question-method | from: 11 | also: ifr-plates, study-traps | level: IR -->
+<!-- id: plate-inrat-plate-question-method | from: 11 | also: ifr-plates | kind: trap | level: IR -->
 
 - `1` identify procedure/minima line; `2` check category; `3` read notes/RASS/cold; `4` check altimeter source; `5` apply lighting/runway/NOTAM; `6` compare weather/RVR; `7` determine legal/safe action.
 - `T:` exam distractors often ignore a note or use wrong category/minima line.
 ***
 #### INRAT high-yield traps
-<!-- id: ifr-inrat-high-yield-traps | from: 10 | also: study-traps -->
+<!-- id: ifr-inrat-high-yield-traps | from: 10 | kind: trap -->
 
 - Legal source vs guidance source. RVR vs ground vis vs advisory vis. Alternate minima vs landing minima vs approach ban. RASS/cold-temp corrections.
 - Lost comm route/alt/time. STAR lateral vs vertical clearance. Visual/contact approach IFR status. Hold EFC/fuel.
@@ -45,7 +45,7 @@
 - Fuel includes approach+missed at destination before alternate. `TEMPO/BECMG/PROB` logic. Uncontrolled IFR comms/separation. NOTAM invalidates NAVAID/runway/procedure.
 ***
 #### Sources & review status · card 09
-<!-- id: ifr-sources-review-status-core | from: 09 | also: study-src -->
+<!-- id: ifr-sources-review-status-core | from: 09 | kind: source -->
 
 See the [separate review record](../../CONTENT_REVIEW.md#historical-source-review-notes) for source editions, check dates and earlier validation notes.
 ***

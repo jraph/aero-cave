@@ -54,7 +54,7 @@
 - Jet position helps locate fronts/system movement.
 ***
 #### Pebble
-<!-- id: met-turb-pebble | also: study-pebble -->
+<!-- id: met-turb-pebble -->
 
 - TURB `mechanical = wind over terrain/buildings, strongest low/lee | convective | frontal | wave/rotor | CAT near jet stream/strong shear, without cloud | slow to turbulence penetration speed per POH | Va changes with weight`
 - WAVE `strong wind ⟂ ridge + stable layer | smooth aloft, severe rotor below/lee | lenticular ACSL = clue | downdraft may exceed climb capability | aerodrome ceiling may not clear enroute terrain`

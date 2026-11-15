@@ -42,7 +42,7 @@
 - `T:` ELT does not replace flight plan/itinerary closure or survival planning.
 ***
 #### Pebble
-<!-- id: law-elt-survival-equipment-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: law-elt-survival-equipment-pebble | level: PPL CPL IR -->
 
 - ELT `406 MHz distress + 121.5 homing | FTU flight training ≤25 NM DEP exempt, not private flights generally | unserviceable → 605.39 conditions | 121.5 test: first 5 min of UTC hour, ≤5 s; 406 per MFR only`
 - FLOTATION 602.62 `water TKOF/LDG or cannot reach shore engine-out: one per person | landplane >50 NM from shore: life preserver each, accessible while seated`

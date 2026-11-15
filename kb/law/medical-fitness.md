@@ -23,7 +23,7 @@
 - `T:` licence document does not expire like medical privileges do.
 ***
 #### Pebble
-<!-- id: law-medical-fitness-pebble | also: study-pebble | level: PPL CPL -->
+<!-- id: law-medical-fitness-pebble | level: PPL CPL -->
 
 - FITNESS CAR 602.02–.03 `no duty when unfit | no alcohol within 12 h or while affected | legal medication ≠ fit to fly`
 - MEDICAL `PPL: Cat 3 (or Cat 1), <40 = 60 mo, 40+ = 24 mo | CPL hire/reward: Cat 1, 12 mo; 6 mo if ≥40 AND single-pilot with passengers, OR ≥60 | validity from first day of month following the exam (404.04) | licence document ≠ medical validity`

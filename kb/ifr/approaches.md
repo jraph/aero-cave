@@ -43,7 +43,7 @@
 - `T:` “GPS direct” ≠ cleared route unless ATC cleared.
 ***
 #### Descent / approach math
-<!-- id: ifr-descent-approach-math | from: 10 | also: study-formulas -->
+<!-- id: ifr-descent-approach-math | from: 10 | kind: formula -->
 
 - `F:` 3° path ≈ `300 ft/NM`; required ROD ≈ `GS × 5`.
 - `F:` descent gradient ft/NM → `ROC/ROD fpm = GS × ft/NM / 60`.
@@ -87,28 +87,28 @@
 - `T:` use ground speed, not IAS. Wind change on final can make timing inaccurate; use primary MAP if available.
 ***
 #### GNSS / RNAV plate traps
-<!-- id: plate-gnss-rnav-plate-traps | from: 11 | also: nav-gnss, ifr-plates, study-traps | level: IR -->
+<!-- id: plate-gnss-rnav-plate-traps | from: 11 | also: nav-gnss, ifr-plates | kind: trap | level: IR -->
 
 - Verify database current, correct airport/runway/procedure/transition, approach mode armed/active, RAIM/WAAS, CDI sensitivity, OBS/SUSP.
 - Do not use expired database for IFR approach unless explicitly permitted/verified by approved procedure and data.
 - `T:` `Direct-To FAF` can destroy sequencing; missed approach may not auto-sequence until SUSP cancelled correctly.
 ***
 #### ILS / LOC traps
-<!-- id: plate-ils-loc-traps | from: 11 | also: nav-radio, ifr-plates, study-traps | level: IR -->
+<!-- id: plate-ils-loc-traps | from: 11 | also: nav-radio, ifr-plates | kind: trap | level: IR -->
 
 - Identify LOC frequency, set front course, intercept from below glidepath, verify GS alive/captured, monitor raw data.
 - LOC-only approach uses LOC minima and MDA, not ILS DA.
 - `T:` false glideslope if intercept from above; back-course/reverse sensing depends equipment and procedure.
 ***
 #### VOR / NDB / DME traps
-<!-- id: plate-vor-ndb-dme-traps | from: 11 | also: nav-radio, ifr-plates, study-traps | level: IR -->
+<!-- id: plate-vor-ndb-dme-traps | from: 11 | also: nav-radio, ifr-plates | kind: trap | level: IR -->
 
 - VOR radials are FROM; NDB bearing is TO; DME is slant range.
 - DME arc: lead radial/turn anticipation; station passage/DME switch can confuse.
 - `T:` unserviceable navaid or no identification = no approach using that navaid.
 ***
 #### Pebble
-<!-- id: ifr-approaches-pebble | also: study-pebble -->
+<!-- id: ifr-approaches-pebble -->
 
 - BRIEF `plate-wx-nav-alt-min-MAP-missed-rwy-threats | CDI source errors kill`
 - TYPES `precision = ILS, lateral + vertical, DA/DH | APV = LPV, LNAV/VNAV, vertical guidance but not precision, DA | NPA = LOC/VOR/NDB/LNAV, MDA | SCDA/CDFA ≠ permission below MDA | LPV ≠ ILS | uncompensated Baro-VNAV: temperature limits`

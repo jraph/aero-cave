@@ -61,7 +61,7 @@
 - `T:` advisory visibility, approach-ban threshold and DA/MDA visual-reference rule are three different concepts.
 ***
 #### Airspace classes / entry
-<!-- id: law-airspace-entry-memory | from: 01, 04| level: PPL CPL -->
+<!-- id: law-airspace-entry-memory | from: 01, 04 | level: PPL CPL -->
 
 | Class | VFR memory |
 |---|---|
@@ -97,7 +97,7 @@
 - Sources: [TC AIM 2026-2 RAC 2.8.1–2.8.7](https://tc.canada.ca/sites/default/files/2026-10/aim-2026-2_rac_en.pdf) · [Standard 821.01 definitions](https://tc.canada.ca/en/corporate-services/acts-regulations/list-regulations/sor-96-433/standards/standard-821-canadian-domestic-air-traffic-control-separation-standards-canadian-aviation-regulations-cars)
 ***
 #### Pebble
-<!-- id: law-airspace-vfr-minima-cruising-altitudes-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: law-airspace-vfr-minima-cruising-altitudes-pebble | level: PPL CPL IR -->
 
 - CLASSES `A IFR only | B clearance + specified equipment/qualification (CVFR) | C clearance before entry | D two-way comm before entry | E no VFR clearance generally, IFR controlled | F CYR/CYA/CYD | G uncontrolled, CARs still apply | class rules ≠ weather minima`
 - ATC SERVICE `B SEP ALL | C SEP IFR–IFR, CR IFR–VFR, TFC all | D SEP IFR–IFR only | E SEP IFR–IFR only | clearance/TFC ≠ collision-avoidance transfer`

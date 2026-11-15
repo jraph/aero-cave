@@ -32,7 +32,7 @@
 - `T:` a school checklist cannot authorize something prohibited by the POH/placard.
 ***
 #### Core aircraft documents
-<!-- id: law-core-aircraft-documents | from: 01, 04| level: PPL CPL -->
+<!-- id: law-core-aircraft-documents | from: 01, 04 | level: PPL CPL -->
 
 | Document | Rule |
 |---|---|
@@ -121,7 +121,7 @@
 - `M:` `REQUIRED? → SERVICEABLE? → DEFER LEGALLY? → SAFE?`
 ***
 #### Pebble
-<!-- id: law-airworthiness-documents-maintenance-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: law-airworthiness-documents-maintenance-pebble | level: PPL CPL IR -->
 
 - DOCS `CofR on board | flight authority in effect, normally carried | AFM/POH if required | journey log unless 605.95 exception | radio licence if issued | insurance required (606.02), not a universal carry rule | valid document ≠ airworthy aircraft`
 - REG `CoR ≠ proof of title | MTOW not printed on CoR | transfer → CoR cancelled, TC in writing ≤7 days | interim ≤3 mo, no second successive | temporary ≤3 mo | provisional route-specific | CoA independent of CoR`

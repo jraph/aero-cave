@@ -12,7 +12,7 @@
 - `T:` CFS page still requires current NOTAM/AIP SUP; a Trigger NOTAM is only a pointer.
 ***
 #### Publication currency
-<!-- id: ref-current-publication-cycle-c01 | from: 01| level: PPL CPL -->
+<!-- id: ref-current-publication-cycle-c01 | from: 01 | level: PPL CPL -->
 
 - Publication schedules differ by product; do not assign a universal 56-day validity to all charts and publications.
 - `P preflight:` current publication→NOTAM→AIP SUP/AIC→airport/procedure page→aircraft data.
@@ -20,7 +20,7 @@
 - `[NAV CANADA publication schedule; AIC 009/2026]`
 ***
 #### Pebble
-<!-- id: nav-publications-cfs-cap-notam-currency-pebble | also: study-pebble | level: PPL CPL -->
+<!-- id: nav-publications-cfs-cap-notam-currency-pebble | level: PPL CPL -->
 
 - CFS `ID/elevation → RWY → circuit → FREQ/MF/ATF → lighting/PCL → PRO → CAUTION → services/fuel → airspace | sections: General, Aerodrome Directory, Planning, Radio Nav/Comm, Military, Emergency | CFS page still needs current NOTAM/AIP SUP | Trigger NOTAM = pointer only | schedules differ by product`
 ***

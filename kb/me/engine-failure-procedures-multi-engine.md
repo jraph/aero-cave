@@ -64,7 +64,7 @@
 - `T:` high power + low speed + dirty config = Vmc trap.
 ***
 #### Pebble
-<!-- id: me-engine-failure-procedures-multi-engine-pebble | also: study-pebble | level: ME -->
+<!-- id: me-engine-failure-procedures-multi-engine-pebble | level: ME -->
 
 - FLOW `Control–Config–Identify–Verify–Feather–Secure–Checklist | dead foot = dead engine | identify before verify; verify before feather | control first, checklist second | clean + feather + blue line`
 - OEI `pitch Vyse/Vxse | bank toward good engine | cannot climb → land under control; do not pull below Vyse toward Vmc | high power + low speed + dirty = Vmc trap | gear/flap only when landing assured | OEI go-around may be unavailable`

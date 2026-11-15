@@ -29,7 +29,7 @@
 - `T:` prevailing visibility, flight visibility, ground visibility, runway visibility and RVR are different legal/operational concepts.
 ***
 #### Weather codes
-<!-- id: wxp-wx-codes | from: 05 | also: study-abbrev -->
+<!-- id: wxp-wx-codes | from: 05 | kind: glossary -->
 
 - Intensity: `-` light | no sign moderate | `+` heavy. Proximity `VC`.
 - Descriptors: `MI` shallow | `BC` patches | `PR` partial | `DR` low drifting | `BL` blowing | `SH` showers | `TS` thunderstorm | `FZ` freezing.
@@ -60,7 +60,7 @@
 - `T:` rapidly falling pressure often accompanies strengthening system/wind/weather deterioration.
 ***
 #### Pebble
-<!-- id: met-metar-pebble | also: study-pebble -->
+<!-- id: met-metar-pebble -->
 
 - SCAN `ID-TIME-WIND-VIS-WX-CLOUD-T/TD-ALT-RMK`
 - WIND `dddffGggKT, true direction | VRB | XW = wind×sin angle, HW = wind×cos angle | 30° = ½ / 45° ≈ 0.7 / 60° ≈ 0.87 / 90° = full | use gust for margin`

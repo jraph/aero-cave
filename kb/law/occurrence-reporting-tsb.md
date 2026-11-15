@@ -19,7 +19,7 @@
 `M:` **TSB accident: fatal/serious/structural DMG/missing | incident >2,250kg OR Part VII | ASAP fastest; balance ≤30d | preserve evidence**.
 ***
 #### Pebble
-<!-- id: law-occurrence-reporting-tsb-pebble | also: study-pebble | level: PPL CPL -->
+<!-- id: law-occurrence-reporting-tsb-pebble | level: PPL CPL -->
 
 - TSB `accident: fatal/serious injury, significant structural damage, missing/inaccessible ACFT | listed incidents: MCTOW >2,250 kg OR Part VII AOC | report ASAP by quickest means; remaining info ≤30 d | preserve evidence | 2,250 kg applies to incidents, not accidents`
 ***

@@ -7,7 +7,7 @@
 ***
 
 **Basic aircraft & aerodrome wording / Vocabulaire aéronefs et aérodromes**
-<!-- id: abbr-basic-aircraft-aerodrome-wording-vocabulaire | concepts: nav-pubs, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-basic-aircraft-aerodrome-wording-vocabulaire | concepts: nav-pubs | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -65,7 +65,7 @@
 ***
 
 **Position & structure / Position et structure**
-<!-- id: abbr-position-structure-position-et-structure | concepts: nav-pubs, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-position-structure-position-et-structure | concepts: nav-pubs | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -97,7 +97,7 @@
 ***
 
 **Clouds & coverage / Nuages et couverture**
-<!-- id: abbr-clouds-coverage-nuages-et-couverture | concepts: met-stab, met-products, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-clouds-coverage-nuages-et-couverture | concepts: met-stab, met-products | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -129,7 +129,7 @@
 ***
 
 **Precipitation & obscuration / Précipitations et obscurcissement**
-<!-- id: abbr-precipitation-obscuration-pr-cipitations-et | concepts: met-stab, met-products, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-precipitation-obscuration-pr-cipitations-et | concepts: met-stab, met-products | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -161,7 +161,7 @@
 ***
 
 **Trends & hazards / Évolution et dangers**
-<!-- id: abbr-trends-hazards-volution-et-dangers | concepts: met-haz, met-products, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-trends-hazards-volution-et-dangers | concepts: met-haz, met-products | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -193,7 +193,7 @@
 ***
 
 **Communications / Communications**
-<!-- id: abbr-communications-communications | concepts: law-atc, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-communications-communications | concepts: law-atc | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -225,7 +225,7 @@
 ***
 
 **Headings, weather & access / Rubriques, météo et accès**
-<!-- id: abbr-headings-weather-access-rubriques-m-t-o-et-a | concepts: nav-pubs, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-headings-weather-access-rubriques-m-t-o-et-a | concepts: nav-pubs | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -257,7 +257,7 @@
 ***
 
 **Availability & time / Disponibilité et heures**
-<!-- id: abbr-availability-time-disponibilit-et-heures | concepts: nav-pubs, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-availability-time-disponibilit-et-heures | concepts: nav-pubs | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -289,7 +289,7 @@
 ***
 
 **Runways & pavement / Pistes et chaussées**
-<!-- id: abbr-runways-pavement-pistes-et-chauss-es | concepts: nav-pubs, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-runways-pavement-pistes-et-chauss-es | concepts: nav-pubs | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -321,7 +321,7 @@
 ***
 
 **Lighting & navigation / Balisage et navigation**
-<!-- id: abbr-lighting-navigation-balisage-et-navigation | concepts: nav-pubs, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-lighting-navigation-balisage-et-navigation | concepts: nav-pubs | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -353,7 +353,7 @@
 ***
 
 **Airspace, units & servicing / Espace aérien, unités et entretien**
-<!-- id: abbr-airspace-units-servicing-espace-a-rien-unit | concepts: nav-pubs, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-airspace-units-servicing-espace-a-rien-unit | concepts: nav-pubs | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -385,7 +385,7 @@
 ***
 
 **Weather descriptors & combinations / Descripteurs et combinaisons météo**
-<!-- id: abbr-weather-descriptors-combinations-descripteur | concepts: met-products, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-weather-descriptors-combinations-descripteur | concepts: met-products | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -416,7 +416,7 @@
 ***
 
 **Weather report fields & remarks / Champs et remarques météo**
-<!-- id: abbr-weather-report-fields-remarks-champs-et-rema | concepts: met-products, met-metar, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-weather-report-fields-remarks-champs-et-rema | concepts: met-products, met-metar | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -443,7 +443,7 @@
 ***
 
 **Additional CFS / IFR wording / Autres termes CFS / IFR**
-<!-- id: abbr-additional-cfs-ifr-wording-autres-termes-cfs | concepts: nav-pubs, study-abbrev | level: IR -->
+<!-- id: abbr-additional-cfs-ifr-wording-autres-termes-cfs | concepts: nav-pubs | level: IR -->
 
 | Code | English | Français |
 |---|---|---|
@@ -476,7 +476,7 @@
 ***
 
 **Memory traps & examples / Pièges et exemples**
-<!-- id: abbr-memory-traps-examples-pi-ges-et-exemples | concepts: study-pebble, study-traps, study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-memory-traps-examples-pi-ges-et-exemples | concepts: nav-pubs | kind: trap | level: PPL CPL IR ME -->
 
 | Code | English | Français |
 |---|---|---|
@@ -567,7 +567,7 @@
 ***
 
 **TC flight-crew examinations / Examens du personnel navigant (TC)**
-<!-- id: abbr-tc-flight-crew-examinations-examens-du-perso | concepts: study-abbrev | level: PPL CPL IR ME -->
+<!-- id: abbr-tc-flight-crew-examinations-examens-du-perso | concepts: law-lic | level: PPL CPL IR ME -->
 
 **Scope / Portée** · Selected TC examination meanings supplementary to the MANAB/CFS study sections (not a claim of MANAB/CFS authority). English entries follow the [TC list](https://tc.canada.ca/en/aviation/licensing-pilots-personnel/flight-crew-licences-permits-ratings/flight-crew-examinations/abbreviations-acronyms-flight-crew-examinations); French = concise study translation, not certified official terminology. / Sens complémentaires d'examens TC (non présentés comme définitions MANAB/CFS). Français = traduction d'étude.
 

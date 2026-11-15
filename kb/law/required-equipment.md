@@ -37,7 +37,7 @@
 - `T:` “IFR-certified GPS installed” ≠ aircraft/procedure/current-database/RAIM/approval requirements all met.
 ***
 #### Pebble
-<!-- id: law-required-equipment-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: law-required-equipment-pebble | level: PPL CPL IR -->
 
 - DAY VFR CAR 605.14 `altimeter (sensitive in controlled), ASI, magnetic direction, engine/prop gauges, fuel quantity each main tank, gear indication, required radio | GPS/tablet ≠ required instruments`
 - NIGHT VFR CAR 605.16 `day equipment + sensitive altimeter + turn/slip + electrical supply + spare fuses ≥50% per rating + DG if aerodrome not visible + instrument and aircraft lights | passengers → landing light | commercial (VI-4, VII-2–5) → AI + VSI + ASI anti-ice + OAT, passengers or not`

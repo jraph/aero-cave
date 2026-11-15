@@ -60,7 +60,7 @@
 - Virga = precip evaporates before ground; may indicate downdrafts/microburst potential.
 ***
 #### Pebble
-<!-- id: met-stab-pebble | also: study-pebble -->
+<!-- id: met-stab-pebble -->
 
 - LAPSE `DALR ≈3°C/1000 ft | SALR ≈1.5°C/1000 ft average, varies | environment cools faster than DALR → absolutely unstable | slower than SALR / inversion → absolutely stable | between → conditionally unstable`
 - AIR `stable = STRATUS-SMOOTH-POOR VIS-steady precip | unstable = CU/TCU/CB-TURB-SHOWERS, better vis between cloud`

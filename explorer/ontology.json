@@ -1,5 +1,15 @@
 {
   "_about": "Aero CAVE ontology (SKOS-style): the application's core index. concepts = id, en/fr prefLabel, broader (polyhierarchy allowed), related, alt (altLabels used by search). A unit (one #### section) declares its own concepts and level in its ID comment: concept files (kb/<domain>/, one file per concept) use the file header 'concept:' plus per-unit 'also:'; cards use 'concepts:'. paths = licence levels. views = named collections: a unit belongs when its level matches (if set) AND (no concepts/re given, OR one of its concepts is at/under a listed concept, OR its heading matches re). Each TC guide in syllabus.json also becomes a view of the units its items cite (built, not stored here). kb = concept-file folders; cards = procedure/reference cards kept as single files. Editorial structure, not a Transport Canada taxonomy.",
+  "kinds": [
+    {"id": "knowledge", "en": "Knowledge", "fr": "Connaissances"},
+    {"id": "procedure", "en": "Procedures & QRCs", "fr": "Procédures et QRC"},
+    {"id": "formula", "en": "Formulas", "fr": "Formules"},
+    {"id": "trap", "en": "Exam traps & methods", "fr": "Pièges et méthodes d’examen"},
+    {"id": "pebble", "en": "Pebbles", "fr": "Pebbles"},
+    {"id": "glossary", "en": "Abbreviations & codes", "fr": "Abréviations et codes"},
+    {"id": "aircraft", "en": "Aircraft data (C150M)", "fr": "Données avion (C150M)"},
+    {"id": "source", "en": "Sources", "fr": "Sources"}
+  ],
   "paths": [{"id": "PPL", "en": "PPL · Private (PPAER)", "fr": "PPL · Privé (PPAER)"}, {"id": "CPL", "en": "CPL · Commercial (CPAER)", "fr": "CPL · Professionnel (CPAER)"}, {"id": "IR", "en": "IR · Instrument (INRAT)", "fr": "IFR · Vol aux instruments (INRAT)"}, {"id": "ME", "en": "ME · Multi-engine", "fr": "Multimoteur"}],
   "kb": {
     "MET": {"dir": "kb/met", "en": "Knowledge · Meteorology", "fr": "Connaissances · Météorologie"},
@@ -10,14 +20,14 @@
     "NAV": {"dir": "kb/nav", "en": "Knowledge · Navigation", "fr": "Connaissances · Navigation"}
   },
   "cards": {
-    "02": {"file": "cheatsheets/02_flight_training_procedures_av_cave_v0_2.md", "en": "Flight training & procedures", "fr": "Entraînement et procédures"},
-    "05": {"file": "cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md", "en": "Weather decoding & go/no-go", "fr": "Décodage météo et décision"},
-    "07": {"file": "cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md", "en": "C150M POH", "fr": "POH C150M"},
-    "08": {"file": "cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md", "en": "Aircraft systems & failures", "fr": "Systèmes et pannes"},
-    "12": {"file": "cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md", "en": "IFR procedures", "fr": "Procédures IFR"},
-    "17": {"file": "cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md", "en": "Pilot qualifications & operator checks", "fr": "Qualifications et contrôles", "reader": "readers/17_Pilot_Qualifications_Operator_Checks_EN_FR.html"},
-    "F": {"file": "cheatsheets/CPAER_Formulas_Recall_EN_FR.md", "en": "CPAER formulas & quick recall", "fr": "Formules et rappels CPAER", "reader": "readers/CPAER_Formulas_Recall_EN_FR.html"},
-    "A": {"file": "cheatsheets/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.md", "en": "Abbreviations · MANAB / CFS / TC", "fr": "Abréviations · MANAB / CFS / TC", "boldHeadings": true, "reader": "readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html"}
+    "02": {"file": "cheatsheets/02_flight_training_procedures_av_cave_v0_2.md", "kind": "procedure", "en": "Flight training & procedures", "fr": "Entraînement et procédures"},
+    "05": {"file": "cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md", "kind": "procedure", "en": "Weather decoding & go/no-go", "fr": "Décodage météo et décision"},
+    "07": {"file": "cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md", "kind": "aircraft", "en": "C150M POH", "fr": "POH C150M"},
+    "08": {"file": "cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md", "kind": "procedure", "en": "Aircraft systems & failures", "fr": "Systèmes et pannes"},
+    "12": {"file": "cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md", "kind": "procedure", "en": "IFR procedures", "fr": "Procédures IFR"},
+    "17": {"file": "cheatsheets/17_pilot_qualifications_operator_checks_cave_en_fr.md", "kind": "knowledge", "en": "Pilot qualifications & operator checks", "fr": "Qualifications et contrôles", "reader": "readers/17_Pilot_Qualifications_Operator_Checks_EN_FR.html"},
+    "F": {"file": "cheatsheets/CPAER_Formulas_Recall_EN_FR.md", "kind": "formula", "en": "CPAER formulas & quick recall", "fr": "Formules et rappels CPAER", "reader": "readers/CPAER_Formulas_Recall_EN_FR.html"},
+    "A": {"file": "cheatsheets/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.md", "kind": "glossary", "en": "Abbreviations · MANAB / CFS / TC", "fr": "Abréviations · MANAB / CFS / TC", "boldHeadings": true, "reader": "readers/Aviation_Abbreviations_MANAB_CFS_TC_EN_FR.html"}
   },
   "views": [
     {"id": "o1", "group": "ops", "en": "Weather brief & go / no-go", "fr": "Exposé météo et décision", "concepts": ["met-products", "met-decide", "met-haz"]},
@@ -26,8 +36,8 @@
     {"id": "o4", "group": "ops", "en": "Enroute: airspace, ATC, navigation, holding", "fr": "En route : espace aérien, ATC, navigation, attente", "concepts": ["law-airspace", "law-atc", "ifr-enr", "ifr-hold", "nav-radio", "nav-gnss", "nav-dr", "met-atmos"]},
     {"id": "o5", "group": "ops", "en": "Arrival, approach & landing", "fr": "Arrivée, approche et atterrissage", "concepts": ["ops-ldg", "ifr-app"]},
     {"id": "o6", "group": "ops", "en": "Abnormal & emergency", "fr": "Anormal et urgence", "concepts": ["emg"]},
-    {"id": "o7", "group": "ops", "en": "Quick reference: formulas, speeds, codes", "fr": "Aide-mémoire : formules, vitesses, codes", "concepts": ["study-formulas", "study-abbrev", "agk-vspeeds", "nav-units"]},
-    {"id": "o8", "group": "ops", "en": "Pebbles: last-minute recall", "fr": "Pebbles : rappel de dernière minute", "concepts": ["study-pebble"]}
+    {"id": "o7", "group": "ops", "en": "Quick reference: formulas, speeds, codes", "fr": "Aide-mémoire : formules, vitesses, codes", "kinds": ["formula", "glossary"], "concepts": ["agk-vspeeds", "nav-units"]},
+    {"id": "o8", "group": "ops", "en": "Pebbles: last-minute recall", "fr": "Pebbles : rappel de dernière minute", "kinds": ["pebble"]}
   ],
   "concepts": [
     {"id": "law", "en": "Air law & procedures", "fr": "Droit aérien et procédures", "broader": [], "related": ["ifr"]},
@@ -51,8 +61,8 @@
     {"id": "nav-compass", "en": "Headings: true / magnetic / compass", "fr": "Caps : vrai / magnétique / compas", "broader": ["nav", "agk-inst"], "related": []},
     {"id": "nav-radio", "en": "Radio navigation (VOR / ADF / DME / ILS)", "fr": "Radionavigation (VOR / ADF / DME / ILS)", "broader": ["nav"], "related": ["ifr-app-fly"], "alt": ["VOR", "ADF", "NDB", "DME", "VOT"]},
     {"id": "nav-gnss", "en": "GNSS / RNAV", "fr": "GNSS / RNAV", "broader": ["nav"], "related": ["ifr-app-fly"], "alt": ["GPS", "RAIM", "WAAS", "GNSS"]},
-    {"id": "nav-pubs", "en": "Publications: CFS / CAP / NOTAM & currency", "fr": "Publications : CFS / CAP / NOTAM et validité", "broader": ["nav"], "related": ["ifr-plates", "study-abbrev"], "alt": ["CFS", "CAP", "NOTAM", "AIP SUP", "AIRAC"]},
-    {"id": "nav-units", "en": "Units & conversions", "fr": "Unités et conversions", "broader": ["nav", "study-formulas"], "related": []},
+    {"id": "nav-pubs", "en": "Publications: CFS / CAP / NOTAM & currency", "fr": "Publications : CFS / CAP / NOTAM et validité", "broader": ["nav"], "related": ["ifr-plates"], "alt": ["CFS", "CAP", "NOTAM", "AIP SUP", "AIRAC"]},
+    {"id": "nav-units", "en": "Units & conversions", "fr": "Unités et conversions", "broader": ["nav"], "related": []},
     {"id": "met", "en": "Meteorology", "fr": "Météorologie", "broader": [], "related": []},
     {"id": "met-atmos", "en": "Atmosphere, altimetry & density altitude", "fr": "Atmosphère, altimétrie et altitude-densité", "broader": ["met"], "related": ["agk-perf", "agk-pitot"], "alt": ["ISA", "density altitude", "pressure altitude", "QNH"]},
     {"id": "met-cold", "en": "Cold-temperature altitude corrections", "fr": "Corrections d’altitude par temps froid", "broader": ["met-atmos", "ifr-app"], "related": ["ifr-minima"]},
@@ -65,7 +75,7 @@
     {"id": "deice", "en": "Ground de-/anti-icing & clean aircraft", "fr": "Dégivrage / antigivrage au sol et aéronef propre", "broader": ["met-icing", "law-oprules"], "related": [], "alt": ["HOT", "holdover", "Type I", "Type IV", "clean aircraft"]},
     {"id": "met-ts", "en": "Thunderstorms & convection", "fr": "Orages et convection", "broader": ["met-haz"], "related": ["met-turb"], "alt": ["CB", "thunderstorm", "orage", "convection"]},
     {"id": "met-turb", "en": "Turbulence, wind shear & mountain wave", "fr": "Turbulence, cisaillement et ondes orographiques", "broader": ["met-haz"], "related": [], "alt": ["CAT", "LLWS", "microburst", "mountain wave", "rotor"]},
-    {"id": "met-products", "en": "Weather products & decoding", "fr": "Produits météo et décodage", "broader": ["met"], "related": ["study-abbrev"]},
+    {"id": "met-products", "en": "Weather products & decoding", "fr": "Produits météo et décodage", "broader": ["met"], "related": []},
     {"id": "met-metar", "en": "METAR / SPECI", "fr": "METAR / SPECI", "broader": ["met-products"], "related": [], "alt": ["SPECI", "AUTO", "RVR", "ceiling", "plafond"]},
     {"id": "met-taf", "en": "TAF", "fr": "TAF", "broader": ["met-products"], "related": ["ifr-alt"], "alt": ["TEMPO", "BECMG", "PROB", "FM"]},
     {"id": "met-gfa", "en": "GFA, SIGMET / AIRMET, PIREP & upper winds", "fr": "GFA, SIGMET / AIRMET, PIREP et vents en altitude", "broader": ["met-products"], "related": [], "alt": ["SIGMET", "AIRMET", "PIREP", "FB", "FD", "upper winds"]},
@@ -91,7 +101,6 @@
     {"id": "ops-to", "en": "Start, taxi, takeoff & climb", "fr": "Démarrage, roulage, décollage et montée", "broader": ["agk-ops"], "related": ["agk-perfcalc"]},
     {"id": "ops-ldg", "en": "Circuit, approach & landing", "fr": "Circuit, approche et atterrissage", "broader": ["agk-ops"], "related": ["agk-perfcalc"]},
     {"id": "agk-hf", "en": "Human factors & decision-making", "fr": "Facteurs humains et prise de décision", "broader": ["agk"], "related": [], "alt": ["IMSAFE", "PAVE", "DECIDE", "5P", "hypoxia", "ADM", "TEM"]},
-    {"id": "type-c150", "en": "C150M — type-specific data", "fr": "C150M — données propres au type", "broader": ["agk"], "related": ["agk-vspeeds"]},
     {"id": "emg", "en": "Emergencies & abnormals", "fr": "Urgences et situations anormales", "broader": [], "related": []},
     {"id": "emg-engine", "en": "Engine failure & forced landing", "fr": "Panne moteur et atterrissage forcé", "broader": ["emg"], "related": ["me-fail"], "alt": ["forced landing", "EFATO", "engine failure", "MAYDAY"]},
     {"id": "emg-fire", "en": "Fire, smoke & carbon monoxide", "fr": "Feu, fumée et monoxyde de carbone", "broader": ["emg"], "related": []},
@@ -116,12 +125,6 @@
     {"id": "me-vmc", "en": "Vmc, asymmetric thrust & critical engine", "fr": "Vmc, poussée asymétrique et moteur critique", "broader": ["me"], "related": ["agk-vspeeds"], "alt": ["Vmc", "critical engine", "red line", "zero sideslip"]},
     {"id": "me-oei", "en": "OEI performance & takeoff planning", "fr": "Performances OEI et planification du décollage", "broader": ["me", "agk-perf"], "related": [], "alt": ["Vyse", "Vxse", "blue line", "accelerate-stop", "accelerate-go", "Vsse"]},
     {"id": "me-fail", "en": "Engine-failure procedures (multi-engine)", "fr": "Procédures de panne moteur (multimoteur)", "broader": ["me", "emg"], "related": ["emg-engine", "agk-prop"], "alt": ["feather", "identify verify feather", "dead foot"]},
-    {"id": "me-train", "en": "ME training, systems & flight test", "fr": "Formation ME, systèmes et test en vol", "broader": ["me"], "related": []},
-    {"id": "study", "en": "Recall & exam method", "fr": "Rappel et méthode d’examen", "broader": [], "related": []},
-    {"id": "study-pebble", "en": "Pebbles — final recall", "fr": "Pebbles — rappel final", "broader": ["study"], "related": []},
-    {"id": "study-traps", "en": "Exam traps & question methods", "fr": "Pièges d’examen et méthodes", "broader": ["study"], "related": []},
-    {"id": "study-formulas", "en": "Formulas & quick recall", "fr": "Formules et rappels", "broader": ["study"], "related": []},
-    {"id": "study-abbrev", "en": "Abbreviations & codes", "fr": "Abréviations et codes", "broader": ["study"], "related": ["met-products", "nav-pubs"]},
-    {"id": "study-src", "en": "Sources & review status", "fr": "Sources et état de révision", "broader": ["study"], "related": ["nav-pubs"]}
+    {"id": "me-train", "en": "ME training, systems & flight test", "fr": "Formation ME, systèmes et test en vol", "broader": ["me"], "related": []}
   ]
 }

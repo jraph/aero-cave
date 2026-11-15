@@ -105,6 +105,7 @@ def build():
         if c["id"] in c["broader"]:
             errors.append(f"{c['id']}: broader loop")
     sections, cards, uids, stubs = [], [], set(), []
+    kindset = {k["id"] for k in ont["kinds"]}
     for cid, card in ont["cards"].items():
         text = (ROOT / card["file"]).read_text(encoding="utf-8")
         title, secs = split_card(text, card.get("boldHeadings", False))
@@ -126,7 +127,12 @@ def build():
                 errors.append(f"{cid} · {head}: missing or unknown concepts {cs}")
             if not ps or any(p not in pathset for p in ps):
                 errors.append(f"{cid} · {head}: missing or unknown level")
-            sections.append({"id": f"{cid}-{i}", "card": cid, "h": head, "a": anchor, "c": cs, "p": ps,
+            kd = (a.get("kind") or [card.get("kind", "procedure")])[0]
+            if kd not in kindset:
+                errors.append(f"{cid} · {head}: unknown kind {kd}")
+            if kd == "knowledge" and cid not in ("17",):
+                errors.append(f"{cid} · {head}: knowledge notes live in kb/, not in a card")
+            sections.append({"id": f"{cid}-{i}", "card": cid, "h": head, "a": anchor, "c": cs, "p": ps, "kd": kd,
                              "u": m.group(1), "md": body[m.end():].strip()})
     for kid, kb in ont.get("kb", {}).items():
         files = sorted(p for p in (ROOT / kb["dir"]).glob("*.md") if p.name != "README.md")
@@ -162,8 +168,11 @@ def build():
                         errors.append(f"{rel} · {head}: unknown concept {c}")
                 if not ps or any(p not in pathset for p in ps):
                     errors.append(f"{rel} · {head}: missing or unknown level")
+                kd = (ua.get("kind") or ["pebble" if head == "Pebble" else "knowledge"])[0]
+                if kd not in kindset:
+                    errors.append(f"{rel} · {head}: unknown kind {kd}")
                 sections.append({"id": f"{kid}-{n}", "card": kid, "f": rel, "h": head, "a": anchor, "c": cs,
-                                 "p": ps, "u": m.group(1), "md": body[m.end():].strip()})
+                                 "p": ps, "kd": kd, "u": m.group(1), "md": body[m.end():].strip()})
                 n += 1
     for st in stubs:
         target = (ROOT / st["from"]).parent / st["to"]
@@ -187,6 +196,9 @@ def build():
         vids.add(v["id"])
         if v.get("level") and v["level"] not in pathset:
             errors.append(f"view {v['id']}: unknown level")
+        for k in v.get("kinds", []):
+            if k not in kindset:
+                errors.append(f"view {v['id']}: unknown kind {k}")
         for ref in v.get("concepts", []):
             if ref not in idset:
                 errors.append(f"view {v['id']}: unknown concept {ref}")
@@ -210,6 +222,8 @@ def build():
             if not (g.get(key) or {}).get("en") or not g[key].get("fr"):
                 errors.append(f"{g['id']}: {key} needs en and fr")
         for grp in g["groups"]:
+            if grp.get("concept") not in idset:
+                errors.append(f"{g['id']} {grp['code']}: group needs a known concept")
             for it in grp["items"]:
                 if it["s"] not in "CPME":
                     errors.append(f"{g['id']} {grp['code']} {it['n']}: bad status")
@@ -244,6 +258,40 @@ def build():
             s["ph"] = hand
         if s["u"] in essential:
             s["e"] = 1
+    # related links: hand-set ones plus derived ones (a unit tagged with both concepts, or
+    # two or more TC items citing units of both); never between a concept and its ancestors
+    byid = {c["id"]: c for c in concepts}
+    def anc(i, seen=None):
+        seen = seen if seen is not None else set()
+        for b in byid[i]["broader"]:
+            if b not in seen:
+                seen.add(b); anc(b, seen)
+        return seen
+    pair = {}
+    def bump(a, b, w):
+        if a != b and a not in anc(b) and b not in anc(a):
+            k = tuple(sorted((a, b))); pair[k] = pair.get(k, 0) + w
+    prim = {s["u"]: s["c"][0] for s in sections}
+    for s in sections:
+        for i, a in enumerate(s["c"]):
+            for b in s["c"][i + 1:]:
+                bump(a, b, 2)
+    for g in syl["guides"]:
+        for grp in g["groups"]:
+            for it in grp["items"]:
+                ps = sorted({prim[u] for u in it["u"]})
+                for i, a in enumerate(ps):
+                    for b in ps[i + 1:]:
+                        bump(a, b, 1)
+    for (a, b), w in sorted(pair.items()):
+        if w >= 2 and b not in byid[a]["related"] and a not in byid[b]["related"]:
+            byid[a].setdefault("related", []).append(b)
+    used = {c for s in sections for c in s["c"]}
+    for c in concepts:
+        if c["id"] not in used and not any(c["id"] in x["broader"] for x in concepts):
+            errors.append(f"{c['id']}: concept has no note and no narrower concept")
+    if errors:
+        sys.exit("ontology errors:\n  " + "\n  ".join(errors))
     # each TC guide is also a view: the units its items cite
     for g in syl["guides"]:
         units = sorted({u for grp in g["groups"] for it in grp["items"] for u in it["u"]})
@@ -252,6 +300,7 @@ def build():
         "guides": syl["guides"],
         "stubs": len(stubs),
         "paths": ont["paths"],
+        "kinds": ont["kinds"],
         "views": ont["views"],
         "concepts": [{k: c.get(k, []) for k in ("id", "en", "fr", "broader", "related", "alt")} for c in concepts],
         "cards": cards,
@@ -263,6 +312,15 @@ def build():
     return html, data, []
 
 
+def ont_kb_files():
+    out = {}
+    for p in ROOT.glob("kb/*/*.md"):
+        m = KBHEAD.search(p.read_text(encoding="utf-8"))
+        if m:
+            out[m.group(1)] = str(p.relative_to(ROOT))
+    return out
+
+
 def main():
     html, data, report = build()
     if "--report" in sys.argv:
@@ -270,6 +328,26 @@ def main():
         n = Counter(c for s in data["sections"] for c in s["c"])
         for c in data["concepts"]:
             print(f"{n[c['id']]:4d}  {c['id']:14s} {c['en']}")
+    if "--audit" in sys.argv:
+        from collections import Counter
+        own = {}
+        for kid, kb in ont_kb_files().items():
+            own[kid] = kb
+        cited = {u for g in data["guides"] for grp in g["groups"] for it in grp["items"] for u in it["u"]}
+        n = Counter(c for s in data["sections"] for c in s["c"])
+        print("Concepts without a kb file (notes only via cards or 'also'):")
+        for c in data["concepts"]:
+            if c["id"] not in own and n[c["id"]]:
+                print(f"  {c['id']:14s} {n[c['id']]:3d} notes")
+        print("Concepts with TC items but no knowledge note:")
+        kn = Counter(c for s in data["sections"] if s["kd"] == "knowledge" for c in s["c"])
+        gi = Counter(grp["concept"] for g in data["guides"] for grp in g["groups"] for _ in grp["items"])
+        for c in data["concepts"]:
+            if gi[c["id"]] and not kn[c["id"]]:
+                print(f"  {c['id']:14s} {gi[c['id']]:3d} TC items")
+        un = [s for s in data["sections"] if s["u"] not in cited and s["kd"] in ("knowledge", "procedure")]
+        print(f"Knowledge / procedure notes no TC item cites: {len(un)}")
+        return
     if "--check" in sys.argv:
         if not OUT.exists() or OUT.read_text(encoding="utf-8") != html:
             sys.exit("index.html is stale: run python3 explorer/build_explorer.py")

@@ -22,7 +22,7 @@
 - `M:` lost comm = `7600 + VMC land / IMC AVEF + AME + latest time`.
 ***
 #### Pebble
-<!-- id: ifr-lost-comms-pebble | also: study-pebble -->
+<!-- id: ifr-lost-comms-pebble -->
 
 - LOST COMM `7600 + listening watch + alternate freq/FSS/relay/phone | specific published SID/STAR/IAP procedure overrides generic rules`
 - VMC `continue VFR, land as soon as practicable | practicable ≠ nearest unsuitable field`

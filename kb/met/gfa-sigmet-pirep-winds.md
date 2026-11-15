@@ -32,7 +32,7 @@
 - `T:` strongest tailwind route may place you in icing/turbulence/terrain trap.
 ***
 #### Pebble
-<!-- id: met-gfa-pebble | also: study-pebble -->
+<!-- id: met-gfa-pebble -->
 
 - GFA `most probable conditions ≤24,000 ft | issued ≈2330/0530/1130/1730Z, valid 0000/0600/1200/1800Z | six charts: C&W + icing/turb/freezing at valid / +6 h / +12 h; final C&W adds 12 h IFR outlook | heights ASL unless CIG/AGL | LCA ≤25% / PTCHY 26–50% / XTNSV/INTMT >50%`
 - AIRMET / SIGMET `AIRMET = moderate ice/turb, low CIG/vis, strong wind, mountain obscuration | SIGMET = TS, severe turb/LLWS/wave/ice, TC, dust/sand, VA; expired ≠ hazard ended`

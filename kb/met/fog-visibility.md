@@ -23,7 +23,7 @@
 - `!:` whiteout = no discernible horizon/terrain cues over snow/cloud; visual attitude/height judgment can disappear.
 ***
 #### Pebble
-<!-- id: met-fog-pebble | also: study-pebble -->
+<!-- id: met-fog-pebble -->
 
 - FOG `RAD = clear / light wind / moist ground / night cooling | ADVECT = moist air over colder surface, needs wind, can persist | UPSLOPE = forced uphill | STEAM = cold air over warmer water | PRECIP/frontal = rain into cooler air | ICE FOG = very cold air`
 - M `RAD COOL / ADVECT MOVE / UPSLOPE LIFT`

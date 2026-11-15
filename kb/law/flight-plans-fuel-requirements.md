@@ -12,7 +12,7 @@
 - `T:` POH burn≠actual burn. marginal VFR + commercial pressure + unfamiliar terrain = trap.
 ***
 #### Flight plan / itinerary
-<!-- id: law-flight-plan-itinerary | from: 01, 04| level: PPL CPL IR -->
+<!-- id: law-flight-plan-itinerary | from: 01, 04 | level: PPL CPL IR -->
 
 - IFR: file IFR flight plan, except itinerary permitted in specified cases wholly/partly outside controlled airspace or where facilities inadequate. `[CAR 602.73]`
 - VFR: flight plan or itinerary unless flight remains within `25 NM` of departure aerodrome. `[CAR 602.73]`
@@ -25,7 +25,7 @@
 - VFR pos report: ident-pos-time-alt-plan-dest. PIREP: loc/time-alt-type-cloud-temp-wind-turb-ice-rmk.
 ***
 #### Fuel requirements
-<!-- id: law-fuel-requirements | from: 04, 06| level: PPL CPL IR -->
+<!-- id: law-fuel-requirements | from: 04, 06 | level: PPL CPL IR -->
 
 | Flight | Required fuel after reaching destination |
 |---|---|
@@ -40,7 +40,7 @@
 - `T:` CAR text/current ops rules win; this is memory, not dispatch release.
 ***
 #### Pebble
-<!-- id: law-flight-plans-fuel-requirements-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: law-flight-plans-fuel-requirements-pebble | level: PPL CPL IR -->
 
 - PLAN CAR 602.73 `IFR: flight plan (itinerary only in specified cases) | VFR: plan or itinerary unless within 25 NM of departure aerodrome | international: flight plan | itinerary needs responsible person | landing does not automatically close a plan`
 - ARRIVAL REPORT `ident + type of plan/itinerary + departure + arrival + date/time`

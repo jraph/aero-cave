@@ -16,7 +16,7 @@
 - Read the altimeter source line before the minima: the approved source drives procedure protection.
 ***
 #### Pebble
-<!-- id: ifr-rass-pebble | also: study-pebble -->
+<!-- id: ifr-rass-pebble -->
 
 - RASS `“Use X” = built into minima, use that source | “When using X add N” = add to intermediate, final AND missed-approach segment minimum altitudes | “… Circling minima apply” = straight-in minima not usable`
 - T `current usable altimeter required before IAP | cold/remote/falling pressure corrections affect obstacle margin: stepdowns, MDA/DA, missed altitudes`

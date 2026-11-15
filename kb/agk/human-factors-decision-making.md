@@ -20,7 +20,7 @@
 - Fire: POH memory items + land ASAP. CO: heat off/vent/fresh air/land.
 ***
 #### Pebble
-<!-- id: agk-human-factors-decision-making-pebble | also: study-pebble | level: PPL CPL -->
+<!-- id: agk-human-factors-decision-making-pebble | level: PPL CPL -->
 
 - ADM `IMSAFE | PAVE | DECIDE | 5P | hazardous attitudes: anti-authority / impulsivity / invulnerability / macho / resignation → follow rules / not so fast / could happen / chances foolish / not helpless | external pressure makes a bad plan feel reasonable`
 - EMERGENCY `aviate > navigate > communicate | MAYDAY ×3 → ident → problem → position → intention → POB/fuel | declare early | forced: control → field → plan → cause → MAYDAY → pax → secure → land | CO: heat off, vent, land | partial power can lure you past fields`

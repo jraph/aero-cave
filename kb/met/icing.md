@@ -36,7 +36,7 @@
 - `T:` light snow code can still produce unacceptable visual contrast/visibility.
 ***
 #### Pebble
-<!-- id: met-icing-pebble | also: study-pebble -->
+<!-- id: met-icing-pebble -->
 
 - ICING `visible moisture + ACFT surface ≤0°C | rime = small drops, rough/opaque | clear = larger drops, smooth/heavy | lift↓ drag↑ stall speed↑ climb↓ | FZRA/FZDZ RED → immediate escape | surface >0°C ≠ no ice aloft`
 - GATE `non-approved ACFT: avoid forecast/reported ice, exit at first indication | PL → warm layer aloft, FZRA possible nearby`

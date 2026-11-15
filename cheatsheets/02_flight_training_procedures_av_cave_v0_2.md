@@ -127,6 +127,6 @@
 - `P lost:` climb if safe→communicate→conserve→confess→comply.
 ***
 #### Pebble
-<!-- id: trn-pebble | concepts: agk-ops, study-pebble | level: PPL CPL -->
+<!-- id: trn-pebble | concepts: agk-ops | kind: pebble | level: PPL CPL -->
 
 - TKOF line-up→pwr→green→alive→rotate→climb | XW aileron wind+rudder centre | SOFT keep moving→GE accel | SHORT Vx→clear→Vy | CCT 500/1000 | LDG align-profile-speed-flare | GO power-att-config-track-talk | PREC inspect-decide | FORCED control-field-plan-cause-MAYDAY-pax-secure-land | EFATO nose-field-land | SPIRAL idle-level-ease | STALL AoA↓ | LOST C5.

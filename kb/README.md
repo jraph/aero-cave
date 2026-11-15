@@ -23,7 +23,7 @@ One Markdown file per ontology concept (`explorer/ontology.json`), grouped by do
 - content
 ***
 #### Pebble
-<!-- id: met-fog-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: met-fog-pebble | level: PPL CPL IR -->
 
 - TOPIC `token | token | token`
 ```

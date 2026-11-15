@@ -65,7 +65,7 @@
 | Cat 1 commercial / Médical cat. 1 | 12 months; 6 if age ≥40 single-pilot with passengers or age ≥60 | 12 mois; 6 si ≥40 ans monopilote avec passagers ou ≥60 ans | 404.04 |
 
 ## EXAM TRAPS / PIÈGES D'EXAMEN
-<!-- id: q17-exam-traps-pi-ges-d-examen | concepts: law-type, study-pebble, study-traps | level: CPL IR -->
+<!-- id: q17-exam-traps-pi-ges-d-examen | concepts: law-type | kind: trap | level: CPL IR -->
 
 | Trap / Piège | English | Français |
 |---|---|---|
@@ -79,7 +79,7 @@
 **M · PEBBLE:** `PPL45 → CPL200 → ATPL1500 | IR 50 XC PIC / 40 inst | HP type200 / 2crew type250 + IATRA/SAMRA-SARON | 604 CC24 / ground12 | 702 CC12 or PPC24 (IFR + non-crew PPC) | 703 SE PIC CC12*; ME PIC PPC12; ME SIC PPC/CC12 | 704 PPC12 | 705 PPC6 (exceptions) | general 5y/24m/6m | IFR 24m + 6 approaches/6m after month6`.
 
 ## SOURCES / SOURCES
-<!-- id: q17-sources-sources | concepts: study-src | level: CPL IR -->
+<!-- id: q17-sources-sources | concepts: law-type | kind: source | level: CPL IR -->
 
 - [Air Tractor AT-502B agricultural aircraft](https://airtractor.com/aircraft/)
 - [De Havilland Twin Otter 19-seat specifications](https://dehavilland.com/twin-otter/)

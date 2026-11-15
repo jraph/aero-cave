@@ -4,7 +4,7 @@
 `RELEASE:` `STUDY / AIRCRAFT-DEPENDENT` | `NOT FLIGHT AUTHORITY`
 ***
 #### Source / discipline / scan
-<!-- id: sys-source-discipline-scan | concepts: agk-systems, study-src | level: PPL CPL -->
+<!-- id: sys-source-discipline-scan | concepts: agk-systems | kind: source | level: PPL CPL -->
 
 - `SRC:` exact POH/AFM §3 + systems, current checklist/SOP; FTM/TP guidance.
 - Memorize only aircraft-designated memory items; abnormal checklists normally read-and-do.
@@ -212,7 +212,7 @@
 - `T:` map starts diagnosis; POH/checklist determines action.
 ***
 #### Pebble
-<!-- id: sys-pebble | concepts: agk-systems, study-pebble | level: PPL CPL IR -->
+<!-- id: sys-pebble | concepts: agk-systems | kind: pebble | level: PPL CPL IR -->
 
 - PRESSURIZATION `outflow CLOSE→cabin P↑/ALT↓; OPEN→P↓/ALT↑ | ΔP=cabin−ambient | +relief excess internal P; −relief excess external P | decompression→O₂/emergency DESC per AFM; O₂ rules card 04`
 - FUEL `octane=knock resistance | AVGAS 80/87 RED; 100/130 GREEN (lean/rich); 100LL BLUE (LL=low lead) | JET A max freeze −40°C / A-1 −47°C; B wide-cut | FSII water-ice inhibitor ≠ fuel/airframe de-ice | approved fuel/grade per POH; colour alone≠proof`

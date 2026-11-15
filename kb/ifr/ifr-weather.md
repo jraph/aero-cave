@@ -14,7 +14,7 @@
 - `T:` TAF legal but GFA/SIGMET/PIREPs ugly = operational no-go even if exam legal answer exists.
 ***
 #### IFR weather traps
-<!-- id: ifr-ifr-weather-traps | from: 10 | also: study-traps -->
+<!-- id: ifr-ifr-weather-traps | from: 10 | kind: trap -->
 
 - Freezing level + cloud/precip = icing risk. Carb ice can exist above freezing in humid partial power.
 - Warm front: layered cloud/low vis/steady precip/freezing rain risk. Cold front: convective showers/TS/gusts/wind shear.
@@ -23,7 +23,7 @@
 - `T:` altimetry errors from cold temps affect obstacle clearance, not just indicated altitude comfort.
 ***
 #### Pebble
-<!-- id: ifr-ifr-weather-pebble | also: study-pebble -->
+<!-- id: ifr-ifr-weather-pebble -->
 
 - DECODE `METAR: RVR if vis ≤1 SM and/or RVR ≤6000 ft | ceiling = lowest BKN/OVC/VV | FD: interpolate wind/temp aloft | GFA: time panels and expected movement`
 - T `TAF legal but GFA/SIGMET/PIREP ugly = operational no-go | freezing level + cloud/precip = icing risk | embedded CB in IMC = no-go for light trainer | cold-temp altimetry errors affect obstacle clearance`

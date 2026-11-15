@@ -23,7 +23,7 @@
 - `M:` `HOT-HIGH-HUMID = PERFORMANCE LOW`.
 ***
 #### Altimetry / pressure traps
-<!-- id: wx-altimetry-traps | from: 16 | also: study-traps -->
+<!-- id: wx-altimetry-traps | from: 16 | kind: trap -->
 
 - From high pressure→low without reset: true altitude lower than indicated.
 - Warm→cold: true altitude lower than indicated.
@@ -46,7 +46,7 @@
 - `F:` PA≈elev+(29.92-altset)×1000. DA≈PA+120×(OAT-ISA). `T:` approximation only.
 ***
 #### Pressure altitude / density altitude · card 06
-<!-- id: wx-pressure-altitude-density-altitude | from: 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: wx-pressure-altitude-density-altitude | from: 06 | kind: formula | level: PPL CPL IR -->
 
 - `F:` `PA ≈ field elev + (29.92 - altimeter) × 1000`.
 - `F:` `ISA temp °C ≈ 15 - 2 × altitude(thousands ft)`.
@@ -55,7 +55,7 @@
 - `T:` DA formula is approximation; POH chart wins.
 ***
 #### Pebble
-<!-- id: met-atmos-pebble | also: study-pebble -->
+<!-- id: met-atmos-pebble -->
 
 - ISA `15°C / 29.92 inHg / 1013.25 hPa / ≈2°C per 1000 ft to tropopause | ISA temp ≈ 15 − 2×ALT(1000 ft) | reference model ≠ forecast`
 - DA `PA = altitude with 29.92 set | DA ≈ PA + 120×(OAT − ISA temp) ft | HOT-HIGH-HUMID → TKOF roll↑ climb↓ TAS↑ for same IAS`

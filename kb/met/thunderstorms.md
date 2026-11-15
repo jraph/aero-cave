@@ -17,7 +17,7 @@
 - Assess SIGMET/GFA/TAF/PIREP/radar/lightning/satellite for movement/growth/line/escape. `T:` datalink delayed; attenuation hides cells.
 ***
 #### Pebble
-<!-- id: met-ts-pebble | also: study-pebble -->
+<!-- id: met-ts-pebble -->
 
 - TS `MOISTURE + INSTABILITY + LIFT | cumulus = updrafts only → mature = up + downdrafts, precip, maximum hazards → dissipating = downdrafts dominate`
 - HAZARDS `extreme turbulence | hail | lightning | icing | wind shear/microburst | tornado`

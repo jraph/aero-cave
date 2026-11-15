@@ -26,7 +26,7 @@
 - `SRC:` [FAA PHAK, Ch. 4–5 · Principles/Aerodynamics of Flight](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak); general theory; aircraft POH/AFM governs performance.
 ***
 #### Pebble
-<!-- id: agk-theory-of-flight-pebble | also: study-pebble | level: PPL CPL -->
+<!-- id: agk-theory-of-flight-pebble | level: PPL CPL -->
 
 - AERO `L ⟂ relative airflow; L = ½ρV²S·CL | CP ≠ CG ≠ AC (≈25% chord) | trim: ΣM(CG) = 0 | drag = parasite (form + friction + interference) + induced | IAS↓ → induced↑; IAS↑ → parasite↑; min drag ≈ max L/D | level: L = W, T = D | level turn n = 1/cosφ, Vs × √n | washout: tip incidence < root → root-first stall generally | AR = b²/S; AR↑ → induced drag↓ | stall = critical AOA, not a fixed IAS`
 ***

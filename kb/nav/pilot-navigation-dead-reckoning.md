@@ -5,7 +5,7 @@
 
 ***
 #### Time / speed / distance
-<!-- id: nav-time-speed-distance | from: 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: nav-time-speed-distance | from: 06 | kind: formula | level: PPL CPL IR -->
 
 - `F:` `distance = GS × time(hr)`.
 - `F:` `time(hr)=distance/GS`; `time(min)=distance/GS×60`.
@@ -14,7 +14,7 @@
 - `T:` navigation timing uses `GS`, not IAS/TAS.
 ***
 #### Quick ETE table
-<!-- id: nav-quick-ete-table | from: 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: nav-quick-ete-table | from: 06 | kind: formula | level: PPL CPL IR -->
 
 Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 
@@ -31,7 +31,7 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 90 kt: two-thirds of the NM gives minutes. Decimal minutes are not minutes:seconds.
 ***
 #### Crosswind / headwind
-<!-- id: nav-crosswind-headwind | from: 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: nav-crosswind-headwind | from: 06 | kind: formula | level: PPL CPL IR -->
 
 - `F:` `headwind = wind speed × cos(angle)`.
 - `F:` `crosswind = wind speed × sin(angle)`.
@@ -40,7 +40,7 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - `T:` gusts matter. max demonstrated crosswind ≠ legal limit unless POH says; still operational limit/SOP/personal.
 ***
 #### Wind correction / nav triangle
-<!-- id: nav-wind-correction-nav-triangle | from: 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: nav-wind-correction-nav-triangle | from: 06 | kind: formula | level: PPL CPL IR -->
 
 - `F exact idea:` WCA depends wind angle, wind speed, TAS.
 - `F rough:` `WCA° ≈ 60 × crosswind / TAS`, for small WCA, with wind components resolved relative to desired track. Exact: `sin(WCA) = crosswind/TAS`; use a flight computer for large corrections.
@@ -49,7 +49,7 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - `T:` variation/deviation are separate from WCA.
 ***
 #### 1-in-60 rule
-<!-- id: nav-1-in-60-rule | from: 03, 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: nav-1-in-60-rule | from: 03, 06 | kind: formula | level: PPL CPL IR -->
 
 - `F:` `track error° ≈ offtrack × 60 / distance flown`.
 - `F:` `closing correction to destination° ≈ offtrack × 60 / distance remaining`.
@@ -59,7 +59,7 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - `T:` ETA uses actual GS. Double-track-error is a separate intercept technique, not a universal destination correction.
 ***
 #### Coordinates / distance / map
-<!-- id: nav-coordinates-distance-map | from: 06 | also: nav-units, study-formulas | level: PPL CPL IR -->
+<!-- id: nav-coordinates-distance-map | from: 06 | also: nav-units | kind: formula | level: PPL CPL IR -->
 
 - `1° latitude = 60 NM`.
 - `1' latitude = 1 NM`.
@@ -68,7 +68,7 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - `T:` longitude spacing shrinks toward poles.
 ***
 #### Clocks / logbook
-<!-- id: nav-clocks-logbook | from: 06 | also: nav-units, study-formulas | level: PPL CPL IR -->
+<!-- id: nav-clocks-logbook | from: 06 | also: nav-units | kind: formula | level: PPL CPL IR -->
 
 - `0.1 hr = 6 min`; `0.2=12`; `0.3=18`; `0.4=24`; `0.5=30`; `0.6=36`; `0.7=42`; `0.8=48`; `0.9=54`.
 - `F:` decimal hours = minutes/60.
@@ -81,7 +81,7 @@ Distance in NM × fraction = ETE in minutes. Use GS, including wind.
 - Lost: climb safe→communicate→conserve→confess→comply.
 ***
 #### Pebble
-<!-- id: nav-pilot-navigation-dead-reckoning-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: nav-pilot-navigation-dead-reckoning-pebble | level: PPL CPL IR -->
 
 - TSD `distance = GS × time | time(min) = distance/GS × 60 | 60 kt = 1 NM/min, 90 = 1.5, 120 = 2 | GS, not IAS/TAS`
 - WIND `crosswind = wind × sin(angle), headwind = wind × cos(angle) | 30° = ½ / 45° ≈ 0.7 / 60° ≈ 0.87 / 90° = full | WCA° ≈ 60 × crosswind / TAS (small angles) | wind from right → crab right`

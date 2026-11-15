@@ -49,7 +49,7 @@
 - `M:` **IN FLT GN steady=LDG/flash=return · RED steady=circle/flash=unsafe | GND GN steady=TKOF/flash=taxi · RED steady=STOP/flash=clear · WHITE=return**.
 ***
 #### Pebble
-<!-- id: law-atc-radio-transponder-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: law-atc-radio-transponder-pebble | level: PPL CPL IR -->
 
 - XPDR `1200 ≤12,500 | 1400 >12,500 | 7600 comm | 7700 emergency | 7500 hijack`
 - ATC CAR 602.31 `comply with clearances/instructions received and accepted, except emergency authority or amended clearance | unable → advise immediately | “roger” ≠ cleared`

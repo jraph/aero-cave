@@ -33,7 +33,7 @@
 - `7 Decision:` legal? safe? equipped? current? if no, what changes?
 ***
 #### Pebble
-<!-- id: ifr-planning-fuel-pebble | also: study-pebble -->
+<!-- id: ifr-planning-fuel-pebble -->
 
 - FUEL CAR 602.88 `prop + alternate: dest + approach + missed → alternate + land → 45 min | prop no alternate: dest + approach + missed → 45 min | turbojet/helicopter: 30 min | add foreseeable taxi/delay/met/routing/traffic`
 - T `reserve is after required legs ≠ fuel on board at destination | exam may hide the missed approach before the alternate leg`

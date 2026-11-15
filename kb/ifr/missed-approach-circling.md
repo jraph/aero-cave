@@ -33,7 +33,7 @@
 - `T:` if timer/DME/GPS not set before FAF, MAP identification can fail under workload.
 ***
 #### Pebble
-<!-- id: ifr-missed-approach-circling-pebble | also: study-pebble -->
+<!-- id: ifr-missed-approach-circling-pebble -->
 
 - MISSED `precision/APV: at DA/DH without visual refs | NPA: at MAP, or unable to continue safely/legally | unstable/unsafe → missed | fly published missed exactly: climb, turn limits, nav source, altitude, hold | after MAP: obstacle clearance may not be assured`
 - T `power/attitude/config first, then nav | brief missed before FAF | missed point = obstacle-clearance origin`

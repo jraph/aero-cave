@@ -67,14 +67,14 @@
 - `M:` compare before flight: all-engine climb, OEI climb, terrain/obstacle, nearest runway/return.
 ***
 #### W&B ME traps
-<!-- id: me-w-b-me-traps | from: 13 | also: agk-wb, study-traps | level: ME -->
+<!-- id: me-w-b-me-traps | from: 13 | also: agk-wb | kind: trap | level: ME -->
 
 - Multi-engine aircraft often have narrow CG/fuel/baggage constraints. Check takeoff, landing, zero-fuel if relevant.
 - Aft CG worsens Vmc/control. Light weight can worsen Vmc but improves climb; heavy weight may improve Vmc but destroy climb.
 - `T:` Vmc certification worst case is light/aft; performance worst case is heavy/hot/high/dirty.
 ***
 #### Pebble
-<!-- id: me-oei-performance-takeoff-planning-pebble | also: study-pebble | level: CPL ME -->
+<!-- id: me-oei-performance-takeoff-planning-pebble | level: CPL ME -->
 
 - SPEEDS `Vmc = min control speed, critical engine failed (red line) | Vsse = safe intentional OEI; Vmc + 10 if POH none | Vyse = OEI best rate, blue line | Vxse = OEI best angle`
 - OEI CLIMB `may be zero or negative | single-engine service ceiling may be below terrain | above Vmc ≠ climb`

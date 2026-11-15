@@ -33,7 +33,7 @@
 - `T:` forecast confidence drops when observations repeatedly diverge.
 ***
 #### Pebble
-<!-- id: met-products-pebble | also: study-pebble -->
+<!-- id: met-products-pebble -->
 
 - PRODUCTS `METAR now | SPECI significant change | TAF aerodrome forecast | GFA regional + icing/turb/freezing level | AIRMET below SIGMET severity | SIGMET hazardous | PIREP actual | FB wind/temp aloft`
 - HEIGHTS `METAR/TAF cloud = AGL | GFA generally ASL unless stated`

@@ -30,7 +30,7 @@
 - `T:` alternate minima ≠ landing minima ≠ approach-ban minima.
 ***
 #### Alternate minima memory
-<!-- id: ifr-alternate-minima-memory | from: 06 | also: study-formulas | level: IR -->
+<!-- id: ifr-alternate-minima-memory | from: 06 | kind: formula | level: IR -->
 
 | Case | Weather memory |
 |---|---|
@@ -42,7 +42,7 @@
 - `T:` check CAP alternate notes, NOTAM, NAVAID, runway suitability, forecast type.
 ***
 #### Pebble
-<!-- id: ifr-alternate-minima-pebble | also: study-pebble -->
+<!-- id: ifr-alternate-minima-pebble -->
 
 - ALTERNATE `2+ usable precision, separate suitable RWYs: 400-1 or +200/+½ | 1 precision: 600-2 or +300/+1 | NPA only: 800-2 or +300/+1 | each = above lowest usable HAT (HAA for NPA)/vis, whichever greater | no IFR approach: forecast ≥500 ft above min IFR altitude permitting VFR approach/landing`
 - TAF `BECMG improve = END / deteriorate = START | TEMPO ≥ alternate minima | PROB ≥ landing minima`

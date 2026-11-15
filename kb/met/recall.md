@@ -5,7 +5,7 @@
 
 ***
 #### Exam traps
-<!-- id: wx-exam-traps | from: 16 | also: study-traps -->
+<!-- id: wx-exam-traps | from: 16 | kind: trap -->
 
 - Stable ≠ “good”: can mean fog/stratus/poor vis/icing.
 - Unstable ≠ “bad everywhere”: often better vis between showers but more turbulence/CB.

@@ -13,7 +13,7 @@
 - Short LDG: stable speed/profile/touchdown zone; fast final eats runway. Soft LDG: protect nose, keep moving, yoke back.
 ***
 #### Pebble
-<!-- id: agk-circuit-approach-landing-pebble | also: study-pebble | level: CPL -->
+<!-- id: agk-circuit-approach-landing-pebble | level: CPL -->
 
 - HANDLING `steep turn: altitude by attitude first | stall: AoA↓ first, power as required, coordinate | spiral: idle → wings level → ease | P180: high fixable, low usually not | short LDG: fast final eats runway | soft LDG: protect nose, keep moving, yoke back`
 ***

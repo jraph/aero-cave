@@ -21,7 +21,7 @@
 - Conversion is incremental: read the symbols printed on the chart in hand; do not assume either convention.
 ***
 #### Publication cycle
-<!-- id: ifr-current-publication-cycle | from: 09 | also: nav-pubs, study-src -->
+<!-- id: ifr-current-publication-cycle | from: 09 | also: nav-pubs | kind: source -->
 
 - AIRAC cycle at last review (14 Nov 2026) for `CAP/CAP GEN/CFS/AIP/DAH/charts`: effective `2026-10-29` through `2026-12-24`. `T:` this line ages every 56 days; read the effective dates printed on the product.
 - These publications update every `56 days`; AIP SUP/AIC publish on a `14-day` cycle.
@@ -30,7 +30,7 @@
 - `[NAV CANADA publication schedule; AIC 009/2026]`
 ***
 #### Publication-currency exam traps
-<!-- id: ifr-publication-currency-exam-traps | from: 10 | also: nav-pubs, study-traps -->
+<!-- id: ifr-publication-currency-exam-traps | from: 10 | also: nav-pubs | kind: trap -->
 
 - Check effective date/cycle first. Then NOTAM and AIP SUP; Trigger NOTAM only points to changed material.
 - AIP SUP can remain active with no current Trigger NOTAM.
@@ -40,7 +40,7 @@
 - `T:` a plate matching the current 56-day cycle can still be amended or unavailable.
 ***
 #### Source / scope
-<!-- id: plate-source-scope | from: 11 | also: study-src | level: IR -->
+<!-- id: plate-source-scope | from: 11 | kind: source | level: IR -->
 
 - `SRC:` current CAP/CAP GEN/CFS/NOTAM/AIP SUP win. Cycle at last review (14 Nov 2026): `2026-10-29` to `2026-12-24`.
 - CAP contains IFR arrival/departure information: IAP, SID, STAR, visual approaches, noise abatement and aerodrome/ground charts.
@@ -83,13 +83,13 @@
 - `M:` if a note starts with `NA`, `Use`, `When`, `Requires`, or `Circling`, slow down.
 ***
 #### Real-flight plate method
-<!-- id: plate-real-flight-plate-method | from: 11 | also: study-traps | level: IR -->
+<!-- id: plate-real-flight-plate-method | from: 11 | kind: trap | level: IR -->
 
 - `1` current plate/NOTAM; `2` legal/equipped; `3` fuel/alternate; `4` terrain/icing/TS/wind; `5` setup/brief; `6` monitor stable approach; `7` miss early if doubt.
 - `T:` legal minimums are not personal minimums. Low-vis approaches invite confirmation bias.
 ***
 #### Pebble
-<!-- id: ifr-cap-plates-publications-pebble | also: study-pebble -->
+<!-- id: ifr-cap-plates-publications-pebble -->
 
 - CYCLE `publications every 56 days; AIP SUP/AIC every 14 days | cycle dates age: read the effective dates printed on the product | preflight: current publication → NOTAM → AIP SUP/AIC → airport/procedure page → ACFT data`
 - TRIGGER NOTAM `only announces changed source material: open the referenced source | AIP SUP can remain active after the Trigger NOTAM expires`

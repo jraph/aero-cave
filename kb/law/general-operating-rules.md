@@ -94,7 +94,7 @@
 | Actual wins / Réel | If a group is heavier than the assumed average, account for actual weights. Never hide infant, baggage or unusual load in a blanket average. |
 ***
 #### Pebble
-<!-- id: law-general-operating-rules-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: law-general-operating-rules-pebble | level: PPL CPL IR -->
 
 - PIC `responsible; reckless/negligent operation prohibited | emergency deviation only as necessary | pre-flight: WX-NOTAM-FUEL-W&B-PERF-ROUTE-AIRSPACE-RUNWAY-ALTERNATES (602.71)`
 - CLEAN AIRCRAFT CAR 602.11 `no takeoff with frost, ice or snow adhering to critical surfaces`

@@ -5,7 +5,7 @@
 
 ***
 #### Fuel
-<!-- id: agk-fuel | from: 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: agk-fuel | from: 06 | kind: formula | level: PPL CPL IR -->
 
 - `F:` `fuel = time(hr) × burn`.
 - `F:` `time available = usable fuel / burn`.
@@ -43,7 +43,7 @@
 - `T:` gauges≠measured fuel+time/burn; late tank changes may add delay/air.
 ***
 #### Pebble
-<!-- id: agk-fuel-fuel-systems-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: agk-fuel-fuel-systems-pebble | level: PPL CPL IR -->
 
 - FUEL `fuel = time(h) × burn | time available = usable fuel / burn | 6 gph = 0.1 gal/min, 9 = 0.15, 12 = 0.2 | IFR reserve starts after destination/alternate logic, not after takeoff`
 ***

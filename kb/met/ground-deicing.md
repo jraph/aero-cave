@@ -22,7 +22,7 @@
 Shared additions reviewed 19 October 2026: [source editions and scope](../../CONTENT_REVIEW.md#operational-additions--19-october-2026).
 ***
 #### Pebble
-<!-- id: deice-pebble | also: study-pebble -->
+<!-- id: deice-pebble -->
 
 - DE/ANTI `de-icing removes contamination | anti-icing protects a clean surface temporarily | clean-ACFT rule CAR 602.11 | ground fluid ≠ authority to fly in icing`
 - FLUIDS `I thin, usually heated, orange, short protection | II thickened, pale/yellow | III thickened, lower-speed, bright yellow | IV thickened, longer protection, green | verify product/ACFT approval`

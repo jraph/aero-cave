@@ -64,7 +64,7 @@ The shared flight/duty section below contains current limits and applicability.
 Shared additions reviewed 19 October 2026: [source editions and scope](../../CONTENT_REVIEW.md#operational-additions--19-october-2026).
 ***
 #### Pebble
-<!-- id: law-commercial-ops-604-702-705-duty-time-pebble | also: study-pebble | level: CPL -->
+<!-- id: law-commercial-ops-604-702-705-duty-time-pebble | level: CPL -->
 
 - 604 `large aeroplane, turbojet, or pressurized turbine >6 passenger seats | no fare needed | ordinary private C150 flying ≠ 604`
 - FLIGHT TIME `700.27: 112 h/28 d, 300 h/90 d, 1000 h/365 d, single-pilot 8 h/24 h | 604.98: 120 h/30 d, 300 h/90 d, 1200 h/12 mo, single-pilot IFR 8 h/24 h`

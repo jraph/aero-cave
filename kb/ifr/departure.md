@@ -31,7 +31,7 @@
 - `T:` “variable RVR” and “observed on-the-hour vs now” wording can flip the answer.
 ***
 #### Pebble
-<!-- id: ifr-departure-pebble | also: study-pebble -->
+<!-- id: ifr-departure-pebble -->
 
 - TKOF VIS CAR 602.126 `RWY RVR when reported at/above minimum | ground visibility when RVR below minimum, varying, or not reported | PIC-observed runway visibility only when neither reported | minimum from AOC/special authorization, else current CAP`
 - T `both lowest RVR and ground vis below minimum → no takeoff | takeoff vis ≠ landing/approach vis | standard takeoff minima ≠ obstacle clearance`

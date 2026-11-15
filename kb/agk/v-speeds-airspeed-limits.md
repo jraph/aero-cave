@@ -5,7 +5,7 @@
 
 ***
 #### VREF / landing reference speed
-<!-- id: agk-vref-landing-reference-speed | from: 06 | also: agk-perfcalc, study-formulas | level: CPL IR ME -->
+<!-- id: agk-vref-landing-reference-speed | from: 06 | also: agk-perfcalc | kind: formula | level: CPL IR ME -->
 
 - `Definition:` `VREF` is the landing reference speed. Use the POH/AFM value for the specified landing configuration; certification bases differ. In landing-distance certification it is maintained to the `50 ft` screen height.
 - `F fallback:` when `VREF` is not specified, use `VREF = 1.3 × VSO`. Example: `VSO 50 KIAS → VREF 65 KIAS`.
@@ -14,7 +14,7 @@
 - `T:` a wind/gust additive changes the operational approach target (`VAPP`), not the underlying `VREF`. Aircraft procedures and limitations govern.
 ***
 #### Pebble
-<!-- id: agk-v-speeds-airspeed-limits-pebble | also: study-pebble | level: CPL IR ME -->
+<!-- id: agk-v-speeds-airspeed-limits-pebble | level: CPL IR ME -->
 
 - VREF `POH/AFM value; fallback 1.3 × VSO | weight: VREF₂ ≈ VREF₁ × √(W₂/W₁) | approach category at maximum certificated landing weight | gust additive changes VAPP, not VREF`
 ***

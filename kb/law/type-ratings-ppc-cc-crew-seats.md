@@ -21,7 +21,7 @@
 | `T` Operations | TYPE endorsement ≠ operator authorization, PPC, IR, recurrent training or flight crew recency. ATR/other two-crew turboprop uses two-crew path, not HP-speed shortcut. |
 ***
 #### Pebble
-<!-- id: law-type-ratings-ppc-cc-crew-seats-pebble | also: study-pebble | level: CPL -->
+<!-- id: law-type-ratings-ppc-cc-crew-seats-pebble | level: CPL -->
 
 - TYPE `blanket: single-pilot non-high-performance | HP: single-pilot AND VNE ≥250 KIAS OR VSO ≥80 KIAS | complex ≠ HP | HP individual type: ≥200 h + qualifying flight within 12 mo`
 - TWO-CREW `≥250 h (or integrated ATP(A) course) | IATRA ≥70% within 24 mo, or SAMRA + SARON | PPC within 12 mo before application | three clocks: IATRA 24 mo / PPC 12 mo / operational PPC currency | type endorsement ≠ operator authorization`

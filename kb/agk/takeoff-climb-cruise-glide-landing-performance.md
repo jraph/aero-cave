@@ -13,7 +13,7 @@
 - Headwind helps; tailwind hurts big: small value, large distance penalty. grass/soft/wet/snow roll↑ braking↓.
 ***
 #### Climb / descent gradient
-<!-- id: agk-climb-descent-gradient | from: 06 | also: ifr-dep, study-formulas | level: IR -->
+<!-- id: agk-climb-descent-gradient | from: 06 | also: ifr-dep | kind: formula | level: IR -->
 
 - `F:` `ft/NM = ROC(fpm) × 60 / GS`.
 - `F:` `ROC/ROD(fpm)=GS × gradient(ft/NM)/60`.
@@ -22,7 +22,7 @@
 - `T:` gradient uses groundspeed. Tailwind increases GS and required fpm.
 ***
 #### Percent gradient
-<!-- id: agk-percent-gradient | from: 06 | also: ifr-dep, study-formulas | level: IR -->
+<!-- id: agk-percent-gradient | from: 06 | also: ifr-dep | kind: formula | level: IR -->
 
 - `F:` `% gradient = ft/NM / 60.76`.
 - `F:` `ft/NM ≈ % × 60.76`.
@@ -31,7 +31,7 @@
 - `T:` degrees and percent are not the same.
 ***
 #### Descent planning
-<!-- id: agk-descent-planning | from: 06 | also: ifr-app-fly, study-formulas | level: PPL CPL IR -->
+<!-- id: agk-descent-planning | from: 06 | also: ifr-app-fly | kind: formula | level: PPL CPL IR -->
 
 - `F 3°:` `ROD ≈ GS × 5`.
 - `F 3°:` descent distance NM ≈ `altitude to lose / 300`.
@@ -40,7 +40,7 @@
 - `T:` add level-offs, stepdowns, tailwind, config, ATC restrictions.
 ***
 #### Glide
-<!-- id: agk-glide | from: 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: agk-glide | from: 06 | kind: formula | level: PPL CPL IR -->
 
 - `F:` glide distance `NM = height AGL(ft) × glide ratio / 6076`.
 - Example: `9:1` glide ratio ⇒ `1000 ft AGL ≈ 1.48 NM` still-air.
@@ -49,7 +49,7 @@
 - `T:` use height above terrain, not altitude ASL. Wind, configuration, propeller, speed and aircraft condition change actual range.
 ***
 #### Runway / landing energy
-<!-- id: agk-runway-landing-energy | from: 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: agk-runway-landing-energy | from: 06 | kind: formula | level: PPL CPL IR -->
 
 - `F:` kinetic energy ∝ `V²`.
 - `F:` speed increase energy factor = `(actual/target)²`.
@@ -63,7 +63,7 @@
 - `T:` approach legal does not mean landing distance acceptable.
 ***
 #### Pebble
-<!-- id: agk-takeoff-climb-cruise-glide-landing-performance-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: agk-takeoff-climb-cruise-glide-landing-performance-pebble | level: PPL CPL IR -->
 
 - FACTORS `Vx = altitude/distance; Vy = altitude/time; best glide = max distance; min sink = max time | hot-high-heavy-humid-tailwind-soft-uphill = bad stack | calculate, don’t guess`
 - GRADIENT `ft/NM = ROC × 60 / GS | fpm = GS × ft/NM / 60 | % = ft/NM / 60.76 | 200 ft/NM ≈ 3.3% | 3° ≈ 318 ft/NM ≈ 5.2% | uses groundspeed`

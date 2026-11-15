@@ -114,7 +114,7 @@ footer a{color:var(--accent)}
 <div class="bar"><div class="wrap">
   <div class="qrow"><label class="sr" for="q">Search / Rechercher</label><input id="q" type="search" autocomplete="off"><button class="btn" id="clr" type="button" hidden></button></div>
   <label class="sr" for="fp">Study path / Parcours</label><select id="fp"></select>
-  <label class="sr" for="fk">Card / Fiche</label><select id="fk"></select>
+  <label class="sr" for="fk">Note type / Type de note</label><select id="fk"></select>
   <label class="sr" for="fc">Topic / Thème</label><select id="fc"></select>
 </div></div>
 <main class="wrap">
@@ -143,9 +143,9 @@ const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}},
 const norm = t => t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const T = {
-  title:['Canadian pilot study notes','Notes d’étude pour pilotes canadiens'], hRead:['Bilingual collections','Collections bilingues'],
+  title:['Canadian pilot study notes','Notes d’étude pour pilotes canadiens'], hRead:['By type of note','Par type de note'], tcItems:['TC items under this topic','Points TC sous ce thème'], tcGaps:['Missing or partial items','Points manquants ou partiels'],
   search:['Search topics, rules, codes…','Chercher thèmes, règles, codes…'],
-  allP:['All views','Toutes les vues'], gLevel:['Licence level','Niveau de licence'], gGuide:['TC exam or flight test','Examen ou test en vol de TC'], gOps:['Quick access by phase of flight','Accès rapide par phase de vol'], hOps:['Quick access by phase of flight','Accès rapide par phase de vol'], narrow:['Narrow by subject','Préciser par sujet'], opsNote:['Study reference, not a checklist: the POH/AFM and current publications govern.','Référence d’étude, non une liste de vérifications : le POH/AFM et les publications en vigueur prévalent.'], allK:['All cards','Toutes les fiches'], allC:['All topics','Tous les thèmes'],
+  allP:['All views','Toutes les vues'], gLevel:['Licence level','Niveau de licence'], gGuide:['TC exam or flight test','Examen ou test en vol de TC'], gOps:['Quick access by phase of flight','Accès rapide par phase de vol'], hOps:['Quick access by phase of flight','Accès rapide par phase de vol'], narrow:['Narrow by subject','Préciser par sujet'], opsNote:['Study reference, not a checklist: the POH/AFM and current publications govern.','Référence d’étude, non une liste de vérifications : le POH/AFM et les publications en vigueur prévalent.'], allK:['All note types','Tous les types de notes'], allC:['All topics','Tous les thèmes'],
   hSubj:['Subjects','Sujets'],
   note:['Stages, level tags and topic links are an editorial study structure, not a Transport Canada syllabus mapping.','Les étapes, niveaux et liens thématiques sont une structure d’étude éditoriale, non une correspondance officielle de Transports Canada.'],
   topics:['topics','thèmes'],
@@ -171,9 +171,10 @@ const desc = new Map();
 const getDesc = id => { if (desc.has(id)) return desc.get(id); const s = new Set([id]); desc.set(id, s); for (const n of C.get(id).narrower) for (const x of getDesc(n)) s.add(x); return s; };
 const roots = D.concepts.filter(c => !c.broader.length).map(c => c.id);
 const K = new Map(D.cards.map(c => [c.id, c]));
+const KIND = new Map(D.kinds.map((k, i) => [k.id, Object.assign({i}, k)]));
 const V = new Map();
-for (const v of D.views) { const set = v.concepts ? new Set() : null; if (set) for (const id of v.concepts) for (const x of getDesc(id)) set.add(x); V.set(v.id, Object.assign({}, v, {set, uset: v.units ? new Set(v.units) : null, rx: v.re ? new RegExp(v.re, 'i') : null})); }
-const inView = (s, v) => (!v.level || s.p.includes(v.level)) && (v.uset ? v.uset.has(s.u) : ((!v.set && !v.rx) || (v.set && s.c.some(x => v.set.has(x))) || (v.rx && v.rx.test(s.h))));
+for (const v of D.views) { const set = v.concepts ? new Set() : null; if (set) for (const id of v.concepts) for (const x of getDesc(id)) set.add(x); V.set(v.id, Object.assign({}, v, {set, kset: v.kinds ? new Set(v.kinds) : null, uset: v.units ? new Set(v.units) : null, rx: v.re ? new RegExp(v.re, 'i') : null})); }
+const inView = (s, v) => (!v.level || s.p.includes(v.level)) && (v.uset ? v.uset.has(s.u) : ((!v.set && !v.rx && !v.kset) || (v.kset && v.kset.has(s.kd)) || (v.set && s.c.some(x => v.set.has(x))) || (v.rx && v.rx.test(s.h))));
 for (const s of D.sections) {
   s.t = norm(s.h + ' ' + s.md + ' ' + s.c.map(id => C.get(id).en + ' ' + C.get(id).fr + ' ' + (C.get(id).alt || []).join(' ')).join(' '));
   s.hn = norm(s.h);
@@ -186,30 +187,30 @@ for (const g of D.guides) for (const grp of g.groups) for (const it of grp.items
 let gFilter = '';
 const PLANE = '✈\uFE0E';
 const gHit = i => !gFilter || (gFilter === 'e' ? i.e : gFilter === 'd' ? i.d : i.s === gFilter);
-/* ---- state + routing: #x-PATH-CARD-CONCEPT ---- */
+/* ---- state + routing: #x-VIEW-KIND-CONCEPT (k = note kind) ---- */
 const S = {q:'', p:'', k:'', c:'', g:''};
 let focusUnit = '';
 function readHash() {
   const m = /^#x-([A-Za-z0-9]+)-([A-Za-z0-9]+)-([a-z0-9-]+)$/.exec(location.hash);
   S.p = S.k = S.c = S.g = '';
   const mg = /^#g-([a-z0-9-]+)$/.exec(location.hash); if (mg && G.has(mg[1])) { S.g = mg[1]; return; }
-  const mu = /^#u-([a-z0-9-]+)$/.exec(location.hash); if (mu && U.has(mu[1])) { S.k = U.get(mu[1]).card; focusUnit = mu[1]; return; }
+  const mu = /^#u-([a-z0-9-]+)$/.exec(location.hash); if (mu && U.has(mu[1])) { S.c = U.get(mu[1]).c[0]; focusUnit = mu[1]; return; }
   if (!m) return;
   if (V.has(m[1])) S.p = m[1];
-  if (K.has(m[2])) S.k = m[2];
+  const k0 = {F:'formula', A:'glossary'}[m[2]] || m[2]; if (KIND.has(k0)) S.k = k0;
   if (C.has(m[3])) S.c = m[3];
 }
 function writeHash() {
   const h = S.g ? '#g-' + S.g : (S.p || S.k || S.c) ? '#x-' + (S.p || 'any') + '-' + (S.k || 'any') + '-' + (S.c || 'any') : '';
   if (h !== location.hash) { try { history.replaceState(null, '', h || location.pathname + location.search); } catch (e) { location.hash = h; } }
 }
-function openUnit(u) { focusUnit = u; go({q:'', p:'', c:'', g:'', k:U.get(u).card}); }
+function openUnit(u) { focusUnit = u; go({q:'', p:'', k:'', g:'', c:U.get(u).c[0]}); }
 function go(patch, top) { if (!('g' in patch)) S.g = ''; Object.assign(S, patch); writeHash(); render(); if (top) window.scrollTo({top:0}); }
 
 /* ---- filtering ---- */
 function matches(s, skip) {
   if (skip !== 'p' && S.p && !inView(s, V.get(S.p))) return false;
-  if (skip !== 'k' && S.k && s.card !== S.k) return false;
+  if (skip !== 'k' && S.k && s.kd !== S.k) return false;
   if (skip !== 'c' && S.c) { const d = getDesc(S.c); if (!s.c.some(x => d.has(x))) return false; }
   for (const w of tokens) if (!s.t.includes(w)) return false;
   return true;
@@ -354,6 +355,12 @@ function renderConcept(counts) {
   });
   p.appendChild(cr); p.appendChild(el('h3', '', esc(L(c))));
   const row = (label, ids, cls) => { ids = ids.filter(x => counts.get(x)); if (!ids.length) return; const r = el('div', 'rel', '<i>' + esc(t(label)) + '</i>'); ids.forEach(x => r.appendChild(chip(x, cls, counts.get(x)))); p.appendChild(r); };
+  const dset = getDesc(S.c), tc = []; for (const g of D.guides) for (const grp of g.groups) if (dset.has(grp.concept)) for (const it of grp.items) tc.push({g, grp, it});
+  if (tc.length) { const arr = tc.map(x => x.it), n = k => arr.filter(i => i.s === k).length;
+    p.appendChild(el('div', 'crumbs', esc(t('tcItems')) + ': <b>' + arr.length + '</b> · ' + ['C','P','M'].filter(n).map(k => n(k) + ' ' + k).join(' · ') + (arr.some(i => i.e) ? ' · ' + PLANE + ' ' + arr.filter(i => i.e).length : ''))); p.insertAdjacentHTML('beforeend', bar(arr));
+    const gaps = tc.filter(x => x.it.s !== 'C'); if (gaps.length) { const d = el('details', 'grp'); d.appendChild(el('summary', '', '<span>' + esc(t('tcGaps')) + '</span><small style="color:var(--muted);font-weight:400">' + gaps.length + '</small>'));
+      for (const x of gaps) { const r = el('div', 'it', '<span class="sb s' + x.it.s + '">' + x.it.s + '</span><span>' + (x.it.e ? '<span class="ess">' + PLANE + '</span> ' : '') + esc(x.it.en) + ' <button class="chip" type="button">' + esc(L(x.g)) + '</button></span>' + (x.it.gap ? '<span class="gap">' + esc(x.it.gap) + '</span>' : '')); r.querySelector('button').onclick = () => go({g:x.g.id}, true); d.appendChild(r); }
+      p.appendChild(d); } }
   const gOn = store.get('aero-cave-graph') !== '0';
   if (!gOn) { row('nar', c.narrower, ''); row('rel', c.related, 'r'); row('bro', c.broader, 'b'); }
   const tg = el('button', 'btn', esc(t('graph')) + (gOn ? ' ▾' : ' ▸')); tg.type = 'button'; tg.style.marginTop = '.45rem'; tg.setAttribute('aria-expanded', gOn);
@@ -429,7 +436,7 @@ function render() {
   const fp = $('fp'); fp.textContent = ''; fp.appendChild(new Option(t('allP'), ''));
   for (const [g, key] of [['guide','gGuide'],['ops','gOps']]) { const og = document.createElement('optgroup'); og.label = t(key); for (const v of V.values()) if (v.group === g) og.appendChild(new Option(L1(v) + ' (' + vn.get(v.id) + ')', v.id)); fp.appendChild(og); }
   fp.value = S.p; fp.classList.toggle('on', !!S.p);
-  fillSelect($('fk'), [['', t('allK')]].concat(D.cards.map(c => [c.id, (/^\d/.test(c.id) ? c.id + ' · ' : '') + L1(c) + ' (' + baseK.filter(s => s.card === c.id).length + ')'])), S.k);
+  fillSelect($('fk'), [['', t('allK')]].concat(D.kinds.map(k => [k.id, L1(k) + ' (' + baseK.filter(s => s.kd === k.id).length + ')'])), S.k);
   fillSelect($('fc'), conceptOptions(counts), S.c);
   $('gpanel').hidden = !S.g;
   if (S.g) { const c0 = $('clr'); c0.textContent = lang === 'fr' ? T.clr[1] : T.clr[0]; c0.hidden = false; for (const id of ['home','vpanel','cpanel','count']) $(id).hidden = true; $('results').textContent = ''; renderGuide(); return; }
@@ -437,7 +444,7 @@ function render() {
   $('home').hidden = !browsing;
   if (browsing) {
     const ts = $('ts'), tg = $('tg'), tr = $('tr'); ts.textContent = tg.textContent = tr.textContent = '';
-    for (const c of D.cards) if (c.reader) { const a = el('a', 'tile', '<b>' + esc(L(c)) + '</b><span>EN / FR</span>'); a.href = ['F', 'A'].includes(c.id) ? '#x-any-' + c.id + '-any' : c.reader; a.style.textDecoration = 'none'; a.style.color = 'inherit'; tr.appendChild(a); }
+    for (const k of D.kinds) { const n = D.sections.filter(x => x.kd === k.id).length; if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(k)) + '</b><span>' + n + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({k:k.id}, true); tr.appendChild(b); }
     D.guides.forEach((g, i) => { const all = g.groups.flatMap(x => x.items), n = k => all.filter(it => it.s === k).length; const b = el('button', 'tile', '<b>' + (i + 1) + ' · ' + esc(L(g)) + '</b><span>' + esc(g.guide) + ' · ' + esc(t(g.kind === 'flight' ? 'kFlight' : 'kWritten')) + '<br>' + all.length + ' ' + t('items') + ' · ' + ['C','P','M','E'].filter(k => n(k)).map(k => n(k) + ' ' + k).join(' · ') + (all.some(x => x.e) ? ' · ' + PLANE + ' ' + all.filter(x => x.e).length : '') + '</span>' + bar(all)); b.type = 'button'; b.onclick = () => go({g:g.id}, true); tg.appendChild(b); });
     for (const [g, box] of [['ops', $('to')]]) { box.textContent = ''; for (const v of V.values()) if (v.group === g) { const b = el('button', 'tile', '<b>' + esc(L(v)) + '</b><span>' + (v.ref ? esc(v.ref) + ' · ' : '') + vn.get(v.id) + ' ' + t('secs') + '</span>'); b.type = 'button'; b.onclick = () => go({p:v.id}, true); box.appendChild(b); } }
     for (const r of roots) { const n = counts.get(r); if (!n) continue; const b = el('button', 'tile', '<b>' + esc(L(C.get(r))) + '</b><span>' + n + ' ' + t('secs') + ' · ' + C.get(r).narrower.filter(x => counts.get(x)).length + ' ' + t('topics') + '</span>'); b.type = 'button'; b.onclick = () => go({c:r}, true); ts.appendChild(b); }
@@ -460,6 +467,7 @@ function render() {
   if (!list.length) { res.appendChild(el('p', 'empty', esc(t('none')))); return; }
   const frag = document.createDocumentFragment();
   if (tokens.length) { list.forEach(s => { const d = sectionEl(s); d.querySelector('.st').insertAdjacentHTML('beforebegin', '<span class="pb" style="color:var(--accent)">' + s.card + '</span>'); frag.appendChild(d); }); }
+  else if (S.c && !S.k) { const ord = list.map((x, i) => [KIND.get(x.kd).i, i, x]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).map(x => x[2]); let cur = null; for (const s of ord) { if (s.kd !== cur) { cur = s.kd; frag.appendChild(el('div', 'gh', esc(L(KIND.get(cur))) + ' <small>' + ord.filter(x => x.kd === cur).length + '</small>')); } frag.appendChild(sectionEl(s)); } }
   else { let cur = null; const key = x => x.f || x.card; for (const s of list) { if (key(s) !== cur) { cur = key(s); const c = K.get(s.card), n = list.filter(x => key(x) === cur).length; frag.appendChild(el('div', 'gh', esc(s.f ? c.id + ' › ' + c.files[s.f] : (/^\d/.test(c.id) ? c.id + ' · ' : '') + L(c)) + ' <small>' + n + '</small>')); } frag.appendChild(sectionEl(s)); } }
   res.appendChild(frag);
   if (list.length === 1) res.querySelector('details').open = true;

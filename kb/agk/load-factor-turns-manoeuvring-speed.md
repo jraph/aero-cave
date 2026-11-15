@@ -5,7 +5,7 @@
 
 ***
 #### Rate-one turn / turn geometry
-<!-- id: agk-rate-one-turn-turn-geometry | from: 06 | also: study-formulas | level: PPL CPL IR -->
+<!-- id: agk-rate-one-turn-turn-geometry | from: 06 | kind: formula | level: PPL CPL IR -->
 
 - `F:` standard-rate turn = `3°/sec`; 360° in `2 min`.
 - `F rough:` bank for rate-one ≈ `TAS/10 + 7`.
@@ -14,7 +14,7 @@
 - `T:` high TAS needs more bank for standard rate.
 ***
 #### Pebble
-<!-- id: agk-load-factor-turns-manoeuvring-speed-pebble | also: study-pebble | level: PPL CPL IR -->
+<!-- id: agk-load-factor-turns-manoeuvring-speed-pebble | level: PPL CPL IR -->
 
 - RATE ONE `3°/s, 360° in 2 min | bank ≈ TAS/10 + 7 | 120 kt ≈ 19°, 90 kt ≈ 16° | higher TAS needs more bank`
 ***

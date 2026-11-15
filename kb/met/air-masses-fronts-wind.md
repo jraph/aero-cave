@@ -93,7 +93,7 @@
 - Warm-layer-over-subfreezing-surface setup can produce `FZRA/PL`.
 ***
 #### Pebble
-<!-- id: met-systems-pebble | also: study-pebble -->
+<!-- id: met-systems-pebble -->
 
 - AIR MASS `c dry / m moist; Arctic/Polar/Tropical | cold air over warm surface → instability/showers | warm air over cold surface → stability/fog/stratus`
 - PRESSURE (NH) `low = CCW-IN-RISE, cloud/precip | high = CW-OUT-SINK | trough → wind shift/cloud/showers | closely spaced isobars → stronger wind`

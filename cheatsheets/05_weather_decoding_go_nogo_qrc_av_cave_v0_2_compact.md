@@ -5,7 +5,7 @@
 `MOVED 2026-11-14:` knowledge sections now live in concept files under [`kb/met/`](../kb/met/README.md); go/no-go flows and gates remain here.
 ***
 #### Source / master scan
-<!-- id: wxp-master-scan | concepts: met-products, study-src | level: PPL CPL IR -->
+<!-- id: wxp-master-scan | concepts: met-products | kind: source | level: PPL CPL IR -->
 
 - `SRC:` current AIM MET + NAV CANADA/FIC + CARs/CAP/CFS/NOTAM. Products describe; PIC decides legal + safe.
 - Review GFA/AIRMET/SIGMET→TAF/METAR/SPECI→PIREP/upper winds→radar/satellite/lightning→RSC/CRFI/cameras.
@@ -82,13 +82,13 @@
 - `!:` unexpected ice, worsening VMC, rising terrain under lowering ceiling, cell growth/line closure, fuel below divert plan ⇒ exit now.
 ***
 #### INRAT weather question method
-<!-- id: wxp-inrat-method | concepts: ifr-wx, study-traps | level: IR -->
+<!-- id: wxp-inrat-method | concepts: ifr-wx | kind: trap | level: IR -->
 
 - `1` locate ETA/time window; `2` decode prevailing/change groups; `3` identify legal threshold; `4` include TEMPO/PROB/BECMG rule; `5` check GFA/AIRMET/SIGMET/NOTAM; `6` calculate wind/fuel/temperature; `7` select legal answer, then note operational risk.
 - `T:` common distractors use wrong time, AGL vs ASL, BKN vs SCT, prevailing vs TEMPO, alternate vs landing minima.
 ***
 #### Pebble
-<!-- id: wxp-pebble | concepts: met, study-pebble | level: PPL CPL IR -->
+<!-- id: wxp-pebble | concepts: met | kind: pebble | level: PPL CPL IR -->
 
 - weather scan `SYNOPTIC-GFA-HAZARDS-TERMINALS-PIREP-WINDS-RUNWAY-TREND` | gates `LEGAL-AIRCRAFT-PILOT-OPTIONS`; legal + no options = fragile | observations worse than forecast=confidence↓ | many amber=red | `UPDATE-FUEL-OPTIONS-DECIDE EARLY` | scud running = shrinking options; turn around early | decoding and hazard recall: concept Pebbles in `kb/met/`.
 ***

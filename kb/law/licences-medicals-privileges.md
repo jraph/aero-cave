@@ -16,7 +16,7 @@
 - Skill: flight test within `12mo` before application. `T:` daylight restriction if night req not met.
 ***
 #### Flight test / standard
-<!-- id: law-flight-test-standard | from: 03 | also: study-traps | level: CPL -->
+<!-- id: law-flight-test-standard | from: 03 | kind: trap | level: CPL -->
 
 - Admission: ID + licence + CPL medical proof + instructor letter ≤`30d` + ≥`75%` flying exp + written proof/deficiency review if applicable.
 - Stable VFR app: correct path/config/power/checklist/brief; ROD≤`1000 fpm`; speed `+10/-5`; small corrections; stable by `200 AGL` or overshoot.
@@ -46,7 +46,7 @@
 - `M:` licence qualifies pilot; AOC authorizes service. `T:` equal cost split alone is insufficient.
 ***
 #### Pebble
-<!-- id: law-licences-medicals-privileges-pebble | also: study-pebble | level: PPL CPL -->
+<!-- id: law-licences-medicals-privileges-pebble | level: PPL CPL -->
 
 - VALIDITY `LICENCE-RATING-MEDICAL-RECENCY-AIRCRAFT-OPERATION`
 - CPL-A `age 18 | Cat 1 | 80 h ground school | CPAER 60% each subject + overall | 200 h TT incl 100 PIC + 20 PIC XC | 65 h post-PPL = 35 dual + 30 solo | dual: 5 night incl 2 XC, 5 XC, 20 instrument (max 10 sim) | solo: 300 NM XC with 3 full stops, one ≥250 NM straight-line; 5 h night with 10 TKOF/LDG | flight test within 12 mo`

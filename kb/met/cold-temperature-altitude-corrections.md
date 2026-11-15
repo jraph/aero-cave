@@ -5,7 +5,7 @@
 
 ***
 #### Cold temperature / altitude error
-<!-- id: wx-cold-temperature-altitude-error | from: 06 | also: study-formulas | level: CPL IR -->
+<!-- id: wx-cold-temperature-altitude-error | from: 06 | kind: formula | level: CPL IR -->
 
 - `M:` high to low, look out below; warm to cold, look out below.
 - `F rough:` altitude error ≈ `4 ft × height above station(thousands ft) × °C below ISA`.

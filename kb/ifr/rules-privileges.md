@@ -47,7 +47,7 @@
 - `T:` automation can be wrong because pilot loaded it wrong.
 ***
 #### Pebble
-<!-- id: ifr-rules-privileges-pebble | also: study-pebble -->
+<!-- id: ifr-rules-privileges-pebble -->
 
 - IFR NEEDS `licence/rating/medical/recency + ACFT equipment + IFR flight plan/clearance where required | G3 single only; G1 all aeroplanes | INRAT pass ≠ rating issued | clearance limit ≠ authorization beyond it`
 - RECENCY `24-month test/IPC/check | from 1st day of 7th month after: six approaches in the six months before the flight, to specified minima | actual or simulated IMC, or approved FFS/FTD | no six-hour rule; 6–6–6 outdated | records 3 years` CAR 401.05(3)–(3.2)
