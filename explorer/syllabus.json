@@ -530,7 +530,7 @@
     {"n": 1, "en": "Issue times and validity", "s": "P", "u": ["wxp-gfa", "wxp-taf"], "gap": "GFA issue / valid times given; TAF, FB, AIRMET and SIGMET issue and validity periods absent.", "e": 1},
     {"n": 2, "en": "Decoding", "s": "C", "u": ["wxp-taf", "wxp-gfa", "wxp-upper-winds"], "gap": "", "e": 1},
     {"n": 3, "en": "GFA", "s": "C", "u": ["wxp-gfa", "wx-products", "wx-freezing-level"], "gap": "", "e": 1},
-    {"n": 4, "en": "TAF", "s": "C", "u": ["wxp-taf", "wxp-taf-alternate", "ifr-taf-alternate-logic", "wx-products"], "gap": "", "e": 1},
+    {"n": 4, "en": "TAF", "s": "C", "u": ["wxp-taf", "wxp-taf-alternate", "wx-products"], "gap": "", "e": 1},
     {"n": 5, "en": "FB upper winds and temperatures", "s": "P", "u": ["wxp-upper-winds"], "gap": "Use and interpolation; FB coding format, levels and issue times absent.", "e": 1},
     {"n": 6, "en": "AIRMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wx-products"], "gap": ""},
     {"n": 7, "en": "SIGMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wx-products"], "gap": "", "e": 1}
@@ -546,7 +546,7 @@
   ]},
   {"code": "AGR", "concept": "agk-systems", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Landing gear, brakes and flaps", "fr": "Train, freins et volets", "items": [
     {"n": 1, "en": "Mechanical", "s": "P", "u": ["sys-landing-gear-malfunction", "sys-flap-malfunction-asymmetry", "sys-brake-failure"], "gap": "Failure QRCs only; system description absent."},
-    {"n": 2, "en": "Hydraulic", "s": "P", "u": ["me-systems-focus-for-me"], "gap": "Named only."},
+    {"n": 2, "en": "Hydraulic", "s": "M", "u": [], "gap": "No general hydraulic-system note."},
     {"n": 3, "en": "Electric", "s": "P", "u": ["sys-flap-malfunction-asymmetry"], "gap": "Failure QRC only."}
   ]},
   {"code": "AENG", "concept": "agk-engine", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Engines", "fr": "Moteurs", "items": [
@@ -579,7 +579,7 @@
     {"n": 2, "en": "Battery types for electric aeroplanes", "s": "M", "u": [], "gap": ""},
     {"n": 3, "en": "Lighting", "s": "P", "u": ["law-night-vfr-equipment-pax-commercial"], "gap": "Required night lights only."},
     {"n": 4, "en": "Ammeter and loadmeter", "s": "C", "u": ["sys-electrical-alternator-failure", "c150-electrical-system"], "gap": ""},
-    {"n": 5, "en": "Bus bars", "s": "P", "u": ["proc-electrical-failure"], "gap": "Load shedding only."},
+    {"n": 5, "en": "Bus bars", "s": "P", "u": ["sys-electrical-alternator-failure"], "gap": "Bus named only."},
     {"n": 6, "en": "Circuit breakers and fuses", "s": "P", "u": ["c150-electrical-system"], "gap": "Breakers named only."},
     {"n": 7, "en": "Grounding and bonding", "s": "M", "u": [], "gap": ""}
   ]},
@@ -641,7 +641,7 @@
   {"code": "TPRO", "concept": "agk-prop", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Propellers", "fr": "Hélices", "items": [
     {"n": 1, "en": "Propeller efficiency", "s": "M", "u": [], "gap": ""},
     {"n": 2, "en": "Fixed and variable pitch", "s": "C", "u": ["sys-propeller-governor-constant-speed", "sys-powerplant-prop-l4-cave"], "gap": ""},
-    {"n": 3, "en": "Torque, slipstream, gyroscopic effect, asymmetric thrust", "s": "P", "u": ["me-critical-engine"], "gap": "P-factor and torque in ME context only."}
+    {"n": 3, "en": "Torque, slipstream, gyroscopic effect, asymmetric thrust", "s": "M", "u": [], "gap": "No general note on left-turning tendencies (torque, slipstream, P-factor, gyroscopic precession)."}
   ]},
   {"code": "TWNG", "concept": "agk-theory", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Wing design", "fr": "Conception de l'aile", "items": [
     {"n": 1, "en": "Planform", "s": "M", "u": [], "gap": ""},
@@ -721,7 +721,7 @@
     {"n": 1, "en": "Turn instrument principle", "s": "M", "u": [], "gap": "", "e": 1},
     {"n": 2, "en": "Turn instrument errors", "s": "P", "u": ["agk-gyro-instruments-principles-errors"], "gap": "How the instruments read (rate, roll rate, ball); no source list of turn-instrument errors."},
     {"n": 3, "en": "Turn instrument limitations", "s": "M", "u": [], "gap": ""},
-    {"n": 4, "en": "Turn instrument power sources", "s": "P", "u": ["proc-vacuum-attitude-heading-failure"], "gap": "Electric backup role only."}
+    {"n": 4, "en": "Turn instrument power sources", "s": "C", "u": ["agk-gyro-instruments-principles-errors"], "gap": ""}
   ]},
   {"code": "IEFI", "concept": "agk-inst", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "EFIS", "fr": "EFIS", "items": [
     {"n": 1, "en": "EFIS principle", "s": "M", "u": [], "gap": ""},
@@ -732,8 +732,8 @@
   {"code": "IFLY", "concept": "agk-inst", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Instrument flying", "fr": "Vol aux instruments", "items": [
     {"n": 1, "en": "Loss of visual reference", "s": "P", "u": ["c150-vacuum-system-failure-cloud"], "gap": "Inadvertent-cloud QRC only."},
     {"n": 2, "en": "Control and performance instruments", "s": "C", "u": ["agk-control-performance-instrument-flying"], "gap": ""},
-    {"n": 3, "en": "Instrument scan and interpretation", "s": "P", "u": ["proc-ifr-cockpit-instrument-check"], "gap": "Instrument check only."},
-    {"n": 4, "en": "Aircraft control on instruments", "s": "P", "u": ["proc-vacuum-attitude-heading-failure"], "gap": "Partial-panel scan only."},
+    {"n": 3, "en": "Instrument scan and interpretation", "s": "C", "u": ["agk-control-performance-instrument-flying"], "gap": ""},
+    {"n": 4, "en": "Aircraft control on instruments", "s": "C", "u": ["agk-control-performance-instrument-flying"], "gap": ""},
     {"n": 5, "en": "Unusual attitudes and recovery", "s": "C", "u": ["proc-unusual-attitude-nose-high", "proc-unusual-attitude-nose-low"], "gap": ""}
   ]},
   {"code": "OGEN", "concept": "agk-ops", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Flight operations: general", "fr": "Opérations : généralités", "items": [
@@ -763,7 +763,7 @@
     {"n": 4, "en": "Cruise charts", "s": "P", "u": ["c150-cruise-sample-not-universal"], "gap": "Sample only.", "e": 1},
     {"n": 5, "en": "Fuel burn charts", "s": "P", "u": ["agk-fuel"], "gap": "Burn formulas only."},
     {"n": 6, "en": "Landing charts", "s": "P", "u": ["c150-performance-chart-rules"], "gap": "Chart rules only.", "e": 1},
-    {"n": 7, "en": "Performance V-speeds", "s": "C", "u": ["c150-normal-speeds-max-weight-unless-noted", "me-essential-speeds-to-know-cold"], "gap": "", "e": 1},
+    {"n": 7, "en": "Performance V-speeds", "s": "C", "u": ["c150-normal-speeds-max-weight-unless-noted"], "gap": "", "e": 1},
     {"n": 8, "en": "Contaminants and take-off / landing distance", "s": "P", "u": ["agk-performance-factors"], "gap": "Listed as factors only."},
     {"n": 9, "en": "Runway surface and take-off / landing distance", "s": "P", "u": ["agk-performance-factors"], "gap": "Listed as factors only.", "e": 1},
     {"n": 10, "en": "Upslope and downslope runways", "s": "P", "u": ["agk-performance-factors"], "gap": "“Uphill” listed only."}
@@ -782,11 +782,11 @@
     {"n": 11, "en": "Never-exceed speed (Vne)", "s": "P", "u": ["c150-airspeed-limitations"], "gap": "C150M value only."},
     {"n": 12, "en": "Maximum flap speed (Vfe)", "s": "P", "u": ["c150-airspeed-limitations"], "gap": "C150M value only."},
     {"n": 13, "en": "Reference landing speed (Vref)", "s": "C", "u": ["agk-vref-landing-reference-speed"], "gap": "", "e": 1},
-    {"n": 14, "en": "Maximum gear operating speed (Vlo)", "s": "P", "u": ["me-essential-speeds-to-know-cold"], "gap": "Symbol only."},
+    {"n": 14, "en": "Maximum gear operating speed (Vlo)", "s": "C", "u": ["agk-landing-gear-speeds-vlo-vle"], "gap": ""},
     {"n": 15, "en": "Gliding for range", "s": "C", "u": ["agk-glide", "c150-maximum-glide"], "gap": ""},
     {"n": 16, "en": "Flying for range", "s": "P", "u": ["c150-range-endurance-assumptions"], "gap": "C150M assumptions only."},
     {"n": 17, "en": "Flying for endurance", "s": "P", "u": ["c150-range-endurance-assumptions"], "gap": "C150M assumptions only."},
-    {"n": 18, "en": "Slow flight", "s": "P", "u": ["agk-handling-landings", "me-stall-slow-flight-me"], "gap": "Handling lines only.", "e": 1},
+    {"n": 18, "en": "Slow flight", "s": "P", "u": ["agk-handling-landings"], "gap": "Handling lines only.", "e": 1},
     {"n": 19, "en": "Stalls", "s": "C", "u": ["trn-spiral-stall", "agk-load-factor-accelerated-stall"], "gap": "", "e": 1},
     {"n": 20, "en": "Indicated and true stall speed", "s": "M", "u": [], "gap": "", "e": 1},
     {"n": 21, "en": "Stall speed vs altitude", "s": "P", "u": ["agk-handling-landings"], "gap": "Stall recovery only.", "e": 1},
@@ -810,7 +810,7 @@
     {"n": 8, "en": "Cargo tie-down and passenger loading", "s": "P", "u": ["law-baggage-cargo"], "gap": "Securing rule only."},
     {"n": 9, "en": "Normal and utility category", "s": "P", "u": ["c150-manoeuvre-structural-limits"], "gap": "C150M utility category only.", "e": 1},
     {"n": 10, "en": "Zero-fuel calculation", "s": "P", "u": ["agk-weight-balance"], "gap": "“Check zero-fuel” only.", "e": 1},
-    {"n": 11, "en": "Maximum zero fuel weight", "s": "C", "u": ["agk-weight-balance", "me-w-b-me-traps"], "gap": "", "e": 1}
+    {"n": 11, "en": "Maximum zero fuel weight", "s": "P", "u": ["agk-weight-balance"], "gap": "Zero-fuel check named; MZFW definition not covered.", "e": 1}
   ]},
   {"code": "OWAK", "concept": "agk-ops", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Wake turbulence", "fr": "Turbulence de sillage", "items": [
     {"n": 1, "en": "Wake causes", "s": "C", "u": ["law-ats-surveillance-wake-rvsm"], "gap": "", "e": 1},
@@ -838,7 +838,7 @@
     {"n": 3, "en": "Decompression", "s": "M", "u": [], "gap": ""},
     {"n": 4, "en": "Visual scanning", "s": "M", "u": [], "gap": "", "e": 1},
     {"n": 5, "en": "Hearing", "s": "M", "u": [], "gap": ""},
-    {"n": 6, "en": "Orientation and disorientation", "s": "P", "u": ["ifr-human-factors-single-pilot-ifr"], "gap": "Illusions named only.", "e": 1},
+    {"n": 6, "en": "Orientation and disorientation", "s": "P", "u": ["agk-situational-awareness-cockpit-setup"], "gap": "One line: rely on instruments; types of disorientation not covered.", "e": 1},
     {"n": 7, "en": "Positive and negative G", "s": "M", "u": [], "gap": ""},
     {"n": 8, "en": "Sleep and fatigue", "s": "P", "u": ["agk-human-emergency"], "gap": "Fatigue named only."},
     {"n": 9, "en": "Anaesthetics", "s": "M", "u": [], "gap": ""},
@@ -861,14 +861,14 @@
     {"n": 3, "en": "Situational awareness", "s": "M", "u": [], "gap": "", "e": 1},
     {"n": 4, "en": "Stress", "s": "M", "u": [], "gap": "", "e": 1},
     {"n": 5, "en": "Risk management", "s": "P", "u": ["agk-human-emergency"], "gap": "PAVE only.", "e": 1},
-    {"n": 6, "en": "Threat and error management", "s": "P", "u": ["ifr-human-factors-single-pilot-ifr"], "gap": "Threat list only.", "e": 1},
+    {"n": 6, "en": "Threat and error management", "s": "C", "u": ["agk-workload-information-processing-tem-uas"], "gap": "", "e": 1},
     {"n": 7, "en": "Hazardous attitudes", "s": "C", "u": ["agk-human-emergency"], "gap": ""},
     {"n": 8, "en": "Workload", "s": "M", "u": [], "gap": "", "e": 1}
   ]},
   {"code": "HEQP", "concept": "agk-hf", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Pilot–equipment relationship", "fr": "Relation pilote–équipement", "items": [
-    {"n": 1, "en": "Controls and displays", "s": "P", "u": ["ifr-ils-loc-vor-ndb-dme"], "gap": "Reverse sensing and ADF needle traps only."},
+    {"n": 1, "en": "Controls and displays", "s": "P", "u": ["agk-situational-awareness-cockpit-setup"], "gap": "Seat position and instrument visibility only."},
     {"n": 2, "en": "Maps and charts", "s": "M", "u": [], "gap": "", "e": 1},
-    {"n": 3, "en": "Automation and EFBs", "s": "P", "u": ["ifr-human-factors-single-pilot-ifr"], "gap": "One trap line.", "e": 1},
+    {"n": 3, "en": "Automation and EFBs", "s": "P", "u": ["nav-efb-ped-principles-power-distraction"], "gap": "EFB only; automation not covered.", "e": 1},
     {"n": 4, "en": "Checklists and manuals", "s": "P", "u": ["sys-checklist-declaration"], "gap": "Checklist discipline only."}
   ]},
   {"code": "HREL", "concept": "agk-hf", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Interpersonal relations", "fr": "Relations interpersonnelles", "items": [
@@ -1595,7 +1595,7 @@
     {"n": 1, "en": "Issue times and validity", "s": "P", "u": ["wxp-gfa", "wxp-taf"], "gap": "GFA issue / valid times given; TAF, FB, AIRMET and SIGMET issue and validity periods absent.", "d": 1},
     {"n": 2, "en": "Decoding", "s": "C", "u": ["wxp-taf", "wxp-gfa", "wxp-upper-winds"], "gap": "", "e": 1, "d": 1},
     {"n": 3, "en": "GFA", "s": "C", "u": ["wxp-gfa", "wx-products", "wx-freezing-level"], "gap": "", "d": 1},
-    {"n": 4, "en": "TAF", "s": "C", "u": ["wxp-taf", "wxp-taf-alternate", "ifr-taf-alternate-logic", "wx-products"], "gap": "", "d": 1},
+    {"n": 4, "en": "TAF", "s": "C", "u": ["wxp-taf", "wxp-taf-alternate", "wx-products"], "gap": "", "d": 1},
     {"n": 5, "en": "Upper winds and temperatures (FB)", "s": "P", "u": ["wxp-upper-winds"], "gap": "Use and interpolation; FB coding format, levels and issue times absent."},
     {"n": 6, "en": "AIRMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wx-products"], "gap": ""},
     {"n": 7, "en": "SIGMET", "s": "C", "u": ["wxp-airmet-sigmet-pirep", "wx-products"], "gap": ""}
@@ -1613,7 +1613,7 @@
   ]},
   {"code": "AGR", "concept": "agk-systems", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Landing gear, brakes and flaps", "fr": "Train, freins, volets", "items": [
     {"n": 1, "en": "Mechanical gear / brakes / flaps", "s": "P", "u": ["sys-landing-gear-malfunction", "sys-flap-malfunction-asymmetry", "sys-brake-failure"], "gap": "Failure QRCs only; system description absent."},
-    {"n": 2, "en": "Hydraulic systems", "s": "P", "u": ["me-systems-focus-for-me"], "gap": "Named only."},
+    {"n": 2, "en": "Hydraulic systems", "s": "M", "u": [], "gap": "No general hydraulic-system note."},
     {"n": 3, "en": "Electrical gear / flap systems", "s": "P", "u": ["sys-flap-malfunction-asymmetry"], "gap": "Failure QRC only."}
   ]},
   {"code": "AENG", "concept": "agk-engine", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Engines", "fr": "Moteurs", "items": [
@@ -1656,7 +1656,7 @@
     {"n": 2, "en": "Master and alternator switches", "s": "P", "u": ["c150-electrical-system"], "gap": "C150M switches only."},
     {"n": 3, "en": "Aircraft lighting", "s": "P", "u": ["law-night-vfr-equipment-pax-commercial"], "gap": "Required night lights only."},
     {"n": 4, "en": "Ammeter and load meter", "s": "C", "u": ["sys-electrical-alternator-failure", "c150-electrical-system"], "gap": ""},
-    {"n": 5, "en": "Bus bars", "s": "P", "u": ["proc-electrical-failure"], "gap": "Load shedding only."},
+    {"n": 5, "en": "Bus bars", "s": "P", "u": ["sys-electrical-alternator-failure"], "gap": "Bus named only."},
     {"n": 6, "en": "Circuit breakers and fuses", "s": "P", "u": ["c150-electrical-system"], "gap": "Breakers named only."},
     {"n": 7, "en": "Grounding and bonding (electrical)", "s": "M", "u": [], "gap": ""}
   ]},
@@ -1721,7 +1721,7 @@
   {"code": "TPRO", "concept": "agk-prop", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Propellers", "fr": "Hélices", "items": [
     {"n": 1, "en": "Propeller efficiency vs speed", "s": "M", "u": [], "gap": ""},
     {"n": 2, "en": "Fixed vs variable pitch", "s": "C", "u": ["sys-propeller-governor-constant-speed", "sys-powerplant-prop-l4-cave"], "gap": "", "e": 1},
-    {"n": 3, "en": "Torque, slipstream, gyroscopic effects", "s": "P", "u": ["me-critical-engine"], "gap": "P-factor and torque in ME context only.", "d": 1},
+    {"n": 3, "en": "Torque, slipstream, gyroscopic effects", "s": "M", "u": [], "gap": "No general note on left-turning tendencies (torque, slipstream, P-factor, gyroscopic precession).", "d": 1},
     {"n": 4, "en": "Propeller handling and care", "s": "P", "u": ["sys-propeller-vibration"], "gap": "Vibration only.", "d": 1}
   ]},
   {"code": "TWNG", "concept": "agk-theory", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Wing design", "fr": "Conception de l’aile", "items": [
@@ -1823,7 +1823,7 @@
     {"n": 1, "en": "Turn instrument principles", "s": "C", "u": ["agk-gyro-instruments-principles-errors"], "gap": "", "e": 1},
     {"n": 2, "en": "Turn instrument errors", "s": "P", "u": ["agk-gyro-instruments-principles-errors"], "gap": "How the instruments read (rate, roll rate, ball); no source list of turn-instrument errors.", "e": 1},
     {"n": 3, "en": "Turn instrument limitations", "s": "M", "u": [], "gap": ""},
-    {"n": 4, "en": "Turn instrument power sources", "s": "P", "u": ["proc-vacuum-attitude-heading-failure"], "gap": "Electric backup role only."}
+    {"n": 4, "en": "Turn instrument power sources", "s": "C", "u": ["agk-gyro-instruments-principles-errors"], "gap": ""}
   ]},
   {"code": "IEFI", "concept": "agk-inst", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "EFIS", "fr": "EFIS", "items": [
     {"n": 1, "en": "EFIS principles", "s": "M", "u": [], "gap": ""},
@@ -1835,7 +1835,7 @@
     {"n": 1, "en": "Loss of visual reference", "s": "P", "u": ["c150-vacuum-system-failure-cloud"], "gap": "Inadvertent-cloud QRC only.", "d": 1},
     {"n": 2, "en": "Control and performance instruments", "s": "C", "u": ["agk-control-performance-instrument-flying"], "gap": "", "d": 1},
     {"n": 3, "en": "Scan and interpretation", "s": "P", "u": ["proc-ifr-cockpit-instrument-check"], "gap": "Instrument check only.", "d": 1},
-    {"n": 4, "en": "Aircraft control on instruments", "s": "P", "u": ["proc-vacuum-attitude-heading-failure"], "gap": "Partial-panel scan only.", "d": 1},
+    {"n": 4, "en": "Aircraft control on instruments", "s": "C", "u": ["agk-control-performance-instrument-flying"], "gap": "", "d": 1},
     {"n": 5, "en": "Partial panel", "s": "C", "u": ["proc-vacuum-attitude-heading-failure", "proc-no-gyro-vectors"], "gap": "", "d": 1},
     {"n": 6, "en": "Unusual attitudes and recovery", "s": "C", "u": ["proc-unusual-attitude-nose-high", "proc-unusual-attitude-nose-low"], "gap": "", "d": 1}
   ]},
@@ -1879,11 +1879,11 @@
     {"n": 10, "en": "Vne", "s": "P", "u": ["c150-airspeed-limitations"], "gap": "C150M value only."},
     {"n": 11, "en": "Vfe", "s": "P", "u": ["c150-airspeed-limitations"], "gap": "C150M value only."},
     {"n": 12, "en": "Vref", "s": "C", "u": ["agk-vref-landing-reference-speed"], "gap": "", "e": 1},
-    {"n": 13, "en": "Vlo", "s": "P", "u": ["me-essential-speeds-to-know-cold"], "gap": "Symbol only."},
+    {"n": 13, "en": "Vlo", "s": "C", "u": ["agk-landing-gear-speeds-vlo-vle"], "gap": ""},
     {"n": 14, "en": "Gliding for range", "s": "C", "u": ["agk-glide", "c150-maximum-glide"], "gap": ""},
     {"n": 15, "en": "Flying for range", "s": "P", "u": ["c150-range-endurance-assumptions"], "gap": "C150M assumptions only.", "e": 1},
     {"n": 16, "en": "Flying for endurance", "s": "P", "u": ["c150-range-endurance-assumptions"], "gap": "C150M assumptions only.", "e": 1},
-    {"n": 17, "en": "Slow flight", "s": "P", "u": ["agk-handling-landings", "me-stall-slow-flight-me"], "gap": "Handling lines only."},
+    {"n": 17, "en": "Slow flight", "s": "P", "u": ["agk-handling-landings"], "gap": "Handling lines only."},
     {"n": 18, "en": "Stalls", "s": "C", "u": ["trn-spiral-stall", "agk-load-factor-accelerated-stall"], "gap": ""},
     {"n": 19, "en": "Indicated vs true stall speed", "s": "M", "u": [], "gap": ""},
     {"n": 20, "en": "Stall speed vs altitude", "s": "P", "u": ["agk-handling-landings"], "gap": "Stall recovery only."},
@@ -1902,7 +1902,7 @@
     {"n": 4, "en": "Cruise charts", "s": "P", "u": ["c150-cruise-sample-not-universal"], "gap": "Sample only.", "e": 1, "d": 1},
     {"n": 5, "en": "Fuel burn charts", "s": "P", "u": ["agk-fuel"], "gap": "Burn formulas only.", "e": 1, "d": 1},
     {"n": 6, "en": "Landing charts", "s": "P", "u": ["c150-performance-chart-rules"], "gap": "Chart rules only.", "e": 1, "d": 1},
-    {"n": 7, "en": "Performance V-speeds", "s": "C", "u": ["c150-normal-speeds-max-weight-unless-noted", "me-essential-speeds-to-know-cold"], "gap": "", "e": 1, "d": 1},
+    {"n": 7, "en": "Performance V-speeds", "s": "C", "u": ["c150-normal-speeds-max-weight-unless-noted"], "gap": "", "e": 1, "d": 1},
     {"n": 8, "en": "Ice, snow, slush, water effects on distance", "s": "P", "u": ["agk-performance-factors"], "gap": "Listed as factors only.", "e": 1, "d": 1},
     {"n": 9, "en": "Runway surface effects on distance", "s": "P", "u": ["agk-performance-factors"], "gap": "Listed as factors only.", "d": 1},
     {"n": 10, "en": "Upslope and downslope runways", "s": "P", "u": ["agk-performance-factors"], "gap": "“Uphill” listed only.", "d": 1},
@@ -1919,7 +1919,7 @@
     {"n": 8, "en": "Cargo tie-down and passenger loading", "s": "P", "u": ["law-baggage-cargo"], "gap": "Securing rule only.", "e": 1},
     {"n": 9, "en": "Normal and utility category", "s": "P", "u": ["c150-manoeuvre-structural-limits"], "gap": "C150M utility category only."},
     {"n": 10, "en": "Zero fuel calculation", "s": "P", "u": ["agk-weight-balance"], "gap": "“Check zero-fuel” only."},
-    {"n": 11, "en": "Maximum zero fuel weight", "s": "C", "u": ["agk-weight-balance", "me-w-b-me-traps"], "gap": ""}
+    {"n": 11, "en": "Maximum zero fuel weight", "s": "P", "u": ["agk-weight-balance"], "gap": "Zero-fuel check named; MZFW definition not covered."}
   ]},
   {"code": "OWAK", "concept": "agk-ops", "section": "Aeronautics", "section_fr": "Connaissances générales", "en": "Wake turbulence", "fr": "Turbulence de sillage", "items": [
     {"n": 1, "en": "Wake turbulence causes", "s": "C", "u": ["law-ats-surveillance-wake-rvsm"], "gap": ""},

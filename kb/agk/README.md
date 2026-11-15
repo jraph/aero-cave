@@ -14,5 +14,5 @@
 | [Stall, spin & spiral / Décrochage, vrille et spirale](stall-spin-spiral.md) | `agk-stall` | 2 |
 | [Takeoff, climb, cruise, glide & landing performance / Performances : décollage, montée, croisière, plané, atterrissage](takeoff-climb-cruise-glide-landing-performance.md) | `agk-perfcalc` | 8 |
 | [Theory of flight / Théorie du vol](theory-of-flight.md) | `agk-theory` | 3 |
-| [V-speeds & airspeed limits / Vitesses caractéristiques et limites](v-speeds-airspeed-limits.md) | `agk-vspeeds` | 2 |
+| [V-speeds & airspeed limits / Vitesses caractéristiques et limites](v-speeds-airspeed-limits.md) | `agk-vspeeds` | 3 |
 | [Weight & balance / Masse et centrage](weight-balance.md) | `agk-wb` | 2 |

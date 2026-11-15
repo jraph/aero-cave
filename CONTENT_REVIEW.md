@@ -14,6 +14,15 @@ Carried from the retired CPAER coverage matrix; still open on 14 November 2026. 
 
 The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json` and the explorer's guide pages; `python3 explorer/build_explorer.py --audit` lists concepts with TC items but no knowledge note.
 
+## Level badges: ME and IFR notes cited by PPL/CPL items — 15 November 2026
+
+Badges come from citing guides, so specialised notes cited too quickly by PPAER/CPAER items showed PPL/CPL. Each citation judged by reading item and note.
+
+- **ME notes removed from PPAER/CPAER items:** hydraulic systems (AGR 2) and torque/slipstream/gyroscopic effects (TPRO 3) → missing (no general note; the ME notes only named them); performance V-speeds (OCHT 7) and slow flight (OPRF) keep their general notes only; MZFW (OWB 11) → partial (zero-fuel check named, MZFW not defined); VLO → new general note `agk-landing-gear-speeds-vlo-vle` (`?:`, definitions from AFM/POH usage).
+- **IFR notes replaced by general ones:** TAF (FCST 4) drops the IFR alternate logic; bus bars → card 08 electrical note; turn-instrument power → gyro note (TP 2076); instrument scan and control → control/performance note; TEM → TEM note; disorientation, controls and displays, EFBs → HF and EFB notes (partial).
+- **Kept:** runway lighting / VASI / displaced threshold, altimeter-setting regions, unusual-attitude recovery: the IFR files are their only home.
+- Result: every ME note now carries ME only (IR where INRAT cites engine failure in IMC).
+
 ## Ontology review by reading — 15 November 2026
 
 The topic check in the de-duplication pass used word-overlap scores; redone by reading every concept, its parents, children and links.
