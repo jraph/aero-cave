@@ -21,6 +21,7 @@ The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json
 - `+V` (LNAV+V, LP+V) is not a Canadian minima line in CAP GEN or the ACs; described as LNAV/LP with advisory vertical guidance, per AC 700-023 §5.1.
 - `ifr-rnav-gnss` alternate line replaced with the CAP GEN satellite-approach conditions (RAIM/WAAS at ETA, C129 mid-point check, 100/75 NM separation).
 - Cited by INRAT "Non-precision approach … RNAV/GNSS" and flight-test item 8 B and C.
+- `ifr-alternate-minima`: alternate rows are by approach class (precision = ILS); baro LNAV/VNAV planned on the non-precision row. Current CAP GEN / TC AIM RAC 3.14.1 do not state the row; flagged `?:`.
 
 ## PA-30 card rewritten from the handbook — 16 November 2026
 

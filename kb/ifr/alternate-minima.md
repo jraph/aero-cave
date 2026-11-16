@@ -17,6 +17,8 @@
 - `*` Standard alternate minima: `600-2` or `800-2` as applicable; if standard applies, other authorized lower-vis options may apply from CAP table.
 - `T:` alternate use depends on aircraft performance, nav equipment, NAVAIDs/NOTAM, forecast type, wind/runway; chart “alternate not authorized” / NOTAM NAVAID out / runway not suitable / no forecast can kill an otherwise good alternate.
 - GNSS-based alternate planning: see `ifr-rnav-gnss`; which RNAV lines give credit: see `ifr-rnav-minima-lines`.
+- `T:` the rows go by approach **class**, not by DA vs MDA. Precision = ILS (CAP labels LPV and LNAV/VNAV as APV, not precision). LPV and LP: no credit at all. Baro LNAV/VNAV: plan it on the **non-precision** row (`800-2` or `+300/+1`).
+- `?:` current CAP GEN / TC AIM RAC 3.14.1 do not state the row for LNAV/VNAV; older TC GNSS guidance (seen only as quoted in secondary sources) said it "shall be considered a non-precision approach". Not found in a current TC source.
 ***
 #### TAF alternate logic
 <!-- id: ifr-taf-alternate-logic | from: 10 | also: met-taf, ifr-wx -->
@@ -35,5 +37,6 @@
 - ALTERNATE `2+ usable precision, separate suitable RWYs: 400-1 or +200/+½ | 1 precision: 600-2 or +300/+1 | NPA only: 800-2 or +300/+1 | each = above lowest usable HAT (HAA for NPA)/vis, whichever greater | no IFR approach: forecast ≥500 ft above min IFR altitude permitting VFR approach/landing`
 - TAF `BECMG improve = END / deteriorate = START | TEMPO ≥ alternate minima | PROB ≥ landing minima`
 - GFA / ADVISORY `GFA: no cloud <1000 ft above lowest usable HAT/HAA, no CB, vis ≥3 SM | advisory forecast: ≥500 ft above lowest usable HAT/HAA, vis ≥3 SM`
+- CLASS `rows by class, not DA/MDA | precision = ILS | LPV/LP no credit | baro LNAV/VNAV → NPA row`
 - T `alternate minima ≠ landing minima ≠ approach-ban minima | “alternate not authorized” / NAVAID NOTAM / RWY not suitable / no forecast kills an alternate`
 ***
