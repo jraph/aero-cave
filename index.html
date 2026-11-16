@@ -37,7 +37,7 @@ h2{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu
 .gsec{margin:.9rem 0 .3rem;font-size:.95rem}.gsec small{color:var(--muted);font-weight:400}#tg .bars{margin-top:.35rem}#vpanel{border-left:3px solid var(--accent);padding:.1rem .6rem .3rem;margin-bottom:.6rem}#vpanel h3{margin:.1rem 0 .2rem;font-size:1.05rem;line-height:1.2}
 .pl{margin:.3rem 0;display:flex;flex-wrap:wrap;gap:.22rem}.pt{background:var(--stripe);border:1px solid var(--line);border-radius:.3rem;padding:.05rem .35rem;font-size:.84rem;line-height:1.3}.pt.k{background:var(--pill);font-weight:700;border-color:transparent}
 @media (min-width:64rem){#gpanel{width:min(96vw,96rem);margin-left:calc((100% - min(96vw,96rem))/2)}.g2{display:grid;grid-template-columns:minmax(22rem,2fr) 3fr;gap:1rem;align-items:start}.gout{position:sticky;top:3.6rem;max-height:calc(100vh - 4.2rem);overflow:auto;padding-right:.3rem}}
-.gnotes{min-width:0;scroll-margin-top:4rem}.gnotes h4{margin:.2rem 0 .4rem;font-size:1rem}.it .gnotes,.grp>.gnotes{grid-column:1/-1;padding:.3rem .5rem .5rem;border-top:1px solid var(--line);background:var(--bg)}.it+.gnotes{padding:.3rem .5rem .5rem;border-top:1px dashed var(--line);background:var(--bg)}
+.gnotes .foot{display:none}.gnotes{min-width:0;scroll-margin-top:4rem}.gnotes h4{margin:.2rem 0 .4rem;font-size:1rem}.it .gnotes,.grp>.gnotes{grid-column:1/-1;padding:.3rem .5rem .5rem;border-top:1px solid var(--line);background:var(--bg)}.it+.gnotes{padding:.3rem .5rem .5rem;border-top:1px dashed var(--line);background:var(--bg)}
 .it+.gnotes h4{display:none}.it[role=button]{cursor:pointer}.it.sel,details.grp>summary.sel{box-shadow:inset 3px 0 0 var(--accent)}.frow{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;margin:.3rem 0 .5rem}.frow .btn{padding:.2rem .55rem;font-size:.82rem}.frow select{font:inherit;font-size:.82rem;padding:.2rem .3rem;border:1px solid var(--line);border-radius:.4rem;background:var(--panel);color:var(--ink);max-width:16rem}.frow select.on{border-color:var(--accent)}#count .frow{flex-basis:100%;margin:.3rem 0 0}.cit{font-size:.7rem;color:var(--muted);margin-left:.4rem;white-space:nowrap}details.beyond{margin-top:1rem}details.beyond>.sec{margin:.3rem .4rem}
 .cby{font-size:.75rem;color:var(--muted);margin:-.1rem 0 .5rem .2rem;display:flex;flex-wrap:wrap;gap:.25rem;align-items:center}.gmiss{font-size:.85rem;margin:.6rem 0;padding:.5rem .6rem;border:1px dashed var(--line);border-radius:.5rem}.gmiss div{color:var(--muted);margin-top:.15rem}
 #gpanel h3{margin:.2rem 0 .2rem;font-size:1.1rem}
@@ -446,12 +446,11 @@ function renderGuide() {
     const its = it ? [it] : grp.items.filter(gHit), seen = new Map();
     for (const i of its) for (const u of i.u) { if (!seen.has(u)) seen.set(u, []); seen.get(u).push(i); }
     for (const i of its) if (i.gap && it) pane.appendChild(el('div', 'crumbs', esc(i.gap)));
-    for (const [u, by] of seen) { const n = sectionEl(U.get(u)); pane.appendChild(n);
-      if (!it) { const c = el('div', 'cby', esc(t('citedBy')) + ' '); for (const i of by) { const b = el('button', 'chip', esc(grp.code + ' ' + i.n)); b.type = 'button'; b.title = i.en; b.onclick = () => { const r = d.querySelector('[data-n="' + i.n + '"]'); if (r) r.click(); }; c.appendChild(b); } pane.appendChild(c); }
-      if (u === openU || (it && seen.size === 1)) n.open = true; }
+    for (const u of seen.keys()) { const n = sectionEl(U.get(u)); n.open = true; pane.appendChild(n); }
     const miss = its.filter(i => !i.u.length);
     if (miss.length) { pane.appendChild(el('div', 'gmiss', '<b>' + esc(t(it ? 'gNone' : 'gGaps')) + (it ? '' : ' (' + miss.length + ')') + '</b>' + (it ? '' : miss.map(i => '<div>' + (i.e ? PLANE + ' ' : '') + esc(grp.code + ' ' + i.n + ' · ' + i.en) + '</div>').join(''))));  }
     if (wide()) { g2.appendChild(pane); pane.scrollIntoView({block:'nearest'}); } else if (row) row.after(pane); else d.appendChild(pane);
+    const tgt = openU && pane.querySelector('details[data-u="' + openU + '"]'); if (tgt) tgt.scrollIntoView({block:'start'});
   };
   pane.appendChild(el('div', 'crumbs', esc(t('gHint'))));
   for (const grp of g.groups) {
