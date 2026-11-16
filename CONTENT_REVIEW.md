@@ -11,9 +11,16 @@ Carried from the retired CPAER coverage matrix; still open on 14 November 2026. 
 | V-04 | [Card 07 · source / status](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md#source--status) | C150M serial and configuration not confirmed. | Exact POH revision, supplements, equipment/STCs and W&B before treating figures as fleet data. |
 | V-05 | [`kb/ifr/navaid-checks.md`](kb/ifr/navaid-checks.md) | Canadian and FAA VOR-check scopes are cross-referenced. | Keep the origins separate; do not import US intervals or recordkeeping. Not a contradiction. |
 | V-06 | `kb/met` cloud base / freezing level and the formulas collection | Classroom and parcel models given side by side. | Keep both assumptions and the environmental freezing-level caveat. Not a contradiction. |
-| V-07 | [PA-30 aircraft card](cheatsheets/pa30_twin_comanche.md) | Generic compiled handbook (S/N 30-1–30-2000, 3,600 lb); only Section 2 FAA-approved; STCs and supplements (e.g. higher gross weight, tip tanks) change limits, CG, speeds and performance. | The specific aircraft's approved AFM, supplements/STCs, placards, equipment list and current W&B before applying any figure. |
+| V-07 | [PA-30 aircraft card](cheatsheets/pa30_twin_comanche.md) | Compiled POH/AFM, second issue (Aircraft Publications, Section 2 rev. 1, 31 Dec 1996), S/N 30-1–30-2000, 3,600 lb, normally aspirated; only Section 2 FAA-approved; STCs and supplements (e.g. higher gross weight, tip tanks) change limits, CG, speeds and performance. | The specific aircraft's approved AFM, supplements/STCs, placards, equipment list and current W&B before applying any figure. |
 
 The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json` and the explorer's guide pages; `python3 explorer/build_explorer.py --audit` lists concepts with TC items but no knowledge note.
+
+## PA-30 card rewritten from the handbook — 16 November 2026
+
+- Card rebuilt in the card 07 layout from the compiled PA-30 POH/AFM (S/N 30-1–30-2000): limitations, ASI and instrument markings, W&B/CG, fuel and oil, normal speeds, normal and emergency procedures, systems, headline performance and Pebble. Live IDs kept; new units added, none retired.
+- Speeds now use the handbook's own mph and kt figures (CAS and IAS columns from Section 2). The earlier conversion rule (round minimums up, maximums down) is withdrawn: VMCA is `88 mph / 76 kt IAS` (`90 / 78` CAS), VSSE `97 mph / 84 kt`, VA `162 mph / 141 kt`.
+- Generic knowledge points to kb (`me-zero-sideslip-best-oei-performance`, `law-oxygen-oxyg-ne-car-605-31-32`, `agk-weight-balance`); the POH's US oxygen note is flagged as such.
+- Section 2 and Section 3 list the feathering items in different orders; the card notes it and defers to the aircraft checklist.
 
 ## Level badges: ME and IFR notes cited by PPL/CPL items — 15 November 2026
 
