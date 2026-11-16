@@ -2,7 +2,7 @@
 > **TRAINING ONLY / ÉTUDE SEULEMENT — NOT AN IN-FLIGHT CHECKLIST.** C-FMCV, S/N **30-1732**. Source PA-30 compilation covers normally aspirated S/N 30-1–30-2000; its preamble identifies **Section 2 only** as FAA-approved. Current aircraft AFM, approved supplements, placards, equipment list, latest W&B and checklist prevail. **Do not apply unverified configuration-specific numbers in flight.**
 
 #### Identity & aircraft W&B / Identification et masse et centrage
-<!-- id: pa30-cfmcv-wb | concepts: agk-wb, me-performance | level: ME | kind: aircraft -->
+<!-- id: pa30-cfmcv-wb | concepts: agk-wb, me-oei | level: ME | kind: aircraft -->
 
 | C-FMCV | Recorded value / Valeur consignée |
 |---|---:|
@@ -35,15 +35,15 @@
 | Optional tip tanks / Réservoirs d'extrémité | +30 US gal usable (if installed); **not confirmed on C-FMCV** |
 
 - `T:` Tank capacity ≠ installed capacity; visual evidence does not certify fuel configuration. Inspect aircraft and approved documents.
-- `T:` Source speeds may be in **mph**; IAS ≠ CAS. All values in following table are **KIAS**, unless explicitly marked.
+- `T:` Source speeds may be in **mph**; IAS ≠ CAS. All values in following table are **KIAS**, unless explicitly marked. Minimum speeds rounded up, maximum speeds rounded down.
 
 #### Airspeeds — generic manual / Vitesses — manuel générique
-<!-- id: pa30-speeds | concepts: agk-vspeeds, me-performance, me-control | level: ME | kind: aircraft -->
+<!-- id: pa30-speeds | concepts: agk-vspeeds, me-oei, me-vmc | level: ME | kind: aircraft -->
 
 | KIAS | Speed | Scope / Portée |
 |---:|---|---|
-| **76** | **VMCA** | §2: 88 mph IAS / 76 KIAS; 90 mph / 78 kt **CAS** — do not confuse |
-| **84** | **VSSE** | §4, 97 mph IAS; minimum intentional one-engine training speed |
+| **77** | **VMCA** | §2: 88 mph IAS / 77 KIAS (76.5, rounded up: minimum); 90 mph / 78 kt **CAS** — do not confuse |
+| **85** | **VSSE** | §4, 97 mph IAS (84.3, rounded up: minimum); minimum intentional one-engine training speed |
 | **91** | **VYSE / blue line** | 105 mph IAS |
 | **82** | **VXSE** | §4, 94 mph IAS |
 | **78** | **VR**, flaps 0° | §4, 90 mph IAS |
@@ -51,7 +51,7 @@
 | **83** | **VAPP** | §4, 95 mph IAS; context-specific, not universal single-engine approach speed |
 | **107** | **VFE** | §2, 124 mph IAS |
 | **129** | **VLO / VLE** | §2, 149 mph IAS |
-| **141** | **VA at 3,600 lb** | §2, 162 mph IAS; **not established for 3,800 lb** |
+| **140** | **VA at 3,600 lb** | §2, 162 mph IAS (140.8, rounded down: maximum); **not established for 3,800 lb** |
 | **171** | **VNO** | §2, 197 mph IAS |
 | **203** | **VNE** | §2, 234 mph IAS |
 
@@ -59,7 +59,7 @@
 - `T:` §3 uses 90 mph IAS in takeoff discussion while §2 labels VMCA 90 mph **CAS** (88 mph IAS): do not collapse them into the same measurement.
 
 #### Engine-out logic — study reference / Panne moteur — rappel d'étude
-<!-- id: pa30-engine-out | concepts: me-engine-out, me-control | level: ME | kind: aircraft -->
+<!-- id: pa30-engine-out | concepts: me-fail, me-vmc | level: ME | kind: aircraft -->
 
 - `P:` **Aviate / Piloter** → control yaw/bank and airspeed; generic §3 describes **105 mph IAS (91 KIAS)** SE climb and about **5° bank toward operative engine**.
 - `P:` **Identify / Identifier** (dead foot) → **verify / vérifier** using suspect throttle response → troubleshoot if controllable/altitude permits → secure/feather when failure confirmed, following **actual installed checklist**.
@@ -70,21 +70,21 @@
 - `T:` Detailed emergency and feather/restart flows intentionally **not** presented as aircraft-authoritative checklist.
 
 #### Other POH traps / Autres pièges du manuel
-<!-- id: pa30-traps | concepts: agk-fuel, me-engine-out | level: ME | kind: aircraft -->
+<!-- id: pa30-traps | concepts: agk-fuel, me-fail | level: ME | kind: aircraft -->
 
 - `L:` §2: slip/uncoordinated manoeuvre ≥30 s or fast taxi turn immediately before takeoff may interrupt engine fuel supply when the selected tank is **<¼ full**.
 - `T:` Generic §3 best glide with **both engines inoperative** at **3,600 lb**: 110 mph IAS ≈ **96 KIAS**, propellers feathered; not validated at 3,800 lb.
 - `!:` Manual landing-gear extension is mechanism-specific; follow aircraft checklist and placard, not a compressed memory mnemonic.
 
 #### Pebble
-<!-- id: pa30-pebble | concepts: agk-vspeeds, me-engine-out, me-performance | level: ME | kind: pebble -->
+<!-- id: pa30-pebble | concepts: agk-vspeeds, me-fail, me-oei | level: ME | kind: pebble -->
 
 - **C-FMCV** `SN 30-1732 | CCAR MTOW 3,800 lb | W&B #14 (2021): EW 2429.51 / CG 83.27 / useful 1370.49 | 3,800-lb AFM/STC basis + CG/perf = VERIFY`.
-- **PA-30 REF 3,600 lb ONLY** `VMCA 76 KIAS / 78 KCAS | VSSE 84 | blue 91 | VXSE 82 | VR 78 | VFE 107 | gear 129 | VA 141 @3600 | VNO 171 | VNE 203`.
+- **PA-30 REF 3,600 lb ONLY** `VMCA 77 KIAS / 78 KCAS | VSSE 85 | blue 91 | VXSE 82 | VR 78 | VFE 107 | gear 129 | VA 140 @3600 | VNO 171 | VNE 203`.
 - **ENGINE OUT (study)** `CONTROL → IDENTIFY → VERIFY → TROUBLESHOOT/SECURE | FEATHER only confirmed | crossfeed emergency level only, never both | gear/flaps when landing assured`.
 
 #### Sources / Sources
-<!-- id: pa30-sources | concepts: me-performance, agk-wb | level: ME | kind: source -->
+<!-- id: pa30-sources | concepts: me-oei, agk-wb | level: ME | kind: source -->
 
 - Uploaded *Piper PA-30 Twin Comanche Pilot's Operating Handbook and FAA Approved Airplane Flight Manual*, compiled second issue 1993/1996, applicable S/N 30-1–30-2000; preamble; §2 limitations, §3 emergency procedures, §4 normal procedures/speeds. Source file: `Piper-PA-30-Flight-Manual-AV8.pdf`.
 - Uploaded `C-FMCV-PA-30-WB.pdf`, Amendment #14, Oct. 7, 2021, one-page W&B change.
