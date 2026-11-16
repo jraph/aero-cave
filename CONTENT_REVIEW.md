@@ -11,6 +11,7 @@ Carried from the retired CPAER coverage matrix; still open on 14 November 2026. 
 | V-04 | [Card 07 · source / status](cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md#source--status) | C150M serial and configuration not confirmed. | Exact POH revision, supplements, equipment/STCs and W&B before treating figures as fleet data. |
 | V-05 | [`kb/ifr/navaid-checks.md`](kb/ifr/navaid-checks.md) | Canadian and FAA VOR-check scopes are cross-referenced. | Keep the origins separate; do not import US intervals or recordkeeping. Not a contradiction. |
 | V-06 | `kb/met` cloud base / freezing level and the formulas collection | Classroom and parcel models given side by side. | Keep both assumptions and the environmental freezing-level caveat. Not a contradiction. |
+| V-07 | [PA-30 aircraft card](cheatsheets/pa30_twin_comanche.md) | Generic compiled handbook (S/N 30-1–30-2000, 3,600 lb); only Section 2 FAA-approved; STCs and supplements (e.g. higher gross weight, tip tanks) change limits, CG, speeds and performance. | The specific aircraft's approved AFM, supplements/STCs, placards, equipment list and current W&B before applying any figure. |
 
 The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json` and the explorer's guide pages; `python3 explorer/build_explorer.py --audit` lists concepts with TC items but no knowledge note.
 

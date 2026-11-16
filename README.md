@@ -29,7 +29,7 @@ EN, FR or both: bilingual tables show the chosen language column.
 | Path | Content |
 |---|---|
 | [`kb/`](kb/README.md) | Knowledge by domain: air law, navigation, meteorology, aeronautics, IFR, multi-engine |
-| [`cheatsheets/`](cheatsheets/) | Flight procedures (02), weather go/no-go (05), C150M POH (07), systems failures (08), IFR procedures (12), formulas and calculations, abbreviations |
+| [`cheatsheets/`](cheatsheets/) | Flight procedures (02), weather go/no-go (05), C150M POH (07), PA-30 aircraft data, systems failures (08), IFR procedures (12), formulas and calculations, abbreviations |
 | `explorer/ontology.json` | Concepts, note kinds, levels, phase-of-flight views |
 | `explorer/syllabus.json` | TC guides: items, status, gap notes, cited note IDs, TC marks |
 | `explorer/template.html`, `build_explorer.py` | Generate `index.html`, the offline explorer with every note embedded |
