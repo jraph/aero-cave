@@ -23,7 +23,7 @@
     "02": {"file": "cheatsheets/02_flight_training_procedures_av_cave_v0_2.md", "kind": "procedure", "en": "Flight training & procedures", "fr": "Entraînement et procédures"},
     "05": {"file": "cheatsheets/05_weather_decoding_go_nogo_qrc_av_cave_v0_2_compact.md", "kind": "procedure", "en": "Weather decoding & go/no-go", "fr": "Décodage météo et décision"},
     "07": {"file": "cheatsheets/07_c150m_poh_core_av_cave_v0_2_compact.md", "kind": "aircraft", "en": "C150M POH", "fr": "POH C150M"},
-    "PA30": {"file": "cheatsheets/pa30_twin_comanche_cfmcv.md", "kind": "aircraft", "en": "PA-30 Twin Comanche · C-FMCV", "fr": "PA-30 Twin Comanche · C-FMCV"},
+    "PA30": {"file": "cheatsheets/pa30_twin_comanche.md", "kind": "aircraft", "en": "PA-30 Twin Comanche", "fr": "PA-30 Twin Comanche"},
     "08": {"file": "cheatsheets/08_aircraft_systems_failures_qrc_av_cave_v0_2_compact.md", "kind": "procedure", "en": "Aircraft systems & failures", "fr": "Systèmes et pannes"},
     "12": {"file": "cheatsheets/12_ifr_procedures_qrc_av_cave_v0_2.md", "kind": "procedure", "en": "IFR procedures", "fr": "Procédures IFR"},
     "F": {"file": "cheatsheets/Formulas_Calculations_EN_FR.md", "kind": "formula", "en": "Formulas & calculations", "fr": "Formules et calculs"},
