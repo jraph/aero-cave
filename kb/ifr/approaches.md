@@ -14,6 +14,8 @@
 - CAP minima box lists nav type, MDA/DA, HAA/HAT/HATh/DH, advisory visibility by aircraft category.
 - `T:` LPV is not ILS. Baro-VNAV temperature limits matter; uncompensated altimetry can invalidate VNAV minima.
 - Circling: visual manoeuvre; uses `MDA` / `HAA`.
+- `R:` CAR 101.01: **precision approach** = azimuth **and glide path** information; **non-precision approach** = azimuth information; **APV** = approach procedure with vertical guidance (abbreviation only, no definition). CARs treat APV as a third category: "a non-precision approach, an APV or a CAT I or CAT II precision approach" [CAR 602.129(5), 700.10]. AC 700-023 classes LPV and LNAV/VNAV as APV, LP and LNAV as non-precision.
+- `T:` the CAP GEN alternate table only has precision and non-precision rows; APV rows: see `ifr-alternate-minima`.
 ***
 #### RNAV approach minima lines — LPV, LNAV/VNAV, LP, LNAV, +V, RNP AR
 <!-- id: ifr-rnav-minima-lines | also: nav-gnss, ifr-plates, ifr-alt | level: IR -->
