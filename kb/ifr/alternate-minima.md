@@ -16,7 +16,7 @@
 
 - `*` Standard alternate minima: `600-2` or `800-2` as applicable; if standard applies, other authorized lower-vis options may apply from CAP table.
 - `T:` alternate use depends on aircraft performance, nav equipment, NAVAIDs/NOTAM, forecast type, wind/runway; chart “alternate not authorized” / NOTAM NAVAID out / runway not suitable / no forecast can kill an otherwise good alternate.
-- GNSS-based alternate planning: see `ifr-rnav-gnss`.
+- GNSS-based alternate planning: see `ifr-rnav-gnss`; which RNAV lines give credit: see `ifr-rnav-minima-lines`.
 ***
 #### TAF alternate logic
 <!-- id: ifr-taf-alternate-logic | from: 10 | also: met-taf, ifr-wx -->

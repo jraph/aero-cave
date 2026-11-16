@@ -2231,7 +2231,7 @@
     {"n": 8, "en": "Straight-in minima", "s": "C", "u": ["plate-straight-in-vs-circling", "ifr-cap-definitions-minima"], "gap": ""},
     {"n": 9, "en": "Final approach", "s": "C", "u": ["proc-before-faf-fawp-gate", "plate-profile-view", "proc-final-approach-callouts-single-pilot"], "gap": ""},
     {"n": 10, "en": "Precision approach: ILS, PAR", "s": "P", "u": ["ifr-approach-types", "ifr-ils-loc-vor-ndb-dme"], "gap": "ILS covered; PAR absent."},
-    {"n": 11, "en": "Non-precision approach: NDB, VOR, DME, LOC, RNAV/GNSS", "s": "C", "u": ["ifr-approach-types", "ifr-ils-loc-vor-ndb-dme", "ifr-rnav-gnss"], "gap": ""},
+    {"n": 11, "en": "Non-precision approach: NDB, VOR, DME, LOC, RNAV/GNSS", "s": "C", "u": ["ifr-approach-types", "ifr-ils-loc-vor-ndb-dme", "ifr-rnav-gnss", "ifr-rnav-minima-lines"], "gap": ""},
     {"n": 12, "en": "Stabilized constant descent angle approach", "s": "P", "u": ["ifr-approach-types", "plate-profile-view"], "gap": "Definition and MDA trap; no technique."},
     {"n": 13, "en": "Visual / contact approach", "s": "C", "u": ["ifr-ifr-in-vmc-vfr-restriction"], "gap": ""},
     {"n": 14, "en": "Circling approach", "s": "C", "u": ["ifr-circling"], "gap": ""},
@@ -2421,8 +2421,8 @@
   ]},
   {"code": "I8", "concept": "ifr-app-fly", "section": "Flight test", "section_fr": "Test en vol", "en": "Item 8 · Approaches", "fr": "Item 8 · Approches", "items": [
     {"n": 1, "en": "A Non-precision approach", "s": "C", "u": ["proc-npa-cdfa", "proc-lnav-vor-loc-ndb"], "gap": ""},
-    {"n": 2, "en": "B ILS / LPV", "s": "C", "u": ["proc-ils-lpv-lnav-vnav", "plate-ils-loc-traps"], "gap": ""},
-    {"n": 3, "en": "C RNAV (GNSS)", "s": "C", "u": ["ifr-rnav-gnss", "plate-gnss-rnav-plate-traps"], "gap": ""}
+    {"n": 2, "en": "B ILS / LPV", "s": "C", "u": ["proc-ils-lpv-lnav-vnav", "plate-ils-loc-traps", "ifr-rnav-minima-lines"], "gap": ""},
+    {"n": 3, "en": "C RNAV (GNSS)", "s": "C", "u": ["ifr-rnav-gnss", "plate-gnss-rnav-plate-traps", "ifr-rnav-minima-lines"], "gap": ""}
   ]},
   {"code": "I9", "concept": "ifr-missed", "section": "Flight test", "section_fr": "Test en vol", "en": "Item 9 · Missed approach", "fr": "Item 9 · Approche interrompue", "items": [
     {"n": 1, "en": "Missed approach", "s": "C", "u": ["proc-missed-approach-universal-flow", "proc-missed-approach-setup", "ifr-missed-approach"], "gap": ""}

@@ -9,7 +9,7 @@
 
 - Verify database current, correct airport/runway/procedure/transition, RAIM/WAAS, mode/sensitivity, OBS/SUSP, missed approach sequencing.
 - CDI sensitivity: enroute → terminal → approach; ensure unit arms/activates correct mode.
-- Alternate planning with GNSS / satellite approach: verify expected RAIM/WAAS availability/integrity at ETA and current Canadian rules; destination+alternate satellite-use separation rules may apply; ground NAVAID fallback may be required depending equipment/approval.
+- Alternate with a satellite approach: approach-level RAIM or WAAS integrity expected at ETA (predicted outages considered); TSO-C129 avionics: re-check RAIM at destination/alternate ETA during flight, at least once before mid-point; satellite approaches at both destination and alternate → aerodromes ≥ `100 NM` apart (`75 NM` in Nunavut or north of 56°N in QC/NL). Credit by minima line: see `ifr-rnav-minima-lines`. [CAP GEN, Operating minima – alternate]
 - `T:` “direct-to FAF” may delete procedure sequencing/protection. `OBS/SUSP` misuse is an INRAT classic.
 - `T:` “GPS direct” ≠ cleared route unless ATC cleared.
 ***
@@ -41,7 +41,7 @@
 #### Pebble
 <!-- id: nav-gnss-rnav-pebble -->
 
-- RNAV `database current, correct procedure/transition, RAIM/WAAS, mode/sensitivity enroute → terminal → approach, OBS/SUSP, missed sequencing | expired database: no IFR approach unless approved | GNSS alternate: RAIM/WAAS at ETA, separation rules, NAVAID fallback`
+- RNAV `database current, correct procedure/transition, RAIM/WAAS, mode/sensitivity enroute → terminal → approach, OBS/SUSP, missed sequencing | expired database: no IFR approach unless approved | GNSS alternate: RAIM/WAAS at ETA, C129 re-check before mid-point, dest–alt ≥100 NM (75 north)`
 - T `direct-to FAF may delete sequencing/protection | missed may not sequence until SUSP cancelled | “GPS direct” ≠ cleared route`
 - GNSS `4 FIX · 5 DETECT (RAIM) · 6 EXCLUDE (FDE) | WAAS = SBAS corrections + integrity → LPV`
 - T-ROUTE `low-level controlled fixed RNAV route | check RAC 2.7.1(c) + CFS for equipment`

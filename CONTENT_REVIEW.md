@@ -15,6 +15,13 @@ Carried from the retired CPAER coverage matrix; still open on 14 November 2026. 
 
 The item-by-item coverage that replaced the matrix is in `explorer/syllabus.json` and the explorer's guide pages; `python3 explorer/build_explorer.py --audit` lists concepts with TC items but no knowledge note.
 
+## RNAV approach minima lines — 16 November 2026
+
+- New unit `ifr-rnav-minima-lines` (kb/ifr/approaches.md): LPV, LNAV/VNAV, LP, LNAV, `+V` advisory guidance and RNP AR — guidance, DA vs MDA, class, alternate credit. Checked against CAP GEN (identification, minima, operational notes, alternate minima; edition 2 Oct 2025), TC AC 700-023 §4–5 and AC 606-001.
+- `+V` (LNAV+V, LP+V) is not a Canadian minima line in CAP GEN or the ACs; described as LNAV/LP with advisory vertical guidance, per AC 700-023 §5.1.
+- `ifr-rnav-gnss` alternate line replaced with the CAP GEN satellite-approach conditions (RAIM/WAAS at ETA, C129 mid-point check, 100/75 NM separation).
+- Cited by INRAT "Non-precision approach … RNAV/GNSS" and flight-test item 8 B and C.
+
 ## PA-30 card rewritten from the handbook — 16 November 2026
 
 - Card rebuilt in the card 07 layout from the compiled PA-30 POH/AFM (S/N 30-1–30-2000): limitations, ASI and instrument markings, W&B/CG, fuel and oil, normal speeds, normal and emergency procedures, systems, headline performance and Pebble. Live IDs kept; new units added, none retired.

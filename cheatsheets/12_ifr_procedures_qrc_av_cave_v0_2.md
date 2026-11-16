@@ -157,7 +157,7 @@
 
 - `P:` intercept lateral course→vertical path from valid position/below as applicable→confirm correct annunciation→small corrections→cross-check altitude/distance→DA decision.
 - ILS/LPV: maintain no more than ½-scale deviations for test standard; at DH/DA without required visual reference→missed.
-- `T:` automation downgrade can change minima. False GS / LPV≠ILS / LNAV/VNAV temp limits → kb: `nav-ils-vortac-principles-com-4`, `ifr-approach-types`.
+- `T:` automation downgrade can change minima. False GS / LPV≠ILS → kb: `nav-ils-vortac-principles-com-4`, `ifr-approach-types`; RNAV lines, +V, temp limits → `ifr-rnav-minima-lines`.
 ***
 #### LNAV / VOR / LOC / NDB
 <!-- id: proc-lnav-vor-loc-ndb | concepts: nav-radio, nav-gnss, ifr-app-fly | level: IR -->

@@ -8,12 +8,33 @@
 <!-- id: ifr-approach-types | from: 09, 10 -->
 
 - Precision: ILS with lateral+vertical guidance; uses `DA/DH`.
-- APV: vertical guidance but not precision; e.g., `LPV`, `LNAV/VNAV`; uses `DA`.
+- APV: vertical guidance but not precision; e.g., `LPV`, `LNAV/VNAV`; uses `DA`. RNAV lines in detail: see `ifr-rnav-minima-lines`.
 - NPA: lateral guidance only; e.g., LOC/VOR/NDB/LNAV; uses `MDA`.
 - SCDA/CDFA: stable descent technique on NPA; do not descend below MDA without visual reference.
 - CAP minima box lists nav type, MDA/DA, HAA/HAT/HATh/DH, advisory visibility by aircraft category.
 - `T:` LPV is not ILS. Baro-VNAV temperature limits matter; uncompensated altimetry can invalidate VNAV minima.
 - Circling: visual manoeuvre; uses `MDA` / `HAA`.
+***
+#### RNAV approach minima lines — LPV, LNAV/VNAV, LP, LNAV, +V, RNP AR
+<!-- id: ifr-rnav-minima-lines | also: nav-gnss, ifr-plates, ifr-alt | level: IR -->
+
+| Line | Lateral | Vertical | Minimum | Class | Alternate credit [CAP GEN] |
+|---|---|---|---|---|---|
+| `LPV` | WAAS | WAAS, approved | `DA` | APV | ✕ none |
+| `LNAV/VNAV` | GPS or WAAS | Baro-VNAV or WAAS, approved | `DA` | APV | ✓ only if aircraft certified for **baro** LNAV/VNAV |
+| `LP` | WAAS | none approved (advisory only) | `MDA` + stepdowns | NPA | ✕ none |
+| `LNAV` | GPS or WAAS | none approved (advisory only) | `MDA` + stepdowns | NPA | ✓ |
+| `LNAV+V` · `LP+V` | as LNAV · LP | **advisory** glidepath from the avionics | LNAV · LP `MDA` | NPA | as LNAV · LP |
+| `RNP AR` — chart `RNAV (RNP)` | RNP | approved | `DA` | APV | ✕ GA; authorized operators: RNP 0.30 line only |
+
+- `R:` chart title `RNAV (GNSS) RWY xx` = RNP APCH; minima lines show the extra requirement (`LPV`, `LP`, `LNAV/VNAV`). LPV or LP charted → approach summary shows `WAAS` + channel + reference path ID; otherwise `RNAV`. [CAP GEN]
+- `R:` approved vertical guidance (LNAV/VNAV, LPV) → obstacle surface **sloped**, stabilized descent assumed, fly to `DA`. Advisory (LNAV, LP) → **level** surfaces: barometric altimeter governs; every stepdown and the `MDA` still apply. [AC 700-023 §4, §5.1]
+- `T:` `+V` is an avionics label, not a CAP line of minima: it is LNAV or LP with advisory vertical guidance. Following the advisory path never permits descent below a stepdown or the `MDA`. [AC 700-023 §5.1; AC 606-001]
+- `T:` `LP` is **not** a fail-down mode for LPV; it is published only where a vertically guided line is not possible. LPV lost → LP minima are not the fallback; apply the AFM/avionics supplement downgrade (e.g. to LNAV) or go missed. [AC 700-023 §4.4]
+- `T:` LNAV/VNAV shows a temperature range: outside it, **not authorized** with uncompensated Baro-VNAV. Baro-VNAV is also not authorized with a remote altimeter setting (chart note). RNP AR carries a temperature limit too. [CAP GEN]
+- `T:` RNP AR requires TC special authorization (`AUTHORIZATION REQUIRED`, AC 700-024). [CAP GEN]
+- `N:` LPV, LP and WAAS-based LNAV/VNAV may carry a "fringe of WAAS coverage" note: occasional outages. Circling minima come from the non-vertically-guided (NPA) part of the chart. [CAP GEN]
+- Sources: CAP GEN, Instrument approach procedures (identification, minima, operational notes) and Operating minima – alternate; [TC AC 700-023](https://tc.canada.ca/en/aviation/reference-centre/advisory-circulars/advisory-circular-ac-no-700-023) §4–5; [TC AC 606-001](https://tc.canada.ca/en/aviation/reference-centre/advisory-circulars/advisory-circular-ac-no-606-001).
 ***
 #### ILS / LOC / VOR / NDB / DME
 <!-- id: ifr-ils-loc-vor-ndb-dme | from: 10 | also: nav-radio -->
@@ -89,6 +110,7 @@
 <!-- id: ifr-approaches-pebble -->
 
 - TYPES `precision = ILS, lateral + vertical, DA/DH | APV = LPV, LNAV/VNAV, vertical guidance but not precision, DA | NPA = LOC/VOR/NDB/LNAV, MDA | SCDA/CDFA ≠ permission below MDA | LPV ≠ ILS | uncompensated Baro-VNAV: temperature limits`
+- RNAV LINES `LPV WAAS DA | LNAV/VNAV baro or WAAS DA | LP WAAS MDA, not LPV fail-down | LNAV MDA | +V = advisory only, MDA + stepdowns rule | RNP AR = RNAV (RNP), TC auth | alternate: LNAV ✓, baro LNAV/VNAV ✓, LPV/LP ✕`
 - NAVAIDS `LOC: no glideslope, LOC minima/MDA | VOR radials FROM station | ADF needle points to station, not necessarily desired track | DME slant range | DME arc: lead the turn | stepdown fix unidentified → stepdown unusable`
 - FAF / MAP `“at or above” = floor, not target | after FAF workload jumps: not configured/briefed → go around or delay | timing: wind change on final, use primary MAP`
 - STRAIGHT-IN `NoPT from marked point/sector | misplaced → FAF + request PT | vectors to final ≈2 NM before descent point | approach clearance = resume own nav`
