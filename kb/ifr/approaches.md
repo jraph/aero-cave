@@ -7,15 +7,25 @@
 #### Approach types
 <!-- id: ifr-approach-types | from: 09, 10 -->
 
-- Precision: ILS with lateral+vertical guidance; uses `DA/DH`.
-- APV: vertical guidance but not precision; e.g., `LPV`, `LNAV/VNAV`; uses `DA`. RNAV lines in detail: see `ifr-rnav-minima-lines`.
-- NPA: lateral guidance only; e.g., LOC/VOR/NDB/LNAV; uses `MDA`.
-- SCDA/CDFA: stable descent technique on NPA; do not descend below MDA without visual reference.
-- CAP minima box lists nav type, MDA/DA, HAA/HAT/HATh/DH, advisory visibility by aircraft category.
-- `T:` LPV is not ILS. Baro-VNAV temperature limits matter; uncompensated altimetry can invalidate VNAV minima.
-- Circling: visual manoeuvre; uses `MDA` / `HAA`.
+| Approach | Lateral | Vertical | Class | Minimum | Height shown | Alternate row |
+|---|---|---|---|---|---|---|
+| `ILS` | localizer | glide path | precision | `DA` | `DH` / HAT | precision |
+| `LPV` | WAAS | WAAS, approved | APV | `DA` | HAT | ✕ no credit |
+| `LNAV/VNAV` | GPS or WAAS | Baro-VNAV or WAAS, approved | APV | `DA` | HAT | non-precision, baro-certified only `?` |
+| `RNP AR` · chart `RNAV (RNP)` | RNP | approved | APV | `DA` | HAT | ✕ GA |
+| `LOC` | localizer | — | non-precision | `MDA` | HAT | non-precision |
+| `VOR` · `VOR/DME` | VOR | — | non-precision | `MDA` | HAT | non-precision |
+| `NDB` · `NDB/DME` | NDB | — | non-precision | `MDA` | HAT | non-precision |
+| `LNAV` (`+V` advisory) | GPS or WAAS | advisory only | non-precision | `MDA` | HAT | non-precision |
+| `LP` (`+V` advisory) | WAAS | advisory only | non-precision | `MDA` | HAT | ✕ no credit |
+| Circling | from the chart's non-precision part | — | visual manoeuvre | `MDA` | HAA | non-precision |
+
+- `R:` `DA` = fly the vertical path and decide; `MDA` = level off, no descent below without the required visual reference, even on a `+V` or CDFA/SCDA path.
+- RNAV detail (WAAS channel, temperature limits, RNP AR authorization, alternate conditions): see `ifr-rnav-minima-lines`. Alternate rows: see `ifr-alternate-minima`.
+- CAP minima box: nav type, `DA`/`MDA`, `DH`/HAT/HATh/HAA, advisory visibility by aircraft category. [CAP GEN]
+- `T:` LPV is not ILS. A `DA` does not make an approach precision.
 - `R:` CAR 101.01: **precision approach** = azimuth **and glide path** information; **non-precision approach** = azimuth information; **APV** = approach procedure with vertical guidance (abbreviation only, no definition). CARs treat APV as a third category: "a non-precision approach, an APV or a CAT I or CAT II precision approach" [CAR 602.129(5), 700.10]. AC 700-023 classes LPV and LNAV/VNAV as APV, LP and LNAV as non-precision.
-- `T:` the CAP GEN alternate table only has precision and non-precision rows; APV rows: see `ifr-alternate-minima`.
+- `T:` the CAP GEN alternate table only has precision and non-precision rows: APV is not in it.
 ***
 #### RNAV approach minima lines — LPV, LNAV/VNAV, LP, LNAV, +V, RNP AR
 <!-- id: ifr-rnav-minima-lines | also: nav-gnss, ifr-plates, ifr-alt | level: IR -->
@@ -111,7 +121,7 @@
 #### Pebble
 <!-- id: ifr-approaches-pebble -->
 
-- TYPES `precision = ILS, lateral + vertical, DA/DH | APV = LPV, LNAV/VNAV, vertical guidance but not precision, DA | NPA = LOC/VOR/NDB/LNAV, MDA | SCDA/CDFA ≠ permission below MDA | LPV ≠ ILS | uncompensated Baro-VNAV: temperature limits`
+- TYPES `precision = ILS, DA/DH | APV = LPV, LNAV/VNAV, RNP AR, DA, not precision | NPA = LOC/VOR/NDB/LNAV/LP, MDA | circling = MDA/HAA | DA ≠ precision | SCDA/CDFA ≠ permission below MDA | LPV ≠ ILS | uncompensated Baro-VNAV: temperature limits`
 - RNAV LINES `LPV WAAS DA | LNAV/VNAV baro or WAAS DA | LP WAAS MDA, not LPV fail-down | LNAV MDA | +V = advisory only, MDA + stepdowns rule | RNP AR = RNAV (RNP), TC auth | alternate: LNAV ✓, baro LNAV/VNAV ✓, LPV/LP ✕`
 - NAVAIDS `LOC: no glideslope, LOC minima/MDA | VOR radials FROM station | ADF needle points to station, not necessarily desired track | DME slant range | DME arc: lead the turn | stepdown fix unidentified → stepdown unusable`
 - FAF / MAP `“at or above” = floor, not target | after FAF workload jumps: not configured/briefed → go around or delay | timing: wind change on final, use primary MAP`
