@@ -11,7 +11,7 @@
 |---|---|---|---|---|---|---|
 | `ILS` | localizer | glide path | precision | `DA` | `DH` / HAT | precision |
 | `LPV` | WAAS | WAAS, approved | APV | `DA` | HAT | ✕ no credit |
-| `LNAV/VNAV` | GPS or WAAS | Baro-VNAV or WAAS, approved | APV | `DA` | HAT | non-precision, baro-certified only `?` |
+| `LNAV/VNAV` | GPS or WAAS | Baro-VNAV or WAAS, approved | APV | `DA` | HAT | non-precision `?` (baro only) |
 | `RNP AR` · chart `RNAV (RNP)` | RNP | approved | APV | `DA` | HAT | ✕ GA |
 | `LOC` | localizer | — | non-precision | `MDA` | HAT | non-precision |
 | `VOR` · `VOR/DME` | VOR | — | non-precision | `MDA` | HAT | non-precision |
@@ -21,25 +21,19 @@
 | Circling | from the chart's non-precision part | — | visual manoeuvre | `MDA` | HAA | non-precision |
 
 - `R:` `DA` = fly the vertical path and decide; `MDA` = level off, no descent below without the required visual reference, even on a `+V` or CDFA/SCDA path.
-- RNAV detail (WAAS channel, temperature limits, RNP AR authorization, alternate conditions): see `ifr-rnav-minima-lines`. Alternate rows: see `ifr-alternate-minima`.
+- RNAV rules (+V, LP fail-down, temperature limits, RNP AR authorization, alternate credit conditions): see `ifr-rnav-minima-lines`. Alternate rows: see `ifr-alternate-minima`.
 - CAP minima box: nav type, `DA`/`MDA`, `DH`/HAT/HATh/HAA, advisory visibility by aircraft category. [CAP GEN]
 - `T:` LPV is not ILS. A `DA` does not make an approach precision.
 - `N:` ICAO now classes approaches by minima: Type A (`≥ 250 ft`, NPA or APV) and Type B (`< 250 ft`, precision), and lists **SBAS CAT I** (LPV with DH below 250 ft) as a precision procedure. Canadian sources read (AC 700-023, CAP GEN) still class LPV as APV: use APV for TC exams and alternate planning. [ICAO APAC PBN ICG 2025 briefing, from Annex 6]
 - `R:` CAR 101.01: **precision approach** = azimuth **and glide path** information; **non-precision approach** = azimuth information; **APV** = approach procedure with vertical guidance (abbreviation only, no definition). CARs treat APV as a third category: "a non-precision approach, an APV or a CAT I or CAT II precision approach" [CAR 602.129(5), 700.10]. AC 700-023 classes LPV and LNAV/VNAV as APV, LP and LNAV as non-precision.
 - `T:` the CAP GEN alternate table only has precision and non-precision rows: APV is not in it.
 ***
-#### RNAV approach minima lines — LPV, LNAV/VNAV, LP, LNAV, +V, RNP AR
+#### RNAV approach minima lines — rules for LPV, LNAV/VNAV, LP, LNAV, +V, RNP AR
 <!-- id: ifr-rnav-minima-lines | also: nav-gnss, ifr-plates, ifr-alt | level: IR -->
 
-| Line | Lateral | Vertical | Minimum | Class | Alternate credit [CAP GEN] |
-|---|---|---|---|---|---|
-| `LPV` | WAAS | WAAS, approved | `DA` | APV | ✕ none |
-| `LNAV/VNAV` | GPS or WAAS | Baro-VNAV or WAAS, approved | `DA` | APV | ✓ only if aircraft certified for **baro** LNAV/VNAV |
-| `LP` | WAAS | none approved (advisory only) | `MDA` + stepdowns | NPA | ✕ none |
-| `LNAV` | GPS or WAAS | none approved (advisory only) | `MDA` + stepdowns | NPA | ✓ |
-| `LNAV+V` · `LP+V` | as LNAV · LP | **advisory** glidepath from the avionics | LNAV · LP `MDA` | NPA | as LNAV · LP |
-| `RNP AR` — chart `RNAV (RNP)` | RNP | approved | `DA` | APV | ✕ GA; authorized operators: RNP 0.30 line only |
+Guidance, class, DA/MDA and alternate row per line: table in `ifr-approach-types`. Rules specific to the RNAV lines:
 
+- `R:` alternate credit [CAP GEN]: LNAV ✓ · LNAV/VNAV ✓ only if the aircraft is certified for **baro** LNAV/VNAV · LPV, LP ✕ · RNP AR ✕ for GA; private/commercial operators with authorization: RNP 0.30 line only.
 - `R:` chart title `RNAV (GNSS) RWY xx` = RNP APCH; minima lines show the extra requirement (`LPV`, `LP`, `LNAV/VNAV`). LPV or LP charted → approach summary shows `WAAS` + channel + reference path ID; otherwise `RNAV`. [CAP GEN]
 - `R:` approved vertical guidance (LNAV/VNAV, LPV) → obstacle surface **sloped**, stabilized descent assumed, fly to `DA`. Advisory (LNAV, LP) → **level** surfaces: barometric altimeter governs; every stepdown and the `MDA` still apply. [AC 700-023 §4, §5.1]
 - `T:` "no credit" is about **planning only**: the line cannot be used to qualify the aerodrome as an alternate or to compute its alternate minima. After diverting there, any approach the aircraft and pilot are equipped and authorized for may be flown to its landing minima. [CAP GEN, Operating minima – alternate]
