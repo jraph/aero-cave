@@ -42,6 +42,7 @@
 
 - `R:` chart title `RNAV (GNSS) RWY xx` = RNP APCH; minima lines show the extra requirement (`LPV`, `LP`, `LNAV/VNAV`). LPV or LP charted → approach summary shows `WAAS` + channel + reference path ID; otherwise `RNAV`. [CAP GEN]
 - `R:` approved vertical guidance (LNAV/VNAV, LPV) → obstacle surface **sloped**, stabilized descent assumed, fly to `DA`. Advisory (LNAV, LP) → **level** surfaces: barometric altimeter governs; every stepdown and the `MDA` still apply. [AC 700-023 §4, §5.1]
+- `T:` "no credit" is about **planning only**: the line cannot be used to qualify the aerodrome as an alternate or to compute its alternate minima. After diverting there, any approach the aircraft and pilot are equipped and authorized for may be flown to its landing minima. [CAP GEN, Operating minima – alternate]
 - `T:` `+V` is an avionics label, not a CAP line of minima: it is LNAV or LP with advisory vertical guidance. Following the advisory path never permits descent below a stepdown or the `MDA`. [AC 700-023 §5.1; AC 606-001]
 - `T:` `LP` is **not** a fail-down mode for LPV; it is published only where a vertically guided line is not possible. LPV lost → LP minima are not the fallback; apply the AFM/avionics supplement downgrade (e.g. to LNAV) or go missed. [AC 700-023 §4.4]
 - `T:` LNAV/VNAV shows a temperature range: outside it, **not authorized** with uncompensated Baro-VNAV. Baro-VNAV is also not authorized with a remote altimeter setting (chart note). RNP AR carries a temperature limit too. [CAP GEN]
