@@ -24,6 +24,7 @@
 - RNAV detail (WAAS channel, temperature limits, RNP AR authorization, alternate conditions): see `ifr-rnav-minima-lines`. Alternate rows: see `ifr-alternate-minima`.
 - CAP minima box: nav type, `DA`/`MDA`, `DH`/HAT/HATh/HAA, advisory visibility by aircraft category. [CAP GEN]
 - `T:` LPV is not ILS. A `DA` does not make an approach precision.
+- `N:` ICAO now classes approaches by minima: Type A (`≥ 250 ft`, NPA or APV) and Type B (`< 250 ft`, precision), and lists **SBAS CAT I** (LPV with DH below 250 ft) as a precision procedure. Canadian sources read (AC 700-023, CAP GEN) still class LPV as APV: use APV for TC exams and alternate planning. [ICAO APAC PBN ICG 2025 briefing, from Annex 6]
 - `R:` CAR 101.01: **precision approach** = azimuth **and glide path** information; **non-precision approach** = azimuth information; **APV** = approach procedure with vertical guidance (abbreviation only, no definition). CARs treat APV as a third category: "a non-precision approach, an APV or a CAT I or CAT II precision approach" [CAR 602.129(5), 700.10]. AC 700-023 classes LPV and LNAV/VNAV as APV, LP and LNAV as non-precision.
 - `T:` the CAP GEN alternate table only has precision and non-precision rows: APV is not in it.
 ***
