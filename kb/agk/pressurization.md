@@ -4,7 +4,7 @@
 [Index](README.md) · concept `agk-press` · unit IDs are stable: never rename one.
 
 ***
-#### Cabin pressurization / outflow — L4
+#### Cabin pressurization / outflow
 <!-- id: sys-cabin-pressurization-outflow-l4 | from: 08 | level: CPL ME -->
 
 | Key | Recall |

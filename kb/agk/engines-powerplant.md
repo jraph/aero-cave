@@ -38,7 +38,7 @@
 - `T:` “gauge fault” is a diagnosis of exclusion. Plan for engine stoppage.
 - `!:` abnormal noise/vibration + oil indication = immediate landing priority.
 ***
-#### Powerplant / PROP · L4 CAVE
+#### Powerplant / PROP
 <!-- id: sys-powerplant-prop-l4-cave | from: 08 | also: agk-prop | level: CPL ME -->
 
 | Key | Recall |
@@ -67,7 +67,7 @@
 - `SRC:` [FAA AFH Ch 15 · Alpha/Beta](https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/16_afh_ch15.pdf) · [FAA PHAK · engines/PROP](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/faa-h-8083-25c.pdf) · [FAA AFH · ME governor/feather](https://www.faasafety.gov/files/events/SO/SO15/2022/SO15118118/TransitionToMultiengineAirplanes.pdf) · [FAA AMT Powerplant · PROP](https://www.faa.gov/sites/faa.gov/files/09_amtp_ch7.pdf); aircraft POH/AFM controls.
 
 ***
-#### Manifold pressure · MP — L4
+#### Manifold pressure · MP
 <!-- id: sys-manifold-pressure-mp-l4 | from: 08 | also: agk-prop | level: CPL ME -->
 
 | Key | Recall |

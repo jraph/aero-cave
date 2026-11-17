@@ -34,7 +34,7 @@
 - `P:` confirm need → stabilize → identify/verify affected engine → reduce power → feather/secure per checklist → monitor live engine → divert/land.
 - `T:` not every roughness = immediate shutdown; not every problem can wait. Decide by fire/mechanical damage/controllability.
 ***
-#### PROP governor / feather — L4 cross-ref
+#### PROP governor / feather
 <!-- id: me-prop-governor-feather-l4-cross-ref | from: 13 | also: agk-prop | level: ME -->
 
 - Pitch/RPM logic, SE vs ME governor oil (ME: oil P↑→fine; oil P loss→feather), feather ≠ reverse: `see sys-powerplant-prop-l4-cave`.

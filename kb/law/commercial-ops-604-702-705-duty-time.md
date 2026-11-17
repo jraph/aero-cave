@@ -58,8 +58,8 @@ The shared flight/duty section below contains current limits and applicability.
 | `R` UOC→split | `604.102` unexpected EXT ≠ `604.100` planned split. | **700.64:** post-start UOC may trigger split **only if PIC agrees before scheduled ground break**; after consulting crew, refuse if fatigue jeopardizes safety; waiting **before decision ≠ credited break**. [700.64](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/section-700.64.html) |
 | `T` | Extension changes **FDP MAX**, **not FLT time** limits under 604.98; split/UOC credits **not automatically stackable**; split break stays **inside** the FDP. | Extension changes **FDP MAX**, **not FLT time** limits under 700.27; night split ≠ UOC night credit; no invented universal split cap; Division IV medevac differs (`law-700-medevac-rest-split-time-off-reserve`). |
 
-- `M · L4` **604: 14h | 15h if 30d FDP≤70h OR prior REST≥24h | SPLIT≥4h→+MIN(½break,4h) + next REST≥EXT | UOC after start +3h MAX + next REST≥EXT, PIC→operator, 5yr record.**
-- `M · L4` **700 Div III: FDP 700.28 matrix | SPLIT≥60min→deduct45min, remaining ×100% (00–0559) / ×50% (06–2359 or UOC replan) | UOC ≤60min from FDP start→+1h single/+2h unaug/+3h aug1FLT/+2h aug2–3FLT + next REST≥EXT | 700.64 post-start split only before break + PIC consent.**
+- `M` **604: 14h | 15h if 30d FDP≤70h OR prior REST≥24h | SPLIT≥4h→+MIN(½break,4h) + next REST≥EXT | UOC after start +3h MAX + next REST≥EXT, PIC→operator, 5yr record.**
+- `M` **700 Div III: FDP 700.28 matrix | SPLIT≥60min→deduct45min, remaining ×100% (00–0559) / ×50% (06–2359 or UOC replan) | UOC ≤60min from FDP start→+1h single/+2h unaug/+3h aug1FLT/+2h aug2–3FLT + next REST≥EXT | 700.64 post-start split only before break + PIC consent.**
 
 
 Shared additions reviewed 19 October 2026: [source editions and scope](../../CONTENT_REVIEW.md#operational-additions--19-october-2026).

@@ -37,7 +37,7 @@
 - Light twins often have long or unavailable accelerate-go margins at normal training weights/DA.
 - `T:` transport-category V1/balanced-field thinking ≠ light twins: `see me-tkof-speeds-transport-category-distinctions-l4`. Brief: `see me-takeoff-briefing-me`.
 ***
-#### TKOF speeds · transport-category distinctions — L4
+#### TKOF speeds · transport-category distinctions
 <!-- id: me-tkof-speeds-transport-category-distinctions-l4 | from: 13 | also: agk-vspeeds | level: CPL ME -->
 
 | Key | Recall |

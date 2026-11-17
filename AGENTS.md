@@ -3,6 +3,7 @@
 Default to **CAVE mode** for repository content: super-condensed, scan-first aviation study notes.
 
 - Maximize useful facts per line; remove introductions, filler and repetition.
+- Authoring-mode labels (`L4`, `CAVE`, skill names) are for authors only: never put them in headings or note text.
 - Prefer compact tables, fragments, standard abbreviations, symbols and arrows over prose.
 - Keep one decision, rule, formula or trap per row/bullet.
 - Preserve every qualifier that changes legality, applicability or safety; never compress into ambiguity.

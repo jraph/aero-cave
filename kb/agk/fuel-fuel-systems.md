@@ -14,7 +14,7 @@
 - `M:` burn `6 gph` ⇒ `0.1 gal/min`; burn `9 gph` ⇒ `0.15 gal/min`; burn `12 gph` ⇒ `0.2 gal/min`.
 - `T:` IFR reserve starts after required destination/alternate logic, not after takeoff.
 ***
-#### Aviation fuel grades / FSII — L4
+#### Aviation fuel grades / FSII
 <!-- id: sys-aviation-fuel-grades-fsii-l4 | from: 08 | level: CPL ME -->
 
 | Key | Recall |
